@@ -1,2 +1,4 @@
 # referencedDocument-python3
-这里是 Python 3.7.3 的中文文档
+Python 3.7.3 的中文文档
+
+https://docs.python.org/zh-cn/3/
