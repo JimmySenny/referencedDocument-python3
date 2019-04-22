@@ -1,0 +1,514 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>将扩展模块移植到 Python 3 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="Curses Programming with Python" href="curses.html" />
+    <link rel="prev" title="将 Python 2 代码迁移到 Python 3" href="pyporting.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/howto/cporting.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="curses-1.html" tppabs="https://docs.python.org/zh-cn/3/howto/curses.html" title="Curses Programming with Python"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="pyporting.html" tppabs="https://docs.python.org/zh-cn/3/howto/pyporting.html" title="将 Python 2 代码迁移到 Python 3"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" accesskey="U">Python 常用指引</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="porting-extension-modules-to-python-3">
+<span id="cporting-howto"></span><h1>将扩展模块移植到 Python 3<a class="headerlink" href="#porting-extension-modules-to-python-3" title="永久链接至标题">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">作者:</th><td class="field-body">Benjamin Peterson</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">摘要</p>
+<p>尽管更改 C-API 并不是 Python 3 的目标之一，但许多 Python 级别的更改使得 Python 2 的 API 无法完整实现。实际上，一些变化如 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">long()</span></code>&nbsp;的统一在 C 级别更明显。本文档致力于记录不兼容性以及如何解决这些问题。</p>
+</div>
+<div class="section" id="conditional-compilation">
+<h2>条件编译<a class="headerlink" href="#conditional-compilation" title="永久链接至标题">¶</a></h2>
+<p>仅编译 Python 3 的一些代码的最简单方法是检查 <code class="xref c c-macro docutils literal notranslate"><span class="pre">PY_MAJOR_VERSION</span></code> 是否大于或等于3。</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#if PY_MAJOR_VERSION &gt;= 3</span>
+<span class="cp">#define IS_PY3K</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>不存在的 API 函数可以在条件块中别名为它们的等价物。</p>
+</div>
+<div class="section" id="changes-to-object-apis">
+<h2>对象API的更改<a class="headerlink" href="#changes-to-object-apis" title="永久链接至标题">¶</a></h2>
+<p>Python 3 将一些具有类似功能的类型合并在一起，同时干净地分离了其他类型。</p>
+<div class="section" id="str-unicode-unification">
+<h3>str/unicode 统一<a class="headerlink" href="#str-unicode-unification" title="永久链接至标题">¶</a></h3>
+<p>Python 3 的 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> 类型相当于 Python 2 的 <code class="xref py py-func docutils literal notranslate"><span class="pre">unicode()</span></code> ； C函数被称为 <code class="docutils literal notranslate"><span class="pre">PyUnicode_*</span></code> 。旧的 8 位字符串类型变为 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-func docutils literal notranslate"><span class="pre">bytes()</span></code></a> ，其中 C 函数称为 <code class="docutils literal notranslate"><span class="pre">PyBytes_*</span></code> 。 Python 2.6 及更高版本提供了一个兼容性头文件 <code class="file docutils literal notranslate"><span class="pre">bytesobject.h</span></code> ，将 <code class="docutils literal notranslate"><span class="pre">PyBytes</span></code> 名称映射到 <code class="docutils literal notranslate"><span class="pre">PyString</span></code> 。 为了保持与 Python 3 的最佳兼容性， <code class="xref c c-type docutils literal notranslate"><span class="pre">PyUnicode</span></code> 应该用于文本数据，并且 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyBytes</span></code> 用于二进制数据。同样重要的是要记住 <code class="xref c c-type docutils literal notranslate"><span class="pre">pyBytes</span></code> 和 Python 3中的 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyUnicode</span></code> 不可互换，如 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyString</span></code> 和 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyUnicode</span></code> 在 Python 2 以下中示例显示了以下方面的最佳实践 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyUnicode</span></code> 、 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyString</span></code> 和 <code class="xref c c-type docutils literal notranslate"><span class="pre">PyBytes</span></code> 。:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stdlib.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;bytesobject.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/* text example */</span>
+<span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+<span class="nf">say_hello</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">PyObject</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">result</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;U:say_hello&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">PyUnicode_FromFormat</span><span class="p">(</span><span class="s">&quot;Hello, %S!&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* just a forward */</span>
+<span class="k">static</span> <span class="kt">char</span> <span class="o">*</span> <span class="nf">do_encode</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">);</span>
+
+<span class="cm">/* bytes example */</span>
+<span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+<span class="nf">encode_object</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">encoded</span><span class="p">;</span>
+    <span class="n">PyObject</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="o">*</span><span class="n">myobj</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;O:encode_object&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">myobj</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">do_encode</span><span class="p">(</span><span class="n">myobj</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">encoded</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">PyBytes_FromString</span><span class="p">(</span><span class="n">encoded</span><span class="p">);</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">encoded</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="long-int-unification">
+<h3>long/int 统一<a class="headerlink" href="#long-int-unification" title="永久链接至标题">¶</a></h3>
+<p>Python 3 只有一个整数类型， <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 。但它实际上对应于Python 2 <code class="xref py py-func docutils literal notranslate"><span class="pre">long()</span></code>&nbsp;类型 —— 删除了 Python 2 中使用的 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 类型。在 C-API 中， <code class="docutils literal notranslate"><span class="pre">PyInt_*</span></code> 函数被它们等价的 <code class="docutils literal notranslate"><span class="pre">PyLong_*</span></code> 替换。</p>
+</div>
+</div>
+<div class="section" id="module-initialization-and-state">
+<h2>模块初始化和状态<a class="headerlink" href="#module-initialization-and-state" title="永久链接至标题">¶</a></h2>
+<p>Python 3 有一个改进的扩展模块初始化系统。（参见 <span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3121  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3121'" tppabs="https://www.python.org/dev/peps/pep-3121"><strong>PEP 3121</strong></a> 。）而不是将模块状态存储在全局变量中，它们应该存储在特定于解释器的结构中。创建在 Python 2 和 Python 3 中正确运行的模块非常棘手。以下简单示例演示了如何操作。:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">module_state</span> <span class="p">{</span>
+    <span class="n">PyObject</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cp">#if PY_MAJOR_VERSION &gt;= 3</span>
+<span class="cp">#define GETSTATE(m) ((struct module_state*)PyModule_GetState(m))</span>
+<span class="cp">#else</span>
+<span class="cp">#define GETSTATE(m) (&amp;_state)</span>
+<span class="k">static</span> <span class="k">struct</span> <span class="n">module_state</span> <span class="n">_state</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+<span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+<span class="nf">error_out</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">module_state</span> <span class="o">*</span><span class="n">st</span> <span class="o">=</span> <span class="n">GETSTATE</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+    <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">error</span><span class="p">,</span> <span class="s">&quot;something bad happened&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="n">PyMethodDef</span> <span class="n">myextension_methods</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="s">&quot;error_out&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">error_out</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">},</span>
+    <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="cp">#if PY_MAJOR_VERSION &gt;= 3</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">myextension_traverse</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">,</span> <span class="n">visitproc</span> <span class="n">visit</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Py_VISIT</span><span class="p">(</span><span class="n">GETSTATE</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">error</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">myextension_clear</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Py_CLEAR</span><span class="p">(</span><span class="n">GETSTATE</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">error</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="k">struct</span> <span class="n">PyModuleDef</span> <span class="n">moduledef</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">PyModuleDef_HEAD_INIT</span><span class="p">,</span>
+        <span class="s">&quot;myextension&quot;</span><span class="p">,</span>
+        <span class="nb">NULL</span><span class="p">,</span>
+        <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">module_state</span><span class="p">),</span>
+        <span class="n">myextension_methods</span><span class="p">,</span>
+        <span class="nb">NULL</span><span class="p">,</span>
+        <span class="n">myextension_traverse</span><span class="p">,</span>
+        <span class="n">myextension_clear</span><span class="p">,</span>
+        <span class="nb">NULL</span>
+<span class="p">};</span>
+
+<span class="cp">#define INITERROR return NULL</span>
+
+<span class="n">PyMODINIT_FUNC</span>
+<span class="nf">PyInit_myextension</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+
+<span class="cp">#else</span>
+<span class="cp">#define INITERROR return</span>
+
+<span class="kt">void</span>
+<span class="n">initmyextension</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="cp">#endif</span>
+<span class="p">{</span>
+<span class="cp">#if PY_MAJOR_VERSION &gt;= 3</span>
+    <span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span> <span class="o">=</span> <span class="n">PyModule_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">moduledef</span><span class="p">);</span>
+<span class="cp">#else</span>
+    <span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span> <span class="o">=</span> <span class="n">Py_InitModule</span><span class="p">(</span><span class="s">&quot;myextension&quot;</span><span class="p">,</span> <span class="n">myextension_methods</span><span class="p">);</span>
+<span class="cp">#endif</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">module</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+        <span class="n">INITERROR</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">module_state</span> <span class="o">*</span><span class="n">st</span> <span class="o">=</span> <span class="n">GETSTATE</span><span class="p">(</span><span class="n">module</span><span class="p">);</span>
+
+    <span class="n">st</span><span class="o">-&gt;</span><span class="n">error</span> <span class="o">=</span> <span class="n">PyErr_NewException</span><span class="p">(</span><span class="s">&quot;myextension.Error&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">error</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">module</span><span class="p">);</span>
+        <span class="n">INITERROR</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="cp">#if PY_MAJOR_VERSION &gt;= 3</span>
+    <span class="k">return</span> <span class="n">module</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cobject-replaced-with-capsule">
+<h2>CObject 替换为 Capsule<a class="headerlink" href="#cobject-replaced-with-capsule" title="永久链接至标题">¶</a></h2>
+<p><code class="xref c c-type docutils literal notranslate"><span class="pre">Capsule</span></code> 对象是在 Python 3.1 和 2.7 中引入的，用于替换 <code class="xref c c-type docutils literal notranslate"><span class="pre">CObject</span></code> 。 CObject 是有用的，但是 <code class="xref c c-type docutils literal notranslate"><span class="pre">CObject</span></code> API 是有问题的：它不允许区分有效的 CObject ，这导致不匹配的 CObject 使解释器崩溃，并且它的一些 API 依赖于 C 中的未定义行为。有关 Capsule 背后的基本原理的进一步阅读，请参阅 <a class="reference external" href="javascript:if(confirm('https://bugs.python.org/issue5630  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://bugs.python.org/issue5630'" tppabs="https://bugs.python.org/issue5630">bpo-5630</a> 。）</p>
+<p>如果你当前正在使用 CObject ，并且想要迁移到 3.1 或更高版本，则需要切换到 Capsules 。 <code class="xref c c-type docutils literal notranslate"><span class="pre">CObject</span></code> 在 3.1 和 2.7 中已弃用，在 Python 3.2 中已完全删除。如果你只支持 2.7 或 3.1 及以上，你可以简单地切换到 <code class="xref c c-type docutils literal notranslate"><span class="pre">Capsule</span></code> 。如果你需要支持 Python 3.0 或早于 2.7 的 Python 版本，则必须同时支持 CObject 和 Capsule 。（请注意，不再支持 Python 3.0 ，不建议将其用于生产用途。）</p>
+<p>以下示例头文件 <code class="file docutils literal notranslate"><span class="pre">capsulethunk.h</span></code> 可以为你解决问题。只需针对 <code class="xref c c-type docutils literal notranslate"><span class="pre">Capsule</span></code> API 编写代码，并在以下文件后包含此头文件 <code class="file docutils literal notranslate"><span class="pre">Python.h</span></code> 。你的代码将自动在带有 Capsule 的 Python 版本中使用 Capsules ，并在 Capsule 不可用时切换到 CObjects 。</p>
+<p><code class="file docutils literal notranslate"><span class="pre">capsulethunk.h</span></code> 使用 CObject 模拟 Capsules 。 但是， <code class="xref c c-type docutils literal notranslate"><span class="pre">CObject</span></code> 没有提供存储胶囊的“名称”的地方。因此，模拟 <code class="xref c c-type docutils literal notranslate"><span class="pre">Capsule</span></code> 对象由 <code class="file docutils literal notranslate"><span class="pre">capsulethunk.h</span></code> 创建，其行为与真实 Capsule 略有不同。特别地：</p>
+<blockquote>
+<div><ul class="simple">
+<li>传递给 <a class="reference internal" href="capsule.html#c.PyCapsule_New" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html#c.PyCapsule_New" title="PyCapsule_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_New()</span></code></a> 的 name 参数被忽略。</li>
+<li>传入以下命令的 name 参数 <a class="reference internal" href="capsule.html#c.PyCapsule_IsValid" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html#c.PyCapsule_IsValid" title="PyCapsule_IsValid"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_IsValid()</span></code></a> 和 <a class="reference internal" href="capsule.html#c.PyCapsule_GetPointer" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html#c.PyCapsule_GetPointer" title="PyCapsule_GetPointer"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_GetPointer()</span></code></a> 被忽略，并且不执行错误检查。</li>
+<li><a class="reference internal" href="capsule.html#c.PyCapsule_GetName" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html#c.PyCapsule_GetName" title="PyCapsule_GetName"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_GetName()</span></code></a> 总是返回 NULL 。</li>
+<li><a class="reference internal" href="capsule.html#c.PyCapsule_SetName" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html#c.PyCapsule_SetName" title="PyCapsule_SetName"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_SetName()</span></code></a> 总是引发异常并返回失败。（由于无法在 CObject 中存储名称，因此 <a class="reference internal" href="capsule.html#c.PyCapsule_SetName" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html#c.PyCapsule_SetName" title="PyCapsule_SetName"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_SetName()</span></code></a> 的明显失败被认为优于静默失败。如果这样不方便，请随意根据需要修改本地副本。）</li>
+</ul>
+</div></blockquote>
+<p>你可以在 Python 源代码分发中的 <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Doc/includes/issue25928  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Doc/includes/issue25928'" tppabs="https://github.com/python/cpython/tree/3.7/Doc/includes/capsulethunk.h">Doc/includes/capsulethunk.h</a> 找到 <code class="file docutils literal notranslate"><span class="pre">capsulethunk.h</span></code> 。为方便起见，我们还将其包含在此处：</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __CAPSULETHUNK_H</span>
+<span class="cp">#define __CAPSULETHUNK_H</span>
+
+<span class="cp">#if (    (PY_VERSION_HEX &lt;  0x02070000) \</span>
+<span class="cp">     || ((PY_VERSION_HEX &gt;= 0x03000000) \</span>
+<span class="cp">      &amp;&amp; (PY_VERSION_HEX &lt;  0x03010000)) )</span>
+
+<span class="cp">#define __PyCapsule_GetField(capsule, field, default_value) \</span>
+<span class="cp">    ( PyCapsule_CheckExact(capsule) \</span>
+<span class="cp">        ? (((PyCObject *)capsule)-&gt;field) \</span>
+<span class="cp">        : (default_value) \</span>
+<span class="cp">    ) \</span>
+
+<span class="cp">#define __PyCapsule_SetField(capsule, field, value) \</span>
+<span class="cp">    ( PyCapsule_CheckExact(capsule) \</span>
+<span class="cp">        ? (((PyCObject *)capsule)-&gt;field = value), 1 \</span>
+<span class="cp">        : 0 \</span>
+<span class="cp">    ) \</span>
+
+
+<span class="cp">#define PyCapsule_Type PyCObject_Type</span>
+
+<span class="cp">#define PyCapsule_CheckExact(capsule) (PyCObject_Check(capsule))</span>
+<span class="cp">#define PyCapsule_IsValid(capsule, name) (PyCObject_Check(capsule))</span>
+
+
+<span class="cp">#define PyCapsule_New(pointer, name, destructor) \</span>
+<span class="cp">    (PyCObject_FromVoidPtr(pointer, destructor))</span>
+
+
+<span class="cp">#define PyCapsule_GetPointer(capsule, name) \</span>
+<span class="cp">    (PyCObject_AsVoidPtr(capsule))</span>
+
+<span class="cm">/* Don&#39;t call PyCObject_SetPointer here, it fails if there&#39;s a destructor */</span>
+<span class="cp">#define PyCapsule_SetPointer(capsule, pointer) \</span>
+<span class="cp">    __PyCapsule_SetField(capsule, cobject, pointer)</span>
+
+
+<span class="cp">#define PyCapsule_GetDestructor(capsule) \</span>
+<span class="cp">    __PyCapsule_GetField(capsule, destructor)</span>
+
+<span class="cp">#define PyCapsule_SetDestructor(capsule, dtor) \</span>
+<span class="cp">    __PyCapsule_SetField(capsule, destructor, dtor)</span>
+
+
+<span class="cm">/*</span>
+<span class="cm"> * Sorry, there&#39;s simply no place</span>
+<span class="cm"> * to store a Capsule &quot;name&quot; in a CObject.</span>
+<span class="cm"> */</span>
+<span class="cp">#define PyCapsule_GetName(capsule) NULL</span>
+
+<span class="k">static</span> <span class="kt">int</span>
+<span class="nf">PyCapsule_SetName</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">capsule</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">unused</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">unused</span> <span class="o">=</span> <span class="n">unused</span><span class="p">;</span>
+    <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_NotImplementedError</span><span class="p">,</span>
+        <span class="s">&quot;can&#39;t use PyCapsule_SetName with CObjects&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="cp">#define PyCapsule_GetContext(capsule) \</span>
+<span class="cp">    __PyCapsule_GetField(capsule, descr)</span>
+
+<span class="cp">#define PyCapsule_SetContext(capsule, context) \</span>
+<span class="cp">    __PyCapsule_SetField(capsule, descr, context)</span>
+
+
+<span class="k">static</span> <span class="kt">void</span> <span class="o">*</span>
+<span class="nf">PyCapsule_Import</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">no_block</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">PyObject</span> <span class="o">*</span><span class="n">object</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">trace</span><span class="p">;</span>
+    <span class="kt">size_t</span> <span class="n">name_length</span> <span class="o">=</span> <span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">);</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">name_dup</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">PyMem_MALLOC</span><span class="p">(</span><span class="n">name_length</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">name_dup</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">name_dup</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">name_length</span><span class="p">);</span>
+
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">name_dup</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">trace</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">char</span> <span class="o">*</span><span class="n">dot</span> <span class="o">=</span> <span class="n">strchr</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="sc">&#39;.&#39;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">dot</span><span class="p">)</span> <span class="p">{</span>
+            <span class="o">*</span><span class="n">dot</span><span class="o">++</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">object</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">no_block</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">object</span> <span class="o">=</span> <span class="n">PyImport_ImportModuleNoBlock</span><span class="p">(</span><span class="n">trace</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">object</span> <span class="o">=</span> <span class="n">PyImport_ImportModule</span><span class="p">(</span><span class="n">trace</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">object</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">PyErr_Format</span><span class="p">(</span><span class="n">PyExc_ImportError</span><span class="p">,</span>
+                        <span class="s">&quot;PyCapsule_Import could not &quot;</span>
+                        <span class="s">&quot;import module </span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">trace</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">PyObject</span> <span class="o">*</span><span class="n">object2</span> <span class="o">=</span> <span class="n">PyObject_GetAttrString</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">trace</span><span class="p">);</span>
+            <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">object</span><span class="p">);</span>
+            <span class="n">object</span> <span class="o">=</span> <span class="n">object2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">object</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">trace</span> <span class="o">=</span> <span class="n">dot</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">PyCObject_Check</span><span class="p">(</span><span class="n">object</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">PyCObject</span> <span class="o">*</span><span class="n">cobject</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyCObject</span> <span class="o">*</span><span class="p">)</span><span class="n">object</span><span class="p">;</span>
+        <span class="n">return_value</span> <span class="o">=</span> <span class="n">cobject</span><span class="o">-&gt;</span><span class="n">cobject</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">PyErr_Format</span><span class="p">(</span><span class="n">PyExc_AttributeError</span><span class="p">,</span>
+            <span class="s">&quot;PyCapsule_Import </span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s"> is not valid&quot;</span><span class="p">,</span>
+            <span class="n">name</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="nl">EXIT</span><span class="p">:</span>
+    <span class="n">Py_XDECREF</span><span class="p">(</span><span class="n">object</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">name_dup</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">PyMem_FREE</span><span class="p">(</span><span class="n">name_dup</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#endif </span><span class="cm">/* #if PY_VERSION_HEX &lt; 0x02070000 */</span><span class="cp"></span>
+
+<span class="cp">#endif </span><span class="cm">/* __CAPSULETHUNK_H */</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-options">
+<h2>其他选项<a class="headerlink" href="#other-options" title="永久链接至标题">¶</a></h2>
+<p>如果你正在编写新的扩展模块，你可能会考虑 <a class="reference external" href="javascript:if(confirm('http://cython.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://cython.org/'" tppabs="http://cython.org/">Cython</a> 。 它将类似 Python 的语言转换为 C 。它创建的扩展模块与 Python 3 和 Python 2 兼容。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">将扩展模块移植到 Python 3</a><ul>
+<li><a class="reference internal" href="#conditional-compilation">条件编译</a></li>
+<li><a class="reference internal" href="#changes-to-object-apis">对象API的更改</a><ul>
+<li><a class="reference internal" href="#str-unicode-unification">str/unicode 统一</a></li>
+<li><a class="reference internal" href="#long-int-unification">long/int 统一</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-initialization-and-state">模块初始化和状态</a></li>
+<li><a class="reference internal" href="#cobject-replaced-with-capsule">CObject 替换为 Capsule</a></li>
+<li><a class="reference internal" href="#other-options">其他选项</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="pyporting.html" tppabs="https://docs.python.org/zh-cn/3/howto/pyporting.html"
+                        title="上一章">将 Python 2 代码迁移到 Python 3</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="curses-1.html" tppabs="https://docs.python.org/zh-cn/3/howto/curses.html"
+                        title="下一章">Curses Programming with Python</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/howto/cporting.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/howto/cporting.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/howto/cporting.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="curses-1.html" tppabs="https://docs.python.org/zh-cn/3/howto/curses.html" title="Curses Programming with Python"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="pyporting.html" tppabs="https://docs.python.org/zh-cn/3/howto/pyporting.html" title="将 Python 2 代码迁移到 Python 3"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" >Python 常用指引</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

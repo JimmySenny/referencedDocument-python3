@@ -1,0 +1,477 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>11. 标准库简介 —— 第二部分 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="12. 虚拟环境和包" href="venv.html" />
+    <link rel="prev" title="10. 标准库简介" href="stdlib.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/tutorial/stdlib2.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="venv-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/venv.html" title="12. 虚拟环境和包"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="stdlib.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/stdlib.html" title="10. 标准库简介"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" accesskey="U">Python 教程</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="brief-tour-of-the-standard-library-part-ii">
+<span id="tut-brieftourtwo"></span><h1>11. 标准库简介 —— 第二部分<a class="headerlink" href="#brief-tour-of-the-standard-library-part-ii" title="永久链接至标题">¶</a></h1>
+<p>第二部分涵盖了专业编程所需要的更高级的模块。这些模块很少用在小脚本中。</p>
+<div class="section" id="output-formatting">
+<span id="tut-output-formatting"></span><h2>11.1. 格式化输出<a class="headerlink" href="#output-formatting" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="reprlib.html#module-reprlib" tppabs="https://docs.python.org/zh-cn/3/library/reprlib.html#module-reprlib" title="reprlib: Alternate repr() implementation with size limits."><code class="xref py py-mod docutils literal notranslate"><span class="pre">reprlib</span></code></a> 模块提供了一个定制化版本的 <a class="reference internal" href="functions.html#repr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> 函数，用于缩略显示大型或深层嵌套的容器对象:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">reprlib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">reprlib</span><span class="o">.</span><span class="n">repr</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s1">&#39;supercalifragilisticexpialidocious&#39;</span><span class="p">))</span>
+<span class="go">&quot;{&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, ...}&quot;</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="pprint.html#module-pprint" tppabs="https://docs.python.org/zh-cn/3/library/pprint.html#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> 模块提供了更加复杂的打印控制，其输出的内置对象和用户自定义对象能够被解释器直接读取。当输出结果过长而需要折行时，“美化输出机制”会添加换行符和缩进，以更清楚地展示数据结构:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="p">[[[[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;cyan&#39;</span><span class="p">],</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]],</span> <span class="p">[[</span><span class="s1">&#39;magenta&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;yellow&#39;</span><span class="p">],</span> <span class="s1">&#39;blue&#39;</span><span class="p">]]]</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="go">[[[[&#39;black&#39;, &#39;cyan&#39;],</span>
+<span class="go">   &#39;white&#39;,</span>
+<span class="go">   [&#39;green&#39;, &#39;red&#39;]],</span>
+<span class="go">  [[&#39;magenta&#39;, &#39;yellow&#39;],</span>
+<span class="go">   &#39;blue&#39;]]]</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="textwrap.html#module-textwrap" tppabs="https://docs.python.org/zh-cn/3/library/textwrap.html#module-textwrap" title="textwrap: Text wrapping and filling"><code class="xref py py-mod docutils literal notranslate"><span class="pre">textwrap</span></code></a> 模块能够格式化文本段落，以适应给定的屏幕宽度:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">textwrap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;The wrap() method is just like fill() except that it returns</span>
+<span class="gp">... </span><span class="s2">a list of strings instead of one big string with newlines to separate</span>
+<span class="gp">... </span><span class="s2">the wrapped lines.&quot;&quot;&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">textwrap</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">40</span><span class="p">))</span>
+<span class="go">The wrap() method is just like fill()</span>
+<span class="go">except that it returns a list of strings</span>
+<span class="go">instead of one big string with newlines</span>
+<span class="go">to separate the wrapped lines.</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="locale.html#module-locale" tppabs="https://docs.python.org/zh-cn/3/library/locale.html#module-locale" title="locale: Internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">locale</span></code></a> 模块处理与特定地域文化相关的数据格式。locale 模块的 format 函数包含一个 grouping 属性，可直接将数字格式化为带有组分隔符的样式:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">locale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;English_United States.1252&#39;</span><span class="p">)</span>
+<span class="go">&#39;English_United States.1252&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conv</span> <span class="o">=</span> <span class="n">locale</span><span class="o">.</span><span class="n">localeconv</span><span class="p">()</span>          <span class="c1"># get a mapping of conventions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1234567.8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;1,234,567&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">format_string</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%.*f</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">conv</span><span class="p">[</span><span class="s1">&#39;currency_symbol&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                     <span class="n">conv</span><span class="p">[</span><span class="s1">&#39;frac_digits&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">),</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;$1,234,567.80&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="templating">
+<span id="tut-templating"></span><h2>11.2. 模板<a class="headerlink" href="#templating" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="string.html#module-string" tppabs="https://docs.python.org/zh-cn/3/library/string.html#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> 模块包含一个通用的 <a class="reference internal" href="string.html#string.Template" tppabs="https://docs.python.org/zh-cn/3/library/string.html#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> 类，具有适用于最终用户的简化语法。它允许用户在不更改应用逻辑的情况下定制自己的应用。</p>
+<p>上述格式化操作是通过占位符实现的，占位符由 <code class="docutils literal notranslate"><span class="pre">$</span></code> 加上合法的 Python 标识符（只能包含字母、数字和下划线）构成。一旦使用花括号将占位符括起来，就可以在后面直接跟上更多的字母和数字而无需空格分割。<code class="docutils literal notranslate"><span class="pre">$$</span></code> 将被转义成单个字符 <code class="docutils literal notranslate"><span class="pre">$</span></code>:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">string</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;$</span><span class="si">{village}</span><span class="s1">folk send $$10 to $cause.&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">village</span><span class="o">=</span><span class="s1">&#39;Nottingham&#39;</span><span class="p">,</span> <span class="n">cause</span><span class="o">=</span><span class="s1">&#39;the ditch fund&#39;</span><span class="p">)</span>
+<span class="go">&#39;Nottinghamfolk send $10 to the ditch fund.&#39;</span>
+</pre></div>
+</div>
+<p>如果在字典或关键字参数中未提供某个占位符的值，那么 <a class="reference internal" href="string.html#string.Template.substitute" tppabs="https://docs.python.org/zh-cn/3/library/string.html#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">substitute()</span></code></a>&nbsp;方法将抛出 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>。对于邮件合并类型的应用，用户提供的数据有可能是不完整的，此时使用 <a class="reference internal" href="string.html#string.Template.safe_substitute" tppabs="https://docs.python.org/zh-cn/3/library/string.html#string.Template.safe_substitute" title="string.Template.safe_substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">safe_substitute()</span></code></a> 方法更加合适 —— 如果数据缺失，它会直接将占位符原样保留。</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;Return the $item to $owner.&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">item</span><span class="o">=</span><span class="s1">&#39;unladen swallow&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;owner&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">safe_substitute</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="go">&#39;Return the unladen swallow to $owner.&#39;</span>
+</pre></div>
+</div>
+<p>Template 的子类可以自定义定界符。例如，以下是某个照片浏览器的批量重命名功能，采用了百分号作为日期、照片序号和照片格式的占位符:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">os.path</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">photofiles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;img_1074.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;img_1076.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;img_1077.jpg&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">BatchRename</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;%&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter rename style (</span><span class="si">%d</span><span class="s1">-date %n-seqnum </span><span class="si">%f</span><span class="s1">-format):  &#39;</span><span class="p">)</span>
+<span class="go">Enter rename style (%d-date %n-seqnum %f-format):  Ashley_%n%f</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">BatchRename</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">date</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">%b%y&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">photofiles</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">base</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">newname</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> --&gt; </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">newname</span><span class="p">))</span>
+
+<span class="go">img_1074.jpg --&gt; Ashley_0.jpg</span>
+<span class="go">img_1076.jpg --&gt; Ashley_1.jpg</span>
+<span class="go">img_1077.jpg --&gt; Ashley_2.jpg</span>
+</pre></div>
+</div>
+<p>模板的另一个应用是将程序逻辑与多样的格式化输出细节分离开来。这使得对 XML 文件、纯文本报表和 HTML 网络报表使用自定义模板成为可能。</p>
+</div>
+<div class="section" id="working-with-binary-data-record-layouts">
+<span id="tut-binary-formats"></span><h2>11.3. 使用二进制数据记录格式<a class="headerlink" href="#working-with-binary-data-record-layouts" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="struct.html#module-struct" tppabs="https://docs.python.org/zh-cn/3/library/struct.html#module-struct" title="struct: Interpret bytes as packed binary data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">struct</span></code></a> 模块提供了 <a class="reference internal" href="struct.html#struct.pack" tppabs="https://docs.python.org/zh-cn/3/library/struct.html#struct.pack" title="struct.pack"><code class="xref py py-func docutils literal notranslate"><span class="pre">pack()</span></code></a> 和 <a class="reference internal" href="struct.html#struct.unpack" tppabs="https://docs.python.org/zh-cn/3/library/struct.html#struct.unpack" title="struct.unpack"><code class="xref py py-func docutils literal notranslate"><span class="pre">unpack()</span></code></a> 函数，用于处理不定长度的二进制记录格式。下面的例子展示了在不使用 <a class="reference internal" href="zipfile.html#module-zipfile" tppabs="https://docs.python.org/zh-cn/3/library/zipfile.html#module-zipfile" title="zipfile: Read and write ZIP-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipfile</span></code></a> 模块的情况下，如何循环遍历一个 ZIP 文件的所有头信息。Pack 代码 <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&quot;I&quot;</span></code> 分别代表两字节和四字节无符号整数。<code class="docutils literal notranslate"><span class="pre">&quot;&lt;&quot;</span></code> 代表它们是标准尺寸的小尾型字节序:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">struct</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>                      <span class="c1"># show the first 3 file headers</span>
+    <span class="n">start</span> <span class="o">+=</span> <span class="mi">14</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;IIIHH&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span><span class="o">+</span><span class="mi">16</span><span class="p">])</span>
+    <span class="n">crc32</span><span class="p">,</span> <span class="n">comp_size</span><span class="p">,</span> <span class="n">uncomp_size</span><span class="p">,</span> <span class="n">filenamesize</span><span class="p">,</span> <span class="n">extra_size</span> <span class="o">=</span> <span class="n">fields</span>
+
+    <span class="n">start</span> <span class="o">+=</span> <span class="mi">16</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span><span class="o">+</span><span class="n">filenamesize</span><span class="p">]</span>
+    <span class="n">start</span> <span class="o">+=</span> <span class="n">filenamesize</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span><span class="o">+</span><span class="n">extra_size</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">hex</span><span class="p">(</span><span class="n">crc32</span><span class="p">),</span> <span class="n">comp_size</span><span class="p">,</span> <span class="n">uncomp_size</span><span class="p">)</span>
+
+    <span class="n">start</span> <span class="o">+=</span> <span class="n">extra_size</span> <span class="o">+</span> <span class="n">comp_size</span>     <span class="c1"># skip to the next header</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multi-threading">
+<span id="tut-multi-threading"></span><h2>11.4. 多线程<a class="headerlink" href="#multi-threading" title="永久链接至标题">¶</a></h2>
+<p>线程是一种对于非顺序依赖的多个任务进行解耦的技术。多线程可以提高应用的响应效率，当接收用户输入的同时，保持其他任务在后台运行。一个有关的应用场景是，将 I/O 和计算运行在两个并行的线程中。</p>
+<p>以下代码展示了高阶的 <a class="reference internal" href="threading.html#module-threading" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> 模块如何在后台运行任务，且不影响主程序的继续运行:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span><span class="o">,</span> <span class="nn">zipfile</span>
+
+<span class="k">class</span> <span class="nc">AsyncZip</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">infile</span><span class="p">,</span> <span class="n">outfile</span><span class="p">):</span>
+        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">infile</span> <span class="o">=</span> <span class="n">infile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span> <span class="o">=</span> <span class="n">outfile</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">infile</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished background zip of:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">infile</span><span class="p">)</span>
+
+<span class="n">background</span> <span class="o">=</span> <span class="n">AsyncZip</span><span class="p">(</span><span class="s1">&#39;mydata.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;myarchive.zip&#39;</span><span class="p">)</span>
+<span class="n">background</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The main program continues to run in foreground.&#39;</span><span class="p">)</span>
+
+<span class="n">background</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>    <span class="c1"># Wait for the background task to finish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Main program waited until background was done.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>多线程应用面临的主要挑战是，相互协调的多个线程之间需要共享数据或其他资源。为此，threading 模块提供了多个同步操作原语，包括线程锁、事件、条件变量和信号量。</p>
+<p>尽管这些工具非常强大，但微小的设计错误却可以导致一些难以复现的问题。因此，实现多任务协作的首选方法是将对资源的所有请求集中到一个线程中，然后使用 <a class="reference internal" href="queue.html#module-queue" tppabs="https://docs.python.org/zh-cn/3/library/queue.html#module-queue" title="queue: A synchronized queue class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code></a> 模块向该线程供应来自其他线程的请求。应用程序使用 <a class="reference internal" href="queue.html#queue.Queue" tppabs="https://docs.python.org/zh-cn/3/library/queue.html#queue.Queue" title="queue.Queue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Queue</span></code></a>&nbsp;对象进行线程间通信和协调，更易于设计，更易读，更可靠。</p>
+</div>
+<div class="section" id="logging">
+<span id="tut-logging"></span><h2>11.5. 日志<a class="headerlink" href="#logging" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="logging.html#module-logging" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> 模块提供功能齐全且灵活的日志记录系统。在最简单的情况下，日志消息被发送到文件或 <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code></p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Debugging information&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Informational message&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Warning:config file </span><span class="si">%s</span><span class="s1"> not found&#39;</span><span class="p">,</span> <span class="s1">&#39;server.conf&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Error occurred&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;Critical error -- shutting down&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这会产生以下输出:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>WARNING:root:Warning:config file server.conf not found
+ERROR:root:Error occurred
+CRITICAL:root:Critical error -- shutting down
+</pre></div>
+</div>
+<p>默认情况下，informational 和 debugging 消息被压制，输出会发送到标准错误流。其他输出选项包括将消息转发到电子邮件，数据报，套接字或 HTTP 服务器。新的过滤器可以根据消息优先级选择不同的路由方式：<code class="xref py py-const docutils literal notranslate"><span class="pre">DEBUG</span></code>，<code class="xref py py-const docutils literal notranslate"><span class="pre">INFO</span></code>，<code class="xref py py-const docutils literal notranslate"><span class="pre">WARNING</span></code>，<code class="xref py py-const docutils literal notranslate"><span class="pre">ERROR</span></code>，和 <code class="xref py py-const docutils literal notranslate"><span class="pre">CRITICAL</span></code>。</p>
+<p>日志系统可以直接从 Python 配置，也可以从用户配置文件加载，以便自定义日志记录而无需更改应用程序。</p>
+</div>
+<div class="section" id="weak-references">
+<span id="tut-weak-references"></span><h2>11.6. 弱引用<a class="headerlink" href="#weak-references" title="永久链接至标题">¶</a></h2>
+<p>Python 会自动进行内存管理（对大多数对象进行引用计数并使用 <a class="reference internal" href="glossary.html#term-garbage-collection" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-garbage-collection"><span class="xref std std-term">garbage collection</span></a> 来清除循环引用）。 当某个对象的最后一个引用被移除后不久就会释放其所占用的内存。</p>
+<p>此方式对大多数应用来说都适用，但偶尔也必须在对象持续被其他对象所使用时跟踪它们。 不幸的是，跟踪它们将创建一个会令其永久化的引用。 <a class="reference internal" href="weakref.html#module-weakref" tppabs="https://docs.python.org/zh-cn/3/library/weakref.html#module-weakref" title="weakref: Support for weak references and weak dictionaries."><code class="xref py py-mod docutils literal notranslate"><span class="pre">weakref</span></code></a> 模块提供的工具可以不必创建引用就能跟踪对象。 当对象不再需要时，它将自动从一个弱引用表中被移除，并为弱引用对象触发一个回调。 典型应用包括对创建开销较大的对象进行缓存:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">weakref</span><span class="o">,</span> <span class="nn">gc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                   <span class="c1"># create a reference</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">WeakValueDictionary</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;primary&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>            <span class="c1"># does not create a reference</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;primary&#39;</span><span class="p">]</span>                <span class="c1"># fetch the object if it is still alive</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">a</span>                       <span class="c1"># remove the one reference</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>                <span class="c1"># run garbage collection right away</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;primary&#39;</span><span class="p">]</span>                <span class="c1"># entry was automatically removed</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+    <span class="n">d</span><span class="p">[</span><span class="s1">&#39;primary&#39;</span><span class="p">]</span>                <span class="c1"># entry was automatically removed</span>
+  File <span class="nb">&quot;C:/python37/lib/weakref.py&quot;</span>, line <span class="m">46</span>, in <span class="n">__getitem__</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]()</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;primary&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tools-for-working-with-lists">
+<span id="tut-list-tools"></span><h2>11.7. 用于操作列表的工具<a class="headerlink" href="#tools-for-working-with-lists" title="永久链接至标题">¶</a></h2>
+<p>许多对于数据结构的需求可以通过内置列表类型来满足。 但是，有时也会需要具有不同效费比的替代实现。</p>
+<p><a class="reference internal" href="array.html#module-array" tppabs="https://docs.python.org/zh-cn/3/library/array.html#module-array" title="array: Space efficient arrays of uniformly typed numeric values."><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> 模块提供了一种 <a class="reference internal" href="array.html#array.array" tppabs="https://docs.python.org/zh-cn/3/library/array.html#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array()</span></code></a> 对象，它类似于列表，但只能存储类型一致的数据且存储密集更高。 下面的例子演示了一个以两个字节为存储单元的无符号二进制数值的数组 (类型码为 <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code>)，而对于普通列表来说，每个条目存储为标准 Python 的 int 对象通常要占用16 个字节:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">array</span> <span class="k">import</span> <span class="n">array</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4000</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">22222</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">26932</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">array(&#39;H&#39;, [10, 700])</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="collections.html#module-collections" tppabs="https://docs.python.org/zh-cn/3/library/collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> 模块提供了一种 <a class="reference internal" href="collections.html#collections.deque" tppabs="https://docs.python.org/zh-cn/3/library/collections.html#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque()</span></code></a> 对象，它类似于列表，但从左端添加和弹出的速度较快，而在中间查找的速度较慢。 此种对象适用于实现队列和广度优先树搜索:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">deque</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="s2">&quot;task1&quot;</span><span class="p">,</span> <span class="s2">&quot;task2&quot;</span><span class="p">,</span> <span class="s2">&quot;task3&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;task4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Handling&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">popleft</span><span class="p">())</span>
+<span class="go">Handling task1</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">unsearched</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="n">starting_node</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">breadth_first_search</span><span class="p">(</span><span class="n">unsearched</span><span class="p">):</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">unsearched</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">gen_moves</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">is_goal</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">m</span>
+        <span class="n">unsearched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>在替代的列表实现以外，标准库也提供了其他工具，例如 <a class="reference internal" href="bisect.html#module-bisect" tppabs="https://docs.python.org/zh-cn/3/library/bisect.html#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code></a> 模块具有用于操作排序列表的函数:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bisect</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scores</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;perl&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;tcl&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;lua&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bisect</span><span class="o">.</span><span class="n">insort</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;ruby&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scores</span>
+<span class="go">[(100, &#39;perl&#39;), (200, &#39;tcl&#39;), (300, &#39;ruby&#39;), (400, &#39;lua&#39;), (500, &#39;python&#39;)]</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="heapq.html#module-heapq" tppabs="https://docs.python.org/zh-cn/3/library/heapq.html#module-heapq" title="heapq: Heap queue algorithm (a.k.a. priority queue)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code></a> 模块提供了基于常规列表来实现堆的函数。 最小值的条目总是保持在位置零。 这对于需要重复访问最小元素而不希望运行完整列表排序的应用来说非常有用:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">heapq</span> <span class="k">import</span> <span class="n">heapify</span><span class="p">,</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heapify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                      <span class="c1"># rearrange the list into heap order</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>                 <span class="c1"># add a new entry</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">heappop</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>  <span class="c1"># fetch the three smallest entries</span>
+<span class="go">[-5, 0, 1]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decimal-floating-point-arithmetic">
+<span id="tut-decimal-fp"></span><h2>11.8. 十进制浮点运算<a class="headerlink" href="#decimal-floating-point-arithmetic" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="decimal.html#module-decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> 模块提供了一种 <a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 数据类型用于十进制浮点运算。 相比内置的 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> 二进制浮点实现，该类特别适用于</p>
+<ul class="simple">
+<li>财务应用和其他需要精确十进制表示的用途，</li>
+<li>控制精度，</li>
+<li>控制四舍五入以满足法律或监管要求，</li>
+<li>跟踪有效小数位，或</li>
+<li>用户期望结果与手工完成的计算相匹配的应用程序。</li>
+</ul>
+<p>例如，使用十进制浮点和二进制浮点数计算70美分手机和5％税的总费用，会产生的不同结果。如果结果四舍五入到最接近的分数差异会更大:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">decimal</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.70&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1.05&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">Decimal(&#39;0.74&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="o">.</span><span class="mi">70</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">0.73</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 表示的结果会保留尾部的零，并根据具有两个有效位的被乘数自动推出四个有效位。 Decimal 可以模拟手工运算来避免当二进制浮点数无法精确表示十进制数时会导致的问题。</p>
+<p>精确表示特性使得 <a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 类能够执行对于二进制浮点数来说不适用的模运算和相等性检测:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1.00&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;.10&#39;</span><span class="p">)</span>
+<span class="go">Decimal(&#39;0.00&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">1.00</span> <span class="o">%</span> <span class="mf">0.10</span>
+<span class="go">0.09999999999999995</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">([</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)]</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1.0&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">([</span><span class="mf">0.1</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="decimal.html#module-decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> 模块提供了运算所需要的足够精度:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">getcontext</span><span class="p">()</span><span class="o">.</span><span class="n">prec</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Decimal</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">Decimal(&#39;0.142857142857142857142857142857142857&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">11. 标准库简介 —— 第二部分</a><ul>
+<li><a class="reference internal" href="#output-formatting">11.1. 格式化输出</a></li>
+<li><a class="reference internal" href="#templating">11.2. 模板</a></li>
+<li><a class="reference internal" href="#working-with-binary-data-record-layouts">11.3. 使用二进制数据记录格式</a></li>
+<li><a class="reference internal" href="#multi-threading">11.4. 多线程</a></li>
+<li><a class="reference internal" href="#logging">11.5. 日志</a></li>
+<li><a class="reference internal" href="#weak-references">11.6. 弱引用</a></li>
+<li><a class="reference internal" href="#tools-for-working-with-lists">11.7. 用于操作列表的工具</a></li>
+<li><a class="reference internal" href="#decimal-floating-point-arithmetic">11.8. 十进制浮点运算</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="stdlib.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/stdlib.html"
+                        title="上一章">10. 标准库简介</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="venv-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/venv.html"
+                        title="下一章">12. 虚拟环境和包</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/tutorial/stdlib2.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/tutorial/stdlib2.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/tutorial/stdlib2.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="venv-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/venv.html" title="12. 虚拟环境和包"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="stdlib.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/stdlib.html" title="10. 标准库简介"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" >Python 教程</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

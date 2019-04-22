@@ -1,0 +1,557 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ast --- 抽象语法树 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="symtable --- Access to the compiler&#39;s symbol tables" href="symtable.html" />
+    <link rel="prev" title="parser --- Access Python parse trees" href="parser.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/ast.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="symtable.html" tppabs="https://docs.python.org/zh-cn/3/library/symtable.html" title="symtable --- Access to the compiler&#39;s symbol tables"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="parser.html" tppabs="https://docs.python.org/zh-cn/3/library/parser.html" title="parser --- Access Python parse trees"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="language.html" tppabs="https://docs.python.org/zh-cn/3/library/language.html" accesskey="U">Python 语言服务</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ast">
+<span id="ast-abstract-syntax-trees"></span><h1><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> --- 抽象语法树<a class="headerlink" href="#module-ast" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/ast.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/ast.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/ast.py">Lib/ast.py</a></p>
+<hr class="docutils" />
+<p><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模块帮助 Python 程序处理 Python 语法的抽象语法树。抽象语法或许会随着 Python 的更新发布而改变；该模块能够帮助理解当前语法在编程层面的样貌。</p>
+<p>抽象语法树可通过将 <code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_ONLY_AST</span></code> 作为旗标传递给 <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 内置函数来生成，或是使用此模块中提供的 <a class="reference internal" href="#ast.parse" title="ast.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code></a> 辅助函数。返回结果将是一个对象树，，其中的类都继承自 <a class="reference internal" href="#ast.AST" title="ast.AST"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.AST</span></code></a>。抽象语法树可被内置的 <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 函数编译为一个 Python 代码对象。</p>
+<div class="section" id="node-classes">
+<h2>节点类<a class="headerlink" href="#node-classes" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="ast.AST">
+<em class="property">class </em><code class="descclassname">ast.</code><code class="descname">AST</code><a class="headerlink" href="#ast.AST" title="永久链接至目标">¶</a></dt>
+<dd><p>这是所有 AST 节点类的基类。实际上，这些节点类派生自 <code class="file docutils literal notranslate"><span class="pre">Parser/Python.asdl</span></code> 文件，其中定义的语法树示例 <a class="reference internal" href="#abstract-grammar"><span class="std std-ref">如下</span></a>。它们在 C 语言模块 <code class="xref py py-mod docutils literal notranslate"><span class="pre">_ast</span></code> 中定义，并被导出至 <a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模块。</p>
+<p>抽象语法定义的每个左侧符号(比方说，  <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.stmt</span></code> 或者 <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code>)定义了一个类。另外，在抽象语法定义的右侧，对每一个构造器也定义了一个类；这些类继承自树左侧的类。比如，<code class="xref py py-class docutils literal notranslate"><span class="pre">ast.BinOp</span></code> 继承自 <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code>。对于多分支产生式(也就是&quot;和规则&quot;)，树右侧的类是抽象的；只有特定构造器结点的实例能被构造。</p>
+<span class="target" id="index-0"></span><span class="target" id="index-1"></span><dl class="attribute">
+<dt id="ast.AST._fields">
+<code class="descname">_fields</code><a class="headerlink" href="#ast.AST._fields" title="永久链接至目标">¶</a></dt>
+<dd><p>每个具体类都有个属性 <a class="reference internal" href="#ast.AST._fields" title="ast.AST._fields"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_fields</span></code></a>, 用来给出所有子节点的名字。</p>
+<p>每个具体类的实例对它每个子节点都有一个属性，对应类型如文法中所定义。比如，<code class="xref py py-class docutils literal notranslate"><span class="pre">ast.BinOp</span></code> 的实例有个属性 <code class="xref py py-attr docutils literal notranslate"><span class="pre">left</span></code>，类型是 <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code>.</p>
+<p>如果这些属性在文法中标记为可选（使用问号），对应值可能会是 <code class="docutils literal notranslate"><span class="pre">None</span></code>。如果这些属性有零或多个（用星号标记），对应值会用Python的列表来表示。所有可能的属性必须在用 <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 编译得到AST时给出，且是有效的值。</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ast.AST.lineno">
+<code class="descname">lineno</code><a class="headerlink" href="#ast.AST.lineno" title="永久链接至目标">¶</a></dt>
+<dt id="ast.AST.col_offset">
+<code class="descname">col_offset</code><a class="headerlink" href="#ast.AST.col_offset" title="永久链接至目标">¶</a></dt>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code> 和 <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.stmt</span></code> 子类的实例有 <a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a> 和 <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a> 属性。<a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a> 是源代码的行数(从1开始, 所以第一行行数是1)，而 <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a> 是该生成节点第一个token的UTF-8字节偏移量。记录下UTF-8偏移量的原因是parser内部使用UTF-8。</p>
+</dd></dl>
+
+<p>一个类的构造器 <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.T</span></code> 像下面这样parse它的参数。</p>
+<ul class="simple">
+<li>如果有位置参数，它们必须和 <code class="xref py py-attr docutils literal notranslate"><span class="pre">T._fields</span></code> 中的元素一样多；他们会像这些名字的属性一样被赋值。</li>
+<li>如果有关键字参数，它们必须被设为和给定值同名的属性。</li>
+</ul>
+<p>比方说，要创建和填充节点 <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.UnaryOp</span></code>，你得用</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">UnaryOp</span><span class="p">()</span>
+<span class="n">node</span><span class="o">.</span><span class="n">op</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">USub</span><span class="p">()</span>
+<span class="n">node</span><span class="o">.</span><span class="n">operand</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">Num</span><span class="p">()</span>
+<span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">col_offset</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">node</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">node</span><span class="o">.</span><span class="n">col_offset</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>或者更紧凑点</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">UnaryOp</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">USub</span><span class="p">(),</span> <span class="n">ast</span><span class="o">.</span><span class="n">Num</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+                   <span class="n">lineno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="abstract-grammar">
+<span id="id1"></span><h2>抽象文法<a class="headerlink" href="#abstract-grammar" title="永久链接至标题">¶</a></h2>
+<p>抽象文法目前定义如下</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-- ASDL&#39;s 7 builtin types are:
+-- identifier, int, string, bytes, object, singleton, constant
+--
+-- singleton: None, True or False
+-- constant can be None, whereas None means &quot;no value&quot; for object.
+
+module Python
+{
+    mod = Module(stmt* body)
+        | Interactive(stmt* body)
+        | Expression(expr body)
+
+        -- not really an actual node but useful in Jython&#39;s typesystem.
+        | Suite(stmt* body)
+
+    stmt = FunctionDef(identifier name, arguments args,
+                       stmt* body, expr* decorator_list, expr? returns)
+          | AsyncFunctionDef(identifier name, arguments args,
+                             stmt* body, expr* decorator_list, expr? returns)
+
+          | ClassDef(identifier name,
+             expr* bases,
+             keyword* keywords,
+             stmt* body,
+             expr* decorator_list)
+          | Return(expr? value)
+
+          | Delete(expr* targets)
+          | Assign(expr* targets, expr value)
+          | AugAssign(expr target, operator op, expr value)
+          -- &#39;simple&#39; indicates that we annotate simple name without parens
+          | AnnAssign(expr target, expr annotation, expr? value, int simple)
+
+          -- use &#39;orelse&#39; because else is a keyword in target languages
+          | For(expr target, expr iter, stmt* body, stmt* orelse)
+          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse)
+          | While(expr test, stmt* body, stmt* orelse)
+          | If(expr test, stmt* body, stmt* orelse)
+          | With(withitem* items, stmt* body)
+          | AsyncWith(withitem* items, stmt* body)
+
+          | Raise(expr? exc, expr? cause)
+          | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)
+          | Assert(expr test, expr? msg)
+
+          | Import(alias* names)
+          | ImportFrom(identifier? module, alias* names, int? level)
+
+          | Global(identifier* names)
+          | Nonlocal(identifier* names)
+          | Expr(expr value)
+          | Pass | Break | Continue
+
+          -- XXX Jython will be different
+          -- col_offset is the byte offset in the utf8 string the parser uses
+          attributes (int lineno, int col_offset)
+
+          -- BoolOp() can use left &amp; right?
+    expr = BoolOp(boolop op, expr* values)
+         | BinOp(expr left, operator op, expr right)
+         | UnaryOp(unaryop op, expr operand)
+         | Lambda(arguments args, expr body)
+         | IfExp(expr test, expr body, expr orelse)
+         | Dict(expr* keys, expr* values)
+         | Set(expr* elts)
+         | ListComp(expr elt, comprehension* generators)
+         | SetComp(expr elt, comprehension* generators)
+         | DictComp(expr key, expr value, comprehension* generators)
+         | GeneratorExp(expr elt, comprehension* generators)
+         -- the grammar constrains where yield expressions can occur
+         | Await(expr value)
+         | Yield(expr? value)
+         | YieldFrom(expr value)
+         -- need sequences for compare to distinguish between
+         -- x &lt; 4 &lt; 3 and (x &lt; 4) &lt; 3
+         | Compare(expr left, cmpop* ops, expr* comparators)
+         | Call(expr func, expr* args, keyword* keywords)
+         | Num(object n) -- a number as a PyObject.
+         | Str(string s) -- need to specify raw, unicode, etc?
+         | FormattedValue(expr value, int? conversion, expr? format_spec)
+         | JoinedStr(expr* values)
+         | Bytes(bytes s)
+         | NameConstant(singleton value)
+         | Ellipsis
+         | Constant(constant value)
+
+         -- the following expression can appear in assignment context
+         | Attribute(expr value, identifier attr, expr_context ctx)
+         | Subscript(expr value, slice slice, expr_context ctx)
+         | Starred(expr value, expr_context ctx)
+         | Name(identifier id, expr_context ctx)
+         | List(expr* elts, expr_context ctx)
+         | Tuple(expr* elts, expr_context ctx)
+
+          -- col_offset is the byte offset in the utf8 string the parser uses
+          attributes (int lineno, int col_offset)
+
+    expr_context = Load | Store | Del | AugLoad | AugStore | Param
+
+    slice = Slice(expr? lower, expr? upper, expr? step)
+          | ExtSlice(slice* dims)
+          | Index(expr value)
+
+    boolop = And | Or
+
+    operator = Add | Sub | Mult | MatMult | Div | Mod | Pow | LShift
+                 | RShift | BitOr | BitXor | BitAnd | FloorDiv
+
+    unaryop = Invert | Not | UAdd | USub
+
+    cmpop = Eq | NotEq | Lt | LtE | Gt | GtE | Is | IsNot | In | NotIn
+
+    comprehension = (expr target, expr iter, expr* ifs, int is_async)
+
+    excepthandler = ExceptHandler(expr? type, identifier? name, stmt* body)
+                    attributes (int lineno, int col_offset)
+
+    arguments = (arg* args, arg? vararg, arg* kwonlyargs, expr* kw_defaults,
+                 arg? kwarg, expr* defaults)
+
+    arg = (identifier arg, expr? annotation)
+           attributes (int lineno, int col_offset)
+
+    -- keyword arguments supplied to call (NULL identifier for **kwargs)
+    keyword = (identifier? arg, expr value)
+
+    -- import name with optional &#39;as&#39; alias.
+    alias = (identifier name, identifier? asname)
+
+    withitem = (expr context_expr, expr? optional_vars)
+}
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="ast-helpers">
+<h2><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 中的辅助函数<a class="headerlink" href="#ast-helpers" title="永久链接至标题">¶</a></h2>
+<p>除了节点类， <a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模块里为遍历抽象语法树定义了这些工具函数和类:</p>
+<dl class="function">
+<dt id="ast.parse">
+<code class="descclassname">ast.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>source</em>, <em>filename='&lt;unknown&gt;'</em>, <em>mode='exec'</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.parse" title="永久链接至目标">¶</a></dt>
+<dd><p>把源码解析为AST节点。和 <code class="docutils literal notranslate"><span class="pre">compile(source,</span> <span class="pre">filename,</span> <span class="pre">mode,ast.PyCF_ONLY_AST)</span></code> 等价。</p>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">足够复杂或是巨大的字符串可能导致Python解释器的崩溃，因为Python的AST编译器是有栈深限制的。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.literal_eval">
+<code class="descclassname">ast.</code><code class="descname">literal_eval</code><span class="sig-paren">(</span><em>node_or_string</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.literal_eval" title="永久链接至目标">¶</a></dt>
+<dd><p>Safely evaluate an expression node or a string containing a Python literal or
+container display.  The string or node provided may only consist of the
+following Python literal structures: strings, bytes, numbers, tuples, lists,
+dicts, sets, booleans, and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>This can be used for safely evaluating strings containing Python values from
+untrusted sources without the need to parse the values oneself.  It is not
+capable of evaluating arbitrarily complex expressions, for example involving
+operators or indexing.</p>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">足够复杂或是巨大的字符串可能导致Python解释器的崩溃，因为Python的AST编译器是有栈深限制的。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.2 版更改: </span>Now allows bytes and set literals.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.get_docstring">
+<code class="descclassname">ast.</code><code class="descname">get_docstring</code><span class="sig-paren">(</span><em>node</em>, <em>clean=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.get_docstring" title="永久链接至目标">¶</a></dt>
+<dd><p>Return the docstring of the given <em>node</em> (which must be a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionDef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncFunctionDef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassDef</span></code>,
+or <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> node), or <code class="docutils literal notranslate"><span class="pre">None</span></code> if it has no docstring.
+If <em>clean</em> is true, clean up the docstring's indentation with
+<a class="reference internal" href="inspect.html#inspect.cleandoc" tppabs="https://docs.python.org/zh-cn/3/library/inspect.html#inspect.cleandoc" title="inspect.cleandoc"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.cleandoc()</span></code></a>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5 版更改: </span><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncFunctionDef</span></code> is now supported.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.fix_missing_locations">
+<code class="descclassname">ast.</code><code class="descname">fix_missing_locations</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.fix_missing_locations" title="永久链接至目标">¶</a></dt>
+<dd><p>When you compile a node tree with <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a>, the compiler expects
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code> attributes for every node that supports
+them.  This is rather tedious to fill in for generated nodes, so this helper
+adds these attributes recursively where not already set, by setting them to
+the values of the parent node.  It works recursively starting at <em>node</em>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.increment_lineno">
+<code class="descclassname">ast.</code><code class="descname">increment_lineno</code><span class="sig-paren">(</span><em>node</em>, <em>n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.increment_lineno" title="永久链接至目标">¶</a></dt>
+<dd><p>Increment the line number of each node in the tree starting at <em>node</em> by <em>n</em>.
+This is useful to &quot;move code&quot; to a different location in a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.copy_location">
+<code class="descclassname">ast.</code><code class="descname">copy_location</code><span class="sig-paren">(</span><em>new_node</em>, <em>old_node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.copy_location" title="永久链接至目标">¶</a></dt>
+<dd><p>Copy source location (<code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code>) from <em>old_node</em>
+to <em>new_node</em> if possible, and return <em>new_node</em>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.iter_fields">
+<code class="descclassname">ast.</code><code class="descname">iter_fields</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.iter_fields" title="永久链接至目标">¶</a></dt>
+<dd><p>Yield a tuple of <code class="docutils literal notranslate"><span class="pre">(fieldname,</span> <span class="pre">value)</span></code> for each field in <code class="docutils literal notranslate"><span class="pre">node._fields</span></code>
+that is present on <em>node</em>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.iter_child_nodes">
+<code class="descclassname">ast.</code><code class="descname">iter_child_nodes</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.iter_child_nodes" title="永久链接至目标">¶</a></dt>
+<dd><p>Yield all direct child nodes of <em>node</em>, that is, all fields that are nodes
+and all items of fields that are lists of nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.walk">
+<code class="descclassname">ast.</code><code class="descname">walk</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.walk" title="永久链接至目标">¶</a></dt>
+<dd><p>Recursively yield all descendant nodes in the tree starting at <em>node</em>
+(including <em>node</em> itself), in no specified order.  This is useful if you only
+want to modify nodes in place and don't care about the context.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ast.NodeVisitor">
+<em class="property">class </em><code class="descclassname">ast.</code><code class="descname">NodeVisitor</code><a class="headerlink" href="#ast.NodeVisitor" title="永久链接至目标">¶</a></dt>
+<dd><p>A node visitor base class that walks the abstract syntax tree and calls a
+visitor function for every node found.  This function may return a value
+which is forwarded by the <a class="reference internal" href="#ast.NodeVisitor.visit" title="ast.NodeVisitor.visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">visit()</span></code></a> method.</p>
+<p>This class is meant to be subclassed, with the subclass adding visitor
+methods.</p>
+<dl class="method">
+<dt id="ast.NodeVisitor.visit">
+<code class="descname">visit</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.NodeVisitor.visit" title="永久链接至目标">¶</a></dt>
+<dd><p>Visit a node.  The default implementation calls the method called
+<code class="samp docutils literal notranslate"><span class="pre">self.visit_</span><em><span class="pre">classname</span></em></code> where <em>classname</em> is the name of the node
+class, or <a class="reference internal" href="#ast.NodeVisitor.generic_visit" title="ast.NodeVisitor.generic_visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code></a> if that method doesn't exist.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ast.NodeVisitor.generic_visit">
+<code class="descname">generic_visit</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.NodeVisitor.generic_visit" title="永久链接至目标">¶</a></dt>
+<dd><p>This visitor calls <a class="reference internal" href="#ast.NodeVisitor.visit" title="ast.NodeVisitor.visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">visit()</span></code></a> on all children of the node.</p>
+<p>Note that child nodes of nodes that have a custom visitor method won't be
+visited unless the visitor calls <a class="reference internal" href="#ast.NodeVisitor.generic_visit" title="ast.NodeVisitor.generic_visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code></a> or visits them
+itself.</p>
+</dd></dl>
+
+<p>Don't use the <a class="reference internal" href="#ast.NodeVisitor" title="ast.NodeVisitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeVisitor</span></code></a> if you want to apply changes to nodes
+during traversal.  For this a special visitor exists
+(<a class="reference internal" href="#ast.NodeTransformer" title="ast.NodeTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeTransformer</span></code></a>) that allows modifications.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ast.NodeTransformer">
+<em class="property">class </em><code class="descclassname">ast.</code><code class="descname">NodeTransformer</code><a class="headerlink" href="#ast.NodeTransformer" title="永久链接至目标">¶</a></dt>
+<dd><p>A <a class="reference internal" href="#ast.NodeVisitor" title="ast.NodeVisitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeVisitor</span></code></a> subclass that walks the abstract syntax tree and
+allows modification of nodes.</p>
+<p>The <a class="reference internal" href="#ast.NodeTransformer" title="ast.NodeTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeTransformer</span></code></a> will walk the AST and use the return value of
+the visitor methods to replace or remove the old node.  If the return value
+of the visitor method is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the node will be removed from its
+location, otherwise it is replaced with the return value.  The return value
+may be the original node in which case no replacement takes place.</p>
+<p>Here is an example transformer that rewrites all occurrences of name lookups
+(<code class="docutils literal notranslate"><span class="pre">foo</span></code>) to <code class="docutils literal notranslate"><span class="pre">data['foo']</span></code>:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RewriteName</span><span class="p">(</span><span class="n">NodeTransformer</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">visit_Name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">copy_location</span><span class="p">(</span><span class="n">Subscript</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">Name</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="n">Load</span><span class="p">()),</span>
+            <span class="nb">slice</span><span class="o">=</span><span class="n">Index</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">Str</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">id</span><span class="p">)),</span>
+            <span class="n">ctx</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">ctx</span>
+        <span class="p">),</span> <span class="n">node</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Keep in mind that if the node you're operating on has child nodes you must
+either transform the child nodes yourself or call the <code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code>
+method for the node first.</p>
+<p>For nodes that were part of a collection of statements (that applies to all
+statement nodes), the visitor may also return a list of nodes rather than
+just a single node.</p>
+<p>Usually you use the transformer like this:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">YourTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.dump">
+<code class="descclassname">ast.</code><code class="descname">dump</code><span class="sig-paren">(</span><em>node</em>, <em>annotate_fields=True</em>, <em>include_attributes=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.dump" title="永久链接至目标">¶</a></dt>
+<dd><p>Return a formatted dump of the tree in <em>node</em>.  This is mainly useful for
+debugging purposes.  The returned string will show the names and the values
+for fields.  This makes the code impossible to evaluate, so if evaluation is
+wanted <em>annotate_fields</em> must be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Attributes such as line
+numbers and column offsets are not dumped by default.  If this is wanted,
+<em>include_attributes</em> can be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<p class="last"><a class="reference external" href="javascript:if(confirm('https://greentreesnakes.readthedocs.io/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://greentreesnakes.readthedocs.io/'" tppabs="https://greentreesnakes.readthedocs.io/">Green Tree Snakes</a>, an external documentation resource, has good
+details on working with Python ASTs.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ast</span></code> --- 抽象语法树</a><ul>
+<li><a class="reference internal" href="#node-classes">节点类</a></li>
+<li><a class="reference internal" href="#abstract-grammar">抽象文法</a></li>
+<li><a class="reference internal" href="#ast-helpers"><code class="docutils literal notranslate"><span class="pre">ast</span></code> 中的辅助函数</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="parser.html" tppabs="https://docs.python.org/zh-cn/3/library/parser.html"
+                        title="上一章"><code class="docutils literal notranslate"><span class="pre">parser</span></code> --- Access Python parse trees</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="symtable.html" tppabs="https://docs.python.org/zh-cn/3/library/symtable.html"
+                        title="下一章"><code class="docutils literal notranslate"><span class="pre">symtable</span></code> --- Access to the compiler's symbol tables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/ast.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/ast.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/ast.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="symtable.html" tppabs="https://docs.python.org/zh-cn/3/library/symtable.html" title="symtable --- Access to the compiler&#39;s symbol tables"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="parser.html" tppabs="https://docs.python.org/zh-cn/3/library/parser.html" title="parser --- Access Python parse trees"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="language.html" tppabs="https://docs.python.org/zh-cn/3/library/language.html" >Python 语言服务</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

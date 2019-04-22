@@ -1,0 +1,334 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Concrete Objects Layer &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
+    <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
+    <link rel="search" title="æœç´¢" href="../search.html" />
+    <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
+    <link rel="next" title="Type å¯¹è±¡" href="type.html" />
+    <link rel="prev" title="Old Buffer Protocol" href="objbuffer.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/c-api/concrete.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             accesskey="I">ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="type.html" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html" title="Type å¯¹è±¡"
+             accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="objbuffer.html" tppabs="https://docs.python.org/zh-cn/3/c-api/objbuffer.html" title="Old Buffer Protocol"
+             accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" accesskey="U">Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="concrete-objects-layer">
+<span id="concrete"></span><h1>Concrete Objects Layer<a class="headerlink" href="#concrete-objects-layer" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>The functions in this chapter are specific to certain Python object types.
+Passing them an object of the wrong type is not a good idea; if you receive an
+object from a Python program and you are not sure that it has the right type,
+you must perform a type check first; for example, to check that an object is a
+dictionary, use <a class="reference internal" href="dict.html#c.PyDict_Check" tppabs="https://docs.python.org/zh-cn/3/c-api/dict.html#c.PyDict_Check" title="PyDict_Check"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyDict_Check()</span></code></a>.  The chapter is structured like the
+&quot;family tree&quot; of Python object types.</p>
+<div class="admonition warning">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">While the functions described in this chapter carefully check the type of the
+objects which are passed in, many of them do not check for <em>NULL</em> being passed
+instead of a valid object.  Allowing <em>NULL</em> to be passed in can cause memory
+access violations and immediate termination of the interpreter.</p>
+</div>
+<div class="section" id="fundamental-objects">
+<span id="fundamental"></span><h2>åŸºæœ¬å¯¹è±¡<a class="headerlink" href="#fundamental-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>This section describes Python type objects and the singleton object <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="type.html" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html">Type å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="none.html" tppabs="https://docs.python.org/zh-cn/3/c-api/none.html"><code class="docutils literal notranslate"><span class="pre">None</span></code> å¯¹è±¡</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="numeric-objects">
+<span id="numericobjects"></span><h2>Numeric Objects<a class="headerlink" href="#numeric-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="toctree-wrapper compound" id="index-0">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="long.html" tppabs="https://docs.python.org/zh-cn/3/c-api/long.html">Integer Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html" tppabs="https://docs.python.org/zh-cn/3/c-api/bool.html">å¸ƒå°”å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="float.html" tppabs="https://docs.python.org/zh-cn/3/c-api/float.html">æµ®ç‚¹æ•°å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="complex.html" tppabs="https://docs.python.org/zh-cn/3/c-api/complex.html">å¤æ•°å¯¹è±¡</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="complex.html#complex-numbers-as-c-structures" tppabs="https://docs.python.org/zh-cn/3/c-api/complex.html#complex-numbers-as-c-structures">è¡¨ç¤ºå¤æ•°çš„Cç»“æ„ä½“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="complex.html#complex-numbers-as-python-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/complex.html#complex-numbers-as-python-objects">è¡¨ç¤ºå¤æ•°çš„Pythonå¯¹è±¡</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="sequence-objects">
+<span id="sequenceobjects"></span><h2>åºåˆ—å¯¹è±¡<a class="headerlink" href="#sequence-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p id="index-1">Generic operations on sequence objects were discussed in the previous chapter;
+this section deals with the specific kinds of sequence objects that are
+intrinsic to the Python language.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bytes.html" tppabs="https://docs.python.org/zh-cn/3/c-api/bytes.html">å­—èŠ‚å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bytearray.html" tppabs="https://docs.python.org/zh-cn/3/c-api/bytearray.html">å­—èŠ‚æ•°ç»„å¯¹è±¡</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bytearray.html#type-check-macros" tppabs="https://docs.python.org/zh-cn/3/c-api/bytearray.html#type-check-macros">ç±»å‹æ£€æŸ¥å®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bytearray.html#direct-api-functions" tppabs="https://docs.python.org/zh-cn/3/c-api/bytearray.html#direct-api-functions">ç›´æ¥ API å‡½æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bytearray.html#macros" tppabs="https://docs.python.org/zh-cn/3/c-api/bytearray.html#macros">å®</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unicode-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html">Unicode Objects and Codecs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unicode-1.html#unicode-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#unicode-objects">Unicodeå¯¹è±¡</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#unicode-type" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#unicode-type">Unicodeç±»å‹</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#unicode-character-properties" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#unicode-character-properties">Unicodeå­—ç¬¦å±æ€§</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#creating-and-accessing-unicode-strings" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#creating-and-accessing-unicode-strings">Creating and accessing Unicode strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#deprecated-py-unicode-apis" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#deprecated-py-unicode-apis">Deprecated Py_UNICODE APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#locale-encoding" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#locale-encoding">Locale Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#file-system-encoding" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#file-system-encoding">File System Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#wchar-t-support" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#wchar-t-support">wchar_t Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unicode-1.html#built-in-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#built-in-codecs">Built-in Codecs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#generic-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#generic-codecs">Generic Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#utf-8-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#utf-8-codecs">UTF-8 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#utf-32-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#utf-32-codecs">UTF-32 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#utf-16-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#utf-16-codecs">UTF-16 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#utf-7-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#utf-7-codecs">UTF-7 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#unicode-escape-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#unicode-escape-codecs">Unicode-Escape Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#raw-unicode-escape-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#raw-unicode-escape-codecs">Raw-Unicode-Escape Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#latin-1-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#latin-1-codecs">Latin-1 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#ascii-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#ascii-codecs">ASCII Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#character-map-codecs" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#character-map-codecs">Character Map Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#mbcs-codecs-for-windows" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#mbcs-codecs-for-windows">MBCS codecs for Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode-1.html#methods-slots" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#methods-slots">Methods &amp; Slots</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unicode-1.html#methods-and-slot-functions" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html#methods-and-slot-functions">Methods and Slot Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html" tppabs="https://docs.python.org/zh-cn/3/c-api/tuple.html">å…ƒç»„å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html#struct-sequence-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/tuple.html#struct-sequence-objects">Struct Sequence Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html" tppabs="https://docs.python.org/zh-cn/3/c-api/list.html">åˆ—è¡¨å¯¹è±¡</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="container-objects">
+<span id="mapobjects"></span><h2>å®¹å™¨å¯¹è±¡<a class="headerlink" href="#container-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="toctree-wrapper compound" id="index-2">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dict.html" tppabs="https://docs.python.org/zh-cn/3/c-api/dict.html">å­—å…¸å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set.html" tppabs="https://docs.python.org/zh-cn/3/c-api/set.html">é›†åˆå¯¹è±¡</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="function-objects">
+<span id="otherobjects"></span><h2>å‡½æ•°å¯¹è±¡<a class="headerlink" href="#function-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function.html" tppabs="https://docs.python.org/zh-cn/3/c-api/function.html">å‡½æ•°å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="method.html" tppabs="https://docs.python.org/zh-cn/3/c-api/method.html">å®ä¾‹æ–¹æ³•å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="method.html#method-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/method.html#method-objects">æ–¹æ³•å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cell.html" tppabs="https://docs.python.org/zh-cn/3/c-api/cell.html">Cell å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/code.html">ä»£ç å¯¹è±¡</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-objects">
+<h2>å…¶ä»–å¯¹è±¡<a class="headerlink" href="#other-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file.html" tppabs="https://docs.python.org/zh-cn/3/c-api/file.html">æ–‡ä»¶å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module.html" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html">Module Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="module.html#initializing-c-modules" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#initializing-c-modules">Initializing C modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="module.html#single-phase-initialization" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#single-phase-initialization">Single-phase initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html#multi-phase-initialization" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#multi-phase-initialization">Multi-phase initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html#low-level-module-creation-functions" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#low-level-module-creation-functions">Low-level module creation functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html#support-functions" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#support-functions">Support functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="module.html#module-lookup" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#module-lookup">Module lookup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iterator.html" tppabs="https://docs.python.org/zh-cn/3/c-api/iterator.html">è¿­ä»£å™¨å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="descriptor-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/descriptor.html">æè¿°ç¬¦å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slice.html" tppabs="https://docs.python.org/zh-cn/3/c-api/slice.html">åˆ‡ç‰‡å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slice.html#ellipsis-object" tppabs="https://docs.python.org/zh-cn/3/c-api/slice.html#ellipsis-object">Ellipsis Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memoryview.html" tppabs="https://docs.python.org/zh-cn/3/c-api/memoryview.html">MemoryView å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weakref-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/weakref.html">å¼±å¼•ç”¨å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capsule.html" tppabs="https://docs.python.org/zh-cn/3/c-api/capsule.html">èƒ¶å›Š</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen.html" tppabs="https://docs.python.org/zh-cn/3/c-api/gen.html">ç”Ÿæˆå™¨å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coro.html" tppabs="https://docs.python.org/zh-cn/3/c-api/coro.html">åç¨‹å¯¹è±¡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contextvars-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/contextvars.html">Context Variables Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/datetime.html">DateTime å¯¹è±¡</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Concrete Objects Layer</a><ul>
+<li><a class="reference internal" href="#fundamental-objects">åŸºæœ¬å¯¹è±¡</a></li>
+<li><a class="reference internal" href="#numeric-objects">Numeric Objects</a></li>
+<li><a class="reference internal" href="#sequence-objects">åºåˆ—å¯¹è±¡</a></li>
+<li><a class="reference internal" href="#container-objects">å®¹å™¨å¯¹è±¡</a></li>
+<li><a class="reference internal" href="#function-objects">å‡½æ•°å¯¹è±¡</a></li>
+<li><a class="reference internal" href="#other-objects">å…¶ä»–å¯¹è±¡</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="objbuffer.html" tppabs="https://docs.python.org/zh-cn/3/c-api/objbuffer.html"
+                        title="ä¸Šä¸€ç« ">Old Buffer Protocol</a></p>
+  <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="type.html" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html"
+                        title="ä¸‹ä¸€ç« ">Type å¯¹è±¡</a></p>
+  <div role="note" aria-label="source link">
+    <h3>æœ¬é¡µ</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/concrete.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/concrete.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/concrete.rst"
+            rel="nofollow">æ˜¾ç¤ºæºä»£ç 
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             >ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="type.html" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html" title="Type å¯¹è±¡"
+             >ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="objbuffer.html" tppabs="https://docs.python.org/zh-cn/3/c-api/objbuffer.html" title="Old Buffer Protocol"
+             >ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+    <br />
+    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+    <br />
+    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+    </div>
+
+  </body>
+</html>

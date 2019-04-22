@@ -1,0 +1,275 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>atexit --- 退出处理器 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="traceback --- Print or retrieve a stack traceback" href="traceback.html" />
+    <link rel="prev" title="abc --- 抽象基类" href="abc.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/atexit.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="traceback.html" tppabs="https://docs.python.org/zh-cn/3/library/traceback.html" title="traceback --- Print or retrieve a stack traceback"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="abc.html" tppabs="https://docs.python.org/zh-cn/3/library/abc.html" title="abc --- 抽象基类"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="python.html" tppabs="https://docs.python.org/zh-cn/3/library/python.html" accesskey="U">Python运行时服务</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-atexit">
+<span id="atexit-exit-handlers"></span><h1><a class="reference internal" href="#module-atexit" title="atexit: Register and execute cleanup functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> --- 退出处理器<a class="headerlink" href="#module-atexit" title="永久链接至标题">¶</a></h1>
+<hr class="docutils" />
+<p><a class="reference internal" href="#module-atexit" title="atexit: Register and execute cleanup functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> 模块定义了清理函数的注册和反注册函数. 被注册的函数会在解释器正常终止时执行. <a class="reference internal" href="#module-atexit" title="atexit: Register and execute cleanup functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> 会按照注册顺序的*逆序*执行; 如果你注册了 <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code> 和 <code class="docutils literal notranslate"><span class="pre">C</span></code>, 那么在解释器终止时会依序执行 <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+<p><strong>注意:</strong> 通过该模块注册的函数, 在程序被未被 Python 捕获的信号杀死时并不会执行, 在检测到 Python 内部致命错误以及调用了 <a class="reference internal" href="os.html#os._exit" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os._exit" title="os._exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">os._exit()</span></code></a> 时也不会执行.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.7 版更改: </span>When used with C-API subinterpreters, registered functions
+are local to the interpreter they were registered in.</p>
+</div>
+<dl class="function">
+<dt id="atexit.register">
+<code class="descclassname">atexit.</code><code class="descname">register</code><span class="sig-paren">(</span><em>func</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#atexit.register" title="永久链接至目标">¶</a></dt>
+<dd><p>将 <em>func</em> 注册为终止时执行的函数.  任何传给 <em>func</em> 的可选的参数都应当作为参数传给 <a class="reference internal" href="#atexit.register" title="atexit.register"><code class="xref py py-func docutils literal notranslate"><span class="pre">register()</span></code></a>.  可以多次注册同样的函数及参数.</p>
+<p>在正常的程序终止时 (举例来说, 当调用了 <a class="reference internal" href="sys.html#sys.exit" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.exit" title="sys.exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exit()</span></code></a> 或是主模块的执行完成时), 所有注册过的函数都会以后进先出的顺序执行. 这样做是假定更底层的模块通常会比高层模块更早引入, 因此需要更晚清理.</p>
+<p>If an exception is raised during execution of the exit handlers, a traceback is
+printed (unless <a class="reference internal" href="exceptions.html#SystemExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> is raised) and the exception information is
+saved.  After all exit handlers have had a chance to run the last exception to
+be raised is re-raised.</p>
+<p>这个函数返回 <em>func</em> 对象，可以把它当作装饰器使用。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="atexit.unregister">
+<code class="descclassname">atexit.</code><code class="descname">unregister</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#atexit.unregister" title="永久链接至目标">¶</a></dt>
+<dd><p>Remove <em>func</em> from the list of functions to be run at interpreter
+shutdown.  After calling <a class="reference internal" href="#atexit.unregister" title="atexit.unregister"><code class="xref py py-func docutils literal notranslate"><span class="pre">unregister()</span></code></a>, <em>func</em> is guaranteed not to be
+called when the interpreter shuts down, even if it was registered more than
+once.  <a class="reference internal" href="#atexit.unregister" title="atexit.unregister"><code class="xref py py-func docutils literal notranslate"><span class="pre">unregister()</span></code></a> silently does nothing if <em>func</em> was not previously
+registered.</p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<dl class="last docutils">
+<dt>模块 <a class="reference internal" href="readline.html#module-readline" tppabs="https://docs.python.org/zh-cn/3/library/readline.html#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a></dt>
+<dd>使用 <a class="reference internal" href="#module-atexit" title="atexit: Register and execute cleanup functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> 读写 <a class="reference internal" href="readline.html#module-readline" tppabs="https://docs.python.org/zh-cn/3/library/readline.html#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> 历史文件的有用的例子。</dd>
+</dl>
+</div>
+<div class="section" id="atexit-example">
+<span id="id1"></span><h2><a class="reference internal" href="#module-atexit" title="atexit: Register and execute cleanup functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> 示例<a class="headerlink" href="#atexit-example" title="永久链接至标题">¶</a></h2>
+<p>The following simple example demonstrates how a module can initialize a counter
+from a file when it is imported and save the counter's updated value
+automatically when the program terminates without relying on the application
+making an explicit call into this module at termination.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;counterfile&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+        <span class="n">_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="n">_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">incrcounter</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_count</span>
+    <span class="n">_count</span> <span class="o">=</span> <span class="n">_count</span> <span class="o">+</span> <span class="n">n</span>
+
+<span class="k">def</span> <span class="nf">savecounter</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;counterfile&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+        <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">_count</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">atexit</span>
+<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">savecounter</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Positional and keyword arguments may also be passed to <a class="reference internal" href="#atexit.register" title="atexit.register"><code class="xref py py-func docutils literal notranslate"><span class="pre">register()</span></code></a> to be
+passed along to the registered function when it is called:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">goodbye</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">adjective</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Goodbye, </span><span class="si">%s</span><span class="s1">, it was </span><span class="si">%s</span><span class="s1"> to meet you.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">adjective</span><span class="p">))</span>
+
+<span class="kn">import</span> <span class="nn">atexit</span>
+<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">goodbye</span><span class="p">,</span> <span class="s1">&#39;Donny&#39;</span><span class="p">,</span> <span class="s1">&#39;nice&#39;</span><span class="p">)</span>
+
+<span class="c1"># or:</span>
+<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">goodbye</span><span class="p">,</span> <span class="n">adjective</span><span class="o">=</span><span class="s1">&#39;nice&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Donny&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>作为 <a class="reference internal" href="glossary.html#term-decorator" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-decorator"><span class="xref std std-term">decorator</span></a>: 使用:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">atexit</span>
+
+<span class="nd">@atexit</span><span class="o">.</span><span class="n">register</span>
+<span class="k">def</span> <span class="nf">goodbye</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are now leaving the Python sector.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>只有在函数不需要任何参数调用时才能工作.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">atexit</span></code> --- 退出处理器</a><ul>
+<li><a class="reference internal" href="#atexit-example"><code class="docutils literal notranslate"><span class="pre">atexit</span></code> 示例</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="abc.html" tppabs="https://docs.python.org/zh-cn/3/library/abc.html"
+                        title="上一章"><code class="docutils literal notranslate"><span class="pre">abc</span></code> --- 抽象基类</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="traceback.html" tppabs="https://docs.python.org/zh-cn/3/library/traceback.html"
+                        title="下一章"><code class="docutils literal notranslate"><span class="pre">traceback</span></code> --- Print or retrieve a stack traceback</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/atexit.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/atexit.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/atexit.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="traceback.html" tppabs="https://docs.python.org/zh-cn/3/library/traceback.html" title="traceback --- Print or retrieve a stack traceback"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="abc.html" tppabs="https://docs.python.org/zh-cn/3/library/abc.html" title="abc --- 抽象基类"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="python.html" tppabs="https://docs.python.org/zh-cn/3/library/python.html" >Python运行时服务</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

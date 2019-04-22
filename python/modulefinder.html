@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>modulefinder --- æŸ¥æ‰¾è„šæœ¬ä½¿ç”¨çš„æ¨¡å— &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
+    <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
+    <link rel="search" title="æœç´¢" href="../search.html" />
+    <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
+    <link rel="next" title="runpy --- Locating and executing Python modules" href="runpy.html" />
+    <link rel="prev" title="pkgutil --- Package extension utility" href="pkgutil.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/modulefinder.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             accesskey="I">ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="runpy.html" tppabs="https://docs.python.org/zh-cn/3/library/runpy.html" title="runpy --- Locating and executing Python modules"
+             accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="pkgutil.html" tppabs="https://docs.python.org/zh-cn/3/library/pkgutil.html" title="pkgutil --- Package extension utility"
+             accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules-1.html" tppabs="https://docs.python.org/zh-cn/3/library/modules.html" accesskey="U">å¯¼å…¥æ¨¡å—</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-modulefinder">
+<span id="modulefinder-find-modules-used-by-a-script"></span><h1><a class="reference internal" href="#module-modulefinder" title="modulefinder: Find modules used by a script."><code class="xref py py-mod docutils literal notranslate"><span class="pre">modulefinder</span></code></a> --- æŸ¥æ‰¾è„šæœ¬ä½¿ç”¨çš„æ¨¡å—<a class="headerlink" href="#module-modulefinder" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºç ï¼š</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/modulefinder.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/modulefinder.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/modulefinder.py">Lib/modulefinder.py</a></p>
+<hr class="docutils" />
+<p>è¯¥æ¨¡å—æä¾›äº†ä¸€ä¸ª <a class="reference internal" href="#modulefinder.ModuleFinder" title="modulefinder.ModuleFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleFinder</span></code></a> ç±»ï¼Œå¯ç”¨äºç¡®å®šè„šæœ¬å¯¼å…¥çš„æ¨¡å—é›†ã€‚ <code class="docutils literal notranslate"><span class="pre">modulefinder.py</span></code> ä¹Ÿå¯ä»¥ä½œä¸ºè„šæœ¬è¿è¡Œï¼Œç»™å‡º Python è„šæœ¬çš„æ–‡ä»¶åä½œä¸ºå‚æ•°ï¼Œä¹‹åå°†æ‰“å°å¯¼å…¥æ¨¡å—çš„æŠ¥å‘Šã€‚</p>
+<dl class="function">
+<dt id="modulefinder.AddPackagePath">
+<code class="descclassname">modulefinder.</code><code class="descname">AddPackagePath</code><span class="sig-paren">(</span><em>pkg_name</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#modulefinder.AddPackagePath" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è®°å½•åä¸º <em>pkg_name</em> çš„åŒ…å¯ä»¥åœ¨æŒ‡å®šçš„ <em>path</em> ä¸­æ‰¾åˆ°ã€‚</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="modulefinder.ReplacePackage">
+<code class="descclassname">modulefinder.</code><code class="descname">ReplacePackage</code><span class="sig-paren">(</span><em>oldname</em>, <em>newname</em><span class="sig-paren">)</span><a class="headerlink" href="#modulefinder.ReplacePackage" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å…è®¸æŒ‡å®šåä¸º <em>oldname</em> çš„æ¨¡å—å®é™…ä¸Šæ˜¯åä¸º <em>newname</em> çš„åŒ…ã€‚</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="modulefinder.ModuleFinder">
+<em class="property">class </em><code class="descclassname">modulefinder.</code><code class="descname">ModuleFinder</code><span class="sig-paren">(</span><em>path=None</em>, <em>debug=0</em>, <em>excludes=[]</em>, <em>replace_paths=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#modulefinder.ModuleFinder" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¯¥ç±»æä¾› <a class="reference internal" href="#modulefinder.ModuleFinder.run_script" title="modulefinder.ModuleFinder.run_script"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_script()</span></code></a> å’Œ <a class="reference internal" href="#modulefinder.ModuleFinder.report" title="modulefinder.ModuleFinder.report"><code class="xref py py-meth docutils literal notranslate"><span class="pre">report()</span></code></a> æ–¹æ³•ï¼Œç”¨äºç¡®å®šè„šæœ¬å¯¼å…¥çš„æ¨¡å—é›†ã€‚ <em>path</em> å¯ä»¥æ˜¯æœç´¢æ¨¡å—çš„ç›®å½•åˆ—è¡¨ï¼›å¦‚æœæ²¡æœ‰æŒ‡å®šï¼Œåˆ™ä½¿ç”¨ <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> ã€‚  <em>debug</em> è®¾ç½®è°ƒè¯•çº§åˆ«ï¼›æ›´é«˜çš„å€¼ä½¿ç±»æ‰“å°è°ƒè¯•æ¶ˆæ¯ï¼Œå…³äºå®ƒæ­£åœ¨åšä»€ä¹ˆã€‚ <em>excludes</em> æ˜¯è¦ä»åˆ†æä¸­æ’é™¤çš„æ¨¡å—åç§°åˆ—è¡¨ã€‚ <em>replace_paths</em> æ˜¯å°†åœ¨æ¨¡å—è·¯å¾„ä¸­æ›¿æ¢çš„ <code class="docutils literal notranslate"><span class="pre">(oldpath,</span> <span class="pre">newpath)</span></code> å…ƒç»„çš„åˆ—è¡¨ã€‚</p>
+<dl class="method">
+<dt id="modulefinder.ModuleFinder.report">
+<code class="descname">report</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modulefinder.ModuleFinder.report" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å°†æŠ¥å‘Šæ‰“å°åˆ°æ ‡å‡†è¾“å‡ºï¼Œåˆ—å‡ºè„šæœ¬å¯¼å…¥çš„æ¨¡å—åŠå…¶è·¯å¾„ï¼Œä»¥åŠç¼ºå°‘æˆ–ä¼¼ä¹ç¼ºå¤±çš„æ¨¡å—ã€‚</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modulefinder.ModuleFinder.run_script">
+<code class="descname">run_script</code><span class="sig-paren">(</span><em>pathname</em><span class="sig-paren">)</span><a class="headerlink" href="#modulefinder.ModuleFinder.run_script" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>åˆ†æ <em>pathname</em> æ–‡ä»¶çš„å†…å®¹ï¼Œè¯¥æ–‡ä»¶å¿…é¡»åŒ…å« Python ä»£ç ã€‚</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="modulefinder.ModuleFinder.modules">
+<code class="descname">modules</code><a class="headerlink" href="#modulefinder.ModuleFinder.modules" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ä¸€ä¸ªå°†æ¨¡å—åç§°æ˜ å°„åˆ°æ¨¡å—çš„å­—å…¸ã€‚ è¯·å‚é˜… <a class="reference internal" href="#modulefinder-example"><span class="std std-ref">ModuleFinder çš„ç¤ºä¾‹ç”¨æ³•</span></a>ã€‚</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="example-usage-of-modulefinder">
+<span id="modulefinder-example"></span><h2><a class="reference internal" href="#modulefinder.ModuleFinder" title="modulefinder.ModuleFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleFinder</span></code></a> çš„ç¤ºä¾‹ç”¨æ³•<a class="headerlink" href="#example-usage-of-modulefinder" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>ç¨åå°†åˆ†æçš„è„šæœ¬ï¼ˆbacon.pyï¼‰:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">itertools</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">baconhameggs</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">guido.python.ham</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>å°†è¾“å‡º bacon.py æŠ¥å‘Šçš„è„šæœ¬:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">modulefinder</span> <span class="k">import</span> <span class="n">ModuleFinder</span>
+
+<span class="n">finder</span> <span class="o">=</span> <span class="n">ModuleFinder</span><span class="p">()</span>
+<span class="n">finder</span><span class="o">.</span><span class="n">run_script</span><span class="p">(</span><span class="s1">&#39;bacon.py&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loaded modules:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">mod</span> <span class="ow">in</span> <span class="n">finder</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: &#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">globalnames</span><span class="o">.</span><span class="n">keys</span><span class="p">())[:</span><span class="mi">3</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Modules not imported:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">finder</span><span class="o">.</span><span class="n">badmodules</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>è¾“å‡ºæ ·ä¾‹ï¼ˆå¯èƒ½å› æ¶æ„è€Œå¼‚ï¼‰:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Loaded</span> <span class="n">modules</span><span class="p">:</span>
+<span class="n">_types</span><span class="p">:</span>
+<span class="n">copyreg</span><span class="p">:</span>  <span class="n">_inverted_registry</span><span class="p">,</span><span class="n">_slotnames</span><span class="p">,</span><span class="n">__all__</span>
+<span class="n">sre_compile</span><span class="p">:</span>  <span class="n">isstring</span><span class="p">,</span><span class="n">_sre</span><span class="p">,</span><span class="n">_optimize_unicode</span>
+<span class="n">_sre</span><span class="p">:</span>
+<span class="n">sre_constants</span><span class="p">:</span>  <span class="n">REPEAT_ONE</span><span class="p">,</span><span class="n">makedict</span><span class="p">,</span><span class="n">AT_END_LINE</span>
+<span class="n">sys</span><span class="p">:</span>
+<span class="n">re</span><span class="p">:</span>  <span class="vm">__module__</span><span class="p">,</span><span class="n">finditer</span><span class="p">,</span><span class="n">_expand</span>
+<span class="n">itertools</span><span class="p">:</span>
+<span class="n">__main__</span><span class="p">:</span>  <span class="n">re</span><span class="p">,</span><span class="n">itertools</span><span class="p">,</span><span class="n">baconhameggs</span>
+<span class="n">sre_parse</span><span class="p">:</span>  <span class="n">_PATTERNENDERS</span><span class="p">,</span><span class="n">SRE_FLAG_UNICODE</span>
+<span class="n">array</span><span class="p">:</span>
+<span class="n">types</span><span class="p">:</span>  <span class="vm">__module__</span><span class="p">,</span><span class="n">IntType</span><span class="p">,</span><span class="n">TypeType</span>
+<span class="o">---------------------------------------------------</span>
+<span class="n">Modules</span> <span class="ow">not</span> <span class="n">imported</span><span class="p">:</span>
+<span class="n">guido</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">ham</span>
+<span class="n">baconhameggs</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">modulefinder</span></code> --- æŸ¥æ‰¾è„šæœ¬ä½¿ç”¨çš„æ¨¡å—</a><ul>
+<li><a class="reference internal" href="#example-usage-of-modulefinder"><code class="docutils literal notranslate"><span class="pre">ModuleFinder</span></code> çš„ç¤ºä¾‹ç”¨æ³•</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="pkgutil.html" tppabs="https://docs.python.org/zh-cn/3/library/pkgutil.html"
+                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">pkgutil</span></code> --- Package extension utility</a></p>
+  <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="runpy.html" tppabs="https://docs.python.org/zh-cn/3/library/runpy.html"
+                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">runpy</span></code> --- Locating and executing Python modules</a></p>
+  <div role="note" aria-label="source link">
+    <h3>æœ¬é¡µ</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/modulefinder.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/modulefinder.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/modulefinder.rst"
+            rel="nofollow">æ˜¾ç¤ºæºä»£ç 
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             >ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="runpy.html" tppabs="https://docs.python.org/zh-cn/3/library/runpy.html" title="runpy --- Locating and executing Python modules"
+             >ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="pkgutil.html" tppabs="https://docs.python.org/zh-cn/3/library/pkgutil.html" title="pkgutil --- Package extension utility"
+             >ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules-1.html" tppabs="https://docs.python.org/zh-cn/3/library/modules.html" >å¯¼å…¥æ¨¡å—</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+    <br />
+    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+    <br />
+    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+    </div>
+
+  </body>
+</html>

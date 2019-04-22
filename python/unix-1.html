@@ -1,0 +1,230 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unix ä¸“æœ‰æœåŠ¡ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
+    <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
+    <link rel="search" title="æœç´¢" href="../search.html" />
+    <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
+    <link rel="next" title="posix --- The most common POSIX system calls" href="posix.html" />
+    <link rel="prev" title="winsound --- Sound-playing interface for Windows" href="winsound.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/unix.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             accesskey="I">ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="posix.html" tppabs="https://docs.python.org/zh-cn/3/library/posix.html" title="posix --- The most common POSIX system calls"
+             accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="winsound.html" tppabs="https://docs.python.org/zh-cn/3/library/winsound.html" title="winsound --- Sound-playing interface for Windows"
+             accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" accesskey="U">Python æ ‡å‡†åº“</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="unix-specific-services">
+<span id="unix"></span><h1>Unix ä¸“æœ‰æœåŠ¡<a class="headerlink" href="#unix-specific-services" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>æœ¬ç« æè¿°çš„æ¨¡å—æä¾›äº† Unix æ“ä½œç³»ç»Ÿç‹¬æœ‰ç‰¹æ€§çš„æ¥å£ï¼Œåœ¨æŸäº›æƒ…å†µä¸‹ä¹Ÿé€‚ç”¨äºå®ƒçš„æŸäº›æˆ–è®¸å¤šè¡ç”Ÿç‰ˆã€‚ ä»¥ä¸‹ä¸ºæ¨¡å—æ¦‚è§ˆï¼š</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="posix.html" tppabs="https://docs.python.org/zh-cn/3/library/posix.html"><code class="docutils literal notranslate"><span class="pre">posix</span></code> --- The most common POSIX system calls</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="posix.html#large-file-support" tppabs="https://docs.python.org/zh-cn/3/library/posix.html#large-file-support">Large File Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posix.html#notable-module-contents" tppabs="https://docs.python.org/zh-cn/3/library/posix.html#notable-module-contents">Notable Module Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pwd.html" tppabs="https://docs.python.org/zh-cn/3/library/pwd.html"><code class="docutils literal notranslate"><span class="pre">pwd</span></code> --- ç”¨æˆ·å¯†ç æ•°æ®åº“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spwd.html" tppabs="https://docs.python.org/zh-cn/3/library/spwd.html"><code class="docutils literal notranslate"><span class="pre">spwd</span></code> --- The shadow password database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grp.html" tppabs="https://docs.python.org/zh-cn/3/library/grp.html"><code class="docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypt.html" tppabs="https://docs.python.org/zh-cn/3/library/crypt.html"><code class="docutils literal notranslate"><span class="pre">crypt</span></code> --- Function to check Unix passwords</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#hashing-methods" tppabs="https://docs.python.org/zh-cn/3/library/crypt.html#hashing-methods">Hashing Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#module-attributes" tppabs="https://docs.python.org/zh-cn/3/library/crypt.html#module-attributes">Module Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#module-functions" tppabs="https://docs.python.org/zh-cn/3/library/crypt.html#module-functions">æ¨¡å—å‡½æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#examples" tppabs="https://docs.python.org/zh-cn/3/library/crypt.html#examples">ç¤ºä¾‹</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="termios.html" tppabs="https://docs.python.org/zh-cn/3/library/termios.html"><code class="docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX style tty control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="termios.html#example" tppabs="https://docs.python.org/zh-cn/3/library/termios.html#example">ç¤ºä¾‹</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tty.html" tppabs="https://docs.python.org/zh-cn/3/library/tty.html"><code class="docutils literal notranslate"><span class="pre">tty</span></code> --- ç»ˆç«¯æ§åˆ¶åŠŸèƒ½</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pty.html" tppabs="https://docs.python.org/zh-cn/3/library/pty.html"><code class="docutils literal notranslate"><span class="pre">pty</span></code> --- Pseudo-terminal utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pty.html#example" tppabs="https://docs.python.org/zh-cn/3/library/pty.html#example">ç¤ºä¾‹</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fcntl.html" tppabs="https://docs.python.org/zh-cn/3/library/fcntl.html"><code class="docutils literal notranslate"><span class="pre">fcntl</span></code> --- The <code class="docutils literal notranslate"><span class="pre">fcntl</span></code> and <code class="docutils literal notranslate"><span class="pre">ioctl</span></code> system calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipes.html" tppabs="https://docs.python.org/zh-cn/3/library/pipes.html"><code class="docutils literal notranslate"><span class="pre">pipes</span></code> --- Interface to shell pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html#template-objects" tppabs="https://docs.python.org/zh-cn/3/library/pipes.html#template-objects">Template Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resource.html" tppabs="https://docs.python.org/zh-cn/3/library/resource.html"><code class="docutils literal notranslate"><span class="pre">resource</span></code> --- Resource usage information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#resource-limits" tppabs="https://docs.python.org/zh-cn/3/library/resource.html#resource-limits">Resource Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#resource-usage" tppabs="https://docs.python.org/zh-cn/3/library/resource.html#resource-usage">Resource Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nis.html" tppabs="https://docs.python.org/zh-cn/3/library/nis.html"><code class="docutils literal notranslate"><span class="pre">nis</span></code> --- Interface to Sun's NIS (Yellow Pages)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syslog.html" tppabs="https://docs.python.org/zh-cn/3/library/syslog.html">Unix syslog åº“ä¾‹ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syslog.html#examples" tppabs="https://docs.python.org/zh-cn/3/library/syslog.html#examples">ç¤ºä¾‹</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="syslog.html#simple-example" tppabs="https://docs.python.org/zh-cn/3/library/syslog.html#simple-example">Simple example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="winsound.html" tppabs="https://docs.python.org/zh-cn/3/library/winsound.html"
+                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">winsound</span></code> --- Sound-playing interface for Windows</a></p>
+  <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="posix.html" tppabs="https://docs.python.org/zh-cn/3/library/posix.html"
+                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">posix</span></code> --- The most common POSIX system calls</a></p>
+  <div role="note" aria-label="source link">
+    <h3>æœ¬é¡µ</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/unix.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/unix.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/unix.rst"
+            rel="nofollow">æ˜¾ç¤ºæºä»£ç 
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             >ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="posix.html" tppabs="https://docs.python.org/zh-cn/3/library/posix.html" title="posix --- The most common POSIX system calls"
+             >ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="winsound.html" tppabs="https://docs.python.org/zh-cn/3/library/winsound.html" title="winsound --- Sound-playing interface for Windows"
+             >ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+    <br />
+    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+    <br />
+    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+    </div>
+
+  </body>
+</html>

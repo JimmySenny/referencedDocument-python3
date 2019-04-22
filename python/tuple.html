@@ -1,0 +1,457 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>元组对象 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="列表对象" href="list.html" />
+    <link rel="prev" title="Unicode Objects and Codecs" href="unicode.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/c-api/tuple.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="list.html" tppabs="https://docs.python.org/zh-cn/3/c-api/list.html" title="列表对象"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="unicode-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html" title="Unicode Objects and Codecs"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API 参考手册</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tuple-objects">
+<span id="tupleobjects"></span><h1>元组对象<a class="headerlink" href="#tuple-objects" title="永久链接至标题">¶</a></h1>
+<span class="target" id="index-0"></span><dl class="type">
+<dt id="c.PyTupleObject">
+<code class="descname">PyTupleObject</code><a class="headerlink" href="#c.PyTupleObject" title="永久链接至目标">¶</a></dt>
+<dd><p>这个 <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyObject</span></code></a> 的子类型代表一个 Python 的元组对象。</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="c.PyTuple_Type">
+<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="descname">PyTuple_Type</code><a class="headerlink" href="#c.PyTuple_Type" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTypeObject</span></code></a> 的实例代表一个 Python 元组类型，这与 Python 层面的 <a class="reference internal" href="stdtypes.html#tuple" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> 是相同的对象。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_Check">
+int <code class="descname">PyTuple_Check</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_Check" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>p</em> 是一个元组对象或者元组类型的子类型的实例，则返回真值。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_CheckExact">
+int <code class="descname">PyTuple_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_CheckExact" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>p</em> 是一个元组对象，而不是一个元组子类型的实例，则返回真值。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_New">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyTuple_New</code><span class="sig-paren">(</span>Py_ssize_t<em>&nbsp;len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_New" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Return a new tuple object of size <em>len</em>, or <em>NULL</em> on failure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_Pack">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyTuple_Pack</code><span class="sig-paren">(</span>Py_ssize_t<em>&nbsp;n</em>, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_Pack" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Return a new tuple object of size <em>n</em>, or <em>NULL</em> on failure. The tuple values
+are initialized to the subsequent <em>n</em> C arguments pointing to Python objects.
+<code class="docutils literal notranslate"><span class="pre">PyTuple_Pack(2,</span> <span class="pre">a,</span> <span class="pre">b)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">Py_BuildValue(&quot;(OO)&quot;,</span> <span class="pre">a,</span> <span class="pre">b)</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_Size">
+Py_ssize_t <code class="descname">PyTuple_Size</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_Size" title="永久链接至目标">¶</a></dt>
+<dd><p>Take a pointer to a tuple object, and return the size of that tuple.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_GET_SIZE">
+Py_ssize_t <code class="descname">PyTuple_GET_SIZE</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_GET_SIZE" title="永久链接至目标">¶</a></dt>
+<dd><p>Return the size of the tuple <em>p</em>, which must be non-<em>NULL</em> and point to a tuple;
+no error checking is performed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_GetItem">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyTuple_GetItem</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_GetItem" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: Borrowed reference.</em><p>Return the object at position <em>pos</em> in the tuple pointed to by <em>p</em>.  If <em>pos</em> is
+out of bounds, return <em>NULL</em> and sets an <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> exception.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_GET_ITEM">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyTuple_GET_ITEM</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_GET_ITEM" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: Borrowed reference.</em><p>Like <a class="reference internal" href="#c.PyTuple_GetItem" title="PyTuple_GetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTuple_GetItem()</span></code></a>, but does no checking of its arguments.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_GetSlice">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyTuple_GetSlice</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;low</em>, Py_ssize_t<em>&nbsp;high</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_GetSlice" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Take a slice of the tuple pointed to by <em>p</em> from <em>low</em> to <em>high</em> and return it
+as a new tuple.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_SetItem">
+int <code class="descname">PyTuple_SetItem</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_SetItem" title="永久链接至目标">¶</a></dt>
+<dd><p>Insert a reference to object <em>o</em> at position <em>pos</em> of the tuple pointed to by
+<em>p</em>. Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">This function &quot;steals&quot; a reference to <em>o</em>.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_SET_ITEM">
+void <code class="descname">PyTuple_SET_ITEM</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_SET_ITEM" title="永久链接至目标">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#c.PyTuple_SetItem" title="PyTuple_SetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTuple_SetItem()</span></code></a>, but does no error checking, and should <em>only</em> be
+used to fill in brand new tuples.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">This function &quot;steals&quot; a reference to <em>o</em>.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c._PyTuple_Resize">
+int <code class="descname">_PyTuple_Resize</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;**p</em>, Py_ssize_t<em>&nbsp;newsize</em><span class="sig-paren">)</span><a class="headerlink" href="#c._PyTuple_Resize" title="永久链接至目标">¶</a></dt>
+<dd><p>Can be used to resize a tuple.  <em>newsize</em> will be the new length of the tuple.
+Because tuples are <em>supposed</em> to be immutable, this should only be used if there
+is only one reference to the object.  Do <em>not</em> use this if the tuple may already
+be known to some other part of the code.  The tuple will always grow or shrink
+at the end.  Think of this as destroying the old tuple and creating a new one,
+only more efficiently.  Returns <code class="docutils literal notranslate"><span class="pre">0</span></code> on success. Client code should never
+assume that the resulting value of <code class="docutils literal notranslate"><span class="pre">*p</span></code> will be the same as before calling
+this function. If the object referenced by <code class="docutils literal notranslate"><span class="pre">*p</span></code> is replaced, the original
+<code class="docutils literal notranslate"><span class="pre">*p</span></code> is destroyed.  On failure, returns <code class="docutils literal notranslate"><span class="pre">-1</span></code> and sets <code class="docutils literal notranslate"><span class="pre">*p</span></code> to <em>NULL</em>, and
+raises <a class="reference internal" href="exceptions.html#MemoryError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#MemoryError" title="MemoryError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> or <a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyTuple_ClearFreeList">
+int <code class="descname">PyTuple_ClearFreeList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTuple_ClearFreeList" title="永久链接至目标">¶</a></dt>
+<dd><p>Clear the free list. Return the total number of freed items.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="struct-sequence-objects">
+<h1>Struct Sequence Objects<a class="headerlink" href="#struct-sequence-objects" title="永久链接至标题">¶</a></h1>
+<p>Struct sequence objects are the C equivalent of <a class="reference internal" href="collections.html#collections.namedtuple" tppabs="https://docs.python.org/zh-cn/3/library/collections.html#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a>
+objects, i.e. a sequence whose items can also be accessed through attributes.
+To create a struct sequence, you first have to create a specific struct sequence
+type.</p>
+<dl class="function">
+<dt id="c.PyStructSequence_NewType">
+<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a>* <code class="descname">PyStructSequence_NewType</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyStructSequence_Desc" title="PyStructSequence_Desc">PyStructSequence_Desc</a><em>&nbsp;*desc</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_NewType" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Create a new struct sequence type from the data in <em>desc</em>, described below. Instances
+of the resulting type can be created with <a class="reference internal" href="#c.PyStructSequence_New" title="PyStructSequence_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyStructSequence_New()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_InitType">
+void <code class="descname">PyStructSequence_InitType</code><span class="sig-paren">(</span><a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em>, <a class="reference internal" href="#c.PyStructSequence_Desc" title="PyStructSequence_Desc">PyStructSequence_Desc</a><em>&nbsp;*desc</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_InitType" title="永久链接至目标">¶</a></dt>
+<dd><p>Initializes a struct sequence type <em>type</em> from <em>desc</em> in place.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_InitType2">
+int <code class="descname">PyStructSequence_InitType2</code><span class="sig-paren">(</span><a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em>, <a class="reference internal" href="#c.PyStructSequence_Desc" title="PyStructSequence_Desc">PyStructSequence_Desc</a><em>&nbsp;*desc</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_InitType2" title="永久链接至目标">¶</a></dt>
+<dd><p>The same as <code class="docutils literal notranslate"><span class="pre">PyStructSequence_InitType</span></code>, but returns <code class="docutils literal notranslate"><span class="pre">0</span></code> on success and <code class="docutils literal notranslate"><span class="pre">-1</span></code> on
+failure.</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.4 新版功能.</span></p>
+</div>
+</dd></dl>
+
+<dl class="type">
+<dt id="c.PyStructSequence_Desc">
+<code class="descname">PyStructSequence_Desc</code><a class="headerlink" href="#c.PyStructSequence_Desc" title="永久链接至目标">¶</a></dt>
+<dd><p>包含要创建的结构序列类型的元信息。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="35%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">C 类型</th>
+<th class="head">意义</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">name</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code></td>
+<td>结构序列类型的名称</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">doc</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code></td>
+<td>pointer to docstring for the type
+or NULL to omit</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">fields</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">PyStructSequence_Field</span> <span class="pre">*</span></code></td>
+<td>指向以NULL结尾的数组的指针，其字段名称为新类型</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">n_in_sequence</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span></code></td>
+<td>number of fields visible to the
+Python side (if used as tuple)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="type">
+<dt id="c.PyStructSequence_Field">
+<code class="descname">PyStructSequence_Field</code><a class="headerlink" href="#c.PyStructSequence_Field" title="永久链接至目标">¶</a></dt>
+<dd><p>Describes a field of a struct sequence. As a struct sequence is modeled as a
+tuple, all fields are typed as <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyObject*</span></code></a>.  The index in the
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">fields</span></code> array of the <a class="reference internal" href="#c.PyStructSequence_Desc" title="PyStructSequence_Desc"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyStructSequence_Desc</span></code></a> determines which
+field of the struct sequence is described.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="27%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">C 类型</th>
+<th class="head">意义</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">name</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code></td>
+<td>name for the field or <em>NULL</em> to end
+the list of named fields, set to
+PyStructSequence_UnnamedField to
+leave unnamed</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">doc</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code></td>
+<td>field docstring or <em>NULL</em> to omit</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="var">
+<dt id="c.PyStructSequence_UnnamedField">
+char* <code class="descname">PyStructSequence_UnnamedField</code><a class="headerlink" href="#c.PyStructSequence_UnnamedField" title="永久链接至目标">¶</a></dt>
+<dd><p>Special value for a field name to leave it unnamed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_New">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyStructSequence_New</code><span class="sig-paren">(</span><a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_New" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Creates an instance of <em>type</em>, which must have been created with
+<a class="reference internal" href="#c.PyStructSequence_NewType" title="PyStructSequence_NewType"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyStructSequence_NewType()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_GetItem">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyStructSequence_GetItem</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_GetItem" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: Borrowed reference.</em><p>Return the object at position <em>pos</em> in the struct sequence pointed to by <em>p</em>.
+No bounds checking is performed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_GET_ITEM">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyStructSequence_GET_ITEM</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_GET_ITEM" title="永久链接至目标">¶</a></dt>
+<dd><em class="refcount">Return value: Borrowed reference.</em><p>Macro equivalent of <a class="reference internal" href="#c.PyStructSequence_GetItem" title="PyStructSequence_GetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyStructSequence_GetItem()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_SetItem">
+void <code class="descname">PyStructSequence_SetItem</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;pos</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_SetItem" title="永久链接至目标">¶</a></dt>
+<dd><p>Sets the field at index <em>pos</em> of the struct sequence <em>p</em> to value <em>o</em>.  Like
+<a class="reference internal" href="#c.PyTuple_SET_ITEM" title="PyTuple_SET_ITEM"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTuple_SET_ITEM()</span></code></a>, this should only be used to fill in brand new
+instances.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">This function &quot;steals&quot; a reference to <em>o</em>.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyStructSequence_SET_ITEM">
+void <code class="descname">PyStructSequence_SET_ITEM</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em>, Py_ssize_t<em>&nbsp;*pos</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyStructSequence_SET_ITEM" title="永久链接至目标">¶</a></dt>
+<dd><p>Macro equivalent of <a class="reference internal" href="#c.PyStructSequence_SetItem" title="PyStructSequence_SetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyStructSequence_SetItem()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">This function &quot;steals&quot; a reference to <em>o</em>.</p>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">元组对象</a></li>
+<li><a class="reference internal" href="#struct-sequence-objects">Struct Sequence Objects</a></li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="unicode-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html"
+                        title="上一章">Unicode Objects and Codecs</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="list.html" tppabs="https://docs.python.org/zh-cn/3/c-api/list.html"
+                        title="下一章">列表对象</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/tuple.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/tuple.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/tuple.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="list.html" tppabs="https://docs.python.org/zh-cn/3/c-api/list.html" title="列表对象"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="unicode-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/unicode.html" title="Unicode Objects and Codecs"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API 参考手册</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >Concrete Objects Layer</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

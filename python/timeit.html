@@ -1,0 +1,474 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>timeit --- 测量小代码片段的执行时间 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="trace --- Trace or track Python statement execution" href="trace.html" />
+    <link rel="prev" title="The Python Profilers" href="profile.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/timeit.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="trace.html" tppabs="https://docs.python.org/zh-cn/3/library/trace.html" title="trace --- Trace or track Python statement execution"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="profile.html" tppabs="https://docs.python.org/zh-cn/3/library/profile.html" title="The Python Profilers"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="debug.html" tppabs="https://docs.python.org/zh-cn/3/library/debug.html" accesskey="U">调试和分析</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-timeit">
+<span id="timeit-measure-execution-time-of-small-code-snippets"></span><h1><a class="reference internal" href="#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> --- 测量小代码片段的执行时间<a class="headerlink" href="#module-timeit" title="永久链接至标题">¶</a></h1>
+<p><strong>源码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/timeit.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/timeit.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/timeit.py">Lib/timeit.py</a></p>
+<hr class="docutils" id="index-0" />
+<p>该模块提供了一种简单的方法来计算一小段 Python 代码的耗时。它有 <a class="reference internal" href="#timeit-command-line-interface"><span class="std std-ref">命令行界面</span></a> 以及一个 <a class="reference internal" href="#python-interface"><span class="std std-ref">可调用</span></a> 方法。它避免了许多用于测量执行时间的常见陷阱。另见 Tim Peters 对 O'Reilly 出版的 <em>Python Cookbook</em> 中“算法”章节的介绍。</p>
+<div class="section" id="basic-examples">
+<h2>基本示例<a class="headerlink" href="#basic-examples" title="永久链接至标题">¶</a></h2>
+<p>以下示例显示了如何使用 <a class="reference internal" href="#timeit-command-line-interface"><span class="std std-ref">命令行界面</span></a> 来比较三个不同的表达式：</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m timeit <span class="s1">&#39;&quot;-&quot;.join(str(n) for n in range(100))&#39;</span>
+<span class="go">10000 loops, best of 5: 30.2 usec per loop</span>
+<span class="gp">$</span> python3 -m timeit <span class="s1">&#39;&quot;-&quot;.join([str(n) for n in range(100)])&#39;</span>
+<span class="go">10000 loops, best of 5: 27.5 usec per loop</span>
+<span class="gp">$</span> python3 -m timeit <span class="s1">&#39;&quot;-&quot;.join(map(str, range(100)))&#39;</span>
+<span class="go">10000 loops, best of 5: 23.2 usec per loop</span>
+</pre></div>
+</div>
+<p>这可以通过 <a class="reference internal" href="#python-interface"><span class="std std-ref">Python 接口</span></a> 实现</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join(str(n) for n in range(100))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="go">0.3018611848820001</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join([str(n) for n in range(100)])&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="go">0.2727368790656328</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join(map(str, range(100)))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="go">0.23702679807320237</span>
+</pre></div>
+</div>
+<p>但请注意 <a class="reference internal" href="#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> 仅在使用命令行界面时自动确定重复次数。在 <a class="reference internal" href="#timeit-examples"><span class="std std-ref">示例</span></a> 部分，你可以找到更多高级示例。</p>
+</div>
+<div class="section" id="python-interface">
+<span id="id1"></span><h2>Python 接口<a class="headerlink" href="#python-interface" title="永久链接至标题">¶</a></h2>
+<p>该模块定义了三个便利函数和一个公共类：</p>
+<dl class="function">
+<dt id="timeit.timeit">
+<code class="descclassname">timeit.</code><code class="descname">timeit</code><span class="sig-paren">(</span><em>stmt='pass'</em>, <em>setup='pass'</em>, <em>timer=&lt;default timer&gt;</em>, <em>number=1000000</em>, <em>globals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.timeit" title="永久链接至目标">¶</a></dt>
+<dd><p>使用给定语句、 <em>setup</em> 代码和 <em>timer</em> 函数创建一个 <a class="reference internal" href="#timeit.Timer" title="timeit.Timer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timer</span></code></a> 实例，并执行 <em>number</em> 次其 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 方法。可选的 <em>globals</em> 参数指定用于执行代码的命名空间。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5 版更改: </span>添加可选参数 <em>globals</em> 。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="timeit.repeat">
+<code class="descclassname">timeit.</code><code class="descname">repeat</code><span class="sig-paren">(</span><em>stmt='pass'</em>, <em>setup='pass'</em>, <em>timer=&lt;default timer&gt;</em>, <em>repeat=5</em>, <em>number=1000000</em>, <em>globals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.repeat" title="永久链接至目标">¶</a></dt>
+<dd><p>使用给定语句、 <em>setup</em> 代码和 <em>timer</em> 函数创建一个 <a class="reference internal" href="#timeit.Timer" title="timeit.Timer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timer</span></code></a> 实例，并使用给定的 <em>repeat</em> 计数和 <em>number</em> 执行运行其 <a class="reference internal" href="#timeit.Timer.repeat" title="timeit.Timer.repeat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">repeat()</span></code></a> 方法。可选的 <em>globals</em> 参数指定用于执行代码的命名空间。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5 版更改: </span>添加可选参数 <em>globals</em> 。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.7 版更改: </span><em>repeat</em> 的默认值由 3 更改为 5 。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="timeit.default_timer">
+<code class="descclassname">timeit.</code><code class="descname">default_timer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#timeit.default_timer" title="永久链接至目标">¶</a></dt>
+<dd><p>默认的计时器，总是 <a class="reference internal" href="time.html#time.perf_counter" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.perf_counter" title="time.perf_counter"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></a> 。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.3 版更改: </span><a class="reference internal" href="time.html#time.perf_counter" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.perf_counter" title="time.perf_counter"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></a> 现在是默认计时器。</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="timeit.Timer">
+<em class="property">class </em><code class="descclassname">timeit.</code><code class="descname">Timer</code><span class="sig-paren">(</span><em>stmt='pass'</em>, <em>setup='pass'</em>, <em>timer=&lt;timer function&gt;</em>, <em>globals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.Timer" title="永久链接至目标">¶</a></dt>
+<dd><p>用于小代码片段的计数执行速度的类。</p>
+<p>构造函数接受一个将计时的语句、一个用于设置的附加语句和一个定时器函数。两个语句都默认为 <code class="docutils literal notranslate"><span class="pre">'pass'</span></code> ；计时器函数与平台有关（请参阅模块文档字符串）。 <em>stmt</em> 和 <em>setup</em> 也可能包含多个以 <code class="docutils literal notranslate"><span class="pre">;</span></code> 或换行符分隔的语句，只要它们不包含多行字符串文字即可。该语句默认在 timeit 的命名空间内执行；可以通过将命名空间传递给 <em>globals</em> 来控制此行为。</p>
+<p>要测量第一个语句的执行时间，请使用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 方法。 <a class="reference internal" href="#timeit.Timer.repeat" title="timeit.Timer.repeat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">repeat()</span></code></a> 和 <a class="reference internal" href="#timeit.Timer.autorange" title="timeit.Timer.autorange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">autorange()</span></code></a> 方法是方便的方法来调用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 多次。</p>
+<p><em>setup</em> 的执行时间从总体计时执行中排除。</p>
+<p><em>stmt</em> 和 <em>setup</em> 参数也可以使用不带参数的可调用对象。这将在一个计时器函数中嵌入对它们的调用，然后由 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 执行。请注意，由于额外的函数调用，在这种情况下，计时开销会略大一些。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5 版更改: </span>添加可选参数 <em>globals</em> 。</p>
+</div>
+<dl class="method">
+<dt id="timeit.Timer.timeit">
+<code class="descname">timeit</code><span class="sig-paren">(</span><em>number=1000000</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.Timer.timeit" title="永久链接至目标">¶</a></dt>
+<dd><p>执行 <em>number</em> 次主要语句。这将执行一次 setup 语句，然后返回执行主语句多次所需的时间，以秒为单位测量为浮点数。参数是通过循环的次数，默认为一百万。要使用的主语句、 setup 语句和 timer 函数将传递给构造函数。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>默认情况下， <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 暂时关闭 <a class="reference internal" href="glossary.html#term-garbage-collection" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-garbage-collection"><span class="xref std std-term">garbage collection</span></a> 。这种方法的优点在于它使独立时序更具可比性。缺点是GC可能是所测量功能性能的重要组成部分。如果是这样，可以在 <em>setup</em> 字符串中的第一个语句重新启用GC。例如:</p>
+<div class="last highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeit</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="s1">&#39;for i in range(10): oct(i)&#39;</span><span class="p">,</span> <span class="s1">&#39;gc.enable()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">timeit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="timeit.Timer.autorange">
+<code class="descname">autorange</code><span class="sig-paren">(</span><em>callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.Timer.autorange" title="永久链接至目标">¶</a></dt>
+<dd><p>自动决定调用多少次 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 。</p>
+<p>这是一个便利函数，它反复调用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> ，以便总时间 &gt;= 0.2 秒，返回最终（循环次数，循环所用的时间）。它调用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 的次数以序列 1, 2, 5, 10, 20, 50, ... 递增，直到所用的时间至少为0.2秒。</p>
+<p>如果给出 <em>callback</em> 并且不是 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，则在每次试验后将使用两个参数调用它： <code class="docutils literal notranslate"><span class="pre">callback(number,</span> <span class="pre">time_taken)</span></code> 。</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.6 新版功能.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="timeit.Timer.repeat">
+<code class="descname">repeat</code><span class="sig-paren">(</span><em>repeat=5</em>, <em>number=1000000</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.Timer.repeat" title="永久链接至目标">¶</a></dt>
+<dd><p>调用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 几次。</p>
+<p>这是一个方便的函数，它反复调用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> ，返回结果列表。第一个参数指定调用 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 的次数。第二个参数指定 <a class="reference internal" href="#timeit.Timer.timeit" title="timeit.Timer.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a> 的 <em>number</em> 参数。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">从结果向量计算并报告平均值和标准差这些是很诱人的。但是，这不是很有用。在典型情况下，最低值给出了机器运行给定代码段的速度的下限；结果向量中较高的值通常不是由Python的速度变化引起的，而是由于其他过程干扰你的计时准确性。所以结果的 <a class="reference internal" href="functions.html#min" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#min" title="min"><code class="xref py py-func docutils literal notranslate"><span class="pre">min()</span></code></a> 可能是你应该感兴趣的唯一数字。之后，你应该看看整个向量并应用常识而不是统计。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.7 版更改: </span><em>repeat</em> 的默认值由 3 更改为 5 。</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="timeit.Timer.print_exc">
+<code class="descname">print_exc</code><span class="sig-paren">(</span><em>file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#timeit.Timer.print_exc" title="永久链接至目标">¶</a></dt>
+<dd><p>帮助程序从计时代码中打印回溯。</p>
+<p>典型使用:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>       <span class="c1"># outside the try/except</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="c1"># or t.repeat(...)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>与标准回溯相比，优势在于将显示已编译模板中的源行。可选的 <em>file</em> 参数指向发送回溯的位置；它默认为 <a class="reference internal" href="sys.html#sys.stderr" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a> 。</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="command-line-interface">
+<span id="timeit-command-line-interface"></span><h2>命令行界面<a class="headerlink" href="#command-line-interface" title="永久链接至标题">¶</a></h2>
+<p>从命令行调用程序时，使用以下表单:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">timeit</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span> <span class="n">N</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="n">N</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span> <span class="n">U</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">S</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="n">statement</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>如果了解以下选项：</p>
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-n">
+<code class="descname">-n</code><code class="descclassname"> N</code><code class="descclassname">, </code><code class="descname">--number</code><code class="descclassname">=N</code><a class="headerlink" href="#cmdoption-timeit-n" title="永久链接至目标">¶</a></dt>
+<dd><p>执行 '语句' 多少次</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-r">
+<code class="descname">-r</code><code class="descclassname"> N</code><code class="descclassname">, </code><code class="descname">--repeat</code><code class="descclassname">=N</code><a class="headerlink" href="#cmdoption-timeit-r" title="永久链接至目标">¶</a></dt>
+<dd><p>重复计时器的次数（默认为5）</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-s">
+<code class="descname">-s</code><code class="descclassname"> S</code><code class="descclassname">, </code><code class="descname">--setup</code><code class="descclassname">=S</code><a class="headerlink" href="#cmdoption-timeit-s" title="永久链接至目标">¶</a></dt>
+<dd><p>最初要执行一次的语句（默认为 <code class="docutils literal notranslate"><span class="pre">pass</span></code> ）</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-p">
+<code class="descname">-p</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--process</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-timeit-p" title="永久链接至目标">¶</a></dt>
+<dd><p>测量进程时间，而不是 wallclock 时间，使用 <a class="reference internal" href="time.html#time.process_time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.process_time" title="time.process_time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.process_time()</span></code></a> 而不是 <a class="reference internal" href="time.html#time.perf_counter" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.perf_counter" title="time.perf_counter"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></a> ，这是默认值</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.3 新版功能.</span></p>
+</div>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-u">
+<code class="descname">-u</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--unit</code><code class="descclassname">=U</code><a class="headerlink" href="#cmdoption-timeit-u" title="永久链接至目标">¶</a></dt>
+<dd><blockquote>
+<div>指定定时器输出的时间单位；可以选择 nsec，usec，msec或sec</div></blockquote>
+<div class="versionadded">
+<p><span class="versionmodified">3.5 新版功能.</span></p>
+</div>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-v">
+<code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--verbose</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-timeit-v" title="永久链接至目标">¶</a></dt>
+<dd><p>打印原始计时结果；重复更多位数精度</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-timeit-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-timeit-h" title="永久链接至目标">¶</a></dt>
+<dd><p>打印一条简短的使用信息并退出</p>
+</dd></dl>
+
+<p>可以通过将每一行指定为单独的语句参数来给出多行语句；通过在引号中包含参数并使用前导空格可以缩进行。多个 <a class="reference internal" href="#cmdoption-timeit-s"><code class="xref std std-option docutils literal notranslate"><span class="pre">-s</span></code></a> 选项的处理方式相似。</p>
+<p>如果 <a class="reference internal" href="#cmdoption-timeit-n"><code class="xref std std-option docutils literal notranslate"><span class="pre">-n</span></code></a> 未给出，则通过尝试10的连续幂次来计算合适数量的循环，直到总时间至少为 0.2 秒。</p>
+<p><a class="reference internal" href="#timeit.default_timer" title="timeit.default_timer"><code class="xref py py-func docutils literal notranslate"><span class="pre">default_timer()</span></code></a> 测量可能受到在同一台机器上运行的其他程序的影响，因此在需要精确计时时最好的做法是重复几次计时并使用最佳时间。 <a class="reference internal" href="#cmdoption-timeit-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> 选项对此有利；在大多数情况下，默认的 5 次重复可能就足够了。 你可以使用 <a class="reference internal" href="time.html#time.process_time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.process_time" title="time.process_time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.process_time()</span></code></a> 来测量CPU时间。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">执行 pass 语句会产生一定的基线开销。这里的代码不会试图隐藏它，但你应该知道它。可以通过不带参数调用程序来测量基线开销，并且Python版本之间可能会有所不同。</p>
+</div>
+</div>
+<div class="section" id="examples">
+<span id="timeit-examples"></span><h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<p>可以提供一个在开头只执行一次的 setup 语句：</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m timeit -s <span class="s1">&#39;text = &quot;sample string&quot;; char = &quot;g&quot;&#39;</span>  <span class="s1">&#39;char in text&#39;</span>
+<span class="go">5000000 loops, best of 5: 0.0877 usec per loop</span>
+<span class="gp">$</span> python -m timeit -s <span class="s1">&#39;text = &quot;sample string&quot;; char = &quot;g&quot;&#39;</span>  <span class="s1">&#39;text.find(char)&#39;</span>
+<span class="go">1000000 loops, best of 5: 0.342 usec per loop</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;char in text&#39;</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="s1">&#39;text = &quot;sample string&quot;; char = &quot;g&quot;&#39;</span><span class="p">)</span>
+<span class="go">0.41440500499993504</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;text.find(char)&#39;</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="s1">&#39;text = &quot;sample string&quot;; char = &quot;g&quot;&#39;</span><span class="p">)</span>
+<span class="go">1.7246671520006203</span>
+</pre></div>
+</div>
+<p>使用 <a class="reference internal" href="#timeit.Timer" title="timeit.Timer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timer</span></code></a> 类及其方法可以完成同样的操作:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="s1">&#39;char in text&#39;</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="s1">&#39;text = &quot;sample string&quot;; char = &quot;g&quot;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">timeit</span><span class="p">()</span>
+<span class="go">0.3955516149999312</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">repeat</span><span class="p">()</span>
+<span class="go">[0.40183617287970225, 0.37027556854118704, 0.38344867356679524, 0.3712595970846668, 0.37866875250654886]</span>
+</pre></div>
+</div>
+<p>以下示例显示如何计算包含多行的表达式。 在这里我们对比使用 <a class="reference internal" href="functions.html#hasattr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#hasattr" title="hasattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">hasattr()</span></code></a> 与 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a>/<a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 的开销来测试缺失与提供对象属性:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m timeit <span class="s1">&#39;try:&#39;</span> <span class="s1">&#39;  str.__bool__&#39;</span> <span class="s1">&#39;except AttributeError:&#39;</span> <span class="s1">&#39;  pass&#39;</span>
+<span class="go">20000 loops, best of 5: 15.7 usec per loop</span>
+<span class="gp">$</span> python -m timeit <span class="s1">&#39;if hasattr(str, &quot;__bool__&quot;): pass&#39;</span>
+<span class="go">50000 loops, best of 5: 4.26 usec per loop</span>
+
+<span class="gp">$</span> python -m timeit <span class="s1">&#39;try:&#39;</span> <span class="s1">&#39;  int.__bool__&#39;</span> <span class="s1">&#39;except AttributeError:&#39;</span> <span class="s1">&#39;  pass&#39;</span>
+<span class="go">200000 loops, best of 5: 1.43 usec per loop</span>
+<span class="gp">$</span> python -m timeit <span class="s1">&#39;if hasattr(int, &quot;__bool__&quot;): pass&#39;</span>
+<span class="go">100000 loops, best of 5: 2.23 usec per loop</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># attribute is missing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="gp">... </span><span class="s2">try:</span>
+<span class="gp">... </span><span class="s2">    str.__bool__</span>
+<span class="gp">... </span><span class="s2">except AttributeError:</span>
+<span class="gp">... </span><span class="s2">    pass</span>
+<span class="gp">... </span><span class="s2">&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<span class="go">0.9138244460009446</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;if hasattr(str, &#39;__bool__&#39;): pass&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<span class="go">0.5829014980008651</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># attribute is present</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="gp">... </span><span class="s2">try:</span>
+<span class="gp">... </span><span class="s2">    int.__bool__</span>
+<span class="gp">... </span><span class="s2">except AttributeError:</span>
+<span class="gp">... </span><span class="s2">    pass</span>
+<span class="gp">... </span><span class="s2">&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<span class="go">0.04215312199994514</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;if hasattr(int, &#39;__bool__&#39;): pass&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<span class="go">0.08588060699912603</span>
+</pre></div>
+</div>
+<p>要让 <a class="reference internal" href="#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> 模块访问你定义的函数，你可以传递一个包含 import 语句的 <em>setup</em> 参数:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Stupid test function&quot;&quot;&quot;</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">timeit</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s2">&quot;test()&quot;</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="s2">&quot;from __main__ import test&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>另一种选择是将 <a class="reference internal" href="functions.html#globals" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#globals" title="globals"><code class="xref py py-func docutils literal notranslate"><span class="pre">globals()</span></code></a> 传递给 <em>globals</em> 参数，这将导致代码在当前的全局命名空间中执行。这比单独指定 import 更方便</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span>
+<span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">8</span>
+
+<span class="kn">import</span> <span class="nn">timeit</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;[func(42) for func in (f,g,h)]&#39;</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="nb">globals</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">timeit</span></code> --- 测量小代码片段的执行时间</a><ul>
+<li><a class="reference internal" href="#basic-examples">基本示例</a></li>
+<li><a class="reference internal" href="#python-interface">Python 接口</a></li>
+<li><a class="reference internal" href="#command-line-interface">命令行界面</a></li>
+<li><a class="reference internal" href="#examples">示例</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="profile.html" tppabs="https://docs.python.org/zh-cn/3/library/profile.html"
+                        title="上一章">The Python Profilers</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="trace.html" tppabs="https://docs.python.org/zh-cn/3/library/trace.html"
+                        title="下一章"><code class="docutils literal notranslate"><span class="pre">trace</span></code> --- Trace or track Python statement execution</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/timeit.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/timeit.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/timeit.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="trace.html" tppabs="https://docs.python.org/zh-cn/3/library/trace.html" title="trace --- Trace or track Python statement execution"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="profile.html" tppabs="https://docs.python.org/zh-cn/3/library/profile.html" title="The Python Profilers"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="debug.html" tppabs="https://docs.python.org/zh-cn/3/library/debug.html" >调试和分析</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

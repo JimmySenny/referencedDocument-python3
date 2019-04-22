@@ -1,0 +1,363 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用 asyncio 开发 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="socket --- 底层网络接口" href="socket.html" />
+    <link rel="prev" title="Low-level API Index" href="asyncio-llapi-index.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/asyncio-dev.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="socket.html" tppabs="https://docs.python.org/zh-cn/3/library/socket.html" title="socket --- 底层网络接口"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html" title="Low-level API Index"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >网络和进程间通信</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- 异步 I/O</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="developing-with-asyncio">
+<span id="asyncio-dev"></span><h1>用 asyncio 开发<a class="headerlink" href="#developing-with-asyncio" title="永久链接至标题">¶</a></h1>
+<p>异步编程与传统的“顺序”编程不同。</p>
+<p>本页列出常见的错误和陷阱，并解释如何避免它们。</p>
+<div class="section" id="debug-mode">
+<span id="asyncio-debug-mode"></span><h2>Debug 模式<a class="headerlink" href="#debug-mode" title="永久链接至标题">¶</a></h2>
+<p>默认情况下，asyncio以生产模式运行。为了简化开发，asyncio有一个*debug 模式* 。</p>
+<p>有几种方法可以启用异步调试模式:</p>
+<ul class="simple">
+<li>将 <span class="target" id="index-2"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONASYNCIODEBUG" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONASYNCIODEBUG"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONASYNCIODEBUG</span></code></a> 环境变量设置为 <code class="docutils literal notranslate"><span class="pre">1</span></code> 。</li>
+<li>使用 <a class="reference internal" href="cmdline.html#id5" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#id5"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span></code></a> <code class="docutils literal notranslate"><span class="pre">dev</span></code> Python 命令行选项。</li>
+<li>将 <code class="docutils literal notranslate"><span class="pre">debug=True</span></code> 传递给 <a class="reference internal" href="asyncio-task.html#asyncio.run" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.run" title="asyncio.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.run()</span></code></a> 。</li>
+<li>调用 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.set_debug" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.set_debug" title="asyncio.loop.set_debug"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.set_debug()</span></code></a> 。</li>
+</ul>
+<p>除了启用调试模式外，还要考虑:</p>
+<ul>
+<li><p class="first">将 <a class="reference internal" href="#asyncio-logger"><span class="std std-ref">asyncio logger</span></a> 的日志级别设置为 <code class="xref py py-data docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>，例如，下面的代码片段可以在应用程序启动时运行:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">配置 <a class="reference internal" href="warnings.html#module-warnings" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#module-warnings" title="warnings: Issue warning messages and control their disposition."><code class="xref py py-mod docutils literal notranslate"><span class="pre">warnings</span></code></a> 模块以显示 <a class="reference internal" href="exceptions.html#ResourceWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> 警告。一种方法是使用 <a class="reference internal" href="cmdline.html#cmdoption-w" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-w"><code class="xref std std-option docutils literal notranslate"><span class="pre">-W</span></code></a> <code class="docutils literal notranslate"><span class="pre">default</span></code> 命令行选项。</p>
+</li>
+</ul>
+<p>启用调试模式时:</p>
+<ul class="simple">
+<li>asyncio 检查 <a class="reference internal" href="#asyncio-coroutine-not-scheduled"><span class="std std-ref">未被等待的协程</span></a> 并记录他们；这将消除“被遗忘的等待”问题。</li>
+<li>许多非线程安全的异步 APIs (例如 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a> 和 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_at" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_at" title="asyncio.loop.call_at"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_at()</span></code></a> 方法)，如果从错误的线程调用，则会引发异常。</li>
+<li>如果执行I/O操作花费的时间太长，则记录I/O选择器的执行时间。</li>
+<li>Callbacks taking longer than 100ms are logged.  The
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">loop.slow_callback_duration</span></code> attribute can be used to set the
+minimum execution duration in seconds that is considered &quot;slow&quot;.</li>
+</ul>
+</div>
+<div class="section" id="concurrency-and-multithreading">
+<span id="asyncio-multithreading"></span><h2>并发性和多线程<a class="headerlink" href="#concurrency-and-multithreading" title="永久链接至标题">¶</a></h2>
+<p>事件循环在线程中运行(通常是主线程)，并在其线程中执行所有回调和任务。当一个任务在事件循环中运行时，没有其他任务可以在同一个线程中运行。当一个任务执行一个 <code class="docutils literal notranslate"><span class="pre">await</span></code> 表达式时，正在运行的任务被挂起，事件循环执行下一个任务。</p>
+<p>要调度来自不同OS线程的回调函数，应该使用 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe" title="asyncio.loop.call_soon_threadsafe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon_threadsafe()</span></code></a>  方法。例如:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">loop</span><span class="o">.</span><span class="n">call_soon_threadsafe</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>几乎所有异步对象都不是线程安全的，这通常不是问题，除非在任务或回调函数之外有代码可以使用它们。如果需要这样的代码来调用低级异步API，应该使用 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe" title="asyncio.loop.call_soon_threadsafe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon_threadsafe()</span></code></a> 方法，例如:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">loop</span><span class="o">.</span><span class="n">call_soon_threadsafe</span><span class="p">(</span><span class="n">fut</span><span class="o">.</span><span class="n">cancel</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>要从不同的OS线程调度一个协程对象，应该使用 <a class="reference internal" href="asyncio-task.html#asyncio.run_coroutine_threadsafe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.run_coroutine_threadsafe" title="asyncio.run_coroutine_threadsafe"><code class="xref py py-func docutils literal notranslate"><span class="pre">run_coroutine_threadsafe()</span></code></a> 函数。它返回一个 <a class="reference internal" href="concurrent.futures.html#concurrent.futures.Future" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.Future</span></code></a> 。查询结果:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">coro_func</span><span class="p">():</span>
+     <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Later in another OS thread:</span>
+
+<span class="n">future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run_coroutine_threadsafe</span><span class="p">(</span><span class="n">coro_func</span><span class="p">(),</span> <span class="n">loop</span><span class="p">)</span>
+<span class="c1"># Wait for the result:</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>为了能够处理信号和执行子进程，事件循环必须运行于主线程中。</p>
+<p>The <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a> method can be used with a
+<a class="reference internal" href="concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" title="concurrent.futures.ThreadPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.ThreadPoolExecutor</span></code></a> to execute
+blocking code in a different OS thread without blocking the OS thread
+that the event loop runs in.</p>
+</div>
+<div class="section" id="running-blocking-code">
+<span id="asyncio-handle-blocking"></span><h2>运行阻塞的代码<a class="headerlink" href="#running-blocking-code" title="永久链接至标题">¶</a></h2>
+<p>不应该直接调用阻塞( CPU 绑定)代码。例如，如果一个函数执行1秒的 CPU 密集型计算，那么所有并发异步任务和 IO 操作都将延迟1秒。</p>
+<p>可以使用执行器在不同的线程甚至不同的进程中运行任务，以避免使用事件循环阻塞OS线程。有关详细信息，请参见 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a>  方法。</p>
+</div>
+<div class="section" id="logging">
+<span id="asyncio-logger"></span><h2>日志<a class="headerlink" href="#logging" title="永久链接至标题">¶</a></h2>
+<p>asyncio使用 <a class="reference internal" href="logging.html#module-logging" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> 模块，所有日志记录都是通过 <code class="docutils literal notranslate"><span class="pre">&quot;asyncio&quot;</span></code> logger执行的。</p>
+<p>默认日志级别是 <code class="xref py py-data docutils literal notranslate"><span class="pre">logging.INFO</span></code> 。可以很容易地调整:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;asyncio&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="detect-never-awaited-coroutines">
+<span id="asyncio-coroutine-not-scheduled"></span><h2>检测 never-awaited 协同程序<a class="headerlink" href="#detect-never-awaited-coroutines" title="永久链接至标题">¶</a></h2>
+<p>When a coroutine function is called, but not awaited
+(e.g. <code class="docutils literal notranslate"><span class="pre">coro()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">coro()</span></code>)
+or the coroutine is not scheduled with <a class="reference internal" href="asyncio-task.html#asyncio.create_task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code></a>, asyncio
+will emit a <a class="reference internal" href="exceptions.html#RuntimeWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeWarning" title="RuntimeWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></a>:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;never scheduled&quot;</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">test</span><span class="p">()</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>输出:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span> <span class="ne">RuntimeWarning</span><span class="p">:</span> <span class="n">coroutine</span> <span class="s1">&#39;test&#39;</span> <span class="n">was</span> <span class="n">never</span> <span class="n">awaited</span>
+  <span class="n">test</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>调试模式的输出:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span> <span class="ne">RuntimeWarning</span><span class="p">:</span> <span class="n">coroutine</span> <span class="s1">&#39;test&#39;</span> <span class="n">was</span> <span class="n">never</span> <span class="n">awaited</span>
+<span class="n">Coroutine</span> <span class="n">created</span> <span class="n">at</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+  <span class="n">File</span> <span class="s2">&quot;../t.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">(),</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+  <span class="o">&lt;</span> <span class="o">..</span> <span class="o">&gt;</span>
+
+  <span class="n">File</span> <span class="s2">&quot;../t.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="n">main</span>
+    <span class="n">test</span><span class="p">()</span>
+  <span class="n">test</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>通常的修复方法是等待协程或者调用 <a class="reference internal" href="asyncio-task.html#asyncio.create_task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code></a> 函数:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">test</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="detect-never-retrieved-exceptions">
+<h2>检测就再也没异常<a class="headerlink" href="#detect-never-retrieved-exceptions" title="永久链接至标题">¶</a></h2>
+<p>如果调用 <a class="reference internal" href="asyncio-future.html#asyncio.Future.set_exception" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-future.html#asyncio.Future.set_exception" title="asyncio.Future.set_exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Future.set_exception()</span></code></a> ，但不等待 Future 对象，将异常传播到用户代码。在这种情况下，当 Future 对象被垃圾收集时，asyncio将发出一条日志消息。</p>
+<p>未处理异常的例子:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">bug</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;not consumed&quot;</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">bug</span><span class="p">())</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>输出:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Task</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">never</span> <span class="n">retrieved</span>
+<span class="n">future</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Task</span> <span class="n">finished</span> <span class="n">coro</span><span class="o">=&lt;</span><span class="n">bug</span><span class="p">()</span> <span class="n">done</span><span class="p">,</span> <span class="n">defined</span> <span class="n">at</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3</span><span class="o">&gt;</span>
+  <span class="n">exception</span><span class="o">=</span><span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;not consumed&#39;</span><span class="p">)</span><span class="o">&gt;</span>
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;test.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">bug</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;not consumed&quot;</span><span class="p">)</span>
+<span class="ne">Exception</span><span class="p">:</span> <span class="ow">not</span> <span class="n">consumed</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="#asyncio-debug-mode"><span class="std std-ref">Enable the debug mode</span></a> to get the
+traceback where the task was created:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">(),</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>调试模式的输出:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Task</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">never</span> <span class="n">retrieved</span>
+<span class="n">future</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Task</span> <span class="n">finished</span> <span class="n">coro</span><span class="o">=&lt;</span><span class="n">bug</span><span class="p">()</span> <span class="n">done</span><span class="p">,</span> <span class="n">defined</span> <span class="n">at</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3</span><span class="o">&gt;</span>
+    <span class="n">exception</span><span class="o">=</span><span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;not consumed&#39;</span><span class="p">)</span> <span class="n">created</span> <span class="n">at</span> <span class="n">asyncio</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">321</span><span class="o">&gt;</span>
+
+<span class="n">source_traceback</span><span class="p">:</span> <span class="n">Object</span> <span class="n">created</span> <span class="n">at</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;../t.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">(),</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="o">&lt;</span> <span class="o">..</span> <span class="o">&gt;</span>
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;../t.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">bug</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;not consumed&quot;</span><span class="p">)</span>
+<span class="ne">Exception</span><span class="p">:</span> <span class="ow">not</span> <span class="n">consumed</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">用 asyncio 开发</a><ul>
+<li><a class="reference internal" href="#debug-mode">Debug 模式</a></li>
+<li><a class="reference internal" href="#concurrency-and-multithreading">并发性和多线程</a></li>
+<li><a class="reference internal" href="#running-blocking-code">运行阻塞的代码</a></li>
+<li><a class="reference internal" href="#logging">日志</a></li>
+<li><a class="reference internal" href="#detect-never-awaited-coroutines">检测 never-awaited 协同程序</a></li>
+<li><a class="reference internal" href="#detect-never-retrieved-exceptions">检测就再也没异常</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html"
+                        title="上一章">Low-level API Index</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="socket.html" tppabs="https://docs.python.org/zh-cn/3/library/socket.html"
+                        title="下一章"><code class="docutils literal notranslate"><span class="pre">socket</span></code> --- 底层网络接口</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-dev.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-dev.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-dev.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="socket.html" tppabs="https://docs.python.org/zh-cn/3/library/socket.html" title="socket --- 底层网络接口"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html" title="Low-level API Index"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >网络和进程间通信</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- 异步 I/O</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

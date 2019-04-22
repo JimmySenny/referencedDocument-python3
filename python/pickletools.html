@@ -1,0 +1,306 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>pickletools --- Tools for pickle developers &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
+    <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
+    <link rel="search" title="æœç´¢" href="../search.html" />
+    <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
+    <link rel="next" title="æ‚é¡¹æœåŠ¡" href="misc.html" />
+    <link rel="prev" title="dis --- Python å­—èŠ‚ç åæ±‡ç¼–å™¨" href="dis.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/pickletools.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             accesskey="I">ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="misc.html" tppabs="https://docs.python.org/zh-cn/3/library/misc.html" title="æ‚é¡¹æœåŠ¡"
+             accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="dis.html" tppabs="https://docs.python.org/zh-cn/3/library/dis.html" title="dis --- Python å­—èŠ‚ç åæ±‡ç¼–å™¨"
+             accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="language.html" tppabs="https://docs.python.org/zh-cn/3/library/language.html" accesskey="U">Python è¯­è¨€æœåŠ¡</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pickletools">
+<span id="pickletools-tools-for-pickle-developers"></span><h1><a class="reference internal" href="#module-pickletools" title="pickletools: Contains extensive comments about the pickle protocols and pickle-machine opcodes, as well as some useful functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickletools</span></code></a> --- Tools for pickle developers<a class="headerlink" href="#module-pickletools" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/pickletools.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/pickletools.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/pickletools.py">Lib/pickletools.py</a></p>
+<hr class="docutils" />
+<p>This module contains various constants relating to the intimate details of the
+<a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module, some lengthy comments about the implementation, and a
+few useful functions for analyzing pickled data.  The contents of this module
+are useful for Python core developers who are working on the <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a>;
+ordinary users of the <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module probably won't find the
+<a class="reference internal" href="#module-pickletools" title="pickletools: Contains extensive comments about the pickle protocols and pickle-machine opcodes, as well as some useful functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickletools</span></code></a> module relevant.</p>
+<div class="section" id="command-line-usage">
+<h2>Command line usage<a class="headerlink" href="#command-line-usage" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+</div>
+<p>When invoked from the command line, <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pickletools</span></code> will
+disassemble the contents of one or more pickle files.  Note that if
+you want to see the Python object stored in the pickle rather than the
+details of pickle format, you may want to use <code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">pickle</span></code> instead.
+However, when the pickle file that you want to examine comes from an
+untrusted source, <code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">pickletools</span></code> is a safer option because it does
+not execute pickle bytecode.</p>
+<p>For example, with a tuple <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2)</span></code> pickled in file <code class="docutils literal notranslate"><span class="pre">x.pickle</span></code>:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m pickle x.pickle
+<span class="go">(1, 2)</span>
+
+<span class="gp">$</span> python -m pickletools x.pickle
+<span class="go">    0: \x80 PROTO      3</span>
+<span class="go">    2: K    BININT1    1</span>
+<span class="go">    4: K    BININT1    2</span>
+<span class="go">    6: \x86 TUPLE2</span>
+<span class="go">    7: q    BINPUT     0</span>
+<span class="go">    9: .    STOP</span>
+<span class="go">highest protocol among opcodes = 2</span>
+</pre></div>
+</div>
+<div class="section" id="command-line-options">
+<h3>Command line options<a class="headerlink" href="#command-line-options" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<dl class="cmdoption">
+<dt id="cmdoption-pickletools-a">
+<code class="descname">-a</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--annotate</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-pickletools-a" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Annotate each line with a short opcode description.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-pickletools-o">
+<code class="descname">-o</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--output</code><code class="descclassname">=&lt;file&gt;</code><a class="headerlink" href="#cmdoption-pickletools-o" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Name of a file where the output should be written.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-pickletools-l">
+<code class="descname">-l</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--indentlevel</code><code class="descclassname">=&lt;num&gt;</code><a class="headerlink" href="#cmdoption-pickletools-l" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>The number of blanks by which to indent a new MARK level.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-pickletools-m">
+<code class="descname">-m</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--memo</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-pickletools-m" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>When multiple objects are disassembled, preserve memo between
+disassemblies.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-pickletools-p">
+<code class="descname">-p</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--preamble</code><code class="descclassname">=&lt;preamble&gt;</code><a class="headerlink" href="#cmdoption-pickletools-p" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>When more than one pickle file are specified, print given preamble
+before each disassembly.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="programmatic-interface">
+<h2>Programmatic Interface<a class="headerlink" href="#programmatic-interface" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<dl class="function">
+<dt id="pickletools.dis">
+<code class="descclassname">pickletools.</code><code class="descname">dis</code><span class="sig-paren">(</span><em>pickle</em>, <em>out=None</em>, <em>memo=None</em>, <em>indentlevel=4</em>, <em>annotate=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pickletools.dis" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Outputs a symbolic disassembly of the pickle to the file-like
+object <em>out</em>, defaulting to <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>.  <em>pickle</em> can be a
+string or a file-like object.  <em>memo</em> can be a Python dictionary
+that will be used as the pickle's memo; it can be used to perform
+disassemblies across multiple pickles created by the same
+pickler. Successive levels, indicated by <code class="docutils literal notranslate"><span class="pre">MARK</span></code> opcodes in the
+stream, are indented by <em>indentlevel</em> spaces.  If a nonzero value
+is given to <em>annotate</em>, each opcode in the output is annotated with
+a short description.  The value of <em>annotate</em> is used as a hint for
+the column where annotation should start.</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½: </span>The <em>annotate</em> argument.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pickletools.genops">
+<code class="descclassname">pickletools.</code><code class="descname">genops</code><span class="sig-paren">(</span><em>pickle</em><span class="sig-paren">)</span><a class="headerlink" href="#pickletools.genops" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Provides an <a class="reference internal" href="glossary.html#term-iterator" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a> over all of the opcodes in a pickle, returning a
+sequence of <code class="docutils literal notranslate"><span class="pre">(opcode,</span> <span class="pre">arg,</span> <span class="pre">pos)</span></code> triples.  <em>opcode</em> is an instance of an
+<code class="xref py py-class docutils literal notranslate"><span class="pre">OpcodeInfo</span></code> class; <em>arg</em> is the decoded value, as a Python object, of
+the opcode's argument; <em>pos</em> is the position at which this opcode is located.
+<em>pickle</em> can be a string or a file-like object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pickletools.optimize">
+<code class="descclassname">pickletools.</code><code class="descname">optimize</code><span class="sig-paren">(</span><em>picklestring</em><span class="sig-paren">)</span><a class="headerlink" href="#pickletools.optimize" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Returns a new equivalent pickle string after eliminating unused <code class="docutils literal notranslate"><span class="pre">PUT</span></code>
+opcodes. The optimized pickle is shorter, takes less transmission time,
+requires less storage space, and unpickles more efficiently.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">pickletools</span></code> --- Tools for pickle developers</a><ul>
+<li><a class="reference internal" href="#command-line-usage">Command line usage</a><ul>
+<li><a class="reference internal" href="#command-line-options">Command line options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmatic-interface">Programmatic Interface</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="dis.html" tppabs="https://docs.python.org/zh-cn/3/library/dis.html"
+                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">dis</span></code> --- Python å­—èŠ‚ç åæ±‡ç¼–å™¨</a></p>
+  <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="misc.html" tppabs="https://docs.python.org/zh-cn/3/library/misc.html"
+                        title="ä¸‹ä¸€ç« ">æ‚é¡¹æœåŠ¡</a></p>
+  <div role="note" aria-label="source link">
+    <h3>æœ¬é¡µ</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/pickletools.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/pickletools.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/pickletools.rst"
+            rel="nofollow">æ˜¾ç¤ºæºä»£ç 
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             >ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="misc.html" tppabs="https://docs.python.org/zh-cn/3/library/misc.html" title="æ‚é¡¹æœåŠ¡"
+             >ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="dis.html" tppabs="https://docs.python.org/zh-cn/3/library/dis.html" title="dis --- Python å­—èŠ‚ç åæ±‡ç¼–å™¨"
+             >ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="language.html" tppabs="https://docs.python.org/zh-cn/3/library/language.html" >Python è¯­è¨€æœåŠ¡</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+    <br />
+    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+    <br />
+    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+    </div>
+
+  </body>
+</html>

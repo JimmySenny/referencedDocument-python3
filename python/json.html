@@ -1,0 +1,847 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>json --- JSON 编码和解码器 &#8212; Python 3.7.3 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.7.3 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="mailcap --- Mailcap file handling" href="mailcap.html" />
+    <link rel="prev" title="email.iterators: Iterators" href="email.iterators.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/json.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="mailcap.html" tppabs="https://docs.python.org/zh-cn/3/library/mailcap.html" title="mailcap --- Mailcap file handling"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="email.iterators.html" tppabs="https://docs.python.org/zh-cn/3/library/email.iterators.html" title="email.iterators: Iterators"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" accesskey="U">互联网数据处理</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-json">
+<span id="json-json-encoder-and-decoder"></span><h1><a class="reference internal" href="#module-json" title="json: Encode and decode the JSON format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code></a> --- JSON 编码和解码器<a class="headerlink" href="#module-json" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/json/__init__.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/json/__init__.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/json/__init__.py">Lib/json/__init__.py</a></p>
+<hr class="docutils" />
+<p><a class="reference external" href="javascript:if(confirm('http://json.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://json.org/'" tppabs="http://json.org/">JSON (JavaScript Object Notation)</a>，由 <span class="target" id="index-7"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc7159.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/rfc7159.html'" tppabs="https://tools.ietf.org/html/rfc7159.html"><strong>RFC 7159</strong></a>  (which obsoletes <span class="target" id="index-8"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4627.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/rfc4627.html'" tppabs="https://tools.ietf.org/html/rfc4627.html"><strong>RFC 4627</strong></a>) 和 <a class="reference external" href="javascript:if(confirm('http://www.ecma-international.org/publications/standards/Ecma-404.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.ecma-international.org/publications/standards/Ecma-404.htm'" tppabs="http://www.ecma-international.org/publications/standards/Ecma-404.htm">ECMA-404</a> 指定，是一个受 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/JavaScript  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/JavaScript'" tppabs="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> 的对象字面量语法启发的轻量级数据交换格式，尽管它不仅仅是一个严格意义上的 JavaScript 的字集 <a class="footnote-reference" href="#rfc-errata" id="id1">[1]</a>。</p>
+<p><a class="reference internal" href="#module-json" title="json: Encode and decode the JSON format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code></a> 提供了与标准库 <a class="reference internal" href="marshal.html#module-marshal" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> 和 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 相似的API接口。</p>
+<p>对基本的 Python 对象层次结构进行编码：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}])</span>
+<span class="go">&#39;[&quot;foo&quot;, {&quot;bar&quot;: [&quot;baz&quot;, null, 1.0, 2]}]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">foo</span><span class="se">\b</span><span class="s2">ar&quot;</span><span class="p">))</span>
+<span class="go">&quot;\&quot;foo\bar&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\u1234</span><span class="s1">&#39;</span><span class="p">))</span>
+<span class="go">&quot;\u1234&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">))</span>
+<span class="go">&quot;\\&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">{&quot;a&quot;: 0, &quot;b&quot;: 0, &quot;c&quot;: 0}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">StringIO</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">io</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">([</span><span class="s1">&#39;streaming API&#39;</span><span class="p">],</span> <span class="n">io</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">io</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="go">&#39;[&quot;streaming API&quot;]&#39;</span>
+</pre></div>
+</div>
+<p>紧凑编码:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}],</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">))</span>
+<span class="go">&#39;[1,2,3,{&quot;4&quot;:5,&quot;6&quot;:7}]&#39;</span>
+</pre></div>
+</div>
+<p>美化输出:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="go">{</span>
+<span class="go">    &quot;4&quot;: 5,</span>
+<span class="go">    &quot;6&quot;: 7</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<p>JSON解码:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;[&quot;foo&quot;, {&quot;bar&quot;:[&quot;baz&quot;, null, 1.0, 2]}]&#39;</span><span class="p">)</span>
+<span class="go">[&#39;foo&#39;, {&#39;bar&#39;: [&#39;baz&#39;, None, 1.0, 2]}]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="se">\\</span><span class="s1">&quot;foo</span><span class="se">\\</span><span class="s1">bar&quot;&#39;</span><span class="p">)</span>
+<span class="go">&#39;&quot;foo\x08ar&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">StringIO</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">io</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="s1">&#39;[&quot;streaming API&quot;]&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+<span class="go">[&#39;streaming API&#39;]</span>
+</pre></div>
+</div>
+<p>特殊JSON对象解码:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">as_complex</span><span class="p">(</span><span class="n">dct</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="s1">&#39;__complex__&#39;</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">complex</span><span class="p">(</span><span class="n">dct</span><span class="p">[</span><span class="s1">&#39;real&#39;</span><span class="p">],</span> <span class="n">dct</span><span class="p">[</span><span class="s1">&#39;imag&#39;</span><span class="p">])</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">dct</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;{&quot;__complex__&quot;: true, &quot;real&quot;: 1, &quot;imag&quot;: 2}&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">object_hook</span><span class="o">=</span><span class="n">as_complex</span><span class="p">)</span>
+<span class="go">(1+2j)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">decimal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;1.1&#39;</span><span class="p">,</span> <span class="n">parse_float</span><span class="o">=</span><span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">)</span>
+<span class="go">Decimal(&#39;1.1&#39;)</span>
+</pre></div>
+</div>
+<p>扩展 <a class="reference internal" href="#json.JSONEncoder" title="json.JSONEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONEncoder</span></code></a>:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ComplexEncoder</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">complex</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">imag</span><span class="p">]</span>
+<span class="gp">... </span>        <span class="c1"># Let the base class default method raise the TypeError</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">ComplexEncoder</span><span class="p">)</span>
+<span class="go">&#39;[2.0, 1.0]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ComplexEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+<span class="go">&#39;[2.0, 1.0]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">ComplexEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">iterencode</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="p">))</span>
+<span class="go">[&#39;[2.0&#39;, &#39;, 1.0&#39;, &#39;]&#39;]</span>
+</pre></div>
+</div>
+<p>从命令行使用 <a class="reference internal" href="#module-json.tool" title="json.tool: A command line to validate and pretty-print JSON."><code class="xref py py-mod docutils literal notranslate"><span class="pre">json.tool</span></code></a> 来验证并梅花输出：</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{&quot;json&quot;:&quot;obj&quot;}&#39;</span> <span class="p">|</span> python -m json.tool
+<span class="go">{</span>
+<span class="go">    &quot;json&quot;: &quot;obj&quot;</span>
+<span class="go">}</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{1.2:3.4}&#39;</span> <span class="p">|</span> python -m json.tool
+<span class="go">Expecting property name enclosed in double quotes: line 1 column 2 (char 1)</span>
+</pre></div>
+</div>
+<p>详细文档请参见 <a class="reference internal" href="#json-commandline"><span class="std std-ref">Command Line Interface</span></a>。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">JSON 是 <a class="reference external" href="javascript:if(confirm('http://yaml.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://yaml.org/'" tppabs="http://yaml.org/">YAML</a> 1.2 的一个子集。由该模块的默认设置生成的 JSON （尤其是默认的 “分隔符” 设置值）也是 YAML 1.0 and 1.1 的一个子集。因此该模块也能够用于序列化为 YAML。</p>
+</div>
+<div class="section" id="basic-usage">
+<h2>基本使用<a class="headerlink" href="#basic-usage" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="json.dump">
+<code class="descclassname">json.</code><code class="descname">dump</code><span class="sig-paren">(</span><em>obj</em>, <em>fp</em>, <em>*</em>, <em>skipkeys=False</em>, <em>ensure_ascii=True</em>, <em>check_circular=True</em>, <em>allow_nan=True</em>, <em>cls=None</em>, <em>indent=None</em>, <em>separators=None</em>, <em>default=None</em>, <em>sort_keys=False</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#json.dump" title="永久链接至目标">¶</a></dt>
+<dd><p>使用这个 <a class="reference internal" href="#py-to-json-table"><span class="std std-ref">conversion table</span></a> 来序列化 <em>obj</em> 为一个 JSON 格式的流并输出到 <em>fp</em> （一个支持 <code class="docutils literal notranslate"><span class="pre">.write()</span></code> 的 <a class="reference internal" href="glossary.html#term-file-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-like-object"><span class="xref std std-term">file-like object</span></a>）。</p>
+<p>如果 <em>skipkeys</em> 是 true （默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code>），那么那些不是基本对象（包括 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>、<a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>、<a class="reference internal" href="functions.html#bool" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#bool" title="bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>、<code class="docutils literal notranslate"><span class="pre">None</span></code>）的字典的键会被跳过；否则引发一个 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。</p>
+<p><a class="reference internal" href="#module-json" title="json: Encode and decode the JSON format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code></a> 模块始终产生 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 对象而非 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象。因此，<code class="docutils literal notranslate"><span class="pre">fp.write()</span></code> 必须支持 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 输入。</p>
+<p>如果 <em>ensure_ascii</em> 是 true （即默认值），输出保证将所有输入的非 ASCII 字符转义。如果 <em>ensure_ascii</em> 是 false，这些字符会原样输出。</p>
+<p>如果 <em>check_circular</em> 是为假值 (默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code>)，那么容器类型的循环引用检验会被跳过并且循环引用会引发一个 <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> (或者更糟的情况)。</p>
+<p>如果 <em>allow_nan</em> 是 false（默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code>），那么在对严格 JSON 规格范围外的 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> 类型值（<code class="docutils literal notranslate"><span class="pre">nan</span></code>、<code class="docutils literal notranslate"><span class="pre">inf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-inf</span></code>）进行序列化时会引发一个 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。如果 <em>allow_nan</em> 是 true，则使用它们的 JavaScript 等价形式（<code class="docutils literal notranslate"><span class="pre">NaN</span></code>、<code class="docutils literal notranslate"><span class="pre">Infinity</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code>）。</p>
+<p>如果 <em>indent</em> 是一个非负整数或者字符串，那么 JSON 数组元素和对象成员会被美化输出为该值指定的缩进等级。如果缩进等级为零、负数或者 <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>，则只会添加换行符。<code class="docutils literal notranslate"><span class="pre">None``（默认值）选择最紧凑的表达。使用一个正整数会让每一层缩进同样数量的空格。如果</span> <span class="pre">*indent*</span> <span class="pre">是一个字符串（比如</span> <span class="pre">``&quot;\t&quot;</span></code>），那个字符串会被用于缩进每一层。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.2 版更改: </span>允许使用字符串作为 <em>indent</em> 而不再仅仅是整数。</p>
+</div>
+<p>当指定时，<em>separators</em> 应当是一个 <code class="docutils literal notranslate"><span class="pre">(item_separator,</span> <span class="pre">key_separator)</span></code> 元组。当 <em>indent</em> 为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 时，默认值取 <code class="docutils literal notranslate"><span class="pre">(',</span> <span class="pre">',</span> <span class="pre">':</span> <span class="pre">')</span></code>，否则取 <code class="docutils literal notranslate"><span class="pre">(',',</span> <span class="pre">':</span> <span class="pre">')</span></code>。为了得到最紧凑的 JSON 表达式，你应该指定其为 <code class="docutils literal notranslate"><span class="pre">(',',</span> <span class="pre">':')</span></code> 以消除空白字符。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.4 版更改: </span>现当 <em>indent</em> 不是 <code class="docutils literal notranslate"><span class="pre">None</span></code> 时，采用 <code class="docutils literal notranslate"><span class="pre">(',',</span> <span class="pre">':</span> <span class="pre">')</span></code> 作为默认值。</p>
+</div>
+<p>当 <em>default</em> 被指定时，其应该是一个函数，每当某个对象无法被序列化时它会被调用。它应该返回该对象的一个可以被 JSON 编码的版本或者引发一个 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。如果没有被指定，则会直接引发 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。</p>
+<p>如果 <em>sort_keys</em> 是 true（默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code>），那么字典的输出会以键的顺序排序。</p>
+<p>为了使用一个自定义的 <a class="reference internal" href="#json.JSONEncoder" title="json.JSONEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONEncoder</span></code></a> 子类（比如：覆盖了 <code class="xref py py-meth docutils literal notranslate"><span class="pre">default()</span></code> 方法来序列化额外的类型）， 通过 <em>cls</em> 关键字参数来指定；否则将使用 <a class="reference internal" href="#json.JSONEncoder" title="json.JSONEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONEncoder</span></code></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span>所有的可选参数现在是 <a class="reference internal" href="glossary.html#keyword-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#keyword-only-parameter"><span class="std std-ref">keyword-only</span></a> 的了。</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">与 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 和 <a class="reference internal" href="marshal.html#module-marshal" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> 不同，JSON 不是一个具有框架的协议，所以尝试多次使用同一个 <em>fp</em> 调用 <a class="reference internal" href="#json.dump" title="json.dump"><code class="xref py py-func docutils literal notranslate"><span class="pre">dump()</span></code></a> 来序列化多个对象会产生一个不合规的 JSON 文件。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="json.dumps">
+<code class="descclassname">json.</code><code class="descname">dumps</code><span class="sig-paren">(</span><em>obj</em>, <em>*</em>, <em>skipkeys=False</em>, <em>ensure_ascii=True</em>, <em>check_circular=True</em>, <em>allow_nan=True</em>, <em>cls=None</em>, <em>indent=None</em>, <em>separators=None</em>, <em>default=None</em>, <em>sort_keys=False</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#json.dumps" title="永久链接至目标">¶</a></dt>
+<dd><p>使用这个 <a class="reference internal" href="#py-to-json-table"><span class="std std-ref">转换表</span></a> 将 <em>obj</em> 序列化为 JSON 格式的 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>。 其参数的含义与 <a class="reference internal" href="#json.dump" title="json.dump"><code class="xref py py-func docutils literal notranslate"><span class="pre">dump()</span></code></a> 中的相同。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">JSON 中的键-值对中的键永远是 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 类型的。当一个对象被转化为 JSON 时，字典中所有的键都会被强制转换为字符串。这所造成的结果是字典被转换为 JSON 然后转换回字典时可能和原来的不相等。换句话说，如果 x 具有非字符串的键，则有 <code class="docutils literal notranslate"><span class="pre">loads(dumps(x))</span> <span class="pre">!=</span> <span class="pre">x</span></code>。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="json.load">
+<code class="descclassname">json.</code><code class="descname">load</code><span class="sig-paren">(</span><em>fp</em>, <em>*</em>, <em>cls=None</em>, <em>object_hook=None</em>, <em>parse_float=None</em>, <em>parse_int=None</em>, <em>parse_constant=None</em>, <em>object_pairs_hook=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#json.load" title="永久链接至目标">¶</a></dt>
+<dd><p>使用这个 <a class="reference internal" href="#json-to-py-table"><span class="std std-ref">转换表</span></a> 将 <em>fp</em> (一个支持 <code class="docutils literal notranslate"><span class="pre">.read()</span></code> 并包含一个 JSON 文档的 <a class="reference internal" href="glossary.html#term-text-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-text-file"><span class="xref std std-term">text file</span></a> 或者 <a class="reference internal" href="glossary.html#term-binary-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>) 反序列化为一个 Python 对象。</p>
+<p><em>object_hook</em> 是一个可选的函数，它会被调用于每一个解码出的对象字面量（即一个 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>）。<em>object_hook</em> 的返回值会取代原本的 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>。这一特性能够被用于实现自定义解码器（如 <a class="reference external" href="javascript:if(confirm('http://www.jsonrpc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.jsonrpc.org/'" tppabs="http://www.jsonrpc.org/">JSON-RPC</a> 的类型提示)。</p>
+<p><em>object_pairs_hook</em> is an optional function that will be called with the
+result of any object literal decoded with an ordered list of pairs.  The
+return value of <em>object_pairs_hook</em> will be used instead of the
+<a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  This feature can be used to implement custom decoders.
+If <em>object_hook</em> is also defined, the <em>object_pairs_hook</em> takes priority.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.1 版更改: </span>Added support for <em>object_pairs_hook</em>.</p>
+</div>
+<p><em>parse_float</em>, if specified, will be called with the string of every JSON
+float to be decoded.  By default, this is equivalent to <code class="docutils literal notranslate"><span class="pre">float(num_str)</span></code>.
+This can be used to use another datatype or parser for JSON floats
+(e.g. <a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a>).</p>
+<p><em>parse_int</em>, if specified, will be called with the string of every JSON int
+to be decoded.  By default, this is equivalent to <code class="docutils literal notranslate"><span class="pre">int(num_str)</span></code>.  This can
+be used to use another datatype or parser for JSON integers
+(e.g. <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>).</p>
+<p><em>parse_constant</em>, if specified, will be called with one of the following
+strings: <code class="docutils literal notranslate"><span class="pre">'-Infinity'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Infinity'</span></code>, <code class="docutils literal notranslate"><span class="pre">'NaN'</span></code>.
+This can be used to raise an exception if invalid JSON numbers
+are encountered.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.1 版更改: </span><em>parse_constant</em> doesn't get called on 'null', 'true', 'false' anymore.</p>
+</div>
+<p>To use a custom <a class="reference internal" href="#json.JSONDecoder" title="json.JSONDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONDecoder</span></code></a> subclass, specify it with the <code class="docutils literal notranslate"><span class="pre">cls</span></code>
+kwarg; otherwise <a class="reference internal" href="#json.JSONDecoder" title="json.JSONDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONDecoder</span></code></a> is used.  Additional keyword arguments
+will be passed to the constructor of the class.</p>
+<p>If the data being deserialized is not a valid JSON document, a
+<a class="reference internal" href="#json.JSONDecodeError" title="json.JSONDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">JSONDecodeError</span></code></a> will be raised.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span>所有的可选参数现在是 <a class="reference internal" href="glossary.html#keyword-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#keyword-only-parameter"><span class="std std-ref">keyword-only</span></a> 的了。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span><em>fp</em> can now be a <a class="reference internal" href="glossary.html#term-binary-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>. The input encoding should be
+UTF-8, UTF-16 or UTF-32.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="json.loads">
+<code class="descclassname">json.</code><code class="descname">loads</code><span class="sig-paren">(</span><em>s</em>, <em>*</em>, <em>encoding=None</em>, <em>cls=None</em>, <em>object_hook=None</em>, <em>parse_float=None</em>, <em>parse_int=None</em>, <em>parse_constant=None</em>, <em>object_pairs_hook=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#json.loads" title="永久链接至目标">¶</a></dt>
+<dd><p>Deserialize <em>s</em> (a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or <a class="reference internal" href="stdtypes.html#bytearray" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>
+instance containing a JSON document) to a Python object using this
+<a class="reference internal" href="#json-to-py-table"><span class="std std-ref">conversion table</span></a>.</p>
+<p>The other arguments have the same meaning as in <a class="reference internal" href="#json.load" title="json.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a>, except
+<em>encoding</em> which is ignored and deprecated.</p>
+<p>If the data being deserialized is not a valid JSON document, a
+<a class="reference internal" href="#json.JSONDecodeError" title="json.JSONDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">JSONDecodeError</span></code></a> will be raised.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span><em>s</em> can now be of type <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or <a class="reference internal" href="stdtypes.html#bytearray" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>. The
+input encoding should be UTF-8, UTF-16 or UTF-32.</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="encoders-and-decoders">
+<h2>Encoders and Decoders<a class="headerlink" href="#encoders-and-decoders" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="json.JSONDecoder">
+<em class="property">class </em><code class="descclassname">json.</code><code class="descname">JSONDecoder</code><span class="sig-paren">(</span><em>*</em>, <em>object_hook=None</em>, <em>parse_float=None</em>, <em>parse_int=None</em>, <em>parse_constant=None</em>, <em>strict=True</em>, <em>object_pairs_hook=None</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONDecoder" title="永久链接至目标">¶</a></dt>
+<dd><p>Simple JSON decoder.</p>
+<p>Performs the following translations in decoding by default:</p>
+<table border="1" class="docutils" id="json-to-py-table">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">JSON</th>
+<th class="head">Python</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>object</td>
+<td>dict</td>
+</tr>
+<tr class="row-odd"><td>array</td>
+<td>list</td>
+</tr>
+<tr class="row-even"><td>string</td>
+<td>str</td>
+</tr>
+<tr class="row-odd"><td>整数</td>
+<td>int</td>
+</tr>
+<tr class="row-even"><td>非整数</td>
+<td>float</td>
+</tr>
+<tr class="row-odd"><td>true</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>false</td>
+<td>False</td>
+</tr>
+<tr class="row-odd"><td>null</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>It also understands <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> as their
+corresponding <code class="docutils literal notranslate"><span class="pre">float</span></code> values, which is outside the JSON spec.</p>
+<p><em>object_hook</em>, if specified, will be called with the result of every JSON
+object decoded and its return value will be used in place of the given
+<a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  This can be used to provide custom deserializations (e.g. to
+support JSON-RPC class hinting).</p>
+<p><em>object_pairs_hook</em>, if specified will be called with the result of every
+JSON object decoded with an ordered list of pairs.  The return value of
+<em>object_pairs_hook</em> will be used instead of the <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  This
+feature can be used to implement custom decoders.  If <em>object_hook</em> is also
+defined, the <em>object_pairs_hook</em> takes priority.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.1 版更改: </span>Added support for <em>object_pairs_hook</em>.</p>
+</div>
+<p><em>parse_float</em>, if specified, will be called with the string of every JSON
+float to be decoded.  By default, this is equivalent to <code class="docutils literal notranslate"><span class="pre">float(num_str)</span></code>.
+This can be used to use another datatype or parser for JSON floats
+(e.g. <a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a>).</p>
+<p><em>parse_int</em>, if specified, will be called with the string of every JSON int
+to be decoded.  By default, this is equivalent to <code class="docutils literal notranslate"><span class="pre">int(num_str)</span></code>.  This can
+be used to use another datatype or parser for JSON integers
+(e.g. <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>).</p>
+<p><em>parse_constant</em>, if specified, will be called with one of the following
+strings: <code class="docutils literal notranslate"><span class="pre">'-Infinity'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Infinity'</span></code>, <code class="docutils literal notranslate"><span class="pre">'NaN'</span></code>.
+This can be used to raise an exception if invalid JSON numbers
+are encountered.</p>
+<p>If <em>strict</em> is false (<code class="docutils literal notranslate"><span class="pre">True</span></code> is the default), then control characters
+will be allowed inside strings.  Control characters in this context are
+those with character codes in the 0--31 range, including <code class="docutils literal notranslate"><span class="pre">'\t'</span></code> (tab),
+<code class="docutils literal notranslate"><span class="pre">'\n'</span></code>, <code class="docutils literal notranslate"><span class="pre">'\r'</span></code> and <code class="docutils literal notranslate"><span class="pre">'\0'</span></code>.</p>
+<p>If the data being deserialized is not a valid JSON document, a
+<a class="reference internal" href="#json.JSONDecodeError" title="json.JSONDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">JSONDecodeError</span></code></a> will be raised.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span>All parameters are now <a class="reference internal" href="glossary.html#keyword-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#keyword-only-parameter"><span class="std std-ref">keyword-only</span></a>.</p>
+</div>
+<dl class="method">
+<dt id="json.JSONDecoder.decode">
+<code class="descname">decode</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONDecoder.decode" title="永久链接至目标">¶</a></dt>
+<dd><p>Return the Python representation of <em>s</em> (a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> instance
+containing a JSON document).</p>
+<p><a class="reference internal" href="#json.JSONDecodeError" title="json.JSONDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">JSONDecodeError</span></code></a> will be raised if the given JSON document is not
+valid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="json.JSONDecoder.raw_decode">
+<code class="descname">raw_decode</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONDecoder.raw_decode" title="永久链接至目标">¶</a></dt>
+<dd><p>Decode a JSON document from <em>s</em> (a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> beginning with a
+JSON document) and return a 2-tuple of the Python representation
+and the index in <em>s</em> where the document ended.</p>
+<p>This can be used to decode a JSON document from a string that may have
+extraneous data at the end.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="json.JSONEncoder">
+<em class="property">class </em><code class="descclassname">json.</code><code class="descname">JSONEncoder</code><span class="sig-paren">(</span><em>*</em>, <em>skipkeys=False</em>, <em>ensure_ascii=True</em>, <em>check_circular=True</em>, <em>allow_nan=True</em>, <em>sort_keys=False</em>, <em>indent=None</em>, <em>separators=None</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONEncoder" title="永久链接至目标">¶</a></dt>
+<dd><p>Extensible JSON encoder for Python data structures.</p>
+<p>Supports the following objects and types by default:</p>
+<table border="1" class="docutils" id="py-to-json-table">
+<colgroup>
+<col width="73%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Python</th>
+<th class="head">JSON</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dict</td>
+<td>object</td>
+</tr>
+<tr class="row-odd"><td>list, tuple</td>
+<td>array</td>
+</tr>
+<tr class="row-even"><td>str</td>
+<td>string</td>
+</tr>
+<tr class="row-odd"><td>int, float, int- &amp; float-derived Enums</td>
+<td>number</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>true</td>
+</tr>
+<tr class="row-odd"><td>False</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td>None</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.4 版更改: </span>Added support for int- and float-derived Enum classes.</p>
+</div>
+<p>To extend this to recognize other objects, subclass and implement a
+<a class="reference internal" href="#json.JSONEncoder.default" title="json.JSONEncoder.default"><code class="xref py py-meth docutils literal notranslate"><span class="pre">default()</span></code></a> method with another method that returns a serializable object
+for <code class="docutils literal notranslate"><span class="pre">o</span></code> if possible, otherwise it should call the superclass implementation
+(to raise <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>).</p>
+<p>If <em>skipkeys</em> is false (the default), then it is a <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> to
+attempt encoding of keys that are not <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>,
+<a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.  If <em>skipkeys</em> is true, such items are simply
+skipped.</p>
+<p>如果 <em>ensure_ascii</em> 是 true （即默认值），输出保证将所有输入的非 ASCII 字符转义。如果 <em>ensure_ascii</em> 是 false，这些字符会原样输出。</p>
+<p>If <em>check_circular</em> is true (the default), then lists, dicts, and custom
+encoded objects will be checked for circular references during encoding to
+prevent an infinite recursion (which would cause an <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>).
+Otherwise, no such check takes place.</p>
+<p>If <em>allow_nan</em> is true (the default), then <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> will be encoded as such.  This behavior is not JSON
+specification compliant, but is consistent with most JavaScript based
+encoders and decoders.  Otherwise, it will be a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> to encode
+such floats.</p>
+<p>If <em>sort_keys</em> is true (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>), then the output of dictionaries
+will be sorted by key; this is useful for regression tests to ensure that
+JSON serializations can be compared on a day-to-day basis.</p>
+<p>如果 <em>indent</em> 是一个非负整数或者字符串，那么 JSON 数组元素和对象成员会被美化输出为该值指定的缩进等级。如果缩进等级为零、负数或者 <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>，则只会添加换行符。<code class="docutils literal notranslate"><span class="pre">None``（默认值）选择最紧凑的表达。使用一个正整数会让每一层缩进同样数量的空格。如果</span> <span class="pre">*indent*</span> <span class="pre">是一个字符串（比如</span> <span class="pre">``&quot;\t&quot;</span></code>），那个字符串会被用于缩进每一层。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.2 版更改: </span>允许使用字符串作为 <em>indent</em> 而不再仅仅是整数。</p>
+</div>
+<p>当指定时，<em>separators</em> 应当是一个 <code class="docutils literal notranslate"><span class="pre">(item_separator,</span> <span class="pre">key_separator)</span></code> 元组。当 <em>indent</em> 为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 时，默认值取 <code class="docutils literal notranslate"><span class="pre">(',</span> <span class="pre">',</span> <span class="pre">':</span> <span class="pre">')</span></code>，否则取 <code class="docutils literal notranslate"><span class="pre">(',',</span> <span class="pre">':</span> <span class="pre">')</span></code>。为了得到最紧凑的 JSON 表达式，你应该指定其为 <code class="docutils literal notranslate"><span class="pre">(',',</span> <span class="pre">':')</span></code> 以消除空白字符。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.4 版更改: </span>现当 <em>indent</em> 不是 <code class="docutils literal notranslate"><span class="pre">None</span></code> 时，采用 <code class="docutils literal notranslate"><span class="pre">(',',</span> <span class="pre">':</span> <span class="pre">')</span></code> 作为默认值。</p>
+</div>
+<p>当 <em>default</em> 被指定时，其应该是一个函数，每当某个对象无法被序列化时它会被调用。它应该返回该对象的一个可以被 JSON 编码的版本或者引发一个 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。如果没有被指定，则会直接引发 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span>All parameters are now <a class="reference internal" href="glossary.html#keyword-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#keyword-only-parameter"><span class="std std-ref">keyword-only</span></a>.</p>
+</div>
+<dl class="method">
+<dt id="json.JSONEncoder.default">
+<code class="descname">default</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONEncoder.default" title="永久链接至目标">¶</a></dt>
+<dd><p>Implement this method in a subclass such that it returns a serializable
+object for <em>o</em>, or calls the base implementation (to raise a
+<a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>).</p>
+<p>For example, to support arbitrary iterators, you could implement default
+like this:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+   <span class="k">try</span><span class="p">:</span>
+       <span class="n">iterable</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+   <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+       <span class="k">pass</span>
+   <span class="k">else</span><span class="p">:</span>
+       <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+   <span class="c1"># Let the base class default method raise the TypeError</span>
+   <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="json.JSONEncoder.encode">
+<code class="descname">encode</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONEncoder.encode" title="永久链接至目标">¶</a></dt>
+<dd><p>Return a JSON string representation of a Python data structure, <em>o</em>.  For
+example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">({</span><span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz&quot;</span><span class="p">]})</span>
+<span class="go">&#39;{&quot;foo&quot;: [&quot;bar&quot;, &quot;baz&quot;]}&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="json.JSONEncoder.iterencode">
+<code class="descname">iterencode</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONEncoder.iterencode" title="永久链接至目标">¶</a></dt>
+<dd><p>Encode the given object, <em>o</em>, and yield each string representation as
+available.  For example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">iterencode</span><span class="p">(</span><span class="n">bigobject</span><span class="p">):</span>
+    <span class="n">mysocket</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="exceptions">
+<h2>异常<a class="headerlink" href="#exceptions" title="永久链接至标题">¶</a></h2>
+<dl class="exception">
+<dt id="json.JSONDecodeError">
+<em class="property">exception </em><code class="descclassname">json.</code><code class="descname">JSONDecodeError</code><span class="sig-paren">(</span><em>msg</em>, <em>doc</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#json.JSONDecodeError" title="永久链接至目标">¶</a></dt>
+<dd><p>Subclass of <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> with the following additional attributes:</p>
+<dl class="attribute">
+<dt id="json.JSONDecodeError.msg">
+<code class="descname">msg</code><a class="headerlink" href="#json.JSONDecodeError.msg" title="永久链接至目标">¶</a></dt>
+<dd><p>未格式化的错误消息。</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="json.JSONDecodeError.doc">
+<code class="descname">doc</code><a class="headerlink" href="#json.JSONDecodeError.doc" title="永久链接至目标">¶</a></dt>
+<dd><p>The JSON document being parsed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="json.JSONDecodeError.pos">
+<code class="descname">pos</code><a class="headerlink" href="#json.JSONDecodeError.pos" title="永久链接至目标">¶</a></dt>
+<dd><p>The start index of <em>doc</em> where parsing failed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="json.JSONDecodeError.lineno">
+<code class="descname">lineno</code><a class="headerlink" href="#json.JSONDecodeError.lineno" title="永久链接至目标">¶</a></dt>
+<dd><p>The line corresponding to <em>pos</em>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="json.JSONDecodeError.colno">
+<code class="descname">colno</code><a class="headerlink" href="#json.JSONDecodeError.colno" title="永久链接至目标">¶</a></dt>
+<dd><p>The column corresponding to <em>pos</em>.</p>
+</dd></dl>
+
+<div class="versionadded">
+<p><span class="versionmodified">3.5 新版功能.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-compliance-and-interoperability">
+<h2>Standard Compliance and Interoperability<a class="headerlink" href="#standard-compliance-and-interoperability" title="永久链接至标题">¶</a></h2>
+<p>The JSON format is specified by <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc7159.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/rfc7159.html'" tppabs="https://tools.ietf.org/html/rfc7159.html"><strong>RFC 7159</strong></a> and by
+<a class="reference external" href="javascript:if(confirm('http://www.ecma-international.org/publications/standards/Ecma-404.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.ecma-international.org/publications/standards/Ecma-404.htm'" tppabs="http://www.ecma-international.org/publications/standards/Ecma-404.htm">ECMA-404</a>.
+This section details this module's level of compliance with the RFC.
+For simplicity, <a class="reference internal" href="#json.JSONEncoder" title="json.JSONEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONEncoder</span></code></a> and <a class="reference internal" href="#json.JSONDecoder" title="json.JSONDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONDecoder</span></code></a> subclasses, and
+parameters other than those explicitly mentioned, are not considered.</p>
+<p>This module does not comply with the RFC in a strict fashion, implementing some
+extensions that are valid JavaScript but not valid JSON.  In particular:</p>
+<ul class="simple">
+<li>Infinite and NaN number values are accepted and output;</li>
+<li>Repeated names within an object are accepted, and only the value of the last
+name-value pair is used.</li>
+</ul>
+<p>Since the RFC permits RFC-compliant parsers to accept input texts that are not
+RFC-compliant, this module's deserializer is technically RFC-compliant under
+default settings.</p>
+<div class="section" id="character-encodings">
+<h3>Character Encodings<a class="headerlink" href="#character-encodings" title="永久链接至标题">¶</a></h3>
+<p>The RFC requires that JSON be represented using either UTF-8, UTF-16, or
+UTF-32, with UTF-8 being the recommended default for maximum interoperability.</p>
+<p>As permitted, though not required, by the RFC, this module's serializer sets
+<em>ensure_ascii=True</em> by default, thus escaping the output so that the resulting
+strings only contain ASCII characters.</p>
+<p>Other than the <em>ensure_ascii</em> parameter, this module is defined strictly in
+terms of conversion between Python objects and
+<a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unicode</span> <span class="pre">strings</span></code></a>, and thus does not otherwise directly address
+the issue of character encodings.</p>
+<p>The RFC prohibits adding a byte order mark (BOM) to the start of a JSON text,
+and this module's serializer does not add a BOM to its output.
+The RFC permits, but does not require, JSON deserializers to ignore an initial
+BOM in their input.  This module's deserializer raises a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>
+when an initial BOM is present.</p>
+<p>The RFC does not explicitly forbid JSON strings which contain byte sequences
+that don't correspond to valid Unicode characters (e.g. unpaired UTF-16
+surrogates), but it does note that they may cause interoperability problems.
+By default, this module accepts and outputs (when present in the original
+<a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) code points for such sequences.</p>
+</div>
+<div class="section" id="infinite-and-nan-number-values">
+<h3>Infinite and NaN Number Values<a class="headerlink" href="#infinite-and-nan-number-values" title="永久链接至标题">¶</a></h3>
+<p>The RFC does not permit the representation of infinite or NaN number values.
+Despite that, by default, this module accepts and outputs <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>,
+<code class="docutils literal notranslate"><span class="pre">-Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">NaN</span></code> as if they were valid JSON number literal values:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Neither of these calls raises an exception, but the results are not valid JSON</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">))</span>
+<span class="go">&#39;-Infinity&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span>
+<span class="go">&#39;NaN&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Same when deserializing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;-Infinity&#39;</span><span class="p">)</span>
+<span class="go">-inf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;NaN&#39;</span><span class="p">)</span>
+<span class="go">nan</span>
+</pre></div>
+</div>
+<p>In the serializer, the <em>allow_nan</em> parameter can be used to alter this
+behavior.  In the deserializer, the <em>parse_constant</em> parameter can be used to
+alter this behavior.</p>
+</div>
+<div class="section" id="repeated-names-within-an-object">
+<h3>Repeated Names Within an Object<a class="headerlink" href="#repeated-names-within-an-object" title="永久链接至标题">¶</a></h3>
+<p>The RFC specifies that the names within a JSON object should be unique, but
+does not mandate how repeated names in JSON objects should be handled.  By
+default, this module does not raise an exception; instead, it ignores all but
+the last name-value pair for a given name:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">weird_json</span> <span class="o">=</span> <span class="s1">&#39;{&quot;x&quot;: 1, &quot;x&quot;: 2, &quot;x&quot;: 3}&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">weird_json</span><span class="p">)</span>
+<span class="go">{&#39;x&#39;: 3}</span>
+</pre></div>
+</div>
+<p>The <em>object_pairs_hook</em> parameter can be used to alter this behavior.</p>
+</div>
+<div class="section" id="top-level-non-object-non-array-values">
+<h3>Top-level Non-Object, Non-Array Values<a class="headerlink" href="#top-level-non-object-non-array-values" title="永久链接至标题">¶</a></h3>
+<p>The old version of JSON specified by the obsolete <span class="target" id="index-3"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4627.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/rfc4627.html'" tppabs="https://tools.ietf.org/html/rfc4627.html"><strong>RFC 4627</strong></a> required that
+the top-level value of a JSON text must be either a JSON object or array
+(Python <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> or <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>), and could not be a JSON null,
+boolean, number, or string value.  <span class="target" id="index-4"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc7159.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/rfc7159.html'" tppabs="https://tools.ietf.org/html/rfc7159.html"><strong>RFC 7159</strong></a> removed that restriction, and
+this module does not and has never implemented that restriction in either its
+serializer or its deserializer.</p>
+<p>Regardless, for maximum interoperability, you may wish to voluntarily adhere
+to the restriction yourself.</p>
+</div>
+<div class="section" id="implementation-limitations">
+<h3>Implementation Limitations<a class="headerlink" href="#implementation-limitations" title="永久链接至标题">¶</a></h3>
+<p>Some JSON deserializer implementations may set limits on:</p>
+<ul class="simple">
+<li>the size of accepted JSON texts</li>
+<li>the maximum level of nesting of JSON objects and arrays</li>
+<li>the range and precision of JSON numbers</li>
+<li>the content and maximum length of JSON strings</li>
+</ul>
+<p>This module does not impose any such limits beyond those of the relevant
+Python datatypes themselves or the Python interpreter itself.</p>
+<p>When serializing to JSON, beware any such limitations in applications that may
+consume your JSON.  In particular, it is common for JSON numbers to be
+deserialized into IEEE 754 double precision numbers and thus subject to that
+representation's range and precision limitations.  This is especially relevant
+when serializing Python <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> values of extremely large magnitude, or
+when serializing instances of &quot;exotic&quot; numerical types such as
+<a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a>.</p>
+</div>
+</div>
+<div class="section" id="module-json.tool">
+<span id="command-line-interface"></span><span id="json-commandline"></span><h2>Command Line Interface<a class="headerlink" href="#module-json.tool" title="永久链接至标题">¶</a></h2>
+<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/json/tool.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/json/tool.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/json/tool.py">Lib/json/tool.py</a></p>
+<hr class="docutils" />
+<p>The <a class="reference internal" href="#module-json.tool" title="json.tool: A command line to validate and pretty-print JSON."><code class="xref py py-mod docutils literal notranslate"><span class="pre">json.tool</span></code></a> module provides a simple command line interface to validate
+and pretty-print JSON objects.</p>
+<p>If the optional <code class="docutils literal notranslate"><span class="pre">infile</span></code> and <code class="docutils literal notranslate"><span class="pre">outfile</span></code> arguments are not
+specified, <a class="reference internal" href="sys.html#sys.stdin" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stdin" title="sys.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stdin</span></code></a> and <a class="reference internal" href="sys.html#sys.stdout" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stdout" title="sys.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stdout</span></code></a> will be used respectively:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{&quot;json&quot;: &quot;obj&quot;}&#39;</span> <span class="p">|</span> python -m json.tool
+<span class="go">{</span>
+<span class="go">    &quot;json&quot;: &quot;obj&quot;</span>
+<span class="go">}</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{1.2:3.4}&#39;</span> <span class="p">|</span> python -m json.tool
+<span class="go">Expecting property name enclosed in double quotes: line 1 column 2 (char 1)</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5 版更改: </span>The output is now in the same order as the input. Use the
+<a class="reference internal" href="#cmdoption-json-tool-sort-keys"><code class="xref std std-option docutils literal notranslate"><span class="pre">--sort-keys</span></code></a> option to sort the output of dictionaries
+alphabetically by key.</p>
+</div>
+<div class="section" id="command-line-options">
+<h3>Command line options<a class="headerlink" href="#command-line-options" title="永久链接至标题">¶</a></h3>
+<dl class="cmdoption">
+<dt id="cmdoption-json-tool-arg-infile">
+<code class="descname">infile</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-json-tool-arg-infile" title="永久链接至目标">¶</a></dt>
+<dd><p>The JSON file to be validated or pretty-printed:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m json.tool mp_films.json
+<span class="go">[</span>
+<span class="go">    {</span>
+<span class="go">        &quot;title&quot;: &quot;And Now for Something Completely Different&quot;,</span>
+<span class="go">        &quot;year&quot;: 1971</span>
+<span class="go">    },</span>
+<span class="go">    {</span>
+<span class="go">        &quot;title&quot;: &quot;Monty Python and the Holy Grail&quot;,</span>
+<span class="go">        &quot;year&quot;: 1975</span>
+<span class="go">    }</span>
+<span class="go">]</span>
+</pre></div>
+</div>
+<p>If <em>infile</em> is not specified, read from <a class="reference internal" href="sys.html#sys.stdin" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stdin" title="sys.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stdin</span></code></a>.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-json-tool-arg-outfile">
+<code class="descname">outfile</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-json-tool-arg-outfile" title="永久链接至目标">¶</a></dt>
+<dd><p>Write the output of the <em>infile</em> to the given <em>outfile</em>. Otherwise, write it
+to <a class="reference internal" href="sys.html#sys.stdout" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stdout" title="sys.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stdout</span></code></a>.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-json-tool-sort-keys">
+<code class="descname">--sort-keys</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-json-tool-sort-keys" title="永久链接至目标">¶</a></dt>
+<dd><p>Sort the output of dictionaries alphabetically by key.</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.5 新版功能.</span></p>
+</div>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-json-tool-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-json-tool-h" title="永久链接至目标">¶</a></dt>
+<dd><p>Show the help message.</p>
+</dd></dl>
+
+<p class="rubric">脚注</p>
+<table class="docutils footnote" frame="void" id="rfc-errata" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>As noted in <a class="reference external" href="javascript:if(confirm('https://www.rfc-editor.org/errata_search.php?rfc=7159  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.rfc-editor.org/errata_search.php?rfc=7159'" tppabs="https://www.rfc-editor.org/errata_search.php?rfc=7159">the errata for RFC 7159</a>,
+JSON permits literal U+2028 (LINE SEPARATOR) and
+U+2029 (PARAGRAPH SEPARATOR) characters in strings, whereas JavaScript
+(as of ECMAScript Edition 5.1) does not.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">json</span></code> --- JSON 编码和解码器</a><ul>
+<li><a class="reference internal" href="#basic-usage">基本使用</a></li>
+<li><a class="reference internal" href="#encoders-and-decoders">Encoders and Decoders</a></li>
+<li><a class="reference internal" href="#exceptions">异常</a></li>
+<li><a class="reference internal" href="#standard-compliance-and-interoperability">Standard Compliance and Interoperability</a><ul>
+<li><a class="reference internal" href="#character-encodings">Character Encodings</a></li>
+<li><a class="reference internal" href="#infinite-and-nan-number-values">Infinite and NaN Number Values</a></li>
+<li><a class="reference internal" href="#repeated-names-within-an-object">Repeated Names Within an Object</a></li>
+<li><a class="reference internal" href="#top-level-non-object-non-array-values">Top-level Non-Object, Non-Array Values</a></li>
+<li><a class="reference internal" href="#implementation-limitations">Implementation Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-json.tool">Command Line Interface</a><ul>
+<li><a class="reference internal" href="#command-line-options">Command line options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="email.iterators.html" tppabs="https://docs.python.org/zh-cn/3/library/email.iterators.html"
+                        title="上一章"><code class="docutils literal notranslate"><span class="pre">email.iterators</span></code>: Iterators</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="mailcap.html" tppabs="https://docs.python.org/zh-cn/3/library/mailcap.html"
+                        title="下一章"><code class="docutils literal notranslate"><span class="pre">mailcap</span></code> --- Mailcap file handling</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/json.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/json.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/json.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="mailcap.html" tppabs="https://docs.python.org/zh-cn/3/library/mailcap.html" title="mailcap --- Mailcap file handling"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="email.iterators.html" tppabs="https://docs.python.org/zh-cn/3/library/email.iterators.html" title="email.iterators: Iterators"
+             >上一页</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >互联网数据处理</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 4月 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

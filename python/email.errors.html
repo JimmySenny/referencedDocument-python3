@@ -1,0 +1,282 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>email.errors: å¼‚å¸¸å’Œç¼ºé™·ç±» &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
+    <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
+    <link rel="search" title="æœç´¢" href="../search.html" />
+    <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
+    <link rel="next" title="email.headerregistry: Custom Header Objects" href="email.headerregistry.html" />
+    <link rel="prev" title="email.policy: Policy Objects" href="email.policy.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/email.errors.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             accesskey="I">ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="email.headerregistry.html" tppabs="https://docs.python.org/zh-cn/3/library/email.headerregistry.html" title="email.headerregistry: Custom Header Objects"
+             accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="email.policy.html" tppabs="https://docs.python.org/zh-cn/3/library/email.policy.html" title="email.policy: Policy Objects"
+             accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-email.errors">
+<span id="email-errors-exception-and-defect-classes"></span><h1><a class="reference internal" href="#module-email.errors" title="email.errors: The exception classes used by the email package."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.errors</span></code></a>: å¼‚å¸¸å’Œç¼ºé™·ç±»<a class="headerlink" href="#module-email.errors" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/email/errors.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/email/errors.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/email/errors.py">Lib/email/errors.py</a></p>
+<hr class="docutils" />
+<p>ä»¥ä¸‹å¼‚å¸¸ç±»åœ¨ <a class="reference internal" href="#module-email.errors" title="email.errors: The exception classes used by the email package."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.errors</span></code></a> æ¨¡å—ä¸­å®šä¹‰ï¼š</p>
+<dl class="exception">
+<dt id="email.errors.MessageError">
+<em class="property">exception </em><code class="descclassname">email.errors.</code><code class="descname">MessageError</code><a class="headerlink" href="#email.errors.MessageError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿™æ˜¯ <a class="reference internal" href="email.html#module-email" tppabs="https://docs.python.org/zh-cn/3/library/email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code></a> åŒ…å¯ä»¥å¼•å‘çš„æ‰€æœ‰å¼‚å¸¸çš„åŸºç±»ã€‚ å®ƒæºè‡ªæ ‡å‡†å¼‚å¸¸ <a class="reference internal" href="exceptions.html#Exception" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#Exception" title="Exception"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Exception</span></code></a> ç±»ï¼Œè¿™ä¸ªç±»æ²¡æœ‰å®šä¹‰å…¶ä»–æ–¹æ³•ã€‚</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="email.errors.MessageParseError">
+<em class="property">exception </em><code class="descclassname">email.errors.</code><code class="descname">MessageParseError</code><a class="headerlink" href="#email.errors.MessageParseError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿™æ˜¯ç”± <a class="reference internal" href="email.parser.html#email.parser.Parser" tppabs="https://docs.python.org/zh-cn/3/library/email.parser.html#email.parser.Parser" title="email.parser.Parser"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parser</span></code></a> ç±»å¼•å‘çš„å¼‚å¸¸çš„åŸºç±»ã€‚å®ƒæ´¾ç”Ÿè‡ª <a class="reference internal" href="#email.errors.MessageError" title="email.errors.MessageError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MessageError</span></code></a>ã€‚ <a class="reference internal" href="email.headerregistry.html#module-email.headerregistry" tppabs="https://docs.python.org/zh-cn/3/library/email.headerregistry.html#module-email.headerregistry" title="email.headerregistry: Automatic Parsing of headers based on the field name"><code class="xref py py-mod docutils literal notranslate"><span class="pre">headerregistry</span></code></a> ä½¿ç”¨çš„è§£æå™¨ä¹Ÿåœ¨å†…éƒ¨ä½¿ç”¨è¿™ä¸ªç±»ã€‚</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="email.errors.HeaderParseError">
+<em class="property">exception </em><code class="descclassname">email.errors.</code><code class="descname">HeaderParseError</code><a class="headerlink" href="#email.errors.HeaderParseError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>åœ¨è§£ææ¶ˆæ¯çš„ <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc5322.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc5322.html'" tppabs="https://tools.ietf.org/html/rfc5322.html"><strong>RFC 5322</strong></a> æ ‡å¤´æ—¶ï¼ŒæŸäº›é”™è¯¯æ¡ä»¶ä¸‹ä¼šè§¦å‘ï¼Œæ­¤ç±»æ´¾ç”Ÿè‡ª <a class="reference internal" href="#email.errors.MessageParseError" title="email.errors.MessageParseError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MessageParseError</span></code></a>ã€‚ å¦‚æœåœ¨è°ƒç”¨æ–¹æ³•æ—¶å†…å®¹ç±»å‹æœªçŸ¥ï¼Œåˆ™ <a class="reference internal" href="email.message.html#email.message.EmailMessage.set_boundary" tppabs="https://docs.python.org/zh-cn/3/library/email.message.html#email.message.EmailMessage.set_boundary" title="email.message.EmailMessage.set_boundary"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_boundary()</span></code></a> æ–¹æ³•å°†å¼•å‘æ­¤é”™è¯¯ã€‚ å½“å°è¯•åˆ›å»ºä¸€ä¸ªçœ‹èµ·æ¥åŒ…å«åµŒå…¥å¼æ ‡å¤´çš„æ ‡å¤´æ—¶ <a class="reference internal" href="email.header.html#email.header.Header" tppabs="https://docs.python.org/zh-cn/3/library/email.header.html#email.header.Header" title="email.header.Header"><code class="xref py py-class docutils literal notranslate"><span class="pre">Header</span></code></a> å¯èƒ½ä¼šé’ˆå¯¹æŸäº› base64 è§£ç é”™è¯¯å¼•å‘æ­¤é”™è¯¯ï¼ˆä¹Ÿå°±æ˜¯è¯´ï¼Œåº”è¯¥æ˜¯ä¸€ä¸ª æ²¡æœ‰å‰å¯¼ç©ºæ ¼å¹¶ä¸”çœ‹èµ·æ¥åƒæ ‡é¢˜çš„å»¶ç»­è¡Œï¼‰ã€‚</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="email.errors.BoundaryError">
+<em class="property">exception </em><code class="descclassname">email.errors.</code><code class="descname">BoundaryError</code><a class="headerlink" href="#email.errors.BoundaryError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å·²å¼ƒç”¨å’Œä¸å†ä½¿ç”¨çš„ã€‚</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="email.errors.MultipartConversionError">
+<em class="property">exception </em><code class="descclassname">email.errors.</code><code class="descname">MultipartConversionError</code><a class="headerlink" href="#email.errors.MultipartConversionError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å½“ä½¿ç”¨ <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_payload()</span></code> å°†æœ‰æ•ˆè´Ÿè½½æ·»åŠ åˆ° <a class="reference internal" href="email.compat32-message.html#email.message.Message" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message" title="email.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> å¯¹è±¡æ—¶ï¼Œæœ‰æ•ˆè´Ÿè½½å·²ç»æ˜¯ä¸€ä¸ªæ ‡é‡ï¼Œè€Œæ¶ˆæ¯çš„ <em class="mailheader">Content-Type</em> ä¸»ç±»å‹ä¸æ˜¯ <em class="mimetype">multipart</em> æˆ–è€…ç¼ºå°‘æ—¶è§¦å‘è¯¥å¼‚å¸¸ã€‚ <a class="reference internal" href="#email.errors.MultipartConversionError" title="email.errors.MultipartConversionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultipartConversionError</span></code></a> å¤šé‡ç»§æ‰¿è‡ª <a class="reference internal" href="#email.errors.MessageError" title="email.errors.MessageError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MessageError</span></code></a> å’Œå†…ç½®çš„ <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>ã€‚</p>
+<p>Since <code class="xref py py-meth docutils literal notranslate"><span class="pre">Message.add_payload()</span></code> is deprecated, this exception is rarely
+raised in practice.  However the exception may also be raised if the
+<a class="reference internal" href="email.compat32-message.html#email.message.Message.attach" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message.attach" title="email.message.Message.attach"><code class="xref py py-meth docutils literal notranslate"><span class="pre">attach()</span></code></a>
+method is called on an instance of a class derived from
+<a class="reference internal" href="email.mime.html#email.mime.nonmultipart.MIMENonMultipart" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.nonmultipart.MIMENonMultipart" title="email.mime.nonmultipart.MIMENonMultipart"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMENonMultipart</span></code></a> (e.g.
+<a class="reference internal" href="email.mime.html#email.mime.image.MIMEImage" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.image.MIMEImage" title="email.mime.image.MIMEImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEImage</span></code></a>).</p>
+</dd></dl>
+
+<p>Here is the list of the defects that the <a class="reference internal" href="email.parser.html#email.parser.FeedParser" tppabs="https://docs.python.org/zh-cn/3/library/email.parser.html#email.parser.FeedParser" title="email.parser.FeedParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeedParser</span></code></a>
+can find while parsing messages.  Note that the defects are added to the message
+where the problem was found, so for example, if a message nested inside a
+<em class="mimetype">multipart/alternative</em> had a malformed header, that nested message
+object would have a defect, but the containing messages would not.</p>
+<p>All defect classes are subclassed from <code class="xref py py-class docutils literal notranslate"><span class="pre">email.errors.MessageDefect</span></code>.</p>
+<ul>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoBoundaryInMultipartDefect</span></code> -- A message claimed to be a multipart,
+but had no <em class="mimetype">boundary</em> parameter.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">StartBoundaryNotFoundDefect</span></code> -- The start boundary claimed in the
+<em class="mailheader">Content-Type</em> header was never found.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">CloseBoundaryNotFoundDefect</span></code> -- A start boundary was found, but
+no corresponding close boundary was ever found.</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+</div>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">FirstHeaderLineIsContinuationDefect</span></code> -- The message had a continuation
+line as its first header line.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">MisplacedEnvelopeHeaderDefect</span></code> - A &quot;Unix From&quot; header was found in the
+middle of a header block.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">MissingHeaderBodySeparatorDefect</span></code> - A line was found while parsing
+headers that had no leading white space but contained no ':'.  Parsing
+continues assuming that the line represents the first line of the body.</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+</div>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">MalformedHeaderDefect</span></code> -- A header was found that was missing a colon,
+or was otherwise malformed.</p>
+<div class="deprecated">
+<p><span class="versionmodified">3.3 ç‰ˆåå·²ç§»é™¤: </span>This defect has not been used for several Python versions.</p>
+</div>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipartInvariantViolationDefect</span></code> -- A message claimed to be a
+<em class="mimetype">multipart</em>, but no subparts were found.  Note that when a message
+has this defect, its <a class="reference internal" href="email.compat32-message.html#email.message.Message.is_multipart" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message.is_multipart" title="email.message.Message.is_multipart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">is_multipart()</span></code></a> method may
+return false even though its content type claims to be <em class="mimetype">multipart</em>.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">InvalidBase64PaddingDefect</span></code> -- When decoding a block of base64
+encoded bytes, the padding was not correct.  Enough padding is added to
+perform the decode, but the resulting decoded bytes may be invalid.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">InvalidBase64CharactersDefect</span></code> -- When decoding a block of base64
+encoded bytes, characters outside the base64 alphabet were encountered.
+The characters are ignored, but the resulting decoded bytes may be invalid.</p>
+</li>
+<li><p class="first"><code class="xref py py-class docutils literal notranslate"><span class="pre">InvalidBase64LengthDefect</span></code> -- When decoding a block of base64 encoded
+bytes, the number of non-padding base64 characters was invalid (1 more than
+a multiple of 4).  The encoded block was kept as-is.</p>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="email.policy.html" tppabs="https://docs.python.org/zh-cn/3/library/email.policy.html"
+                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.policy</span></code>: Policy Objects</a></p>
+  <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="email.headerregistry.html" tppabs="https://docs.python.org/zh-cn/3/library/email.headerregistry.html"
+                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.headerregistry</span></code>: Custom Header Objects</a></p>
+  <div role="note" aria-label="source link">
+    <h3>æœ¬é¡µ</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/email.errors.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/email.errors.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/email.errors.rst"
+            rel="nofollow">æ˜¾ç¤ºæºä»£ç 
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             >ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="email.headerregistry.html" tppabs="https://docs.python.org/zh-cn/3/library/email.headerregistry.html" title="email.headerregistry: Custom Header Objects"
+             >ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="email.policy.html" tppabs="https://docs.python.org/zh-cn/3/library/email.policy.html" title="email.policy: Policy Objects"
+             >ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+    <br />
+    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+    <br />
+    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+    </div>
+
+  </body>
+</html>

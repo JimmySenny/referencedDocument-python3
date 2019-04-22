@@ -1,0 +1,220 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>åŠ å¯†æœåŠ¡ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
+    <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
+    <link rel="search" title="æœç´¢" href="../search.html" />
+    <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
+    <link rel="next" title="hashlib --- å®‰å…¨å“ˆå¸Œä¸æ¶ˆæ¯æ‘˜è¦" href="hashlib.html" />
+    <link rel="prev" title="plistlib --- Generate and parse Mac OS X .plist files" href="plistlib.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/crypto.html" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+    
+    
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             accesskey="I">ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="hashlib.html" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html" title="hashlib --- å®‰å…¨å“ˆå¸Œä¸æ¶ˆæ¯æ‘˜è¦"
+             accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="plistlib.html" tppabs="https://docs.python.org/zh-cn/3/library/plistlib.html" title="plistlib --- Generate and parse Mac OS X .plist files"
+             accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" accesskey="U">Python æ ‡å‡†åº“</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cryptographic-services">
+<span id="crypto"></span><h1>åŠ å¯†æœåŠ¡<a class="headerlink" href="#cryptographic-services" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p id="index-0">æœ¬ç« ä¸­æè¿°çš„æ¨¡å—å®ç°äº†åŠ å¯†æ€§è´¨çš„å„ç§ç®—æ³•ã€‚ å®ƒä»¬å¯ç”±å®‰è£…äººå‘˜è‡ªè¡Œå†³å®šã€‚ åœ¨Unixç³»ç»Ÿä¸Šï¼Œ<a class="reference internal" href="crypt.html#module-crypt" tppabs="https://docs.python.org/zh-cn/3/library/crypt.html#module-crypt" title="crypt: The crypt() function used to check Unix passwords. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> æ¨¡å—ä¹Ÿå¯ä»¥ä½¿ç”¨ã€‚ è¿™æ˜¯ä¸€ä¸ªæ¦‚è¿°ï¼š</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hashlib.html" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html"><code class="docutils literal notranslate"><span class="pre">hashlib</span></code> --- å®‰å…¨å“ˆå¸Œä¸æ¶ˆæ¯æ‘˜è¦</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hashlib.html#hash-algorithms" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#hash-algorithms">å“ˆå¸Œç®—æ³•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hashlib.html#shake-variable-length-digests" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#shake-variable-length-digests">SHAKE variable length digests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hashlib.html#key-derivation" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#key-derivation">Key derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hashlib.html#blake2" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#blake2">BLAKE2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hashlib.html#creating-hash-objects" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#creating-hash-objects">Creating hash objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hashlib.html#constants" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#constants">å¸¸æ•°</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hashlib.html#examples" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#examples">ç¤ºä¾‹</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hashlib.html#simple-hashing" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#simple-hashing">Simple hashing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hashlib.html#using-different-digest-sizes" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#using-different-digest-sizes">Using different digest sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hashlib.html#keyed-hashing" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#keyed-hashing">Keyed hashing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hashlib.html#randomized-hashing" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#randomized-hashing">Randomized hashing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hashlib.html#personalization" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#personalization">Personalization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hashlib.html#tree-mode" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#tree-mode">Tree mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hashlib.html#credits" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html#credits">Credits</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hmac.html" tppabs="https://docs.python.org/zh-cn/3/library/hmac.html"><code class="docutils literal notranslate"><span class="pre">hmac</span></code> --- åŸºäºå¯†é’¥çš„æ¶ˆæ¯éªŒè¯</a></li>
+<li class="toctree-l1"><a class="reference internal" href="secrets.html" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html"><code class="docutils literal notranslate"><span class="pre">secrets</span></code> --- Generate secure random numbers for managing secrets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html#random-numbers" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#random-numbers">Random numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html#generating-tokens" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#generating-tokens">Generating tokens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="secrets.html#how-many-bytes-should-tokens-use" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#how-many-bytes-should-tokens-use">How many bytes should tokens use?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html#other-functions" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#other-functions">å…¶ä»–åŠŸèƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html#recipes-and-best-practices" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#recipes-and-best-practices">Recipes and best practices</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="plistlib.html" tppabs="https://docs.python.org/zh-cn/3/library/plistlib.html"
+                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">plistlib</span></code> --- Generate and parse Mac OS X <code class="docutils literal notranslate"><span class="pre">.plist</span></code> files</a></p>
+  <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
+  <p class="topless"><a href="hashlib.html" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html"
+                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">hashlib</span></code> --- å®‰å…¨å“ˆå¸Œä¸æ¶ˆæ¯æ‘˜è¦</a></p>
+  <div role="note" aria-label="source link">
+    <h3>æœ¬é¡µ</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/crypto.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/crypto.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/crypto.rst"
+            rel="nofollow">æ˜¾ç¤ºæºä»£ç 
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>å¯¼èˆª</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="æ€»ç›®å½•"
+             >ç´¢å¼•</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
+             >æ¨¡å—</a> |</li>
+        <li class="right" >
+          <a href="hashlib.html" tppabs="https://docs.python.org/zh-cn/3/library/hashlib.html" title="hashlib --- å®‰å…¨å“ˆå¸Œä¸æ¶ˆæ¯æ‘˜è¦"
+             >ä¸‹ä¸€é¡µ</a> |</li>
+        <li class="right" >
+          <a href="plistlib.html" tppabs="https://docs.python.org/zh-cn/3/library/plistlib.html" title="plistlib --- Generate and parse Mac OS X .plist files"
+             >ä¸Šä¸€é¡µ</a> |</li>
+        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.7.3</span>
+          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="å¿«é€Ÿæœç´¢" type="text" name="q" />
+          <input type="submit" value="è½¬å‘" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
+    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+    <br />
+    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
+    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+    <br />
+    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+    </div>
+
+  </body>
+</html>
