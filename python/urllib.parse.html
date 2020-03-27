@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>urllib.parse --- Parse URLs into components &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>urllib.parse --- Parse URLs into components &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="urllib.error --- Exception classes raised by urllib.request" href="urllib.error.html" />
+    <link rel="next" title="urllib.error --- urllib.request å¼•å‘çš„å¼‚å¸¸ç±»" href="urllib.error.html" />
     <link rel="prev" title="urllib.request --- ç”¨äºæ‰“å¼€ URL çš„å¯æ‰©å±•åº“" href="urllib.request.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/urllib.parse.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="urllib.error.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.error.html" title="urllib.error --- Exception classes raised by urllib.request"
+          <a href="urllib.error.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.error.html" title="urllib.error --- urllib.request å¼•å‘çš„å¼‚å¸¸ç±»"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="urllib.request.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.request.html" title="urllib.request --- ç”¨äºæ‰“å¼€ URL çš„å¯æ‰©å±•åº“"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="internet.html" tppabs="https://docs.python.org/zh-cn/3/library/internet.html" accesskey="U">äº’è”ç½‘åè®®å’Œæ”¯æŒ</a> &#187;</li>
@@ -97,7 +105,7 @@
             
   <div class="section" id="module-urllib.parse">
 <span id="urllib-parse-parse-urls-into-components"></span><h1><a class="reference internal" href="#module-urllib.parse" title="urllib.parse: Parse URLs into or assemble them from components."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.parse</span></code></a> --- Parse URLs into components<a class="headerlink" href="#module-urllib.parse" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/urllib/parse.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/urllib/parse.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/urllib/parse.py">Lib/urllib/parse.py</a></p>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/urllib/issue3530  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/urllib/issue3530'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/urllib/parse.py">Lib/urllib/parse.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>This module defines a standard interface to break Uniform Resource Locator (URL)
 strings up in components (addressing scheme, network location, path etc.), to
@@ -113,12 +121,12 @@ Resource Locators. It supports the following URL schemes: <code class="docutils 
 categories: URL parsing and URL quoting. These are covered in detail in
 the following sections.</p>
 <div class="section" id="url-parsing">
-<h2>URL Parsing<a class="headerlink" href="#url-parsing" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>URL è§£æ<a class="headerlink" href="#url-parsing" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>The URL parsing functions focus on splitting a URL string into its components,
 or on combining URL components into a URL string.</p>
 <dl class="function">
 <dt id="urllib.parse.urlparse">
-<code class="descclassname">urllib.parse.</code><code class="descname">urlparse</code><span class="sig-paren">(</span><em>urlstring</em>, <em>scheme=''</em>, <em>allow_fragments=True</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlparse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urlparse</code><span class="sig-paren">(</span><em class="sig-param">urlstring</em>, <em class="sig-param">scheme=''</em>, <em class="sig-param">allow_fragments=True</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlparse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Parse a URL into six components, returning a 6-item <a class="reference internal" href="glossary.html#term-named-tuple" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a>.  This
 corresponds to the general structure of a URL:
 <code class="docutils literal notranslate"><span class="pre">scheme://netloc/path;parameters?query#fragment</span></code>.
@@ -127,9 +135,9 @@ smaller parts (for example, the network location is a single string), and %
 escapes are not expanded. The delimiters as shown above are not part of the
 result, except for a leading slash in the <em>path</em> component, which is retained if
 present.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">o</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="s1">&#39;http://www.cwi.nl:80/</span><span class="si">%7E</span><span class="s1">guido/Python.html&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">o</span>   <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">o</span>   
 <span class="go">ParseResult(scheme=&#39;http&#39;, netloc=&#39;www.cwi.nl:80&#39;, path=&#39;/%7Eguido/Python.html&#39;,</span>
 <span class="go">            params=&#39;&#39;, query=&#39;&#39;, fragment=&#39;&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">o</span><span class="o">.</span><span class="n">scheme</span>
@@ -144,7 +152,7 @@ present.  For example:</p>
 a netloc only if it is properly introduced by '//'.  Otherwise the
 input is presumed to be a relative URL and thus to start with
 a path component.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go"> &gt;&gt;&gt; from urllib.parse import urlparse</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="go"> &gt;&gt;&gt; from urllib.parse import urlparse</span>
 <span class="go"> &gt;&gt;&gt; urlparse(&#39;//www.cwi.nl:80/%7Eguido/Python.html&#39;)</span>
 <span class="go"> ParseResult(scheme=&#39;&#39;, netloc=&#39;www.cwi.nl:80&#39;, path=&#39;/%7Eguido/Python.html&#39;,</span>
 <span class="go">            params=&#39;&#39;, query=&#39;&#39;, fragment=&#39;&#39;)</span>
@@ -166,78 +174,76 @@ or query component, and <code class="xref py py-attr docutils literal notranslat
 the return value.</p>
 <p>The return value is a <a class="reference internal" href="glossary.html#term-named-tuple" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a>, which means that its items can
 be accessed by index or as named attributes, which are:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="10%" />
-<col width="36%" />
-<col width="30%" />
+<col style="width: 25%" />
+<col style="width: 10%" />
+<col style="width: 36%" />
+<col style="width: 30%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">å±æ€§</th>
-<th class="head">ç´¢å¼•</th>
-<th class="head">å€¼</th>
-<th class="head">Value if not present</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>å±æ€§</p></th>
+<th class="head"><p>ç´¢å¼•</p></th>
+<th class="head"><p>å€¼</p></th>
+<th class="head"><p>å€¼ï¼ˆå¦‚æœä¸å­˜åœ¨ï¼‰</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">scheme</span></code></td>
-<td>0</td>
-<td>URL scheme specifier</td>
-<td><em>scheme</em> parameter</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">scheme</span></code></p></td>
+<td><p>0</p></td>
+<td><p>URLæ–¹æ¡ˆè¯´æ˜ç¬¦</p></td>
+<td><p><em>scheme</em> parameter</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code></td>
-<td>1</td>
-<td>Network location part</td>
-<td>empty string</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code></p></td>
+<td><p>1</p></td>
+<td><p>ç½‘ç»œä½ç½®éƒ¨åˆ†</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">path</span></code></td>
-<td>2</td>
-<td>Hierarchical path</td>
-<td>empty string</td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">path</span></code></p></td>
+<td><p>2</p></td>
+<td><p>åˆ†å±‚è·¯å¾„</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></td>
-<td>3</td>
-<td>Parameters for last path
-element</td>
-<td>empty string</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></p></td>
+<td><p>3</p></td>
+<td><p>æœ€åè·¯å¾„å…ƒç´ çš„å‚æ•°</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">query</span></code></td>
-<td>4</td>
-<td>Query component</td>
-<td>empty string</td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">query</span></code></p></td>
+<td><p>4</p></td>
+<td><p>æŸ¥è¯¢ç»„ä»¶</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">fragment</span></code></td>
-<td>5</td>
-<td>Fragment identifier</td>
-<td>empty string</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">fragment</span></code></p></td>
+<td><p>5</p></td>
+<td><p>ç‰‡æ®µè¯†åˆ«</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">username</span></code></td>
-<td>&#160;</td>
-<td>User name</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">username</span></code></p></td>
+<td></td>
+<td><p>ç”¨æˆ·å</p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">password</span></code></td>
-<td>&#160;</td>
-<td>Password</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">password</span></code></p></td>
+<td></td>
+<td><p>å¯†ç </p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">hostname</span></code></td>
-<td>&#160;</td>
-<td>Host name (lower case)</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">hostname</span></code></p></td>
+<td></td>
+<td><p>ä¸»æœºåï¼ˆå°å†™ï¼‰</p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">port</span></code></td>
-<td>&#160;</td>
-<td>Port number as integer,
-if present</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">port</span></code></p></td>
+<td></td>
+<td><p>ç«¯å£å·ä¸ºæ•´æ•°ï¼ˆå¦‚æœå­˜åœ¨ï¼‰</p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
 </tbody>
 </table>
 <p>Reading the <code class="xref py py-attr docutils literal notranslate"><span class="pre">port</span></code> attribute will raise a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if
 an invalid port is specified in the URL.  See section
-<a class="reference internal" href="#urlparse-result-object"><span class="std std-ref">Structured Parse Results</span></a> for more information on the result object.</p>
+<a class="reference internal" href="#urlparse-result-object"><span class="std std-ref">ç»“æ„åŒ–è§£æç»“æœ</span></a> for more information on the result object.</p>
 <p>Unmatched square brackets in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code> attribute will raise a
 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
 <p>Characters in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code> attribute that decompose under NFKC
@@ -248,7 +254,7 @@ decomposed before parsing, no error will be raised.</p>
 and attributes that are particularly useful. One such method is <code class="xref py py-meth docutils literal notranslate"><span class="pre">_replace()</span></code>.
 The <code class="xref py py-meth docutils literal notranslate"><span class="pre">_replace()</span></code> method will return a new ParseResult object replacing specified
 fields with new values.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go"> &gt;&gt;&gt; from urllib.parse import urlparse</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="go"> &gt;&gt;&gt; from urllib.parse import urlparse</span>
 <span class="go"> &gt;&gt;&gt; u = urlparse(&#39;//www.cwi.nl:80/%7Eguido/Python.html&#39;)</span>
 <span class="go"> &gt;&gt;&gt; u</span>
 <span class="go"> ParseResult(scheme=&#39;&#39;, netloc=&#39;www.cwi.nl:80&#39;, path=&#39;/%7Eguido/Python.html&#39;,</span>
@@ -259,26 +265,26 @@ fields with new values.</p>
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Added IPv6 URL parsing capabilities.</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>æ·»åŠ äº†IPv6 URLè§£æåŠŸèƒ½ã€‚</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.3 ç‰ˆæ›´æ”¹: </span>The fragment is now parsed for all URL schemes (unless <em>allow_fragment</em> is
+<p><span class="versionmodified changed">åœ¨ 3.3 ç‰ˆæ›´æ”¹: </span>The fragment is now parsed for all URL schemes (unless <em>allow_fragment</em> is
 false), in accordance with <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a>.  Previously, a whitelist of
 schemes that support fragments existed.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.6 ç‰ˆæ›´æ”¹: </span>Out-of-range port numbers now raise <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>, instead of
+<p><span class="versionmodified changed">åœ¨ 3.6 ç‰ˆæ›´æ”¹: </span>Out-of-range port numbers now raise <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>, instead of
 returning <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.7.3 ç‰ˆæ›´æ”¹: </span>Characters that affect netloc parsing under NFKC normalization will
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>Characters that affect netloc parsing under NFKC normalization will
 now raise <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="urllib.parse.parse_qs">
-<code class="descclassname">urllib.parse.</code><code class="descname">parse_qs</code><span class="sig-paren">(</span><em>qs</em>, <em>keep_blank_values=False</em>, <em>strict_parsing=False</em>, <em>encoding='utf-8'</em>, <em>errors='replace'</em>, <em>max_num_fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.parse_qs" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">parse_qs</code><span class="sig-paren">(</span><em class="sig-param">qs</em>, <em class="sig-param">keep_blank_values=False</em>, <em class="sig-param">strict_parsing=False</em>, <em class="sig-param">encoding='utf-8'</em>, <em class="sig-param">errors='replace'</em>, <em class="sig-param">max_num_fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.parse_qs" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Parse a query string given as a string argument (data of type
 <em class="mimetype">application/x-www-form-urlencoded</em>).  Data are returned as a
 dictionary.  The dictionary keys are the unique query variable names and the
@@ -301,16 +307,16 @@ read. If set, then throws a <a class="reference internal" href="exceptions.html#
 parameter set to <code class="docutils literal notranslate"><span class="pre">True</span></code>) to convert such dictionaries into query
 strings.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Add <em>encoding</em> and <em>errors</em> parameters.</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Add <em>encoding</em> and <em>errors</em> parameters.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.7.2 ç‰ˆæ›´æ”¹: </span>Added <em>max_num_fields</em> parameter.</p>
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>Added <em>max_num_fields</em> parameter.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="urllib.parse.parse_qsl">
-<code class="descclassname">urllib.parse.</code><code class="descname">parse_qsl</code><span class="sig-paren">(</span><em>qs</em>, <em>keep_blank_values=False</em>, <em>strict_parsing=False</em>, <em>encoding='utf-8'</em>, <em>errors='replace'</em>, <em>max_num_fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.parse_qsl" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">parse_qsl</code><span class="sig-paren">(</span><em class="sig-param">qs</em>, <em class="sig-param">keep_blank_values=False</em>, <em class="sig-param">strict_parsing=False</em>, <em class="sig-param">encoding='utf-8'</em>, <em class="sig-param">errors='replace'</em>, <em class="sig-param">max_num_fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.parse_qsl" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Parse a query string given as a string argument (data of type
 <em class="mimetype">application/x-www-form-urlencoded</em>).  Data are returned as a list of
 name, value pairs.</p>
@@ -331,16 +337,16 @@ read. If set, then throws a <a class="reference internal" href="exceptions.html#
 <p>Use the <a class="reference internal" href="#urllib.parse.urlencode" title="urllib.parse.urlencode"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.parse.urlencode()</span></code></a> function to convert such lists of pairs into
 query strings.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Add <em>encoding</em> and <em>errors</em> parameters.</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Add <em>encoding</em> and <em>errors</em> parameters.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.7.2 ç‰ˆæ›´æ”¹: </span>Added <em>max_num_fields</em> parameter.</p>
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>Added <em>max_num_fields</em> parameter.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="urllib.parse.urlunparse">
-<code class="descclassname">urllib.parse.</code><code class="descname">urlunparse</code><span class="sig-paren">(</span><em>parts</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlunparse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urlunparse</code><span class="sig-paren">(</span><em class="sig-param">parts</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlunparse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Construct a URL from a tuple as returned by <code class="docutils literal notranslate"><span class="pre">urlparse()</span></code>. The <em>parts</em>
 argument can be any six-item iterable. This may result in a slightly
 different, but equivalent URL, if the URL that was parsed originally had
@@ -350,7 +356,7 @@ states that these are equivalent).</p>
 
 <dl class="function">
 <dt id="urllib.parse.urlsplit">
-<code class="descclassname">urllib.parse.</code><code class="descname">urlsplit</code><span class="sig-paren">(</span><em>urlstring</em>, <em>scheme=''</em>, <em>allow_fragments=True</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlsplit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urlsplit</code><span class="sig-paren">(</span><em class="sig-param">urlstring</em>, <em class="sig-param">scheme=''</em>, <em class="sig-param">allow_fragments=True</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlsplit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>This is similar to <a class="reference internal" href="#urllib.parse.urlparse" title="urllib.parse.urlparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlparse()</span></code></a>, but does not split the params from the URL.
 This should generally be used instead of <a class="reference internal" href="#urllib.parse.urlparse" title="urllib.parse.urlparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlparse()</span></code></a> if the more recent URL
 syntax allowing parameters to be applied to each segment of the <em>path</em> portion
@@ -362,72 +368,71 @@ separate the path segments and parameters.  This function returns a 5-item
 </div>
 <p>The return value is a <a class="reference internal" href="glossary.html#term-named-tuple" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a>, its items can be accessed by index
 or as named attributes:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="10%" />
-<col width="35%" />
-<col width="31%" />
+<col style="width: 25%" />
+<col style="width: 10%" />
+<col style="width: 35%" />
+<col style="width: 31%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">å±æ€§</th>
-<th class="head">ç´¢å¼•</th>
-<th class="head">å€¼</th>
-<th class="head">Value if not present</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>å±æ€§</p></th>
+<th class="head"><p>ç´¢å¼•</p></th>
+<th class="head"><p>å€¼</p></th>
+<th class="head"><p>å€¼ï¼ˆå¦‚æœä¸å­˜åœ¨ï¼‰</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">scheme</span></code></td>
-<td>0</td>
-<td>URL scheme specifier</td>
-<td><em>scheme</em> parameter</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">scheme</span></code></p></td>
+<td><p>0</p></td>
+<td><p>URLæ–¹æ¡ˆè¯´æ˜ç¬¦</p></td>
+<td><p><em>scheme</em> parameter</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code></td>
-<td>1</td>
-<td>Network location part</td>
-<td>empty string</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code></p></td>
+<td><p>1</p></td>
+<td><p>ç½‘ç»œä½ç½®éƒ¨åˆ†</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">path</span></code></td>
-<td>2</td>
-<td>Hierarchical path</td>
-<td>empty string</td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">path</span></code></p></td>
+<td><p>2</p></td>
+<td><p>åˆ†å±‚è·¯å¾„</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">query</span></code></td>
-<td>3</td>
-<td>Query component</td>
-<td>empty string</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">query</span></code></p></td>
+<td><p>3</p></td>
+<td><p>æŸ¥è¯¢ç»„ä»¶</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">fragment</span></code></td>
-<td>4</td>
-<td>Fragment identifier</td>
-<td>empty string</td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">fragment</span></code></p></td>
+<td><p>4</p></td>
+<td><p>ç‰‡æ®µè¯†åˆ«</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">username</span></code></td>
-<td>&#160;</td>
-<td>User name</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">username</span></code></p></td>
+<td></td>
+<td><p>ç”¨æˆ·å</p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">password</span></code></td>
-<td>&#160;</td>
-<td>Password</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">password</span></code></p></td>
+<td></td>
+<td><p>å¯†ç </p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">hostname</span></code></td>
-<td>&#160;</td>
-<td>Host name (lower case)</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">hostname</span></code></p></td>
+<td></td>
+<td><p>ä¸»æœºåï¼ˆå°å†™ï¼‰</p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">port</span></code></td>
-<td>&#160;</td>
-<td>Port number as integer,
-if present</td>
-<td><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">port</span></code></p></td>
+<td></td>
+<td><p>ç«¯å£å·ä¸ºæ•´æ•°ï¼ˆå¦‚æœå­˜åœ¨ï¼‰</p></td>
+<td><p><a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a></p></td>
 </tr>
 </tbody>
 </table>
 <p>Reading the <code class="xref py py-attr docutils literal notranslate"><span class="pre">port</span></code> attribute will raise a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if
 an invalid port is specified in the URL.  See section
-<a class="reference internal" href="#urlparse-result-object"><span class="std std-ref">Structured Parse Results</span></a> for more information on the result object.</p>
+<a class="reference internal" href="#urlparse-result-object"><span class="std std-ref">ç»“æ„åŒ–è§£æç»“æœ</span></a> for more information on the result object.</p>
 <p>Unmatched square brackets in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code> attribute will raise a
 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
 <p>Characters in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">netloc</span></code> attribute that decompose under NFKC
@@ -435,18 +440,18 @@ normalization (as used by the IDNA encoding) into any of <code class="docutils l
 <code class="docutils literal notranslate"><span class="pre">#</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, or <code class="docutils literal notranslate"><span class="pre">:</span></code> will raise a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>. If the URL is
 decomposed before parsing, no error will be raised.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.6 ç‰ˆæ›´æ”¹: </span>Out-of-range port numbers now raise <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>, instead of
+<p><span class="versionmodified changed">åœ¨ 3.6 ç‰ˆæ›´æ”¹: </span>Out-of-range port numbers now raise <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>, instead of
 returning <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.7.3 ç‰ˆæ›´æ”¹: </span>Characters that affect netloc parsing under NFKC normalization will
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>Characters that affect netloc parsing under NFKC normalization will
 now raise <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="urllib.parse.urlunsplit">
-<code class="descclassname">urllib.parse.</code><code class="descname">urlunsplit</code><span class="sig-paren">(</span><em>parts</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlunsplit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urlunsplit</code><span class="sig-paren">(</span><em class="sig-param">parts</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlunsplit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Combine the elements of a tuple as returned by <a class="reference internal" href="#urllib.parse.urlsplit" title="urllib.parse.urlsplit"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlsplit()</span></code></a> into a
 complete URL as a string. The <em>parts</em> argument can be any five-item
 iterable. This may result in a slightly different, but equivalent URL, if the
@@ -456,12 +461,12 @@ with an empty query; the RFC states that these are equivalent).</p>
 
 <dl class="function">
 <dt id="urllib.parse.urljoin">
-<code class="descclassname">urllib.parse.</code><code class="descname">urljoin</code><span class="sig-paren">(</span><em>base</em>, <em>url</em>, <em>allow_fragments=True</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urljoin" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urljoin</code><span class="sig-paren">(</span><em class="sig-param">base</em>, <em class="sig-param">url</em>, <em class="sig-param">allow_fragments=True</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urljoin" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Construct a full (&quot;absolute&quot;) URL by combining a &quot;base URL&quot; (<em>base</em>) with
 another URL (<em>url</em>).  Informally, this uses components of the base URL, in
 particular the addressing scheme, the network location and (part of) the
 path, to provide missing components in the relative URL.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urljoin</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urljoin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">urljoin</span><span class="p">(</span><span class="s1">&#39;http://www.cwi.nl/</span><span class="si">%7E</span><span class="s1">guido/Python.html&#39;</span><span class="p">,</span> <span class="s1">&#39;FAQ.html&#39;</span><span class="p">)</span>
 <span class="go">&#39;http://www.cwi.nl/%7Eguido/FAQ.html&#39;</span>
 </pre></div>
@@ -469,11 +474,11 @@ path, to provide missing components in the relative URL.  For example:</p>
 <p>The <em>allow_fragments</em> argument has the same meaning and default as for
 <a class="reference internal" href="#urllib.parse.urlparse" title="urllib.parse.urlparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlparse()</span></code></a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">æ³¨è§£</p>
-<p class="last">If <em>url</em> is an absolute URL (that is, starting with <code class="docutils literal notranslate"><span class="pre">//</span></code> or <code class="docutils literal notranslate"><span class="pre">scheme://</span></code>),
+<p class="admonition-title">æ³¨è§£</p>
+<p>If <em>url</em> is an absolute URL (that is, starting with <code class="docutils literal notranslate"><span class="pre">//</span></code> or <code class="docutils literal notranslate"><span class="pre">scheme://</span></code>),
 the <em>url</em>'s host name and/or scheme will be present in the result.  For example:</p>
 </div>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">urljoin</span><span class="p">(</span><span class="s1">&#39;http://www.cwi.nl/</span><span class="si">%7E</span><span class="s1">guido/Python.html&#39;</span><span class="p">,</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">urljoin</span><span class="p">(</span><span class="s1">&#39;http://www.cwi.nl/</span><span class="si">%7E</span><span class="s1">guido/Python.html&#39;</span><span class="p">,</span>
 <span class="gp">... </span>        <span class="s1">&#39;//www.python.org/</span><span class="si">%7E</span><span class="s1">guido&#39;</span><span class="p">)</span>
 <span class="go">&#39;http://www.python.org/%7Eguido&#39;</span>
 </pre></div>
@@ -481,56 +486,65 @@ the <em>url</em>'s host name and/or scheme will be present in the result.  For e
 <p>If you do not want that behavior, preprocess the <em>url</em> with <a class="reference internal" href="#urllib.parse.urlsplit" title="urllib.parse.urlsplit"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlsplit()</span></code></a> and
 <a class="reference internal" href="#urllib.parse.urlunsplit" title="urllib.parse.urlunsplit"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a>, removing possible <em>scheme</em> and <em>netloc</em> parts.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Behaviour updated to match the semantics defined in <span class="target" id="index-4"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a>.</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Behaviour updated to match the semantics defined in <span class="target" id="index-4"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="urllib.parse.urldefrag">
-<code class="descclassname">urllib.parse.</code><code class="descname">urldefrag</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urldefrag" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urldefrag</code><span class="sig-paren">(</span><em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urldefrag" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>If <em>url</em> contains a fragment identifier, return a modified version of <em>url</em>
 with no fragment identifier, and the fragment identifier as a separate
 string.  If there is no fragment identifier in <em>url</em>, return <em>url</em> unmodified
 and an empty string.</p>
 <p>The return value is a <a class="reference internal" href="glossary.html#term-named-tuple" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a>, its items can be accessed by index
 or as named attributes:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="10%" />
-<col width="35%" />
-<col width="31%" />
+<col style="width: 25%" />
+<col style="width: 10%" />
+<col style="width: 35%" />
+<col style="width: 31%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">å±æ€§</th>
-<th class="head">ç´¢å¼•</th>
-<th class="head">å€¼</th>
-<th class="head">Value if not present</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>å±æ€§</p></th>
+<th class="head"><p>ç´¢å¼•</p></th>
+<th class="head"><p>å€¼</p></th>
+<th class="head"><p>å€¼ï¼ˆå¦‚æœä¸å­˜åœ¨ï¼‰</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">url</span></code></td>
-<td>0</td>
-<td>URL with no fragment</td>
-<td>empty string</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td><p>0</p></td>
+<td><p>URL with no fragment</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">fragment</span></code></td>
-<td>1</td>
-<td>Fragment identifier</td>
-<td>empty string</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">fragment</span></code></p></td>
+<td><p>1</p></td>
+<td><p>ç‰‡æ®µè¯†åˆ«</p></td>
+<td><p>ç©ºå­—ç¬¦ä¸²</p></td>
 </tr>
 </tbody>
 </table>
-<p>See section <a class="reference internal" href="#urlparse-result-object"><span class="std std-ref">Structured Parse Results</span></a> for more information on the result
+<p>See section <a class="reference internal" href="#urlparse-result-object"><span class="std std-ref">ç»“æ„åŒ–è§£æç»“æœ</span></a> for more information on the result
 object.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Result is a structured object rather than a simple 2-tuple.</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Result is a structured object rather than a simple 2-tuple.</p>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="urllib.parse.unwrap">
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">unwrap</code><span class="sig-paren">(</span><em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unwrap" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Extract the url from a wrapped URL (that is, a string formatted as
+<code class="docutils literal notranslate"><span class="pre">&lt;URL:scheme://host/path&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;scheme://host/path&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">URL:scheme://host/path</span></code>
+or <code class="docutils literal notranslate"><span class="pre">scheme://host/path</span></code>). If <em>url</em> is not a wrapped URL, it is returned
+without changes.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="parsing-ascii-encoded-bytes">
-<span id="id1"></span><h2>Parsing ASCII Encoded Bytes<a class="headerlink" href="#parsing-ascii-encoded-bytes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="id1"></span><h2>è§£æASCIIç¼–ç å­—èŠ‚<a class="headerlink" href="#parsing-ascii-encoded-bytes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>The URL parsing functions were originally designed to operate on character
 strings only. In practice, it is useful to be able to manipulate properly
 quoted and encoded URLs as sequences of ASCII bytes. Accordingly, the
@@ -561,11 +575,11 @@ functions. The URL quoting functions use their own rules when producing
 or consuming byte sequences as detailed in the documentation of the
 individual URL quoting functions.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>URL parsing functions now accept ASCII encoded byte sequences</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>URL parsing functions now accept ASCII encoded byte sequences</p>
 </div>
 </div>
 <div class="section" id="structured-parse-results">
-<span id="urlparse-result-object"></span><h2>Structured Parse Results<a class="headerlink" href="#structured-parse-results" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="urlparse-result-object"></span><h2>ç»“æ„åŒ–è§£æç»“æœ<a class="headerlink" href="#structured-parse-results" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>The result objects from the <a class="reference internal" href="#urllib.parse.urlparse" title="urllib.parse.urlparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlparse()</span></code></a>, <a class="reference internal" href="#urllib.parse.urlsplit" title="urllib.parse.urlsplit"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlsplit()</span></code></a>  and
 <a class="reference internal" href="#urllib.parse.urldefrag" title="urllib.parse.urldefrag"><code class="xref py py-func docutils literal notranslate"><span class="pre">urldefrag()</span></code></a> functions are subclasses of the <a class="reference internal" href="stdtypes.html#tuple" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> type.
 These subclasses add the attributes listed in the documentation for
@@ -573,7 +587,7 @@ those functions, the encoding and decoding support described in the
 previous section, as well as an additional method:</p>
 <dl class="method">
 <dt id="urllib.parse.urllib.parse.SplitResult.geturl">
-<code class="descclassname">urllib.parse.SplitResult.</code><code class="descname">geturl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urllib.parse.SplitResult.geturl" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.SplitResult.</code><code class="sig-name descname">geturl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urllib.parse.SplitResult.geturl" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the re-combined version of the original URL as a string. This may
 differ from the original URL in that the scheme may be normalized to lower
 case and empty components may be dropped. Specifically, empty parameters,
@@ -583,7 +597,7 @@ For <a class="reference internal" href="#urllib.parse.urlsplit" title="urllib.pa
 made to the URL returned by this method.</p>
 <p>The result of this method remains unchanged if passed back through the original
 parsing function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlsplit</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlsplit</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;HTTP://www.Python.org/doc/#&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">r1</span> <span class="o">=</span> <span class="n">urlsplit</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">r1</span><span class="o">.</span><span class="n">geturl</span><span class="p">()</span>
@@ -599,18 +613,18 @@ parsing function:</p>
 results when operating on <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> objects:</p>
 <dl class="class">
 <dt id="urllib.parse.DefragResult">
-<em class="property">class </em><code class="descclassname">urllib.parse.</code><code class="descname">DefragResult</code><span class="sig-paren">(</span><em>url</em>, <em>fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.DefragResult" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">DefragResult</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.DefragResult" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Concrete class for <a class="reference internal" href="#urllib.parse.urldefrag" title="urllib.parse.urldefrag"><code class="xref py py-func docutils literal notranslate"><span class="pre">urldefrag()</span></code></a> results containing <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>
 data. The <code class="xref py py-meth docutils literal notranslate"><span class="pre">encode()</span></code> method returns a <a class="reference internal" href="#urllib.parse.DefragResultBytes" title="urllib.parse.DefragResultBytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefragResultBytes</span></code></a>
 instance.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="urllib.parse.ParseResult">
-<em class="property">class </em><code class="descclassname">urllib.parse.</code><code class="descname">ParseResult</code><span class="sig-paren">(</span><em>scheme</em>, <em>netloc</em>, <em>path</em>, <em>params</em>, <em>query</em>, <em>fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.ParseResult" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">ParseResult</code><span class="sig-paren">(</span><em class="sig-param">scheme</em>, <em class="sig-param">netloc</em>, <em class="sig-param">path</em>, <em class="sig-param">params</em>, <em class="sig-param">query</em>, <em class="sig-param">fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.ParseResult" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Concrete class for <a class="reference internal" href="#urllib.parse.urlparse" title="urllib.parse.urlparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlparse()</span></code></a> results containing <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>
 data. The <code class="xref py py-meth docutils literal notranslate"><span class="pre">encode()</span></code> method returns a <a class="reference internal" href="#urllib.parse.ParseResultBytes" title="urllib.parse.ParseResultBytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParseResultBytes</span></code></a>
 instance.</p>
@@ -618,7 +632,7 @@ instance.</p>
 
 <dl class="class">
 <dt id="urllib.parse.SplitResult">
-<em class="property">class </em><code class="descclassname">urllib.parse.</code><code class="descname">SplitResult</code><span class="sig-paren">(</span><em>scheme</em>, <em>netloc</em>, <em>path</em>, <em>query</em>, <em>fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.SplitResult" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">SplitResult</code><span class="sig-paren">(</span><em class="sig-param">scheme</em>, <em class="sig-param">netloc</em>, <em class="sig-param">path</em>, <em class="sig-param">query</em>, <em class="sig-param">fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.SplitResult" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Concrete class for <a class="reference internal" href="#urllib.parse.urlsplit" title="urllib.parse.urlsplit"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlsplit()</span></code></a> results containing <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>
 data. The <code class="xref py py-meth docutils literal notranslate"><span class="pre">encode()</span></code> method returns a <a class="reference internal" href="#urllib.parse.SplitResultBytes" title="urllib.parse.SplitResultBytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">SplitResultBytes</span></code></a>
 instance.</p>
@@ -628,34 +642,34 @@ instance.</p>
 operating on <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or <a class="reference internal" href="stdtypes.html#bytearray" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> objects:</p>
 <dl class="class">
 <dt id="urllib.parse.DefragResultBytes">
-<em class="property">class </em><code class="descclassname">urllib.parse.</code><code class="descname">DefragResultBytes</code><span class="sig-paren">(</span><em>url</em>, <em>fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.DefragResultBytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">DefragResultBytes</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.DefragResultBytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Concrete class for <a class="reference internal" href="#urllib.parse.urldefrag" title="urllib.parse.urldefrag"><code class="xref py py-func docutils literal notranslate"><span class="pre">urldefrag()</span></code></a> results containing <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
 data. The <code class="xref py py-meth docutils literal notranslate"><span class="pre">decode()</span></code> method returns a <a class="reference internal" href="#urllib.parse.DefragResult" title="urllib.parse.DefragResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefragResult</span></code></a>
 instance.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="urllib.parse.ParseResultBytes">
-<em class="property">class </em><code class="descclassname">urllib.parse.</code><code class="descname">ParseResultBytes</code><span class="sig-paren">(</span><em>scheme</em>, <em>netloc</em>, <em>path</em>, <em>params</em>, <em>query</em>, <em>fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.ParseResultBytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">ParseResultBytes</code><span class="sig-paren">(</span><em class="sig-param">scheme</em>, <em class="sig-param">netloc</em>, <em class="sig-param">path</em>, <em class="sig-param">params</em>, <em class="sig-param">query</em>, <em class="sig-param">fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.ParseResultBytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Concrete class for <a class="reference internal" href="#urllib.parse.urlparse" title="urllib.parse.urlparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlparse()</span></code></a> results containing <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
 data. The <code class="xref py py-meth docutils literal notranslate"><span class="pre">decode()</span></code> method returns a <a class="reference internal" href="#urllib.parse.ParseResult" title="urllib.parse.ParseResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParseResult</span></code></a>
 instance.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="urllib.parse.SplitResultBytes">
-<em class="property">class </em><code class="descclassname">urllib.parse.</code><code class="descname">SplitResultBytes</code><span class="sig-paren">(</span><em>scheme</em>, <em>netloc</em>, <em>path</em>, <em>query</em>, <em>fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.SplitResultBytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">SplitResultBytes</code><span class="sig-paren">(</span><em class="sig-param">scheme</em>, <em class="sig-param">netloc</em>, <em class="sig-param">path</em>, <em class="sig-param">query</em>, <em class="sig-param">fragment</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.SplitResultBytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Concrete class for <a class="reference internal" href="#urllib.parse.urlsplit" title="urllib.parse.urlsplit"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlsplit()</span></code></a> results containing <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
 data. The <code class="xref py py-meth docutils literal notranslate"><span class="pre">decode()</span></code> method returns a <a class="reference internal" href="#urllib.parse.SplitResult" title="urllib.parse.SplitResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SplitResult</span></code></a>
 instance.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -669,7 +683,7 @@ recreate the original data from the contents of a URL component if that
 task isn't already covered by the URL parsing functions above.</p>
 <dl class="function">
 <dt id="urllib.parse.quote">
-<code class="descclassname">urllib.parse.</code><code class="descname">quote</code><span class="sig-paren">(</span><em>string</em>, <em>safe='/'</em>, <em>encoding=None</em>, <em>errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.quote" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">quote</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">safe='/'</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.quote" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Replace special characters in <em>string</em> using the <code class="docutils literal notranslate"><span class="pre">%xx</span></code> escape. Letters,
 digits, and the characters <code class="docutils literal notranslate"><span class="pre">'_.-~'</span></code> are never quoted. By default, this
 function is intended for quoting the path section of URL. The optional <em>safe</em>
@@ -677,8 +691,8 @@ parameter specifies additional ASCII characters that should not be quoted
 --- its default value is <code class="docutils literal notranslate"><span class="pre">'/'</span></code>.</p>
 <p><em>string</em> may be either a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.7 ç‰ˆæ›´æ”¹: </span>Moved from <span class="target" id="index-5"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2396.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2396.html'" tppabs="https://tools.ietf.org/html/rfc2396.html"><strong>RFC 2396</strong></a> to <span class="target" id="index-6"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a> for quoting URL strings. &quot;~&quot; is now
-included in the set of reserved characters.</p>
+<p><span class="versionmodified changed">åœ¨ 3.7 ç‰ˆæ›´æ”¹: </span>Moved from <span class="target" id="index-5"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2396.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2396.html'" tppabs="https://tools.ietf.org/html/rfc2396.html"><strong>RFC 2396</strong></a> to <span class="target" id="index-6"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a> for quoting URL strings. &quot;~&quot; is now
+included in the set of unreserved characters.</p>
 </div>
 <p>The optional <em>encoding</em> and <em>errors</em> parameters specify how to deal with
 non-ASCII characters, as accepted by the <a class="reference internal" href="stdtypes.html#str.encode" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.encode" title="str.encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.encode()</span></code></a> method.
@@ -694,7 +708,7 @@ non-ASCII characters, as accepted by the <a class="reference internal" href="std
 
 <dl class="function">
 <dt id="urllib.parse.quote_plus">
-<code class="descclassname">urllib.parse.</code><code class="descname">quote_plus</code><span class="sig-paren">(</span><em>string</em>, <em>safe=''</em>, <em>encoding=None</em>, <em>errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.quote_plus" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">quote_plus</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">safe=''</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.quote_plus" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Like <a class="reference internal" href="#urllib.parse.quote" title="urllib.parse.quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">quote()</span></code></a>, but also replace spaces by plus signs, as required for
 quoting HTML form values when building up a query string to go into a URL.
 Plus signs in the original string are escaped unless they are included in
@@ -704,7 +718,7 @@ Plus signs in the original string are escaped unless they are included in
 
 <dl class="function">
 <dt id="urllib.parse.quote_from_bytes">
-<code class="descclassname">urllib.parse.</code><code class="descname">quote_from_bytes</code><span class="sig-paren">(</span><em>bytes</em>, <em>safe='/'</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.quote_from_bytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">quote_from_bytes</code><span class="sig-paren">(</span><em class="sig-param">bytes</em>, <em class="sig-param">safe='/'</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.quote_from_bytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Like <a class="reference internal" href="#urllib.parse.quote" title="urllib.parse.quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">quote()</span></code></a>, but accepts a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object rather than a
 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, and does not perform string-to-bytes encoding.</p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">quote_from_bytes(b'a&amp;\xef')</span></code> yields
@@ -713,7 +727,7 @@ Plus signs in the original string are escaped unless they are included in
 
 <dl class="function">
 <dt id="urllib.parse.unquote">
-<code class="descclassname">urllib.parse.</code><code class="descname">unquote</code><span class="sig-paren">(</span><em>string</em>, <em>encoding='utf-8'</em>, <em>errors='replace'</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unquote" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">unquote</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">encoding='utf-8'</em>, <em class="sig-param">errors='replace'</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unquote" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Replace <code class="docutils literal notranslate"><span class="pre">%xx</span></code> escapes by their single-character equivalent.
 The optional <em>encoding</em> and <em>errors</em> parameters specify how to decode
 percent-encoded sequences into Unicode characters, as accepted by the
@@ -727,7 +741,7 @@ by a placeholder character.</p>
 
 <dl class="function">
 <dt id="urllib.parse.unquote_plus">
-<code class="descclassname">urllib.parse.</code><code class="descname">unquote_plus</code><span class="sig-paren">(</span><em>string</em>, <em>encoding='utf-8'</em>, <em>errors='replace'</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unquote_plus" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">unquote_plus</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">encoding='utf-8'</em>, <em class="sig-param">errors='replace'</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unquote_plus" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Like <a class="reference internal" href="#urllib.parse.unquote" title="urllib.parse.unquote"><code class="xref py py-func docutils literal notranslate"><span class="pre">unquote()</span></code></a>, but also replace plus signs by spaces, as required for
 unquoting HTML form values.</p>
 <p><em>string</em> must be a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.</p>
@@ -736,7 +750,7 @@ unquoting HTML form values.</p>
 
 <dl class="function">
 <dt id="urllib.parse.unquote_to_bytes">
-<code class="descclassname">urllib.parse.</code><code class="descname">unquote_to_bytes</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unquote_to_bytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">unquote_to_bytes</code><span class="sig-paren">(</span><em class="sig-param">string</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.unquote_to_bytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Replace <code class="docutils literal notranslate"><span class="pre">%xx</span></code> escapes by their single-octet equivalent, and return a
 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object.</p>
 <p><em>string</em> may be either a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>.</p>
@@ -747,7 +761,7 @@ are encoded into UTF-8 bytes.</p>
 
 <dl class="function">
 <dt id="urllib.parse.urlencode">
-<code class="descclassname">urllib.parse.</code><code class="descname">urlencode</code><span class="sig-paren">(</span><em>query</em>, <em>doseq=False</em>, <em>safe=''</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>quote_via=quote_plus</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlencode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">urllib.parse.</code><code class="sig-name descname">urlencode</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">doseq=False</em>, <em class="sig-param">safe=''</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em>, <em class="sig-param">quote_via=quote_plus</em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.parse.urlencode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Convert a mapping object or a sequence of two-element tuples, which may
 contain <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> objects, to a percent-encoded ASCII
 text string.  If the resultant string is to be used as a <em>data</em> for POST
@@ -778,34 +792,34 @@ provided in this module to parse query strings into Python data structures.</p>
 <p>Refer to <a class="reference internal" href="urllib.request.html#urllib-examples" tppabs="https://docs.python.org/zh-cn/3/library/urllib.request.html#urllib-examples"><span class="std std-ref">urllib examples</span></a> to find out how urlencode
 method can be used for generating query string for a URL or data for POST.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Query parameter supports bytes and string objects.</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>æŸ¥è¯¢å‚æ•°æ”¯æŒå­—èŠ‚å’Œå­—ç¬¦ä¸²å¯¹è±¡ã€‚</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½: </span><em>quote_via</em> parameter.</p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½: </span><em>quote_via</em> å‚æ•°.</p>
 </div>
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-7"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a> - Uniform Resource Identifiers</dt>
-<dd>This is the current standard (STD66). Any changes to urllib.parse module
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-15"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3986.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3986.html'" tppabs="https://tools.ietf.org/html/rfc3986.html"><strong>RFC 3986</strong></a> - ç»Ÿä¸€èµ„æºæ ‡è¯†ç¬¦</dt><dd><p>This is the current standard (STD66). Any changes to urllib.parse module
 should conform to this. Certain deviations could be observed, which are
 mostly for backward compatibility purposes and for certain de-facto
-parsing requirements as commonly observed in major browsers.</dd>
-<dt><span class="target" id="index-8"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2732.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2732.html'" tppabs="https://tools.ietf.org/html/rfc2732.html"><strong>RFC 2732</strong></a> - Format for Literal IPv6 Addresses in URL's.</dt>
-<dd>This specifies the parsing requirements of IPv6 URLs.</dd>
-<dt><span class="target" id="index-9"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2396.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2396.html'" tppabs="https://tools.ietf.org/html/rfc2396.html"><strong>RFC 2396</strong></a> - Uniform Resource Identifiers (URI): Generic Syntax</dt>
-<dd>Document describing the generic syntactic requirements for both Uniform Resource
-Names (URNs) and Uniform Resource Locators (URLs).</dd>
-<dt><span class="target" id="index-10"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2368.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2368.html'" tppabs="https://tools.ietf.org/html/rfc2368.html"><strong>RFC 2368</strong></a> - The mailto URL scheme.</dt>
-<dd>Parsing requirements for mailto URL schemes.</dd>
-<dt><span class="target" id="index-11"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1808.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1808.html'" tppabs="https://tools.ietf.org/html/rfc1808.html"><strong>RFC 1808</strong></a> - Relative Uniform Resource Locators</dt>
-<dd>This Request For Comments includes the rules for joining an absolute and a
+parsing requirements as commonly observed in major browsers.</p>
+</dd>
+<dt><span class="target" id="index-8"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2732.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2732.html'" tppabs="https://tools.ietf.org/html/rfc2732.html"><strong>RFC 2732</strong></a> - Format for Literal IPv6 Addresses in URL's.</dt><dd><p>This specifies the parsing requirements of IPv6 URLs.</p>
+</dd>
+<dt><span class="target" id="index-16"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc2396.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc2396.html'" tppabs="https://tools.ietf.org/html/rfc2396.html"><strong>RFC 2396</strong></a> - ç»Ÿä¸€èµ„æºæ ‡è¯†ç¬¦ï¼ˆURIï¼‰ï¼šé€šç”¨è¯­æ³•</dt><dd><p>Document describing the generic syntactic requirements for both Uniform Resource
+Names (URNs) and Uniform Resource Locators (URLs).</p>
+</dd>
+<dt><span class="target" id="index-10"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/issue39502  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/issue39502'" tppabs="https://tools.ietf.org/html/rfc2368.html"><strong>RFC 2368</strong></a> - The mailto URL scheme.</dt><dd><p>Parsing requirements for mailto URL schemes.</p>
+</dd>
+<dt><span class="target" id="index-11"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1808.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1808.html'" tppabs="https://tools.ietf.org/html/rfc1808.html"><strong>RFC 1808</strong></a> - Relative Uniform Resource Locators</dt><dd><p>This Request For Comments includes the rules for joining an absolute and a
 relative URL, including a fair number of &quot;Abnormal Examples&quot; which govern the
-treatment of border cases.</dd>
-<dt><span class="target" id="index-12"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1738.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1738.html'" tppabs="https://tools.ietf.org/html/rfc1738.html"><strong>RFC 1738</strong></a> - Uniform Resource Locators (URL)</dt>
-<dd>This specifies the formal syntax and semantics of absolute URLs.</dd>
+treatment of border cases.</p>
+</dd>
+<dt><span class="target" id="index-12"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/issue38546  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/issue38546'" tppabs="https://tools.ietf.org/html/rfc1738.html"><strong>RFC 1738</strong></a> - Uniform Resource Locators (URL)</dt><dd><p>This specifies the formal syntax and semantics of absolute URLs.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -817,12 +831,12 @@ treatment of border cases.</dd>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">urllib.parse</span></code> --- Parse URLs into components</a><ul>
-<li><a class="reference internal" href="#url-parsing">URL Parsing</a></li>
-<li><a class="reference internal" href="#parsing-ascii-encoded-bytes">Parsing ASCII Encoded Bytes</a></li>
-<li><a class="reference internal" href="#structured-parse-results">Structured Parse Results</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.parse</span></code> --- Parse URLs into components</a><ul>
+<li><a class="reference internal" href="#url-parsing">URL è§£æ</a></li>
+<li><a class="reference internal" href="#parsing-ascii-encoded-bytes">è§£æASCIIç¼–ç å­—èŠ‚</a></li>
+<li><a class="reference internal" href="#structured-parse-results">ç»“æ„åŒ–è§£æç»“æœ</a></li>
 <li><a class="reference internal" href="#url-quoting">URL Quoting</a></li>
 </ul>
 </li>
@@ -830,16 +844,16 @@ treatment of border cases.</dd>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="urllib.request.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.request.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">urllib.request</span></code> --- ç”¨äºæ‰“å¼€ URL çš„å¯æ‰©å±•åº“</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code> --- ç”¨äºæ‰“å¼€ URL çš„å¯æ‰©å±•åº“</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="urllib.error.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.error.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">urllib.error</span></code> --- Exception classes raised by urllib.request</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.error</span></code> --- urllib.request å¼•å‘çš„å¼‚å¸¸ç±»</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/urllib.parse.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/urllib.parse.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/urllib.parse.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/urllib.parse.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/urllib.parse.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/urllib.parse.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -859,19 +873,22 @@ treatment of border cases.</dd>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="urllib.error.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.error.html" title="urllib.error --- Exception classes raised by urllib.request"
+          <a href="urllib.error.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.error.html" title="urllib.error --- urllib.request å¼•å‘çš„å¼‚å¸¸ç±»"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="urllib.request.html" tppabs="https://docs.python.org/zh-cn/3/library/urllib.request.html" title="urllib.request --- ç”¨äºæ‰“å¼€ URL çš„å¯æ‰©å±•åº“"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="internet.html" tppabs="https://docs.python.org/zh-cn/3/library/internet.html" >äº’è”ç½‘åè®®å’Œæ”¯æŒ</a> &#187;</li>
@@ -893,15 +910,19 @@ treatment of border cases.</dd>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

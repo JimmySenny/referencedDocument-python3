@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>èƒ¶å›Š &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>èƒ¶å›Š &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="ç”Ÿæˆå™¨å¯¹è±¡" href="gen.html" />
     <link rel="prev" title="å¼±å¼•ç”¨å¯¹è±¡" href="weakref.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/c-api/capsule.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,17 +66,20 @@
         <li class="right" >
           <a href="weakref-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/weakref.html" title="å¼±å¼•ç”¨å¯¹è±¡"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -97,19 +105,19 @@
             
   <div class="section" id="capsules">
 <span id="id1"></span><h1>èƒ¶å›Š<a class="headerlink" href="#capsules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p id="index-0">æœ‰å…³ä½¿ç”¨è¿™äº›å¯¹è±¡çš„æ›´å¤šä¿¡æ¯è¯·å‚é˜… <a class="reference internal" href="extending.html#using-capsules" tppabs="https://docs.python.org/zh-cn/3/extending/extending.html#using-capsules"><span class="std std-ref">Providing a C API for an Extension Module</span></a>ã€‚</p>
+<p id="index-0">æœ‰å…³ä½¿ç”¨è¿™äº›å¯¹è±¡çš„æ›´å¤šä¿¡æ¯è¯·å‚é˜… <a class="reference internal" href="extending-1.html#using-capsules" tppabs="https://docs.python.org/zh-cn/3/extending/extending.html#using-capsules"><span class="std std-ref">ç»™æ‰©å±•æ¨¡å—æä¾›C API</span></a>ã€‚</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.1 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.1 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 <dl class="type">
 <dt id="c.PyCapsule">
-<code class="descname">PyCapsule</code><a class="headerlink" href="#c.PyCapsule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">PyCapsule</code><a class="headerlink" href="#c.PyCapsule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>è¿™ä¸ª <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyObject</span></code></a> çš„å­ç±»å‹ä»£è¡¨ç€ä¸€ä¸ªä»»æ„å€¼ï¼Œå½“éœ€è¦é€šè¿‡ Python ä»£ç å°†ä»»æ„å€¼ï¼ˆä»¥ <code class="xref c c-type docutils literal notranslate"><span class="pre">void*</span></code> æŒ‡é’ˆçš„å½¢å¼ï¼‰ä» C æ‰©å±•æ¨¡å—ä¼ é€’ç»™å…¶ä»– C ä»£ç æ—¶éå¸¸æœ‰ç”¨ã€‚å®ƒé€šå¸¸ç”¨äºå°†æŒ‡å‘ä¸€ä¸ªæ¨¡å—ä¸­å®šä¹‰çš„ C è¯­è¨€å‡½æ•°æŒ‡é’ˆä¼ é€’ç»™å…¶ä»–æ¨¡å—ï¼Œä»¥ä¾¿å¯ä»¥ä»é‚£é‡Œè°ƒç”¨å®ƒä»¬ã€‚è¿™å…è®¸é€šè¿‡æ­£å¸¸çš„æ¨¡å—å¯¼å…¥æœºåˆ¶è®¿é—®åŠ¨æ€åŠ è½½çš„æ¨¡å—ä¸­çš„ C APIã€‚</p>
 </dd></dl>
 
 <dl class="type">
 <dt id="c.PyCapsule_Destructor">
-<code class="descname">PyCapsule_Destructor</code><a class="headerlink" href="#c.PyCapsule_Destructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">PyCapsule_Destructor</code><a class="headerlink" href="#c.PyCapsule_Destructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>è¿™ç§ç±»å‹çš„ä¸€ä¸ªææ„å™¨è¿”å›ä¸€ä¸ªèƒ¶å›Šï¼Œå®šä¹‰å¦‚ä¸‹ï¼š</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">PyCapsule_Destructor</span><span class="p">)(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">);</span>
 </pre></div>
@@ -119,17 +127,21 @@
 
 <dl class="function">
 <dt id="c.PyCapsule_CheckExact">
-int <code class="descname">PyCapsule_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_CheckExact" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyCapsule_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_CheckExact" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>å¦‚æœå‚æ•°æ˜¯ä¸€ä¸ª <a class="reference internal" href="#c.PyCapsule" title="PyCapsule"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a> åˆ™è¿”å› True</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_New">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyCapsule_New</code><span class="sig-paren">(</span>void<em>&nbsp;*pointer</em>, const char<em>&nbsp;*name</em>, <a class="reference internal" href="#c.PyCapsule_Destructor" title="PyCapsule_Destructor">PyCapsule_Destructor</a><em>&nbsp;destructor</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><em class="refcount">Return value: New reference.</em><p>åˆ›å»ºä¸€ä¸ª <a class="reference internal" href="#c.PyCapsule" title="PyCapsule"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a> æ¥å°è£… <em>pointer</em> ï¼Œ <em>pointer</em> å‚æ•°å¯èƒ½ä¸æ˜¯ <em>NULL</em> ã€‚</p>
-<p>å¦‚æœå¤±è´¥ï¼Œåˆ™è®¾ç½®å¼‚å¸¸å¹¶è¿”å› <em>NULL</em>ã€‚</p>
-<p>å­—ç¬¦ä¸²å­—ç¬¦ä¸² <em>name</em> å¯ä»¥æ˜¯ <em>NULL</em> æˆ–æŒ‡å‘ ä¸€ä¸ªæœ‰æ•ˆçš„ C å­—ç¬¦ä¸²ã€‚å¦‚æœå€¼ä¸ºé <em>NULL</em> ï¼Œè¿™ä¸ªå­—ç¬¦ä¸²å¿…é¡»æ¯”èƒ¶å›Šé•¿ã€‚ï¼ˆå³ä½¿å®ƒå¯ä»¥é‡Šæ”¾é‡Œé¢çš„ <em>destructor</em> ã€‚ï¼‰</p>
-<p>å¦‚æœ <em>destructor</em> å‚æ•°ä¸æ˜¯ <em>NULL</em> ï¼Œé‚£ä¹ˆå½“å®ƒè¢«é”€æ¯æ—¶ï¼Œå®ƒå°±è¢«èƒ¶å›Šå½“ä½œå‚æ•°è°ƒç”¨ã€‚</p>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyCapsule_New</code><span class="sig-paren">(</span>void<em>Â *pointer</em>, const char<em>Â *name</em>, <a class="reference internal" href="#c.PyCapsule_Destructor" title="PyCapsule_Destructor">PyCapsule_Destructor</a><em>Â destructor</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Create a <a class="reference internal" href="#c.PyCapsule" title="PyCapsule"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a> encapsulating the <em>pointer</em>.  The <em>pointer</em>
+argument may not be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+<p>On failure, set an exception and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+<p>The <em>name</em> string may either be <code class="docutils literal notranslate"><span class="pre">NULL</span></code> or a pointer to a valid C string.  If
+non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code>, this string must outlive the capsule.  (Though it is permitted to
+free it inside the <em>destructor</em>.)</p>
+<p>If the <em>destructor</em> argument is not <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, it will be called with the
+capsule as its argument when it is destroyed.</p>
 <p>If this capsule will be stored as an attribute of a module, the <em>name</em> should
 be specified as <code class="docutils literal notranslate"><span class="pre">modulename.attributename</span></code>.  This will enable other modules
 to import the capsule using <a class="reference internal" href="#c.PyCapsule_Import" title="PyCapsule_Import"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_Import()</span></code></a>.</p>
@@ -137,63 +149,63 @@ to import the capsule using <a class="reference internal" href="#c.PyCapsule_Imp
 
 <dl class="function">
 <dt id="c.PyCapsule_GetPointer">
-void* <code class="descname">PyCapsule_GetPointer</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em>, const char<em>&nbsp;*name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetPointer" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void* <code class="sig-name descname">PyCapsule_GetPointer</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em>, const char<em>Â *name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetPointer" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Retrieve the <em>pointer</em> stored in the capsule.  On failure, set an exception
-and return <em>NULL</em>.</p>
+and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 <p>The <em>name</em> parameter must compare exactly to the name stored in the capsule.
-If the name stored in the capsule is <em>NULL</em>, the <em>name</em> passed in must also
-be <em>NULL</em>.  Python uses the C function <code class="xref c c-func docutils literal notranslate"><span class="pre">strcmp()</span></code> to compare capsule
+If the name stored in the capsule is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the <em>name</em> passed in must also
+be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.  Python uses the C function <code class="xref c c-func docutils literal notranslate"><span class="pre">strcmp()</span></code> to compare capsule
 names.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_GetDestructor">
-<a class="reference internal" href="#c.PyCapsule_Destructor" title="PyCapsule_Destructor">PyCapsule_Destructor</a> <code class="descname">PyCapsule_GetDestructor</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetDestructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="#c.PyCapsule_Destructor" title="PyCapsule_Destructor">PyCapsule_Destructor</a> <code class="sig-name descname">PyCapsule_GetDestructor</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetDestructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the current destructor stored in the capsule.  On failure, set an
-exception and return <em>NULL</em>.</p>
-<p>It is legal for a capsule to have a <em>NULL</em> destructor.  This makes a <em>NULL</em>
+exception and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+<p>It is legal for a capsule to have a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> destructor.  This makes a <code class="docutils literal notranslate"><span class="pre">NULL</span></code>
 return code somewhat ambiguous; use <a class="reference internal" href="#c.PyCapsule_IsValid" title="PyCapsule_IsValid"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_IsValid()</span></code></a> or
 <a class="reference internal" href="exceptions-1.html#c.PyErr_Occurred" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a> to disambiguate.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_GetContext">
-void* <code class="descname">PyCapsule_GetContext</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetContext" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void* <code class="sig-name descname">PyCapsule_GetContext</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetContext" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the current context stored in the capsule.  On failure, set an
-exception and return <em>NULL</em>.</p>
-<p>It is legal for a capsule to have a <em>NULL</em> context.  This makes a <em>NULL</em>
+exception and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+<p>It is legal for a capsule to have a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> context.  This makes a <code class="docutils literal notranslate"><span class="pre">NULL</span></code>
 return code somewhat ambiguous; use <a class="reference internal" href="#c.PyCapsule_IsValid" title="PyCapsule_IsValid"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_IsValid()</span></code></a> or
 <a class="reference internal" href="exceptions-1.html#c.PyErr_Occurred" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a> to disambiguate.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_GetName">
-const char* <code class="descname">PyCapsule_GetName</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetName" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+const char* <code class="sig-name descname">PyCapsule_GetName</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_GetName" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the current name stored in the capsule.  On failure, set an exception
-and return <em>NULL</em>.</p>
-<p>It is legal for a capsule to have a <em>NULL</em> name.  This makes a <em>NULL</em> return
+and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+<p>It is legal for a capsule to have a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> name.  This makes a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> return
 code somewhat ambiguous; use <a class="reference internal" href="#c.PyCapsule_IsValid" title="PyCapsule_IsValid"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_IsValid()</span></code></a> or
 <a class="reference internal" href="exceptions-1.html#c.PyErr_Occurred" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a> to disambiguate.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_Import">
-void* <code class="descname">PyCapsule_Import</code><span class="sig-paren">(</span>const char<em>&nbsp;*name</em>, int<em>&nbsp;no_block</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_Import" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void* <code class="sig-name descname">PyCapsule_Import</code><span class="sig-paren">(</span>const char<em>Â *name</em>, int<em>Â no_block</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_Import" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Import a pointer to a C object from a capsule attribute in a module.  The
 <em>name</em> parameter should specify the full name to the attribute, as in
 <code class="docutils literal notranslate"><span class="pre">module.attribute</span></code>.  The <em>name</em> stored in the capsule must match this
 string exactly.  If <em>no_block</em> is true, import the module without blocking
-(using <a class="reference internal" href="import-1.html#c.PyImport_ImportModuleNoBlock" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html#c.PyImport_ImportModuleNoBlock" title="PyImport_ImportModuleNoBlock"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyImport_ImportModuleNoBlock()</span></code></a>).  If <em>no_block</em> is false,
-import the module conventionally (using <a class="reference internal" href="import-1.html#c.PyImport_ImportModule" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html#c.PyImport_ImportModule" title="PyImport_ImportModule"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyImport_ImportModule()</span></code></a>).</p>
+(using <a class="reference internal" href="import.html#c.PyImport_ImportModuleNoBlock" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html#c.PyImport_ImportModuleNoBlock" title="PyImport_ImportModuleNoBlock"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyImport_ImportModuleNoBlock()</span></code></a>).  If <em>no_block</em> is false,
+import the module conventionally (using <a class="reference internal" href="import.html#c.PyImport_ImportModule" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html#c.PyImport_ImportModule" title="PyImport_ImportModule"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyImport_ImportModule()</span></code></a>).</p>
 <p>Return the capsule's internal <em>pointer</em> on success.  On failure, set an
-exception and return <em>NULL</em>.</p>
+exception and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_IsValid">
-int <code class="descname">PyCapsule_IsValid</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em>, const char<em>&nbsp;*name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_IsValid" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyCapsule_IsValid</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em>, const char<em>Â *name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_IsValid" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Determines whether or not <em>capsule</em> is a valid capsule.  A valid capsule is
-non-<em>NULL</em>, passes <a class="reference internal" href="#c.PyCapsule_CheckExact" title="PyCapsule_CheckExact"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_CheckExact()</span></code></a>, has a non-<em>NULL</em> pointer
+non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code>, passes <a class="reference internal" href="#c.PyCapsule_CheckExact" title="PyCapsule_CheckExact"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_CheckExact()</span></code></a>, has a non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointer
 stored in it, and its internal name matches the <em>name</em> parameter.  (See
 <a class="reference internal" href="#c.PyCapsule_GetPointer" title="PyCapsule_GetPointer"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCapsule_GetPointer()</span></code></a> for information on how capsule names are
 compared.)</p>
@@ -206,32 +218,32 @@ Return <code class="docutils literal notranslate"><span class="pre">0</span></co
 
 <dl class="function">
 <dt id="c.PyCapsule_SetContext">
-int <code class="descname">PyCapsule_SetContext</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em>, void<em>&nbsp;*context</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetContext" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyCapsule_SetContext</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em>, void<em>Â *context</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetContext" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Set the context pointer inside <em>capsule</em> to <em>context</em>.</p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.  Return nonzero and set an exception on failure.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_SetDestructor">
-int <code class="descname">PyCapsule_SetDestructor</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em>, <a class="reference internal" href="#c.PyCapsule_Destructor" title="PyCapsule_Destructor">PyCapsule_Destructor</a><em>&nbsp;destructor</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetDestructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyCapsule_SetDestructor</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em>, <a class="reference internal" href="#c.PyCapsule_Destructor" title="PyCapsule_Destructor">PyCapsule_Destructor</a><em>Â destructor</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetDestructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Set the destructor inside <em>capsule</em> to <em>destructor</em>.</p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.  Return nonzero and set an exception on failure.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_SetName">
-int <code class="descname">PyCapsule_SetName</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em>, const char<em>&nbsp;*name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetName" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Set the name inside <em>capsule</em> to <em>name</em>.  If non-<em>NULL</em>, the name must
+int <code class="sig-name descname">PyCapsule_SetName</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em>, const char<em>Â *name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetName" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Set the name inside <em>capsule</em> to <em>name</em>.  If non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the name must
 outlive the capsule.  If the previous <em>name</em> stored in the capsule was not
-<em>NULL</em>, no attempt is made to free it.</p>
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code>, no attempt is made to free it.</p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.  Return nonzero and set an exception on failure.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCapsule_SetPointer">
-int <code class="descname">PyCapsule_SetPointer</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*capsule</em>, void<em>&nbsp;*pointer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetPointer" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyCapsule_SetPointer</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *capsule</em>, void<em>Â *pointer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCapsule_SetPointer" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Set the void pointer inside <em>capsule</em> to <em>pointer</em>.  The pointer may not be
-<em>NULL</em>.</p>
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.  Return nonzero and set an exception on failure.</p>
 </dd></dl>
 
@@ -254,7 +266,7 @@ int <code class="descname">PyCapsule_SetPointer</code><span class="sig-paren">(<
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/capsule.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/capsule.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/capsule.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/c-api/capsule.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/c-api/capsule.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/c-api/capsule.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -279,17 +291,20 @@ int <code class="descname">PyCapsule_SetPointer</code><span class="sig-paren">(<
         <li class="right" >
           <a href="weakref-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/weakref.html" title="å¼±å¼•ç”¨å¯¹è±¡"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -308,15 +323,19 @@ int <code class="descname">PyCapsule_SetPointer</code><span class="sig-paren">(<
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

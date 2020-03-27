@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>email: ç¤ºä¾‹ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>email: ç¤ºä¾‹ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="email.message.Message: Representing an email message using the compat32 API" href="email.compat32-message.html" />
     <link rel="prev" title="email.contentmanager: Managing MIME Content" href="email.contentmanager.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/email.examples.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,18 +66,21 @@
         <li class="right" >
           <a href="email.contentmanager.html" tppabs="https://docs.python.org/zh-cn/3/library/email.contentmanager.html" title="email.contentmanager: Managing MIME Content"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
     <li class="right">
         
 
@@ -104,7 +112,7 @@
 <span class="kn">import</span> <span class="nn">smtplib</span>
 
 <span class="c1"># Import the email modules we&#39;ll need</span>
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="k">import</span> <span class="n">EmailMessage</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
 
 <span class="c1"># Open the plain text file whose name is in textfile for reading.</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">textfile</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
@@ -114,7 +122,7 @@
 
 <span class="c1"># me == the sender&#39;s email address</span>
 <span class="c1"># you == the recipient&#39;s email address</span>
-<span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;The contents of </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">textfile</span>
+<span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The contents of </span><span class="si">{textfile}</span><span class="s1">&#39;</span>
 <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">me</span>
 <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">you</span>
 
@@ -126,8 +134,8 @@
 </div>
 <p>è§£æ <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc822.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc822.html'" tppabs="https://tools.ietf.org/html/rfc822.html"><strong>RFC 822</strong></a> æ ‡é¢˜å¯ä»¥é€šè¿‡ä½¿ç”¨ <a class="reference internal" href="email.parser.html#module-email.parser" tppabs="https://docs.python.org/zh-cn/3/library/email.parser.html#module-email.parser" title="email.parser: Parse flat text email messages to produce a message object structure."><code class="xref py py-mod docutils literal notranslate"><span class="pre">parser</span></code></a> æ¨¡å—ä¸­çš„ç±»æ¥è½»æ¾å®Œæˆï¼š</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the email modules we&#39;ll need</span>
-<span class="kn">from</span> <span class="nn">email.parser</span> <span class="k">import</span> <span class="n">BytesParser</span><span class="p">,</span> <span class="n">Parser</span>
-<span class="kn">from</span> <span class="nn">email.policy</span> <span class="k">import</span> <span class="n">default</span>
+<span class="kn">from</span> <span class="nn">email.parser</span> <span class="kn">import</span> <span class="n">BytesParser</span><span class="p">,</span> <span class="n">Parser</span>
+<span class="kn">from</span> <span class="nn">email.policy</span> <span class="kn">import</span> <span class="n">default</span>
 
 <span class="c1"># If the e-mail headers are in a file, uncomment these two lines:</span>
 <span class="c1"># with open(messagefile, &#39;rb&#39;) as fp:</span>
@@ -159,7 +167,7 @@
 <span class="kn">import</span> <span class="nn">imghdr</span>
 
 <span class="c1"># Here are the email package modules we&#39;ll need</span>
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="k">import</span> <span class="n">EmailMessage</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
 
 <span class="c1"># Create the container email message.</span>
 <span class="n">msg</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
@@ -168,7 +176,7 @@
 <span class="c1"># family = the list of all recipients&#39; email addresses</span>
 <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">me</span>
 <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">family</span><span class="p">)</span>
-<span class="n">msg</span><span class="o">.</span><span class="n">preamble</span> <span class="o">=</span> <span class="s1">&#39;Our family reunion&#39;</span>
+<span class="n">msg</span><span class="o">.</span><span class="n">preamble</span> <span class="o">=</span> <span class="s1">&#39;You will not see this in a MIME-aware mail reader.</span><span class="se">\n</span><span class="s1">&#39;</span>
 
 <span class="c1"># Open the files in binary mode.  Use imghdr to figure out the</span>
 <span class="c1"># MIME subtype for each specific image.</span>
@@ -183,7 +191,7 @@
     <span class="n">s</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>ä»¥ä¸‹æ˜¯å¦‚ä½•å°†ç›®å½•çš„å…¨éƒ¨å†…å®¹ä½œä¸ºç”µå­é‚®ä»¶æ¶ˆæ¯å‘é€çš„ç¤ºä¾‹ï¼š <a class="footnote-reference" href="#id3" id="id2">[1]</a></p>
+<p>ä»¥ä¸‹æ˜¯å¦‚ä½•å°†ç›®å½•çš„å…¨éƒ¨å†…å®¹ä½œä¸ºç”µå­é‚®ä»¶æ¶ˆæ¯å‘é€çš„ç¤ºä¾‹ï¼š <a class="footnote-reference brackets" href="#id3" id="id2">1</a></p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 
 <span class="sd">&quot;&quot;&quot;Send the contents of a directory as a MIME message.&quot;&quot;&quot;</span>
@@ -193,10 +201,10 @@
 <span class="c1"># For guessing MIME type based on file name extension</span>
 <span class="kn">import</span> <span class="nn">mimetypes</span>
 
-<span class="kn">from</span> <span class="nn">argparse</span> <span class="k">import</span> <span class="n">ArgumentParser</span>
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">ArgumentParser</span>
 
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="k">import</span> <span class="n">EmailMessage</span>
-<span class="kn">from</span> <span class="nn">email.policy</span> <span class="k">import</span> <span class="n">SMTP</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">from</span> <span class="nn">email.policy</span> <span class="kn">import</span> <span class="n">SMTP</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -227,7 +235,7 @@
         <span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
     <span class="c1"># Create the message</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Contents of directory </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Contents of directory {os.path.abspath(directory)}&#39;</span>
     <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">recipients</span><span class="p">)</span>
     <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">sender</span>
     <span class="n">msg</span><span class="o">.</span><span class="n">preamble</span> <span class="o">=</span> <span class="s1">&#39;You will not see this in a MIME-aware mail reader.</span><span class="se">\n</span><span class="s1">&#39;</span>
@@ -272,9 +280,9 @@
 <span class="kn">import</span> <span class="nn">email</span>
 <span class="kn">import</span> <span class="nn">mimetypes</span>
 
-<span class="kn">from</span> <span class="nn">email.policy</span> <span class="k">import</span> <span class="n">default</span>
+<span class="kn">from</span> <span class="nn">email.policy</span> <span class="kn">import</span> <span class="n">default</span>
 
-<span class="kn">from</span> <span class="nn">argparse</span> <span class="k">import</span> <span class="n">ArgumentParser</span>
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">ArgumentParser</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -309,7 +317,7 @@
             <span class="k">if</span> <span class="ow">not</span> <span class="n">ext</span><span class="p">:</span>
                 <span class="c1"># Use a generic bag-of-bits extension</span>
                 <span class="n">ext</span> <span class="o">=</span> <span class="s1">&#39;.bin&#39;</span>
-            <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;part-</span><span class="si">%03d%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">counter</span><span class="p">,</span> <span class="n">ext</span><span class="p">)</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;part-</span><span class="si">{counter:03d}{ext}</span><span class="s1">&#39;</span>
         <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
             <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">part</span><span class="o">.</span><span class="n">get_payload</span><span class="p">(</span><span class="n">decode</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
@@ -324,9 +332,9 @@
 
 <span class="kn">import</span> <span class="nn">smtplib</span>
 
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="k">import</span> <span class="n">EmailMessage</span>
-<span class="kn">from</span> <span class="nn">email.headerregistry</span> <span class="k">import</span> <span class="n">Address</span>
-<span class="kn">from</span> <span class="nn">email.utils</span> <span class="k">import</span> <span class="n">make_msgid</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">from</span> <span class="nn">email.headerregistry</span> <span class="kn">import</span> <span class="n">Address</span>
+<span class="kn">from</span> <span class="nn">email.utils</span> <span class="kn">import</span> <span class="n">make_msgid</span>
 
 <span class="c1"># Create the base text message.</span>
 <span class="n">msg</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
@@ -386,11 +394,11 @@
 <span class="kn">import</span> <span class="nn">webbrowser</span>
 
 <span class="c1"># Import the email modules we&#39;ll need</span>
-<span class="kn">from</span> <span class="nn">email</span> <span class="k">import</span> <span class="n">policy</span>
-<span class="kn">from</span> <span class="nn">email.parser</span> <span class="k">import</span> <span class="n">BytesParser</span>
+<span class="kn">from</span> <span class="nn">email</span> <span class="kn">import</span> <span class="n">policy</span>
+<span class="kn">from</span> <span class="nn">email.parser</span> <span class="kn">import</span> <span class="n">BytesParser</span>
 
 <span class="c1"># An imaginary module that would make this work and be safe.</span>
-<span class="kn">from</span> <span class="nn">imaginary</span> <span class="k">import</span> <span class="n">magic_html_parser</span>
+<span class="kn">from</span> <span class="nn">imaginary</span> <span class="kn">import</span> <span class="n">magic_html_parser</span>
 
 <span class="c1"># In a real program you&#39;d get the filename from the arguments.</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;outgoing.msg&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
@@ -467,12 +475,11 @@ Cela ressemble Ã  un excellent recipie[1] dÃ©jeuner.
 </pre></div>
 </div>
 <p class="rubric">è„šæ³¨</p>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>æ„Ÿè°¢ Matthew Dixon Cowles æä¾›æœ€åˆçš„çµæ„Ÿå’Œç¤ºä¾‹ã€‚</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>æ„Ÿè°¢ Matthew Dixon Cowles æä¾›æœ€åˆçš„çµæ„Ÿå’Œç¤ºä¾‹ã€‚</p>
+</dd>
+</dl>
 </div>
 
 
@@ -483,16 +490,16 @@ Cela ressemble Ã  un excellent recipie[1] dÃ©jeuner.
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="email.contentmanager.html" tppabs="https://docs.python.org/zh-cn/3/library/email.contentmanager.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.contentmanager</span></code>: Managing MIME Content</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.contentmanager</span></code>: Managing MIME Content</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="email.compat32-message.html" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.message.Message</span></code>: Representing an email message using the <code class="docutils literal notranslate"><span class="pre">compat32</span></code> API</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.message.Message</span></code>: Representing an email message using the <code class="xref py py-data docutils literal notranslate"><span class="pre">compat32</span></code> API</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/email.examples.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/email.examples.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/email.examples.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/email.examples.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/email.examples.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/email.examples.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -517,18 +524,21 @@ Cela ressemble Ã  un excellent recipie[1] dÃ©jeuner.
         <li class="right" >
           <a href="email.contentmanager.html" tppabs="https://docs.python.org/zh-cn/3/library/email.contentmanager.html" title="email.contentmanager: Managing MIME Content"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
     <li class="right">
         
 
@@ -547,15 +557,19 @@ Cela ressemble Ã  un excellent recipie[1] dÃ©jeuner.
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

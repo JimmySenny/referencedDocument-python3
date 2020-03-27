@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>marshal --- Internal Python object serialization &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>marshal --- 内部 Python 对象序列化 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="dbm --- Interfaces to Unix &#34;databases&#34;" href="dbm.html" />
-    <link rel="prev" title="shelve --- Python object persistence" href="shelve.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="next" title="dbm --- Unix &#34;数据库&#34; 接口" href="dbm.html" />
+    <link rel="prev" title="shelve --- Python 对象持久化" href="shelve.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/marshal.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="dbm.html" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html" title="dbm --- Interfaces to Unix &#34;databases&#34;"
+          <a href="dbm.html" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html" title="dbm --- Unix &#34;数据库&#34; 接口"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python object persistence"
+          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python 对象持久化"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="persistence.html" tppabs="https://docs.python.org/zh-cn/3/library/persistence.html" accesskey="U">数据持久化</a> &#187;</li>
@@ -96,109 +104,61 @@
           <div class="body" role="main">
             
   <div class="section" id="module-marshal">
-<span id="marshal-internal-python-object-serialization"></span><h1><a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> --- Internal Python object serialization<a class="headerlink" href="#module-marshal" title="永久链接至标题">¶</a></h1>
+<span id="marshal-internal-python-object-serialization"></span><h1><a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> --- 内部 Python 对象序列化<a class="headerlink" href="#module-marshal" title="永久链接至标题">¶</a></h1>
 <hr class="docutils" />
-<p>This module contains functions that can read and write Python values in a binary
-format.  The format is specific to Python, but independent of machine
-architecture issues (e.g., you can write a Python value to a file on a PC,
-transport the file to a Sun, and read it back there).  Details of the format are
-undocumented on purpose; it may change between Python versions (although it
-rarely does). <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
-<p id="index-0">This is not a general &quot;persistence&quot; module.  For general persistence and
-transfer of Python objects through RPC calls, see the modules <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> and
-<a class="reference internal" href="shelve.html#module-shelve" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a>.  The <a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> module exists mainly to support reading and
-writing the &quot;pseudo-compiled&quot; code for Python modules of <code class="file docutils literal notranslate"><span class="pre">.pyc</span></code> files.
-Therefore, the Python maintainers reserve the right to modify the marshal format
-in backward incompatible ways should the need arise.  If you're serializing and
-de-serializing Python objects, use the <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module instead -- the
-performance is comparable, version independence is guaranteed, and pickle
-supports a substantially wider range of objects than marshal.</p>
+<p>此模块包含一此能以二进制格式来读写 Python 值的函数。 这种格式是 Python 专属的，但是独立于特定的机器架构（即你可以在一台 PC 上写入某个 Python 值，将文件传到一台 Sun 上并在那里读取它）。 这种格式的细节有意不带文档说明；它可能在不同 Python 版本中发生改变（但这种情况极少发生）。 <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+<p id="index-0">这不是一个通用的“持久化”模块。 对于通用的持久化以及通过 RPC 调用传递 Python 对象，请参阅 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 和 <a class="reference internal" href="shelve.html#module-shelve" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> 等模块。 <a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> 模块主要是为了支持读写 <code class="file docutils literal notranslate"><span class="pre">.pyc</span></code> 文件形式“伪编译”代码的 Python 模块。 因此，Python 维护者保留在必要时以不向下兼容的方式修改 marshal 格式的权利。 如果你要序列化和反序列化 Python 对象，请改用 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 模块 -- 其执行效率相当，版本独立性有保证，并且 pickle 还支持比 marshal 更多样的对象类型。</p>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">The <a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> module is not intended to be secure against erroneous or
-maliciously constructed data.  Never unmarshal data received from an
-untrusted or unauthenticated source.</p>
+<p class="admonition-title">警告</p>
+<p><a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> 模块对于错误或恶意构建的数据来说是不安全的。 永远不要 unmarshal 来自不受信任的或未经验证的来源的数据。</p>
 </div>
-<p id="index-1">Not all Python object types are supported; in general, only objects whose value
-is independent from a particular invocation of Python can be written and read by
-this module.  The following types are supported: booleans, integers, floating
-point numbers, complex numbers, strings, bytes, bytearrays, tuples, lists, sets,
-frozensets, dictionaries, and code objects, where it should be understood that
-tuples, lists, sets, frozensets and dictionaries are only supported as long as
-the values contained therein are themselves supported.  The
-singletons <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference internal" href="constants.html#Ellipsis" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#Ellipsis" title="Ellipsis"><code class="xref py py-const docutils literal notranslate"><span class="pre">Ellipsis</span></code></a> and <a class="reference internal" href="exceptions.html#StopIteration" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> can also be
-marshalled and unmarshalled.
-For format <em>version</em> lower than 3, recursive lists, sets and dictionaries cannot
-be written (see below).</p>
-<p>There are functions that read/write files as well as functions operating on
-bytes-like objects.</p>
-<p>The module defines these functions:</p>
+<p id="index-1">不是所有 Python 对象类型都受支持；一般来说，此模块只能写入和读取不依赖于特定 Python 调用的对象。 下列类型是受支持的：布尔值、整数、浮点数、复数、字符串、字节串、字节数组、元组、列表、集合、冻结集合、字典和代码对象，需要了解的一点是元组、列表、集合、冻结集合和字典只在其所包含的值也是这些值时才受支持。 单例对象 <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference internal" href="constants.html#Ellipsis" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#Ellipsis" title="Ellipsis"><code class="xref py py-const docutils literal notranslate"><span class="pre">Ellipsis</span></code></a> and <a class="reference internal" href="exceptions.html#StopIteration" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> 也可以被 marshal 和 unmarshal。 对于 <em>version</em> 低于 3 的格式，递归列表、集合和字典无法被写入（见下文）。</p>
+<p>有些函数可以读/写文件，还有些函数可以操作字节类对象。</p>
+<p>这个模块定义了以下函数：</p>
 <dl class="function">
 <dt id="marshal.dump">
-<code class="descclassname">marshal.</code><code class="descname">dump</code><span class="sig-paren">(</span><em>value</em>, <em>file</em><span class="optional">[</span>, <em>version</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#marshal.dump" title="永久链接至目标">¶</a></dt>
-<dd><p>Write the value on the open file.  The value must be a supported type.  The
-file must be a writeable <a class="reference internal" href="glossary.html#term-binary-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>.</p>
-<p>If the value has (or contains an object that has) an unsupported type, a
-<a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> exception is raised --- but garbage data will also be written
-to the file.  The object will not be properly read back by <a class="reference internal" href="#marshal.load" title="marshal.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a>.</p>
-<p>The <em>version</em> argument indicates the data format that <code class="docutils literal notranslate"><span class="pre">dump</span></code> should use
-(see below).</p>
+<code class="sig-prename descclassname">marshal.</code><code class="sig-name descname">dump</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">file</em><span class="optional">[</span>, <em class="sig-param">version</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#marshal.dump" title="永久链接至目标">¶</a></dt>
+<dd><p>向打开的文件写入值。 值必须为受支持的类型。 文件必须为可写的 <a class="reference internal" href="glossary.html#term-binary-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>。</p>
+<p>如果值具有（或所包含的对象具有）不受支持的类型，则会引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> --- 但是将向文件写入垃圾数据。 对象也将不能正确地通过 <a class="reference internal" href="#marshal.load" title="marshal.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a> 重新读取。</p>
+<p><em>version</em> 参数指明 <code class="docutils literal notranslate"><span class="pre">dump</span></code> 应当使用的数据格式（见下文）。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="marshal.load">
-<code class="descclassname">marshal.</code><code class="descname">load</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#marshal.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Read one value from the open file and return it.  If no valid value is read
-(e.g. because the data has a different Python version's incompatible marshal
-format), raise <a class="reference internal" href="exceptions.html#EOFError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#EOFError" title="EOFError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">EOFError</span></code></a>, <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> or <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.  The
-file must be a readable <a class="reference internal" href="glossary.html#term-binary-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>.</p>
+<code class="sig-prename descclassname">marshal.</code><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#marshal.load" title="永久链接至目标">¶</a></dt>
+<dd><p>从打开的文件读取一个值并返回。 如果读不到有效的值（例如由于数据为不同 Python 版本的不兼容 marshal 格式），则会引发 <a class="reference internal" href="exceptions.html#EOFError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#EOFError" title="EOFError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">EOFError</span></code></a>, <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 或 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。 文件必须为可读的 <a class="reference internal" href="glossary.html#term-binary-file" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">If an object containing an unsupported type was marshalled with <a class="reference internal" href="#marshal.dump" title="marshal.dump"><code class="xref py py-func docutils literal notranslate"><span class="pre">dump()</span></code></a>,
-<a class="reference internal" href="#marshal.load" title="marshal.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a> will substitute <code class="docutils literal notranslate"><span class="pre">None</span></code> for the unmarshallable type.</p>
+<p class="admonition-title">注解</p>
+<p>如果通过 <a class="reference internal" href="#marshal.dump" title="marshal.dump"><code class="xref py py-func docutils literal notranslate"><span class="pre">dump()</span></code></a> marshal 了一个包含不受支持类型的对象，<a class="reference internal" href="#marshal.load" title="marshal.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a> 将为不可 marshal 的类型替换 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="marshal.dumps">
-<code class="descclassname">marshal.</code><code class="descname">dumps</code><span class="sig-paren">(</span><em>value</em><span class="optional">[</span>, <em>version</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#marshal.dumps" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the bytes object that would be written to a file by <code class="docutils literal notranslate"><span class="pre">dump(value,</span> <span class="pre">file)</span></code>.  The
-value must be a supported type.  Raise a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> exception if value
-has (or contains an object that has) an unsupported type.</p>
-<p>The <em>version</em> argument indicates the data format that <code class="docutils literal notranslate"><span class="pre">dumps</span></code> should use
-(see below).</p>
+<code class="sig-prename descclassname">marshal.</code><code class="sig-name descname">dumps</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="optional">[</span>, <em class="sig-param">version</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#marshal.dumps" title="永久链接至目标">¶</a></dt>
+<dd><p>返回将通过 <code class="docutils literal notranslate"><span class="pre">dump(value,</span> <span class="pre">file)</span></code> 被写入一个文件的字节串对象。 值必须属于受支持的类型。 如果值属于（或包含的对象属于）不受支持的类型则会引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
+<p><em>version</em> 参数指明 <code class="docutils literal notranslate"><span class="pre">dumps</span></code> 应当使用的数据类型（见下文）。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="marshal.loads">
-<code class="descclassname">marshal.</code><code class="descname">loads</code><span class="sig-paren">(</span><em>bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#marshal.loads" title="永久链接至目标">¶</a></dt>
-<dd><p>Convert the <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> to a value.  If no valid value is found, raise
-<a class="reference internal" href="exceptions.html#EOFError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#EOFError" title="EOFError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">EOFError</span></code></a>, <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> or <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.  Extra bytes in the
-input are ignored.</p>
+<code class="sig-prename descclassname">marshal.</code><code class="sig-name descname">loads</code><span class="sig-paren">(</span><em class="sig-param">bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#marshal.loads" title="永久链接至目标">¶</a></dt>
+<dd><p>将 <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> 转换为一个值。 如果找不到有效的值，则会引发 <a class="reference internal" href="exceptions.html#EOFError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#EOFError" title="EOFError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">EOFError</span></code></a>, <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 或 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。 输入的额外字节串会被忽略。</p>
 </dd></dl>
 
-<p>In addition, the following constants are defined:</p>
+<p>此外，还定义了以下常量：</p>
 <dl class="data">
 <dt id="marshal.version">
-<code class="descclassname">marshal.</code><code class="descname">version</code><a class="headerlink" href="#marshal.version" title="永久链接至目标">¶</a></dt>
-<dd><p>Indicates the format that the module uses. Version 0 is the historical
-format, version 1 shares interned strings and version 2 uses a binary format
-for floating point numbers.
-Version 3 adds support for object instancing and recursion.
-The current version is 4.</p>
+<code class="sig-prename descclassname">marshal.</code><code class="sig-name descname">version</code><a class="headerlink" href="#marshal.version" title="永久链接至目标">¶</a></dt>
+<dd><p>指明模块所使用的格式。 第 0 版为历史格式，第 1 版为共享固化的字符串，第 2 版对浮点数使用二进制格式。 第 3 版添加了对于对象实例化和递归的支持。 目前使用的为第 4 版。</p>
 </dd></dl>
 
 <p class="rubric">脚注</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The name of this module stems from a bit of terminology used by the designers of
-Modula-3 (amongst others), who use the term &quot;marshalling&quot; for shipping of data
-around in a self-contained form. Strictly speaking, &quot;to marshal&quot; means to
-convert some data from internal to external form (in an RPC buffer for instance)
-and &quot;unmarshalling&quot; for the reverse process.</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>此模块的名称来源于 Modula-3 (及其他语言) 的设计者所使用的术语，他们使用术语 &quot;marshal&quot; 来表示以自包含的形式传输数据。 严格地说，将数据从内部形式转换为外部形式 (例如用于 RPC 缓冲区) 称为 &quot;marshal&quot; 而其逆过程则称为 &quot;unmarshal&quot;。</p>
+</dd>
+</dl>
 </div>
 
 
@@ -209,16 +169,16 @@ and &quot;unmarshalling&quot; for the reverse process.</td></tr>
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">shelve</span></code> --- Python object persistence</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code> --- Python 对象持久化</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="dbm.html" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">dbm</span></code> --- Interfaces to Unix &quot;databases&quot;</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code> --- Unix &quot;数据库&quot; 接口</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/marshal.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/marshal.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/marshal.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/marshal.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/marshal.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/marshal.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -238,19 +198,22 @@ and &quot;unmarshalling&quot; for the reverse process.</td></tr>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="dbm.html" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html" title="dbm --- Interfaces to Unix &#34;databases&#34;"
+          <a href="dbm.html" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html" title="dbm --- Unix &#34;数据库&#34; 接口"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python object persistence"
+          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python 对象持久化"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="persistence.html" tppabs="https://docs.python.org/zh-cn/3/library/persistence.html" >数据持久化</a> &#187;</li>
@@ -272,15 +235,19 @@ and &quot;unmarshalling&quot; for the reverse process.</td></tr>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Tkå›¾å½¢ç”¨æˆ·ç•Œé¢(GUI) &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>Tkå›¾å½¢ç”¨æˆ·ç•Œé¢(GUI) &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="tkinter --- Tcl/Tkçš„Pythonæ¥å£" href="tkinter.html" />
     <link rel="prev" title="shlex --- Simple lexical analysis" href="shlex.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/tk.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="shlex.html" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html" title="shlex --- Simple lexical analysis"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" accesskey="U">Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -101,7 +109,7 @@
 <p><a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> æœ€å¤§çš„ä¼˜ç‚¹å°±ä¸€ä¸ªå­—ï¼šå¿«ï¼Œå†ä¸€ä¸ªï¼Œæ˜¯Pythonè‡ªå¸¦çš„ã€‚å°½ç®¡å®˜æ–¹æ–‡æ¡£ä¸å¤ªå®Œæ•´ï¼Œä½†æœ‰å…¶ä»–èµ„æºå¯ä»¥å‚è€ƒï¼Œæ¯”å¦‚Tkæ‰‹å†Œï¼Œæ•™ç¨‹ç­‰ã€‚ <a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> ä¹Ÿä»¥æ¯”è¾ƒè¿‡æ—¶çš„å¤–è§‚ä¸ºäººæ‰€çŸ¥ï¼Œä½†åœ¨Tk 8.5ä¸­ï¼Œè¿™ä¸€ç‚¹å¾—åˆ°äº†æå¤§çš„æ”¹è§‚ã€‚é™¤æ­¤ä¹‹å¤–ï¼Œå¦‚æœæœ‰å…´è¶£ï¼Œè¿˜æœ‰å…¶ä»–çš„ä¸€äº›GUIåº“å¯ä¾›ä½¿ç”¨ã€‚æ›´å¤šä¿¡æ¯ï¼Œè¯·å‚è€ƒ <a class="reference internal" href="othergui.html#other-gui-packages" tppabs="https://docs.python.org/zh-cn/3/library/othergui.html#other-gui-packages"><span class="std std-ref">å…¶ä»–å›¾å½¢ç”¨æˆ·ç•Œé¢ï¼ˆGUIï¼‰åŒ…</span></a>  å°èŠ‚ã€‚</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html"><code class="docutils literal notranslate"><span class="pre">tkinter</span></code> --- Tcl/Tkçš„Pythonæ¥å£</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code> --- Tcl/Tkçš„Pythonæ¥å£</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.html#tkinter-modules" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html#tkinter-modules">Tkinter æ¨¡å—</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.html#tkinter-life-preserver" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html#tkinter-life-preserver">Tkinter Life Preserver</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.html#how-to-use-this-section" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html#how-to-use-this-section">How To Use This Section</a></li>
@@ -126,11 +134,11 @@
 <li class="toctree-l2"><a class="reference internal" href="tkinter.html#file-handlers" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html#file-handlers">File Handlers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tkinter.ttk.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html"><code class="docutils literal notranslate"><span class="pre">tkinter.ttk</span></code> --- Tk themed widgets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#using-ttk" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#using-ttk">Using Ttk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.ttk.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.ttk</span></code> --- Tkä¸»é¢˜å°éƒ¨ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#using-ttk" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#using-ttk">ä½¿ç”¨ Ttk</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#ttk-widgets" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#ttk-widgets">Ttk Widgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#widget" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#widget">Widget</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#standard-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#standard-options">Standard Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#standard-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#standard-options">æ ‡å‡†é€‰é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#scrollable-widget-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#scrollable-widget-options">Scrollable Widget Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#label-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#label-options">Label Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#compatibility-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#compatibility-options">Compatibility Options</a></li>
@@ -139,19 +147,19 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#combobox" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#combobox">Combobox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#options">é€‰é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#virtual-events" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#virtual-events">Virtual events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-combobox" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#ttk-combobox">ttk.Combobox</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#spinbox" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#spinbox">Spinbox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id1" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id1">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id1" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id1">é€‰é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id2" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id2">Virtual events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-spinbox" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#ttk-spinbox">ttk.Spinbox</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#notebook" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#notebook">Notebook</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id3" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id3">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id3" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id3">é€‰é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#tab-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#tab-options">Tab Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#tab-identifiers" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#tab-identifiers">Tab Identifiers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id4" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id4">Virtual Events</a></li>
@@ -159,12 +167,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#progressbar" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#progressbar">Progressbar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id5" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id5">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id5" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id5">é€‰é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-progressbar" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#ttk-progressbar">ttk.Progressbar</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#separator" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#separator">Separator</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id6" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id6">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id6" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id6">é€‰é¡¹</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#sizegrip" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#sizegrip">Sizegrip</a><ul>
@@ -173,7 +181,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#treeview" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#treeview">Treeview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id7" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id7">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id7" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#id7">é€‰é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#item-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#item-options">Item Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#tag-options" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#tag-options">Tag Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#column-identifiers" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.ttk.html#column-identifiers">Column Identifiers</a></li>
@@ -187,7 +195,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tkinter.tix.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.tix.html"><code class="docutils literal notranslate"><span class="pre">tkinter.tix</span></code> --- Extension widgets for Tk</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.tix.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.tix.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.tix</span></code> --- Extension widgets for Tk</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.tix.html#using-tix" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.tix.html#using-tix">Using Tix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tkinter.tix.html#tix-widgets" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.tix.html#tix-widgets">Tix Widgets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#basic-widgets" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.tix.html#basic-widgets">Basic Widgets</a></li>
@@ -203,46 +211,46 @@
 <li class="toctree-l2"><a class="reference internal" href="tkinter.tix.html#tix-commands" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.tix.html#tix-commands">Tix Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tkinter.scrolledtext.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.scrolledtext.html"><code class="docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> --- æ»šåŠ¨æ–‡å­—æ§ä»¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.scrolledtext.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.scrolledtext.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> --- æ»šåŠ¨æ–‡å­—æ§ä»¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="idle.html" tppabs="https://docs.python.org/zh-cn/3/library/idle.html">IDLE</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="idle.html#menus" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#menus">ç›®å½•</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#file-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#file-menu-shell-and-editor">æ–‡ä»¶ç›®å½• ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#edit-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#edit-menu-shell-and-editor">ç¼–è¾‘ç›®å½•ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#format-menu-editor-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#format-menu-editor-window-only">Format menu (Editor window only)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#run-menu-editor-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#run-menu-editor-window-only">Run menu (Editor window only)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#shell-menu-shell-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#shell-menu-shell-window-only">Shell menu (Shell window only)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#debug-menu-shell-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#debug-menu-shell-window-only">Debug menu (Shell window only)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#options-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#options-menu-shell-and-editor">Options menu (Shell and Editor)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#window-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#window-menu-shell-and-editor">Window menu (Shell and Editor)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#help-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#help-menu-shell-and-editor">Help menu (Shell and Editor)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#context-menus" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#context-menus">Context Menus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#file-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#file-menu-shell-and-editor">æ–‡ä»¶èœå• ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#edit-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#edit-menu-shell-and-editor">ç¼–è¾‘èœå•ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#format-menu-editor-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#format-menu-editor-window-only">æ ¼å¼èœå•ï¼ˆä»… window ç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#run-menu-editor-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#run-menu-editor-window-only">è¿è¡Œèœå•ï¼ˆä»… window ç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#shell-menu-shell-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#shell-menu-shell-window-only">Shell èœå•ï¼ˆä»… window ç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#debug-menu-shell-window-only" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#debug-menu-shell-window-only">è°ƒè¯•èœå•ï¼ˆä»… window ç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#options-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#options-menu-shell-and-editor">é€‰é¡¹èœå•ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#window-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#window-menu-shell-and-editor">Window èœå•ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#help-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#help-menu-shell-and-editor">å¸®åŠ©èœå•ï¼ˆå‘½ä»¤è¡Œå’Œç¼–è¾‘å™¨ï¼‰</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#context-menus" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#context-menus">ä¸Šä¸‹æ–‡èœå•</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="idle.html#editing-and-navigation" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#editing-and-navigation">Editing and navigation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#editor-windows" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#editor-windows">Editor windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#key-bindings" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#key-bindings">Key bindings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#automatic-indentation" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#automatic-indentation">Automatic indentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#completions" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#completions">Completions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#calltips" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#calltips">Calltips</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#code-context" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#code-context">Code Context</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#python-shell-window" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#python-shell-window">Python Shell window</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#text-colors" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#text-colors">Text colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#editing-and-navigation" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#editing-and-navigation">ç¼–è¾‘å’Œå¯¼èˆª</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#editor-windows" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#editor-windows">ç¼–è¾‘çª—å£</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#key-bindings" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#key-bindings">æŒ‰é”®ç»‘å®š</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#automatic-indentation" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#automatic-indentation">è‡ªåŠ¨ç¼©è¿›</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#completions" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#completions">å®Œæˆ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#calltips" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#calltips">æç¤º</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#code-context" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#code-context">ä»£ç ä¸Šä¸‹æ–‡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#python-shell-window" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#python-shell-window">Python Shell çª—å£</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#text-colors" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#text-colors">æ–‡æœ¬é¢œè‰²</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="idle.html#startup-and-code-execution" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#startup-and-code-execution">Startup and code execution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#command-line-usage" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#command-line-usage">Command line usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#startup-failure" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#startup-failure">Startup failure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#running-user-code" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#running-user-code">Running user code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#user-output-in-shell" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#user-output-in-shell">User output in Shell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#developing-tkinter-applications" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#developing-tkinter-applications">Developing tkinter applications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#running-without-a-subprocess" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#running-without-a-subprocess">Running without a subprocess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#startup-and-code-execution" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#startup-and-code-execution">å¯åŠ¨å’Œä»£ç æ‰§è¡Œ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#command-line-usage" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#command-line-usage">å‘½ä»¤è¡Œè¯­æ³•</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#startup-failure" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#startup-failure">å¯åŠ¨å¤±è´¥</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#running-user-code" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#running-user-code">è¿è¡Œç”¨æˆ·ä»£ç </a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#user-output-in-shell" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#user-output-in-shell">Shellä¸­çš„ç”¨æˆ·è¾“å‡º</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#developing-tkinter-applications" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#developing-tkinter-applications">å¼€å‘ tkinter åº”ç”¨ç¨‹åº</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#running-without-a-subprocess" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#running-without-a-subprocess">åœ¨æ²¡æœ‰å­è¿›ç¨‹çš„æƒ…å†µä¸‹è¿è¡Œ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="idle.html#help-and-preferences" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#help-and-preferences">Help and preferences</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#help-sources" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#help-sources">Help sources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#setting-preferences" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#setting-preferences">Setting preferences</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#idle-on-macos" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#idle-on-macos">IDLE on macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="idle.html#extensions" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#extensions">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#help-and-preferences" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#help-and-preferences">å¸®åŠ©å’Œåå¥½</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#help-sources" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#help-sources">å¸®åŠ©æº</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#setting-preferences" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#setting-preferences">é¦–é€‰é¡¹è®¾ç½®</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#idle-on-macos" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#idle-on-macos">macOS ä¸Šçš„IDLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#extensions" tppabs="https://docs.python.org/zh-cn/3/library/idle.html#extensions">æ‰©å±•</a></li>
 </ul>
 </li>
 </ul>
@@ -260,16 +268,16 @@
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="shlex.html" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">shlex</span></code> --- Simple lexical analysis</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">shlex</span></code> --- Simple lexical analysis</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3/library/tkinter.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">tkinter</span></code> --- Tcl/Tkçš„Pythonæ¥å£</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code> --- Tcl/Tkçš„Pythonæ¥å£</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/tk.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/tk.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/tk.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/tk.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/tk.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/tk.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -294,14 +302,17 @@
         <li class="right" >
           <a href="shlex.html" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html" title="shlex --- Simple lexical analysis"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -322,15 +333,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

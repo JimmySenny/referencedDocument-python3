@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>copyreg --- Register pickle support functions &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>copyreg --- æ³¨å†Œé…åˆ pickle æ¨¡å—ä½¿ç”¨çš„å‡½æ•° &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="shelve --- Python object persistence" href="shelve.html" />
-    <link rel="prev" title="pickle --- Python object serialization" href="pickle.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="next" title="shelve --- Python å¯¹è±¡æŒä¹…åŒ–" href="shelve.html" />
+    <link rel="prev" title="pickle --- Python å¯¹è±¡åºåˆ—åŒ–" href="pickle.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/copyreg.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python object persistence"
+          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python å¯¹è±¡æŒä¹…åŒ–"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="pickle.html" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html" title="pickle --- Python object serialization"
+          <a href="pickle.html" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html" title="pickle --- Python å¯¹è±¡åºåˆ—åŒ–"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="persistence.html" tppabs="https://docs.python.org/zh-cn/3/library/persistence.html" accesskey="U">æ•°æ®æŒä¹…åŒ–</a> &#187;</li>
@@ -96,45 +104,30 @@
           <div class="body" role="main">
             
   <div class="section" id="module-copyreg">
-<span id="copyreg-register-pickle-support-functions"></span><h1><a class="reference internal" href="#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> --- Register <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> support functions<a class="headerlink" href="#module-copyreg" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/copyreg.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/copyreg.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/copyreg.py">Lib/copyreg.py</a></p>
+<span id="copyreg-register-pickle-support-functions"></span><h1><a class="reference internal" href="#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> --- æ³¨å†Œé…åˆ <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> æ¨¡å—ä½¿ç”¨çš„å‡½æ•°<a class="headerlink" href="#module-copyreg" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/copyreg.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/copyreg.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/copyreg.py">Lib/copyreg.py</a></p>
 <hr class="docutils" id="index-0" />
-<p>The <a class="reference internal" href="#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> module offers a way to define functions used while pickling
-specific objects.  The <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> and <a class="reference internal" href="copy.html#module-copy" tppabs="https://docs.python.org/zh-cn/3/library/copy.html#module-copy" title="copy: Shallow and deep copy operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code></a> modules use those functions
-when pickling/copying those objects.  The module provides configuration
-information about object constructors which are not classes.
-Such constructors may be factory functions or class instances.</p>
+<p><a class="reference internal" href="#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> æ¨¡å—æä¾›äº†å¯åœ¨å°å­˜ç‰¹å®šå¯¹è±¡æ—¶ä½¿ç”¨çš„ä¸€ç§å®šä¹‰å‡½æ•°æ–¹å¼ã€‚ <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> å’Œ <a class="reference internal" href="copy.html#module-copy" tppabs="https://docs.python.org/zh-cn/3/library/copy.html#module-copy" title="copy: Shallow and deep copy operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code></a> æ¨¡å—ä¼šåœ¨å°å­˜/æ‹·è´ç‰¹å®šå¯¹è±¡æ—¶ä½¿ç”¨è¿™äº›å‡½æ•°ã€‚ æ­¤æ¨¡å—æä¾›äº†éç±»å¯¹è±¡æ„é€ å™¨çš„ç›¸å…³é…ç½®ä¿¡æ¯ã€‚ è¿™æ ·çš„æ„é€ å™¨å¯ä»¥æ˜¯å·¥å‚å‡½æ•°æˆ–ç±»å®ä¾‹ã€‚</p>
 <dl class="function">
 <dt id="copyreg.constructor">
-<code class="descclassname">copyreg.</code><code class="descname">constructor</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#copyreg.constructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Declares <em>object</em> to be a valid constructor.  If <em>object</em> is not callable (and
-hence not valid as a constructor), raises <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.</p>
+<code class="sig-prename descclassname">copyreg.</code><code class="sig-name descname">constructor</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#copyreg.constructor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å°† <em>object</em> å£°æ˜ä¸ºä¸€ä¸ªæœ‰æ•ˆçš„æ„é€ å™¨ã€‚ å¦‚æœ <em>object</em> æ˜¯ä¸å¯è°ƒç”¨çš„ï¼ˆå› è€Œä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ„é€ å™¨ï¼‰åˆ™ä¼šå¼•å‘ <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="copyreg.pickle">
-<code class="descclassname">copyreg.</code><code class="descname">pickle</code><span class="sig-paren">(</span><em>type</em>, <em>function</em>, <em>constructor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#copyreg.pickle" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Declares that <em>function</em> should be used as a &quot;reduction&quot; function for objects
-of type <em>type</em>.  <em>function</em> should return either a string or a tuple
-containing two or three elements.</p>
-<p>The optional <em>constructor</em> parameter, if provided, is a callable object which
-can be used to reconstruct the object when called with the tuple of arguments
-returned by <em>function</em> at pickling time.  <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> will be raised if
-<em>object</em> is a class or <em>constructor</em> is not callable.</p>
-<p>See the <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module for more details on the interface
-expected of <em>function</em> and <em>constructor</em>.  Note that the
-<a class="reference internal" href="pickle.html#pickle.Pickler.dispatch_table" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#pickle.Pickler.dispatch_table" title="pickle.Pickler.dispatch_table"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dispatch_table</span></code></a> attribute of a pickler
-object or subclass of <a class="reference internal" href="pickle.html#pickle.Pickler" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#pickle.Pickler" title="pickle.Pickler"><code class="xref py py-class docutils literal notranslate"><span class="pre">pickle.Pickler</span></code></a> can also be used for
-declaring reduction functions.</p>
+<code class="sig-prename descclassname">copyreg.</code><code class="sig-name descname">pickle</code><span class="sig-paren">(</span><em class="sig-param">type</em>, <em class="sig-param">function</em>, <em class="sig-param">constructor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#copyreg.pickle" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å£°æ˜è¯¥ <em>function</em> åº”å½“è¢«ç”¨ä½œ <em>type</em> ç±»å‹å¯¹è±¡çš„â€œå½’çº¦å‡½æ•°â€ã€‚ <em>function</em> åº”å½“è¿”å›å­—ç¬¦ä¸²æˆ–åŒ…å«ä¸¤åˆ°ä¸‰ä¸ªå…ƒç´ çš„å…ƒç»„ã€‚</p>
+<p>å¦‚æœæä¾›äº†å¯é€‰çš„ <em>constructor</em> å½¢å‚ï¼Œå®ƒåº”å½“æ˜¯ä¸€ä¸ªå¯ç”¨æ¥é‡å»ºç›¸åº”å¯¹è±¡çš„å¯è°ƒç”¨å¯¹è±¡ï¼Œåœ¨è°ƒç”¨è¯¥å¯¹è±¡æ—¶åº”ä¼ å…¥ç”± <em>function</em> æ‰€è¿”å›çš„å‚æ•°å…ƒç»„ã€‚ å¦‚æœ <em>object</em> æ˜¯ä¸€ä¸ªç±»æˆ– <em>constructor</em> æ˜¯ä¸å¯è°ƒç”¨çš„åˆ™å°†å¼•å‘ <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>ã€‚</p>
+<p>è¯·æŸ¥çœ‹ <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> æ¨¡å—äº†è§£ <em>function</em> å’Œ <em>constructor</em> æ‰€è¦æ±‚çš„æ¥å£çš„è¯¦æƒ…ã€‚ è¯·æ³¨æ„ä¸€ä¸ª pickler å¯¹è±¡æˆ– <a class="reference internal" href="pickle.html#pickle.Pickler" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#pickle.Pickler" title="pickle.Pickler"><code class="xref py py-class docutils literal notranslate"><span class="pre">pickle.Pickler</span></code></a> çš„å­ç±»çš„ <a class="reference internal" href="pickle.html#pickle.Pickler.dispatch_table" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#pickle.Pickler.dispatch_table" title="pickle.Pickler.dispatch_table"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dispatch_table</span></code></a> å±æ€§ä¹Ÿå¯ä»¥è¢«ç”¨æ¥å£°æ˜å½’çº¦å‡½æ•°ã€‚</p>
 </dd></dl>
 
 <div class="section" id="example">
 <h2>ç¤ºä¾‹<a class="headerlink" href="#example" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>The example below would like to show how to register a pickle function and how
-it will be used:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copyreg</span><span class="o">,</span> <span class="nn">copy</span><span class="o">,</span> <span class="nn">pickle</span>
+<p>ä»¥ä¸‹ç¤ºä¾‹å°†ä¼šæ˜¾ç¤ºå¦‚ä½•æ³¨å†Œä¸€ä¸ªå°å­˜å‡½æ•°ï¼Œä»¥åŠå¦‚ä½•æ¥ä½¿ç”¨å®ƒï¼š</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copyreg</span><span class="o">,</span> <span class="nn">copy</span><span class="o">,</span> <span class="nn">pickle</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">pickle_c</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
@@ -143,9 +136,9 @@ it will be used:</p>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">copyreg</span><span class="o">.</span><span class="n">pickle</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">pickle_c</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  
 <span class="go">pickling a C instance...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  
 <span class="go">pickling a C instance...</span>
 </pre></div>
 </div>
@@ -158,9 +151,9 @@ it will be used:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">copyreg</span></code> --- Register <code class="docutils literal notranslate"><span class="pre">pickle</span></code> support functions</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code> --- æ³¨å†Œé…åˆ <code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code> æ¨¡å—ä½¿ç”¨çš„å‡½æ•°</a><ul>
 <li><a class="reference internal" href="#example">ç¤ºä¾‹</a></li>
 </ul>
 </li>
@@ -168,16 +161,16 @@ it will be used:</p>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="pickle.html" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">pickle</span></code> --- Python object serialization</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code> --- Python å¯¹è±¡åºåˆ—åŒ–</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">shelve</span></code> --- Python object persistence</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code> --- Python å¯¹è±¡æŒä¹…åŒ–</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/copyreg.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/copyreg.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/copyreg.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/copyreg.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/copyreg.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/copyreg.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -197,19 +190,22 @@ it will be used:</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python object persistence"
+          <a href="shelve.html" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html" title="shelve --- Python å¯¹è±¡æŒä¹…åŒ–"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="pickle.html" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html" title="pickle --- Python object serialization"
+          <a href="pickle.html" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html" title="pickle --- Python å¯¹è±¡åºåˆ—åŒ–"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="persistence.html" tppabs="https://docs.python.org/zh-cn/3/library/persistence.html" >æ•°æ®æŒä¹…åŒ–</a> &#187;</li>
@@ -231,15 +227,19 @@ it will be used:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

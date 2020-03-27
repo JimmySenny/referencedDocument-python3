@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>calendar --- General calendar-related functions &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>calendar --- 日历相关函数 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="collections --- 容器数据类型" href="collections.html" />
-    <link rel="prev" title="datetime --- 基础日期/时间数据类型" href="datetime.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="datetime --- 基本的日期和时间类型" href="datetime.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/calendar.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -59,16 +64,19 @@
           <a href="collections.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.html" title="collections --- 容器数据类型"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="datetime.html" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html" title="datetime --- 基础日期/时间数据类型"
+          <a href="datetime.html" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html" title="datetime --- 基本的日期和时间类型"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" accesskey="U">数据类型</a> &#187;</li>
@@ -96,292 +104,225 @@
           <div class="body" role="main">
             
   <div class="section" id="module-calendar">
-<span id="calendar-general-calendar-related-functions"></span><h1><a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> --- General calendar-related functions<a class="headerlink" href="#module-calendar" title="永久链接至标题">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/calendar.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/calendar.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/calendar.py">Lib/calendar.py</a></p>
+<span id="calendar-general-calendar-related-functions"></span><h1><a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> --- 日历相关函数<a class="headerlink" href="#module-calendar" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/calendar.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/calendar.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/calendar.py">Lib/calendar.py</a></p>
 <hr class="docutils" />
-<p>This module allows you to output calendars like the Unix <strong class="program">cal</strong> program,
-and provides additional useful functions related to the calendar. By default,
-these calendars have Monday as the first day of the week, and Sunday as the last
-(the European convention). Use <a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-func docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> to set the first day of
-the week to Sunday (6) or to any other weekday.  Parameters that specify dates
-are given as integers. For related
-functionality, see also the <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> and <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> modules.</p>
-<p>The functions and classes defined in this module
-use an idealized calendar, the current Gregorian calendar extended indefinitely
-in both directions.  This matches the definition of the &quot;proleptic Gregorian&quot;
-calendar in Dershowitz and Reingold's book &quot;Calendrical Calculations&quot;, where
-it's the base calendar for all computations.  Zero and negative years are
-interpreted as prescribed by the ISO 8601 standard.  Year 0 is 1 BC, year -1 is
-2 BC, and so on.</p>
+<p>这个模块让你可以输出像 Unix <strong class="program">cal</strong> 那样的日历，它还提供了其它与日历相关的实用函数。 默认情况下，这些日历把星期一当作一周的第一天，星期天为一周的最后一天（按照欧洲惯例）。 可以使用 <a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-func docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> 方法设置一周的第一天为星期天 (6) 或者其它任意一天。 使用整数作为指定日期的参数。 更多相关的函数，参见 <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> 和 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模块。</p>
+<p>在这个模块中定义的函数和类都基于一个理想化的日历，现行公历向过去和未来两个方向无限扩展。这与 Dershowitz 和 Reingold 的书 &quot;历法计算&quot; 中所有计算的基本日历 -- &quot;proleptic Gregorian&quot; 日历的定义相符合。 ISO 8601标准还规定了 0 和 负数年份。0年指公元前1年， -1年指公元前2年，依此类推。</p>
 <dl class="class">
 <dt id="calendar.Calendar">
-<em class="property">class </em><code class="descclassname">calendar.</code><code class="descname">Calendar</code><span class="sig-paren">(</span><em>firstweekday=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Creates a <a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> object. <em>firstweekday</em> is an integer specifying the
-first day of the week. <code class="docutils literal notranslate"><span class="pre">0</span></code> is Monday (the default), <code class="docutils literal notranslate"><span class="pre">6</span></code> is Sunday.</p>
-<p>A <a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> object provides several methods that can be used for
-preparing the calendar data for formatting. This class doesn't do any formatting
-itself. This is the job of subclasses.</p>
-<p><a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> 实例有下列方法：</p>
+<em class="property">class </em><code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">Calendar</code><span class="sig-paren">(</span><em class="sig-param">firstweekday=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个 <a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> 对象。 <em>firstweekday</em> 是一个整数，用于指定一周的第一天。 <code class="docutils literal notranslate"><span class="pre">0</span></code> 是星期一（默认值），<code class="docutils literal notranslate"><span class="pre">6</span></code> 是星期天。</p>
+<p><a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> 对象提供了一些可被用于准备日历数据格式化的方法。 这个类本身不执行任何格式化操作。 这部分任务应由子类来完成。</p>
+<p><a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> 类的实例有下列方法：</p>
 <dl class="method">
 <dt id="calendar.Calendar.iterweekdays">
-<code class="descname">iterweekdays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.iterweekdays" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator for the week day numbers that will be used for one
-week.  The first value from the iterator will be the same as the value of
-the <a class="reference internal" href="#calendar.firstweekday" title="calendar.firstweekday"><code class="xref py py-attr docutils literal notranslate"><span class="pre">firstweekday</span></code></a> property.</p>
+<code class="sig-name descname">iterweekdays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.iterweekdays" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，迭代器的内容为一星期的数字。迭代器的第一个值与 <a class="reference internal" href="#calendar.firstweekday" title="calendar.firstweekday"><code class="xref py py-attr docutils literal notranslate"><span class="pre">firstweekday</span></code></a> 属性的值一至。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.itermonthdates">
-<code class="descname">itermonthdates</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdates" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator for the month <em>month</em> (1--12) in the year <em>year</em>. This
-iterator will return all days (as <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> objects) for the
-month and all days before the start of the month or after the end of the
-month that are required to get a complete week.</p>
+<code class="sig-name descname">itermonthdates</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdates" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，迭代器的内容为 <em>year</em> 年 <em>month</em> 月(1-12)的日期。这个迭代器返回当月的所有日期 ( <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>  对象)，日期包含了本月头尾用于组成完整一周的日期。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.itermonthdays">
-<code class="descname">itermonthdays</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator for the month <em>month</em> in the year <em>year</em> similar to
-<a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a>, but not restricted by the <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>
-range. Days returned will simply be day of the month numbers.  For the
-days outside of the specified month, the day number is <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<code class="sig-name descname">itermonthdays</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，迭代器的内容与 <a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a> 类似，为 <em>year</em> 年 <em>month</em> 月的日期，但不受 <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> 范围限制。返回的日期为当月每一天的日期对应的天数。对于不在当月的日期，显示为 <code class="docutils literal notranslate"><span class="pre">0</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.itermonthdays2">
-<code class="descname">itermonthdays2</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays2" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator for the month <em>month</em> in the year <em>year</em> similar to
-<a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a>, but not restricted by the <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>
-range. Days returned will be tuples consisting of a day of the month
-number and a week day number.</p>
+<code class="sig-name descname">itermonthdays2</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays2" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，迭代器的内容与 <a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a> 类似为 <em>year</em> 年 <em>month</em> 月的日期，但不受 <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> 范围的限制。迭代器中的元素为一个由日期和代表星期几的数字组成的的元组。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.itermonthdays3">
-<code class="descname">itermonthdays3</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays3" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator for the month <em>month</em> in the year <em>year</em> similar to
-<a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a>, but not restricted by the <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>
-range. Days returned will be tuples consisting of a year, a month and a day
-of the month numbers.</p>
+<code class="sig-name descname">itermonthdays3</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays3" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，迭代器的内容与 <a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a> 类似为 <em>year</em> 年 <em>month</em> 月的日期，但不受 <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> 范围的限制。迭代器的元素为一个由年，月，日组成的元组。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.itermonthdays4">
-<code class="descname">itermonthdays4</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays4" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator for the month <em>month</em> in the year <em>year</em> similar to
-<a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a>, but not restricted by the <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>
-range. Days returned will be tuples consisting of a year, a month, a day
-of the month, and a day of the week numbers.</p>
+<code class="sig-name descname">itermonthdays4</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.itermonthdays4" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，迭代器的内容与 <a class="reference internal" href="#calendar.Calendar.itermonthdates" title="calendar.Calendar.itermonthdates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itermonthdates()</span></code></a> 类似为 <em>year</em> 年 <em>month</em> 月的日期，但不受 <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> 范围的限制。迭代器的元素为一个由年，月，日和代表星期几的数字组成的元组。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.monthdatescalendar">
-<code class="descname">monthdatescalendar</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.monthdatescalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list of the weeks in the month <em>month</em> of the <em>year</em> as full
-weeks.  Weeks are lists of seven <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> objects.</p>
+<code class="sig-name descname">monthdatescalendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.monthdatescalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个表示指定年月的周列表。周列表由七个  <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> 对象组成。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.monthdays2calendar">
-<code class="descname">monthdays2calendar</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.monthdays2calendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list of the weeks in the month <em>month</em> of the <em>year</em> as full
-weeks.  Weeks are lists of seven tuples of day numbers and weekday
-numbers.</p>
+<code class="sig-name descname">monthdays2calendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.monthdays2calendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个表示指定年月的周列表。周列表由七个代表日期的数字和代表周几的数字组成的二元元组。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.monthdayscalendar">
-<code class="descname">monthdayscalendar</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.monthdayscalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list of the weeks in the month <em>month</em> of the <em>year</em> as full
-weeks.  Weeks are lists of seven day numbers.</p>
+<code class="sig-name descname">monthdayscalendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.monthdayscalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个表示指定年月的周列表。周列表由七个代表日期的数字组成。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.yeardatescalendar">
-<code class="descname">yeardatescalendar</code><span class="sig-paren">(</span><em>year</em>, <em>width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.yeardatescalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the data for the specified year ready for formatting. The return
-value is a list of month rows. Each month row contains up to <em>width</em>
-months (defaulting to 3). Each month contains between 4 and 6 weeks and
-each week contains 1--7 days. Days are <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> objects.</p>
+<code class="sig-name descname">yeardatescalendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.yeardatescalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回可以用来格式化的指定年月的数据。返回的值是一个列表，列表是月份组成的行。每一行包含了最多 <em>width</em> 个月(默认为3)。每个月包含了4到6周，每周包含1--7天。每一天使用 <a class="reference internal" href="datetime.html#datetime.date" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a> 对象。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.yeardays2calendar">
-<code class="descname">yeardays2calendar</code><span class="sig-paren">(</span><em>year</em>, <em>width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.yeardays2calendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the data for the specified year ready for formatting (similar to
-<a class="reference internal" href="#calendar.Calendar.yeardatescalendar" title="calendar.Calendar.yeardatescalendar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">yeardatescalendar()</span></code></a>). Entries in the week lists are tuples of day
-numbers and weekday numbers. Day numbers outside this month are zero.</p>
+<code class="sig-name descname">yeardays2calendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.yeardays2calendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回可以用来模式化的指定年月的数据(与 <a class="reference internal" href="#calendar.Calendar.yeardatescalendar" title="calendar.Calendar.yeardatescalendar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">yeardatescalendar()</span></code></a> 类似)。周列表的元素是由表示日期的数字和表示星期几的数字组成的元组。不在这个月的日子为0。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.Calendar.yeardayscalendar">
-<code class="descname">yeardayscalendar</code><span class="sig-paren">(</span><em>year</em>, <em>width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.yeardayscalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the data for the specified year ready for formatting (similar to
-<a class="reference internal" href="#calendar.Calendar.yeardatescalendar" title="calendar.Calendar.yeardatescalendar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">yeardatescalendar()</span></code></a>). Entries in the week lists are day numbers. Day
-numbers outside this month are zero.</p>
+<code class="sig-name descname">yeardayscalendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar.yeardayscalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回可以用来模式化的指定年月的数据(与 <a class="reference internal" href="#calendar.Calendar.yeardatescalendar" title="calendar.Calendar.yeardatescalendar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">yeardatescalendar()</span></code></a> 类似)。周列表的元素是表示日期的数字。不在这个月的日子为0。</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="calendar.TextCalendar">
-<em class="property">class </em><code class="descclassname">calendar.</code><code class="descname">TextCalendar</code><span class="sig-paren">(</span><em>firstweekday=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>This class can be used to generate plain text calendars.</p>
-<p><a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> instances have the following methods:</p>
+<em class="property">class </em><code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">TextCalendar</code><span class="sig-paren">(</span><em class="sig-param">firstweekday=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>可以使用这个类生成纯文本日历。</p>
+<p><a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> 实例有以下方法：</p>
 <dl class="method">
 <dt id="calendar.TextCalendar.formatmonth">
-<code class="descname">formatmonth</code><span class="sig-paren">(</span><em>theyear</em>, <em>themonth</em>, <em>w=0</em>, <em>l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.formatmonth" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a month's calendar in a multi-line string. If <em>w</em> is provided, it
-specifies the width of the date columns, which are centered. If <em>l</em> is
-given, it specifies the number of lines that each week will use. Depends
-on the first weekday as specified in the constructor or set by the
-<a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> method.</p>
+<code class="sig-name descname">formatmonth</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">themonth</em>, <em class="sig-param">w=0</em>, <em class="sig-param">l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.formatmonth" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个多行字符串来表示指定年月的日历。<em>w</em> 为日期的宽度，但始终保持日期居中。<em>l</em> 指定了每星期占用的行数。以上这些还依赖于构造器或者 <a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> 方法指定的周的第一天是哪一天。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.TextCalendar.prmonth">
-<code class="descname">prmonth</code><span class="sig-paren">(</span><em>theyear</em>, <em>themonth</em>, <em>w=0</em>, <em>l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.prmonth" title="永久链接至目标">¶</a></dt>
-<dd><p>Print a month's calendar as returned by <a class="reference internal" href="#calendar.TextCalendar.formatmonth" title="calendar.TextCalendar.formatmonth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonth()</span></code></a>.</p>
+<code class="sig-name descname">prmonth</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">themonth</em>, <em class="sig-param">w=0</em>, <em class="sig-param">l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.prmonth" title="永久链接至目标">¶</a></dt>
+<dd><p>与 <a class="reference internal" href="#calendar.TextCalendar.formatmonth" title="calendar.TextCalendar.formatmonth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonth()</span></code></a> 方法一样，返回一个月的日历。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.TextCalendar.formatyear">
-<code class="descname">formatyear</code><span class="sig-paren">(</span><em>theyear</em>, <em>w=2</em>, <em>l=1</em>, <em>c=6</em>, <em>m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.formatyear" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a <em>m</em>-column calendar for an entire year as a multi-line string.
-Optional parameters <em>w</em>, <em>l</em>, and <em>c</em> are for date column width, lines per
-week, and number of spaces between month columns, respectively. Depends on
-the first weekday as specified in the constructor or set by the
-<a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> method.  The earliest year for which a calendar
-can be generated is platform-dependent.</p>
+<code class="sig-name descname">formatyear</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">w=2</em>, <em class="sig-param">l=1</em>, <em class="sig-param">c=6</em>, <em class="sig-param">m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.formatyear" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个多行字符串，这个字符串为一个 <em>m</em> 列日历。可选参数 <em>w</em>, <em>l</em>, 和 <em>c</em> 分别表示日期列数， 周的行数， 和月之间的间隔。同样，以上这些还依赖于构造器或者 <a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> 指定哪一天为一周的第一天。日历的第一年由平台依赖于使用的平台。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.TextCalendar.pryear">
-<code class="descname">pryear</code><span class="sig-paren">(</span><em>theyear</em>, <em>w=2</em>, <em>l=1</em>, <em>c=6</em>, <em>m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.pryear" title="永久链接至目标">¶</a></dt>
-<dd><p>Print the calendar for an entire year as returned by <a class="reference internal" href="#calendar.TextCalendar.formatyear" title="calendar.TextCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a>.</p>
+<code class="sig-name descname">pryear</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">w=2</em>, <em class="sig-param">l=1</em>, <em class="sig-param">c=6</em>, <em class="sig-param">m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.TextCalendar.pryear" title="永久链接至目标">¶</a></dt>
+<dd><p>与 <a class="reference internal" href="#calendar.TextCalendar.formatyear" title="calendar.TextCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a> 方法一样，返回一整年的日历。</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="calendar.HTMLCalendar">
-<em class="property">class </em><code class="descclassname">calendar.</code><code class="descname">HTMLCalendar</code><span class="sig-paren">(</span><em>firstweekday=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>This class can be used to generate HTML calendars.</p>
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> instances have the following methods:</p>
+<em class="property">class </em><code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">HTMLCalendar</code><span class="sig-paren">(</span><em class="sig-param">firstweekday=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>可以使用这个类生成 HTML 日历。</p>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> 实例有以下方法：</p>
 <dl class="method">
 <dt id="calendar.HTMLCalendar.formatmonth">
-<code class="descname">formatmonth</code><span class="sig-paren">(</span><em>theyear</em>, <em>themonth</em>, <em>withyear=True</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar.formatmonth" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a month's calendar as an HTML table. If <em>withyear</em> is true the year
-will be included in the header, otherwise just the month name will be
-used.</p>
+<code class="sig-name descname">formatmonth</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">themonth</em>, <em class="sig-param">withyear=True</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar.formatmonth" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个 HTML 表格作为指定年月的日历。 <em>withyear</em> 为真，则年份将会包含在表头，否则只显示月份。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.HTMLCalendar.formatyear">
-<code class="descname">formatyear</code><span class="sig-paren">(</span><em>theyear</em>, <em>width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar.formatyear" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a year's calendar as an HTML table. <em>width</em> (defaulting to 3)
-specifies the number of months per row.</p>
+<code class="sig-name descname">formatyear</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">width=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar.formatyear" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个 HTML 表格作为指定年份的日历。 <em>width</em> (默认为3) 用于规定每一行显示月份的数量。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="calendar.HTMLCalendar.formatyearpage">
-<code class="descname">formatyearpage</code><span class="sig-paren">(</span><em>theyear</em>, <em>width=3</em>, <em>css='calendar.css'</em>, <em>encoding=None</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar.formatyearpage" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a year's calendar as a complete HTML page. <em>width</em> (defaulting to
-3) specifies the number of months per row. <em>css</em> is the name for the
-cascading style sheet to be used. <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a> can be passed if no style
-sheet should be used. <em>encoding</em> specifies the encoding to be used for the
-output (defaulting to the system default encoding).</p>
+<code class="sig-name descname">formatyearpage</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">width=3</em>, <em class="sig-param">css='calendar.css'</em>, <em class="sig-param">encoding=None</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.HTMLCalendar.formatyearpage" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个完整的 HTML 页面作为指定年份的日历。 <em>width*(默认为3) 用于规定每一行显示的月份数量。 *css</em> 为层叠样式表的名字。如果不使用任何层叠样式表，可以使用 <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a> 。 <em>encoding</em> 为输出页面的编码 (默认为系统的默认编码)。</p>
 </dd></dl>
 
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> has the following attributes you can override to
-customize the CSS classes used by the calendar:</p>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> 有以下属性，你可以重载它们来自定义应用日历的样式。</p>
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclasses">
-<code class="descname">cssclasses</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclasses" title="永久链接至目标">¶</a></dt>
-<dd><p>A list of CSS classes used for each weekday. The default class list is:</p>
+<code class="sig-name descname">cssclasses</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclasses" title="永久链接至目标">¶</a></dt>
+<dd><p>一个对应星期一到星期天的 CSS class 列表。默认列表为</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cssclasses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mon&quot;</span><span class="p">,</span> <span class="s2">&quot;tue&quot;</span><span class="p">,</span> <span class="s2">&quot;wed&quot;</span><span class="p">,</span> <span class="s2">&quot;thu&quot;</span><span class="p">,</span> <span class="s2">&quot;fri&quot;</span><span class="p">,</span> <span class="s2">&quot;sat&quot;</span><span class="p">,</span> <span class="s2">&quot;sun&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>more styles can be added for each day:</p>
+<p>可以向每天加入其它样式</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cssclasses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mon text-bold&quot;</span><span class="p">,</span> <span class="s2">&quot;tue&quot;</span><span class="p">,</span> <span class="s2">&quot;wed&quot;</span><span class="p">,</span> <span class="s2">&quot;thu&quot;</span><span class="p">,</span> <span class="s2">&quot;fri&quot;</span><span class="p">,</span> <span class="s2">&quot;sat&quot;</span><span class="p">,</span> <span class="s2">&quot;sun red&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Note that the length of this list must be seven items.</p>
+<p>需要注意的是，列表的长度必须为7。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclass_noday">
-<code class="descname">cssclass_noday</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_noday" title="永久链接至目标">¶</a></dt>
-<dd><p>The CSS class for a weekday occurring in the previous or coming month.</p>
+<code class="sig-name descname">cssclass_noday</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_noday" title="永久链接至目标">¶</a></dt>
+<dd><p>工作日的 CSS 类在上个月或下个月发生。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclasses_weekday_head">
-<code class="descname">cssclasses_weekday_head</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclasses_weekday_head" title="永久链接至目标">¶</a></dt>
-<dd><p>A list of CSS classes used for weekday names in the header row.
-The default is the same as <a class="reference internal" href="#calendar.HTMLCalendar.cssclasses" title="calendar.HTMLCalendar.cssclasses"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cssclasses</span></code></a>.</p>
+<code class="sig-name descname">cssclasses_weekday_head</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclasses_weekday_head" title="永久链接至目标">¶</a></dt>
+<dd><p>用于标题行中的工作日名称的 CSS 类 列表。默认值与 <a class="reference internal" href="#calendar.HTMLCalendar.cssclasses" title="calendar.HTMLCalendar.cssclasses"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cssclasses</span></code></a> 相同。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclass_month_head">
-<code class="descname">cssclass_month_head</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_month_head" title="永久链接至目标">¶</a></dt>
-<dd><p>The month's head CSS class (used by <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonthname()</span></code>).
-The default value is <code class="docutils literal notranslate"><span class="pre">&quot;month&quot;</span></code>.</p>
+<code class="sig-name descname">cssclass_month_head</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_month_head" title="永久链接至目标">¶</a></dt>
+<dd><p>月份的头 CSS 类（由 <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonthname()</span></code> 使用）。默认值为 <code class="docutils literal notranslate"><span class="pre">&quot;month&quot;</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclass_month">
-<code class="descname">cssclass_month</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_month" title="永久链接至目标">¶</a></dt>
-<dd><p>The CSS class for the whole month's table (used by <a class="reference internal" href="#calendar.HTMLCalendar.formatmonth" title="calendar.HTMLCalendar.formatmonth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonth()</span></code></a>).
-The default value is <code class="docutils literal notranslate"><span class="pre">&quot;month&quot;</span></code>.</p>
+<code class="sig-name descname">cssclass_month</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_month" title="永久链接至目标">¶</a></dt>
+<dd><p>某个月的月历的 CSS 类（由 <a class="reference internal" href="#calendar.HTMLCalendar.formatmonth" title="calendar.HTMLCalendar.formatmonth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonth()</span></code></a> 使用）。默认值为 <code class="docutils literal notranslate"><span class="pre">&quot;month&quot;</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclass_year">
-<code class="descname">cssclass_year</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_year" title="永久链接至目标">¶</a></dt>
-<dd><p>The CSS class for the whole year's table of tables (used by
-<a class="reference internal" href="#calendar.HTMLCalendar.formatyear" title="calendar.HTMLCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a>). The default value is <code class="docutils literal notranslate"><span class="pre">&quot;year&quot;</span></code>.</p>
+<code class="sig-name descname">cssclass_year</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_year" title="永久链接至目标">¶</a></dt>
+<dd><p>某年的年历的 CSS 类（由 <a class="reference internal" href="#calendar.HTMLCalendar.formatyear" title="calendar.HTMLCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a> 使用）。默认值为 <code class="docutils literal notranslate"><span class="pre">&quot;year&quot;</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="calendar.HTMLCalendar.cssclass_year_head">
-<code class="descname">cssclass_year_head</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_year_head" title="永久链接至目标">¶</a></dt>
-<dd><p>The CSS class for the table head for the whole year (used by
-<a class="reference internal" href="#calendar.HTMLCalendar.formatyear" title="calendar.HTMLCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a>). The default value is <code class="docutils literal notranslate"><span class="pre">&quot;year&quot;</span></code>.</p>
+<code class="sig-name descname">cssclass_year_head</code><a class="headerlink" href="#calendar.HTMLCalendar.cssclass_year_head" title="永久链接至目标">¶</a></dt>
+<dd><p>年历的·表头 CSS 类（由 <a class="reference internal" href="#calendar.HTMLCalendar.formatyear" title="calendar.HTMLCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a> 使用）。默认值为 <code class="docutils literal notranslate"><span class="pre">&quot;year&quot;</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
-<p>Note that although the naming for the above described class attributes is
-singular (e.g. <code class="docutils literal notranslate"><span class="pre">cssclass_month</span></code> <code class="docutils literal notranslate"><span class="pre">cssclass_noday</span></code>), one can replace the
-single CSS class with a space separated list of CSS classes, for example:</p>
+<p>需要注意的是，尽管上面命名的样式类都是单独出现的(如： <code class="docutils literal notranslate"><span class="pre">cssclass_month</span></code> <code class="docutils literal notranslate"><span class="pre">cssclass_noday</span></code>), 但我们可以使用空格将样式类列表中的多个元素分隔开，例如：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;text-bold text-red&quot;</span>
 </pre></div>
 </div>
-<p>Here is an example how <code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> can be customized:</p>
+<p>下面是一个如何自定义  <code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> 的示例</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomHTMLCal</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">HTMLCalendar</span><span class="p">):</span>
     <span class="n">cssclasses</span> <span class="o">=</span> <span class="p">[</span><span class="n">style</span> <span class="o">+</span> <span class="s2">&quot; text-nowrap&quot;</span> <span class="k">for</span> <span class="n">style</span> <span class="ow">in</span>
                   <span class="n">calendar</span><span class="o">.</span><span class="n">HTMLCalendar</span><span class="o">.</span><span class="n">cssclasses</span><span class="p">]</span>
@@ -394,16 +335,13 @@ single CSS class with a space separated list of CSS classes, for example:</p>
 
 <dl class="class">
 <dt id="calendar.LocaleTextCalendar">
-<em class="property">class </em><code class="descclassname">calendar.</code><code class="descname">LocaleTextCalendar</code><span class="sig-paren">(</span><em>firstweekday=0</em>, <em>locale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.LocaleTextCalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>This subclass of <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> can be passed a locale name in the
-constructor and will return month and weekday names in the specified locale.
-If this locale includes an encoding all strings containing month and weekday
-names will be returned as unicode.</p>
+<em class="property">class </em><code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">LocaleTextCalendar</code><span class="sig-paren">(</span><em class="sig-param">firstweekday=0</em>, <em class="sig-param">locale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.LocaleTextCalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>这个子类 <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> 可以在构造函数中传递一个语言环境名称，并且返回月份和星期几的名称在特定语言环境中。如果此语言环境包含编码，则包含月份和工作日名称的所有字符串将作为 unicode 返回。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="calendar.LocaleHTMLCalendar">
-<em class="property">class </em><code class="descclassname">calendar.</code><code class="descname">LocaleHTMLCalendar</code><span class="sig-paren">(</span><em>firstweekday=0</em>, <em>locale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.LocaleHTMLCalendar" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">LocaleHTMLCalendar</code><span class="sig-paren">(</span><em class="sig-param">firstweekday=0</em>, <em class="sig-param">locale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.LocaleHTMLCalendar" title="永久链接至目标">¶</a></dt>
 <dd><p>This subclass of <a class="reference internal" href="#calendar.HTMLCalendar" title="calendar.HTMLCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code></a> can be passed a locale name in the
 constructor and will return month and weekday names in the specified
 locale. If this locale includes an encoding all strings containing month and
@@ -411,19 +349,14 @@ weekday names will be returned as unicode.</p>
 </dd></dl>
 
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">The <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatweekday()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonthname()</span></code> methods of these two
-classes temporarily change the current locale to the given <em>locale</em>.  Because
-the current locale is a process-wide setting, they are not thread-safe.</p>
+<p class="admonition-title">注解</p>
+<p>这两个类的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatweekday()</span></code> 和 <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonthname()</span></code> 方法临时更改dang当前区域至给定 <em>locale</em> 。由于当前的区域设置是进程范围的设置，因此它们不是线程安全的。</p>
 </div>
-<p>For simple text calendars this module provides the following functions.</p>
+<p>对于简单的文本日历，这个模块提供了以下方法。</p>
 <dl class="function">
 <dt id="calendar.setfirstweekday">
-<code class="descclassname">calendar.</code><code class="descname">setfirstweekday</code><span class="sig-paren">(</span><em>weekday</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.setfirstweekday" title="永久链接至目标">¶</a></dt>
-<dd><p>Sets the weekday (<code class="docutils literal notranslate"><span class="pre">0</span></code> is Monday, <code class="docutils literal notranslate"><span class="pre">6</span></code> is Sunday) to start each week. The
-values <code class="xref py py-const docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">TUESDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">WEDNESDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">THURSDAY</span></code>,
-<code class="xref py py-const docutils literal notranslate"><span class="pre">FRIDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SATURDAY</span></code>, and <code class="xref py py-const docutils literal notranslate"><span class="pre">SUNDAY</span></code> are provided for
-convenience. For example, to set the first weekday to Sunday:</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">setfirstweekday</code><span class="sig-paren">(</span><em class="sig-param">weekday</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.setfirstweekday" title="永久链接至目标">¶</a></dt>
+<dd><p>设置每一周的开始(<code class="docutils literal notranslate"><span class="pre">0</span></code> 表示星期一，<code class="docutils literal notranslate"><span class="pre">6</span></code> 表示星期天)。calendar还提供了  <code class="xref py py-const docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">TUESDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">WEDNESDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">THURSDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">FRIDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SATURDAY</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">SUNDAY</span></code> 几个常量方便使用。例如，设置每周的第一天为星期天</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">calendar</span>
 <span class="n">calendar</span><span class="o">.</span><span class="n">setfirstweekday</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">SUNDAY</span><span class="p">)</span>
 </pre></div>
@@ -432,126 +365,109 @@ convenience. For example, to set the first weekday to Sunday:</p>
 
 <dl class="function">
 <dt id="calendar.firstweekday">
-<code class="descclassname">calendar.</code><code class="descname">firstweekday</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#calendar.firstweekday" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns the current setting for the weekday to start each week.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">firstweekday</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#calendar.firstweekday" title="永久链接至目标">¶</a></dt>
+<dd><p>返回当前设置的每星期的第一天的数值。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.isleap">
-<code class="descclassname">calendar.</code><code class="descname">isleap</code><span class="sig-paren">(</span><em>year</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.isleap" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> if <em>year</em> is a leap year, otherwise <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">isleap</code><span class="sig-paren">(</span><em class="sig-param">year</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.isleap" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>year</em> 是闰年则返回  <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> ,否则返回 <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a>。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.leapdays">
-<code class="descclassname">calendar.</code><code class="descname">leapdays</code><span class="sig-paren">(</span><em>y1</em>, <em>y2</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.leapdays" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns the number of leap years in the range from <em>y1</em> to <em>y2</em> (exclusive),
-where <em>y1</em> and <em>y2</em> are years.</p>
-<p>This function works for ranges spanning a century change.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">leapdays</code><span class="sig-paren">(</span><em class="sig-param">y1</em>, <em class="sig-param">y2</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.leapdays" title="永久链接至目标">¶</a></dt>
+<dd><p>返回在范围 <em>y1</em> 至 <em>y2</em> （包含 y1 和 y2 ）之间的闰年的年数，其中 <em>y1</em> 和 <em>y2</em> 是年份。</p>
+<p>此函数适用于跨越一个世纪变化的范围。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.weekday">
-<code class="descclassname">calendar.</code><code class="descname">weekday</code><span class="sig-paren">(</span><em>year</em>, <em>month</em>, <em>day</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.weekday" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns the day of the week (<code class="docutils literal notranslate"><span class="pre">0</span></code> is Monday) for <em>year</em> (<code class="docutils literal notranslate"><span class="pre">1970</span></code>--...),
-<em>month</em> (<code class="docutils literal notranslate"><span class="pre">1</span></code>--<code class="docutils literal notranslate"><span class="pre">12</span></code>), <em>day</em> (<code class="docutils literal notranslate"><span class="pre">1</span></code>--<code class="docutils literal notranslate"><span class="pre">31</span></code>).</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">weekday</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em>, <em class="sig-param">day</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.weekday" title="永久链接至目标">¶</a></dt>
+<dd><p>返回某年（ <code class="docutils literal notranslate"><span class="pre">1970</span></code> -- ...），某月（ <code class="docutils literal notranslate"><span class="pre">1</span></code> -- <code class="docutils literal notranslate"><span class="pre">12</span></code> ），某日（ <code class="docutils literal notranslate"><span class="pre">1</span></code> -- <code class="docutils literal notranslate"><span class="pre">31</span></code> ）是星期几（ <code class="docutils literal notranslate"><span class="pre">0</span></code> 是星期一）。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.weekheader">
-<code class="descclassname">calendar.</code><code class="descname">weekheader</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.weekheader" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a header containing abbreviated weekday names. <em>n</em> specifies the width in
-characters for one weekday.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">weekheader</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.weekheader" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个包含星期几的缩写名的头。 <em>n</em> 指定星期几缩写的字符宽度。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.monthrange">
-<code class="descclassname">calendar.</code><code class="descname">monthrange</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.monthrange" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns weekday of first day of the month and number of days in month,  for the
-specified <em>year</em> and <em>month</em>.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">monthrange</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.monthrange" title="永久链接至目标">¶</a></dt>
+<dd><p>返回指定 <em>年份</em> 的指定 <em>月份</em> 的第一天是星期几和这个月的天数。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.monthcalendar">
-<code class="descclassname">calendar.</code><code class="descname">monthcalendar</code><span class="sig-paren">(</span><em>year</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.monthcalendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns a matrix representing a month's calendar.  Each row represents a week;
-days outside of the month a represented by zeros. Each week begins with Monday
-unless set by <a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-func docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a>.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">monthcalendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.monthcalendar" title="永久链接至目标">¶</a></dt>
+<dd><p>返回表示一个月的日历的矩阵。每一行代表一周；此月份外的日子由零表示。除非由 <a class="reference internal" href="#calendar.setfirstweekday" title="calendar.setfirstweekday"><code class="xref py py-func docutils literal notranslate"><span class="pre">setfirstweekday()</span></code></a> 设置，否则每周以周一为始。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.prmonth">
-<code class="descclassname">calendar.</code><code class="descname">prmonth</code><span class="sig-paren">(</span><em>theyear</em>, <em>themonth</em>, <em>w=0</em>, <em>l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.prmonth" title="永久链接至目标">¶</a></dt>
-<dd><p>Prints a month's calendar as returned by <a class="reference internal" href="#calendar.month" title="calendar.month"><code class="xref py py-func docutils literal notranslate"><span class="pre">month()</span></code></a>.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">prmonth</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">themonth</em>, <em class="sig-param">w=0</em>, <em class="sig-param">l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.prmonth" title="永久链接至目标">¶</a></dt>
+<dd><p>打印由 <a class="reference internal" href="#calendar.month" title="calendar.month"><code class="xref py py-func docutils literal notranslate"><span class="pre">month()</span></code></a> 返回的一个月的日历。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.month">
-<code class="descclassname">calendar.</code><code class="descname">month</code><span class="sig-paren">(</span><em>theyear</em>, <em>themonth</em>, <em>w=0</em>, <em>l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.month" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns a month's calendar in a multi-line string using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonth()</span></code>
-of the <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> class.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">month</code><span class="sig-paren">(</span><em class="sig-param">theyear</em>, <em class="sig-param">themonth</em>, <em class="sig-param">w=0</em>, <em class="sig-param">l=0</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.month" title="永久链接至目标">¶</a></dt>
+<dd><p>使用 <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> 类的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatmonth()</span></code> 以多行字符串形式返回月份日历。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.prcal">
-<code class="descclassname">calendar.</code><code class="descname">prcal</code><span class="sig-paren">(</span><em>year</em>, <em>w=0</em>, <em>l=0</em>, <em>c=6</em>, <em>m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.prcal" title="永久链接至目标">¶</a></dt>
-<dd><p>Prints the calendar for an entire year as returned by  <a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-func docutils literal notranslate"><span class="pre">calendar()</span></code></a>.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">prcal</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">w=0</em>, <em class="sig-param">l=0</em>, <em class="sig-param">c=6</em>, <em class="sig-param">m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.prcal" title="永久链接至目标">¶</a></dt>
+<dd><p>打印由 <a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-func docutils literal notranslate"><span class="pre">calendar()</span></code></a> 返回的整年的日历。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.calendar">
-<code class="descclassname">calendar.</code><code class="descname">calendar</code><span class="sig-paren">(</span><em>year</em>, <em>w=2</em>, <em>l=1</em>, <em>c=6</em>, <em>m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.calendar" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns a 3-column calendar for an entire year as a multi-line string using
-the <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code> of the <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> class.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">calendar</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">w=2</em>, <em class="sig-param">l=1</em>, <em class="sig-param">c=6</em>, <em class="sig-param">m=3</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.calendar" title="永久链接至目标">¶</a></dt>
+<dd><p>使用 <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> 类的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code> 返回整年的3列的日历以多行字符串的形式。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="calendar.timegm">
-<code class="descclassname">calendar.</code><code class="descname">timegm</code><span class="sig-paren">(</span><em>tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.timegm" title="永久链接至目标">¶</a></dt>
-<dd><p>An unrelated but handy function that takes a time tuple such as returned by
-the <a class="reference internal" href="time.html#time.gmtime" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.gmtime" title="time.gmtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">gmtime()</span></code></a> function in the <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module, and returns the
-corresponding Unix timestamp value, assuming an epoch of 1970, and the POSIX
-encoding.  In fact, <a class="reference internal" href="time.html#time.gmtime" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.gmtime" title="time.gmtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.gmtime()</span></code></a> and <a class="reference internal" href="#calendar.timegm" title="calendar.timegm"><code class="xref py py-func docutils literal notranslate"><span class="pre">timegm()</span></code></a> are each others'
-inverse.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">timegm</code><span class="sig-paren">(</span><em class="sig-param">tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.timegm" title="永久链接至目标">¶</a></dt>
+<dd><p>一个不相关但很好用的函数，它接受一个时间元组例如 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模块中的 <a class="reference internal" href="time.html#time.gmtime" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.gmtime" title="time.gmtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">gmtime()</span></code></a> 函数的返回并返回相应的 Unix 时间戳值，假定 1970 年开始计数， POSIX 编码。实际上， <a class="reference internal" href="time.html#time.gmtime" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.gmtime" title="time.gmtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.gmtime()</span></code></a> 和 <a class="reference internal" href="#calendar.timegm" title="calendar.timegm"><code class="xref py py-func docutils literal notranslate"><span class="pre">timegm()</span></code></a> 是彼此相反的。</p>
 </dd></dl>
 
-<p>The <a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> module exports the following data attributes:</p>
+<p><a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> 模块包含以下数据属性：</p>
 <dl class="data">
 <dt id="calendar.day_name">
-<code class="descclassname">calendar.</code><code class="descname">day_name</code><a class="headerlink" href="#calendar.day_name" title="永久链接至目标">¶</a></dt>
-<dd><p>An array that represents the days of the week in the current locale.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">day_name</code><a class="headerlink" href="#calendar.day_name" title="永久链接至目标">¶</a></dt>
+<dd><p>在当前语言环境下表示星期几的数组。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="calendar.day_abbr">
-<code class="descclassname">calendar.</code><code class="descname">day_abbr</code><a class="headerlink" href="#calendar.day_abbr" title="永久链接至目标">¶</a></dt>
-<dd><p>An array that represents the abbreviated days of the week in the current locale.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">day_abbr</code><a class="headerlink" href="#calendar.day_abbr" title="永久链接至目标">¶</a></dt>
+<dd><p>在当前语言环境下表示星期几缩写的数组。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="calendar.month_name">
-<code class="descclassname">calendar.</code><code class="descname">month_name</code><a class="headerlink" href="#calendar.month_name" title="永久链接至目标">¶</a></dt>
-<dd><p>An array that represents the months of the year in the current locale.  This
-follows normal convention of January being month number 1, so it has a length of
-13 and  <code class="docutils literal notranslate"><span class="pre">month_name[0]</span></code> is the empty string.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">month_name</code><a class="headerlink" href="#calendar.month_name" title="永久链接至目标">¶</a></dt>
+<dd><p>在当前语言环境下表示一年中月份的数组。这遵循一月的月号为 1 的通常惯例，所以它的长度为 13 且 <code class="docutils literal notranslate"><span class="pre">month_name[0]</span></code> 是空字符串。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="calendar.month_abbr">
-<code class="descclassname">calendar.</code><code class="descname">month_abbr</code><a class="headerlink" href="#calendar.month_abbr" title="永久链接至目标">¶</a></dt>
-<dd><p>An array that represents the abbreviated months of the year in the current
-locale.  This follows normal convention of January being month number 1, so it
-has a length of 13 and  <code class="docutils literal notranslate"><span class="pre">month_abbr[0]</span></code> is the empty string.</p>
+<code class="sig-prename descclassname">calendar.</code><code class="sig-name descname">month_abbr</code><a class="headerlink" href="#calendar.month_abbr" title="永久链接至目标">¶</a></dt>
+<dd><p>在当前语言环境下表示月份简写的数组。这遵循一月的月号为 1 的通常惯例，所以它的长度为 13 且 <code class="docutils literal notranslate"><span class="pre">month_abbr[0]</span></code> 是空字符串。</p>
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<dl class="last docutils">
-<dt>模块 <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a></dt>
-<dd>Object-oriented interface to dates and times with similar functionality to the
-<a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module.</dd>
-<dt>模块 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a></dt>
-<dd>Low-level time related functions.</dd>
+<p class="admonition-title">参见</p>
+<dl class="simple">
+<dt>模块 <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a></dt><dd><p>为日期和时间提供与 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模块相似功能的面向对象接口。</p>
+</dd>
+<dt>模块 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a></dt><dd><p>底层时间相关函数。</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -564,16 +480,16 @@ has a length of 13 and  <code class="docutils literal notranslate"><span class="
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="datetime.html" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">datetime</span></code> --- 基础日期/时间数据类型</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code> --- 基本的日期和时间类型</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="collections.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">collections</span></code> --- 容器数据类型</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code> --- 容器数据类型</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/calendar.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/calendar.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/calendar.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/calendar.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/calendar.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/calendar.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -596,16 +512,19 @@ has a length of 13 and  <code class="docutils literal notranslate"><span class="
           <a href="collections.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.html" title="collections --- 容器数据类型"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="datetime.html" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html" title="datetime --- 基础日期/时间数据类型"
+          <a href="datetime.html" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html" title="datetime --- 基本的日期和时间类型"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" >数据类型</a> &#187;</li>
@@ -627,15 +546,19 @@ has a length of 13 and  <code class="docutils literal notranslate"><span class="
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

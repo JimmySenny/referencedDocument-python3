@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>string --- 常见的字符串操作 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>string --- 常见的字符串操作 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="re --- 正则表达式操作" href="re.html" />
     <link rel="prev" title="文本处理服务" href="text.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/string.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="text.html" tppabs="https://docs.python.org/zh-cn/3/library/text.html" title="文本处理服务"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="text.html" tppabs="https://docs.python.org/zh-cn/3/library/text.html" accesskey="U">文本处理服务</a> &#187;</li>
@@ -97,208 +105,146 @@
             
   <div class="section" id="module-string">
 <span id="string-common-string-operations"></span><h1><a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> --- 常见的字符串操作<a class="headerlink" href="#module-string" title="永久链接至标题">¶</a></h1>
-<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/string.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/string.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/string.py">Lib/string.py</a></p>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/csv.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/csv.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/string.py">Lib/string.py</a></p>
 <hr class="docutils" />
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
+<p class="admonition-title">参见</p>
 <p><a class="reference internal" href="stdtypes.html#textseq" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#textseq"><span class="std std-ref">文本序列类型 --- str</span></a></p>
-<p class="last"><a class="reference internal" href="stdtypes.html#string-methods" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods"><span class="std std-ref">字符串的方法</span></a></p>
+<p><a class="reference internal" href="stdtypes.html#string-methods" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods"><span class="std std-ref">字符串的方法</span></a></p>
 </div>
 <div class="section" id="string-constants">
 <h2>字符串常量<a class="headerlink" href="#string-constants" title="永久链接至标题">¶</a></h2>
 <p>此模块中定义的常量为：</p>
 <dl class="data">
 <dt id="string.ascii_letters">
-<code class="descclassname">string.</code><code class="descname">ascii_letters</code><a class="headerlink" href="#string.ascii_letters" title="永久链接至目标">¶</a></dt>
-<dd><p>The concatenation of the <a class="reference internal" href="#string.ascii_lowercase" title="string.ascii_lowercase"><code class="xref py py-const docutils literal notranslate"><span class="pre">ascii_lowercase</span></code></a> and <a class="reference internal" href="#string.ascii_uppercase" title="string.ascii_uppercase"><code class="xref py py-const docutils literal notranslate"><span class="pre">ascii_uppercase</span></code></a>
-constants described below.  This value is not locale-dependent.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">ascii_letters</code><a class="headerlink" href="#string.ascii_letters" title="永久链接至目标">¶</a></dt>
+<dd><p>下文所述 <a class="reference internal" href="#string.ascii_lowercase" title="string.ascii_lowercase"><code class="xref py py-const docutils literal notranslate"><span class="pre">ascii_lowercase</span></code></a> 和 <a class="reference internal" href="#string.ascii_uppercase" title="string.ascii_uppercase"><code class="xref py py-const docutils literal notranslate"><span class="pre">ascii_uppercase</span></code></a> 常量的拼连。 该值不依赖于语言区域。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.ascii_lowercase">
-<code class="descclassname">string.</code><code class="descname">ascii_lowercase</code><a class="headerlink" href="#string.ascii_lowercase" title="永久链接至目标">¶</a></dt>
-<dd><p>The lowercase letters <code class="docutils literal notranslate"><span class="pre">'abcdefghijklmnopqrstuvwxyz'</span></code>.  This value is not
-locale-dependent and will not change.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">ascii_lowercase</code><a class="headerlink" href="#string.ascii_lowercase" title="永久链接至目标">¶</a></dt>
+<dd><p>小写字母 <code class="docutils literal notranslate"><span class="pre">'abcdefghijklmnopqrstuvwxyz'</span></code>。 该值不依赖于语言区域，不会发生改变。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.ascii_uppercase">
-<code class="descclassname">string.</code><code class="descname">ascii_uppercase</code><a class="headerlink" href="#string.ascii_uppercase" title="永久链接至目标">¶</a></dt>
-<dd><p>The uppercase letters <code class="docutils literal notranslate"><span class="pre">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></code>.  This value is not
-locale-dependent and will not change.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">ascii_uppercase</code><a class="headerlink" href="#string.ascii_uppercase" title="永久链接至目标">¶</a></dt>
+<dd><p>大写字母 <code class="docutils literal notranslate"><span class="pre">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></code>。 该值不依赖于语言区域，不会发生改变。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.digits">
-<code class="descclassname">string.</code><code class="descname">digits</code><a class="headerlink" href="#string.digits" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">digits</code><a class="headerlink" href="#string.digits" title="永久链接至目标">¶</a></dt>
 <dd><p>字符串 <code class="docutils literal notranslate"><span class="pre">'0123456789'</span></code>。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.hexdigits">
-<code class="descclassname">string.</code><code class="descname">hexdigits</code><a class="headerlink" href="#string.hexdigits" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">hexdigits</code><a class="headerlink" href="#string.hexdigits" title="永久链接至目标">¶</a></dt>
 <dd><p>字符串 <code class="docutils literal notranslate"><span class="pre">'0123456789abcdefABCDEF'</span></code>。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.octdigits">
-<code class="descclassname">string.</code><code class="descname">octdigits</code><a class="headerlink" href="#string.octdigits" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">octdigits</code><a class="headerlink" href="#string.octdigits" title="永久链接至目标">¶</a></dt>
 <dd><p>字符串 <code class="docutils literal notranslate"><span class="pre">'01234567'</span></code>。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.punctuation">
-<code class="descclassname">string.</code><code class="descname">punctuation</code><a class="headerlink" href="#string.punctuation" title="永久链接至目标">¶</a></dt>
-<dd><p>String of ASCII characters which are considered punctuation characters
-in the <code class="docutils literal notranslate"><span class="pre">C</span></code> locale.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">punctuation</code><a class="headerlink" href="#string.punctuation" title="永久链接至目标">¶</a></dt>
+<dd><p>由在 <code class="docutils literal notranslate"><span class="pre">C</span></code> 区域设置中被视为标点符号的 ASCII 字符所组成的字符串: <code class="docutils literal notranslate"><span class="pre">!&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[\]^_`{|}~</span></code>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.printable">
-<code class="descclassname">string.</code><code class="descname">printable</code><a class="headerlink" href="#string.printable" title="永久链接至目标">¶</a></dt>
-<dd><p>String of ASCII characters which are considered printable.  This is a
-combination of <a class="reference internal" href="#string.digits" title="string.digits"><code class="xref py py-const docutils literal notranslate"><span class="pre">digits</span></code></a>, <a class="reference internal" href="#string.ascii_letters" title="string.ascii_letters"><code class="xref py py-const docutils literal notranslate"><span class="pre">ascii_letters</span></code></a>, <a class="reference internal" href="#string.punctuation" title="string.punctuation"><code class="xref py py-const docutils literal notranslate"><span class="pre">punctuation</span></code></a>,
-and <a class="reference internal" href="#string.whitespace" title="string.whitespace"><code class="xref py py-const docutils literal notranslate"><span class="pre">whitespace</span></code></a>.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">printable</code><a class="headerlink" href="#string.printable" title="永久链接至目标">¶</a></dt>
+<dd><p>由被视为可打印符号的 ASCII 字符组成的字符串。 这是 <a class="reference internal" href="#string.digits" title="string.digits"><code class="xref py py-const docutils literal notranslate"><span class="pre">digits</span></code></a>, <a class="reference internal" href="#string.ascii_letters" title="string.ascii_letters"><code class="xref py py-const docutils literal notranslate"><span class="pre">ascii_letters</span></code></a>, <a class="reference internal" href="#string.punctuation" title="string.punctuation"><code class="xref py py-const docutils literal notranslate"><span class="pre">punctuation</span></code></a> 和 <a class="reference internal" href="#string.whitespace" title="string.whitespace"><code class="xref py py-const docutils literal notranslate"><span class="pre">whitespace</span></code></a> 的总和。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="string.whitespace">
-<code class="descclassname">string.</code><code class="descname">whitespace</code><a class="headerlink" href="#string.whitespace" title="永久链接至目标">¶</a></dt>
-<dd><p>A string containing all ASCII characters that are considered whitespace.
-This includes the characters space, tab, linefeed, return, formfeed, and
-vertical tab.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">whitespace</code><a class="headerlink" href="#string.whitespace" title="永久链接至目标">¶</a></dt>
+<dd><p>由被视为空白符号的 ASCII 字符组成的字符串。 其中包括空格、制表、换行、回车、进纸和纵向制表符。</p>
 </dd></dl>
 
 </div>
 <div class="section" id="custom-string-formatting">
-<span id="string-formatting"></span><h2>Custom String Formatting<a class="headerlink" href="#custom-string-formatting" title="永久链接至标题">¶</a></h2>
-<p>The built-in string class provides the ability to do complex variable
-substitutions and value formatting via the <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> method described in
-<span class="target" id="index-0"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3101  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3101'" tppabs="https://www.python.org/dev/peps/pep-3101"><strong>PEP 3101</strong></a>.  The <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class in the <a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> module allows
-you to create and customize your own string formatting behaviors using the same
-implementation as the built-in <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> method.</p>
+<span id="string-formatting"></span><h2>自定义字符串格式化<a class="headerlink" href="#custom-string-formatting" title="永久链接至标题">¶</a></h2>
+<p>内置的字符串类提供了通过使用 <span class="target" id="index-17"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3101  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3101'" tppabs="https://www.python.org/dev/peps/pep-3101"><strong>PEP 3101</strong></a> 所描述的 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> 方法进行复杂变量替换和值格式化的能力。 <a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> 模块中的 <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 类允许你使用与内置 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> 方法相同的实现来创建并定制你自己的字符串格式化行为。</p>
 <dl class="class">
 <dt id="string.Formatter">
-<em class="property">class </em><code class="descclassname">string.</code><code class="descname">Formatter</code><a class="headerlink" href="#string.Formatter" title="永久链接至目标">¶</a></dt>
-<dd><p>The <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class has the following public methods:</p>
+<em class="property">class </em><code class="sig-prename descclassname">string.</code><code class="sig-name descname">Formatter</code><a class="headerlink" href="#string.Formatter" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 类包含下列公有方法：</p>
 <dl class="method">
 <dt id="string.Formatter.format">
-<code class="descname">format</code><span class="sig-paren">(</span><em>format_string</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.format" title="永久链接至目标">¶</a></dt>
-<dd><p>The primary API method.  It takes a format string and
-an arbitrary set of positional and keyword arguments.
-It is just a wrapper that calls <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a>.</p>
+<code class="sig-name descname">format</code><span class="sig-paren">(</span><em class="sig-param">format_string</em>, <em class="sig-param">/</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.format" title="永久链接至目标">¶</a></dt>
+<dd><p>首要的 API 方法。 它接受一个格式字符串和任意一组位置和关键字参数。 它只是一个调用 <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> 的包装器。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>A format string argument is now <a class="reference internal" href="glossary.html#positional-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#positional-only-parameter"><span class="std std-ref">positional-only</span></a>.</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>格式字符串参数现在是 <a class="reference internal" href="glossary.html#positional-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#positional-only-parameter"><span class="std std-ref">仅限位置参数</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Formatter.vformat">
-<code class="descname">vformat</code><span class="sig-paren">(</span><em>format_string</em>, <em>args</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.vformat" title="永久链接至目标">¶</a></dt>
-<dd><p>This function does the actual work of formatting.  It is exposed as a
-separate function for cases where you want to pass in a predefined
-dictionary of arguments, rather than unpacking and repacking the
-dictionary as individual arguments using the <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>
-syntax.  <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> does the work of breaking up the format string
-into character data and replacement fields.  It calls the various
-methods described below.</p>
+<code class="sig-name descname">vformat</code><span class="sig-paren">(</span><em class="sig-param">format_string</em>, <em class="sig-param">args</em>, <em class="sig-param">kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.vformat" title="永久链接至目标">¶</a></dt>
+<dd><p>此函数执行实际的格式化操作。 它被公开为一个单独的函数，用于需要传入一个预定义字母作为参数，而不是使用 <code class="docutils literal notranslate"><span class="pre">*args</span></code> 和 <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> 语法将字典解包为多个单独参数并重打包的情况。 <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> 完成将格式字符串分解为字符数据和替换字段的工作。 它会调用下文所述的几种不同方法。</p>
 </dd></dl>
 
-<p>In addition, the <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> defines a number of methods that are
-intended to be replaced by subclasses:</p>
+<p>此外，<a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 还定义了一些旨在被子类替换的方法：</p>
 <dl class="method">
 <dt id="string.Formatter.parse">
-<code class="descname">parse</code><span class="sig-paren">(</span><em>format_string</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.parse" title="永久链接至目标">¶</a></dt>
-<dd><p>Loop over the format_string and return an iterable of tuples
-(<em>literal_text</em>, <em>field_name</em>, <em>format_spec</em>, <em>conversion</em>).  This is used
-by <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> to break the string into either literal text, or
-replacement fields.</p>
-<p>The values in the tuple conceptually represent a span of literal text
-followed by a single replacement field.  If there is no literal text
-(which can happen if two replacement fields occur consecutively), then
-<em>literal_text</em> will be a zero-length string.  If there is no replacement
-field, then the values of <em>field_name</em>, <em>format_spec</em> and <em>conversion</em>
-will be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">format_string</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.parse" title="永久链接至目标">¶</a></dt>
+<dd><p>循环遍历 format_string 并返回一个由可迭代对象组成的元组 (<em>literal_text</em>, <em>field_name</em>, <em>format_spec</em>, <em>conversion</em>)。 它会被 <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> 用来将字符串分解为文本字面值或替换字段。</p>
+<p>元组中的值在概念上表示一段字面文本加上一个替换字段。 如果没有字面文本（如果连续出现两个替换字段就会发生这种情况），则 <em>literal_text</em> 将是一个长度为零的字符串。 如果没有替换字段，则 <em>field_name</em>, <em>format_spec</em> 和 <em>conversion</em> 的值将为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Formatter.get_field">
-<code class="descname">get_field</code><span class="sig-paren">(</span><em>field_name</em>, <em>args</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.get_field" title="永久链接至目标">¶</a></dt>
-<dd><p>Given <em>field_name</em> as returned by <a class="reference internal" href="#string.Formatter.parse" title="string.Formatter.parse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse()</span></code></a> (see above), convert it to
-an object to be formatted.  Returns a tuple (obj, used_key).  The default
-version takes strings of the form defined in <span class="target" id="index-1"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3101  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3101'" tppabs="https://www.python.org/dev/peps/pep-3101"><strong>PEP 3101</strong></a>, such as
-&quot;0[name]&quot; or &quot;label.title&quot;.  <em>args</em> and <em>kwargs</em> are as passed in to
-<a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a>.  The return value <em>used_key</em> has the same meaning as the
-<em>key</em> parameter to <a class="reference internal" href="#string.Formatter.get_value" title="string.Formatter.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_value()</span></code></a>.</p>
+<code class="sig-name descname">get_field</code><span class="sig-paren">(</span><em class="sig-param">field_name</em>, <em class="sig-param">args</em>, <em class="sig-param">kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.get_field" title="永久链接至目标">¶</a></dt>
+<dd><p>给定 <em>field_name</em> 作为 <a class="reference internal" href="#string.Formatter.parse" title="string.Formatter.parse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse()</span></code></a> (见上文) 的返回值，将其转换为要格式化的对象。 返回一个元组 (obj, used_key)。 默认版本接受在 <span class="target" id="index-18"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3101  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3101'" tppabs="https://www.python.org/dev/peps/pep-3101"><strong>PEP 3101</strong></a> 所定义形式的字符串，例如 &quot;0[name]&quot; 或 &quot;label.title&quot;。 <em>args</em> 和 <em>kwargs</em> 与传给 <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> 的一样。 返回值 <em>used_key</em> 与 <a class="reference internal" href="#string.Formatter.get_value" title="string.Formatter.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_value()</span></code></a> 的 <em>key</em> 形参具有相同的含义。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Formatter.get_value">
-<code class="descname">get_value</code><span class="sig-paren">(</span><em>key</em>, <em>args</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.get_value" title="永久链接至目标">¶</a></dt>
-<dd><p>Retrieve a given field value.  The <em>key</em> argument will be either an
-integer or a string.  If it is an integer, it represents the index of the
-positional argument in <em>args</em>; if it is a string, then it represents a
-named argument in <em>kwargs</em>.</p>
-<p>The <em>args</em> parameter is set to the list of positional arguments to
-<a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a>, and the <em>kwargs</em> parameter is set to the dictionary of
-keyword arguments.</p>
-<p>For compound field names, these functions are only called for the first
-component of the field name; Subsequent components are handled through
-normal attribute and indexing operations.</p>
-<p>So for example, the field expression '0.name' would cause
-<a class="reference internal" href="#string.Formatter.get_value" title="string.Formatter.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_value()</span></code></a> to be called with a <em>key</em> argument of 0.  The <code class="docutils literal notranslate"><span class="pre">name</span></code>
-attribute will be looked up after <a class="reference internal" href="#string.Formatter.get_value" title="string.Formatter.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_value()</span></code></a> returns by calling the
-built-in <a class="reference internal" href="functions.html#getattr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#getattr" title="getattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code></a> function.</p>
-<p>If the index or keyword refers to an item that does not exist, then an
-<a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> or <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> should be raised.</p>
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">args</em>, <em class="sig-param">kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.get_value" title="永久链接至目标">¶</a></dt>
+<dd><p>提取给定的字段值。 <em>key</em> 参数将为整数或字符串。 如果是整数，它表示 <em>args</em> 中位置参数的索引；如果是字符串，它表示 <em>kwargs</em> 中的关键字参数名。</p>
+<p><em>args</em> 形参会被设为 <a class="reference internal" href="#string.Formatter.vformat" title="string.Formatter.vformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vformat()</span></code></a> 的位置参数列表，而 <em>kwargs</em> 形参会被设为由关键字参数组成的字典。</p>
+<p>对于复合字段名称，仅会为字段名称的第一个组件调用这些函数；后续组件会通过普通属性和索引操作来进行处理。</p>
+<p>因此举例来说，字段表达式 '0.name' 将导致调用 <a class="reference internal" href="#string.Formatter.get_value" title="string.Formatter.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_value()</span></code></a> 时附带 <em>key</em> 参数值 0。 在 <a class="reference internal" href="#string.Formatter.get_value" title="string.Formatter.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_value()</span></code></a> 通过调用内置的 <a class="reference internal" href="functions.html#getattr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#getattr" title="getattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code></a> 函数返回后将会查找 <code class="docutils literal notranslate"><span class="pre">name</span></code> 属性。</p>
+<p>如果索引或关键字引用了一个不存在的项，则将引发 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> 或 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Formatter.check_unused_args">
-<code class="descname">check_unused_args</code><span class="sig-paren">(</span><em>used_args</em>, <em>args</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.check_unused_args" title="永久链接至目标">¶</a></dt>
-<dd><p>Implement checking for unused arguments if desired.  The arguments to this
-function is the set of all argument keys that were actually referred to in
-the format string (integers for positional arguments, and strings for
-named arguments), and a reference to the <em>args</em> and <em>kwargs</em> that was
-passed to vformat.  The set of unused args can be calculated from these
-parameters.  <a class="reference internal" href="#string.Formatter.check_unused_args" title="string.Formatter.check_unused_args"><code class="xref py py-meth docutils literal notranslate"><span class="pre">check_unused_args()</span></code></a> is assumed to raise an exception if
-the check fails.</p>
+<code class="sig-name descname">check_unused_args</code><span class="sig-paren">(</span><em class="sig-param">used_args</em>, <em class="sig-param">args</em>, <em class="sig-param">kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.check_unused_args" title="永久链接至目标">¶</a></dt>
+<dd><p>在必要时实现对未使用参数进行检测。 此函数的参数是是格式字符串中实际引用的所有参数键的集合（整数表示位置参数，字符串表示名称参数），以及被传给 vformat 的 <em>args</em> 和 <em>kwargs</em> 的引用。 未使用参数的集合可以根据这些形参计算出来。 如果检测失败则 <a class="reference internal" href="#string.Formatter.check_unused_args" title="string.Formatter.check_unused_args"><code class="xref py py-meth docutils literal notranslate"><span class="pre">check_unused_args()</span></code></a> 应会引发一个异常。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Formatter.format_field">
-<code class="descname">format_field</code><span class="sig-paren">(</span><em>value</em>, <em>format_spec</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.format_field" title="永久链接至目标">¶</a></dt>
-<dd><p><a class="reference internal" href="#string.Formatter.format_field" title="string.Formatter.format_field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_field()</span></code></a> simply calls the global <a class="reference internal" href="functions.html#format" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a> built-in.  The
-method is provided so that subclasses can override it.</p>
+<code class="sig-name descname">format_field</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">format_spec</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.format_field" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="#string.Formatter.format_field" title="string.Formatter.format_field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_field()</span></code></a> 会简单地调用内置全局函数 <a class="reference internal" href="functions.html#format" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a>。 提供该方法是为了让子类能够重载它。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Formatter.convert_field">
-<code class="descname">convert_field</code><span class="sig-paren">(</span><em>value</em>, <em>conversion</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.convert_field" title="永久链接至目标">¶</a></dt>
-<dd><p>Converts the value (returned by <a class="reference internal" href="#string.Formatter.get_field" title="string.Formatter.get_field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_field()</span></code></a>) given a conversion type
-(as in the tuple returned by the <a class="reference internal" href="#string.Formatter.parse" title="string.Formatter.parse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse()</span></code></a> method).  The default
-version understands 's' (str), 'r' (repr) and 'a' (ascii) conversion
-types.</p>
+<code class="sig-name descname">convert_field</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">conversion</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Formatter.convert_field" title="永久链接至目标">¶</a></dt>
+<dd><p>使用给定的转换类型（来自 <a class="reference internal" href="#string.Formatter.parse" title="string.Formatter.parse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse()</span></code></a> 方法所返回的元组）来转换（由 <a class="reference internal" href="#string.Formatter.get_field" title="string.Formatter.get_field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_field()</span></code></a> 所返回的）值。 默认版本支持 's' (str), 'r' (repr) 和 'a' (ascii) 等转换类型。</p>
 </dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="format-string-syntax">
-<span id="formatstrings"></span><h2>Format String Syntax<a class="headerlink" href="#format-string-syntax" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> method and the <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class share the same
-syntax for format strings (although in the case of <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a>,
-subclasses can define their own format string syntax).  The syntax is
-related to that of <a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">formatted string literals</span></a>, but
-there are differences.</p>
-<p id="index-2">Format strings contain &quot;replacement fields&quot; surrounded by curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code>.
-Anything that is not contained in braces is considered literal text, which is
-copied unchanged to the output.  If you need to include a brace character in the
-literal text, it can be escaped by doubling: <code class="docutils literal notranslate"><span class="pre">{{</span></code> and <code class="docutils literal notranslate"><span class="pre">}}</span></code>.</p>
-<p>The grammar for a replacement field is as follows:</p>
+<span id="formatstrings"></span><h2>格式字符串语法<a class="headerlink" href="#format-string-syntax" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> 方法和 <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 类共享相同的格式字符串语法（虽然对于 <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 来说，其子类可以定义它们自己的格式字符串语法）。 具体语法与 <a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">格式化字符串字面值</span></a> 相似，但也存在区别。</p>
+<p id="index-2">格式字符串包含有以花括号 <code class="docutils literal notranslate"><span class="pre">{}</span></code> 括起来的“替换字段”。 不在花括号之内的内容被视为字面文本，会不加修改地复制到输出中。 如果你需要在字面文本中包含花括号字符，可以通过重复来转义: <code class="docutils literal notranslate"><span class="pre">{{</span></code> and <code class="docutils literal notranslate"><span class="pre">}}</span></code>。</p>
+<p>替换字段的语法如下：</p>
 <blockquote>
 <div><pre>
-<strong id="grammar-token-replacement-field">replacement_field</strong> ::=  &quot;{&quot; [<a class="reference internal" href="#grammar-token-field-name"><code class="xref docutils literal notranslate"><span class="pre">field_name</span></code></a>] [&quot;!&quot; <a class="reference internal" href="#grammar-token-conversion"><code class="xref docutils literal notranslate"><span class="pre">conversion</span></code></a>] [&quot;:&quot; <a class="reference internal" href="#grammar-token-format-spec"><code class="xref docutils literal notranslate"><span class="pre">format_spec</span></code></a>] &quot;}&quot;
+<strong id="grammar-token-replacement-field">replacement_field</strong> ::=  &quot;{&quot; [<a class="reference internal" href="#grammar-token-field-name"><code class="xref docutils literal notranslate"><span class="pre">field_name</span></code></a>] [&quot;!&quot; <a class="reference internal" href="lexical_analysis.html#grammar-token-conversion" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#grammar-token-conversion"><code class="xref docutils literal notranslate"><span class="pre">conversion</span></code></a>] [&quot;:&quot; <a class="reference internal" href="lexical_analysis.html#grammar-token-format-spec" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#grammar-token-format-spec"><code class="xref docutils literal notranslate"><span class="pre">format_spec</span></code></a>] &quot;}&quot;
 <strong id="grammar-token-field-name">field_name       </strong> ::=  arg_name (&quot;.&quot; <a class="reference internal" href="#grammar-token-attribute-name"><code class="xref docutils literal notranslate"><span class="pre">attribute_name</span></code></a> | &quot;[&quot; <a class="reference internal" href="#grammar-token-element-index"><code class="xref docutils literal notranslate"><span class="pre">element_index</span></code></a> &quot;]&quot;)*
 <strong id="grammar-token-arg-name">arg_name         </strong> ::=  [<a class="reference internal" href="lexical_analysis.html#grammar-token-identifier" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#grammar-token-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> | <a class="reference internal" href="lexical_analysis.html#grammar-token-digit" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#grammar-token-digit"><code class="xref docutils literal notranslate"><span class="pre">digit</span></code></a>+]
 <strong id="grammar-token-attribute-name">attribute_name   </strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-identifier" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#grammar-token-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a>
@@ -308,32 +254,16 @@ literal text, it can be escaped by doubling: <code class="docutils literal notra
 <strong id="grammar-token-format-spec">format_spec      </strong> ::=  &lt;described in the next section&gt;
 </pre>
 </div></blockquote>
-<p>In less formal terms, the replacement field can start with a <em>field_name</em> that specifies
-the object whose value is to be formatted and inserted
-into the output instead of the replacement field.
-The <em>field_name</em> is optionally followed by a  <em>conversion</em> field, which is
-preceded by an exclamation point <code class="docutils literal notranslate"><span class="pre">'!'</span></code>, and a <em>format_spec</em>, which is preceded
-by a colon <code class="docutils literal notranslate"><span class="pre">':'</span></code>.  These specify a non-default format for the replacement value.</p>
-<p>See also the <a class="reference internal" href="#formatspec"><span class="std std-ref">Format Specification Mini-Language</span></a> section.</p>
-<p>The <em>field_name</em> itself begins with an <em>arg_name</em> that is either a number or a
-keyword.  If it's a number, it refers to a positional argument, and if it's a keyword,
-it refers to a named keyword argument.  If the numerical arg_names in a format string
-are 0, 1, 2, ... in sequence, they can all be omitted (not just some)
-and the numbers 0, 1, 2, ... will be automatically inserted in that order.
-Because <em>arg_name</em> is not quote-delimited, it is not possible to specify arbitrary
-dictionary keys (e.g., the strings <code class="docutils literal notranslate"><span class="pre">'10'</span></code> or <code class="docutils literal notranslate"><span class="pre">':-]'</span></code>) within a format string.
-The <em>arg_name</em> can be followed by any number of index or
-attribute expressions. An expression of the form <code class="docutils literal notranslate"><span class="pre">'.name'</span></code> selects the named
-attribute using <a class="reference internal" href="functions.html#getattr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#getattr" title="getattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code></a>, while an expression of the form <code class="docutils literal notranslate"><span class="pre">'[index]'</span></code>
-does an index lookup using <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__getitem__()</span></code></a>.</p>
+<p>用不太正式的术语来描述，替换字段开头可以用一个 <em>field_name</em> 指定要对值进行格式化并取代替换字符被插入到输出结果的对象。 <em>field_name</em> 之后有可选的  <em>conversion</em> 字段，它是一个感叹号 <code class="docutils literal notranslate"><span class="pre">'!'</span></code> 加一个 <em>format_spec</em>，并以一个冒号 <code class="docutils literal notranslate"><span class="pre">':'</span></code> 打头。 这些指明了替换值的非默认格式。</p>
+<p>另请参阅 <a class="reference internal" href="#formatspec"><span class="std std-ref">格式规格迷你语言</span></a> 一节。</p>
+<p><em>field_name</em> 本身以一个数字或关键字 <em>arg_name</em> 打头。 如果为数字，则它指向一个位置参数，而如果为关键字，则它指向一个命名关键字参数。 如果格式字符串中的数字 arg_names 为 0, 1, 2, ... 的序列，它们可以全部省略（而非部分省略），数字 0, 1, 2, ... 将会按顺序自动插入。 由于 <em>arg_name</em> 不使用引号分隔，因此无法在格式字符串中指定任意的字典键 (例如字符串 <code class="docutils literal notranslate"><span class="pre">'10'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">':-]'</span></code>)。 <em>arg_name</em> 之后可以带上任意数量的索引或属性表达式。 <code class="docutils literal notranslate"><span class="pre">'.name'</span></code> 形式的表达式会使用 <a class="reference internal" href="functions.html#getattr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#getattr" title="getattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code></a> 选择命名属性，而 <code class="docutils literal notranslate"><span class="pre">'[index]'</span></code> 形式的表达式会使用 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 执行索引查找。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.1 版更改: </span>The positional argument specifiers can be omitted for <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a>,
-so <code class="docutils literal notranslate"><span class="pre">'{}</span> <span class="pre">{}'.format(a,</span> <span class="pre">b)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">'{0}</span> <span class="pre">{1}'.format(a,</span> <span class="pre">b)</span></code>.</p>
+<p><span class="versionmodified changed">在 3.1 版更改: </span>位置参数说明符对于 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> 可以省略，因此 <code class="docutils literal notranslate"><span class="pre">'{}</span> <span class="pre">{}'.format(a,</span> <span class="pre">b)</span></code> 等价于 <code class="docutils literal notranslate"><span class="pre">'{0}</span> <span class="pre">{1}'.format(a,</span> <span class="pre">b)</span></code>。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>The positional argument specifiers can be omitted for <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>位置参数说明符对于 <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 可以省略。</p>
 </div>
-<p>Some simple format string examples:</p>
+<p>一些简单的格式字符串示例</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;First, thou shalt count to </span><span class="si">{0}</span><span class="s2">&quot;</span>  <span class="c1"># References first positional argument</span>
 <span class="s2">&quot;Bring me a </span><span class="si">{}</span><span class="s2">&quot;</span>                   <span class="c1"># Implicitly references the first positional argument</span>
 <span class="s2">&quot;From </span><span class="si">{}</span><span class="s2"> to </span><span class="si">{}</span><span class="s2">&quot;</span>                   <span class="c1"># Same as &quot;From {0} to {1}&quot;</span>
@@ -342,50 +272,26 @@ so <code class="docutils literal notranslate"><span class="pre">'{}</span> <span
 <span class="s2">&quot;Units destroyed: </span><span class="si">{players[0]}</span><span class="s2">&quot;</span>   <span class="c1"># First element of keyword argument &#39;players&#39;.</span>
 </pre></div>
 </div>
-<p>The <em>conversion</em> field causes a type coercion before formatting.  Normally, the
-job of formatting a value is done by the <a class="reference internal" href="datamodel.html#object.__format__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__format__" title="object.__format__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__format__()</span></code></a> method of the value
-itself.  However, in some cases it is desirable to force a type to be formatted
-as a string, overriding its own definition of formatting.  By converting the
-value to a string before calling <a class="reference internal" href="datamodel.html#object.__format__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__format__" title="object.__format__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__format__()</span></code></a>, the normal formatting logic
-is bypassed.</p>
-<p>Three conversion flags are currently supported: <code class="docutils literal notranslate"><span class="pre">'!s'</span></code> which calls <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a>
-on the value, <code class="docutils literal notranslate"><span class="pre">'!r'</span></code> which calls <a class="reference internal" href="functions.html#repr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> and <code class="docutils literal notranslate"><span class="pre">'!a'</span></code> which calls
-<a class="reference internal" href="functions.html#ascii" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#ascii" title="ascii"><code class="xref py py-func docutils literal notranslate"><span class="pre">ascii()</span></code></a>.</p>
+<p>使用 <em>conversion</em> 字段在格式化之前进行类型强制转换。 通常，格式化值的工作由值本身的 <a class="reference internal" href="datamodel.html#object.__format__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__format__" title="object.__format__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__format__()</span></code></a> 方法来完成。 但是，在某些情况下最好强制将类型格式化为一个字符串，覆盖其本身的格式化定义。 通过在调用 <a class="reference internal" href="datamodel.html#object.__format__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__format__" title="object.__format__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__format__()</span></code></a> 之前将值转换为字符串，可以绕过正常的格式化逻辑。</p>
+<p>目前支持的转换旗标有三种: <code class="docutils literal notranslate"><span class="pre">'!s'</span></code> 会对值调用 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a>，<code class="docutils literal notranslate"><span class="pre">'!r'</span></code> 调用 <a class="reference internal" href="functions.html#repr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> 而 <code class="docutils literal notranslate"><span class="pre">'!a'</span></code> 则调用 <a class="reference internal" href="functions.html#ascii" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#ascii" title="ascii"><code class="xref py py-func docutils literal notranslate"><span class="pre">ascii()</span></code></a>。</p>
 <p>几个例子：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Harold&#39;s a clever </span><span class="si">{0!s}</span><span class="s2">&quot;</span>        <span class="c1"># Calls str() on the argument first</span>
 <span class="s2">&quot;Bring out the holy </span><span class="si">{name!r}</span><span class="s2">&quot;</span>    <span class="c1"># Calls repr() on the argument first</span>
 <span class="s2">&quot;More </span><span class="si">{!a}</span><span class="s2">&quot;</span>                      <span class="c1"># Calls ascii() on the argument first</span>
 </pre></div>
 </div>
-<p>The <em>format_spec</em> field contains a specification of how the value should be
-presented, including such details as field width, alignment, padding, decimal
-precision and so on.  Each value type can define its own &quot;formatting
-mini-language&quot; or interpretation of the <em>format_spec</em>.</p>
-<p>Most built-in types support a common formatting mini-language, which is
-described in the next section.</p>
-<p>A <em>format_spec</em> field can also include nested replacement fields within it.
-These nested replacement fields may contain a field name, conversion flag
-and format specification, but deeper nesting is
-not allowed.  The replacement fields within the
-format_spec are substituted before the <em>format_spec</em> string is interpreted.
-This allows the formatting of a value to be dynamically specified.</p>
-<p>See the <a class="reference internal" href="#formatexamples"><span class="std std-ref">Format examples</span></a> section for some examples.</p>
+<p><em>format_spec</em> 字段包含值应如何呈现的规格描述，例如字段宽度、对齐、填充、小数精度等细节信息。 每种值类型可以定义自己的“格式化迷你语言”或对 <em>format_spec</em> 的解读方式。</p>
+<p>大多数内置类型都支持同样的格式化迷你语言，具体描述见下一节。</p>
+<p><em>format_spec</em> 字段还可以在其内部包含嵌套的替换字段。 这些嵌套的替换字段可能包括字段名称、转换旗标和格式规格描述，但是不再允许更深层的嵌套。 format_spec 内部的替换字段会在解读 <em>format_spec</em> 字符串之前先被解读。 这将允许动态地指定特定值的格式。</p>
+<p>请参阅 <a class="reference internal" href="#formatexamples"><span class="std std-ref">格式示例</span></a> 一节查看相关示例。</p>
 <div class="section" id="format-specification-mini-language">
-<span id="formatspec"></span><h3>Format Specification Mini-Language<a class="headerlink" href="#format-specification-mini-language" title="永久链接至标题">¶</a></h3>
-<p>&quot;Format specifications&quot; are used within replacement fields contained within a
-format string to define how individual values are presented (see
-<a class="reference internal" href="#formatstrings"><span class="std std-ref">Format String Syntax</span></a> and <a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">格式化字符串字面值</span></a>).
-They can also be passed directly to the built-in
-<a class="reference internal" href="functions.html#format" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a> function.  Each formattable type may define how the format
-specification is to be interpreted.</p>
-<p>Most built-in types implement the following options for format specifications,
-although some of the formatting options are only supported by the numeric types.</p>
-<p>A general convention is that an empty format string (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) produces
-the same result as if you had called <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> on the value. A
-non-empty format string typically modifies the result.</p>
-<p>The general form of a <em>standard format specifier</em> is:</p>
+<span id="formatspec"></span><h3>格式规格迷你语言<a class="headerlink" href="#format-specification-mini-language" title="永久链接至标题">¶</a></h3>
+<p>“格式规格”在格式字符串所包含的替换字段内部使用，用于定义单个值应如何呈现 (参见 <a class="reference internal" href="#formatstrings"><span class="std std-ref">格式字符串语法</span></a> 和 <a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">格式化字符串字面值</span></a>)。 它们也可以被直接传给内置的 <a class="reference internal" href="functions.html#format" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a> 函数。 每种可格式化的类型都可以自行定义如何对格式规格进行解读。</p>
+<p>大多数内置类型都为格式规格实现了下列选项，不过某些格式化选项只被数值类型所支持。</p>
+<p>一般约定空的格式描述将产生与在值上调用 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> 相同的结果。 非空格式描述通常会修改此结果。</p>
+<p><em>标准格式说明符</em> 的一般形式如下：</p>
 <pre>
-<strong id="id1">format_spec    </strong> ::=  [[<a class="reference internal" href="#grammar-token-fill"><code class="xref docutils literal notranslate"><span class="pre">fill</span></code></a>]<a class="reference internal" href="#grammar-token-align"><code class="xref docutils literal notranslate"><span class="pre">align</span></code></a>][<a class="reference internal" href="functions.html#grammar-token-sign" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#grammar-token-sign"><code class="xref docutils literal notranslate"><span class="pre">sign</span></code></a>][#][0][<a class="reference internal" href="#grammar-token-width"><code class="xref docutils literal notranslate"><span class="pre">width</span></code></a>][<a class="reference internal" href="#grammar-token-grouping-option"><code class="xref docutils literal notranslate"><span class="pre">grouping_option</span></code></a>][.<a class="reference internal" href="#grammar-token-precision"><code class="xref docutils literal notranslate"><span class="pre">precision</span></code></a>][<a class="reference internal" href="#grammar-token-type"><code class="xref docutils literal notranslate"><span class="pre">type</span></code></a>]
+<strong id="id1">format_spec    </strong> ::=  [[<a class="reference internal" href="#grammar-token-fill"><code class="xref docutils literal notranslate"><span class="pre">fill</span></code></a>]<a class="reference internal" href="#grammar-token-align"><code class="xref docutils literal notranslate"><span class="pre">align</span></code></a>][<a class="reference internal" href="#grammar-token-sign"><code class="xref docutils literal notranslate"><span class="pre">sign</span></code></a>][#][0][<a class="reference internal" href="#grammar-token-width"><code class="xref docutils literal notranslate"><span class="pre">width</span></code></a>][<a class="reference internal" href="#grammar-token-grouping-option"><code class="xref docutils literal notranslate"><span class="pre">grouping_option</span></code></a>][.<a class="reference internal" href="#grammar-token-precision"><code class="xref docutils literal notranslate"><span class="pre">precision</span></code></a>][<a class="reference internal" href="#grammar-token-type"><code class="xref docutils literal notranslate"><span class="pre">type</span></code></a>]
 <strong id="grammar-token-fill">fill           </strong> ::=  &lt;any character&gt;
 <strong id="grammar-token-align">align          </strong> ::=  &quot;&lt;&quot; | &quot;&gt;&quot; | &quot;=&quot; | &quot;^&quot;
 <strong id="grammar-token-sign">sign           </strong> ::=  &quot;+&quot; | &quot;-&quot; | &quot; &quot;
@@ -394,280 +300,191 @@ non-empty format string typically modifies the result.</p>
 <strong id="grammar-token-precision">precision      </strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-digit" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#grammar-token-digit"><code class="xref docutils literal notranslate"><span class="pre">digit</span></code></a>+
 <strong id="grammar-token-type">type           </strong> ::=  &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quot; | &quot;E&quot; | &quot;f&quot; | &quot;F&quot; | &quot;g&quot; | &quot;G&quot; | &quot;n&quot; | &quot;o&quot; | &quot;s&quot; | &quot;x&quot; | &quot;X&quot; | &quot;%&quot;
 </pre>
-<p>If a valid <em>align</em> value is specified, it can be preceded by a <em>fill</em>
-character that can be any character and defaults to a space if omitted.
-It is not possible to use a literal curly brace (&quot;<code class="docutils literal notranslate"><span class="pre">{</span></code>&quot; or &quot;<code class="docutils literal notranslate"><span class="pre">}</span></code>&quot;) as
-the <em>fill</em> character in a <a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">formatted string literal</span></a> or when using the <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a>
-method.  However, it is possible to insert a curly brace
-with a nested replacement field.  This limitation doesn't
-affect the <a class="reference internal" href="functions.html#format" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a> function.</p>
-<p>The meaning of the various alignment options is as follows:</p>
+<p>如果指定了一个有效的 <em>align</em> 值，则可以在该值前面加一个 <em>fill</em> 字符，它可以为任意字符，如果省略则默认为空格符。 在 <a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">格式化字符串字面值</span></a> 或在使用 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> 方法时是无法使用花括号字面值 (&quot;<code class="docutils literal notranslate"><span class="pre">{</span></code>&quot; or &quot;<code class="docutils literal notranslate"><span class="pre">}</span></code>&quot;) 作为 <em>fill</em> 字符的。 但是，通过嵌套替换字段插入花括号则是可以的。 这个限制不会影响 <a class="reference internal" href="functions.html#format" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a> 函数。</p>
+<p>各种对齐选项的含义如下：</p>
 <blockquote>
-<div><table border="1" class="docutils" id="index-3">
+<div><table class="docutils align-default" id="index-3">
 <colgroup>
-<col width="13%" />
-<col width="87%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Option</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>选项</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'&lt;'</span></code></td>
-<td>Forces the field to be left-aligned within the available
-space (this is the default for most objects).</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'&lt;'</span></code></p></td>
+<td><p>强制字段在可用空间内左对齐（这是大多数对象的默认值）。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'&gt;'</span></code></td>
-<td>Forces the field to be right-aligned within the
-available space (this is the default for numbers).</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'&gt;'</span></code></p></td>
+<td><p>强制字段在可用空间内右对齐（这是数字的默认值）。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'='</span></code></td>
-<td>Forces the padding to be placed after the sign (if any)
-but before the digits.  This is used for printing fields
-in the form '+000000120'. This alignment option is only
-valid for numeric types.  It becomes the default when '0'
-immediately precedes the field width.</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'='</span></code></p></td>
+<td><p>强制将填充放置在符号（如果有）之后但在数字之前。这用于以“+000000120”形式打印字段。此对齐选项仅对数字类型有效。当'0'紧接在字段宽度之前时，它成为默认值。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'^'</span></code></td>
-<td>Forces the field to be centered within the available
-space.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'^'</span></code></p></td>
+<td><p>强制字段在可用空间内居中。</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
-<p>Note that unless a minimum field width is defined, the field width will always
-be the same size as the data to fill it, so that the alignment option has no
-meaning in this case.</p>
-<p>The <em>sign</em> option is only valid for number types, and can be one of the
-following:</p>
+<p>请注意，除非定义了最小字段宽度，否则字段宽度将始终与填充它的数据大小相同，因此在这种情况下，对齐选项没有意义。</p>
+<p><em>sign</em> 选项仅对数字类型有效，可以是以下之一：</p>
 <blockquote>
-<div><table border="1" class="docutils" id="index-4">
+<div><table class="docutils align-default" id="index-4">
 <colgroup>
-<col width="13%" />
-<col width="87%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Option</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>选项</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'+'</span></code></td>
-<td>indicates that a sign should be used for both
-positive as well as negative numbers.</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'+'</span></code></p></td>
+<td><p>表示标志应该用于正数和负数。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'-'</span></code></td>
-<td>indicates that a sign should be used only for negative
-numbers (this is the default behavior).</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'-'</span></code></p></td>
+<td><p>表示标志应仅用于负数（这是默认行为）。</p></td>
 </tr>
-<tr class="row-even"><td>space</td>
-<td>indicates that a leading space should be used on
-positive numbers, and a minus sign on negative numbers.</td>
+<tr class="row-even"><td><p>space</p></td>
+<td><p>表示应在正数上使用前导空格，在负数上使用减号。</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
-<p id="index-5">The <code class="docutils literal notranslate"><span class="pre">'#'</span></code> option causes the &quot;alternate form&quot; to be used for the
-conversion.  The alternate form is defined differently for different
-types.  This option is only valid for integer, float, complex and
-Decimal types. For integers, when binary, octal, or hexadecimal output
-is used, this option adds the prefix respective <code class="docutils literal notranslate"><span class="pre">'0b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'0o'</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">'0x'</span></code> to the output value. For floats, complex and Decimal the
-alternate form causes the result of the conversion to always contain a
-decimal-point character, even if no digits follow it. Normally, a
-decimal-point character appears in the result of these conversions
-only if a digit follows it. In addition, for <code class="docutils literal notranslate"><span class="pre">'g'</span></code> and <code class="docutils literal notranslate"><span class="pre">'G'</span></code>
-conversions, trailing zeros are not removed from the result.</p>
-<p id="index-6">The <code class="docutils literal notranslate"><span class="pre">','</span></code> option signals the use of a comma for a thousands separator.
-For a locale aware separator, use the <code class="docutils literal notranslate"><span class="pre">'n'</span></code> integer presentation type
-instead.</p>
+<p id="index-5"><code class="docutils literal notranslate"><span class="pre">'#'</span></code> 选项可以让“替代形式”被用于转换。 替代形式可针对不同类型分别定义。 此选项仅对整数、浮点、复数和 Decimal 类型有效。 对于整数类型，当使用二进制、八进制或十六进制输出时，此选项会为输出值添加相应的 <code class="docutils literal notranslate"><span class="pre">'0b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'0o'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'0x'</span></code> 前缀。 对于浮点数、复数和 Decimal 类型，替代形式会使得转换结果总是包含小数点符号，即使其不带小数。 通常只有在带有小数的情况下，此类转换的结果中才会出现小数点符号。 此外，对于 <code class="docutils literal notranslate"><span class="pre">'g'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'G'</span></code> 转换，末尾的零不会从结果中被移除。</p>
+<p id="index-6"><code class="docutils literal notranslate"><span class="pre">','</span></code> 选项表示使用逗号作为千位分隔符。 对于感应区域设置的分隔符，请改用 <code class="docutils literal notranslate"><span class="pre">'n'</span></code> 整数表示类型。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.1 版更改: </span>Added the <code class="docutils literal notranslate"><span class="pre">','</span></code> option (see also <span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0378  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0378'" tppabs="https://www.python.org/dev/peps/pep-0378"><strong>PEP 378</strong></a>).</p>
+<p><span class="versionmodified changed">在 3.1 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">','</span></code> 选项 (另请参阅 <span class="target" id="index-19"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0378  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0378'" tppabs="https://www.python.org/dev/peps/pep-0378"><strong>PEP 378</strong></a>)。</p>
 </div>
-<p id="index-8">The <code class="docutils literal notranslate"><span class="pre">'_'</span></code> option signals the use of an underscore for a thousands
-separator for floating point presentation types and for integer
-presentation type <code class="docutils literal notranslate"><span class="pre">'d'</span></code>.  For integer presentation types <code class="docutils literal notranslate"><span class="pre">'b'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'o'</span></code>, <code class="docutils literal notranslate"><span class="pre">'x'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'X'</span></code>, underscores will be inserted every 4
-digits.  For other presentation types, specifying this option is an
-error.</p>
+<p id="index-8"><code class="docutils literal notranslate"><span class="pre">'_'</span></code> 选项表示对浮点表示类型和整数表示类型 <code class="docutils literal notranslate"><span class="pre">'d'</span></code> 使用下划线作为千位分隔符。 对于整数表示类型 <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'o'</span></code>, <code class="docutils literal notranslate"><span class="pre">'x'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'X'</span></code>，将为每 4 个数位插入一个下划线。 对于其他表示类型指定此选项则将导致错误。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>Added the <code class="docutils literal notranslate"><span class="pre">'_'</span></code> option (see also <span class="target" id="index-9"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0515  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0515'" tppabs="https://www.python.org/dev/peps/pep-0515"><strong>PEP 515</strong></a>).</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">'_'</span></code> 选项 (另请参阅 <span class="target" id="index-20"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0515  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0515'" tppabs="https://www.python.org/dev/peps/pep-0515"><strong>PEP 515</strong></a>)。</p>
 </div>
-<p><em>width</em> is a decimal integer defining the minimum field width.  If not
-specified, then the field width will be determined by the content.</p>
-<p>When no explicit alignment is given, preceding the <em>width</em> field by a zero
-(<code class="docutils literal notranslate"><span class="pre">'0'</span></code>) character enables
-sign-aware zero-padding for numeric types.  This is equivalent to a <em>fill</em>
-character of <code class="docutils literal notranslate"><span class="pre">'0'</span></code> with an <em>alignment</em> type of <code class="docutils literal notranslate"><span class="pre">'='</span></code>.</p>
-<p>The <em>precision</em> is a decimal number indicating how many digits should be
-displayed after the decimal point for a floating point value formatted with
-<code class="docutils literal notranslate"><span class="pre">'f'</span></code> and <code class="docutils literal notranslate"><span class="pre">'F'</span></code>, or before and after the decimal point for a floating point
-value formatted with <code class="docutils literal notranslate"><span class="pre">'g'</span></code> or <code class="docutils literal notranslate"><span class="pre">'G'</span></code>.  For non-number types the field
-indicates the maximum field size - in other words, how many characters will be
-used from the field content. The <em>precision</em> is not allowed for integer values.</p>
-<p>Finally, the <em>type</em> determines how the data should be presented.</p>
-<p>The available string presentation types are:</p>
+<p><em>width</em> 是一个定义最小总字段宽度的十进制整数，包括任何前缀、分隔符和其他格式化字符。 如果未指定，则字段宽度将由内容确定。</p>
+<p>当未显式给出对齐方式时，在 <em>width</em> 字段前加一个零 (<code class="docutils literal notranslate"><span class="pre">'0'</span></code>) 字段将为数字类型启用感知正负号的零填充。 这相当于设置 <em>fill</em> 字符为 <code class="docutils literal notranslate"><span class="pre">'0'</span></code> 且 <em>alignment</em> 类型为 <code class="docutils literal notranslate"><span class="pre">'='</span></code>。</p>
+<p><em>precision</em> 是一个十进制数字，表示对于以 <code class="docutils literal notranslate"><span class="pre">'f'</span></code> and <code class="docutils literal notranslate"><span class="pre">'F'</span></code> 格式化的浮点数值要在小数点后显示多少个数位，或者对于以 <code class="docutils literal notranslate"><span class="pre">'g'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'G'</span></code> 格式化的浮点数值要在小数点前后共显示多少个数位。 对于非数字类型，该字段表示最大字段大小 —— 换句话说就是要使用多少个来自字段内容的字符。 对于整数值则不允许使用 <em>precision</em>。</p>
+<p>最后，<em>type</em> 确定了数据应如何呈现。</p>
+<p>可用的字符串表示类型是：</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="87%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">类型</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>类型</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'s'</span></code></td>
-<td>String format. This is the default type for strings and
-may be omitted.</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'s'</span></code></p></td>
+<td><p>字符串格式。这是字符串的默认类型，可以省略。</p></td>
 </tr>
-<tr class="row-odd"><td>None</td>
-<td>The same as <code class="docutils literal notranslate"><span class="pre">'s'</span></code>.</td>
+<tr class="row-odd"><td><p>None</p></td>
+<td><p>和 <code class="docutils literal notranslate"><span class="pre">'s'</span></code> 一样。</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
-<p>The available integer presentation types are:</p>
+<p>可用的整数表示类型是：</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="87%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">类型</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>类型</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'b'</span></code></td>
-<td>Binary format. Outputs the number in base 2.</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'b'</span></code></p></td>
+<td><p>二进制格式。 输出以 2 为基数的数字。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'c'</span></code></td>
-<td>Character. Converts the integer to the corresponding
-unicode character before printing.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'c'</span></code></p></td>
+<td><p>字符。在打印之前将整数转换为相应的unicode字符。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'d'</span></code></td>
-<td>Decimal Integer. Outputs the number in base 10.</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'d'</span></code></p></td>
+<td><p>十进制整数。 输出以 10 为基数的数字。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'o'</span></code></td>
-<td>Octal format. Outputs the number in base 8.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'o'</span></code></p></td>
+<td><p>八进制格式。 输出以 8 为基数的数字。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'x'</span></code></td>
-<td>Hex format. Outputs the number in base 16, using
-lower-case letters for the digits above 9.</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'x'</span></code></p></td>
+<td><p>十六进制格式。 输出以 16 为基数的数字，使用小写字母表示 9 以上的数码。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'X'</span></code></td>
-<td>Hex format. Outputs the number in base 16, using
-upper-case letters for the digits above 9.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'X'</span></code></p></td>
+<td><p>十六进制格式。 输出以 16 为基数的数字，使用大写字母表示 9 以上的数码。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'n'</span></code></td>
-<td>Number. This is the same as <code class="docutils literal notranslate"><span class="pre">'d'</span></code>, except that it uses
-the current locale setting to insert the appropriate
-number separator characters.</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'n'</span></code></p></td>
+<td><p>数字。 这与 <code class="docutils literal notranslate"><span class="pre">'d'</span></code> 相似，不同之处在于它会使用当前区域设置来插入适当的数字分隔字符。</p></td>
 </tr>
-<tr class="row-odd"><td>None</td>
-<td>The same as <code class="docutils literal notranslate"><span class="pre">'d'</span></code>.</td>
+<tr class="row-odd"><td><p>None</p></td>
+<td><p>和 <code class="docutils literal notranslate"><span class="pre">'d'</span></code> 相同。</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
-<p>In addition to the above presentation types, integers can be formatted
-with the floating point presentation types listed below (except
-<code class="docutils literal notranslate"><span class="pre">'n'</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>). When doing so, <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-func docutils literal notranslate"><span class="pre">float()</span></code></a> is used to convert the
-integer to a floating point number before formatting.</p>
-<p>The available presentation types for floating point and decimal values are:</p>
+<p>在上述的表示类型之外，整数还可以通过下列的浮点表示类型来格式化 (除了 <code class="docutils literal notranslate"><span class="pre">'n'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">None</span></code>)。 当这样做时，会在格式化之前使用 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-func docutils literal notranslate"><span class="pre">float()</span></code></a> 将整数转换为浮点数。</p>
+<p>浮点数和小数值可用的表示类型有：</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="87%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">类型</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>类型</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'e'</span></code></td>
-<td>Exponent notation. Prints the number in scientific
-notation using the letter 'e' to indicate the exponent.
-The default precision is <code class="docutils literal notranslate"><span class="pre">6</span></code>.</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'e'</span></code></p></td>
+<td><p>指数表示。 以使用字母 'e' 来标示指数的科学计数法打印数字。 默认的精度为 <code class="docutils literal notranslate"><span class="pre">6</span></code>。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'E'</span></code></td>
-<td>Exponent notation. Same as <code class="docutils literal notranslate"><span class="pre">'e'</span></code> except it uses an
-upper case 'E' as the separator character.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'E'</span></code></p></td>
+<td><p>指数表示。 与 <code class="docutils literal notranslate"><span class="pre">'e'</span></code> 相似，不同之处在于它使用大写字母 'E' 作为分隔字符。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'f'</span></code></td>
-<td>Fixed-point notation. Displays the number as a
-fixed-point number.  The default precision is <code class="docutils literal notranslate"><span class="pre">6</span></code>.</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'f'</span></code></p></td>
+<td><p>定点表示。 将数字显示为一个定点数。 默认的精确度为 <code class="docutils literal notranslate"><span class="pre">6</span></code>。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'F'</span></code></td>
-<td>Fixed-point notation. Same as <code class="docutils literal notranslate"><span class="pre">'f'</span></code>, but converts
-<code class="docutils literal notranslate"><span class="pre">nan</span></code> to  <code class="docutils literal notranslate"><span class="pre">NAN</span></code> and <code class="docutils literal notranslate"><span class="pre">inf</span></code> to <code class="docutils literal notranslate"><span class="pre">INF</span></code>.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'F'</span></code></p></td>
+<td><p>定点表示。 与 <code class="docutils literal notranslate"><span class="pre">'f'</span></code> 相似，但会将 <code class="docutils literal notranslate"><span class="pre">nan</span></code> 转为  <code class="docutils literal notranslate"><span class="pre">NAN</span></code> 并将 <code class="docutils literal notranslate"><span class="pre">inf</span></code> 转为 <code class="docutils literal notranslate"><span class="pre">INF</span></code>。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'g'</span></code></td>
-<td><p class="first">General format.  For a given precision <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>,
-this rounds the number to <code class="docutils literal notranslate"><span class="pre">p</span></code> significant digits and
-then formats the result in either fixed-point format
-or in scientific notation, depending on its magnitude.</p>
-<p>The precise rules are as follows: suppose that the
-result formatted with presentation type <code class="docutils literal notranslate"><span class="pre">'e'</span></code> and
-precision <code class="docutils literal notranslate"><span class="pre">p-1</span></code> would have exponent <code class="docutils literal notranslate"><span class="pre">exp</span></code>.  Then
-if <code class="docutils literal notranslate"><span class="pre">-4</span> <span class="pre">&lt;=</span> <span class="pre">exp</span> <span class="pre">&lt;</span> <span class="pre">p</span></code>, the number is formatted
-with presentation type <code class="docutils literal notranslate"><span class="pre">'f'</span></code> and precision
-<code class="docutils literal notranslate"><span class="pre">p-1-exp</span></code>.  Otherwise, the number is formatted
-with presentation type <code class="docutils literal notranslate"><span class="pre">'e'</span></code> and precision <code class="docutils literal notranslate"><span class="pre">p-1</span></code>.
-In both cases insignificant trailing zeros are removed
-from the significand, and the decimal point is also
-removed if there are no remaining digits following it.</p>
-<p>Positive and negative infinity, positive and negative
-zero, and nans, are formatted as <code class="docutils literal notranslate"><span class="pre">inf</span></code>, <code class="docutils literal notranslate"><span class="pre">-inf</span></code>,
-<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">-0</span></code> and <code class="docutils literal notranslate"><span class="pre">nan</span></code> respectively, regardless of
-the precision.</p>
-<p class="last">A precision of <code class="docutils literal notranslate"><span class="pre">0</span></code> is treated as equivalent to a
-precision of <code class="docutils literal notranslate"><span class="pre">1</span></code>.  The default precision is <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'g'</span></code></p></td>
+<td><p>常规格式。 对于给定的精度 <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>，这会将数值舍入到 <code class="docutils literal notranslate"><span class="pre">p</span></code> 位有效数字，再将结果以定点格式或科学计数法进行格式化，具体取决于其值的大小。</p>
+<p>准确的规则如下：假设使用表示类型 <code class="docutils literal notranslate"><span class="pre">'e'</span></code> 和精度 <code class="docutils literal notranslate"><span class="pre">p-1</span></code> 进行格式化的结果具有指数值 <code class="docutils literal notranslate"><span class="pre">exp</span></code>。 那么如果 <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;=</span> <span class="pre">exp</span> <span class="pre">&lt;</span> <span class="pre">p</span></code>，其中 <code class="docutils literal notranslate"><span class="pre">m</span></code> 以 -4 表示浮点值而以 -6 表示 <a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 值，该数字将使用类型 <code class="docutils literal notranslate"><span class="pre">'f'</span></code> 和精度 <code class="docutils literal notranslate"><span class="pre">p-1-exp</span></code> 进行格式化。 否则的话，该数字将使用表示类型 <code class="docutils literal notranslate"><span class="pre">'e'</span></code> 和精度 <code class="docutils literal notranslate"><span class="pre">p-1</span></code> 进行格式化。 在两种情况下，都会从有效数字中移除无意义的末尾零，如果小数点之后没有余下数字则小数点也会被移除，除非使用了 <code class="docutils literal notranslate"><span class="pre">'#'</span></code> 选项。</p>
+<p>正负无穷，正负零和 nan 会分别被格式化为 <code class="docutils literal notranslate"><span class="pre">inf</span></code>, <code class="docutils literal notranslate"><span class="pre">-inf</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">-0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">nan</span></code>，无论精度如何设定。</p>
+<p>精度 <code class="docutils literal notranslate"><span class="pre">0</span></code> 会被视为等同于精度 <code class="docutils literal notranslate"><span class="pre">1</span></code>。 默认精度为 <code class="docutils literal notranslate"><span class="pre">6</span></code>。</p>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'G'</span></code></td>
-<td>General format. Same as <code class="docutils literal notranslate"><span class="pre">'g'</span></code> except switches to
-<code class="docutils literal notranslate"><span class="pre">'E'</span></code> if the number gets too large. The
-representations of infinity and NaN are uppercased, too.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'G'</span></code></p></td>
+<td><p>常规格式。 类似于 <code class="docutils literal notranslate"><span class="pre">'g'</span></code>，不同之处在于当数值非常大时会切换为 <code class="docutils literal notranslate"><span class="pre">'E'</span></code>。 无穷与 NaN 也会表示为大写形式。</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'n'</span></code></td>
-<td>Number. This is the same as <code class="docutils literal notranslate"><span class="pre">'g'</span></code>, except that it uses
-the current locale setting to insert the appropriate
-number separator characters.</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'n'</span></code></p></td>
+<td><p>数字。 这与 <code class="docutils literal notranslate"><span class="pre">'g'</span></code> 相似，不同之处在于它会使用当前区域设置来插入适当的数字分隔字符。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'%'</span></code></td>
-<td>Percentage. Multiplies the number by 100 and displays
-in fixed (<code class="docutils literal notranslate"><span class="pre">'f'</span></code>) format, followed by a percent sign.</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'%'</span></code></p></td>
+<td><p>百分比。 将数字乘以 100 并显示为定点 (<code class="docutils literal notranslate"><span class="pre">'f'</span></code>) 格式，后面带一个百分号。</p></td>
 </tr>
-<tr class="row-even"><td>None</td>
-<td>Similar to <code class="docutils literal notranslate"><span class="pre">'g'</span></code>, except that fixed-point notation,
-when used, has at least one digit past the decimal point.
-The default precision is as high as needed to represent
-the particular value. The overall effect is to match the
-output of <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> as altered by the other format
-modifiers.</td>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>类似于 <code class="docutils literal notranslate"><span class="pre">'g'</span></code>，不同之处在于当使用定点表示法时，小数点后将至少显示一位。 默认精度与表示给定值所需的精度一样。 整体效果为与其他格式修饰符所调整的 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> 输出保持一致。</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
 </div>
 <div class="section" id="format-examples">
-<span id="formatexamples"></span><h3>Format examples<a class="headerlink" href="#format-examples" title="永久链接至标题">¶</a></h3>
-<p>This section contains examples of the <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> syntax and
-comparison with the old <code class="docutils literal notranslate"><span class="pre">%</span></code>-formatting.</p>
-<p>In most of the cases the syntax is similar to the old <code class="docutils literal notranslate"><span class="pre">%</span></code>-formatting, with the
-addition of the <code class="docutils literal notranslate"><span class="pre">{}</span></code> and with <code class="docutils literal notranslate"><span class="pre">:</span></code> used instead of <code class="docutils literal notranslate"><span class="pre">%</span></code>.
-For example, <code class="docutils literal notranslate"><span class="pre">'%03.2f'</span></code> can be translated to <code class="docutils literal notranslate"><span class="pre">'{:03.2f}'</span></code>.</p>
-<p>The new format syntax also supports new and different options, shown in the
-following examples.</p>
-<p>Accessing arguments by position:</p>
+<span id="formatexamples"></span><h3>格式示例<a class="headerlink" href="#format-examples" title="永久链接至标题">¶</a></h3>
+<p>本节包含 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> 语法的示例以及与旧式 <code class="docutils literal notranslate"><span class="pre">%</span></code> 格式化的比较。</p>
+<p>该语法在大多数情况下与旧式的 <code class="docutils literal notranslate"><span class="pre">%</span></code> 格式化类似，只是增加了 <code class="docutils literal notranslate"><span class="pre">{}</span></code> 和 <code class="docutils literal notranslate"><span class="pre">:</span></code> 来取代 <code class="docutils literal notranslate"><span class="pre">%</span></code>。 例如，，<code class="docutils literal notranslate"><span class="pre">'%03.2f'</span></code> 可以被改写为 <code class="docutils literal notranslate"><span class="pre">'{:03.2f}'</span></code>。</p>
+<p>新的格式语法还支持新增的不同选项，将在以下示例中说明。</p>
+<p>按位置访问参数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">, </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
 <span class="go">&#39;a, b, c&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>  <span class="c1"># 3.1+ only</span>
@@ -680,7 +497,7 @@ following examples.</p>
 <span class="go">&#39;abracadabra&#39;</span>
 </pre></div>
 </div>
-<p>Accessing arguments by name:</p>
+<p>按名称访问参数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Coordinates: </span><span class="si">{latitude}</span><span class="s1">, </span><span class="si">{longitude}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="s1">&#39;37.24N&#39;</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="s1">&#39;-115.81W&#39;</span><span class="p">)</span>
 <span class="go">&#39;Coordinates: 37.24N, -115.81W&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">coord</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="s1">&#39;37.24N&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="s1">&#39;-115.81W&#39;</span><span class="p">}</span>
@@ -688,33 +505,33 @@ following examples.</p>
 <span class="go">&#39;Coordinates: 37.24N, -115.81W&#39;</span>
 </pre></div>
 </div>
-<p>Accessing arguments' attributes:</p>
+<p>访问参数的属性:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="n">j</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s1">&#39;The complex number </span><span class="si">{0}</span><span class="s1"> is formed from the real part </span><span class="si">{0.real}</span><span class="s1"> &#39;</span>
 <span class="gp">... </span> <span class="s1">&#39;and the imaginary part </span><span class="si">{0.imag}</span><span class="s1">.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 <span class="go">&#39;The complex number (3-5j) is formed from the real part 3.0 and the imaginary part -5.0.&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;Point(</span><span class="si">{self.x}</span><span class="s1">, </span><span class="si">{self.y}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="go">&#39;Point(4, 2)&#39;</span>
 </pre></div>
 </div>
-<p>Accessing arguments' items:</p>
+<p>访问参数的项:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coord</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;X: </span><span class="si">{0[0]}</span><span class="s1">;  Y: </span><span class="si">{0[1]}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">coord</span><span class="p">)</span>
 <span class="go">&#39;X: 3;  Y: 5&#39;</span>
 </pre></div>
 </div>
-<p>Replacing <code class="docutils literal notranslate"><span class="pre">%s</span></code> and <code class="docutils literal notranslate"><span class="pre">%r</span></code>:</p>
+<p>替代 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 和 <code class="docutils literal notranslate"><span class="pre">%r</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;repr() shows quotes: </span><span class="si">{!r}</span><span class="s2">; str() doesn&#39;t: </span><span class="si">{!s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="s1">&#39;test2&#39;</span><span class="p">)</span>
 <span class="go">&quot;repr() shows quotes: &#39;test1&#39;; str() doesn&#39;t: test2&quot;</span>
 </pre></div>
 </div>
-<p>Aligning the text and specifying a width:</p>
+<p>对齐文本以及指定宽度:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{:&lt;30}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;left aligned&#39;</span><span class="p">)</span>
 <span class="go">&#39;left aligned                  &#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{:&gt;30}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;right aligned&#39;</span><span class="p">)</span>
@@ -725,7 +542,7 @@ following examples.</p>
 <span class="go">&#39;***********centered***********&#39;</span>
 </pre></div>
 </div>
-<p>Replacing <code class="docutils literal notranslate"><span class="pre">%+f</span></code>, <code class="docutils literal notranslate"><span class="pre">%-f</span></code>, and <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">f</span></code> and specifying a sign:</p>
+<p>替代 <code class="docutils literal notranslate"><span class="pre">%+f</span></code>, <code class="docutils literal notranslate"><span class="pre">%-f</span></code> 和 <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">f</span></code> 以及指定正负号:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{:+f}</span><span class="s1">; </span><span class="si">{:+f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.14</span><span class="p">)</span>  <span class="c1"># show it always</span>
 <span class="go">&#39;+3.140000; -3.140000&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{: f}</span><span class="s1">; </span><span class="si">{: f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.14</span><span class="p">)</span>  <span class="c1"># show a space for positive numbers</span>
@@ -734,7 +551,7 @@ following examples.</p>
 <span class="go">&#39;3.140000; -3.140000&#39;</span>
 </pre></div>
 </div>
-<p>Replacing <code class="docutils literal notranslate"><span class="pre">%x</span></code> and <code class="docutils literal notranslate"><span class="pre">%o</span></code> and converting the value to different bases:</p>
+<p>替代 <code class="docutils literal notranslate"><span class="pre">%x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">%o</span></code> 以及转换基于不同进位制的值:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># format also supports binary numbers</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;int: </span><span class="si">{0:d}</span><span class="s2">;  hex: </span><span class="si">{0:x}</span><span class="s2">;  oct: </span><span class="si">{0:o}</span><span class="s2">;  bin: </span><span class="si">{0:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="go">&#39;int: 42;  hex: 2a;  oct: 52;  bin: 101010&#39;</span>
@@ -743,26 +560,26 @@ following examples.</p>
 <span class="go">&#39;int: 42;  hex: 0x2a;  oct: 0o52;  bin: 0b101010&#39;</span>
 </pre></div>
 </div>
-<p>Using the comma as a thousands separator:</p>
+<p>使用逗号作为千位分隔符:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
 <span class="go">&#39;1,234,567,890&#39;</span>
 </pre></div>
 </div>
-<p>Expressing a percentage:</p>
+<p>表示为百分数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="mi">19</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">total</span> <span class="o">=</span> <span class="mi">22</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Correct answers: </span><span class="si">{:.2%}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">points</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 <span class="go">&#39;Correct answers: 86.36%&#39;</span>
 </pre></div>
 </div>
-<p>Using type-specific formatting:</p>
+<p>使用特定类型的专属格式化:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">58</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;{:%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <span class="go">&#39;2010-07-04 12:15:58&#39;</span>
 </pre></div>
 </div>
-<p>Nesting arguments and more complex examples:</p>
+<p>嵌套参数以及更复杂的示例:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">align</span><span class="p">,</span> <span class="n">text</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;&lt;^&gt;&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">]):</span>
 <span class="gp">... </span>    <span class="s1">&#39;{0:</span><span class="si">{fill}{align}</span><span class="s1">16}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">align</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="n">align</span><span class="p">)</span>
 <span class="gp">...</span>
@@ -794,73 +611,44 @@ following examples.</p>
 </div>
 </div>
 <div class="section" id="template-strings">
-<span id="id2"></span><h2>Template strings<a class="headerlink" href="#template-strings" title="永久链接至标题">¶</a></h2>
-<p>Template strings provide simpler string substitutions as described in
-<span class="target" id="index-10"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0292  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0292'" tppabs="https://www.python.org/dev/peps/pep-0292"><strong>PEP 292</strong></a>.  A primary use case for template strings is for
-internationalization (i18n) since in that context, the simpler syntax and
-functionality makes it easier to translate than other built-in string
-formatting facilities in Python.  As an example of a library built on template
-strings for i18n, see the
-<a class="reference external" href="javascript:if(confirm('http://flufli18n.readthedocs.io/en/latest/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://flufli18n.readthedocs.io/en/latest/'" tppabs="http://flufli18n.readthedocs.io/en/latest/">flufl.i18n</a> package.</p>
-<p id="index-11">Template strings support <code class="docutils literal notranslate"><span class="pre">$</span></code>-based substitutions, using the following rules:</p>
+<span id="id2"></span><h2>模板字符串<a class="headerlink" href="#template-strings" title="永久链接至标题">¶</a></h2>
+<p>模板字符串提供了由 <span class="target" id="index-21"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0292  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0292'" tppabs="https://www.python.org/dev/peps/pep-0292"><strong>PEP 292</strong></a> 所描述的更简便的字符串替换方式。 模板字符串的一个主要用例是文本国际化 (i18n)，因为在此场景下，更简单的语法和功能使得文本翻译过程比使用 Python 的其他内置字符串格式化工具更为方便。 作为基于模板字符串构建以实现 i18n 的库的一个示例，请参看 <a class="reference external" href="javascript:if(confirm('http://flufli18n.readthedocs.io/en/latest/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://flufli18n.readthedocs.io/en/latest/'" tppabs="http://flufli18n.readthedocs.io/en/latest/">flufl.i18n</a> 包。</p>
+<p id="index-11">模板字符串支持基于 <code class="docutils literal notranslate"><span class="pre">$</span></code> 的替换，使用以下规则：</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">$$</span></code> is an escape; it is replaced with a single <code class="docutils literal notranslate"><span class="pre">$</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$identifier</span></code> names a substitution placeholder matching a mapping key of
-<code class="docutils literal notranslate"><span class="pre">&quot;identifier&quot;</span></code>.  By default, <code class="docutils literal notranslate"><span class="pre">&quot;identifier&quot;</span></code> is restricted to any
-case-insensitive ASCII alphanumeric string (including underscores) that
-starts with an underscore or ASCII letter.  The first non-identifier
-character after the <code class="docutils literal notranslate"><span class="pre">$</span></code> character terminates this placeholder
-specification.</li>
-<li><code class="docutils literal notranslate"><span class="pre">${identifier}</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">$identifier</span></code>.  It is required when
-valid identifier characters follow the placeholder but are not part of the
-placeholder, such as <code class="docutils literal notranslate"><span class="pre">&quot;${noun}ification&quot;</span></code>.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$$</span></code> 为转义符号；它会被替换为单个的 <code class="docutils literal notranslate"><span class="pre">$</span></code>。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$identifier</span></code> 为替换占位符，它会匹配一个名为 <code class="docutils literal notranslate"><span class="pre">&quot;identifier&quot;</span></code> 的映射键。 在默认情况下，<code class="docutils literal notranslate"><span class="pre">&quot;identifier&quot;</span></code> 限制为任意 ASCII 字母数字（包括下划线）组成的字符串，不区分大小写，以下划线或 ASCII 字母开头。 在 <code class="docutils literal notranslate"><span class="pre">$</span></code> 字符之后的第一个非标识符字符将表明占位符的终结。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">${identifier}</span></code> 等价于 <code class="docutils literal notranslate"><span class="pre">$identifier</span></code>。 当占位符之后紧跟着有效的但又不是占位符一部分的标识符字符时需要使用，例如 <code class="docutils literal notranslate"><span class="pre">&quot;${noun}ification&quot;</span></code>。</p></li>
 </ul>
-<p>Any other appearance of <code class="docutils literal notranslate"><span class="pre">$</span></code> in the string will result in a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>
-being raised.</p>
-<p>The <a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> module provides a <a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> class that implements
-these rules.  The methods of <a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> are:</p>
+<p>在字符串的其他位置出现 <code class="docutils literal notranslate"><span class="pre">$</span></code> 将导致引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
+<p><a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> 模块提供了实现这些规则的 <a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> 类。 <a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> 有下列方法：</p>
 <dl class="class">
 <dt id="string.Template">
-<em class="property">class </em><code class="descclassname">string.</code><code class="descname">Template</code><span class="sig-paren">(</span><em>template</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Template" title="永久链接至目标">¶</a></dt>
-<dd><p>The constructor takes a single argument which is the template string.</p>
+<em class="property">class </em><code class="sig-prename descclassname">string.</code><code class="sig-name descname">Template</code><span class="sig-paren">(</span><em class="sig-param">template</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Template" title="永久链接至目标">¶</a></dt>
+<dd><p>该构造器接受一个参数作为模板字符串。</p>
 <dl class="method">
 <dt id="string.Template.substitute">
-<code class="descname">substitute</code><span class="sig-paren">(</span><em>mapping</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Template.substitute" title="永久链接至目标">¶</a></dt>
-<dd><p>Performs the template substitution, returning a new string.  <em>mapping</em> is
-any dictionary-like object with keys that match the placeholders in the
-template.  Alternatively, you can provide keyword arguments, where the
-keywords are the placeholders.  When both <em>mapping</em> and <em>kwds</em> are given
-and there are duplicates, the placeholders from <em>kwds</em> take precedence.</p>
+<code class="sig-name descname">substitute</code><span class="sig-paren">(</span><em class="sig-param">mapping={}</em>, <em class="sig-param">/</em>, <em class="sig-param">**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Template.substitute" title="永久链接至目标">¶</a></dt>
+<dd><p>执行模板替换，返回一个新字符串。 <em>mapping</em> 为任意字典类对象，其中的键将匹配模板中的占位符。 或者你也可以提供一组关键字参数，其中的关键字即对应占位符。 当同时给出 <em>mapping</em> 和 <em>kwds</em> 并且存在重复时，则以 <em>kwds</em> 中的占位符为优先。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="string.Template.safe_substitute">
-<code class="descname">safe_substitute</code><span class="sig-paren">(</span><em>mapping</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Template.safe_substitute" title="永久链接至目标">¶</a></dt>
-<dd><p>Like <a class="reference internal" href="#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">substitute()</span></code></a>, except that if placeholders are missing from
-<em>mapping</em> and <em>kwds</em>, instead of raising a <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> exception, the
-original placeholder will appear in the resulting string intact.  Also,
-unlike with <a class="reference internal" href="#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">substitute()</span></code></a>, any other appearances of the <code class="docutils literal notranslate"><span class="pre">$</span></code> will
-simply return <code class="docutils literal notranslate"><span class="pre">$</span></code> instead of raising <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
-<p>While other exceptions may still occur, this method is called &quot;safe&quot;
-because it always tries to return a usable string instead of
-raising an exception.  In another sense, <a class="reference internal" href="#string.Template.safe_substitute" title="string.Template.safe_substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">safe_substitute()</span></code></a> may be
-anything other than safe, since it will silently ignore malformed
-templates containing dangling delimiters, unmatched braces, or
-placeholders that are not valid Python identifiers.</p>
+<code class="sig-name descname">safe_substitute</code><span class="sig-paren">(</span><em class="sig-param">mapping={}</em>, <em class="sig-param">/</em>, <em class="sig-param">**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#string.Template.safe_substitute" title="永久链接至目标">¶</a></dt>
+<dd><p>类似于 <a class="reference internal" href="#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">substitute()</span></code></a>，不同之处是如果有占位符未在 <em>mapping</em> 和 <em>kwds</em> 中找到，不是引发 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> 异常，而是将原始占位符不加修改地显示在结果字符串中。 另一个与 <a class="reference internal" href="#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">substitute()</span></code></a> 的差异是任何在其他情况下出现的 <code class="docutils literal notranslate"><span class="pre">$</span></code> 将简单地返回 <code class="docutils literal notranslate"><span class="pre">$</span></code> 而不是引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
+<p>此方法被认为“安全”，因为虽然仍有可能发生其他异常，但它总是尝试返回可用的字符串而不是引发一个异常。 从另一方面来说，<a class="reference internal" href="#string.Template.safe_substitute" title="string.Template.safe_substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">safe_substitute()</span></code></a> 也可能根本算不上安全，因为它将静默地忽略错误格式的模板，例如包含多余的分隔符、不成对的花括号或不是合法 Python 标识符的占位符等等。</p>
 </dd></dl>
 
-<p><a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> instances also provide one public data attribute:</p>
+<p><a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> 的实例还提供一个公有数据属性：</p>
 <dl class="attribute">
 <dt id="string.Template.template">
-<code class="descname">template</code><a class="headerlink" href="#string.Template.template" title="永久链接至目标">¶</a></dt>
-<dd><p>This is the object passed to the constructor's <em>template</em> argument.  In
-general, you shouldn't change it, but read-only access is not enforced.</p>
+<code class="sig-name descname">template</code><a class="headerlink" href="#string.Template.template" title="永久链接至目标">¶</a></dt>
+<dd><p>这是作为构造器的 <em>template</em> 参数被传入的对象。 一般来说，你不应该修改它，但并不强制要求只读访问。</p>
 </dd></dl>
 
 </dd></dl>
 
-<p>Here is an example of how to use a Template:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">string</span> <span class="k">import</span> <span class="n">Template</span>
+<p>以下是一个如何使用模版的示例：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">Template</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;$who likes $what&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">who</span><span class="o">=</span><span class="s1">&#39;tim&#39;</span><span class="p">,</span> <span class="n">what</span><span class="o">=</span><span class="s1">&#39;kung pao&#39;</span><span class="p">)</span>
 <span class="go">&#39;tim likes kung pao&#39;</span>
@@ -877,79 +665,43 @@ general, you shouldn't change it, but read-only access is not enforced.</p>
 <span class="go">&#39;tim likes $what&#39;</span>
 </pre></div>
 </div>
-<p>Advanced usage: you can derive subclasses of <a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> to customize
-the placeholder syntax, delimiter character, or the entire regular expression
-used to parse template strings.  To do this, you can override these class
-attributes:</p>
+<p>进阶用法：你可以派生 <a class="reference internal" href="#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> 的子类来自定义占位符语法、分隔符，或用于解析模板字符串的整个正则表达式。 为此目的，你可以重载这些类属性：</p>
 <ul>
-<li><p class="first"><em>delimiter</em> -- This is the literal string describing a placeholder
-introducing delimiter.  The default value is <code class="docutils literal notranslate"><span class="pre">$</span></code>.  Note that this should
-<em>not</em> be a regular expression, as the implementation will call
-<a class="reference internal" href="re.html#re.escape" tppabs="https://docs.python.org/zh-cn/3/library/re.html#re.escape" title="re.escape"><code class="xref py py-meth docutils literal notranslate"><span class="pre">re.escape()</span></code></a> on this string as needed.  Note further that you cannot
-change the delimiter after class creation (i.e. a different delimiter must
-be set in the subclass's class namespace).</p>
-</li>
-<li><p class="first"><em>idpattern</em> -- This is the regular expression describing the pattern for
-non-braced placeholders.  The default value is the regular expression
-<code class="docutils literal notranslate"><span class="pre">(?a:[_a-z][_a-z0-9]*)</span></code>.  If this is given and <em>braceidpattern</em> is
-<code class="docutils literal notranslate"><span class="pre">None</span></code> this pattern will also apply to braced placeholders.</p>
+<li><p><em>delimiter</em> -- 这是用来表示占位符的起始的分隔符的字符串字面值。 默认值为 <code class="docutils literal notranslate"><span class="pre">$</span></code>。 请注意此参数 <em>不能</em> 为正则表达式，因为其实现将在必要时对此字符串调用 <a class="reference internal" href="re.html#re.escape" tppabs="https://docs.python.org/zh-cn/3/library/re.html#re.escape" title="re.escape"><code class="xref py py-meth docutils literal notranslate"><span class="pre">re.escape()</span></code></a>。 还要注意你不能在创建类之后改变此分隔符（例如在子类的类命名空间中必须设置不同的分隔符）。</p></li>
+<li><p><em>idpattern</em> -- 这是用来描述不带花括号的占位符的模式的正则表达式。 默认值为正则表达式 <code class="docutils literal notranslate"><span class="pre">(?a:[_a-z][_a-z0-9]*)</span></code>。 如果给出了此属性并且 <em>braceidpattern</em> 为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 则此模式也将作用于带花括号的占位符。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">Since default <em>flags</em> is <code class="docutils literal notranslate"><span class="pre">re.IGNORECASE</span></code>, pattern <code class="docutils literal notranslate"><span class="pre">[a-z]</span></code> can match
-with some non-ASCII characters. That's why we use the local <code class="docutils literal notranslate"><span class="pre">a</span></code> flag
-here.</p>
+<p class="admonition-title">注解</p>
+<p>由于默认的 <em>flags</em> 为 <code class="docutils literal notranslate"><span class="pre">re.IGNORECASE</span></code>，模式 <code class="docutils literal notranslate"><span class="pre">[a-z]</span></code> 可以匹配某些非 ASCII 字符。 因此我们在这里使用了局部旗标 <code class="docutils literal notranslate"><span class="pre">a</span></code>。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span><em>braceidpattern</em> can be used to define separate patterns used inside and
-outside the braces.</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span><em>braceidpattern</em> 可被用来定义对花括号内部和外部进行区分的模式。</p>
 </div>
 </li>
-<li><p class="first"><em>braceidpattern</em> -- This is like <em>idpattern</em> but describes the pattern for
-braced placeholders.  Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> which means to fall back to
-<em>idpattern</em> (i.e. the same pattern is used both inside and outside braces).
-If given, this allows you to define different patterns for braced and
-unbraced placeholders.</p>
+<li><p><em>braceidpattern</em> -- 此属性类似于 <em>idpattern</em> 但是用来描述带花括号的占位符的模式。 默认值 <code class="docutils literal notranslate"><span class="pre">None</span></code> 意味着回退到 <em>idpattern</em> (即在花括号内部和外部使用相同的模式)。 如果给出此属性，这将允许你为带花括号和不带花括号的占位符定义不同的模式。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </li>
-<li><p class="first"><em>flags</em> -- The regular expression flags that will be applied when compiling
-the regular expression used for recognizing substitutions.  The default value
-is <code class="docutils literal notranslate"><span class="pre">re.IGNORECASE</span></code>.  Note that <code class="docutils literal notranslate"><span class="pre">re.VERBOSE</span></code> will always be added to the
-flags, so custom <em>idpattern</em>s must follow conventions for verbose regular
-expressions.</p>
+<li><p><em>flags</em> -- 将在编译用于识别替换内容的正则表达式被应用的正则表达式旗标。 默认值为 <code class="docutils literal notranslate"><span class="pre">re.IGNORECASE</span></code>。 请注意 <code class="docutils literal notranslate"><span class="pre">re.VERBOSE</span></code> 总是会被加为旗标，因此自定义的 <em>idpattern</em> 必须遵循详细正则表达式的约定。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">3.2 新版功能.</span></p>
 </div>
 </li>
 </ul>
-<p>Alternatively, you can provide the entire regular expression pattern by
-overriding the class attribute <em>pattern</em>.  If you do this, the value must be a
-regular expression object with four named capturing groups.  The capturing
-groups correspond to the rules given above, along with the invalid placeholder
-rule:</p>
+<p>作为另一种选项，你可以通过重载类属性 <em>pattern</em> 来提供整个正则表达式模式。 如果你这样做，该值必须为一个具有四个命名捕获组的正则表达式对象。 这些捕获组对应于上面已经给出的规则，以及无效占位符的规则：</p>
 <ul class="simple">
-<li><em>escaped</em> -- This group matches the escape sequence, e.g. <code class="docutils literal notranslate"><span class="pre">$$</span></code>, in the
-default pattern.</li>
-<li><em>named</em> -- This group matches the unbraced placeholder name; it should not
-include the delimiter in capturing group.</li>
-<li><em>braced</em> -- This group matches the brace enclosed placeholder name; it should
-not include either the delimiter or braces in the capturing group.</li>
-<li><em>invalid</em> -- This group matches any other delimiter pattern (usually a single
-delimiter), and it should appear last in the regular expression.</li>
+<li><p><em>escaped</em> -- 这个组匹配转义序列，在默认模式中即 <code class="docutils literal notranslate"><span class="pre">$$</span></code>。</p></li>
+<li><p><em>named</em> -- 这个组匹配不带花括号的占位符名称；它不应当包含捕获组中的分隔符。</p></li>
+<li><p><em>braced</em> -- 这个组匹配带有花括号的占位符名称；它不应当包含捕获组中的分隔符或者花括号。</p></li>
+<li><p><em>invalid</em> -- 这个组匹配任何其他分隔符模式（通常为单个分隔符），并且它应当出现在正则表达式的末尾。</p></li>
 </ul>
 </div>
 <div class="section" id="helper-functions">
-<h2>Helper functions<a class="headerlink" href="#helper-functions" title="永久链接至标题">¶</a></h2>
+<h2>辅助函数<a class="headerlink" href="#helper-functions" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="string.capwords">
-<code class="descclassname">string.</code><code class="descname">capwords</code><span class="sig-paren">(</span><em>s</em>, <em>sep=None</em><span class="sig-paren">)</span><a class="headerlink" href="#string.capwords" title="永久链接至目标">¶</a></dt>
-<dd><p>Split the argument into words using <a class="reference internal" href="stdtypes.html#str.split" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.split" title="str.split"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.split()</span></code></a>, capitalize each word
-using <a class="reference internal" href="stdtypes.html#str.capitalize" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.capitalize" title="str.capitalize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.capitalize()</span></code></a>, and join the capitalized words using
-<a class="reference internal" href="stdtypes.html#str.join" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.join" title="str.join"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.join()</span></code></a>.  If the optional second argument <em>sep</em> is absent
-or <code class="docutils literal notranslate"><span class="pre">None</span></code>, runs of whitespace characters are replaced by a single space
-and leading and trailing whitespace are removed, otherwise <em>sep</em> is used to
-split and join the words.</p>
+<code class="sig-prename descclassname">string.</code><code class="sig-name descname">capwords</code><span class="sig-paren">(</span><em class="sig-param">s</em>, <em class="sig-param">sep=None</em><span class="sig-paren">)</span><a class="headerlink" href="#string.capwords" title="永久链接至目标">¶</a></dt>
+<dd><p>使用 <a class="reference internal" href="stdtypes.html#str.split" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.split" title="str.split"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.split()</span></code></a> 将参数拆分为单词，使用 <a class="reference internal" href="stdtypes.html#str.capitalize" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.capitalize" title="str.capitalize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.capitalize()</span></code></a> 将单词转为大写形式，使用 <a class="reference internal" href="stdtypes.html#str.join" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.join" title="str.join"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.join()</span></code></a> 将大写的单词进行拼接。 如果可选的第二个参数 <em>sep</em> 被省略或为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则连续的空白字符会被替换为单个空格符并且开头和末尾的空白字符会被移除，否则 <em>sep</em> 会被用来拆分和拼接单词。</p>
 </dd></dl>
 
 </div>
@@ -961,18 +713,18 @@ split and join the words.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">string</span></code> --- 常见的字符串操作</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code> --- 常见的字符串操作</a><ul>
 <li><a class="reference internal" href="#string-constants">字符串常量</a></li>
-<li><a class="reference internal" href="#custom-string-formatting">Custom String Formatting</a></li>
-<li><a class="reference internal" href="#format-string-syntax">Format String Syntax</a><ul>
-<li><a class="reference internal" href="#format-specification-mini-language">Format Specification Mini-Language</a></li>
-<li><a class="reference internal" href="#format-examples">Format examples</a></li>
+<li><a class="reference internal" href="#custom-string-formatting">自定义字符串格式化</a></li>
+<li><a class="reference internal" href="#format-string-syntax">格式字符串语法</a><ul>
+<li><a class="reference internal" href="#format-specification-mini-language">格式规格迷你语言</a></li>
+<li><a class="reference internal" href="#format-examples">格式示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#template-strings">Template strings</a></li>
-<li><a class="reference internal" href="#helper-functions">Helper functions</a></li>
+<li><a class="reference internal" href="#template-strings">模板字符串</a></li>
+<li><a class="reference internal" href="#helper-functions">辅助函数</a></li>
 </ul>
 </li>
 </ul>
@@ -982,13 +734,13 @@ split and join the words.</p>
                         title="上一章">文本处理服务</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="re.html" tppabs="https://docs.python.org/zh-cn/3/library/re.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">re</span></code> --- 正则表达式操作</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code> --- 正则表达式操作</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/string.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/string.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/string.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/string.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/string.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/string.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -1013,14 +765,17 @@ split and join the words.</p>
         <li class="right" >
           <a href="text.html" tppabs="https://docs.python.org/zh-cn/3/library/text.html" title="文本处理服务"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="text.html" tppabs="https://docs.python.org/zh-cn/3/library/text.html" >文本处理服务</a> &#187;</li>
@@ -1042,15 +797,19 @@ split and join the words.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>msvcrt --- Useful routines from the MS VC++ runtime &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>msvcrt --- Useful routines from the MS VC++ runtime &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="winreg --- Windows registry access" href="winreg.html" />
+    <link rel="next" title="winreg --- Windows æ³¨å†Œè¡¨è®¿é—®" href="winreg.html" />
     <link rel="prev" title="msilib --- Read and write Microsoft Installer files" href="msilib.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/msvcrt.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="winreg.html" tppabs="https://docs.python.org/zh-cn/3/library/winreg.html" title="winreg --- Windows registry access"
+          <a href="winreg.html" tppabs="https://docs.python.org/zh-cn/3/library/winreg.html" title="winreg --- Windows æ³¨å†Œè¡¨è®¿é—®"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="msilib.html" tppabs="https://docs.python.org/zh-cn/3/library/msilib.html" title="msilib --- Read and write Microsoft Installer files"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="windows-1.html" tppabs="https://docs.python.org/zh-cn/3/library/windows.html" accesskey="U">Windowsç³»ç»Ÿç›¸å…³æ¨¡å—</a> &#187;</li>
@@ -109,27 +117,28 @@ api. The normal API deals only with ASCII characters and is of limited use
 for internationalized applications. The wide char API should be used where
 ever possible.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.3 ç‰ˆæ›´æ”¹: </span>Operations in this module now raise <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> where <a class="reference internal" href="exceptions.html#IOError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IOError" title="IOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IOError</span></code></a>
+<p><span class="versionmodified changed">åœ¨ 3.3 ç‰ˆæ›´æ”¹: </span>Operations in this module now raise <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> where <a class="reference internal" href="exceptions.html#IOError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IOError" title="IOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IOError</span></code></a>
 was raised.</p>
 </div>
 <div class="section" id="file-operations">
 <span id="msvcrt-files"></span><h2>File Operations<a class="headerlink" href="#file-operations" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="msvcrt.locking">
-<code class="descclassname">msvcrt.</code><code class="descname">locking</code><span class="sig-paren">(</span><em>fd</em>, <em>mode</em>, <em>nbytes</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.locking" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">locking</code><span class="sig-paren">(</span><em class="sig-param">fd</em>, <em class="sig-param">mode</em>, <em class="sig-param">nbytes</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.locking" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Lock part of a file based on file descriptor <em>fd</em> from the C runtime.  Raises
 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> on failure.  The locked region of the file extends from the
 current file position for <em>nbytes</em> bytes, and may continue beyond the end of the
 file.  <em>mode</em> must be one of the <code class="xref py py-const docutils literal notranslate"><span class="pre">LK_*</span></code> constants listed below. Multiple
 regions in a file may be locked at the same time, but may not overlap.  Adjacent
 regions are not merged; they must be unlocked individually.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">msvcrt.locking</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">fd</span></code>, <code class="docutils literal notranslate"><span class="pre">mode</span></code>, <code class="docutils literal notranslate"><span class="pre">nbytes</span></code>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="msvcrt.LK_LOCK">
-<code class="descclassname">msvcrt.</code><code class="descname">LK_LOCK</code><a class="headerlink" href="#msvcrt.LK_LOCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">LK_LOCK</code><a class="headerlink" href="#msvcrt.LK_LOCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dt id="msvcrt.LK_RLCK">
-<code class="descclassname">msvcrt.</code><code class="descname">LK_RLCK</code><a class="headerlink" href="#msvcrt.LK_RLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">LK_RLCK</code><a class="headerlink" href="#msvcrt.LK_RLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Locks the specified bytes. If the bytes cannot be locked, the program
 immediately tries again after 1 second.  If, after 10 attempts, the bytes cannot
 be locked, <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> is raised.</p>
@@ -137,22 +146,22 @@ be locked, <a class="reference internal" href="exceptions.html#OSError" tppabs="
 
 <dl class="data">
 <dt id="msvcrt.LK_NBLCK">
-<code class="descclassname">msvcrt.</code><code class="descname">LK_NBLCK</code><a class="headerlink" href="#msvcrt.LK_NBLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">LK_NBLCK</code><a class="headerlink" href="#msvcrt.LK_NBLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dt id="msvcrt.LK_NBRLCK">
-<code class="descclassname">msvcrt.</code><code class="descname">LK_NBRLCK</code><a class="headerlink" href="#msvcrt.LK_NBRLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">LK_NBRLCK</code><a class="headerlink" href="#msvcrt.LK_NBRLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Locks the specified bytes. If the bytes cannot be locked, <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> is
 raised.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="msvcrt.LK_UNLCK">
-<code class="descclassname">msvcrt.</code><code class="descname">LK_UNLCK</code><a class="headerlink" href="#msvcrt.LK_UNLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">LK_UNLCK</code><a class="headerlink" href="#msvcrt.LK_UNLCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Unlocks the specified bytes, which must have been previously locked.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.setmode">
-<code class="descclassname">msvcrt.</code><code class="descname">setmode</code><span class="sig-paren">(</span><em>fd</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.setmode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">setmode</code><span class="sig-paren">(</span><em class="sig-param">fd</em>, <em class="sig-param">flags</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.setmode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Set the line-end translation mode for the file descriptor <em>fd</em>. To set it to
 text mode, <em>flags</em> should be <a class="reference internal" href="os.html#os.O_TEXT" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.O_TEXT" title="os.O_TEXT"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_TEXT</span></code></a>; for binary, it should be
 <a class="reference internal" href="os.html#os.O_BINARY" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.O_BINARY" title="os.O_BINARY"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_BINARY</span></code></a>.</p>
@@ -160,18 +169,20 @@ text mode, <em>flags</em> should be <a class="reference internal" href="os.html#
 
 <dl class="function">
 <dt id="msvcrt.open_osfhandle">
-<code class="descclassname">msvcrt.</code><code class="descname">open_osfhandle</code><span class="sig-paren">(</span><em>handle</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.open_osfhandle" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">open_osfhandle</code><span class="sig-paren">(</span><em class="sig-param">handle</em>, <em class="sig-param">flags</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.open_osfhandle" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Create a C runtime file descriptor from the file handle <em>handle</em>.  The <em>flags</em>
 parameter should be a bitwise OR of <a class="reference internal" href="os.html#os.O_APPEND" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.O_APPEND" title="os.O_APPEND"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_APPEND</span></code></a>, <a class="reference internal" href="os.html#os.O_RDONLY" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.O_RDONLY" title="os.O_RDONLY"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_RDONLY</span></code></a>,
 and <a class="reference internal" href="os.html#os.O_TEXT" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.O_TEXT" title="os.O_TEXT"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_TEXT</span></code></a>.  The returned file descriptor may be used as a parameter
 to <a class="reference internal" href="os.html#os.fdopen" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.fdopen" title="os.fdopen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fdopen()</span></code></a> to create a file object.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">msvcrt.open_osfhandle</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">handle</span></code>, <code class="docutils literal notranslate"><span class="pre">flags</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.get_osfhandle">
-<code class="descclassname">msvcrt.</code><code class="descname">get_osfhandle</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.get_osfhandle" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">get_osfhandle</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.get_osfhandle" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the file handle for the file descriptor <em>fd</em>.  Raises <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> if
 <em>fd</em> is not recognized.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">msvcrt.get_osfhandle</span></code> with argument <code class="docutils literal notranslate"><span class="pre">fd</span></code>.</p>
 </dd></dl>
 
 </div>
@@ -179,13 +190,13 @@ to <a class="reference internal" href="os.html#os.fdopen" tppabs="https://docs.p
 <span id="msvcrt-console"></span><h2>Console I/O<a class="headerlink" href="#console-i-o" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="msvcrt.kbhit">
-<code class="descclassname">msvcrt.</code><code class="descname">kbhit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.kbhit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Return true if a keypress is waiting to be read.</p>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">kbhit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.kbhit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if a keypress is waiting to be read.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.getch">
-<code class="descclassname">msvcrt.</code><code class="descname">getch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">getch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Read a keypress and return the resulting character as a byte string.
 Nothing is echoed to the console.  This call will block if a keypress
 is not already available, but will not wait for <kbd class="kbd docutils literal notranslate">Enter</kbd> to be
@@ -196,45 +207,45 @@ The <kbd class="kbd docutils literal notranslate">Control-C</kbd> keypress canno
 
 <dl class="function">
 <dt id="msvcrt.getwch">
-<code class="descclassname">msvcrt.</code><code class="descname">getwch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getwch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">getwch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getwch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.getch" title="msvcrt.getch"><code class="xref py py-func docutils literal notranslate"><span class="pre">getch()</span></code></a>, returning a Unicode value.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.getche">
-<code class="descclassname">msvcrt.</code><code class="descname">getche</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getche" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">getche</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getche" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Similar to <a class="reference internal" href="#msvcrt.getch" title="msvcrt.getch"><code class="xref py py-func docutils literal notranslate"><span class="pre">getch()</span></code></a>, but the keypress will be echoed if it  represents a
 printable character.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.getwche">
-<code class="descclassname">msvcrt.</code><code class="descname">getwche</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getwche" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">getwche</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.getwche" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.getche" title="msvcrt.getche"><code class="xref py py-func docutils literal notranslate"><span class="pre">getche()</span></code></a>, returning a Unicode value.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.putch">
-<code class="descclassname">msvcrt.</code><code class="descname">putch</code><span class="sig-paren">(</span><em>char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.putch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">putch</code><span class="sig-paren">(</span><em class="sig-param">char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.putch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Print the byte string <em>char</em> to the console without buffering.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.putwch">
-<code class="descclassname">msvcrt.</code><code class="descname">putwch</code><span class="sig-paren">(</span><em>unicode_char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.putwch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">putwch</code><span class="sig-paren">(</span><em class="sig-param">unicode_char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.putwch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.putch" title="msvcrt.putch"><code class="xref py py-func docutils literal notranslate"><span class="pre">putch()</span></code></a>, accepting a Unicode value.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.ungetch">
-<code class="descclassname">msvcrt.</code><code class="descname">ungetch</code><span class="sig-paren">(</span><em>char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.ungetch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">ungetch</code><span class="sig-paren">(</span><em class="sig-param">char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.ungetch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Cause the byte string <em>char</em> to be &quot;pushed back&quot; into the console buffer;
 it will be the next character read by <a class="reference internal" href="#msvcrt.getch" title="msvcrt.getch"><code class="xref py py-func docutils literal notranslate"><span class="pre">getch()</span></code></a> or <a class="reference internal" href="#msvcrt.getche" title="msvcrt.getche"><code class="xref py py-func docutils literal notranslate"><span class="pre">getche()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="msvcrt.ungetwch">
-<code class="descclassname">msvcrt.</code><code class="descname">ungetwch</code><span class="sig-paren">(</span><em>unicode_char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.ungetwch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">ungetwch</code><span class="sig-paren">(</span><em class="sig-param">unicode_char</em><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.ungetwch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.ungetch" title="msvcrt.ungetch"><code class="xref py py-func docutils literal notranslate"><span class="pre">ungetch()</span></code></a>, accepting a Unicode value.</p>
 </dd></dl>
 
@@ -243,7 +254,7 @@ it will be the next character read by <a class="reference internal" href="#msvcr
 <span id="msvcrt-other"></span><h2>Other Functions<a class="headerlink" href="#other-functions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="msvcrt.heapmin">
-<code class="descclassname">msvcrt.</code><code class="descname">heapmin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.heapmin" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">msvcrt.</code><code class="sig-name descname">heapmin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msvcrt.heapmin" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Force the <code class="xref c c-func docutils literal notranslate"><span class="pre">malloc()</span></code> heap to clean itself up and return unused blocks to
 the operating system.  On failure, this raises <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
 </dd></dl>
@@ -257,9 +268,9 @@ the operating system.  On failure, this raises <a class="reference internal" hre
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">msvcrt</span></code> --- Useful routines from the MS VC++ runtime</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msvcrt</span></code> --- Useful routines from the MS VC++ runtime</a><ul>
 <li><a class="reference internal" href="#file-operations">File Operations</a></li>
 <li><a class="reference internal" href="#console-i-o">Console I/O</a></li>
 <li><a class="reference internal" href="#other-functions">Other Functions</a></li>
@@ -269,16 +280,16 @@ the operating system.  On failure, this raises <a class="reference internal" hre
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="msilib.html" tppabs="https://docs.python.org/zh-cn/3/library/msilib.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">msilib</span></code> --- Read and write Microsoft Installer files</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- Read and write Microsoft Installer files</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="winreg.html" tppabs="https://docs.python.org/zh-cn/3/library/winreg.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">winreg</span></code> --- Windows registry access</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">winreg</span></code> --- Windows æ³¨å†Œè¡¨è®¿é—®</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/msvcrt.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/msvcrt.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/msvcrt.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/msvcrt.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/msvcrt.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/msvcrt.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -298,19 +309,22 @@ the operating system.  On failure, this raises <a class="reference internal" hre
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="winreg.html" tppabs="https://docs.python.org/zh-cn/3/library/winreg.html" title="winreg --- Windows registry access"
+          <a href="winreg.html" tppabs="https://docs.python.org/zh-cn/3/library/winreg.html" title="winreg --- Windows æ³¨å†Œè¡¨è®¿é—®"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="msilib.html" tppabs="https://docs.python.org/zh-cn/3/library/msilib.html" title="msilib --- Read and write Microsoft Installer files"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="windows-1.html" tppabs="https://docs.python.org/zh-cn/3/library/windows.html" >Windowsç³»ç»Ÿç›¸å…³æ¨¡å—</a> &#187;</li>
@@ -332,15 +346,19 @@ the operating system.  On failure, this raises <a class="reference internal" hre
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

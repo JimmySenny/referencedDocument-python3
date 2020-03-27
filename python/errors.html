@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>8. 错误和异常 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>8. 错误和异常 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="9. 类" href="classes.html" />
     <link rel="prev" title="7. 输入输出" href="inputoutput.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/tutorial/errors.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="inputoutput.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/inputoutput.html" title="7. 输入输出"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" accesskey="U">Python 教程</a> &#187;</li>
     <li class="right">
@@ -95,10 +103,10 @@
           <div class="body" role="main">
             
   <div class="section" id="errors-and-exceptions">
-<span id="tut-errors"></span><h1>8. 错误和异常<a class="headerlink" href="#errors-and-exceptions" title="永久链接至标题">¶</a></h1>
+<span id="tut-errors"></span><h1><span class="section-number">8. </span>错误和异常<a class="headerlink" href="#errors-and-exceptions" title="永久链接至标题">¶</a></h1>
 <p>到目前为止，我们还没有提到错误消息，但是如果你已经尝试过那些例子，你可能已经看过了一些错误消息。 目前（至少）有两种可区分的错误：<em>语法错误</em> 和 <em>异常</em>。</p>
 <div class="section" id="syntax-errors">
-<span id="tut-syntaxerrors"></span><h2>8.1. 语法错误<a class="headerlink" href="#syntax-errors" title="永久链接至标题">¶</a></h2>
+<span id="tut-syntaxerrors"></span><h2><span class="section-number">8.1. </span>语法错误<a class="headerlink" href="#syntax-errors" title="永久链接至标题">¶</a></h2>
 <p>语法错误又称解析错误，可能是你在学习Python 时最容易遇到的错误:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
@@ -110,7 +118,7 @@
 <p>解析器会输出出现语法错误的那一行，并显示一个“箭头”，指向这行里面检测到第一个错误。 错误是由箭头指示的位置 <em>上面</em> 的 token 引起的（或者至少是在这里被检测出的）：在示例中，在 <a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> 这个函数中检测到了错误，因为在它前面少了个冒号 (<code class="docutils literal notranslate"><span class="pre">':'</span></code>) 。文件名和行号也会被输出，以便输入来自脚本文件时你能知道去哪检查。</p>
 </div>
 <div class="section" id="exceptions">
-<span id="tut-exceptions"></span><h2>8.2. 异常<a class="headerlink" href="#exceptions" title="永久链接至标题">¶</a></h2>
+<span id="tut-exceptions"></span><h2><span class="section-number">8.2. </span>异常<a class="headerlink" href="#exceptions" title="永久链接至标题">¶</a></h2>
 <p>即使语句或表达式在语法上是正确的，但在尝试执行时，它仍可能会引发错误。 在执行时检测到的错误被称为*异常*，异常不一定会导致严重后果：你将很快学会如何在Python程序中处理它们。 但是，大多数异常并不会被程序处理，此时会显示如下所示的错误信息:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
@@ -132,7 +140,7 @@
 <p><a class="reference internal" href="exceptions.html#bltin-exceptions" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#bltin-exceptions"><span class="std std-ref">内置异常</span></a> 列出了内置异常和它们的含义。</p>
 </div>
 <div class="section" id="handling-exceptions">
-<span id="tut-handling"></span><h2>8.3. 处理异常<a class="headerlink" href="#handling-exceptions" title="永久链接至标题">¶</a></h2>
+<span id="tut-handling"></span><h2><span class="section-number">8.3. </span>处理异常<a class="headerlink" href="#handling-exceptions" title="永久链接至标题">¶</a></h2>
 <p>可以编写处理所选异常的程序。请看下面的例子，它会要求用户一直输入，直到输入的是一个有效的整数，但允许用户中断程序（使用 <kbd class="kbd docutils literal notranslate">Control-C</kbd> 或操作系统支持的其他操作）；请注意用户引起的中断可以通过引发 <a class="reference internal" href="exceptions.html#KeyboardInterrupt" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a> 异常来指示。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
@@ -145,17 +153,17 @@
 </div>
 <p><a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句的工作原理如下。</p>
 <ul class="simple">
-<li>首先，执行 <em>try 子句</em> （<a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 和 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 关键字之间的（多行）语句）。</li>
-<li>如果没有异常发生，则跳过 <em>except 子句</em> 并完成 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句的执行。</li>
-<li>如果在执行try 子句时发生了异常，则跳过该子句中剩下的部分。然后，如果异常的类型和 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 关键字后面的异常匹配，则执行 except 子句 ，然后继续执行 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句之后的代码。</li>
-<li>如果发生的异常和 except 子句中指定的异常不匹配，则将其传递到外部的 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句中；如果没有找到处理程序，则它是一个 <em>未处理异常</em>，执行将停止并显示如上所示的消息。</li>
+<li><p>首先，执行 <em>try 子句</em> （<a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 和 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 关键字之间的（多行）语句）。</p></li>
+<li><p>如果没有异常发生，则跳过 <em>except 子句</em> 并完成 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句的执行。</p></li>
+<li><p>如果在执行try 子句时发生了异常，则跳过该子句中剩下的部分。然后，如果异常的类型和 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 关键字后面的异常匹配，则执行 except 子句 ，然后继续执行 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句之后的代码。</p></li>
+<li><p>如果发生的异常和 except 子句中指定的异常不匹配，则将其传递到外部的 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句中；如果没有找到处理程序，则它是一个 <em>未处理异常</em>，执行将停止并显示如上所示的消息。</p></li>
 </ul>
 <p>一个 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句可能有多个 except 子句，以指定不同异常的处理程序。 最多会执行一个处理程序。 处理程序只处理相应的 try 子句中发生的异常，而不处理同一 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 语句内其他处理程序中的异常。 一个 except 子句可以将多个异常命名为带括号的元组，例如:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span> <span class="k">except</span> <span class="p">(</span><span class="ne">RuntimeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">NameError</span><span class="p">):</span>
 <span class="o">...</span>     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>如果发生的异常和 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 子句中的类是同一个类或者是它的基类，则异常和except子句中的类是兼容的（但反过来则不成立 --- 列出派生类的except 子句与基类兼容）。例如，下面的代码将依次打印 B, C, D</p>
+<p>如果发生的异常和 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 子句中的类是同一个类或者是它的基类，则异常和 except 子句中的类是兼容的（但反过来则不成立 --- 列出派生类的 except 子句与基类不兼容）。 例如，下面的代码将依次打印 B, C, D</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">pass</span>
 
@@ -176,7 +184,7 @@
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>请注意如果 except&nbsp;子句被颠倒（把 <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">B</span></code> 放到第一个），它将打印 B，B，B --- 即第一个匹配的 except 子句被触发。</p>
+<p>请注意如果 except 子句被颠倒（把 <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">B</span></code> 放到第一个），它将打印 B，B，B --- 即第一个匹配的 except 子句被触发。</p>
 <p>最后的 except 子句可以省略异常名，以用作通配符。但请谨慎使用，因为以这种方式很容易掩盖真正的编程错误！它还可用于打印错误消息，然后重新引发异常（同样允许调用者处理异常）:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
@@ -240,7 +248,7 @@
 </div>
 </div>
 <div class="section" id="raising-exceptions">
-<span id="tut-raising"></span><h2>8.4. 抛出异常<a class="headerlink" href="#raising-exceptions" title="永久链接至标题">¶</a></h2>
+<span id="tut-raising"></span><h2><span class="section-number">8.4. </span>抛出异常<a class="headerlink" href="#raising-exceptions" title="永久链接至标题">¶</a></h2>
 <p><a class="reference internal" href="simple_stmts.html#raise" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#raise"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">raise</span></code></a> 语句允许程序员强制发生指定的异常。例如:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
@@ -267,7 +275,7 @@
 </div>
 </div>
 <div class="section" id="user-defined-exceptions">
-<span id="tut-userexceptions"></span><h2>8.5. 用户自定义异常<a class="headerlink" href="#user-defined-exceptions" title="永久链接至标题">¶</a></h2>
+<span id="tut-userexceptions"></span><h2><span class="section-number">8.5. </span>用户自定义异常<a class="headerlink" href="#user-defined-exceptions" title="永久链接至标题">¶</a></h2>
 <p>程序可以通过创建新的异常类来命名它们自己的异常（有关Python 类的更多信息，请参阅 <a class="reference internal" href="classes.html#tut-classes" tppabs="https://docs.python.org/zh-cn/3/tutorial/classes.html#tut-classes"><span class="std std-ref">类</span></a>）。异常通常应该直接或间接地从 <a class="reference internal" href="exceptions.html#Exception" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#Exception" title="Exception"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Exception</span></code></a> 类派生。</p>
 <p>可以定义异常类，它可以执行任何其他类可以执行的任何操作，但通常保持简单，通常只提供许多属性，这些属性允许处理程序为异常提取有关错误的信息。在创建可能引发多个不同错误的模块时，通常的做法是为该模块定义的异常创建基类，并为不同错误条件创建特定异常类的子类:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Error</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
@@ -282,7 +290,7 @@
 <span class="sd">        message -- explanation of the error</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expression</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expression</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">expression</span> <span class="o">=</span> <span class="n">expression</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
 
@@ -296,7 +304,7 @@
 <span class="sd">        message -- explanation of why the specific transition is not allowed</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">previous</span><span class="p">,</span> <span class="nb">next</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">previous</span><span class="p">,</span> <span class="nb">next</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">previous</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="nb">next</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
@@ -306,7 +314,7 @@
 <p>许多标准模块定义了它们自己的异常，以报告它们定义的函数中可能出现的错误。有关类的更多信息，请参见类 <a class="reference internal" href="classes.html#tut-classes" tppabs="https://docs.python.org/zh-cn/3/tutorial/classes.html#tut-classes"><span class="std std-ref">类</span></a>。</p>
 </div>
 <div class="section" id="defining-clean-up-actions">
-<span id="tut-cleanup"></span><h2>8.6. 定义清理操作<a class="headerlink" href="#defining-clean-up-actions" title="永久链接至标题">¶</a></h2>
+<span id="tut-cleanup"></span><h2><span class="section-number">8.6. </span>定义清理操作<a class="headerlink" href="#defining-clean-up-actions" title="永久链接至标题">¶</a></h2>
 <p><a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句有另一个可选子句，用于定义必须在所有情况下执行的清理操作。例如:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="k">raise</span> <span class="ne">KeyboardInterrupt</span>
@@ -319,7 +327,25 @@
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
 </pre></div>
 </div>
-<p><em>finally 子句</em> 总会在离开 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句前被执行，无论是否发生了异常。 当在 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 子句中发生了异常且尚未被 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 子句处理（或者它发生在 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> 或 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">else</span></code> 子句中）时，它将在 <a class="reference internal" href="compound_stmts.html#finally" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#finally"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code></a> 子句执行后被重新抛出。 当 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 语句的任何其他子句通过 <a class="reference internal" href="simple_stmts.html#break" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#break"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">break</span></code></a>, <a class="reference internal" href="simple_stmts.html#continue" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#continue"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">continue</span></code></a> 或 <a class="reference internal" href="simple_stmts.html#return" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#return"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code></a> 语句离开时，<code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 也会在“离开之前”被执行，一个更复杂的例子:</p>
+<p>如果存在 <a class="reference internal" href="compound_stmts.html#finally" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#finally"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code></a> 子句，则 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句将作为 <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 语句结束前的最后一项任务被执行。 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句不论 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 语句是否产生了异常都会被执行。 以下几点讨论了当异常发生时一些更复杂的情况：</p>
+<ul class="simple">
+<li><p>如果在执行 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 子句期间发生了异常，该异常可由一个 <a class="reference internal" href="compound_stmts.html#except" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> 子句进行处理。 如果异常没有被某个 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> 子句所处理，则该异常会在 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句执行之后被重新引发。</p></li>
+<li><p>异常也可能在 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> 或 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">else</span></code> 子句执行期间发生。 同样地，该异常会在 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句执行之后被重新引发。</p></li>
+<li><p>如果在执行 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 语句时遇到一个 <a class="reference internal" href="simple_stmts.html#break" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#break"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">break</span></code></a>, <a class="reference internal" href="simple_stmts.html#continue" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#continue"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">continue</span></code></a> 或 <a class="reference internal" href="simple_stmts.html#return" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#return"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code></a> 语句，则 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句将在执行 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">break</span></code>, <code class="xref std std-keyword docutils literal notranslate"><span class="pre">continue</span></code> 或 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code> 语句之前被执行。</p></li>
+<li><p>如果 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句中包含一个 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code> 语句，则返回值将来自 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code> 子句的某个 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code> 语句的返回值，而非来自 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code> 子句的 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code> 语句的返回值。</p></li>
+</ul>
+<p>例如</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">bool_return</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">... </span>    <span class="k">finally</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bool_return</span><span class="p">()</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>一个更为复杂的例子:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
@@ -348,7 +374,7 @@
 <p>在实际应用程序中，<a class="reference internal" href="compound_stmts.html#finally" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#finally"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code></a> 子句对于释放外部资源（例如文件或者网络连接）非常有用，无论是否成功使用资源。</p>
 </div>
 <div class="section" id="predefined-clean-up-actions">
-<span id="tut-cleanup-with"></span><h2>8.7. 预定义的清理操作<a class="headerlink" href="#predefined-clean-up-actions" title="永久链接至标题">¶</a></h2>
+<span id="tut-cleanup-with"></span><h2><span class="section-number">8.7. </span>预定义的清理操作<a class="headerlink" href="#predefined-clean-up-actions" title="永久链接至标题">¶</a></h2>
 <p>某些对象定义了在不再需要该对象时要执行的标准清理操作，无论使用该对象的操作是成功还是失败。请查看下面的示例，它尝试打开一个文件并把其内容打印到屏幕上。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -370,7 +396,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">8. 错误和异常</a><ul>
 <li><a class="reference internal" href="#syntax-errors">8.1. 语法错误</a></li>
@@ -386,16 +412,16 @@
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="inputoutput.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/inputoutput.html"
-                        title="上一章">7. 输入输出</a></p>
+                        title="上一章"><span class="section-number">7. </span>输入输出</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="classes.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/classes.html"
-                        title="下一章">9. 类</a></p>
+                        title="下一章"><span class="section-number">9. </span>类</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/tutorial/errors.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/tutorial/errors.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/tutorial/errors.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/tutorial/errors.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/tutorial/errors.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/tutorial/errors.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -420,14 +446,17 @@
         <li class="right" >
           <a href="inputoutput.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/inputoutput.html" title="7. 输入输出"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" >Python 教程</a> &#187;</li>
     <li class="right">
@@ -448,15 +477,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

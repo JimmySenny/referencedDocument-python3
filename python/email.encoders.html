@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>email.encoders: Encoders &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>email.encoders: ç¼–ç å™¨ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="email.utils: å…¶ä»–å·¥å…·" href="email.utils.html" />
     <link rel="prev" title="email.charset: Representing character sets" href="email.charset.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/email.encoders.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,18 +66,21 @@
         <li class="right" >
           <a href="email.charset.html" tppabs="https://docs.python.org/zh-cn/3/library/email.charset.html" title="email.charset: Representing character sets"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
     <li class="right">
         
 
@@ -97,70 +105,46 @@
           <div class="body" role="main">
             
   <div class="section" id="module-email.encoders">
-<span id="email-encoders-encoders"></span><h1><a class="reference internal" href="#module-email.encoders" title="email.encoders: Encoders for email message payloads."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.encoders</span></code></a>: Encoders<a class="headerlink" href="#module-email.encoders" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/email/encoders.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/email/encoders.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/email/encoders.py">Lib/email/encoders.py</a></p>
+<span id="email-encoders-encoders"></span><h1><a class="reference internal" href="#module-email.encoders" title="email.encoders: Encoders for email message payloads."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.encoders</span></code></a>: ç¼–ç å™¨<a class="headerlink" href="#module-email.encoders" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/email/issue9826  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/email/issue9826'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/email/encoders.py">Lib/email/encoders.py</a></p>
 <hr class="docutils" />
-<p>This module is part of the legacy (<code class="docutils literal notranslate"><span class="pre">Compat32</span></code>) email API.  In the
-new API the functionality is provided by the <em>cte</em> parameter of
-the <a class="reference internal" href="email.message.html#email.message.EmailMessage.set_content" tppabs="https://docs.python.org/zh-cn/3/library/email.message.html#email.message.EmailMessage.set_content" title="email.message.EmailMessage.set_content"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_content()</span></code></a> method.</p>
-<p>The remaining text in this section is the original documentation of the module.</p>
-<p>When creating <a class="reference internal" href="email.compat32-message.html#email.message.Message" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message" title="email.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> objects from scratch, you often
-need to encode the payloads for transport through compliant mail servers. This
-is especially true for <em class="mimetype">image/*</em> and <em class="mimetype">text/*</em> type messages
-containing binary data.</p>
-<p>The <a class="reference internal" href="email.html#module-email" tppabs="https://docs.python.org/zh-cn/3/library/email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code></a> package provides some convenient encodings in its
-<code class="xref py py-mod docutils literal notranslate"><span class="pre">encoders</span></code> module.  These encoders are actually used by the
-<a class="reference internal" href="email.mime.html#email.mime.audio.MIMEAudio" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.audio.MIMEAudio" title="email.mime.audio.MIMEAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEAudio</span></code></a> and <a class="reference internal" href="email.mime.html#email.mime.image.MIMEImage" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.image.MIMEImage" title="email.mime.image.MIMEImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEImage</span></code></a>
-class constructors to provide default encodings.  All encoder functions take
-exactly one argument, the message object to encode.  They usually extract the
-payload, encode it, and reset the payload to this newly encoded value.  They
-should also set the <em class="mailheader">Content-Transfer-Encoding</em> header as appropriate.</p>
-<p>Note that these functions are not meaningful for a multipart message.  They
-must be applied to individual subparts instead, and will raise a
-<a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> if passed a message whose type is multipart.</p>
+<p>æ­¤æ¨¡å—æ˜¯æ—§ç‰ˆ (<code class="docutils literal notranslate"><span class="pre">Compat32</span></code>) email API çš„ç»„æˆéƒ¨åˆ†ã€‚ åœ¨æ–°ç‰ˆ API ä¸­å°†ç”± <a class="reference internal" href="email.message.html#email.message.EmailMessage.set_content" tppabs="https://docs.python.org/zh-cn/3/library/email.message.html#email.message.EmailMessage.set_content" title="email.message.EmailMessage.set_content"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_content()</span></code></a> æ–¹æ³•çš„ <em>cte</em> å½¢å‚æä¾›è¯¥åŠŸèƒ½ã€‚</p>
+<p>æ­¤æ¨¡å—åœ¨ Python 3 ä¸­å·²å¼ƒç”¨ã€‚ è¿™é‡Œæä¾›çš„å‡½æ•°ä¸åº”è¢«æ˜¾å¼åœ°è°ƒç”¨ï¼Œå› ä¸º <a class="reference internal" href="email.mime.html#email.mime.text.MIMEText" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.text.MIMEText" title="email.mime.text.MIMEText"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEText</span></code></a> ç±»ä¼šåœ¨ç±»å®ä¾‹åŒ–æœŸé—´ä½¿ç”¨ <em>_subtype</em> å’Œ <em>_charset</em> å€¼æ¥è®¾ç½®å†…å®¹ç±»å‹å’Œ CTE å¤´ã€‚</p>
+<p>æœ¬æ®µè½ä¸­çš„å‰©ä½™æ–‡æœ¬æ˜¯è¯¥æ¨¡å—çš„åŸå§‹æ–‡æ¡£ã€‚</p>
+<p>å½“åˆ›å»ºå…¨æ–°çš„ <a class="reference internal" href="email.compat32-message.html#email.message.Message" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message" title="email.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> å¯¹è±¡æ—¶ï¼Œä½ ç»å¸¸éœ€è¦å¯¹è½½è·ç¼–ç ä»¥ä¾¿é€šè¿‡å…¼å®¹çš„é‚®ä»¶æœåŠ¡å™¨è¿›è¡Œä¼ è¾“ã€‚ å¯¹äºåŒ…å«äºŒè¿›åˆ¶æ•°æ®çš„ <em class="mimetype">image/*</em> å’Œ <em class="mimetype">text/*</em> ç±»å‹çš„æ¶ˆæ¯æ¥è¯´å°¤å…¶å¦‚æ­¤ã€‚</p>
+<p><a class="reference internal" href="email.html#module-email" tppabs="https://docs.python.org/zh-cn/3/library/email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code></a> åŒ…åœ¨å…¶ <code class="xref py py-mod docutils literal notranslate"><span class="pre">encoders</span></code> æ¨¡å—ä¸­æä¾›äº†ä¸€äº›æ–¹ä¾¿çš„ç¼–ç å™¨ã€‚ è¿™äº›ç¼–ç å™¨å®é™…ä¸Šç”± <a class="reference internal" href="email.mime.html#email.mime.audio.MIMEAudio" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.audio.MIMEAudio" title="email.mime.audio.MIMEAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEAudio</span></code></a> å’Œ <a class="reference internal" href="email.mime.html#email.mime.image.MIMEImage" tppabs="https://docs.python.org/zh-cn/3/library/email.mime.html#email.mime.image.MIMEImage" title="email.mime.image.MIMEImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEImage</span></code></a> ç±»æ„é€ å™¨æ‰€ä½¿ç”¨ä»¥æä¾›é»˜è®¤ç¼–ç æ ¼å¼ã€‚ æ‰€æœ‰ç¼–ç å™¨å‡½æ•°éƒ½åªæ¥å—ä¸€ä¸ªå‚æ•°ï¼Œå³è¦ç¼–ç çš„æ¶ˆæ¯å¯¹è±¡ã€‚ å®ƒä»¬é€šå¸¸ä¼šæå–æœ‰æ•ˆè½½è·ï¼Œå¯¹å…¶è¿›è¡Œç¼–ç ï¼Œå¹¶å°†è½½è·é‡ç½®ä¸ºè¿™ç§æ–°ç¼–ç çš„å€¼ã€‚  å®ƒä»¬è¿˜åº”å½“ç›¸åº”åœ°è®¾ç½® <em class="mailheader">Content-Transfer-Encoding</em> æ ‡å¤´ã€‚</p>
+<p>è¯·æ³¨æ„ï¼Œè¿™äº›å‡½æ•°å¯¹äºå¤šæ®µæ¶ˆæ¯æ²¡æœ‰æ„ä¹‰ã€‚ å®ƒä»¬å¿…é¡»åº”ç”¨åˆ°å„ä¸ªå•ç‹¬çš„æ®µä¸Šé¢ï¼Œè€Œä¸æ˜¯æ•´ä½“ã€‚å¦‚æœç›´æ¥ä¼ é€’ä¸€ä¸ªå¤šæ®µç±»å‹çš„æ¶ˆæ¯ï¼Œä¼šäº§ç”Ÿä¸€ä¸ª <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> é”™è¯¯ã€‚</p>
 <p>ä¸‹é¢æ˜¯æä¾›çš„ç¼–ç å‡½æ•°ï¼š</p>
 <dl class="function">
 <dt id="email.encoders.encode_quopri">
-<code class="descclassname">email.encoders.</code><code class="descname">encode_quopri</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_quopri" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Encodes the payload into quoted-printable form and sets the
-<em class="mailheader">Content-Transfer-Encoding</em> header to <code class="docutils literal notranslate"><span class="pre">quoted-printable</span></code> <a class="footnote-reference" href="#id2" id="id1">[1]</a>.
-This is a good encoding to use when most of your payload is normal printable
-data, but contains a few unprintable characters.</p>
+<code class="sig-prename descclassname">email.encoders.</code><code class="sig-name descname">encode_quopri</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_quopri" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å°†æœ‰æ•ˆæ•°æ®ç¼–ç ä¸ºç»è½¬æ¢çš„å¯æ‰“å°å½¢å¼ï¼Œå¹¶å°† <em class="mailheader">Content-Transfer-Encoding</em> æ ‡å¤´è®¾ç½®ä¸º <code class="docutils literal notranslate"><span class="pre">quoted-printable</span></code> <a class="footnote-reference brackets" href="#id2" id="id1">1</a>ã€‚ å½“å¤§å¤šæ•°å®é™…çš„æ•°æ®æ˜¯æ™®é€šçš„å¯æ‰“å°æ•°æ®ä½†åŒ…å«å°‘é‡ä¸å¯æ‰“å°çš„å­—ç¬¦æ—¶ï¼Œè¿™æ˜¯ä¸€ä¸ªå¾ˆå¥½çš„ç¼–ç ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="email.encoders.encode_base64">
-<code class="descclassname">email.encoders.</code><code class="descname">encode_base64</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_base64" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Encodes the payload into base64 form and sets the
-<em class="mailheader">Content-Transfer-Encoding</em> header to <code class="docutils literal notranslate"><span class="pre">base64</span></code>.  This is a good
-encoding to use when most of your payload is unprintable data since it is a more
-compact form than quoted-printable.  The drawback of base64 encoding is that it
-renders the text non-human readable.</p>
+<code class="sig-prename descclassname">email.encoders.</code><code class="sig-name descname">encode_base64</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_base64" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å°†æœ‰æ•ˆè½½è·ç¼–ç ä¸º base64 å½¢å¼ï¼Œå¹¶å°† <em class="mailheader">Content-Transfer-Encoding</em> æ ‡å¤´è®¾ä¸º <code class="docutils literal notranslate"><span class="pre">base64</span></code>ã€‚ å½“ä½ çš„è½½è·ä¸»è¦åŒ…å«ä¸å¯æ‰“å°æ•°æ®æ—¶è¿™æ˜¯ä¸€ç§å¾ˆå¥½ç”¨çš„ç¼–ç æ ¼å¼ï¼Œå› ä¸ºå®ƒæ¯” quoted-printable æ›´ç´§å‡‘ã€‚ base64 ç¼–ç æ ¼å¼çš„ç¼ºç‚¹æ˜¯å®ƒä¼šä½¿æ–‡æœ¬å˜æˆäººç±»ä¸å¯è¯»çš„å½¢å¼ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="email.encoders.encode_7or8bit">
-<code class="descclassname">email.encoders.</code><code class="descname">encode_7or8bit</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_7or8bit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>This doesn't actually modify the message's payload, but it does set the
-<em class="mailheader">Content-Transfer-Encoding</em> header to either <code class="docutils literal notranslate"><span class="pre">7bit</span></code> or <code class="docutils literal notranslate"><span class="pre">8bit</span></code> as
-appropriate, based on the payload data.</p>
+<code class="sig-prename descclassname">email.encoders.</code><code class="sig-name descname">encode_7or8bit</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_7or8bit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>æ­¤å‡½æ•°å¹¶ä¸å®é™…æ”¹å˜æ¶ˆæ¯çš„æœ‰æ•ˆè½½è·ï¼Œä½†å®ƒä¼šåŸºäºè½½è·æ•°æ®å°† <em class="mailheader">Content-Transfer-Encoding</em> æ ‡å¤´ç›¸åº”åœ°è®¾ä¸º <code class="docutils literal notranslate"><span class="pre">7bit</span></code> æˆ– <code class="docutils literal notranslate"><span class="pre">8bit</span></code>ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="email.encoders.encode_noop">
-<code class="descclassname">email.encoders.</code><code class="descname">encode_noop</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_noop" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>This does nothing; it doesn't even set the
-<em class="mailheader">Content-Transfer-Encoding</em> header.</p>
+<code class="sig-prename descclassname">email.encoders.</code><code class="sig-name descname">encode_noop</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#email.encoders.encode_noop" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>æ­¤å‡½æ•°ä»€ä¹ˆéƒ½ä¸ä¼šåšï¼›å®ƒç”šè‡³ä¸ä¼šè®¾ç½® <em class="mailheader">Content-Transfer-Encoding</em> æ ‡å¤´ã€‚</p>
 </dd></dl>
 
 <p class="rubric">è„šæ³¨</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Note that encoding with <a class="reference internal" href="#email.encoders.encode_quopri" title="email.encoders.encode_quopri"><code class="xref py py-meth docutils literal notranslate"><span class="pre">encode_quopri()</span></code></a> also encodes all tabs and space
-characters in the data.</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>è¯·æ³¨æ„ä½¿ç”¨ <a class="reference internal" href="#email.encoders.encode_quopri" title="email.encoders.encode_quopri"><code class="xref py py-meth docutils literal notranslate"><span class="pre">encode_quopri()</span></code></a> ç¼–ç æ ¼å¼è¿˜ä¼šå¯¹æ•°æ®ä¸­çš„æ‰€æœ‰åˆ¶è¡¨ç¬¦å’Œç©ºæ ¼ç¬¦è¿›è¡Œç¼–ç ã€‚</p>
+</dd>
+</dl>
 </div>
 
 
@@ -171,16 +155,16 @@ characters in the data.</td></tr>
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="email.charset.html" tppabs="https://docs.python.org/zh-cn/3/library/email.charset.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.charset</span></code>: Representing character sets</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.charset</span></code>: Representing character sets</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="email.utils.html" tppabs="https://docs.python.org/zh-cn/3/library/email.utils.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.utils</span></code>: å…¶ä»–å·¥å…·</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.utils</span></code>: å…¶ä»–å·¥å…·</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/email.encoders.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/email.encoders.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/email.encoders.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/email.encoders.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/email.encoders.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/email.encoders.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -205,18 +189,21 @@ characters in the data.</td></tr>
         <li class="right" >
           <a href="email.charset.html" tppabs="https://docs.python.org/zh-cn/3/library/email.charset.html" title="email.charset: Representing character sets"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
     <li class="right">
         
 
@@ -235,15 +222,19 @@ characters in the data.</td></tr>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

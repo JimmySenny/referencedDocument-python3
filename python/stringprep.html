@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>stringprep --- Internet String Preparation &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>stringprep --- å› ç‰¹ç½‘å­—ç¬¦ä¸²é¢„å¤‡ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="readline --- GNU readline interface" href="readline.html" />
+    <link rel="next" title="readline --- GNU readline æ¥å£" href="readline.html" />
     <link rel="prev" title="unicodedata --- Unicode æ•°æ®åº“" href="unicodedata.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/stringprep.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="readline.html" tppabs="https://docs.python.org/zh-cn/3/library/readline.html" title="readline --- GNU readline interface"
+          <a href="readline.html" tppabs="https://docs.python.org/zh-cn/3/library/readline.html" title="readline --- GNU readline æ¥å£"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="unicodedata.html" tppabs="https://docs.python.org/zh-cn/3/library/unicodedata.html" title="unicodedata --- Unicode æ•°æ®åº“"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="text.html" tppabs="https://docs.python.org/zh-cn/3/library/text.html" accesskey="U">æ–‡æœ¬å¤„ç†æœåŠ¡</a> &#187;</li>
@@ -96,152 +104,125 @@
           <div class="body" role="main">
             
   <div class="section" id="module-stringprep">
-<span id="stringprep-internet-string-preparation"></span><h1><a class="reference internal" href="#module-stringprep" title="stringprep: String preparation, as per RFC 3453"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stringprep</span></code></a> --- Internet String Preparation<a class="headerlink" href="#module-stringprep" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/stringprep.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/stringprep.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/stringprep.py">Lib/stringprep.py</a></p>
+<span id="stringprep-internet-string-preparation"></span><h1><a class="reference internal" href="#module-stringprep" title="stringprep: String preparation, as per RFC 3453"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stringprep</span></code></a> --- å› ç‰¹ç½‘å­—ç¬¦ä¸²é¢„å¤‡<a class="headerlink" href="#module-stringprep" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/copyreg.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/copyreg.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/stringprep.py">Lib/stringprep.py</a></p>
 <hr class="docutils" />
-<p>When identifying things (such as host names) in the internet, it is often
-necessary to compare such identifications for &quot;equality&quot;. Exactly how this
-comparison is executed may depend on the application domain, e.g. whether it
-should be case-insensitive or not. It may be also necessary to restrict the
-possible identifications, to allow only identifications consisting of
-&quot;printable&quot; characters.</p>
-<p><span class="target" id="index-0"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3454.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3454.html'" tppabs="https://tools.ietf.org/html/rfc3454.html"><strong>RFC 3454</strong></a> defines a procedure for &quot;preparing&quot; Unicode strings in internet
-protocols. Before passing strings onto the wire, they are processed with the
-preparation procedure, after which they have a certain normalized form. The RFC
-defines a set of tables, which can be combined into profiles. Each profile must
-define which tables it uses, and what other optional parts of the <code class="docutils literal notranslate"><span class="pre">stringprep</span></code>
-procedure are part of the profile. One example of a <code class="docutils literal notranslate"><span class="pre">stringprep</span></code> profile is
-<code class="docutils literal notranslate"><span class="pre">nameprep</span></code>, which is used for internationalized domain names.</p>
-<p>The module <a class="reference internal" href="#module-stringprep" title="stringprep: String preparation, as per RFC 3453"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stringprep</span></code></a> only exposes the tables from <span class="target" id="index-1"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc3454.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc3454.html'" tppabs="https://tools.ietf.org/html/rfc3454.html"><strong>RFC 3454</strong></a>. As these
-tables would be very large to represent them as dictionaries or lists, the
-module uses the Unicode character database internally. The module source code
-itself was generated using the <code class="docutils literal notranslate"><span class="pre">mkstringprep.py</span></code> utility.</p>
-<p>As a result, these tables are exposed as functions, not as data structures.
-There are two kinds of tables in the RFC: sets and mappings. For a set,
-<a class="reference internal" href="#module-stringprep" title="stringprep: String preparation, as per RFC 3453"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stringprep</span></code></a> provides the &quot;characteristic function&quot;, i.e. a function that
-returns true if the parameter is part of the set. For mappings, it provides the
-mapping function: given the key, it returns the associated value. Below is a
-list of all functions available in the module.</p>
+<p>åœ¨æ ‡è¯†å› ç‰¹ç½‘ä¸Šçš„äº‹ç‰©ï¼ˆä¾‹å¦‚ä¸»æœºåï¼‰ï¼Œç»å¸¸éœ€è¦æ¯”è¾ƒè¿™äº›æ ‡è¯†æ˜¯å¦ï¼ˆç›¸ç­‰ï¼‰ã€‚ è¿™ç§æ¯”è¾ƒçš„å…·ä½“æ‰§è¡Œå¯èƒ½ä¼šå–å†³äºåº”ç”¨åŸŸçš„ä¸åŒï¼Œä¾‹å¦‚æ˜¯å¦è¦åŒºåˆ†å¤§å°å†™ç­‰ç­‰ã€‚ æœ‰æ—¶ä¹Ÿå¯èƒ½éœ€è¦é™åˆ¶å…è®¸çš„æ ‡è¯†ä¸ºä»…ç”±â€œå¯æ‰“å°â€å­—ç¬¦ç»„æˆã€‚</p>
+<p><span class="target" id="index-4"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/crypt.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/crypt.py'" tppabs="https://tools.ietf.org/html/rfc3454.html"><strong>RFC 3454</strong></a> å®šä¹‰äº†åœ¨å› ç‰¹ç½‘åè®®ä¸­ Unicode å­—ç¬¦ä¸²çš„â€œé¢„å¤‡â€è¿‡ç¨‹ã€‚ åœ¨å°†å­—ç¬¦ä¸²è¿çº¿ä¼ è¾“ä¹‹å‰ï¼Œå®ƒä»¬ä¼šå…ˆä½¿ç”¨é¢„å¤‡è¿‡ç¨‹è¿›è¡Œå¤„ç†ï¼Œä¹‹åå®ƒä»¬å°†å…·æœ‰ç‰¹å®šçš„æ ‡å‡†å½¢å¼ã€‚ è¯¥ RFC å®šä¹‰äº†ä¸€ç³»åˆ—è¡¨æ ¼ï¼Œå®ƒä»¬å¯ä»¥è¢«ç»„åˆä¸ºé€‰é¡¹é…ç½®ã€‚ æ¯ä¸ªé…ç½®å¿…é¡»å®šä¹‰æ‰€ä½¿ç”¨çš„è¡¨æ ¼ï¼Œ<code class="docutils literal notranslate"><span class="pre">stringprep</span></code> è¿‡ç¨‹çš„å…¶ä»–å¯é€‰é¡¹ä¹Ÿæ˜¯é…ç½®çš„ç»„æˆéƒ¨åˆ†ã€‚ <code class="docutils literal notranslate"><span class="pre">stringprep</span></code> é…ç½®çš„ä¸€ä¸ªä¾‹å­æ˜¯ <code class="docutils literal notranslate"><span class="pre">nameprep</span></code>ï¼Œå®ƒè¢«ç”¨äºå›½é™…åŒ–åŸŸåã€‚</p>
+<p>æ¨¡å— <a class="reference internal" href="#module-stringprep" title="stringprep: String preparation, as per RFC 3453"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stringprep</span></code></a> ä»…å…¬å¼€äº†æ¥è‡ª <span class="target" id="index-5"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/crypt.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/crypt.py'" tppabs="https://tools.ietf.org/html/rfc3454.html"><strong>RFC 3454</strong></a> çš„è¡¨æ ¼ã€‚ ç”±äºè¿™äº›å¦‚æœè¡¨æ ¼å¦‚æœè¡¨ç¤ºä¸ºå­—å…¸æˆ–åˆ—è¡¨å°†ä¼šéå¸¸åºå¤§ï¼Œè¯¥æ¨¡å—åœ¨å†…éƒ¨ä½¿ç”¨ Unicode å­—ç¬¦æ•°æ®åº“ã€‚ è¯¥æ¨¡å—æœ¬èº«çš„æºä»£ç æ˜¯ä½¿ç”¨ <code class="docutils literal notranslate"><span class="pre">mkstringprep.py</span></code> å·¥å…·ç”Ÿæˆçš„ã€‚</p>
+<p>å› æ­¤ï¼Œè¿™äº›è¡¨æ ¼ä»¥å‡½æ•°è€Œéæ•°æ®ç»“æ„çš„å½¢å¼å…¬å¼€ã€‚ åœ¨ RFC ä¸­æœ‰ä¸¤ç§è¡¨æ ¼ï¼šé›†åˆä¸æ˜ å°„ã€‚ å¯¹äºé›†åˆï¼Œ<a class="reference internal" href="#module-stringprep" title="stringprep: String preparation, as per RFC 3453"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stringprep</span></code></a> æä¾›äº†â€œç‰¹å¾å‡½æ•°â€ï¼Œå³å¦‚æœå½¢å‚æ˜¯é›†åˆçš„ä¸€éƒ¨åˆ†åˆ™è¿”å›å€¼ä¸º <code class="docutils literal notranslate"><span class="pre">True</span></code> çš„å‡½æ•°ã€‚ å¯¹äºæ˜ å°„ï¼Œå®ƒæä¾›äº†æ˜ å°„å‡½æ•°ï¼šå®ƒä¼šæ ¹æ®ç»™å®šçš„é”®è¿”å›æ‰€å…³è”çš„å€¼ã€‚ ä»¥ä¸‹æ˜¯æ¨¡å—ä¸­æ‰€æœ‰å¯ç”¨å‡½æ•°çš„åˆ—è¡¨ã€‚</p>
 <dl class="function">
 <dt id="stringprep.in_table_a1">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_a1</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_a1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableA.1 (Unassigned code points in Unicode 3.2).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_a1</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_a1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableA.1 (Unicode 3.2 ä¸­çš„æœªåˆ†é…ç ä½)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_b1">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_b1</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_b1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableB.1 (Commonly mapped to nothing).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_b1</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_b1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableB.1 (é€šå¸¸æ˜ å°„ä¸ºç©ºå€¼)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.map_table_b2">
-<code class="descclassname">stringprep.</code><code class="descname">map_table_b2</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.map_table_b2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Return the mapped value for <em>code</em> according to tableB.2 (Mapping for
-case-folding used with NFKC).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">map_table_b2</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.map_table_b2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿”å› <em>code</em> ä¾æ® tableB.2 (é…åˆ NFKC ä½¿ç”¨çš„å¤§å°å†™è½¬æ¢æ˜ å°„) æ‰€æ˜ å°„çš„å€¼ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.map_table_b3">
-<code class="descclassname">stringprep.</code><code class="descname">map_table_b3</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.map_table_b3" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Return the mapped value for <em>code</em> according to tableB.3 (Mapping for
-case-folding used with no normalization).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">map_table_b3</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.map_table_b3" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿”å› <em>code</em> ä¾æ® tableB.3 (ä¸é™„å¸¦æ­£è§„åŒ–çš„å¤§å°å†™æŠ˜å æ˜ å°„) æ‰€æ˜ å°„çš„å€¼ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c11">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c11</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c11" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.1.1  (ASCII space characters).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c11</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c11" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.1.1  (ASCII ç©ºç™½å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c12">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c12</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c12" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.1.2  (Non-ASCII space characters).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c12</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c12" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.1.2  (é ASCII ç©ºç™½å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c11_c12">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c11_c12</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c11_c12" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.1  (Space characters, union of C.1.1 and
-C.1.2).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c11_c12</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c11_c12" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.1  (ç©ºç™½å­—ç¬¦ï¼ŒC.1.1 å’Œ C.1.2 çš„å¹¶é›†)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c21">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c21</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c21" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.2.1  (ASCII control characters).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c21</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c21" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.2.1  (ASCII æ§åˆ¶å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c22">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c22</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c22" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.2.2  (Non-ASCII control characters).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c22</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c22" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.2.2  (é ASCII æ§åˆ¶å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c21_c22">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c21_c22</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c21_c22" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.2  (Control characters, union of C.2.1 and
-C.2.2).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c21_c22</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c21_c22" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.2  (æ§åˆ¶å­—ç¬¦ï¼ŒC.2.1 å’Œ C.2.2 çš„å¹¶é›†)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c3">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c3</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c3" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.3  (Private use).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c3</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c3" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.3  (ç§æœ‰ä½¿ç”¨)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c4">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c4</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c4" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.4  (Non-character code points).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c4</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c4" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.4  (éå­—ç¬¦ç ä½)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c5">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c5</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c5" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.5  (Surrogate codes).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c5</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c5" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.5  (æ›¿ä»£ç )ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c6">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c6</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c6" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.6  (Inappropriate for plain text).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c6</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c6" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.6  (ä¸é€‚ç”¨äºçº¯æ–‡æœ¬)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c7">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c7</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c7" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.7  (Inappropriate for canonical
-representation).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c7</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c7" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.7  (ä¸é€‚ç”¨äºè§„èŒƒè¡¨ç¤º)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c8">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c8</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c8" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.8  (Change display properties or are
-deprecated).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c8</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c8" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.8  (æ”¹å˜æ˜¾ç¤ºå±æ€§æˆ–å·²å¼ƒç”¨)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_c9">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_c9</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c9" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableC.9  (Tagging characters).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_c9</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_c9" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableC.9  (æ ‡è®°å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_d1">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_d1</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_d1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableD.1  (Characters with bidirectional property
-&quot;R&quot; or &quot;AL&quot;).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_d1</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_d1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableD.1  (å¸¦æœ‰åŒå‘å±æ€§ &quot;R&quot; æˆ– &quot;AL&quot; çš„å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="stringprep.in_table_d2">
-<code class="descclassname">stringprep.</code><code class="descname">in_table_d2</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_d2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Determine whether <em>code</em> is in tableD.2  (Characters with bidirectional property
-&quot;L&quot;).</p>
+<code class="sig-prename descclassname">stringprep.</code><code class="sig-name descname">in_table_d2</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#stringprep.in_table_d2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¡®å®š <em>code</em> æ˜¯å¦å±äº tableD.2  (å¸¦æœ‰åŒå‘å±æ€§ &quot;L&quot; çš„å­—ç¬¦)ã€‚</p>
 </dd></dl>
 
 </div>
@@ -254,16 +235,16 @@ deprecated).</p>
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="unicodedata.html" tppabs="https://docs.python.org/zh-cn/3/library/unicodedata.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">unicodedata</span></code> --- Unicode æ•°æ®åº“</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">unicodedata</span></code> --- Unicode æ•°æ®åº“</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="readline.html" tppabs="https://docs.python.org/zh-cn/3/library/readline.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">readline</span></code> --- GNU readline interface</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code> --- GNU readline æ¥å£</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/stringprep.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/stringprep.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/stringprep.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/stringprep.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/stringprep.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/stringprep.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -283,19 +264,22 @@ deprecated).</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="readline.html" tppabs="https://docs.python.org/zh-cn/3/library/readline.html" title="readline --- GNU readline interface"
+          <a href="readline.html" tppabs="https://docs.python.org/zh-cn/3/library/readline.html" title="readline --- GNU readline æ¥å£"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="unicodedata.html" tppabs="https://docs.python.org/zh-cn/3/library/unicodedata.html" title="unicodedata --- Unicode æ•°æ®åº“"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="text.html" tppabs="https://docs.python.org/zh-cn/3/library/text.html" >æ–‡æœ¬å¤„ç†æœåŠ¡</a> &#187;</li>
@@ -317,15 +301,19 @@ deprecated).</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

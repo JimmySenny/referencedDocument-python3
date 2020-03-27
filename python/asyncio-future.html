@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>期程 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>Futures &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="Transports and Protocols" href="asyncio-protocol.html" />
+    <link rel="next" title="传输和协议" href="asyncio-protocol.html" />
     <link rel="prev" title="事件循环" href="asyncio-eventloop.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/asyncio-future.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,23 +61,26 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="asyncio-protocol.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html" title="Transports and Protocols"
+          <a href="asyncio-protocol.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html" title="传输和协议"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="asyncio-eventloop.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html" title="事件循环"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >网络和进程间通信</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- 异步 I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 异步 I/O</a> &#187;</li>
     <li class="right">
         
 
@@ -97,101 +105,100 @@
           <div class="body" role="main">
             
   <div class="section" id="futures">
-<span id="asyncio-futures"></span><h1>期程<a class="headerlink" href="#futures" title="永久链接至标题">¶</a></h1>
-<p><em>期程</em> 对象用来链接  <strong>底层回调式代码</strong> 和高层异步/等待式代码。</p>
+<span id="asyncio-futures"></span><h1>Futures<a class="headerlink" href="#futures" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37140  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37140'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/asyncio/futures.py">Lib/asyncio/futures.py</a>, <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37972  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37972'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/asyncio/base_futures.py">Lib/asyncio/base_futures.py</a></p>
+<hr class="docutils" />
+<p><em>Future</em> 对象用来链接  <strong>底层回调式代码</strong> 和高层异步/等待式代码。</p>
 <div class="section" id="future-functions">
-<h2>期程函数<a class="headerlink" href="#future-functions" title="永久链接至标题">¶</a></h2>
+<h2>Future 函数<a class="headerlink" href="#future-functions" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="asyncio.isfuture">
-<code class="descclassname">asyncio.</code><code class="descname">isfuture</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.isfuture" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">asyncio.</code><code class="sig-name descname">isfuture</code><span class="sig-paren">(</span><em class="sig-param">obj</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.isfuture" title="永久链接至目标">¶</a></dt>
 <dd><p>如果 <em>obj</em> 为下面任意对象，返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>：</p>
 <ul class="simple">
-<li>an instance of <a class="reference internal" href="#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a>,</li>
-<li>an instance of <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Task</span></code></a>,</li>
-<li>带有  <code class="docutils literal notranslate"><span class="pre">_asyncio_future_blocking</span></code> 属性的类似期程的对象。</li>
+<li><p>一个 <a class="reference internal" href="#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a> 类的实例，</p></li>
+<li><p>一个 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Task</span></code></a> 类的实例，</p></li>
+<li><p>带有  <code class="docutils literal notranslate"><span class="pre">_asyncio_future_blocking</span></code> 属性的类似 Future 的对象。</p></li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="asyncio.ensure_future">
-<code class="descclassname">asyncio.</code><code class="descname">ensure_future</code><span class="sig-paren">(</span><em>obj</em>, <em>*</em>, <em>loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.ensure_future" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">asyncio.</code><code class="sig-name descname">ensure_future</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*</em>, <em class="sig-param">loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.ensure_future" title="永久链接至目标">¶</a></dt>
 <dd><p>返回：</p>
 <ul class="simple">
-<li><em>obj</em> 参数会是保持原样，如果 <em>obj</em> 是 <a class="reference internal" href="#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a>、 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> 或 类似期程的对象(  <a class="reference internal" href="#asyncio.isfuture" title="asyncio.isfuture"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfuture()</span></code></a>  用于测试)</li>
-<li>封装着 <em>obj</em> 的 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> 对象 ，如果 <em>obj</em> 是一个协程(  <a class="reference internal" href="asyncio-task.html#asyncio.iscoroutine" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.iscoroutine" title="asyncio.iscoroutine"><code class="xref py py-func docutils literal notranslate"><span class="pre">iscoroutine()</span></code></a> 用于测试)</li>
-<li>等待 <em>obj</em> 的 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> 对象，如果 <em>obj</em> 是一个可等待对象( <a class="reference internal" href="inspect.html#inspect.isawaitable" tppabs="https://docs.python.org/zh-cn/3/library/inspect.html#inspect.isawaitable" title="inspect.isawaitable"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.isawaitable()</span></code></a> 用于测试)</li>
+<li><p><em>obj</em> 参数会是保持原样，如果 <em>obj</em> 是 <a class="reference internal" href="#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a>、 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> 或 类似 Future 的对象(  <a class="reference internal" href="#asyncio.isfuture" title="asyncio.isfuture"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfuture()</span></code></a>  用于测试。)</p></li>
+<li><p>封装了 <em>obj</em> 的 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> 对象，如果 <em>obj</em> 是一个协程 (使用 <a class="reference internal" href="asyncio-task.html#asyncio.iscoroutine" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.iscoroutine" title="asyncio.iscoroutine"><code class="xref py py-func docutils literal notranslate"><span class="pre">iscoroutine()</span></code></a> 进行检测)；在此情况下该协程将通过 <code class="docutils literal notranslate"><span class="pre">ensure_future()</span></code> 加入执行计划。</p></li>
+<li><p>等待 <em>obj</em> 的 <a class="reference internal" href="asyncio-task.html#asyncio.Task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> 对象，如果 <em>obj</em> 是一个可等待对象( <a class="reference internal" href="inspect.html#inspect.isawaitable" tppabs="https://docs.python.org/zh-cn/3/library/inspect.html#inspect.isawaitable" title="inspect.isawaitable"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.isawaitable()</span></code></a> 用于测试)</p></li>
 </ul>
 <p>如果 <em>obj</em> 不是上述对象会引发一个 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> 异常。</p>
 <div class="admonition important">
-<p class="first admonition-title">重要</p>
-<p class="last">查看 <a class="reference internal" href="asyncio-task.html#asyncio.create_task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_task()</span></code></a> 函数，它是创建新任务的首选途径。</p>
+<p class="admonition-title">重要</p>
+<p>查看 <a class="reference internal" href="asyncio-task.html#asyncio.create_task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_task()</span></code></a> 函数，它是创建新任务的首选途径。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5.1 版更改: </span>这个函数接受任意 <a class="reference internal" href="glossary.html#term-awaitable" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-awaitable"><span class="xref std std-term">可等待对象</span></a> 。</p>
+<p><span class="versionmodified changed">在 3.5.1 版更改: </span>这个函数接受任意 <a class="reference internal" href="glossary.html#term-awaitable" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-awaitable"><span class="xref std std-term">awaitable</span></a> 对象。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="asyncio.wrap_future">
-<code class="descclassname">asyncio.</code><code class="descname">wrap_future</code><span class="sig-paren">(</span><em>future</em>, <em>*</em>, <em>loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.wrap_future" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">asyncio.</code><code class="sig-name descname">wrap_future</code><span class="sig-paren">(</span><em class="sig-param">future</em>, <em class="sig-param">*</em>, <em class="sig-param">loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.wrap_future" title="永久链接至目标">¶</a></dt>
 <dd><p>将一个 <a class="reference internal" href="concurrent.futures.html#concurrent.futures.Future" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.Future</span></code></a> 对象封装到 <a class="reference internal" href="#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a> 对象中。</p>
 </dd></dl>
 
 </div>
 <div class="section" id="future-object">
-<h2>期程对象<a class="headerlink" href="#future-object" title="永久链接至标题">¶</a></h2>
+<h2>Future 对象<a class="headerlink" href="#future-object" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="asyncio.Future">
-<em class="property">class </em><code class="descclassname">asyncio.</code><code class="descname">Future</code><span class="sig-paren">(</span><em>*</em>, <em>loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future" title="永久链接至目标">¶</a></dt>
-<dd><p>一个期程代表一个异步运算的最终结果。线程不安全。</p>
-<p>期程是一个 <a class="reference internal" href="glossary.html#term-awaitable" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-awaitable"><span class="xref std std-term">awaitable</span></a> 对象。协程可以等待期程对象直到它们有结果或异常集合或被取消。</p>
-<p>通常期程用于支持底层回调式代码(例如在协议实现中使用asyncio <a class="reference internal" href="asyncio-protocol.html#asyncio-transports-protocols" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html#asyncio-transports-protocols"><span class="std std-ref">transports</span></a>) 与高层异步/等待式代码交互。</p>
-<p>经验告诉我们永远不要面向用户的接口暴露期程对象，同时建议使用 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_future" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_future" title="asyncio.loop.create_future"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_future()</span></code></a> 来创建期对象。这种方法可以让期程对象使用其它的事件循环实现，它可以注入自己的优化实现。</p>
+<em class="property">class </em><code class="sig-prename descclassname">asyncio.</code><code class="sig-name descname">Future</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future" title="永久链接至目标">¶</a></dt>
+<dd><p>一个 Future 代表一个异步运算的最终结果。线程不安全。</p>
+<p>Future 是一个 <a class="reference internal" href="glossary.html#term-awaitable" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-awaitable"><span class="xref std std-term">awaitable</span></a> 对象。协程可以等待 Future 对象直到它们有结果或异常集合或被取消。</p>
+<p>通常 Future 用于支持底层回调式代码(例如在协议实现中使用asyncio <a class="reference internal" href="asyncio-protocol.html#asyncio-transports-protocols" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html#asyncio-transports-protocols"><span class="std std-ref">transports</span></a>) 与高层异步/等待式代码交互。</p>
+<p>经验告诉我们永远不要面向用户的接口暴露 Future 对象，同时建议使用 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_future" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_future" title="asyncio.loop.create_future"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_future()</span></code></a> 来创建 Future 对象。这种方法可以让 Future 对象使用其它的事件循环实现，它可以注入自己的优化实现。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>加入对 <a class="reference internal" href="contextvars.html#module-contextvars" tppabs="https://docs.python.org/zh-cn/3/library/contextvars.html#module-contextvars" title="contextvars: Context Variables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code></a> 模块的支持。</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>加入对 <a class="reference internal" href="contextvars.html#module-contextvars" tppabs="https://docs.python.org/zh-cn/3/library/contextvars.html#module-contextvars" title="contextvars: Context Variables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code></a> 模块的支持。</p>
 </div>
 <dl class="method">
 <dt id="asyncio.Future.result">
-<code class="descname">result</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.result" title="永久链接至目标">¶</a></dt>
-<dd><p>返回期程结果。</p>
-<p>如果期程状态为 <em>完成</em> ，并由 <a class="reference internal" href="#asyncio.Future.set_result" title="asyncio.Future.set_result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_result()</span></code></a> 方法设置一个结果，则返回这个结果。</p>
-<p>如果期程状态为 <em>完成</em> ，并由  <a class="reference internal" href="#asyncio.Future.set_exception" title="asyncio.Future.set_exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_exception()</span></code></a> 方法设置一个异常，那么这个方法会引发异常。</p>
-<p>如果期程 <em>被取消</em>，此方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.CancelledError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.CancelledError" title="asyncio.CancelledError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CancelledError</span></code></a> 异常。</p>
-<p>如果期程的结果还不可用，此方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 异常。</p>
+<code class="sig-name descname">result</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.result" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 Future 的结果。</p>
+<p>如果 Future 状态为 <em>完成</em> ，并由 <a class="reference internal" href="#asyncio.Future.set_result" title="asyncio.Future.set_result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_result()</span></code></a> 方法设置一个结果，则返回这个结果。</p>
+<p>如果 Future 状态为 <em>完成</em> ，并由  <a class="reference internal" href="#asyncio.Future.set_exception" title="asyncio.Future.set_exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_exception()</span></code></a> 方法设置一个异常，那么这个方法会引发异常。</p>
+<p>如果 Future 已 <em>取消</em>，方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.CancelledError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.CancelledError" title="asyncio.CancelledError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CancelledError</span></code></a> 异常。</p>
+<p>如果 Future 的结果还不可用，此方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 异常。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.set_result">
-<code class="descname">set_result</code><span class="sig-paren">(</span><em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.set_result" title="永久链接至目标">¶</a></dt>
-<dd><p>将期程标记为 <em>完成</em> 并设置结果。</p>
-<p>如果期程已经 <em>完成</em>  则引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 错误。</p>
+<code class="sig-name descname">set_result</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.set_result" title="永久链接至目标">¶</a></dt>
+<dd><p>将 Future 标记为 <em>完成</em> 并设置结果。</p>
+<p>如果 Future 已经 <em>完成</em>  则抛出一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 错误。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.set_exception">
-<code class="descname">set_exception</code><span class="sig-paren">(</span><em>exception</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.set_exception" title="永久链接至目标">¶</a></dt>
-<dd><p>将期程标记为 <em>完成</em> 并设置一个异常。</p>
-<p>如果期程已经 <em>完成</em>  则引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 错误。</p>
+<code class="sig-name descname">set_exception</code><span class="sig-paren">(</span><em class="sig-param">exception</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.set_exception" title="永久链接至目标">¶</a></dt>
+<dd><p>将 Future 标记为 <em>完成</em> 并设置一个异常。</p>
+<p>如果 Future 已经 <em>完成</em>  则抛出一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 错误。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.done">
-<code class="descname">done</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.done" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the Future is <em>done</em>.</p>
-<p>A Future is <em>done</em> if it was <em>cancelled</em> or if it has a result
-or an exception set with <a class="reference internal" href="#asyncio.Future.set_result" title="asyncio.Future.set_result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_result()</span></code></a> or
-<a class="reference internal" href="#asyncio.Future.set_exception" title="asyncio.Future.set_exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_exception()</span></code></a> calls.</p>
+<code class="sig-name descname">done</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.done" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 Future 为已 <em>完成</em> 则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
+<p>如果 Future 为 <em>取消</em> 或调用 <a class="reference internal" href="#asyncio.Future.set_result" title="asyncio.Future.set_result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_result()</span></code></a> 设置了结果或调用 <a class="reference internal" href="#asyncio.Future.set_exception" title="asyncio.Future.set_exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_exception()</span></code></a> 设置了异常，那么它就是 <em>完成</em> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.cancelled">
-<code class="descname">cancelled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.cancelled" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the Future was <em>cancelled</em>.</p>
-<p>The method is usually used to check if a Future is not
-<em>cancelled</em> before setting a result or an exception for it:</p>
+<code class="sig-name descname">cancelled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.cancelled" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 Future 已 <em>取消</em> 则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<p>这个方法通常在设置结果或异常前用来检查 Future 是否已 <em>取消</em> 。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">fut</span><span class="o">.</span><span class="n">cancelled</span><span class="p">():</span>
     <span class="n">fut</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
@@ -200,67 +207,57 @@ or an exception set with <a class="reference internal" href="#asyncio.Future.set
 
 <dl class="method">
 <dt id="asyncio.Future.add_done_callback">
-<code class="descname">add_done_callback</code><span class="sig-paren">(</span><em>callback</em>, <em>*</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.add_done_callback" title="永久链接至目标">¶</a></dt>
-<dd><p>Add a callback to be run when the Future is <em>done</em>.</p>
-<p>The <em>callback</em> is called with the Future object as its only
-argument.</p>
-<p>If the Future is already <em>done</em> when this method is called,
-the callback is scheduled with <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a>.</p>
-<p>可选的仅关键字型参数 <em>context</em> 允许为要运行的 <em>callback</em> 指定一个自定义 <a class="reference internal" href="contextvars.html#contextvars.Context" tppabs="https://docs.python.org/zh-cn/3/library/contextvars.html#contextvars.Context" title="contextvars.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">contextvars.Context</span></code></a> 。如果没有提供 <em>context</em> ，则使用当前上下文。</p>
-<p><a class="reference internal" href="functools.html#functools.partial" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> can be used to pass parameters
-to the callback, e.g.:</p>
+<code class="sig-name descname">add_done_callback</code><span class="sig-paren">(</span><em class="sig-param">callback</em>, <em class="sig-param">*</em>, <em class="sig-param">context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.add_done_callback" title="永久链接至目标">¶</a></dt>
+<dd><p>添加一个在 Future <em>完成</em> 时运行的回调函数。</p>
+<p>调用 <em>callback</em> 时，Future 对象是它的唯一参数。</p>
+<p>调用这个方法时 Future 已经 <em>完成</em> , 回调函数已被 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a> 调度。</p>
+<p>可选键值类的参数 <em>context</em> 允许 <em>callback</em> 运行在一个指定的自定义 <a class="reference internal" href="contextvars.html#contextvars.Context" tppabs="https://docs.python.org/zh-cn/3/library/contextvars.html#contextvars.Context" title="contextvars.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">contextvars.Context</span></code></a> 对象中。如果没有提供 <em>context</em> ，则使用当前上下文。</p>
+<p>可以用 <a class="reference internal" href="functools.html#functools.partial" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> 给回调函数传递参数，例如:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call &#39;print(&quot;Future:&quot;, fut)&#39; when &quot;fut&quot; is done.</span>
 <span class="n">fut</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span>
     <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="nb">print</span><span class="p">,</span> <span class="s2">&quot;Future:&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>仅用于关键字形参的参数  <em>context</em>  已经被添加。请参阅： <span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0567  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0567'" tppabs="https://www.python.org/dev/peps/pep-0567"><strong>PEP 567</strong></a> 查看更多细节。</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>加入键值类形参  <em>context</em>。请参阅 <span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0567  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0567'" tppabs="https://www.python.org/dev/peps/pep-0567"><strong>PEP 567</strong></a> 查看更多细节。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.remove_done_callback">
-<code class="descname">remove_done_callback</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.remove_done_callback" title="永久链接至目标">¶</a></dt>
-<dd><p>从回调列表中移除 <em>callback</em> 指定的回调。</p>
-<p>Returns the number of callbacks removed, which is typically 1,
-unless a callback was added more than once.</p>
+<code class="sig-name descname">remove_done_callback</code><span class="sig-paren">(</span><em class="sig-param">callback</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.remove_done_callback" title="永久链接至目标">¶</a></dt>
+<dd><p>从回调列表中移除 <em>callback</em> 。</p>
+<p>返回被移除的回调函数的数量，通常为1，除非一个回调函数被添加多次。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.cancel">
-<code class="descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.cancel" title="永久链接至目标">¶</a></dt>
-<dd><p>Cancel the Future and schedule callbacks.</p>
-<p>If the Future is already <em>done</em> or <em>cancelled</em>, return <code class="docutils literal notranslate"><span class="pre">False</span></code>.
-Otherwise, change the Future's state to <em>cancelled</em>,
-schedule the callbacks, and return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.cancel" title="永久链接至目标">¶</a></dt>
+<dd><p>取消 Future 并调度回调函数。</p>
+<p>如果 Future 已经 <em>完成</em> 或 <em>取消</em> ，返回 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。否则将 Future 状态改为 <em>取消</em> 并在调度回调函数后返回 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.exception">
-<code class="descname">exception</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.exception" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the exception that was set on this Future.</p>
-<p>The exception (or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no exception was set) is
-returned only if the Future is <em>done</em>.</p>
-<p>如果期程 <em>被取消</em>，此方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.CancelledError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.CancelledError" title="asyncio.CancelledError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CancelledError</span></code></a> 异常。</p>
-<p>If the Future isn't <em>done</em> yet, this method raises an
-<a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> exception.</p>
+<code class="sig-name descname">exception</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.exception" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 Future 已设置的异常。</p>
+<p>只有 Future 在 <em>完成</em> 时才返回异常（或者 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，如果没有设置异常）。</p>
+<p>如果 Future 已 <em>取消</em>，方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.CancelledError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.CancelledError" title="asyncio.CancelledError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CancelledError</span></code></a> 异常。</p>
+<p>如果 Future 还没 <em>完成</em> ，这个方法会引发一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 异常。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="asyncio.Future.get_loop">
-<code class="descname">get_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.get_loop" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the event loop the Future object is bound to.</p>
+<code class="sig-name descname">get_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Future.get_loop" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 Future 对象已绑定的事件循环。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 </dd></dl>
 
-<p id="asyncio-example-future">This example creates a Future object, creates and schedules an
-asynchronous Task to set result for the Future, and waits until
-the Future has a result:</p>
+<p id="asyncio-example-future">这个例子创建一个 Future 对象，创建和调度一个异步任务去设置 Future 结果，然后等待其结果:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">set_after</span><span class="p">(</span><span class="n">fut</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="c1"># Sleep for *delay* seconds.</span>
     <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
@@ -291,23 +288,14 @@ the Future has a result:</p>
 </pre></div>
 </div>
 <div class="admonition important">
-<p class="first admonition-title">重要</p>
-<p>The Future object was designed to mimic
-<a class="reference internal" href="concurrent.futures.html#concurrent.futures.Future" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.Future</span></code></a>.  Key differences include:</p>
-<ul class="last simple">
-<li>unlike asyncio Futures, <a class="reference internal" href="concurrent.futures.html#concurrent.futures.Future" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.Future</span></code></a>
-instances cannot be awaited.</li>
-<li><a class="reference internal" href="#asyncio.Future.result" title="asyncio.Future.result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.result()</span></code></a> and <a class="reference internal" href="#asyncio.Future.exception" title="asyncio.Future.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.exception()</span></code></a>
-do not accept the <em>timeout</em> argument.</li>
-<li><a class="reference internal" href="#asyncio.Future.result" title="asyncio.Future.result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.result()</span></code></a> and <a class="reference internal" href="#asyncio.Future.exception" title="asyncio.Future.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.exception()</span></code></a>
-raise an <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> exception when the Future is not
-<em>done</em>.</li>
-<li>Callbacks registered with <a class="reference internal" href="#asyncio.Future.add_done_callback" title="asyncio.Future.add_done_callback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.add_done_callback()</span></code></a>
-are not called immediately.  They are scheduled with
-<a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a> instead.</li>
-<li>asyncio Future is not compatible with the
-<a class="reference internal" href="concurrent.futures.html#concurrent.futures.wait" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.wait" title="concurrent.futures.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">concurrent.futures.wait()</span></code></a> and
-<a class="reference internal" href="concurrent.futures.html#concurrent.futures.as_completed" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.as_completed" title="concurrent.futures.as_completed"><code class="xref py py-func docutils literal notranslate"><span class="pre">concurrent.futures.as_completed()</span></code></a> functions.</li>
+<p class="admonition-title">重要</p>
+<p>该 Future 对象是为了模仿 <a class="reference internal" href="concurrent.futures.html#concurrent.futures.Future" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.Future</span></code></a> 类。主要差异包含：</p>
+<ul class="simple">
+<li><p>与 asyncio 的 Future 不同，<a class="reference internal" href="concurrent.futures.html#concurrent.futures.Future" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.Future</span></code></a>  实例不是可等待对象。</p></li>
+<li><p><a class="reference internal" href="#asyncio.Future.result" title="asyncio.Future.result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.result()</span></code></a> 和 <a class="reference internal" href="#asyncio.Future.exception" title="asyncio.Future.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.exception()</span></code></a> 不接受 <em>timeout</em> 参数。</p></li>
+<li><p>Future 没有 <em>完成</em> 时 <a class="reference internal" href="#asyncio.Future.result" title="asyncio.Future.result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.result()</span></code></a> 和 <a class="reference internal" href="#asyncio.Future.exception" title="asyncio.Future.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.exception()</span></code></a> 抛出一个 <a class="reference internal" href="asyncio-exceptions.html#asyncio.InvalidStateError" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-exceptions.html#asyncio.InvalidStateError" title="asyncio.InvalidStateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidStateError</span></code></a> 异常。</p></li>
+<li><p>使用 <a class="reference internal" href="#asyncio.Future.add_done_callback" title="asyncio.Future.add_done_callback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.Future.add_done_callback()</span></code></a> 注册的回调函数不会立即调用，而是被 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a> 调度。</p></li>
+<li><p>asyncio Future 不能兼容  <a class="reference internal" href="concurrent.futures.html#concurrent.futures.wait" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.wait" title="concurrent.futures.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">concurrent.futures.wait()</span></code></a> 和 <a class="reference internal" href="concurrent.futures.html#concurrent.futures.as_completed" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.as_completed" title="concurrent.futures.as_completed"><code class="xref py py-func docutils literal notranslate"><span class="pre">concurrent.futures.as_completed()</span></code></a> 函数。</p></li>
 </ul>
 </div>
 </div>
@@ -319,11 +307,11 @@ are not called immediately.  They are scheduled with
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">期程</a><ul>
-<li><a class="reference internal" href="#future-functions">期程函数</a></li>
-<li><a class="reference internal" href="#future-object">期程对象</a></li>
+<li><a class="reference internal" href="#">Futures</a><ul>
+<li><a class="reference internal" href="#future-functions">Future 函数</a></li>
+<li><a class="reference internal" href="#future-object">Future 对象</a></li>
 </ul>
 </li>
 </ul>
@@ -333,13 +321,13 @@ are not called immediately.  They are scheduled with
                         title="上一章">事件循环</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="asyncio-protocol.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html"
-                        title="下一章">Transports and Protocols</a></p>
+                        title="下一章">传输和协议</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-future.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-future.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-future.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-future.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-future.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-future.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -359,23 +347,26 @@ are not called immediately.  They are scheduled with
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="asyncio-protocol.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html" title="Transports and Protocols"
+          <a href="asyncio-protocol.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-protocol.html" title="传输和协议"
              >下一页</a> |</li>
         <li class="right" >
           <a href="asyncio-eventloop.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html" title="事件循环"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >网络和进程间通信</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- 异步 I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 异步 I/O</a> &#187;</li>
     <li class="right">
         
 
@@ -394,15 +385,19 @@ are not called immediately.  They are scheduled with
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

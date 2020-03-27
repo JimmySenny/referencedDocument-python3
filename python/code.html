@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>code --- Interpreter base classes &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>code --- 解释器基类 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="codeop --- Compile Python code" href="codeop.html" />
+    <link rel="next" title="codeop --- 编译Python代码" href="codeop.html" />
     <link rel="prev" title="自定义 Python 解释器" href="custominterp.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/code.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="codeop.html" tppabs="https://docs.python.org/zh-cn/3/library/codeop.html" title="codeop --- Compile Python code"
+          <a href="codeop.html" tppabs="https://docs.python.org/zh-cn/3/library/codeop.html" title="codeop --- 编译Python代码"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="custominterp.html" tppabs="https://docs.python.org/zh-cn/3/library/custominterp.html" title="自定义 Python 解释器"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="custominterp.html" tppabs="https://docs.python.org/zh-cn/3/library/custominterp.html" accesskey="U">自定义 Python 解释器</a> &#187;</li>
@@ -96,181 +104,114 @@
           <div class="body" role="main">
             
   <div class="section" id="module-code">
-<span id="code-interpreter-base-classes"></span><h1><a class="reference internal" href="#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a> --- Interpreter base classes<a class="headerlink" href="#module-code" title="永久链接至标题">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/code.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/code.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/code.py">Lib/code.py</a></p>
+<span id="code-interpreter-base-classes"></span><h1><a class="reference internal" href="#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a> --- 解释器基类<a class="headerlink" href="#module-code" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/code.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/code.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/code.py">Lib/code.py</a></p>
 <hr class="docutils" />
-<p>The <code class="docutils literal notranslate"><span class="pre">code</span></code> module provides facilities to implement read-eval-print loops in
-Python.  Two classes and convenience functions are included which can be used to
-build applications which provide an interactive interpreter prompt.</p>
+<p><code class="docutils literal notranslate"><span class="pre">code</span></code> 模块提供了在 Python 中实现 read-eval-print 循环的功能。它包含两个类和一些快捷功能，可用于构建提供交互式解释器的应用程序。</p>
 <dl class="class">
 <dt id="code.InteractiveInterpreter">
-<em class="property">class </em><code class="descclassname">code.</code><code class="descname">InteractiveInterpreter</code><span class="sig-paren">(</span><em>locals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter" title="永久链接至目标">¶</a></dt>
-<dd><p>This class deals with parsing and interpreter state (the user's namespace); it
-does not deal with input buffering or prompting or input file naming (the
-filename is always passed in explicitly). The optional <em>locals</em> argument
-specifies the dictionary in which code will be executed; it defaults to a newly
-created dictionary with key <code class="docutils literal notranslate"><span class="pre">'__name__'</span></code> set to <code class="docutils literal notranslate"><span class="pre">'__console__'</span></code> and key
-<code class="docutils literal notranslate"><span class="pre">'__doc__'</span></code> set to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<em class="property">class </em><code class="sig-prename descclassname">code.</code><code class="sig-name descname">InteractiveInterpreter</code><span class="sig-paren">(</span><em class="sig-param">locals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter" title="永久链接至目标">¶</a></dt>
+<dd><p>这个类处理解析器和解释器状态（用户命名空间的）；它不处理缓冲器、终端提示区或着输入文件名（文件名总是显示地传递）。可选的 <em>locals</em> 参数指定一个字典，字典里面包含将在此类执行的代码；它默认创建新的字典，其键 <code class="docutils literal notranslate"><span class="pre">'__name__'</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">'__console__'</span></code> ，键 <code class="docutils literal notranslate"><span class="pre">'__doc__'</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="code.InteractiveConsole">
-<em class="property">class </em><code class="descclassname">code.</code><code class="descname">InteractiveConsole</code><span class="sig-paren">(</span><em>locals=None</em>, <em>filename=&quot;&lt;console&gt;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole" title="永久链接至目标">¶</a></dt>
-<dd><p>Closely emulate the behavior of the interactive Python interpreter. This class
-builds on <a class="reference internal" href="#code.InteractiveInterpreter" title="code.InteractiveInterpreter"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveInterpreter</span></code></a> and adds prompting using the familiar
-<code class="docutils literal notranslate"><span class="pre">sys.ps1</span></code> and <code class="docutils literal notranslate"><span class="pre">sys.ps2</span></code>, and input buffering.</p>
+<em class="property">class </em><code class="sig-prename descclassname">code.</code><code class="sig-name descname">InteractiveConsole</code><span class="sig-paren">(</span><em class="sig-param">locals=None</em>, <em class="sig-param">filename=&quot;&lt;console&gt;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole" title="永久链接至目标">¶</a></dt>
+<dd><p>尽可能模拟交互式 Python 解释器的行为。此类建立在 <a class="reference internal" href="#code.InteractiveInterpreter" title="code.InteractiveInterpreter"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveInterpreter</span></code></a> 的基础上，使用熟悉的 <code class="docutils literal notranslate"><span class="pre">sys.ps1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">sys.ps2</span></code> 作为输入提示符，并有输入缓冲。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="code.interact">
-<code class="descclassname">code.</code><code class="descname">interact</code><span class="sig-paren">(</span><em>banner=None</em>, <em>readfunc=None</em>, <em>local=None</em>, <em>exitmsg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.interact" title="永久链接至目标">¶</a></dt>
-<dd><p>Convenience function to run a read-eval-print loop.  This creates a new
-instance of <a class="reference internal" href="#code.InteractiveConsole" title="code.InteractiveConsole"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a> and sets <em>readfunc</em> to be used as
-the <a class="reference internal" href="#code.InteractiveConsole.raw_input" title="code.InteractiveConsole.raw_input"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InteractiveConsole.raw_input()</span></code></a> method, if provided.  If <em>local</em> is
-provided, it is passed to the <a class="reference internal" href="#code.InteractiveConsole" title="code.InteractiveConsole"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a> constructor for
-use as the default namespace for the interpreter loop.  The <a class="reference internal" href="#code.interact" title="code.interact"><code class="xref py py-meth docutils literal notranslate"><span class="pre">interact()</span></code></a>
-method of the instance is then run with <em>banner</em> and <em>exitmsg</em> passed as the
-banner and exit message to use, if provided.  The console object is discarded
-after use.</p>
+<code class="sig-prename descclassname">code.</code><code class="sig-name descname">interact</code><span class="sig-paren">(</span><em class="sig-param">banner=None</em>, <em class="sig-param">readfunc=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">exitmsg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.interact" title="永久链接至目标">¶</a></dt>
+<dd><p>运行一个 read-eval-print 循环的便捷函数。这会创建一个新的 <a class="reference internal" href="#code.InteractiveConsole" title="code.InteractiveConsole"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a> 实例。如果提供了 <em>readfunc</em> ，会设置为 <a class="reference internal" href="#code.InteractiveConsole.raw_input" title="code.InteractiveConsole.raw_input"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InteractiveConsole.raw_input()</span></code></a> 方法。如果提供了 <em>local</em> ，则将其传递给 <a class="reference internal" href="#code.InteractiveConsole" title="code.InteractiveConsole"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a> 的构造函数，以用作解释器循环的默认命名空间。然后，如果提供了 <em>banner</em> 和 <em>exitmsg</em> ，实例的 <a class="reference internal" href="#code.interact" title="code.interact"><code class="xref py py-meth docutils literal notranslate"><span class="pre">interact()</span></code></a> 方法会以此为标题和退出消息。控制台对象在使用后将被丢弃。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>Added <em>exitmsg</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>加入 <em>exitmsg</em> 参数。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="code.compile_command">
-<code class="descclassname">code.</code><code class="descname">compile_command</code><span class="sig-paren">(</span><em>source</em>, <em>filename=&quot;&lt;input&gt;&quot;</em>, <em>symbol=&quot;single&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.compile_command" title="永久链接至目标">¶</a></dt>
-<dd><p>This function is useful for programs that want to emulate Python's interpreter
-main loop (a.k.a. the read-eval-print loop).  The tricky part is to determine
-when the user has entered an incomplete command that can be completed by
-entering more text (as opposed to a complete command or a syntax error).  This
-function <em>almost</em> always makes the same decision as the real interpreter main
-loop.</p>
-<p><em>source</em> is the source string; <em>filename</em> is the optional filename from which
-source was read, defaulting to <code class="docutils literal notranslate"><span class="pre">'&lt;input&gt;'</span></code>; and <em>symbol</em> is the optional
-grammar start symbol, which should be either <code class="docutils literal notranslate"><span class="pre">'single'</span></code> (the default) or
-<code class="docutils literal notranslate"><span class="pre">'eval'</span></code>.</p>
-<p>Returns a code object (the same as <code class="docutils literal notranslate"><span class="pre">compile(source,</span> <span class="pre">filename,</span> <span class="pre">symbol)</span></code>) if the
-command is complete and valid; <code class="docutils literal notranslate"><span class="pre">None</span></code> if the command is incomplete; raises
-<a class="reference internal" href="exceptions.html#SyntaxError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a> if the command is complete and contains a syntax error, or
-raises <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> or <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if the command contains an
-invalid literal.</p>
+<code class="sig-prename descclassname">code.</code><code class="sig-name descname">compile_command</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">filename=&quot;&lt;input&gt;&quot;</em>, <em class="sig-param">symbol=&quot;single&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.compile_command" title="永久链接至目标">¶</a></dt>
+<dd><p>这个函数主要用来模拟 Python 解释器的主循环（即 read-eval-print 循环）。难点的部分是当用户输入不完整命令时，判断能否通过之后的输入来完成（要么成为完整的命令，要么语法错误）。该函数  <em>几乎</em> 和实际的解释器主循环的判断是相同的。</p>
+<p><em>source</em> 是源字符串； <em>filename</em> 是可选文件名，用来读取源文件，默认为 <code class="docutils literal notranslate"><span class="pre">'&lt;input&gt;'</span></code> ； <em>symbol</em> 是可选的语法开始符号，应为 <code class="docutils literal notranslate"><span class="pre">'single'</span></code> （默认）或 <code class="docutils literal notranslate"><span class="pre">'eval'</span></code>  。</p>
+<p>如果命令完整且有效则返回一个代码对象 (等价于 <code class="docutils literal notranslate"><span class="pre">compile(source,</span> <span class="pre">filename,</span> <span class="pre">symbol)</span></code>)；如果命令不完整则返回 <code class="docutils literal notranslate"><span class="pre">None</span></code>；如果命令完整但包含语法错误则会引发 <a class="reference internal" href="exceptions.html#SyntaxError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a> 或 <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> 而如果命令包含无效字面值则将引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
 </dd></dl>
 
 <div class="section" id="interactive-interpreter-objects">
-<span id="interpreter-objects"></span><h2>Interactive Interpreter Objects<a class="headerlink" href="#interactive-interpreter-objects" title="永久链接至标题">¶</a></h2>
+<span id="interpreter-objects"></span><h2>交互解释器对象<a class="headerlink" href="#interactive-interpreter-objects" title="永久链接至标题">¶</a></h2>
 <dl class="method">
 <dt id="code.InteractiveInterpreter.runsource">
-<code class="descclassname">InteractiveInterpreter.</code><code class="descname">runsource</code><span class="sig-paren">(</span><em>source</em>, <em>filename=&quot;&lt;input&gt;&quot;</em>, <em>symbol=&quot;single&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.runsource" title="永久链接至目标">¶</a></dt>
-<dd><p>Compile and run some source in the interpreter. Arguments are the same as for
-<a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a>; the default for <em>filename</em> is <code class="docutils literal notranslate"><span class="pre">'&lt;input&gt;'</span></code>, and for
-<em>symbol</em> is <code class="docutils literal notranslate"><span class="pre">'single'</span></code>.  One several things can happen:</p>
+<code class="sig-prename descclassname">InteractiveInterpreter.</code><code class="sig-name descname">runsource</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">filename=&quot;&lt;input&gt;&quot;</em>, <em class="sig-param">symbol=&quot;single&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.runsource" title="永久链接至目标">¶</a></dt>
+<dd><p>在解释器中编译并运行一段源码。 所用参数与 <a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> 一样；<em>filename</em> 的默认值为 <code class="docutils literal notranslate"><span class="pre">'&lt;input&gt;'</span></code>，<em>symbol</em> 则为 <code class="docutils literal notranslate"><span class="pre">'single'</span></code>。 可能发生以下情况之一：</p>
 <ul class="simple">
-<li>The input is incorrect; <a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> raised an exception
-(<a class="reference internal" href="exceptions.html#SyntaxError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a> or <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>).  A syntax traceback will be
-printed by calling the <a class="reference internal" href="#code.InteractiveInterpreter.showsyntaxerror" title="code.InteractiveInterpreter.showsyntaxerror"><code class="xref py py-meth docutils literal notranslate"><span class="pre">showsyntaxerror()</span></code></a> method.  <a class="reference internal" href="#code.InteractiveInterpreter.runsource" title="code.InteractiveInterpreter.runsource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code></a>
-returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
-<li>The input is incomplete, and more input is required; <a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a>
-returned <code class="docutils literal notranslate"><span class="pre">None</span></code>. <a class="reference internal" href="#code.InteractiveInterpreter.runsource" title="code.InteractiveInterpreter.runsource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code></a> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</li>
-<li>The input is complete; <a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> returned a code object.  The
-code is executed by calling the <a class="reference internal" href="#code.InteractiveInterpreter.runcode" title="code.InteractiveInterpreter.runcode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runcode()</span></code></a> (which also handles run-time
-exceptions, except for <a class="reference internal" href="exceptions.html#SystemExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a>). <a class="reference internal" href="#code.InteractiveInterpreter.runsource" title="code.InteractiveInterpreter.runsource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code></a> returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
+<li><p>输入不正确；<a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> 引发了一个异常 (<a class="reference internal" href="exceptions.html#SyntaxError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a> 或 <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>)。 将通过调用 <a class="reference internal" href="#code.InteractiveInterpreter.showsyntaxerror" title="code.InteractiveInterpreter.showsyntaxerror"><code class="xref py py-meth docutils literal notranslate"><span class="pre">showsyntaxerror()</span></code></a> 方法打印语法回溯信息。 <a class="reference internal" href="#code.InteractiveInterpreter.runsource" title="code.InteractiveInterpreter.runsource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code></a> 返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p></li>
+<li><p>输入不完整，需要更多输入；函数 <a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> 返回 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。方法 <a class="reference internal" href="#code.InteractiveInterpreter.runsource" title="code.InteractiveInterpreter.runsource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code></a> 返回 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p></li>
+<li><p>输入完整；<a class="reference internal" href="#code.compile_command" title="code.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> 返回了一个代码对象。 将通过调用 <a class="reference internal" href="#code.InteractiveInterpreter.runcode" title="code.InteractiveInterpreter.runcode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runcode()</span></code></a> 执行代码（该方法也会处理运行时异常，<a class="reference internal" href="exceptions.html#SystemExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> 除外）。 <a class="reference internal" href="#code.InteractiveInterpreter.runsource" title="code.InteractiveInterpreter.runsource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code></a> 返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p></li>
 </ul>
-<p>The return value can be used to decide whether to use <code class="docutils literal notranslate"><span class="pre">sys.ps1</span></code> or <code class="docutils literal notranslate"><span class="pre">sys.ps2</span></code>
-to prompt the next line.</p>
+<p>该返回值用于决定使用 <code class="docutils literal notranslate"><span class="pre">sys.ps1</span></code> 还是 <code class="docutils literal notranslate"><span class="pre">sys.ps2</span></code> 来作为下一行的输入提示符。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveInterpreter.runcode">
-<code class="descclassname">InteractiveInterpreter.</code><code class="descname">runcode</code><span class="sig-paren">(</span><em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.runcode" title="永久链接至目标">¶</a></dt>
-<dd><p>Execute a code object. When an exception occurs, <a class="reference internal" href="#code.InteractiveInterpreter.showtraceback" title="code.InteractiveInterpreter.showtraceback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">showtraceback()</span></code></a> is called
-to display a traceback.  All exceptions are caught except <a class="reference internal" href="exceptions.html#SystemExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a>,
-which is allowed to propagate.</p>
-<p>A note about <a class="reference internal" href="exceptions.html#KeyboardInterrupt" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a>: this exception may occur elsewhere in
-this code, and may not always be caught.  The caller should be prepared to deal
-with it.</p>
+<code class="sig-prename descclassname">InteractiveInterpreter.</code><code class="sig-name descname">runcode</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.runcode" title="永久链接至目标">¶</a></dt>
+<dd><p>执行一个代码对象。当发生异常时，调用 <a class="reference internal" href="#code.InteractiveInterpreter.showtraceback" title="code.InteractiveInterpreter.showtraceback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">showtraceback()</span></code></a> 来显示回溯。除 <a class="reference internal" href="exceptions.html#SystemExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> （允许传播）以外的所有异常都会被捕获。</p>
+<p>有关 <a class="reference internal" href="exceptions.html#KeyboardInterrupt" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a> 的说明，该异常可能发生于此代码的其他位置，并且并不总能被捕获。 调用者应当准备好处理它。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveInterpreter.showsyntaxerror">
-<code class="descclassname">InteractiveInterpreter.</code><code class="descname">showsyntaxerror</code><span class="sig-paren">(</span><em>filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.showsyntaxerror" title="永久链接至目标">¶</a></dt>
-<dd><p>Display the syntax error that just occurred.  This does not display a stack
-trace because there isn't one for syntax errors. If <em>filename</em> is given, it is
-stuffed into the exception instead of the default filename provided by Python's
-parser, because it always uses <code class="docutils literal notranslate"><span class="pre">'&lt;string&gt;'</span></code> when reading from a string. The
-output is written by the <a class="reference internal" href="#code.InteractiveInterpreter.write" title="code.InteractiveInterpreter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> method.</p>
+<code class="sig-prename descclassname">InteractiveInterpreter.</code><code class="sig-name descname">showsyntaxerror</code><span class="sig-paren">(</span><em class="sig-param">filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.showsyntaxerror" title="永久链接至目标">¶</a></dt>
+<dd><p>显示刚发生的语法错误。 这不会显示堆栈回溯因为语法错误并无此种信息。 如果给出了 <em>filename</em>，它会被放入异常来替代 Python 解析器所提供的默认文件名，因为它在从一个字符串读取时总是会使用 <code class="docutils literal notranslate"><span class="pre">'&lt;string&gt;'</span></code>。 输出将由 <a class="reference internal" href="#code.InteractiveInterpreter.write" title="code.InteractiveInterpreter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> 方法来写入。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveInterpreter.showtraceback">
-<code class="descclassname">InteractiveInterpreter.</code><code class="descname">showtraceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.showtraceback" title="永久链接至目标">¶</a></dt>
-<dd><p>Display the exception that just occurred.  We remove the first stack item
-because it is within the interpreter object implementation. The output is
-written by the <a class="reference internal" href="#code.InteractiveInterpreter.write" title="code.InteractiveInterpreter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> method.</p>
+<code class="sig-prename descclassname">InteractiveInterpreter.</code><code class="sig-name descname">showtraceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.showtraceback" title="永久链接至目标">¶</a></dt>
+<dd><p>显示刚发生的异常。 我们移除了第一个堆栈条目因为它从属于解释器对象的实现。 输出将由 <a class="reference internal" href="#code.InteractiveInterpreter.write" title="code.InteractiveInterpreter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> 方法来写入。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The full chained traceback is displayed instead
-of just the primary traceback.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>将显示完整的链式回溯，而不只是主回溯。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveInterpreter.write">
-<code class="descclassname">InteractiveInterpreter.</code><code class="descname">write</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.write" title="永久链接至目标">¶</a></dt>
-<dd><p>Write a string to the standard error stream (<code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code>). Derived classes
-should override this to provide the appropriate output handling as needed.</p>
+<code class="sig-prename descclassname">InteractiveInterpreter.</code><code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveInterpreter.write" title="永久链接至目标">¶</a></dt>
+<dd><p>将一个字符串写入到标准错误流 (<code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code>)。 所有派生类都应重载此方法以提供必要的正确输出处理。</p>
 </dd></dl>
 
 </div>
 <div class="section" id="interactive-console-objects">
-<span id="console-objects"></span><h2>Interactive Console Objects<a class="headerlink" href="#interactive-console-objects" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="#code.InteractiveConsole" title="code.InteractiveConsole"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a> class is a subclass of
-<a class="reference internal" href="#code.InteractiveInterpreter" title="code.InteractiveInterpreter"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveInterpreter</span></code></a>, and so offers all the methods of the
-interpreter objects as well as the following additions.</p>
+<span id="console-objects"></span><h2>交互式控制台对象<a class="headerlink" href="#interactive-console-objects" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="#code.InteractiveConsole" title="code.InteractiveConsole"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a> 类是 <a class="reference internal" href="#code.InteractiveInterpreter" title="code.InteractiveInterpreter"><code class="xref py py-class docutils literal notranslate"><span class="pre">InteractiveInterpreter</span></code></a> 的子类，因此它提供了解释器对象的所有方法，还有以下的额外方法。</p>
 <dl class="method">
 <dt id="code.InteractiveConsole.interact">
-<code class="descclassname">InteractiveConsole.</code><code class="descname">interact</code><span class="sig-paren">(</span><em>banner=None</em>, <em>exitmsg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.interact" title="永久链接至目标">¶</a></dt>
-<dd><p>Closely emulate the interactive Python console. The optional <em>banner</em> argument
-specify the banner to print before the first interaction; by default it prints a
-banner similar to the one printed by the standard Python interpreter, followed
-by the class name of the console object in parentheses (so as not to confuse
-this with the real interpreter -- since it's so close!).</p>
-<p>The optional <em>exitmsg</em> argument specifies an exit message printed when exiting.
-Pass the empty string to suppress the exit message. If <em>exitmsg</em> is not given or
-<code class="docutils literal notranslate"><span class="pre">None</span></code>, a default message is printed.</p>
+<code class="sig-prename descclassname">InteractiveConsole.</code><code class="sig-name descname">interact</code><span class="sig-paren">(</span><em class="sig-param">banner=None</em>, <em class="sig-param">exitmsg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.interact" title="永久链接至目标">¶</a></dt>
+<dd><p>近似地模拟交互式 Python 终端。 可选的 <em>banner</em> 参数指定要在第一次交互前打印的条幅；默认情况下会类似于标准 Python 解释器所打印的内容，并附上外加圆括号的终端对象类名（这样就不会与真正的解释器混淆 —— 因为确实太像了！）</p>
+<p>可选的 <em>exitmsg</em> 参数指定要在退出时打印的退出消息。 传入空字符串可以屏蔽退出消息。 如果 <em>exitmsg</em> 未给出或为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则将打印默认消息。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>To suppress printing any banner, pass an empty string.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>要禁止打印任何条幅消息，请传递一个空字符串。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>Print an exit message when exiting.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>退出时打印退出消息。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveConsole.push">
-<code class="descclassname">InteractiveConsole.</code><code class="descname">push</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.push" title="永久链接至目标">¶</a></dt>
-<dd><p>Push a line of source text to the interpreter. The line should not have a
-trailing newline; it may have internal newlines.  The line is appended to a
-buffer and the interpreter's <code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code> method is called with the
-concatenated contents of the buffer as source.  If this indicates that the
-command was executed or invalid, the buffer is reset; otherwise, the command is
-incomplete, and the buffer is left as it was after the line was appended.  The
-return value is <code class="docutils literal notranslate"><span class="pre">True</span></code> if more input is required, <code class="docutils literal notranslate"><span class="pre">False</span></code> if the line was
-dealt with in some way (this is the same as <code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code>).</p>
+<code class="sig-prename descclassname">InteractiveConsole.</code><code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param">line</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.push" title="永久链接至目标">¶</a></dt>
+<dd><p>将一行源文本推入解释器。 行内容不应带有末尾换行符；它可以有内部换行符。 行内容会被添加到一个缓冲区并且会调用解释器的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code> 方法，附带缓冲区内容的拼接结果作为源文本。 如果显示命令已执行或不合法，缓冲区将被重置；否则，则命令尚未结束，缓冲区将在添加行后保持原样。 如果要求更多输入则返回值为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，如果行已按某种方式被处理则返回值为 <code class="docutils literal notranslate"><span class="pre">False</span></code> (这与 <code class="xref py py-meth docutils literal notranslate"><span class="pre">runsource()</span></code> 相同)。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveConsole.resetbuffer">
-<code class="descclassname">InteractiveConsole.</code><code class="descname">resetbuffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.resetbuffer" title="永久链接至目标">¶</a></dt>
-<dd><p>Remove any unhandled source text from the input buffer.</p>
+<code class="sig-prename descclassname">InteractiveConsole.</code><code class="sig-name descname">resetbuffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.resetbuffer" title="永久链接至目标">¶</a></dt>
+<dd><p>从输入缓冲区中删除所有未处理的内容。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="code.InteractiveConsole.raw_input">
-<code class="descclassname">InteractiveConsole.</code><code class="descname">raw_input</code><span class="sig-paren">(</span><em>prompt=&quot;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.raw_input" title="永久链接至目标">¶</a></dt>
-<dd><p>Write a prompt and read a line.  The returned line does not include the trailing
-newline.  When the user enters the EOF key sequence, <a class="reference internal" href="exceptions.html#EOFError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#EOFError" title="EOFError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">EOFError</span></code></a> is raised.
-The base implementation reads from <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>; a subclass may replace this
-with a different implementation.</p>
+<code class="sig-prename descclassname">InteractiveConsole.</code><code class="sig-name descname">raw_input</code><span class="sig-paren">(</span><em class="sig-param">prompt=&quot;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#code.InteractiveConsole.raw_input" title="永久链接至目标">¶</a></dt>
+<dd><p>输出提示并读取一行。返回的行不包含末尾的换行符。当用户输入 EOF 键序列时，会引发 <a class="reference internal" href="exceptions.html#EOFError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#EOFError" title="EOFError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">EOFError</span></code></a> 异常。默认实现是从 <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code> 读取；子类可以用其他实现代替。</p>
 </dd></dl>
 
 </div>
@@ -282,11 +223,11 @@ with a different implementation.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">code</span></code> --- Interpreter base classes</a><ul>
-<li><a class="reference internal" href="#interactive-interpreter-objects">Interactive Interpreter Objects</a></li>
-<li><a class="reference internal" href="#interactive-console-objects">Interactive Console Objects</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code> --- 解释器基类</a><ul>
+<li><a class="reference internal" href="#interactive-interpreter-objects">交互解释器对象</a></li>
+<li><a class="reference internal" href="#interactive-console-objects">交互式控制台对象</a></li>
 </ul>
 </li>
 </ul>
@@ -296,13 +237,13 @@ with a different implementation.</p>
                         title="上一章">自定义 Python 解释器</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="codeop.html" tppabs="https://docs.python.org/zh-cn/3/library/codeop.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">codeop</span></code> --- Compile Python code</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code> --- 编译Python代码</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/code.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/code.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/code.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/code.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/code.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/code.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -322,19 +263,22 @@ with a different implementation.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="codeop.html" tppabs="https://docs.python.org/zh-cn/3/library/codeop.html" title="codeop --- Compile Python code"
+          <a href="codeop.html" tppabs="https://docs.python.org/zh-cn/3/library/codeop.html" title="codeop --- 编译Python代码"
              >下一页</a> |</li>
         <li class="right" >
           <a href="custominterp.html" tppabs="https://docs.python.org/zh-cn/3/library/custominterp.html" title="自定义 Python 解释器"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="custominterp.html" tppabs="https://docs.python.org/zh-cn/3/library/custominterp.html" >自定义 Python 解释器</a> &#187;</li>
@@ -356,15 +300,19 @@ with a different implementation.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

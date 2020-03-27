@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>lzma --- 用 LZMA 算法压缩 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>lzma --- 用 LZMA 算法压缩 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="zipfile --- 在 ZIP 归档中工作" href="zipfile.html" />
+    <link rel="next" title="zipfile --- 使用ZIP存档" href="zipfile.html" />
     <link rel="prev" title="bz2 --- 对 bzip2 压缩算法的支持" href="bz2.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/lzma.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="zipfile.html" tppabs="https://docs.python.org/zh-cn/3/library/zipfile.html" title="zipfile --- 在 ZIP 归档中工作"
+          <a href="zipfile.html" tppabs="https://docs.python.org/zh-cn/3/library/zipfile.html" title="zipfile --- 使用ZIP存档"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="bz2.html" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html" title="bz2 --- 对 bzip2 压缩算法的支持"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="archiving.html" tppabs="https://docs.python.org/zh-cn/3/library/archiving.html" accesskey="U">数据压缩和存档</a> &#187;</li>
@@ -98,277 +106,176 @@
   <div class="section" id="module-lzma">
 <span id="lzma-compression-using-the-lzma-algorithm"></span><h1><a class="reference internal" href="#module-lzma" title="lzma: A Python wrapper for the liblzma compression library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">lzma</span></code></a> --- 用 LZMA 算法压缩<a class="headerlink" href="#module-lzma" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
-<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/lzma.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/lzma.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/lzma.py">Lib/lzma.py</a></p>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/pep-3141  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/pep-3141'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/lzma.py">Lib/lzma.py</a></p>
 <hr class="docutils" />
-<p>This module provides classes and convenience functions for compressing and
-decompressing data using the LZMA compression algorithm. Also included is a file
-interface supporting the <code class="docutils literal notranslate"><span class="pre">.xz</span></code> and legacy <code class="docutils literal notranslate"><span class="pre">.lzma</span></code> file formats used by the
-<strong class="program">xz</strong> utility, as well as raw compressed streams.</p>
-<p>The interface provided by this module is very similar to that of the <a class="reference internal" href="bz2.html#module-bz2" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a>
-module. However, note that <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> is <em>not</em> thread-safe, unlike
-<a class="reference internal" href="bz2.html#bz2.BZ2File" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">bz2.BZ2File</span></code></a>, so if you need to use a single <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> instance
-from multiple threads, it is necessary to protect it with a lock.</p>
+<p>此模块提供了可以压缩和解压缩使用 LZMA 压缩算法的数据的类和便携函数。 其中还包含支持 <strong class="program">xz</strong> 工具所使用的 <code class="docutils literal notranslate"><span class="pre">.xz</span></code> 和旧式 <code class="docutils literal notranslate"><span class="pre">.lzma</span></code> 文件格式的文件接口，以及相应的原始压缩数据流。</p>
+<p>此模块所提供的接口与 <a class="reference internal" href="bz2.html#module-bz2" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a> 模块的非常类似。 但是，请注意 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> <em>不是</em> 线程安全的，这与 <a class="reference internal" href="bz2.html#bz2.BZ2File" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">bz2.BZ2File</span></code></a> 不同，因此如果你需要在多个线程中使用单个 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 实例，则需要通过锁来保护它。</p>
 <dl class="exception">
 <dt id="lzma.LZMAError">
-<em class="property">exception </em><code class="descclassname">lzma.</code><code class="descname">LZMAError</code><a class="headerlink" href="#lzma.LZMAError" title="永久链接至目标">¶</a></dt>
-<dd><p>This exception is raised when an error occurs during compression or
-decompression, or while initializing the compressor/decompressor state.</p>
+<em class="property">exception </em><code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">LZMAError</code><a class="headerlink" href="#lzma.LZMAError" title="永久链接至目标">¶</a></dt>
+<dd><p>当在压缩或解压缩期间或是在初始化压缩器/解压缩器的状态期间发生错误时此异常会被引发。</p>
 </dd></dl>
 
 <div class="section" id="reading-and-writing-compressed-files">
-<h2>Reading and writing compressed files<a class="headerlink" href="#reading-and-writing-compressed-files" title="永久链接至标题">¶</a></h2>
+<h2>读写压缩文件<a class="headerlink" href="#reading-and-writing-compressed-files" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="lzma.open">
-<code class="descclassname">lzma.</code><code class="descname">open</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=&quot;rb&quot;</em>, <em>*</em>, <em>format=None</em>, <em>check=-1</em>, <em>preset=None</em>, <em>filters=None</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>newline=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.open" title="永久链接至目标">¶</a></dt>
-<dd><p>Open an LZMA-compressed file in binary or text mode, returning a <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file
-object</span></a>.</p>
-<p>The <em>filename</em> argument can be either an actual file name (given as a
-<a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like</span></a> object), in
-which case the named file is opened, or it can be an existing file object
-to read from or write to.</p>
-<p>The <em>mode</em> argument can be any of <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;wb&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code> for binary mode, or <code class="docutils literal notranslate"><span class="pre">&quot;rt&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;wt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xt&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;at&quot;</span></code> for text mode. The default is <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>.</p>
-<p>When opening a file for reading, the <em>format</em> and <em>filters</em> arguments have
-the same meanings as for <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a>. In this case, the <em>check</em>
-and <em>preset</em> arguments should not be used.</p>
-<p>When opening a file for writing, the <em>format</em>, <em>check</em>, <em>preset</em> and
-<em>filters</em> arguments have the same meanings as for <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a>.</p>
-<p>For binary mode, this function is equivalent to the <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a>
-constructor: <code class="docutils literal notranslate"><span class="pre">LZMAFile(filename,</span> <span class="pre">mode,</span> <span class="pre">...)</span></code>. In this case, the <em>encoding</em>,
-<em>errors</em> and <em>newline</em> arguments must not be provided.</p>
-<p>For text mode, a <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> object is created, and wrapped in an
-<a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> instance with the specified encoding, error
-handling behavior, and line ending(s).</p>
+<code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">mode=&quot;rb&quot;</em>, <em class="sig-param">*</em>, <em class="sig-param">format=None</em>, <em class="sig-param">check=-1</em>, <em class="sig-param">preset=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em>, <em class="sig-param">newline=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.open" title="永久链接至目标">¶</a></dt>
+<dd><p>以二进制或文本模式打开 LZMA 压缩文件，返回一个 <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>。</p>
+<p><em>filename</em> 参数可以是一个实际的文件名（以 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 或 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">路径类</span></a> 对象的形式给出），在此情况下会打开指定名称的文件，或者可以是一个用于读写的现有文件对象。</p>
+<p><em>mode</em> 参数可以是二进制模式的 <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;wb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code>，或者文本模式的 <code class="docutils literal notranslate"><span class="pre">&quot;rt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;wt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xt&quot;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&quot;at&quot;</span></code>。 默认值为 <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>。</p>
+<p>当打开一个文件用于读取时，<em>format</em> 和 <em>filters</em> 参数具有与 <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a> 的参数相同的含义。 在此情况下，<em>check</em> 和 <em>preset</em> 参数不应被使用。</p>
+<p>当打开一个文件用于写入的，<em>format</em>, <em>check</em>, <em>preset</em> 和 <em>filters</em> 参数具有与 <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a> 的参数相同的含义。</p>
+<p>对于二进制模式，这个函数等价于 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 构造器: <code class="docutils literal notranslate"><span class="pre">LZMAFile(filename,</span> <span class="pre">mode,</span> <span class="pre">...)</span></code>。 在这种情况下，不可提供 <em>encoding</em>, <em>errors</em> 和 <em>newline</em> 参数。</p>
+<p>对于文本模式，将会创建一个 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 对象，并将它包装到一个 <a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> 实例中，此实例带有指定的编码格式、错误处理行为和行结束符。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Added support for the <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;xt&quot;</span></code> modes.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>增加了对 <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&quot;xt&quot;</span></code> 模式的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="lzma.LZMAFile">
-<em class="property">class </em><code class="descclassname">lzma.</code><code class="descname">LZMAFile</code><span class="sig-paren">(</span><em>filename=None</em>, <em>mode=&quot;r&quot;</em>, <em>*</em>, <em>format=None</em>, <em>check=-1</em>, <em>preset=None</em>, <em>filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMAFile" title="永久链接至目标">¶</a></dt>
-<dd><p>Open an LZMA-compressed file in binary mode.</p>
-<p>An <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> can wrap an already-open <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>, or operate
-directly on a named file. The <em>filename</em> argument specifies either the file
-object to wrap, or the name of the file to open (as a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>,
-<a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like</span></a> object). When wrapping an
-existing file object, the wrapped file will not be closed when the
-<a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> is closed.</p>
-<p>The <em>mode</em> argument can be either <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> for reading (default), <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> for
-overwriting, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code> for exclusive creation, or <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> for appending. These
-can equivalently be given as <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;wb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code>
-respectively.</p>
-<p>If <em>filename</em> is a file object (rather than an actual file name), a mode of
-<code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> does not truncate the file, and is instead equivalent to <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>.</p>
-<p>When opening a file for reading, the input file may be the concatenation of
-multiple separate compressed streams. These are transparently decoded as a
-single logical stream.</p>
-<p>When opening a file for reading, the <em>format</em> and <em>filters</em> arguments have
-the same meanings as for <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a>. In this case, the <em>check</em>
-and <em>preset</em> arguments should not be used.</p>
-<p>When opening a file for writing, the <em>format</em>, <em>check</em>, <em>preset</em> and
-<em>filters</em> arguments have the same meanings as for <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a>.</p>
-<p><a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> supports all the members specified by
-<a class="reference internal" href="io.html#io.BufferedIOBase" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedIOBase</span></code></a>, except for <code class="xref py py-meth docutils literal notranslate"><span class="pre">detach()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">truncate()</span></code>.
-Iteration and the <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement are supported.</p>
-<p>The following method is also provided:</p>
+<em class="property">class </em><code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">LZMAFile</code><span class="sig-paren">(</span><em class="sig-param">filename=None</em>, <em class="sig-param">mode=&quot;r&quot;</em>, <em class="sig-param">*</em>, <em class="sig-param">format=None</em>, <em class="sig-param">check=-1</em>, <em class="sig-param">preset=None</em>, <em class="sig-param">filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMAFile" title="永久链接至目标">¶</a></dt>
+<dd><p>以二进制模式打开一个 LZMA 压缩文件。</p>
+<p><a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 可以包装在一个已打开的 <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a> 中，或者是在给定名称的文件上直接操作。 <em>filename</em> 参数指定所包装的文件对象，或是要打开的文件名称（类型为 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 或 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">路径类</span></a> 对象）。 如果是包装现有的文件对象，被包装的文件在 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 被关闭时将不会被关闭。</p>
+<p><em>mode</em> 参数可以是表示读取的 <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> (默认值)，表示覆写的 <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code>，表示单独创建的 <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>，或表示添加的 <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>。 这些模式还可以分别以 <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;wb&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&quot;ab&quot;</span></code> 的等价形式给出。</p>
+<p>如果 <em>filename</em> 是一个文件对象（而不是实际的文件名），则 <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> 模式并不会截断文件，而会等价于 <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>。</p>
+<p>当打开一个文件用于读取时，输入文件可以为多个独立压缩流的拼接。 它们会被作为单个逻辑流被透明地解码。</p>
+<p>当打开一个文件用于读取时，<em>format</em> 和 <em>filters</em> 参数具有与 <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a> 的参数相同的含义。 在此情况下，<em>check</em> 和 <em>preset</em> 参数不应被使用。</p>
+<p>当打开一个文件用于写入的，<em>format</em>, <em>check</em>, <em>preset</em> 和 <em>filters</em> 参数具有与 <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a> 的参数相同的含义。</p>
+<p><a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 支持 <a class="reference internal" href="io.html#io.BufferedIOBase" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedIOBase</span></code></a> 所指定的所有成员，但 <code class="xref py py-meth docutils literal notranslate"><span class="pre">detach()</span></code> 和 <code class="xref py py-meth docutils literal notranslate"><span class="pre">truncate()</span></code> 除外。 并支持迭代和 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句。</p>
+<p>也提供以下方法：</p>
 <dl class="method">
 <dt id="lzma.LZMAFile.peek">
-<code class="descname">peek</code><span class="sig-paren">(</span><em>size=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMAFile.peek" title="永久链接至目标">¶</a></dt>
-<dd><p>Return buffered data without advancing the file position. At least one
-byte of data will be returned, unless EOF has been reached. The exact
-number of bytes returned is unspecified (the <em>size</em> argument is ignored).</p>
+<code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param">size=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMAFile.peek" title="永久链接至目标">¶</a></dt>
+<dd><p>返回缓冲的数据而不前移文件位置。 至少将返回一个字节的数据，除非已经到达 EOF。 实际返回的字节数不确定（会忽略 <em>size</em> 参数）。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">While calling <a class="reference internal" href="#lzma.LZMAFile.peek" title="lzma.LZMAFile.peek"><code class="xref py py-meth docutils literal notranslate"><span class="pre">peek()</span></code></a> does not change the file position of
-the <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a>, it may change the position of the underlying
-file object (e.g. if the <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> was constructed by passing a
-file object for <em>filename</em>).</p>
+<p class="admonition-title">注解</p>
+<p>虽然调用 <a class="reference internal" href="#lzma.LZMAFile.peek" title="lzma.LZMAFile.peek"><code class="xref py py-meth docutils literal notranslate"><span class="pre">peek()</span></code></a> 不会改变 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 的文件位置，但它可能改变下层文件对象的位置（举例来说如果 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a> 是通过传入一个文件对象作为 <em>filename</em> 的话）。</p>
 </div>
 </dd></dl>
 
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Added support for the <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code> modes.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>增加了对 <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&quot;xb&quot;</span></code> 模式的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The <a class="reference internal" href="io.html#io.BufferedIOBase.read" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase.read" title="io.BufferedIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> method now accepts an argument of
-<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span><a class="reference internal" href="io.html#io.BufferedIOBase.read" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase.read" title="io.BufferedIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> 方法现在接受 <code class="docutils literal notranslate"><span class="pre">None</span></code> 作为参数。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 </div>
 <div class="section" id="compressing-and-decompressing-data-in-memory">
-<h2>Compressing and decompressing data in memory<a class="headerlink" href="#compressing-and-decompressing-data-in-memory" title="永久链接至标题">¶</a></h2>
+<h2>在内存中压缩和解压缩数据<a class="headerlink" href="#compressing-and-decompressing-data-in-memory" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="lzma.LZMACompressor">
-<em class="property">class </em><code class="descclassname">lzma.</code><code class="descname">LZMACompressor</code><span class="sig-paren">(</span><em>format=FORMAT_XZ</em>, <em>check=-1</em>, <em>preset=None</em>, <em>filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMACompressor" title="永久链接至目标">¶</a></dt>
-<dd><p>Create a compressor object, which can be used to compress data incrementally.</p>
-<p>For a more convenient way of compressing a single chunk of data, see
-<a class="reference internal" href="#lzma.compress" title="lzma.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a>.</p>
-<p>The <em>format</em> argument specifies what container format should be used.
-Possible values are:</p>
+<em class="property">class </em><code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">LZMACompressor</code><span class="sig-paren">(</span><em class="sig-param">format=FORMAT_XZ</em>, <em class="sig-param">check=-1</em>, <em class="sig-param">preset=None</em>, <em class="sig-param">filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMACompressor" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个压缩器对象，此对象可被用来执行增量压缩。</p>
+<p>压缩单个数据块的更便捷方式请参阅 <a class="reference internal" href="#lzma.compress" title="lzma.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a>。</p>
+<p><em>format</em> 参数指定应当使用哪种容器格式。 可能的值有：</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt><code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code>: The <code class="docutils literal notranslate"><span class="pre">.xz</span></code> container format.</dt>
-<dd>This is the default format.</dd>
+<li><dl class="simple">
+<dt><code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code>: <code class="docutils literal notranslate"><span class="pre">.xz</span></code> 容器格式。</dt><dd><p>这是默认格式。</p>
+</dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code>: The legacy <code class="docutils literal notranslate"><span class="pre">.lzma</span></code> container format.</dt>
-<dd>This format is more limited than <code class="docutils literal notranslate"><span class="pre">.xz</span></code> -- it does not support integrity
-checks or multiple filters.</dd>
+<li><dl class="simple">
+<dt><code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code>: 传统的 <code class="docutils literal notranslate"><span class="pre">.lzma</span></code> 容器格式。</dt><dd><p>这种格式相比 <code class="docutils literal notranslate"><span class="pre">.xz</span></code> 更为受限 -- 它不支持一致性检查或多重过滤器。</p>
+</dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>: A raw data stream, not using any container format.</dt>
-<dd>This format specifier does not support integrity checks, and requires that
-you always specify a custom filter chain (for both compression and
-decompression). Additionally, data compressed in this manner cannot be
-decompressed using <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_AUTO</span></code> (see <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a>).</dd>
+<li><dl class="simple">
+<dt><code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>: 原始数据流，不使用任何容器格式。</dt><dd><p>这个格式描述器不支持一致性检查，并且要求你必须指定一个自定义的过滤器链（用于压缩和解压缩）。 此外，以这种方式压缩的数据不可使用 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_AUTO</span></code> 来解压缩 (参见 <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a>)。</p>
+</dd>
 </dl>
 </li>
 </ul>
-<p>The <em>check</em> argument specifies the type of integrity check to include in the
-compressed data. This check is used when decompressing, to ensure that the
-data has not been corrupted. Possible values are:</p>
+<p><em>check</em> 参数指定要包含在压缩数据中的一致性检查类型。 这种检查在解压缩时使用，以确保数据没有被破坏。 可能的值是：</p>
 <ul class="simple">
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_NONE</span></code>: No integrity check.
-This is the default (and the only acceptable value) for
-<code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>.</li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC32</span></code>: 32-bit Cyclic Redundancy Check.</li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC64</span></code>: 64-bit Cyclic Redundancy Check.
-This is the default for <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code>.</li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_SHA256</span></code>: 256-bit Secure Hash Algorithm.</li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_NONE</span></code>: 没有一致性检查。 这是 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code> 的默认值（也是唯一可接受的值）。</p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC32</span></code>: 32 位循环冗余检查。</p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC64</span></code>: 64 位循环冗余检查。 这是 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code> 的默认值。</p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_SHA256</span></code>: 256 位安全哈希算法。</p></li>
 </ul>
-<p>If the specified check is not supported, an <a class="reference internal" href="#lzma.LZMAError" title="lzma.LZMAError"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAError</span></code></a> is raised.</p>
-<p>The compression settings can be specified either as a preset compression
-level (with the <em>preset</em> argument), or in detail as a custom filter chain
-(with the <em>filters</em> argument).</p>
-<p>The <em>preset</em> argument (if provided) should be an integer between <code class="docutils literal notranslate"><span class="pre">0</span></code> and
-<code class="docutils literal notranslate"><span class="pre">9</span></code> (inclusive), optionally OR-ed with the constant
-<code class="xref py py-const docutils literal notranslate"><span class="pre">PRESET_EXTREME</span></code>. If neither <em>preset</em> nor <em>filters</em> are given, the
-default behavior is to use <code class="xref py py-const docutils literal notranslate"><span class="pre">PRESET_DEFAULT</span></code> (preset level <code class="docutils literal notranslate"><span class="pre">6</span></code>).
-Higher presets produce smaller output, but make the compression process
-slower.</p>
+<p>如果指定的检查不受支持，则会引发 <a class="reference internal" href="#lzma.LZMAError" title="lzma.LZMAError"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAError</span></code></a>。</p>
+<p>压缩设置可被指定为一个预设的压缩等级（通过 <em>preset</em> 参数）或以自定义过滤器链来详细设置（通过 <em>filters</em> 参数）。</p>
+<p><em>preset</em> 参数（如果提供）应当为一个 <code class="docutils literal notranslate"><span class="pre">0</span></code> 到 <code class="docutils literal notranslate"><span class="pre">9</span></code> (包括边界) 之间的整数，可以选择与常数 <code class="xref py py-const docutils literal notranslate"><span class="pre">PRESET_EXTREME</span></code> 进行 OR 运算。 如果 <em>preset</em> 和 <em>filters</em> 均未给出，则默认行为是使用 <code class="xref py py-const docutils literal notranslate"><span class="pre">PRESET_DEFAULT</span></code> (预设等级 <code class="docutils literal notranslate"><span class="pre">6</span></code>)。 更高的预设等级会产生更小的输出，但会使得压缩过程更缓慢。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">In addition to being more CPU-intensive, compression with higher presets
-also requires much more memory (and produces output that needs more memory
-to decompress). With preset <code class="docutils literal notranslate"><span class="pre">9</span></code> for example, the overhead for an
-<a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a> object can be as high as 800 MiB. For this reason,
-it is generally best to stick with the default preset.</p>
+<p class="admonition-title">注解</p>
+<p>除了更加 CPU 密集，使用更高的预设等级来压缩还需要更多的内存（并产生需要更多内存来解压缩的输出）。 例如使用预设等级 <code class="docutils literal notranslate"><span class="pre">9</span></code> 时，一个 <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a> 对象的开销可以高达 800 MiB。 出于这样的原因，通常最好是保持使用默认预设等级。</p>
 </div>
-<p>The <em>filters</em> argument (if provided) should be a filter chain specifier.
-See <a class="reference internal" href="#filter-chain-specs"><span class="std std-ref">Specifying custom filter chains</span></a> for details.</p>
+<p><em>filters</em> 参数（如果提供）应当指定一个过滤器链。 详情参见 <a class="reference internal" href="#filter-chain-specs"><span class="std std-ref">指定自定义的过滤器链</span></a>。</p>
 <dl class="method">
 <dt id="lzma.LZMACompressor.compress">
-<code class="descname">compress</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMACompressor.compress" title="永久链接至目标">¶</a></dt>
-<dd><p>Compress <em>data</em> (a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object), returning a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
-object containing compressed data for at least part of the input. Some of
-<em>data</em> may be buffered internally, for use in later calls to
-<a class="reference internal" href="#lzma.compress" title="lzma.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compress()</span></code></a> and <a class="reference internal" href="#lzma.LZMACompressor.flush" title="lzma.LZMACompressor.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a>. The returned data should be
-concatenated with the output of any previous calls to <a class="reference internal" href="#lzma.compress" title="lzma.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compress()</span></code></a>.</p>
+<code class="sig-name descname">compress</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMACompressor.compress" title="永久链接至目标">¶</a></dt>
+<dd><p>压缩 <em>data</em> (一个 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object)，返回包含针对输入的至少一部分已压缩数据的 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象。 一部 <em>data</em> 可能会被放入内部缓冲区，以便用于后续的 <a class="reference internal" href="#lzma.compress" title="lzma.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compress()</span></code></a> 和 <a class="reference internal" href="#lzma.LZMACompressor.flush" title="lzma.LZMACompressor.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> 调用。 返回的数据应当与之前任何 <a class="reference internal" href="#lzma.compress" title="lzma.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compress()</span></code></a> 调用的输出进行拼接。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lzma.LZMACompressor.flush">
-<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMACompressor.flush" title="永久链接至目标">¶</a></dt>
-<dd><p>Finish the compression process, returning a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object
-containing any data stored in the compressor's internal buffers.</p>
-<p>The compressor cannot be used after this method has been called.</p>
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMACompressor.flush" title="永久链接至目标">¶</a></dt>
+<dd><p>结束压缩进程，返回包含保存在压缩器的内部缓冲区中的任意数据的 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象。</p>
+<p>调用此方法之后压缩器将不可再被使用。</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="lzma.LZMADecompressor">
-<em class="property">class </em><code class="descclassname">lzma.</code><code class="descname">LZMADecompressor</code><span class="sig-paren">(</span><em>format=FORMAT_AUTO</em>, <em>memlimit=None</em>, <em>filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMADecompressor" title="永久链接至目标">¶</a></dt>
-<dd><p>Create a decompressor object, which can be used to decompress data
-incrementally.</p>
-<p>For a more convenient way of decompressing an entire compressed stream at
-once, see <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a>.</p>
-<p>The <em>format</em> argument specifies the container format that should be used. The
-default is <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_AUTO</span></code>, which can decompress both <code class="docutils literal notranslate"><span class="pre">.xz</span></code> and
-<code class="docutils literal notranslate"><span class="pre">.lzma</span></code> files. Other possible values are <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code>,
-<code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code>, and <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>.</p>
-<p>The <em>memlimit</em> argument specifies a limit (in bytes) on the amount of memory
-that the decompressor can use. When this argument is used, decompression will
-fail with an <a class="reference internal" href="#lzma.LZMAError" title="lzma.LZMAError"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAError</span></code></a> if it is not possible to decompress the input
-within the given memory limit.</p>
-<p>The <em>filters</em> argument specifies the filter chain that was used to create
-the stream being decompressed. This argument is required if <em>format</em> is
-<code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>, but should not be used for other formats.
-See <a class="reference internal" href="#filter-chain-specs"><span class="std std-ref">Specifying custom filter chains</span></a> for more information about filter chains.</p>
+<em class="property">class </em><code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">LZMADecompressor</code><span class="sig-paren">(</span><em class="sig-param">format=FORMAT_AUTO</em>, <em class="sig-param">memlimit=None</em>, <em class="sig-param">filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMADecompressor" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个压缩器对象，此对象可被用来执行增量解压缩。</p>
+<p>一次性解压缩整个压缩数据流的更便捷方式请参阅 <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a>。</p>
+<p><em>format</em> 参数指定应当被使用的容器格式。 默认值为 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_AUTO</span></code>，它可以解压缩 <code class="docutils literal notranslate"><span class="pre">.xz</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.lzma</span></code> 文件。 其他可能的值为 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>。</p>
+<p><em>memlimit</em> 参数指定解压缩器可以使用的内存上限（字节数）。 当使用此参数时，如果不可能在给定内存上限之内解压缩输入数据则解压缩将失败并引发 <a class="reference internal" href="#lzma.LZMAError" title="lzma.LZMAError"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAError</span></code></a>。</p>
+<p><em>filters</em> 参数指定用于创建被解压缩数据流的过滤器链。 此参数在 <em>format</em> 为 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code> 时要求提供，但对于其他格式不应使用。 有关过滤器链的更多信息请参阅 <a class="reference internal" href="#filter-chain-specs"><span class="std std-ref">指定自定义的过滤器链</span></a>。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">This class does not transparently handle inputs containing multiple
-compressed streams, unlike <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> and <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a>. To
-decompress a multi-stream input with <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a>, you must
-create a new decompressor for each stream.</p>
+<p class="admonition-title">注解</p>
+<p>这个类不会透明地处理包含多个已压缩数据流的输入，这不同于 <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> 和 <a class="reference internal" href="#lzma.LZMAFile" title="lzma.LZMAFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMAFile</span></code></a>。 要通过 <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a> 来解压缩多个数据流输入，你必须为每个数据流都创建一个新的解压缩器。</p>
 </div>
 <dl class="method">
 <dt id="lzma.LZMADecompressor.decompress">
-<code class="descname">decompress</code><span class="sig-paren">(</span><em>data</em>, <em>max_length=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMADecompressor.decompress" title="永久链接至目标">¶</a></dt>
-<dd><p>Decompress <em>data</em> (a <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>), returning
-uncompressed data as bytes. Some of <em>data</em> may be buffered
-internally, for use in later calls to <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a>. The
-returned data should be concatenated with the output of any
-previous calls to <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a>.</p>
-<p>If <em>max_length</em> is nonnegative, returns at most <em>max_length</em>
-bytes of decompressed data. If this limit is reached and further
-output can be produced, the <a class="reference internal" href="#lzma.LZMADecompressor.needs_input" title="lzma.LZMADecompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> attribute will
-be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>. In this case, the next call to
-<a class="reference internal" href="#lzma.LZMADecompressor.decompress" title="lzma.LZMADecompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> may provide <em>data</em> as <code class="docutils literal notranslate"><span class="pre">b''</span></code> to obtain
-more of the output.</p>
-<p>If all of the input data was decompressed and returned (either
-because this was less than <em>max_length</em> bytes, or because
-<em>max_length</em> was negative), the <a class="reference internal" href="#lzma.LZMADecompressor.needs_input" title="lzma.LZMADecompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> attribute
-will be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>Attempting to decompress data after the end of stream is reached
-raises an <cite>EOFError</cite>.  Any data found after the end of the
-stream is ignored and saved in the <a class="reference internal" href="#lzma.LZMADecompressor.unused_data" title="lzma.LZMADecompressor.unused_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">unused_data</span></code></a> attribute.</p>
+<code class="sig-name descname">decompress</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">max_length=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.LZMADecompressor.decompress" title="永久链接至目标">¶</a></dt>
+<dd><p>解压缩 <em>data</em> (一个 <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>)，返回字节串形式的解压缩数据。 某些 <em>data</em> 可以在内部被缓冲，以便用于后续的 <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 调用。 返回的数据应当与之前任何 <a class="reference internal" href="#lzma.decompress" title="lzma.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 调用的输出进行拼接。</p>
+<p>如果 <em>max_length</em> 为非负数，将返回至多 <em>max_length</em> 个字节的解压缩数据。 如果达到此限制并且可以产生后续输出，则 <a class="reference internal" href="#lzma.LZMADecompressor.needs_input" title="lzma.LZMADecompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> 属性将被设为 <code class="docutils literal notranslate"><span class="pre">False</span></code>。 在这种情况下，下一次 <a class="reference internal" href="#lzma.LZMADecompressor.decompress" title="lzma.LZMADecompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 调用提供的 <em>data</em> 可以为 <code class="docutils literal notranslate"><span class="pre">b''</span></code> 以获取更多的输出。</p>
+<p>如果所有输入数据都已被解压缩并返回（或是因为它少于 <em>max_length</em> 个字节，或是因为 <em>max_length</em> 为负数），则 <a class="reference internal" href="#lzma.LZMADecompressor.needs_input" title="lzma.LZMADecompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> 属性将被设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<p>在到达数据流末尾之后再尝试解压缩数据会引发 <cite>EOFError</cite>。 在数据流末尾之后获取的任何数据都会被忽略并存储至 <a class="reference internal" href="#lzma.LZMADecompressor.unused_data" title="lzma.LZMADecompressor.unused_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">unused_data</span></code></a> 属性。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>Added the <em>max_length</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>添加了 <em>max_length</em> 形参。</p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="lzma.LZMADecompressor.check">
-<code class="descname">check</code><a class="headerlink" href="#lzma.LZMADecompressor.check" title="永久链接至目标">¶</a></dt>
-<dd><p>The ID of the integrity check used by the input stream. This may be
-<code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_UNKNOWN</span></code> until enough of the input has been decoded to
-determine what integrity check it uses.</p>
+<code class="sig-name descname">check</code><a class="headerlink" href="#lzma.LZMADecompressor.check" title="永久链接至目标">¶</a></dt>
+<dd><p>输入流使用的一致性检查的 ID。 这可能为 <code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_UNKNOWN</span></code> 直到已解压了足够的输入数据来确定它所使用的一致性检查。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="lzma.LZMADecompressor.eof">
-<code class="descname">eof</code><a class="headerlink" href="#lzma.LZMADecompressor.eof" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">eof</code><a class="headerlink" href="#lzma.LZMADecompressor.eof" title="永久链接至目标">¶</a></dt>
 <dd><p>若达到了数据流末尾标识符则为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="lzma.LZMADecompressor.unused_data">
-<code class="descname">unused_data</code><a class="headerlink" href="#lzma.LZMADecompressor.unused_data" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">unused_data</code><a class="headerlink" href="#lzma.LZMADecompressor.unused_data" title="永久链接至目标">¶</a></dt>
 <dd><p>压缩数据流的末尾还有数据。</p>
-<p>Before the end of the stream is reached, this will be <code class="docutils literal notranslate"><span class="pre">b&quot;&quot;</span></code>.</p>
+<p>在达到数据流末尾之前，这个值将为 <code class="docutils literal notranslate"><span class="pre">b&quot;&quot;</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="lzma.LZMADecompressor.needs_input">
-<code class="descname">needs_input</code><a class="headerlink" href="#lzma.LZMADecompressor.needs_input" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> if the <a class="reference internal" href="#lzma.LZMADecompressor.decompress" title="lzma.LZMADecompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> method can provide more
-decompressed data before requiring new uncompressed input.</p>
+<code class="sig-name descname">needs_input</code><a class="headerlink" href="#lzma.LZMADecompressor.needs_input" title="永久链接至目标">¶</a></dt>
+<dd><p>如果在要求新的未解压缩输入之前 <a class="reference internal" href="#lzma.LZMADecompressor.decompress" title="lzma.LZMADecompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 方法可以提供更多的解压缩数据则为 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
@@ -376,22 +283,17 @@ decompressed data before requiring new uncompressed input.</p>
 
 <dl class="function">
 <dt id="lzma.compress">
-<code class="descclassname">lzma.</code><code class="descname">compress</code><span class="sig-paren">(</span><em>data</em>, <em>format=FORMAT_XZ</em>, <em>check=-1</em>, <em>preset=None</em>, <em>filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.compress" title="永久链接至目标">¶</a></dt>
-<dd><p>Compress <em>data</em> (a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object), returning the compressed data as a
-<a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object.</p>
-<p>See <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a> above for a description of the <em>format</em>, <em>check</em>,
-<em>preset</em> and <em>filters</em> arguments.</p>
+<code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">compress</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">format=FORMAT_XZ</em>, <em class="sig-param">check=-1</em>, <em class="sig-param">preset=None</em>, <em class="sig-param">filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.compress" title="永久链接至目标">¶</a></dt>
+<dd><p>压缩 <em>data</em> (一个 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象)，返回包含压缩数据的 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象。</p>
+<p>参见上文的 <a class="reference internal" href="#lzma.LZMACompressor" title="lzma.LZMACompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMACompressor</span></code></a> 了解有关 <em>format</em>, <em>check</em>, <em>preset</em> 和 <em>filters</em> 参数的说明。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lzma.decompress">
-<code class="descclassname">lzma.</code><code class="descname">decompress</code><span class="sig-paren">(</span><em>data</em>, <em>format=FORMAT_AUTO</em>, <em>memlimit=None</em>, <em>filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.decompress" title="永久链接至目标">¶</a></dt>
-<dd><p>Decompress <em>data</em> (a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object), returning the uncompressed data
-as a <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object.</p>
-<p>If <em>data</em> is the concatenation of multiple distinct compressed streams,
-decompress all of these streams, and return the concatenation of the results.</p>
-<p>See <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a> above for a description of the <em>format</em>,
-<em>memlimit</em> and <em>filters</em> arguments.</p>
+<code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">decompress</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">format=FORMAT_AUTO</em>, <em class="sig-param">memlimit=None</em>, <em class="sig-param">filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.decompress" title="永久链接至目标">¶</a></dt>
+<dd><p>解压缩 <em>data</em> (一个 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象)，返回包含解压缩数据的 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象。</p>
+<p>如果 <em>data</em> 是多个单独压缩数据流的拼接，则解压缩所有相应数据流，并返回结果的拼接。</p>
+<p>参见上文的 <a class="reference internal" href="#lzma.LZMADecompressor" title="lzma.LZMADecompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LZMADecompressor</span></code></a> 了解有关 <em>format</em>, <em>memlimit</em> 和 <em>filters</em> 参数的说明。</p>
 </dd></dl>
 
 </div>
@@ -399,109 +301,84 @@ decompress all of these streams, and return the concatenation of the results.</p
 <h2>杂项<a class="headerlink" href="#miscellaneous" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="lzma.is_check_supported">
-<code class="descclassname">lzma.</code><code class="descname">is_check_supported</code><span class="sig-paren">(</span><em>check</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.is_check_supported" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns true if the given integrity check is supported on this system.</p>
-<p><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_NONE</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC32</span></code> are always supported.
-<code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC64</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_SHA256</span></code> may be unavailable if you are
-using a version of <strong class="program">liblzma</strong> that was compiled with a limited
-feature set.</p>
+<code class="sig-prename descclassname">lzma.</code><code class="sig-name descname">is_check_supported</code><span class="sig-paren">(</span><em class="sig-param">check</em><span class="sig-paren">)</span><a class="headerlink" href="#lzma.is_check_supported" title="永久链接至目标">¶</a></dt>
+<dd><p>如果本系统支持给定的一致性检查则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<p><code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_NONE</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC32</span></code> 总是受支持。 <code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_CRC64</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">CHECK_SHA256</span></code> 或许不可用，如果你正在使用基于受限制特性集编译的 <strong class="program">liblzma</strong> 版本的话。</p>
 </dd></dl>
 
 </div>
 <div class="section" id="specifying-custom-filter-chains">
-<span id="filter-chain-specs"></span><h2>Specifying custom filter chains<a class="headerlink" href="#specifying-custom-filter-chains" title="永久链接至标题">¶</a></h2>
-<p>A filter chain specifier is a sequence of dictionaries, where each dictionary
-contains the ID and options for a single filter. Each dictionary must contain
-the key <code class="docutils literal notranslate"><span class="pre">&quot;id&quot;</span></code>, and may contain additional keys to specify filter-dependent
-options. Valid filter IDs are as follows:</p>
+<span id="filter-chain-specs"></span><h2>指定自定义的过滤器链<a class="headerlink" href="#specifying-custom-filter-chains" title="永久链接至标题">¶</a></h2>
+<p>过滤器链描述符是由字典组成的序列，其中每个字典包含单个过滤器的 ID 和选项。 每个字典必须包含键 <code class="docutils literal notranslate"><span class="pre">&quot;id&quot;</span></code>，并可能包含额外的键用来指定基于过滤器的选项。 有效的过滤器 ID 如下：</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Compression filters:</dt>
-<dd><ul class="first last">
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_LZMA1</span></code> (for use with <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code>)</li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_LZMA2</span></code> (for use with <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code>)</li>
+<li><dl class="simple">
+<dt>压缩过滤器：</dt><dd><ul>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_LZMA1</span></code> (配合 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_ALONE</span></code> 使用)</p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_LZMA2</span></code> (配合 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_XZ</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code> 使用)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Delta filter:</dt>
-<dd><ul class="first last">
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_DELTA</span></code></li>
+<li><dl class="simple">
+<dt>Delta 过滤器：</dt><dd><ul>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_DELTA</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Branch-Call-Jump (BCJ) filters:</dt>
-<dd><ul class="first last">
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_X86</span></code></li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_IA64</span></code></li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_ARM</span></code></li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_ARMTHUMB</span></code></li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_POWERPC</span></code></li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_SPARC</span></code></li>
+<li><dl class="simple">
+<dt>Branch-Call-Jump (BCJ) 过滤器：</dt><dd><ul>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_X86</span></code></p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_IA64</span></code></p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_ARM</span></code></p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_ARMTHUMB</span></code></p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_POWERPC</span></code></p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">FILTER_SPARC</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
-<p>A filter chain can consist of up to 4 filters, and cannot be empty. The last
-filter in the chain must be a compression filter, and any other filters must be
-delta or BCJ filters.</p>
-<p>Compression filters support the following options (specified as additional
-entries in the dictionary representing the filter):</p>
+<p>一个过滤器链最多可由 4 个过滤器组成，并且不能为空。 过滤器链中的最后一个过滤器必须为压缩过滤器，其他过滤器必须为 Delta 或 BCJ 过滤器。</p>
+<p>压缩过滤器支持下列选项（指定为表示过滤器的字典中的附加条目）：</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">preset</span></code>: A compression preset to use as a source of default values for
-options that are not specified explicitly.</li>
-<li><code class="docutils literal notranslate"><span class="pre">dict_size</span></code>: Dictionary size in bytes. This should be between 4 KiB and
-1.5 GiB (inclusive).</li>
-<li><code class="docutils literal notranslate"><span class="pre">lc</span></code>: Number of literal context bits.</li>
-<li><code class="docutils literal notranslate"><span class="pre">lp</span></code>: Number of literal position bits. The sum <code class="docutils literal notranslate"><span class="pre">lc</span> <span class="pre">+</span> <span class="pre">lp</span></code> must be at
-most 4.</li>
-<li><code class="docutils literal notranslate"><span class="pre">pb</span></code>: Number of position bits; must be at most 4.</li>
-<li><code class="docutils literal notranslate"><span class="pre">mode</span></code>: <code class="xref py py-const docutils literal notranslate"><span class="pre">MODE_FAST</span></code> or <code class="xref py py-const docutils literal notranslate"><span class="pre">MODE_NORMAL</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">nice_len</span></code>: What should be considered a &quot;nice length&quot; for a match.
-This should be 273 or less.</li>
-<li><code class="docutils literal notranslate"><span class="pre">mf</span></code>: What match finder to use -- <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_HC3</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_HC4</span></code>,
-<code class="xref py py-const docutils literal notranslate"><span class="pre">MF_BT2</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_BT3</span></code>, or <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_BT4</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">depth</span></code>: Maximum search depth used by match finder. 0 (default) means to
-select automatically based on other filter options.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preset</span></code>: 压缩预设选项，用于作为未显式指定的选项的默认值的来源。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dict_size</span></code>: 以字节表示的字典大小。 这应当在 4 KiB 和 1.5 GiB 之间（包含边界）。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lc</span></code>: 字面值上下文的比特数。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lp</span></code>: 字面值位置的比特数。 总计值 <code class="docutils literal notranslate"><span class="pre">lc</span> <span class="pre">+</span> <span class="pre">lp</span></code> 必须不大于 4。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pb</span></code>: 位置的比特数；必须不大于 4。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code>: <code class="xref py py-const docutils literal notranslate"><span class="pre">MODE_FAST</span></code> 或 <code class="xref py py-const docutils literal notranslate"><span class="pre">MODE_NORMAL</span></code>。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nice_len</span></code>: 对于一个匹配应当被视为“适宜长度”的值。 这应当小于或等于 273。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mf</span></code>: 要使用的匹配查找器 -- <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_HC3</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_HC4</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_BT2</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_BT3</span></code> 或 <code class="xref py py-const docutils literal notranslate"><span class="pre">MF_BT4</span></code>。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code>: 匹配查找器使用的最大查找深度。 0 (默认值) 表示基于其他过滤器选项自动选择。</p></li>
 </ul>
 </div></blockquote>
-<p>The delta filter stores the differences between bytes, producing more repetitive
-input for the compressor in certain circumstances. It supports one option,
-<code class="docutils literal notranslate"><span class="pre">dist</span></code>. This indicates the distance between bytes to be subtracted. The
-default is 1, i.e. take the differences between adjacent bytes.</p>
-<p>The BCJ filters are intended to be applied to machine code. They convert
-relative branches, calls and jumps in the code to use absolute addressing, with
-the aim of increasing the redundancy that can be exploited by the compressor.
-These filters support one option, <code class="docutils literal notranslate"><span class="pre">start_offset</span></code>. This specifies the address
-that should be mapped to the beginning of the input data. The default is 0.</p>
+<p>Delta 过滤器保存字节数据之间的差值，在特定环境下可产生更具重复性的输入。 它支持一个 <code class="docutils literal notranslate"><span class="pre">dist</span></code> 选项，指明要减去的字节之间的差值大小。 默认值为 1，即相邻字节之间的差值。</p>
+<p>BCJ 过滤器主要作用于机器码。 它们会转换机器码内的相对分支、调用和跳转以使用绝对寻址，其目标是提升冗余度以供压缩器利用。 这些过滤器支持一个 <code class="docutils literal notranslate"><span class="pre">start_offset</span></code> 选项，指明应当被映射到输入数据开头的地址。 默认值为 0。</p>
 </div>
 <div class="section" id="examples">
 <h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>Reading in a compressed file:</p>
+<p>在已压缩的数据中读取:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lzma</span>
 <span class="k">with</span> <span class="n">lzma</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;file.xz&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Creating a compressed file:</p>
+<p>创建一个压缩文件:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lzma</span>
 <span class="n">data</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Insert Data Here&quot;</span>
 <span class="k">with</span> <span class="n">lzma</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;file.xz&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Compressing data in memory:</p>
+<p>在内存中压缩文件:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lzma</span>
 <span class="n">data_in</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Insert Data Here&quot;</span>
 <span class="n">data_out</span> <span class="o">=</span> <span class="n">lzma</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">data_in</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Incremental compression:</p>
+<p>增量压缩:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lzma</span>
 <span class="n">lzc</span> <span class="o">=</span> <span class="n">lzma</span><span class="o">.</span><span class="n">LZMACompressor</span><span class="p">()</span>
 <span class="n">out1</span> <span class="o">=</span> <span class="n">lzc</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Some data</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -512,7 +389,7 @@ that should be mapped to the beginning of the input data. The default is 0.</p>
 <span class="n">result</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">out1</span><span class="p">,</span> <span class="n">out2</span><span class="p">,</span> <span class="n">out3</span><span class="p">,</span> <span class="n">out4</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Writing compressed data to an already-open file:</p>
+<p>写入已压缩数据到已打开的文件:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lzma</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.xz&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;This data will not be compressed</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -521,7 +398,7 @@ that should be mapped to the beginning of the input data. The default is 0.</p>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Not compressed</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Creating a compressed file using a custom filter chain:</p>
+<p>使用自定义过滤器链创建一个已压缩文件:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lzma</span>
 <span class="n">my_filters</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">lzma</span><span class="o">.</span><span class="n">FILTER_DELTA</span><span class="p">,</span> <span class="s2">&quot;dist&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
@@ -540,13 +417,13 @@ that should be mapped to the beginning of the input data. The default is 0.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">lzma</span></code> --- 用 LZMA 算法压缩</a><ul>
-<li><a class="reference internal" href="#reading-and-writing-compressed-files">Reading and writing compressed files</a></li>
-<li><a class="reference internal" href="#compressing-and-decompressing-data-in-memory">Compressing and decompressing data in memory</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lzma</span></code> --- 用 LZMA 算法压缩</a><ul>
+<li><a class="reference internal" href="#reading-and-writing-compressed-files">读写压缩文件</a></li>
+<li><a class="reference internal" href="#compressing-and-decompressing-data-in-memory">在内存中压缩和解压缩数据</a></li>
 <li><a class="reference internal" href="#miscellaneous">杂项</a></li>
-<li><a class="reference internal" href="#specifying-custom-filter-chains">Specifying custom filter chains</a></li>
+<li><a class="reference internal" href="#specifying-custom-filter-chains">指定自定义的过滤器链</a></li>
 <li><a class="reference internal" href="#examples">示例</a></li>
 </ul>
 </li>
@@ -554,16 +431,16 @@ that should be mapped to the beginning of the input data. The default is 0.</p>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="bz2.html" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">bz2</span></code> --- 对 <strong class="program">bzip2</strong> 压缩算法的支持</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code> --- 对 <strong class="program">bzip2</strong> 压缩算法的支持</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="zipfile.html" tppabs="https://docs.python.org/zh-cn/3/library/zipfile.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">zipfile</span></code> --- 在 ZIP 归档中工作</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipfile</span></code> --- 使用ZIP存档</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/lzma.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/lzma.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/lzma.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/lzma.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/lzma.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/lzma.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -583,19 +460,22 @@ that should be mapped to the beginning of the input data. The default is 0.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="zipfile.html" tppabs="https://docs.python.org/zh-cn/3/library/zipfile.html" title="zipfile --- 在 ZIP 归档中工作"
+          <a href="zipfile.html" tppabs="https://docs.python.org/zh-cn/3/library/zipfile.html" title="zipfile --- 使用ZIP存档"
              >下一页</a> |</li>
         <li class="right" >
           <a href="bz2.html" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html" title="bz2 --- 对 bzip2 压缩算法的支持"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="archiving.html" tppabs="https://docs.python.org/zh-cn/3/library/archiving.html" >数据压缩和存档</a> &#187;</li>
@@ -617,15 +497,19 @@ that should be mapped to the beginning of the input data. The default is 0.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Type å¯¹è±¡ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>Type å¯¹è±¡ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="None å¯¹è±¡" href="none.html" />
-    <link rel="prev" title="Concrete Objects Layer" href="concrete.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="å…·ä½“çš„å¯¹è±¡å±‚" href="concrete.html" />
     <link rel="canonical" href="https://docs.python.org/3/c-api/type.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -59,19 +64,22 @@
           <a href="none.html" tppabs="https://docs.python.org/zh-cn/3/c-api/none.html" title="None å¯¹è±¡"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" title="Concrete Objects Layer"
+          <a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" title="å…·ä½“çš„å¯¹è±¡å±‚"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -99,52 +107,52 @@
 <span id="typeobjects"></span><h1>Type å¯¹è±¡<a class="headerlink" href="#type-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
 <span class="target" id="index-0"></span><dl class="type">
 <dt id="c.PyTypeObject">
-<code class="descname">PyTypeObject</code><a class="headerlink" href="#c.PyTypeObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">PyTypeObject</code><a class="headerlink" href="#c.PyTypeObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>å¯¹è±¡çš„ C ç»“æ„ç”¨äºæè¿° built-in ç±»å‹ã€‚</p>
 </dd></dl>
 
 <dl class="var">
 <dt id="c.PyType_Type">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyType_Type</code><a class="headerlink" href="#c.PyType_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyType_Type</code><a class="headerlink" href="#c.PyType_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>è¿™æ˜¯å±äº type å¯¹è±¡çš„ type objectï¼Œå®ƒåœ¨ Python å±‚é¢å’Œ <a class="reference internal" href="functions.html#type" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#type" title="type"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a> æ˜¯ç›¸åŒçš„å¯¹è±¡ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_Check">
-int <code class="descname">PyType_Check</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyType_Check</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>å¦‚æœå¯¹è±¡ <em>o</em> æ˜¯ä¸€ä¸ªç±»å‹å¯¹è±¡ï¼ŒåŒ…æ‹¬ç»§æ‰¿äºæ ‡å‡†ç±»å‹å¯¹è±¡çš„ç±»å‹å®ä¾‹ï¼Œè¿”å›çœŸã€‚åœ¨å…¶å®ƒæ‰€æœ‰æƒ…å†µä¸‹è¿”å›å‡ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_CheckExact">
-int <code class="descname">PyType_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_CheckExact" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyType_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_CheckExact" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>å¦‚æœå¯¹è±¡ <em>o</em> æ˜¯ä¸€ä¸ªç±»å‹å¯¹è±¡ï¼Œä½†ä¸æ˜¯æ ‡å‡†ç±»å‹å¯¹è±¡çš„å­ç±»å‹æ—¶ï¼Œè¿”å›çœŸã€‚åœ¨å…¶å®ƒæ‰€æœ‰æƒ…å†µä¸‹è¿”å›å‡ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_ClearCache">
-unsigned int <code class="descname">PyType_ClearCache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_ClearCache" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+unsigned int <code class="sig-name descname">PyType_ClearCache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_ClearCache" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Clear the internal lookup cache. Return the current version tag.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_GetFlags">
-unsigned long <code class="descname">PyType_GetFlags</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a>*<em>&nbsp;type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GetFlags" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+unsigned long <code class="sig-name descname">PyType_GetFlags</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a>*<em>Â type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GetFlags" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_flags" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_flags" title="PyTypeObject.tp_flags"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_flags</span></code></a> member of <em>type</em>. This function is primarily
 meant for use with <cite>Py_LIMITED_API</cite>; the individual flag bits are
 guaranteed to be stable across Python releases, but access to
 <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_flags" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_flags" title="PyTypeObject.tp_flags"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_flags</span></code></a> itself is not part of the limited API.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.4 ç‰ˆæ›´æ”¹: </span>The return type is now <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">long</span></code> rather than <code class="docutils literal notranslate"><span class="pre">long</span></code>.</p>
+<p><span class="versionmodified changed">åœ¨ 3.4 ç‰ˆæ›´æ”¹: </span>The return type is now <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">long</span></code> rather than <code class="docutils literal notranslate"><span class="pre">long</span></code>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_Modified">
-void <code class="descname">PyType_Modified</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_Modified" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void <code class="sig-name descname">PyType_Modified</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_Modified" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Invalidate the internal lookup cache for the type and all of its
 subtypes.  This function must be called after any manual
 modification of the attributes or base classes of the type.</p>
@@ -152,21 +160,21 @@ modification of the attributes or base classes of the type.</p>
 
 <dl class="function">
 <dt id="c.PyType_HasFeature">
-int <code class="descname">PyType_HasFeature</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*o</em>, int<em>&nbsp;feature</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_HasFeature" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyType_HasFeature</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *o</em>, int<em>Â feature</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_HasFeature" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return true if the type object <em>o</em> sets the feature <em>feature</em>.  Type features
 are denoted by single bit flags.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_IS_GC">
-int <code class="descname">PyType_IS_GC</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_IS_GC" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyType_IS_GC</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *o</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_IS_GC" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return true if the type object includes support for the cycle detector; this
 tests the type flag <a class="reference internal" href="typeobj.html#Py_TPFLAGS_HAVE_GC" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#Py_TPFLAGS_HAVE_GC" title="Py_TPFLAGS_HAVE_GC"><code class="xref py py-const docutils literal notranslate"><span class="pre">Py_TPFLAGS_HAVE_GC</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_IsSubtype">
-int <code class="descname">PyType_IsSubtype</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*a</em>, <a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*b</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_IsSubtype" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyType_IsSubtype</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *a</em>, <a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *b</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_IsSubtype" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return true if <em>a</em> is a subtype of <em>b</em>.</p>
 <p>This function only checks for actual subtypes, which means that
 <a class="reference internal" href="datamodel.html#class.__subclasscheck__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#class.__subclasscheck__" title="class.__subclasscheck__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__subclasscheck__()</span></code></a> is not called on <em>b</em>.  Call
@@ -176,22 +184,22 @@ would do.</p>
 
 <dl class="function">
 <dt id="c.PyType_GenericAlloc">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyType_GenericAlloc</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em>, Py_ssize_t<em>&nbsp;nitems</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericAlloc" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyType_GenericAlloc</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *type</em>, Py_ssize_t<em>Â nitems</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericAlloc" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Generic handler for the <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_alloc" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_alloc" title="PyTypeObject.tp_alloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_alloc</span></code></a> slot of a type object.  Use
 Python's default memory allocation mechanism to allocate a new instance and
-initialize all its contents to <em>NULL</em>.</p>
+initialize all its contents to <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_GenericNew">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyType_GenericNew</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*args</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericNew" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyType_GenericNew</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *type</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *args</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericNew" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Generic handler for the <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_new" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_new" title="PyTypeObject.tp_new"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_new</span></code></a> slot of a type object.  Create a
 new instance using the type's <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_alloc" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_alloc" title="PyTypeObject.tp_alloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_alloc</span></code></a> slot.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyType_Ready">
-int <code class="descname">PyType_Ready</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_Ready" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyType_Ready</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *type</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_Ready" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Finalize a type object.  This should be called on all type objects to finish
 their initialization.  This function is responsible for adding inherited slots
 from a type's base class.  Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success, or return <code class="docutils literal notranslate"><span class="pre">-1</span></code> and sets an
@@ -199,35 +207,133 @@ exception on error.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="c.PyType_FromSpec">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyType_FromSpec</code><span class="sig-paren">(</span>PyType_Spec<em>&nbsp;*spec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_FromSpec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><em class="refcount">Return value: New reference.</em><p>Creates and returns a heap type object from the <em>spec</em> passed to the function.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="c.PyType_FromSpecWithBases">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyType_FromSpecWithBases</code><span class="sig-paren">(</span>PyType_Spec<em>&nbsp;*spec</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*bases</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_FromSpecWithBases" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><em class="refcount">Return value: New reference.</em><p>Creates and returns a heap type object from the <em>spec</em>. In addition to that,
-the created heap type contains all types contained by the <em>bases</em> tuple as base
-types. This allows the caller to reference other heap types as base types.</p>
-<div class="versionadded">
-<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
-</div>
-</dd></dl>
-
-<dl class="function">
 <dt id="c.PyType_GetSlot">
-void* <code class="descname">PyType_GetSlot</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>&nbsp;*type</em>, int<em>&nbsp;slot</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GetSlot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void* <code class="sig-name descname">PyType_GetSlot</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a><em>Â *type</em>, int<em>Â slot</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GetSlot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the function pointer stored in the given slot. If the
-result is <em>NULL</em>, this indicates that either the slot is <em>NULL</em>,
+result is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, this indicates that either the slot is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>,
 or that the function was called with invalid parameters.
 Callers will typically cast the result pointer into the appropriate
 function type.</p>
+<p>See <code class="xref c c-member docutils literal notranslate"><span class="pre">PyType_Slot.slot</span></code> for possible values of the <em>slot</em> argument.</p>
+<p>An exception is raised if <em>type</em> is not a heap type.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
+<div class="section" id="creating-heap-allocated-types">
+<h2>Creating Heap-Allocated Types<a class="headerlink" href="#creating-heap-allocated-types" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The following functions and structs are used to create
+<a class="reference internal" href="typeobj.html#heap-types" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#heap-types"><span class="std std-ref">heap types</span></a>.</p>
+<dl class="function">
+<dt id="c.PyType_FromSpecWithBases">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyType_FromSpecWithBases</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyType_Spec" title="PyType_Spec">PyType_Spec</a><em>Â *spec</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *bases</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_FromSpecWithBases" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Creates and returns a heap type object from the <em>spec</em>
+(<a class="reference internal" href="typeobj.html#Py_TPFLAGS_HEAPTYPE" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#Py_TPFLAGS_HEAPTYPE" title="Py_TPFLAGS_HEAPTYPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">Py_TPFLAGS_HEAPTYPE</span></code></a>).</p>
+<p>If <em>bases</em> is a tuple, the created heap type contains all types contained
+in it as base types.</p>
+<p>If <em>bases</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the <em>Py_tp_base</em> slot is used instead.
+If that also is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the new type derives from <a class="reference internal" href="functions.html#object" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#object" title="object"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>.</p>
+<p>This function calls <a class="reference internal" href="#c.PyType_Ready" title="PyType_Ready"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready()</span></code></a> on the new type.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyType_FromSpec">
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyType_FromSpec</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyType_Spec" title="PyType_Spec">PyType_Spec</a><em>Â *spec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_FromSpec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p>Equivalent to <code class="docutils literal notranslate"><span class="pre">PyType_FromSpecWithBases(spec,</span> <span class="pre">NULL)</span></code>.</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="c.PyType_Spec">
+<code class="sig-name descname">PyType_Spec</code><a class="headerlink" href="#c.PyType_Spec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Structure defining a type's behavior.</p>
+<dl class="member">
+<dt id="c.PyType_Spec.PyType_Spec.name">
+const char* <code class="sig-name descname">PyType_Spec.name</code><a class="headerlink" href="#c.PyType_Spec.PyType_Spec.name" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Name of the type, used to set <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_name" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_name" title="PyTypeObject.tp_name"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyTypeObject.tp_name</span></code></a>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.PyType_Spec.PyType_Spec.basicsize">
+int <code class="sig-name descname">PyType_Spec.basicsize</code><a class="headerlink" href="#c.PyType_Spec.PyType_Spec.basicsize" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="c.PyType_Spec.PyType_Spec.itemsize">
+int <code class="sig-name descname">PyType_Spec.itemsize</code><a class="headerlink" href="#c.PyType_Spec.PyType_Spec.itemsize" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Size of the instance in bytes, used to set
+<a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_basicsize" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_basicsize" title="PyTypeObject.tp_basicsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyTypeObject.tp_basicsize</span></code></a> and
+<a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_itemsize" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_itemsize" title="PyTypeObject.tp_itemsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyTypeObject.tp_itemsize</span></code></a>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.PyType_Spec.PyType_Spec.flags">
+int <code class="sig-name descname">PyType_Spec.flags</code><a class="headerlink" href="#c.PyType_Spec.PyType_Spec.flags" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Type flags, used to set <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_flags" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_flags" title="PyTypeObject.tp_flags"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyTypeObject.tp_flags</span></code></a>.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">Py_TPFLAGS_HEAPTYPE</span></code> flag is not set,
+<a class="reference internal" href="#c.PyType_FromSpecWithBases" title="PyType_FromSpecWithBases"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_FromSpecWithBases()</span></code></a> sets it automatically.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.PyType_Spec.PyType_Spec.slots">
+<a class="reference internal" href="#c.PyType_Slot" title="PyType_Slot">PyType_Slot</a> *<code class="sig-name descname">PyType_Spec.slots</code><a class="headerlink" href="#c.PyType_Spec.PyType_Spec.slots" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Array of <a class="reference internal" href="#c.PyType_Slot" title="PyType_Slot"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyType_Slot</span></code></a> structures.
+Terminated by the special slot value <code class="docutils literal notranslate"><span class="pre">{0,</span> <span class="pre">NULL}</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="c.PyType_Slot">
+<code class="sig-name descname">PyType_Slot</code><a class="headerlink" href="#c.PyType_Slot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Structure defining optional functionality of a type, containing a slot ID
+and a value pointer.</p>
+<dl class="member">
+<dt id="c.PyType_Slot.PyType_Slot.slot">
+int <code class="sig-name descname">PyType_Slot.slot</code><a class="headerlink" href="#c.PyType_Slot.PyType_Slot.slot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>A slot ID.</p>
+<p>Slot IDs are named like the field names of the structures
+<a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTypeObject</span></code></a>, <a class="reference internal" href="typeobj.html#c.PyNumberMethods" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyNumberMethods" title="PyNumberMethods"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyNumberMethods</span></code></a>,
+<a class="reference internal" href="typeobj.html#c.PySequenceMethods" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PySequenceMethods" title="PySequenceMethods"><code class="xref c c-type docutils literal notranslate"><span class="pre">PySequenceMethods</span></code></a>, <a class="reference internal" href="typeobj.html#c.PyMappingMethods" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyMappingMethods" title="PyMappingMethods"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMappingMethods</span></code></a> and
+<a class="reference internal" href="typeobj.html#c.PyAsyncMethods" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyAsyncMethods" title="PyAsyncMethods"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyAsyncMethods</span></code></a> with an added <code class="docutils literal notranslate"><span class="pre">Py_</span></code> prefix.
+For example, use:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Py_tp_dealloc</span></code> to set <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_dealloc" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_dealloc" title="PyTypeObject.tp_dealloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyTypeObject.tp_dealloc</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Py_nb_add</span></code> to set <a class="reference internal" href="typeobj.html#c.PyNumberMethods.nb_add" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyNumberMethods.nb_add" title="PyNumberMethods.nb_add"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyNumberMethods.nb_add</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Py_sq_length</span></code> to set <a class="reference internal" href="typeobj.html#c.PySequenceMethods.sq_length" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PySequenceMethods.sq_length" title="PySequenceMethods.sq_length"><code class="xref c c-member docutils literal notranslate"><span class="pre">PySequenceMethods.sq_length</span></code></a></p></li>
+</ul>
+<p>The following fields cannot be set using <a class="reference internal" href="#c.PyType_Spec" title="PyType_Spec"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyType_Spec</span></code></a> and <a class="reference internal" href="#c.PyType_Slot" title="PyType_Slot"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyType_Slot</span></code></a>:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_dict" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_dict" title="PyTypeObject.tp_dict"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dict</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_mro" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_mro" title="PyTypeObject.tp_mro"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_mro</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_cache" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_cache" title="PyTypeObject.tp_cache"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_cache</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_subclasses" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_subclasses" title="PyTypeObject.tp_subclasses"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_subclasses</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_weaklist" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_weaklist" title="PyTypeObject.tp_weaklist"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklist</span></code></a></p></li>
+<li><p><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_print</span></code></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_weaklistoffset" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_weaklistoffset" title="PyTypeObject.tp_weaklistoffset"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklistoffset</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_dictoffset" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyTypeObject.tp_dictoffset" title="PyTypeObject.tp_dictoffset"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dictoffset</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyBufferProcs.bf_getbuffer" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyBufferProcs.bf_getbuffer" title="PyBufferProcs.bf_getbuffer"><code class="xref c c-member docutils literal notranslate"><span class="pre">bf_getbuffer</span></code></a></p></li>
+<li><p><a class="reference internal" href="typeobj.html#c.PyBufferProcs.bf_releasebuffer" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.PyBufferProcs.bf_releasebuffer" title="PyBufferProcs.bf_releasebuffer"><code class="xref c c-member docutils literal notranslate"><span class="pre">bf_releasebuffer</span></code></a></p></li>
+</ul>
+<p>Setting <code class="xref c c-data docutils literal notranslate"><span class="pre">Py_tp_bases</span></code> may be problematic on some platforms.
+To avoid issues, use the <em>bases</em> argument of
+<code class="xref py py-func docutils literal notranslate"><span class="pre">PyType_FromSpecWithBases()</span></code> instead.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.PyType_Slot.PyType_Slot.pfunc">
+void *<code class="sig-name descname">PyType_Slot.pfunc</code><a class="headerlink" href="#c.PyType_Slot.PyType_Slot.pfunc" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>The desired value of the slot. In most cases, this is a pointer
+to a function.</p>
+<p>May not be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -236,9 +342,17 @@ function type.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Type å¯¹è±¡</a><ul>
+<li><a class="reference internal" href="#creating-heap-allocated-types">Creating Heap-Allocated Types</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html"
-                        title="ä¸Šä¸€ç« ">Concrete Objects Layer</a></p>
+                        title="ä¸Šä¸€ç« ">å…·ä½“çš„å¯¹è±¡å±‚</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="none.html" tppabs="https://docs.python.org/zh-cn/3/c-api/none.html"
                         title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">None</span></code> å¯¹è±¡</a></p>
@@ -247,7 +361,7 @@ function type.</p>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/type.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/type.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/type.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/c-api/type.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/c-api/type.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/c-api/type.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -270,19 +384,22 @@ function type.</p>
           <a href="none.html" tppabs="https://docs.python.org/zh-cn/3/c-api/none.html" title="None å¯¹è±¡"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" title="Concrete Objects Layer"
+          <a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" title="å…·ä½“çš„å¯¹è±¡å±‚"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -301,15 +418,19 @@ function type.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

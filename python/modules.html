@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>6. 模块 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>6. 模块 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="7. 输入输出" href="inputoutput.html" />
     <link rel="prev" title="5. 数据结构" href="datastructures.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/tutorial/modules.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="datastructures.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/datastructures.html" title="5. 数据结构"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" accesskey="U">Python 教程</a> &#187;</li>
     <li class="right">
@@ -95,7 +103,7 @@
           <div class="body" role="main">
             
   <div class="section" id="modules">
-<span id="tut-modules"></span><h1>6. 模块<a class="headerlink" href="#modules" title="永久链接至标题">¶</a></h1>
+<span id="tut-modules"></span><h1><span class="section-number">6. </span>模块<a class="headerlink" href="#modules" title="永久链接至标题">¶</a></h1>
 <p>如果你从Python解释器退出并再次进入，之前的定义（函数和变量）都会丢失。因此，如果你想编写一个稍长些的程序，最好使用文本编辑器为解释器准备输入并将该文件作为输入运行。这被称作编写 <em>脚本</em> 。随着程序变得越来越长，你或许会想把它拆分成几个文件，以方便维护。你亦或想在不同的程序中使用一个便捷的函数， 而不必把这个函数复制到每一个程序中去。</p>
 <p>为支持这些，Python有一种方法可以把定义放在一个文件里，并在脚本或解释器的交互式实例中使用它们。这样的文件被称作 <em>模块</em> ；模块中的定义可以 <em>导入</em> 到其它模块或者 <em>主</em> 模块（你在顶级和计算器模式下执行的脚本中可以访问的变量集合）。</p>
 <p>模块是一个包含Python定义和语句的文件。文件名就是模块名后跟文件后缀 <code class="file docutils literal notranslate"><span class="pre">.py</span></code> 。在一个模块内部，模块名（作为一个字符串）可以通过全局变量 <code class="docutils literal notranslate"><span class="pre">__name__</span></code> 的值获得。例如，使用你最喜爱的文本编辑器在当前目录下创建一个名为 <code class="file docutils literal notranslate"><span class="pre">fibo.py</span></code> 的文件， 文件中含有以下内容:</p>
@@ -137,19 +145,19 @@
 </pre></div>
 </div>
 <div class="section" id="more-on-modules">
-<span id="tut-moremodules"></span><h2>6.1. 有关模块的更多信息<a class="headerlink" href="#more-on-modules" title="永久链接至标题">¶</a></h2>
-<p>模块可以包含可执行的语句以及函数定义。这些语句用于初始化模块。它们仅在模块 <em>第一次</em> 在 import 语句中被导入时才执行。 <a class="footnote-reference" href="#id2" id="id1">[1]</a> (当文件被当作脚本运行时，它们也会执行。)</p>
+<span id="tut-moremodules"></span><h2><span class="section-number">6.1. </span>有关模块的更多信息<a class="headerlink" href="#more-on-modules" title="永久链接至标题">¶</a></h2>
+<p>模块可以包含可执行的语句以及函数定义。这些语句用于初始化模块。它们仅在模块 <em>第一次</em> 在 import 语句中被导入时才执行。 <a class="footnote-reference brackets" href="#id2" id="id1">1</a> (当文件被当作脚本运行时，它们也会执行。)</p>
 <p>每个模块都有它自己的私有符号表，该表用作模块中定义的所有函数的全局符号表。因此，模块的作者可以在模块内使用全局变量，而不必担心与用户的全局变量发生意外冲突。另一方面，如果你知道自己在做什么，则可以用跟访问模块内的函数的同样标记方法，去访问一个模块的全局变量，<code class="docutils literal notranslate"><span class="pre">modname.itemname</span></code>。</p>
 <p>模块可以导入其它模块。习惯上但不要求把所有 <a class="reference internal" href="simple_stmts.html#import" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> 语句放在模块（或脚本）的开头。被导入的模块名存放在调入模块的全局符号表中。</p>
 <p><a class="reference internal" href="simple_stmts.html#import" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> 语句有一个变体，它可以把名字从一个被调模块内直接导入到现模块的符号表里。例如:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="n">fib</span><span class="p">,</span> <span class="n">fib2</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="n">fib</span><span class="p">,</span> <span class="n">fib2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
 <p>这并不会把被调模块名引入到局部变量表里（因此在这个例子里，<code class="docutils literal notranslate"><span class="pre">fibo</span></code> 是未被定义的）。</p>
 <p>还有一个变体甚至可以导入模块内定义的所有名称:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
@@ -163,18 +171,18 @@
 </pre></div>
 </div>
 <p>这会和 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">fibo</span></code> 方式一样有效地调入模块， 唯一的区别是它以 <code class="docutils literal notranslate"><span class="pre">fib</span></code> 的名称存在的。</p>
-<p>It can also be used when utilising <a class="reference internal" href="simple_stmts.html#from" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#from"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">from</span></code></a> with similar effects:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="n">fib</span> <span class="k">as</span> <span class="n">fibonacci</span>
+<p>这种方式也可以在用到 <a class="reference internal" href="simple_stmts.html#from" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#from"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">from</span></code></a> 的时候使用，并会有类似的效果:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="n">fib</span> <span class="k">as</span> <span class="n">fibonacci</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">出于效率的考虑，每个模块在每个解释器会话中只被导入一次。因此，如果你更改了你的模块，则必须重新启动解释器， 或者，如果它只是一个要交互式地测试的模块，请使用 <a class="reference internal" href="importlib.html#importlib.reload" tppabs="https://docs.python.org/zh-cn/3/library/importlib.html#importlib.reload" title="importlib.reload"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.reload()</span></code></a>，例如 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">importlib;</span> <span class="pre">importlib.reload(modulename)</span></code>。</p>
+<p class="admonition-title">注解</p>
+<p>出于效率的考虑，每个模块在每个解释器会话中只被导入一次。因此，如果你更改了你的模块，则必须重新启动解释器， 或者，如果它只是一个要交互式地测试的模块，请使用 <a class="reference internal" href="importlib.html#importlib.reload" tppabs="https://docs.python.org/zh-cn/3/library/importlib.html#importlib.reload" title="importlib.reload"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.reload()</span></code></a>，例如 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">importlib;</span> <span class="pre">importlib.reload(modulename)</span></code>。</p>
 </div>
 <div class="section" id="executing-modules-as-scripts">
-<span id="tut-modulesasscripts"></span><h3>6.1.1. 以脚本的方式执行模块<a class="headerlink" href="#executing-modules-as-scripts" title="永久链接至标题">¶</a></h3>
+<span id="tut-modulesasscripts"></span><h3><span class="section-number">6.1.1. </span>以脚本的方式执行模块<a class="headerlink" href="#executing-modules-as-scripts" title="永久链接至标题">¶</a></h3>
 <p>当你用下面方式运行一个Python模块:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">fibo</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span>
 </pre></div>
@@ -198,35 +206,35 @@
 <p>这经常用于为模块提供一个方便的用户接口，或用于测试（以脚本的方式运行模块从而执行一些测试套件）。</p>
 </div>
 <div class="section" id="the-module-search-path">
-<span id="tut-searchpath"></span><h3>6.1.2. 模块搜索路径<a class="headerlink" href="#the-module-search-path" title="永久链接至标题">¶</a></h3>
+<span id="tut-searchpath"></span><h3><span class="section-number">6.1.2. </span>模块搜索路径<a class="headerlink" href="#the-module-search-path" title="永久链接至标题">¶</a></h3>
 <p id="index-0">当一个名为 <code class="xref py py-mod docutils literal notranslate"><span class="pre">spam</span></code> 的模块被导入的时候，解释器首先寻找具有该名称的内置模块。如果没有找到，然后解释器从 <a class="reference internal" href="sys.html#sys.path" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> 变量给出的目录列表里寻找名为 <code class="file docutils literal notranslate"><span class="pre">spam.py</span></code> 的文件。<a class="reference internal" href="sys.html#sys.path" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> 初始有这些目录地址:</p>
 <ul class="simple">
-<li>包含输入脚本的目录（或者未指定文件时的当前目录）。</li>
-<li><span class="target" id="index-14"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONPATH" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> （一个包含目录名称的列表，它和shell变量 <span class="target" id="index-15"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code> 有一样的语法）。</li>
-<li>取决于安装的默认设置</li>
+<li><p>包含输入脚本的目录（或者未指定文件时的当前目录）。</p></li>
+<li><p><span class="target" id="index-14"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONPATH" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> （一个包含目录名称的列表，它和shell变量 <span class="target" id="index-15"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code> 有一样的语法）。</p></li>
+<li><p>取决于安装的默认设置</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">在支持符号链接的文件系统上，包含输入脚本的目录是在追加符号链接后才计算出来的。换句话说，包含符号链接的目录并 <strong>没有</strong> 被添加到模块的搜索路径上。</p>
+<p class="admonition-title">注解</p>
+<p>在支持符号链接的文件系统上，包含输入脚本的目录是在追加符号链接后才计算出来的。换句话说，包含符号链接的目录并 <strong>没有</strong> 被添加到模块的搜索路径上。</p>
 </div>
 <p>在初始化后，Python程序可以更改 <a class="reference internal" href="sys.html#sys.path" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>。包含正在运行脚本的文件目录被放在搜索路径的开头处， 在标准库路径之前。这意味着将加载此目录里的脚本，而不是标准库中的同名模块。 除非有意更换，否则这是错误。更多信息请参阅 <a class="reference internal" href="#tut-standardmodules"><span class="std std-ref">标准模块</span></a>。</p>
 </div>
 <div class="section" id="compiled-python-files">
-<h3>6.1.3. “编译过的”Python文件<a class="headerlink" href="#compiled-python-files" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.1.3. </span>“编译过的”Python文件<a class="headerlink" href="#compiled-python-files" title="永久链接至标题">¶</a></h3>
 <p>为了加速模块载入，Python在 <code class="docutils literal notranslate"><span class="pre">__pycache__</span></code> 目录里缓存了每个模块的编译后版本，名称为 <code class="file docutils literal notranslate"><span class="pre">module.</span><em><span class="pre">version</span></em><span class="pre">.pyc</span></code> ，其中名称中的版本字段对编译文件的格式进行编码； 它一般使用Python版本号。例如，在CPython版本3.3中，spam.py的编译版本将被缓存为 <code class="docutils literal notranslate"><span class="pre">__pycache__/spam.cpython-33.pyc</span></code>。此命名约定允许来自不同发行版和不同版本的Python的已编译模块共存。</p>
 <p>Python根据编译版本检查源的修改日期，以查看它是否已过期并需要重新编译。这是一个完全自动化的过程。此外，编译的模块与平台无关，因此可以在具有不同体系结构的系统之间共享相同的库。</p>
 <p>Python在两种情况下不会检查缓存。首先，对于从命令行直接载入的模块，它从来都是重新编译并且不存储编译结果；其次，如果没有源模块，它不会检查缓存。为了支持无源文件（仅编译）发行版本， 编译模块必须是在源目录下，并且绝对不能有源模块。</p>
 <p>给专业人士的一些小建议:</p>
 <ul class="simple">
-<li>你可以在Python命令中使用 <a class="reference internal" href="cmdline.html#cmdoption-o" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-o"><code class="xref std std-option docutils literal notranslate"><span class="pre">-O</span></code></a> 或者 <a class="reference internal" href="cmdline.html#cmdoption-oo" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-oo"><code class="xref std std-option docutils literal notranslate"><span class="pre">-OO</span></code></a> 开关， 以减小编译后模块的大小。 <code class="docutils literal notranslate"><span class="pre">-O</span></code> 开关去除断言语句，<code class="docutils literal notranslate"><span class="pre">-OO</span></code> 开关同时去除断言语句和 __doc__ 字符串。由于有些程序可能依赖于这些，你应当只在清楚自己在做什么时才使用这个选项。“优化过的”模块有一个 <code class="docutils literal notranslate"><span class="pre">opt-</span></code> 标签并且通常小些。将来的发行版本或许会更改优化的效果。</li>
-<li>一个从 <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> 文件读出的程序并不会比它从 <code class="docutils literal notranslate"><span class="pre">.py</span></code> 读出时运行的更快，<code class="docutils literal notranslate"><span class="pre">.pyc</span></code> 文件唯一快的地方在于载入速度。</li>
-<li><a class="reference internal" href="compileall.html#module-compileall" tppabs="https://docs.python.org/zh-cn/3/library/compileall.html#module-compileall" title="compileall: Tools for byte-compiling all Python source files in a directory tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">compileall</span></code></a> 模块可以为一个目录下的所有模块创建.pyc文件。</li>
-<li>关于这个过程，<span class="target" id="index-16"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3147  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3147'" tppabs="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a> 中有更多细节，包括一个决策流程图。</li>
+<li><p>你可以在Python命令中使用 <a class="reference internal" href="cmdline.html#cmdoption-o" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-o"><code class="xref std std-option docutils literal notranslate"><span class="pre">-O</span></code></a> 或者 <a class="reference internal" href="cmdline.html#cmdoption-oo" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-oo"><code class="xref std std-option docutils literal notranslate"><span class="pre">-OO</span></code></a> 开关， 以减小编译后模块的大小。 <code class="docutils literal notranslate"><span class="pre">-O</span></code> 开关去除断言语句，<code class="docutils literal notranslate"><span class="pre">-OO</span></code> 开关同时去除断言语句和 __doc__ 字符串。由于有些程序可能依赖于这些，你应当只在清楚自己在做什么时才使用这个选项。“优化过的”模块有一个 <code class="docutils literal notranslate"><span class="pre">opt-</span></code> 标签并且通常小些。将来的发行版本或许会更改优化的效果。</p></li>
+<li><p>一个从 <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> 文件读出的程序并不会比它从 <code class="docutils literal notranslate"><span class="pre">.py</span></code> 读出时运行的更快，<code class="docutils literal notranslate"><span class="pre">.pyc</span></code> 文件唯一快的地方在于载入速度。</p></li>
+<li><p><a class="reference internal" href="compileall.html#module-compileall" tppabs="https://docs.python.org/zh-cn/3/library/compileall.html#module-compileall" title="compileall: Tools for byte-compiling all Python source files in a directory tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">compileall</span></code></a> 模块可以为一个目录下的所有模块创建.pyc文件。</p></li>
+<li><p>关于这个过程，<span class="target" id="index-16"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3147  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3147'" tppabs="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a> 中有更多细节，包括一个决策流程图。</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="standard-modules">
-<span id="tut-standardmodules"></span><h2>6.2. 标准模块<a class="headerlink" href="#standard-modules" title="永久链接至标题">¶</a></h2>
+<span id="tut-standardmodules"></span><h2><span class="section-number">6.2. </span>标准模块<a class="headerlink" href="#standard-modules" title="永久链接至标题">¶</a></h2>
 <p id="index-4">Python附带了一个标准模块库，在单独的文档Python库参考（以下称为“库参考”）中进行了描述。一些模块内置于解释器中；它们提供对不属于语言核心但仍然内置的操作的访问，以提高效率或提供对系统调用等操作系统原语的访问。这些模块的集合是一个配置选项，它也取决于底层平台。例如，<a class="reference internal" href="winreg.html#module-winreg" tppabs="https://docs.python.org/zh-cn/3/library/winreg.html#module-winreg" title="winreg: Routines and objects for manipulating the Windows registry. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">winreg</span></code></a> 模块只在Windows操作系统上提供。一个特别值得注意的模块 <a class="reference internal" href="sys.html#module-sys" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a>，它被内嵌到每一个Python解释器中。变量 <code class="docutils literal notranslate"><span class="pre">sys.ps1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">sys.ps2</span></code> 定义用作主要和辅助提示的字符串:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">ps1</span>
@@ -247,7 +255,7 @@
 </div>
 </div>
 <div class="section" id="the-dir-function">
-<span id="tut-dir"></span><h2>6.3. <a class="reference internal" href="functions.html#dir" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#dir" title="dir"><code class="xref py py-func docutils literal notranslate"><span class="pre">dir()</span></code></a> 函数<a class="headerlink" href="#the-dir-function" title="永久链接至标题">¶</a></h2>
+<span id="tut-dir"></span><h2><span class="section-number">6.3. </span><a class="reference internal" href="functions.html#dir" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#dir" title="dir"><code class="xref py py-func docutils literal notranslate"><span class="pre">dir()</span></code></a> 函数<a class="headerlink" href="#the-dir-function" title="永久链接至标题">¶</a></h2>
 <p>内置函数 <a class="reference internal" href="functions.html#dir" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#dir" title="dir"><code class="xref py py-func docutils literal notranslate"><span class="pre">dir()</span></code></a> 用于查找模块定义的名称。 它返回一个排序过的字符串列表:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">fibo</span><span class="p">)</span>
@@ -317,7 +325,7 @@
 </div>
 </div>
 <div class="section" id="packages">
-<span id="tut-packages"></span><h2>6.4. 包<a class="headerlink" href="#packages" title="永久链接至标题">¶</a></h2>
+<span id="tut-packages"></span><h2><span class="section-number">6.4. </span>包<a class="headerlink" href="#packages" title="永久链接至标题">¶</a></h2>
 <p>包是一种通过用“带点号的模块名”来构造 Python 模块命名空间的方法。 例如，模块名 <code class="xref py py-mod docutils literal notranslate"><span class="pre">A.B</span></code> 表示 <code class="docutils literal notranslate"><span class="pre">A</span></code> 包中名为 <code class="docutils literal notranslate"><span class="pre">B</span></code> 的子模块。正如模块的使用使得不同模块的作者不必担心彼此的全局变量名称一样，使用加点的模块名可以使得 NumPy 或 Pillow 等多模块软件包的作者不必担心彼此的模块名称一样。</p>
 <p>假设你想为声音文件和声音数据的统一处理，设计一个模块集合（一个“包”）。由于存在很多不同的声音文件格式（通常由它们的扩展名来识别，例如：<code class="file docutils literal notranslate"><span class="pre">.wav</span></code>， <code class="file docutils literal notranslate"><span class="pre">.aiff</span></code>， <code class="file docutils literal notranslate"><span class="pre">.au</span></code>），因此为了不同文件格式间的转换，你可能需要创建和维护一个不断增长的模块集合。 你可能还想对声音数据还做很多不同的处理（例如，混声，添加回声，使用均衡器功能，创造人工立体声效果）， 因此为了实现这些处理，你将另外写一个无穷尽的模块流。这是你的包的可能结构（以分层文件系统的形式表示）：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sound/                          Top-level package
@@ -356,7 +364,7 @@
 </pre></div>
 </div>
 <p>导入子模块的另一种方法是</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sound.effects</span> <span class="k">import</span> <span class="n">echo</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sound.effects</span> <span class="kn">import</span> <span class="n">echo</span>
 </pre></div>
 </div>
 <p>这也会加载子模块 <code class="xref py py-mod docutils literal notranslate"><span class="pre">echo</span></code> ，并使其在没有包前缀的情况下可用，因此可以按如下方式使用:</p>
@@ -364,7 +372,7 @@
 </pre></div>
 </div>
 <p>另一种形式是直接导入所需的函数或变量:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sound.effects.echo</span> <span class="k">import</span> <span class="n">echofilter</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sound.effects.echo</span> <span class="kn">import</span> <span class="n">echofilter</span>
 </pre></div>
 </div>
 <p>同样，这也会加载子模块 <code class="xref py py-mod docutils literal notranslate"><span class="pre">echo</span></code>，但这会使其函数 <code class="xref py py-func docutils literal notranslate"><span class="pre">echofilter()</span></code> 直接可用:</p>
@@ -374,7 +382,7 @@
 <p>请注意，当使用 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">package</span> <span class="pre">import</span> <span class="pre">item</span></code> 时，item可以是包的子模块（或子包），也可以是包中定义的其他名称，如函数，类或变量。 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句首先测试是否在包中定义了item；如果没有，它假定它是一个模块并尝试加载它。如果找不到它，则引发 <a class="reference internal" href="exceptions.html#ImportError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a> 异常。</p>
 <p>相反，当使用 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">item.subitem.subsubitem</span></code> 这样的语法时，除了最后一项之外的每一项都必须是一个包；最后一项可以是模块或包，但不能是前一项中定义的类或函数或变量。</p>
 <div class="section" id="importing-from-a-package">
-<span id="tut-pkg-import-star"></span><h3>6.4.1. 从包中导入 *<a class="headerlink" href="#importing-from-a-package" title="永久链接至标题">¶</a></h3>
+<span id="tut-pkg-import-star"></span><h3><span class="section-number">6.4.1. </span>从包中导入 *<a class="headerlink" href="#importing-from-a-package" title="永久链接至标题">¶</a></h3>
 <p id="index-8">当用户写 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sound.effects</span> <span class="pre">import</span> <span class="pre">*</span></code> 会发生什么？理想情况下，人们希望这会以某种方式传递给文件系统，找到包中存在哪些子模块，并将它们全部导入。这可能需要很长时间，导入子模块可能会产生不必要的副作用，这种副作用只有在显式导入子模块时才会发生。</p>
 <p>唯一的解决方案是让包作者提供一个包的显式索引。<a class="reference internal" href="simple_stmts.html#import" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> 语句使用下面的规范：如果一个包的 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> 代码定义了一个名为 <code class="docutils literal notranslate"><span class="pre">__all__</span></code> 的列表，它会被视为在遇到 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">package</span> <span class="pre">import</span> <span class="pre">*</span></code> 时应该导入的模块名列表。在发布该包的新版本时，包作者可以决定是否让此列表保持更新。包作者如果认为从他们的包中导入 * 的操作没有必要被使用，也可以决定不支持此列表。例如，文件 <code class="file docutils literal notranslate"><span class="pre">sound/effects/__init__.py</span></code> 可以包含以下代码:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span> <span class="s2">&quot;surround&quot;</span><span class="p">,</span> <span class="s2">&quot;reverse&quot;</span><span class="p">]</span>
@@ -384,35 +392,34 @@
 <p>如果没有定义 <code class="docutils literal notranslate"><span class="pre">__all__</span></code>，<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sound.effects</span> <span class="pre">import</span> <span class="pre">*</span></code> 语句 <em>不</em> 会从包 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sound.effects</span></code> 中导入所有子模块到当前命名空间；它只确保导入了包 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sound.effects</span></code> （可能运行任何在 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> 中的初始化代码），然后导入包中定义的任何名称。这包括 <code class="file docutils literal notranslate"><span class="pre">__init__.py`</span></code> 定义的任何名称（以及显式加载的子模块）。它还包括由之前的 <a class="reference internal" href="simple_stmts.html#import" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> 语句显式加载的包的任何子模块。思考下面的代码:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sound.effects.echo</span>
 <span class="kn">import</span> <span class="nn">sound.effects.surround</span>
-<span class="kn">from</span> <span class="nn">sound.effects</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sound.effects</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>在这个例子中， <code class="xref py py-mod docutils literal notranslate"><span class="pre">echo</span></code> 和 <code class="xref py py-mod docutils literal notranslate"><span class="pre">surround</span></code> 模块是在执行 <code class="docutils literal notranslate"><span class="pre">from...import</span></code> 语句时导入到当前命名空间中的，因为它们定义在 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sound.effects</span></code> 包中。（这在定义了 <code class="docutils literal notranslate"><span class="pre">__all__</span></code> 时也有效。）</p>
 <p>虽然某些模块被设计为在使用 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> 时只导出遵循某些模式的名称，但在生产代码中它仍然被认为是不好的做法。</p>
-<p>请记住，使用 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">Package</span> <span class="pre">import</span> <span class="pre">specific_submodule</span></code> 没有任何问题！实际上，除非导入模块需要使用来自不同包的同名子模块，否则这是推荐的表示法。</p>
+<p>请记住，使用 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">package</span> <span class="pre">import</span> <span class="pre">specific_submodule</span></code> 没有任何问题！ 实际上，除非导入的模块需要使用来自不同包的同名子模块，否则这是推荐的表示法。</p>
 </div>
 <div class="section" id="intra-package-references">
-<h3>6.4.2. 子包参考<a class="headerlink" href="#intra-package-references" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.4.2. </span>子包参考<a class="headerlink" href="#intra-package-references" title="永久链接至标题">¶</a></h3>
 <p>当包被构造成子包时（与示例中的 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sound</span></code> 包一样），你可以使用绝对导入来引用兄弟包的子模块。例如，如果模块 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sound.filters.vocoder</span></code> 需要在 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sound.effects</span></code> 包中使用 <code class="xref py py-mod docutils literal notranslate"><span class="pre">echo</span></code> 模块，它可以使用 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sound.effects</span> <span class="pre">import</span> <span class="pre">echo</span></code> 。</p>
 <p>你还可以使用import语句的 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">name</span></code> 形式编写相对导入。这些导入使用前导点来指示相对导入中涉及的当前包和父包。例如，从 <code class="xref py py-mod docutils literal notranslate"><span class="pre">surround</span></code> 模块，你可以使用:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">echo</span>
-<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">formats</span>
-<span class="kn">from</span> <span class="nn">..filters</span> <span class="k">import</span> <span class="n">equalizer</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">echo</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">formats</span>
+<span class="kn">from</span> <span class="nn">..filters</span> <span class="kn">import</span> <span class="n">equalizer</span>
 </pre></div>
 </div>
 <p>请注意，相对导入是基于当前模块的名称进行导入的。由于主模块的名称总是 <code class="docutils literal notranslate"><span class="pre">&quot;__main__&quot;</span></code> ，因此用作Python应用程序主模块的模块必须始终使用绝对导入。</p>
 </div>
 <div class="section" id="packages-in-multiple-directories">
-<h3>6.4.3. 多个目录中的包<a class="headerlink" href="#packages-in-multiple-directories" title="永久链接至标题">¶</a></h3>
-<p>包支持另一个特殊属性， <a class="reference internal" href="import.html#__path__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__path__" title="__path__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__path__</span></code></a> 。它被初始化为一个列表，其中包含在执行该文件中的代码之前保存包的文件 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> 的目录的名称。这个变量可以修改；这样做会影响将来对包中包含的模块和子包的搜索。</p>
+<h3><span class="section-number">6.4.3. </span>多个目录中的包<a class="headerlink" href="#packages-in-multiple-directories" title="永久链接至标题">¶</a></h3>
+<p>包支持另一个特殊属性， <a class="reference internal" href="import-1.html#__path__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__path__" title="__path__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__path__</span></code></a> 。它被初始化为一个列表，其中包含在执行该文件中的代码之前保存包的文件 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> 的目录的名称。这个变量可以修改；这样做会影响将来对包中包含的模块和子包的搜索。</p>
 <p>虽然通常不需要此功能，但它可用于扩展程序包中的模块集。</p>
 <p class="rubric">脚注</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>实际上，函数定义也是“被执行”的“语句”；模块级函数定义的执行在模块的全局符号表中输入该函数名。</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>实际上，函数定义也是“被执行”的“语句”；模块级函数定义的执行在模块的全局符号表中输入该函数名。</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -423,7 +430,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">6. 模块</a><ul>
 <li><a class="reference internal" href="#more-on-modules">6.1. 有关模块的更多信息</a><ul>
@@ -433,7 +440,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#standard-modules">6.2. 标准模块</a></li>
-<li><a class="reference internal" href="#the-dir-function">6.3. <code class="docutils literal notranslate"><span class="pre">dir()</span></code> 函数</a></li>
+<li><a class="reference internal" href="#the-dir-function">6.3. <code class="xref py py-func docutils literal notranslate"><span class="pre">dir()</span></code> 函数</a></li>
 <li><a class="reference internal" href="#packages">6.4. 包</a><ul>
 <li><a class="reference internal" href="#importing-from-a-package">6.4.1. 从包中导入 *</a></li>
 <li><a class="reference internal" href="#intra-package-references">6.4.2. 子包参考</a></li>
@@ -446,16 +453,16 @@
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="datastructures.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/datastructures.html"
-                        title="上一章">5. 数据结构</a></p>
+                        title="上一章"><span class="section-number">5. </span>数据结构</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="inputoutput.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/inputoutput.html"
-                        title="下一章">7. 输入输出</a></p>
+                        title="下一章"><span class="section-number">7. </span>输入输出</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/tutorial/modules.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/tutorial/modules.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/tutorial/modules.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/tutorial/modules.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/tutorial/modules.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/tutorial/modules.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -480,14 +487,17 @@
         <li class="right" >
           <a href="datastructures.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/datastructures.html" title="5. 数据结构"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" >Python 教程</a> &#187;</li>
     <li class="right">
@@ -508,15 +518,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

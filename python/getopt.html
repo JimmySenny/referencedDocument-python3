@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>getopt --- C-style parser for command line options &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>getopt --- C-style parser for command line options &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="logging --- Logging facility for Python" href="logging.html" />
+    <link rel="next" title="logging --- Python çš„æ—¥å¿—è®°å½•å·¥å…·" href="logging.html" />
     <link rel="prev" title="argparse --- å‘½ä»¤è¡Œé€‰é¡¹ã€å‚æ•°å’Œå­å‘½ä»¤è§£æå™¨" href="argparse.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/getopt.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="logging.html" tppabs="https://docs.python.org/zh-cn/3/library/logging.html" title="logging --- Logging facility for Python"
+          <a href="logging.html" tppabs="https://docs.python.org/zh-cn/3/library/logging.html" title="logging --- Python çš„æ—¥å¿—è®°å½•å·¥å…·"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="argparse.html" tppabs="https://docs.python.org/zh-cn/3/library/argparse.html" title="argparse --- å‘½ä»¤è¡Œé€‰é¡¹ã€å‚æ•°å’Œå­å‘½ä»¤è§£æå™¨"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="allos.html" tppabs="https://docs.python.org/zh-cn/3/library/allos.html" accesskey="U">é€šç”¨æ“ä½œç³»ç»ŸæœåŠ¡</a> &#187;</li>
@@ -97,10 +105,10 @@
             
   <div class="section" id="module-getopt">
 <span id="getopt-c-style-parser-for-command-line-options"></span><h1><a class="reference internal" href="#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getopt</span></code></a> --- C-style parser for command line options<a class="headerlink" href="#module-getopt" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/getopt.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/getopt.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/getopt.py">Lib/getopt.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue9003  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue9003'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/getopt.py">Lib/getopt.py</a></p>
 <div class="admonition note">
-<p class="first admonition-title">æ³¨è§£</p>
-<p class="last">The <a class="reference internal" href="#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getopt</span></code></a> module is a parser for command line options whose API is
+<p class="admonition-title">æ³¨è§£</p>
+<p>The <a class="reference internal" href="#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getopt</span></code></a> module is a parser for command line options whose API is
 designed to be familiar to users of the C <code class="xref c c-func docutils literal notranslate"><span class="pre">getopt()</span></code> function. Users who
 are unfamiliar with the C <code class="xref c c-func docutils literal notranslate"><span class="pre">getopt()</span></code> function or who would like to write
 less code and get better help and error messages should consider using the
@@ -116,15 +124,15 @@ optional third argument.</p>
 exception:</p>
 <dl class="function">
 <dt id="getopt.getopt">
-<code class="descclassname">getopt.</code><code class="descname">getopt</code><span class="sig-paren">(</span><em>args</em>, <em>shortopts</em>, <em>longopts=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#getopt.getopt" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">getopt.</code><code class="sig-name descname">getopt</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">shortopts</em>, <em class="sig-param">longopts=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#getopt.getopt" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Parses command line options and parameter list.  <em>args</em> is the argument list to
 be parsed, without the leading reference to the running program. Typically, this
 means <code class="docutils literal notranslate"><span class="pre">sys.argv[1:]</span></code>. <em>shortopts</em> is the string of option letters that the
 script wants to recognize, with options that require an argument followed by a
 colon (<code class="docutils literal notranslate"><span class="pre">':'</span></code>; i.e., the same format that Unix <code class="xref c c-func docutils literal notranslate"><span class="pre">getopt()</span></code> uses).</p>
 <div class="admonition note">
-<p class="first admonition-title">æ³¨è§£</p>
-<p class="last">Unlike GNU <code class="xref c c-func docutils literal notranslate"><span class="pre">getopt()</span></code>, after a non-option argument, all further
+<p class="admonition-title">æ³¨è§£</p>
+<p>Unlike GNU <code class="xref c c-func docutils literal notranslate"><span class="pre">getopt()</span></code>, after a non-option argument, all further
 arguments are considered also non-options. This is similar to the way
 non-GNU Unix systems work.</p>
 </div>
@@ -151,7 +159,7 @@ allowing multiple occurrences.  Long and short options may be mixed.</p>
 
 <dl class="function">
 <dt id="getopt.gnu_getopt">
-<code class="descclassname">getopt.</code><code class="descname">gnu_getopt</code><span class="sig-paren">(</span><em>args</em>, <em>shortopts</em>, <em>longopts=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#getopt.gnu_getopt" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">getopt.</code><code class="sig-name descname">gnu_getopt</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">shortopts</em>, <em class="sig-param">longopts=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#getopt.gnu_getopt" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>This function works like <a class="reference internal" href="#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-func docutils literal notranslate"><span class="pre">getopt()</span></code></a>, except that GNU style scanning mode is
 used by default. This means that option and non-option arguments may be
 intermixed. The <a class="reference internal" href="#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-func docutils literal notranslate"><span class="pre">getopt()</span></code></a> function stops processing options as soon as a
@@ -163,7 +171,7 @@ soon as a non-option argument is encountered.</p>
 
 <dl class="exception">
 <dt id="getopt.GetoptError">
-<em class="property">exception </em><code class="descclassname">getopt.</code><code class="descname">GetoptError</code><a class="headerlink" href="#getopt.GetoptError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">getopt.</code><code class="sig-name descname">GetoptError</code><a class="headerlink" href="#getopt.GetoptError" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>This is raised when an unrecognized option is found in the argument list or when
 an option requiring an argument is given none. The argument to the exception is
 a string indicating the cause of the error.  For long options, an argument given
@@ -175,12 +183,12 @@ related option; if there is no specific option to which the exception relates,
 
 <dl class="exception">
 <dt id="getopt.error">
-<em class="property">exception </em><code class="descclassname">getopt.</code><code class="descname">error</code><a class="headerlink" href="#getopt.error" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">getopt.</code><code class="sig-name descname">error</code><a class="headerlink" href="#getopt.error" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Alias for <a class="reference internal" href="#getopt.GetoptError" title="getopt.GetoptError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GetoptError</span></code></a>; for backward compatibility.</p>
 </dd></dl>
 
 <p>An example using only Unix style options:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">getopt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">getopt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">args</span> <span class="o">=</span> <span class="s1">&#39;-a -b -cfoo -d bar a1 a2&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">args</span>
 <span class="go">[&#39;-a&#39;, &#39;-b&#39;, &#39;-cfoo&#39;, &#39;-d&#39;, &#39;bar&#39;, &#39;a1&#39;, &#39;a2&#39;]</span>
@@ -192,7 +200,7 @@ related option; if there is no specific option to which the exception relates,
 </pre></div>
 </div>
 <p>Using long option names is equally easy:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;--condition=foo --testing --output-file abc.def -x a1 a2&#39;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;--condition=foo --testing --output-file abc.def -x a1 a2&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">args</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">args</span>
 <span class="go">[&#39;--condition=foo&#39;, &#39;--testing&#39;, &#39;--output-file&#39;, &#39;abc.def&#39;, &#39;-x&#39;, &#39;a1&#39;, &#39;a2&#39;]</span>
@@ -247,10 +255,10 @@ and more informative help and error messages by using the <a class="reference in
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt>Module <a class="reference internal" href="argparse.html#module-argparse" tppabs="https://docs.python.org/zh-cn/3/library/argparse.html#module-argparse" title="argparse: Command-line option and argument parsing library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></a></dt>
-<dd>Alternative command line option and argument parsing library.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt>Module <a class="reference internal" href="argparse.html#module-argparse" tppabs="https://docs.python.org/zh-cn/3/library/argparse.html#module-argparse" title="argparse: Command-line option and argument parsing library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></a></dt><dd><p>Alternative command line option and argument parsing library.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -263,16 +271,16 @@ and more informative help and error messages by using the <a class="reference in
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="argparse.html" tppabs="https://docs.python.org/zh-cn/3/library/argparse.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">argparse</span></code> --- å‘½ä»¤è¡Œé€‰é¡¹ã€å‚æ•°å’Œå­å‘½ä»¤è§£æå™¨</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code> --- å‘½ä»¤è¡Œé€‰é¡¹ã€å‚æ•°å’Œå­å‘½ä»¤è§£æå™¨</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="logging.html" tppabs="https://docs.python.org/zh-cn/3/library/logging.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">logging</span></code> --- Logging facility for Python</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code> --- Python çš„æ—¥å¿—è®°å½•å·¥å…·</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/getopt.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/getopt.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/getopt.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/getopt.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/getopt.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/getopt.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -292,19 +300,22 @@ and more informative help and error messages by using the <a class="reference in
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="logging.html" tppabs="https://docs.python.org/zh-cn/3/library/logging.html" title="logging --- Logging facility for Python"
+          <a href="logging.html" tppabs="https://docs.python.org/zh-cn/3/library/logging.html" title="logging --- Python çš„æ—¥å¿—è®°å½•å·¥å…·"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="argparse.html" tppabs="https://docs.python.org/zh-cn/3/library/argparse.html" title="argparse --- å‘½ä»¤è¡Œé€‰é¡¹ã€å‚æ•°å’Œå­å‘½ä»¤è§£æå™¨"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="allos.html" tppabs="https://docs.python.org/zh-cn/3/library/allos.html" >é€šç”¨æ“ä½œç³»ç»ŸæœåŠ¡</a> &#187;</li>
@@ -326,15 +337,19 @@ and more informative help and error messages by using the <a class="reference in
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

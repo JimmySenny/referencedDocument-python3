@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ast --- æŠ½è±¡è¯­æ³•æ ‘ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>ast --- æŠ½è±¡è¯­æ³•æ ‘ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="symtable --- Access to the compiler&#39;s symbol tables" href="symtable.html" />
     <link rel="prev" title="parser --- Access Python parse trees" href="parser.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/ast.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="parser.html" tppabs="https://docs.python.org/zh-cn/3/library/parser.html" title="parser --- Access Python parse trees"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="language.html" tppabs="https://docs.python.org/zh-cn/3/library/language.html" accesskey="U">Python è¯­è¨€æœåŠ¡</a> &#187;</li>
@@ -97,7 +105,7 @@
             
   <div class="section" id="module-ast">
 <span id="ast-abstract-syntax-trees"></span><h1><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> --- æŠ½è±¡è¯­æ³•æ ‘<a class="headerlink" href="#module-ast" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>æºä»£ç ï¼š</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/ast.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/ast.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/ast.py">Lib/ast.py</a></p>
+<p><strong>æºä»£ç ï¼š</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/ast.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/ast.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/ast.py">Lib/ast.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> æ¨¡å—å¸®åŠ© Python ç¨‹åºå¤„ç† Python è¯­æ³•çš„æŠ½è±¡è¯­æ³•æ ‘ã€‚æŠ½è±¡è¯­æ³•æˆ–è®¸ä¼šéšç€ Python çš„æ›´æ–°å‘å¸ƒè€Œæ”¹å˜ï¼›è¯¥æ¨¡å—èƒ½å¤Ÿå¸®åŠ©ç†è§£å½“å‰è¯­æ³•åœ¨ç¼–ç¨‹å±‚é¢çš„æ ·è²Œã€‚</p>
 <p>æŠ½è±¡è¯­æ³•æ ‘å¯é€šè¿‡å°† <code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_ONLY_AST</span></code> ä½œä¸ºæ——æ ‡ä¼ é€’ç»™ <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> å†…ç½®å‡½æ•°æ¥ç”Ÿæˆï¼Œæˆ–æ˜¯ä½¿ç”¨æ­¤æ¨¡å—ä¸­æä¾›çš„ <a class="reference internal" href="#ast.parse" title="ast.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code></a> è¾…åŠ©å‡½æ•°ã€‚è¿”å›ç»“æœå°†æ˜¯ä¸€ä¸ªå¯¹è±¡æ ‘ï¼Œï¼Œå…¶ä¸­çš„ç±»éƒ½ç»§æ‰¿è‡ª <a class="reference internal" href="#ast.AST" title="ast.AST"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.AST</span></code></a>ã€‚æŠ½è±¡è¯­æ³•æ ‘å¯è¢«å†…ç½®çš„ <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> å‡½æ•°ç¼–è¯‘ä¸ºä¸€ä¸ª Python ä»£ç å¯¹è±¡ã€‚</p>
@@ -105,12 +113,12 @@
 <h2>èŠ‚ç‚¹ç±»<a class="headerlink" href="#node-classes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="class">
 <dt id="ast.AST">
-<em class="property">class </em><code class="descclassname">ast.</code><code class="descname">AST</code><a class="headerlink" href="#ast.AST" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ast.</code><code class="sig-name descname">AST</code><a class="headerlink" href="#ast.AST" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>è¿™æ˜¯æ‰€æœ‰ AST èŠ‚ç‚¹ç±»çš„åŸºç±»ã€‚å®é™…ä¸Šï¼Œè¿™äº›èŠ‚ç‚¹ç±»æ´¾ç”Ÿè‡ª <code class="file docutils literal notranslate"><span class="pre">Parser/Python.asdl</span></code> æ–‡ä»¶ï¼Œå…¶ä¸­å®šä¹‰çš„è¯­æ³•æ ‘ç¤ºä¾‹ <a class="reference internal" href="#abstract-grammar"><span class="std std-ref">å¦‚ä¸‹</span></a>ã€‚å®ƒä»¬åœ¨ C è¯­è¨€æ¨¡å— <code class="xref py py-mod docutils literal notranslate"><span class="pre">_ast</span></code> ä¸­å®šä¹‰ï¼Œå¹¶è¢«å¯¼å‡ºè‡³ <a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> æ¨¡å—ã€‚</p>
 <p>æŠ½è±¡è¯­æ³•å®šä¹‰çš„æ¯ä¸ªå·¦ä¾§ç¬¦å·(æ¯”æ–¹è¯´ï¼Œ  <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.stmt</span></code> æˆ–è€… <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code>)å®šä¹‰äº†ä¸€ä¸ªç±»ã€‚å¦å¤–ï¼Œåœ¨æŠ½è±¡è¯­æ³•å®šä¹‰çš„å³ä¾§ï¼Œå¯¹æ¯ä¸€ä¸ªæ„é€ å™¨ä¹Ÿå®šä¹‰äº†ä¸€ä¸ªç±»ï¼›è¿™äº›ç±»ç»§æ‰¿è‡ªæ ‘å·¦ä¾§çš„ç±»ã€‚æ¯”å¦‚ï¼Œ<code class="xref py py-class docutils literal notranslate"><span class="pre">ast.BinOp</span></code> ç»§æ‰¿è‡ª <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code>ã€‚å¯¹äºå¤šåˆ†æ”¯äº§ç”Ÿå¼(ä¹Ÿå°±æ˜¯&quot;å’Œè§„åˆ™&quot;)ï¼Œæ ‘å³ä¾§çš„ç±»æ˜¯æŠ½è±¡çš„ï¼›åªæœ‰ç‰¹å®šæ„é€ å™¨ç»“ç‚¹çš„å®ä¾‹èƒ½è¢«æ„é€ ã€‚</p>
 <span class="target" id="index-0"></span><span class="target" id="index-1"></span><dl class="attribute">
 <dt id="ast.AST._fields">
-<code class="descname">_fields</code><a class="headerlink" href="#ast.AST._fields" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">_fields</code><a class="headerlink" href="#ast.AST._fields" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>æ¯ä¸ªå…·ä½“ç±»éƒ½æœ‰ä¸ªå±æ€§ <a class="reference internal" href="#ast.AST._fields" title="ast.AST._fields"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_fields</span></code></a>, ç”¨æ¥ç»™å‡ºæ‰€æœ‰å­èŠ‚ç‚¹çš„åå­—ã€‚</p>
 <p>æ¯ä¸ªå…·ä½“ç±»çš„å®ä¾‹å¯¹å®ƒæ¯ä¸ªå­èŠ‚ç‚¹éƒ½æœ‰ä¸€ä¸ªå±æ€§ï¼Œå¯¹åº”ç±»å‹å¦‚æ–‡æ³•ä¸­æ‰€å®šä¹‰ã€‚æ¯”å¦‚ï¼Œ<code class="xref py py-class docutils literal notranslate"><span class="pre">ast.BinOp</span></code> çš„å®ä¾‹æœ‰ä¸ªå±æ€§ <code class="xref py py-attr docutils literal notranslate"><span class="pre">left</span></code>ï¼Œç±»å‹æ˜¯ <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code>.</p>
 <p>å¦‚æœè¿™äº›å±æ€§åœ¨æ–‡æ³•ä¸­æ ‡è®°ä¸ºå¯é€‰ï¼ˆä½¿ç”¨é—®å·ï¼‰ï¼Œå¯¹åº”å€¼å¯èƒ½ä¼šæ˜¯ <code class="docutils literal notranslate"><span class="pre">None</span></code>ã€‚å¦‚æœè¿™äº›å±æ€§æœ‰é›¶æˆ–å¤šä¸ªï¼ˆç”¨æ˜Ÿå·æ ‡è®°ï¼‰ï¼Œå¯¹åº”å€¼ä¼šç”¨Pythonçš„åˆ—è¡¨æ¥è¡¨ç¤ºã€‚æ‰€æœ‰å¯èƒ½çš„å±æ€§å¿…é¡»åœ¨ç”¨ <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> ç¼–è¯‘å¾—åˆ°ASTæ—¶ç»™å‡ºï¼Œä¸”æ˜¯æœ‰æ•ˆçš„å€¼ã€‚</p>
@@ -118,22 +126,36 @@
 
 <dl class="attribute">
 <dt id="ast.AST.lineno">
-<code class="descname">lineno</code><a class="headerlink" href="#ast.AST.lineno" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">lineno</code><a class="headerlink" href="#ast.AST.lineno" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dt id="ast.AST.col_offset">
-<code class="descname">col_offset</code><a class="headerlink" href="#ast.AST.col_offset" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code> å’Œ <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.stmt</span></code> å­ç±»çš„å®ä¾‹æœ‰ <a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a> å’Œ <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a> å±æ€§ã€‚<a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a> æ˜¯æºä»£ç çš„è¡Œæ•°(ä»1å¼€å§‹, æ‰€ä»¥ç¬¬ä¸€è¡Œè¡Œæ•°æ˜¯1)ï¼Œè€Œ <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a> æ˜¯è¯¥ç”ŸæˆèŠ‚ç‚¹ç¬¬ä¸€ä¸ªtokençš„UTF-8å­—èŠ‚åç§»é‡ã€‚è®°å½•ä¸‹UTF-8åç§»é‡çš„åŸå› æ˜¯parserå†…éƒ¨ä½¿ç”¨UTF-8ã€‚</p>
+<code class="sig-name descname">col_offset</code><a class="headerlink" href="#ast.AST.col_offset" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dt id="ast.AST.end_lineno">
+<code class="sig-name descname">end_lineno</code><a class="headerlink" href="#ast.AST.end_lineno" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dt id="ast.AST.end_col_offset">
+<code class="sig-name descname">end_col_offset</code><a class="headerlink" href="#ast.AST.end_col_offset" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.expr</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.stmt</span></code> subclasses have
+<a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a>, <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a>, <a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a>, and <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a>
+attributes.  The <a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a> and <a class="reference internal" href="#ast.AST.end_lineno" title="ast.AST.end_lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">end_lineno</span></code></a> are the first and
+last line numbers of source text span (1-indexed so the first line is line 1)
+and the <a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a> and <a class="reference internal" href="#ast.AST.end_col_offset" title="ast.AST.end_col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">end_col_offset</span></code></a> are the corresponding
+UTF-8 byte offsets of the first and last tokens that generated the node.
+The UTF-8 offset is recorded because the parser uses UTF-8 internally.</p>
+<p>Note that the end positions are not required by the compiler and are
+therefore optional. The end offset is <em>after</em> the last symbol, for example
+one can get the source segment of a one-line expression node using
+<code class="docutils literal notranslate"><span class="pre">source_line[node.col_offset</span> <span class="pre">:</span> <span class="pre">node.end_col_offset]</span></code>.</p>
 </dd></dl>
 
 <p>ä¸€ä¸ªç±»çš„æ„é€ å™¨ <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.T</span></code> åƒä¸‹é¢è¿™æ ·parseå®ƒçš„å‚æ•°ã€‚</p>
 <ul class="simple">
-<li>å¦‚æœæœ‰ä½ç½®å‚æ•°ï¼Œå®ƒä»¬å¿…é¡»å’Œ <code class="xref py py-attr docutils literal notranslate"><span class="pre">T._fields</span></code> ä¸­çš„å…ƒç´ ä¸€æ ·å¤šï¼›ä»–ä»¬ä¼šåƒè¿™äº›åå­—çš„å±æ€§ä¸€æ ·è¢«èµ‹å€¼ã€‚</li>
-<li>å¦‚æœæœ‰å…³é”®å­—å‚æ•°ï¼Œå®ƒä»¬å¿…é¡»è¢«è®¾ä¸ºå’Œç»™å®šå€¼åŒåçš„å±æ€§ã€‚</li>
+<li><p>å¦‚æœæœ‰ä½ç½®å‚æ•°ï¼Œå®ƒä»¬å¿…é¡»å’Œ <code class="xref py py-attr docutils literal notranslate"><span class="pre">T._fields</span></code> ä¸­çš„å…ƒç´ ä¸€æ ·å¤šï¼›ä»–ä»¬ä¼šåƒè¿™äº›åå­—çš„å±æ€§ä¸€æ ·è¢«èµ‹å€¼ã€‚</p></li>
+<li><p>å¦‚æœæœ‰å…³é”®å­—å‚æ•°ï¼Œå®ƒä»¬å¿…é¡»è¢«è®¾ä¸ºå’Œç»™å®šå€¼åŒåçš„å±æ€§ã€‚</p></li>
 </ul>
 <p>æ¯”æ–¹è¯´ï¼Œè¦åˆ›å»ºå’Œå¡«å……èŠ‚ç‚¹ <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.UnaryOp</span></code>ï¼Œä½ å¾—ç”¨</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">UnaryOp</span><span class="p">()</span>
 <span class="n">node</span><span class="o">.</span><span class="n">op</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">USub</span><span class="p">()</span>
-<span class="n">node</span><span class="o">.</span><span class="n">operand</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">Num</span><span class="p">()</span>
-<span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">node</span><span class="o">.</span><span class="n">operand</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">Constant</span><span class="p">()</span>
+<span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">node</span><span class="o">.</span><span class="n">operand</span><span class="o">.</span><span class="n">col_offset</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">node</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="mi">0</span>
@@ -141,35 +163,44 @@
 </pre></div>
 </div>
 <p>æˆ–è€…æ›´ç´§å‡‘ç‚¹</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">UnaryOp</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">USub</span><span class="p">(),</span> <span class="n">ast</span><span class="o">.</span><span class="n">Num</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">UnaryOp</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">USub</span><span class="p">(),</span> <span class="n">ast</span><span class="o">.</span><span class="n">Constant</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
                    <span class="n">lineno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
+<div class="versionchanged">
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>Class <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.Constant</span></code> is now used for all constants.</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">3.8 ç‰ˆåå·²ç§»é™¤: </span>Old classes <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.Num</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.Str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.Bytes</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ast.NameConstant</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.Ellipsis</span></code> are still available,
+but they will be removed in future Python releases.  In the meanwhile,
+instantiating them will return an instance of a different class.</p>
+</div>
 </div>
 <div class="section" id="abstract-grammar">
 <span id="id1"></span><h2>æŠ½è±¡æ–‡æ³•<a class="headerlink" href="#abstract-grammar" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>æŠ½è±¡æ–‡æ³•ç›®å‰å®šä¹‰å¦‚ä¸‹</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-- ASDL&#39;s 7 builtin types are:
--- identifier, int, string, bytes, object, singleton, constant
---
--- singleton: None, True or False
--- constant can be None, whereas None means &quot;no value&quot; for object.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-- ASDL&#39;s 5 builtin types are:
+-- identifier, int, string, object, constant
 
 module Python
 {
-    mod = Module(stmt* body)
+    mod = Module(stmt* body, type_ignore *type_ignores)
         | Interactive(stmt* body)
         | Expression(expr body)
+        | FunctionType(expr* argtypes, expr returns)
 
         -- not really an actual node but useful in Jython&#39;s typesystem.
         | Suite(stmt* body)
 
     stmt = FunctionDef(identifier name, arguments args,
-                       stmt* body, expr* decorator_list, expr? returns)
+                       stmt* body, expr* decorator_list, expr? returns,
+                       string? type_comment)
           | AsyncFunctionDef(identifier name, arguments args,
-                             stmt* body, expr* decorator_list, expr? returns)
+                             stmt* body, expr* decorator_list, expr? returns,
+                             string? type_comment)
 
           | ClassDef(identifier name,
              expr* bases,
@@ -179,18 +210,18 @@ module Python
           | Return(expr? value)
 
           | Delete(expr* targets)
-          | Assign(expr* targets, expr value)
+          | Assign(expr* targets, expr value, string? type_comment)
           | AugAssign(expr target, operator op, expr value)
           -- &#39;simple&#39; indicates that we annotate simple name without parens
           | AnnAssign(expr target, expr annotation, expr? value, int simple)
 
           -- use &#39;orelse&#39; because else is a keyword in target languages
-          | For(expr target, expr iter, stmt* body, stmt* orelse)
-          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse)
+          | For(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)
+          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)
           | While(expr test, stmt* body, stmt* orelse)
           | If(expr test, stmt* body, stmt* orelse)
-          | With(withitem* items, stmt* body)
-          | AsyncWith(withitem* items, stmt* body)
+          | With(withitem* items, stmt* body, string? type_comment)
+          | AsyncWith(withitem* items, stmt* body, string? type_comment)
 
           | Raise(expr? exc, expr? cause)
           | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)
@@ -206,10 +237,11 @@ module Python
 
           -- XXX Jython will be different
           -- col_offset is the byte offset in the utf8 string the parser uses
-          attributes (int lineno, int col_offset)
+          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)
 
           -- BoolOp() can use left &amp; right?
     expr = BoolOp(boolop op, expr* values)
+         | NamedExpr(expr target, expr value)
          | BinOp(expr left, operator op, expr right)
          | UnaryOp(unaryop op, expr operand)
          | Lambda(arguments args, expr body)
@@ -228,14 +260,9 @@ module Python
          -- x &lt; 4 &lt; 3 and (x &lt; 4) &lt; 3
          | Compare(expr left, cmpop* ops, expr* comparators)
          | Call(expr func, expr* args, keyword* keywords)
-         | Num(object n) -- a number as a PyObject.
-         | Str(string s) -- need to specify raw, unicode, etc?
          | FormattedValue(expr value, int? conversion, expr? format_spec)
          | JoinedStr(expr* values)
-         | Bytes(bytes s)
-         | NameConstant(singleton value)
-         | Ellipsis
-         | Constant(constant value)
+         | Constant(constant value, string? kind)
 
          -- the following expression can appear in assignment context
          | Attribute(expr value, identifier attr, expr_context ctx)
@@ -246,7 +273,7 @@ module Python
          | Tuple(expr* elts, expr_context ctx)
 
           -- col_offset is the byte offset in the utf8 string the parser uses
-          attributes (int lineno, int col_offset)
+          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)
 
     expr_context = Load | Store | Del | AugLoad | AugStore | Param
 
@@ -266,13 +293,13 @@ module Python
     comprehension = (expr target, expr iter, expr* ifs, int is_async)
 
     excepthandler = ExceptHandler(expr? type, identifier? name, stmt* body)
-                    attributes (int lineno, int col_offset)
+                    attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)
 
-    arguments = (arg* args, arg? vararg, arg* kwonlyargs, expr* kw_defaults,
-                 arg? kwarg, expr* defaults)
+    arguments = (arg* posonlyargs, arg* args, arg? vararg, arg* kwonlyargs,
+                 expr* kw_defaults, arg? kwarg, expr* defaults)
 
-    arg = (identifier arg, expr? annotation)
-           attributes (int lineno, int col_offset)
+    arg = (identifier arg, expr? annotation, string? type_comment)
+           attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)
 
     -- keyword arguments supplied to call (NULL identifier for **kwargs)
     keyword = (identifier? arg, expr value)
@@ -281,8 +308,9 @@ module Python
     alias = (identifier name, identifier? asname)
 
     withitem = (expr context_expr, expr? optional_vars)
-}
 
+    type_ignore = TypeIgnore(int lineno, string tag)
+}
 </pre></div>
 </div>
 </div>
@@ -291,50 +319,81 @@ module Python
 <p>é™¤äº†èŠ‚ç‚¹ç±»ï¼Œ <a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> æ¨¡å—é‡Œä¸ºéå†æŠ½è±¡è¯­æ³•æ ‘å®šä¹‰äº†è¿™äº›å·¥å…·å‡½æ•°å’Œç±»:</p>
 <dl class="function">
 <dt id="ast.parse">
-<code class="descclassname">ast.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>source</em>, <em>filename='&lt;unknown&gt;'</em>, <em>mode='exec'</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.parse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">filename='&lt;unknown&gt;'</em>, <em class="sig-param">mode='exec'</em>, <em class="sig-param">*</em>, <em class="sig-param">type_comments=False</em>, <em class="sig-param">feature_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.parse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>æŠŠæºç è§£æä¸ºASTèŠ‚ç‚¹ã€‚å’Œ <code class="docutils literal notranslate"><span class="pre">compile(source,</span> <span class="pre">filename,</span> <span class="pre">mode,ast.PyCF_ONLY_AST)</span></code> ç­‰ä»·ã€‚</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">type_comments=True</span></code> is given, the parser is modified to check
+and return type comments as specified by <span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0484  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0484'" tppabs="https://www.python.org/dev/peps/pep-0484"><strong>PEP 484</strong></a> and <span class="target" id="index-3"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0526  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0526'" tppabs="https://www.python.org/dev/peps/pep-0526"><strong>PEP 526</strong></a>.
+This is equivalent to adding <code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_TYPE_COMMENTS</span></code> to the
+flags passed to <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a>.  This will report syntax errors
+for misplaced type comments.  Without this flag, type comments will
+be ignored, and the <code class="docutils literal notranslate"><span class="pre">type_comment</span></code> field on selected AST nodes
+will always be <code class="docutils literal notranslate"><span class="pre">None</span></code>.  In addition, the locations of <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">type:</span>
+<span class="pre">ignore</span></code> comments will be returned as the <code class="docutils literal notranslate"><span class="pre">type_ignores</span></code>
+attribute of <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> (otherwise it is always an empty list).</p>
+<p>In addition, if <code class="docutils literal notranslate"><span class="pre">mode</span></code> is <code class="docutils literal notranslate"><span class="pre">'func_type'</span></code>, the input syntax is
+modified to correspond to <span class="target" id="index-4"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0484  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0484'" tppabs="https://www.python.org/dev/peps/pep-0484"><strong>PEP 484</strong></a> &quot;signature type comments&quot;,
+e.g. <code class="docutils literal notranslate"><span class="pre">(str,</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">List[str]</span></code>.</p>
+<p>Also, setting <code class="docutils literal notranslate"><span class="pre">feature_version</span></code> to a tuple <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor)</span></code>
+will attempt to parse using that Python version's grammar.
+Currently <code class="docutils literal notranslate"><span class="pre">major</span></code> must equal to <code class="docutils literal notranslate"><span class="pre">3</span></code>.  For example, setting
+<code class="docutils literal notranslate"><span class="pre">feature_version=(3,</span> <span class="pre">4)</span></code> will allow the use of <code class="docutils literal notranslate"><span class="pre">async</span></code> and
+<code class="docutils literal notranslate"><span class="pre">await</span></code> as variable names.  The lowest supported version is
+<code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">4)</span></code>; the highest is <code class="docutils literal notranslate"><span class="pre">sys.version_info[0:2]</span></code>.</p>
 <div class="admonition warning">
-<p class="first admonition-title">è­¦å‘Š</p>
-<p class="last">è¶³å¤Ÿå¤æ‚æˆ–æ˜¯å·¨å¤§çš„å­—ç¬¦ä¸²å¯èƒ½å¯¼è‡´Pythonè§£é‡Šå™¨çš„å´©æºƒï¼Œå› ä¸ºPythonçš„ASTç¼–è¯‘å™¨æ˜¯æœ‰æ ˆæ·±é™åˆ¶çš„ã€‚</p>
+<p class="admonition-title">è­¦å‘Š</p>
+<p>è¶³å¤Ÿå¤æ‚æˆ–æ˜¯å·¨å¤§çš„å­—ç¬¦ä¸²å¯èƒ½å¯¼è‡´Pythonè§£é‡Šå™¨çš„å´©æºƒï¼Œå› ä¸ºPythonçš„ASTç¼–è¯‘å™¨æ˜¯æœ‰æ ˆæ·±é™åˆ¶çš„ã€‚</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>Added <code class="docutils literal notranslate"><span class="pre">type_comments</span></code>, <code class="docutils literal notranslate"><span class="pre">mode='func_type'</span></code> and <code class="docutils literal notranslate"><span class="pre">feature_version</span></code>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.literal_eval">
-<code class="descclassname">ast.</code><code class="descname">literal_eval</code><span class="sig-paren">(</span><em>node_or_string</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.literal_eval" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Safely evaluate an expression node or a string containing a Python literal or
-container display.  The string or node provided may only consist of the
-following Python literal structures: strings, bytes, numbers, tuples, lists,
-dicts, sets, booleans, and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">literal_eval</code><span class="sig-paren">(</span><em class="sig-param">node_or_string</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.literal_eval" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å¯¹è¡¨è¾¾å¼èŠ‚ç‚¹ä»¥åŠåŒ…å«Pythonå­—é¢é‡æˆ–å®¹å™¨çš„å­—ç¬¦ä¸²è¿›è¡Œå®‰å…¨çš„æ±‚å€¼ã€‚ä¼ å…¥çš„å­—ç¬¦ä¸²æˆ–è€…èŠ‚ç‚¹é‡Œå¯èƒ½åªåŒ…å«ä¸‹åˆ—çš„Pythonå­—é¢é‡ç»“æ„: å­—ç¬¦ä¸²ï¼Œå­—èŠ‚å¯¹è±¡(bytes)ï¼Œæ•°å€¼ï¼Œå…ƒç»„ï¼Œåˆ—è¡¨ï¼Œå­—å…¸ï¼Œé›†åˆï¼Œå¸ƒå°”å€¼å’Œ <code class="docutils literal notranslate"><span class="pre">None</span></code>ã€‚</p>
 <p>This can be used for safely evaluating strings containing Python values from
 untrusted sources without the need to parse the values oneself.  It is not
 capable of evaluating arbitrarily complex expressions, for example involving
 operators or indexing.</p>
 <div class="admonition warning">
-<p class="first admonition-title">è­¦å‘Š</p>
-<p class="last">è¶³å¤Ÿå¤æ‚æˆ–æ˜¯å·¨å¤§çš„å­—ç¬¦ä¸²å¯èƒ½å¯¼è‡´Pythonè§£é‡Šå™¨çš„å´©æºƒï¼Œå› ä¸ºPythonçš„ASTç¼–è¯‘å™¨æ˜¯æœ‰æ ˆæ·±é™åˆ¶çš„ã€‚</p>
+<p class="admonition-title">è­¦å‘Š</p>
+<p>è¶³å¤Ÿå¤æ‚æˆ–æ˜¯å·¨å¤§çš„å­—ç¬¦ä¸²å¯èƒ½å¯¼è‡´Pythonè§£é‡Šå™¨çš„å´©æºƒï¼Œå› ä¸ºPythonçš„ASTç¼–è¯‘å™¨æ˜¯æœ‰æ ˆæ·±é™åˆ¶çš„ã€‚</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>Now allows bytes and set literals.</p>
+<p><span class="versionmodified changed">åœ¨ 3.2 ç‰ˆæ›´æ”¹: </span>ç›®å‰æ”¯æŒå­—èŠ‚å’Œé›†åˆã€‚</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.get_docstring">
-<code class="descclassname">ast.</code><code class="descname">get_docstring</code><span class="sig-paren">(</span><em>node</em>, <em>clean=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.get_docstring" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">get_docstring</code><span class="sig-paren">(</span><em class="sig-param">node</em>, <em class="sig-param">clean=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.get_docstring" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the docstring of the given <em>node</em> (which must be a
 <code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionDef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncFunctionDef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassDef</span></code>,
 or <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> node), or <code class="docutils literal notranslate"><span class="pre">None</span></code> if it has no docstring.
 If <em>clean</em> is true, clean up the docstring's indentation with
 <a class="reference internal" href="inspect.html#inspect.cleandoc" tppabs="https://docs.python.org/zh-cn/3/library/inspect.html#inspect.cleandoc" title="inspect.cleandoc"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.cleandoc()</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncFunctionDef</span></code> is now supported.</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>ç›®å‰æ”¯æŒ <code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncFunctionDef</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ast.get_source_segment">
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">get_source_segment</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">node</em>, <em class="sig-param">*</em>, <em class="sig-param">padded=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.get_source_segment" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Get source code segment of the <em>source</em> that generated <em>node</em>.
+If some location information (<code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">end_lineno</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code>, or <code class="xref py py-attr docutils literal notranslate"><span class="pre">end_col_offset</span></code>) is missing, return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>If <em>padded</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the first line of a multi-line statement will
+be padded with spaces to match its original position.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">3.8 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.fix_missing_locations">
-<code class="descclassname">ast.</code><code class="descname">fix_missing_locations</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.fix_missing_locations" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">fix_missing_locations</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.fix_missing_locations" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>When you compile a node tree with <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a>, the compiler expects
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code> attributes for every node that supports
 them.  This is rather tedious to fill in for generated nodes, so this helper
@@ -344,35 +403,37 @@ the values of the parent node.  It works recursively starting at <em>node</em>.<
 
 <dl class="function">
 <dt id="ast.increment_lineno">
-<code class="descclassname">ast.</code><code class="descname">increment_lineno</code><span class="sig-paren">(</span><em>node</em>, <em>n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.increment_lineno" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Increment the line number of each node in the tree starting at <em>node</em> by <em>n</em>.
-This is useful to &quot;move code&quot; to a different location in a file.</p>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">increment_lineno</code><span class="sig-paren">(</span><em class="sig-param">node</em>, <em class="sig-param">n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.increment_lineno" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Increment the line number and end line number of each node in the tree
+starting at <em>node</em> by <em>n</em>. This is useful to &quot;move code&quot; to a different
+location in a file.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.copy_location">
-<code class="descclassname">ast.</code><code class="descname">copy_location</code><span class="sig-paren">(</span><em>new_node</em>, <em>old_node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.copy_location" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Copy source location (<code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code>) from <em>old_node</em>
-to <em>new_node</em> if possible, and return <em>new_node</em>.</p>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">copy_location</code><span class="sig-paren">(</span><em class="sig-param">new_node</em>, <em class="sig-param">old_node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.copy_location" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Copy source location (<code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">end_lineno</span></code>,
+and <code class="xref py py-attr docutils literal notranslate"><span class="pre">end_col_offset</span></code>) from <em>old_node</em> to <em>new_node</em> if possible,
+and return <em>new_node</em>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.iter_fields">
-<code class="descclassname">ast.</code><code class="descname">iter_fields</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.iter_fields" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">iter_fields</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.iter_fields" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Yield a tuple of <code class="docutils literal notranslate"><span class="pre">(fieldname,</span> <span class="pre">value)</span></code> for each field in <code class="docutils literal notranslate"><span class="pre">node._fields</span></code>
 that is present on <em>node</em>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.iter_child_nodes">
-<code class="descclassname">ast.</code><code class="descname">iter_child_nodes</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.iter_child_nodes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">iter_child_nodes</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.iter_child_nodes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Yield all direct child nodes of <em>node</em>, that is, all fields that are nodes
 and all items of fields that are lists of nodes.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ast.walk">
-<code class="descclassname">ast.</code><code class="descname">walk</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.walk" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">walk</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.walk" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Recursively yield all descendant nodes in the tree starting at <em>node</em>
 (including <em>node</em> itself), in no specified order.  This is useful if you only
 want to modify nodes in place and don't care about the context.</p>
@@ -380,7 +441,7 @@ want to modify nodes in place and don't care about the context.</p>
 
 <dl class="class">
 <dt id="ast.NodeVisitor">
-<em class="property">class </em><code class="descclassname">ast.</code><code class="descname">NodeVisitor</code><a class="headerlink" href="#ast.NodeVisitor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ast.</code><code class="sig-name descname">NodeVisitor</code><a class="headerlink" href="#ast.NodeVisitor" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A node visitor base class that walks the abstract syntax tree and calls a
 visitor function for every node found.  This function may return a value
 which is forwarded by the <a class="reference internal" href="#ast.NodeVisitor.visit" title="ast.NodeVisitor.visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">visit()</span></code></a> method.</p>
@@ -388,7 +449,7 @@ which is forwarded by the <a class="reference internal" href="#ast.NodeVisitor.v
 methods.</p>
 <dl class="method">
 <dt id="ast.NodeVisitor.visit">
-<code class="descname">visit</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.NodeVisitor.visit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">visit</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.NodeVisitor.visit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Visit a node.  The default implementation calls the method called
 <code class="samp docutils literal notranslate"><span class="pre">self.visit_</span><em><span class="pre">classname</span></em></code> where <em>classname</em> is the name of the node
 class, or <a class="reference internal" href="#ast.NodeVisitor.generic_visit" title="ast.NodeVisitor.generic_visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code></a> if that method doesn't exist.</p>
@@ -396,7 +457,7 @@ class, or <a class="reference internal" href="#ast.NodeVisitor.generic_visit" ti
 
 <dl class="method">
 <dt id="ast.NodeVisitor.generic_visit">
-<code class="descname">generic_visit</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.NodeVisitor.generic_visit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">generic_visit</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.NodeVisitor.generic_visit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>This visitor calls <a class="reference internal" href="#ast.NodeVisitor.visit" title="ast.NodeVisitor.visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">visit()</span></code></a> on all children of the node.</p>
 <p>Note that child nodes of nodes that have a custom visitor method won't be
 visited unless the visitor calls <a class="reference internal" href="#ast.NodeVisitor.generic_visit" title="ast.NodeVisitor.generic_visit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code></a> or visits them
@@ -406,37 +467,41 @@ itself.</p>
 <p>Don't use the <a class="reference internal" href="#ast.NodeVisitor" title="ast.NodeVisitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeVisitor</span></code></a> if you want to apply changes to nodes
 during traversal.  For this a special visitor exists
 (<a class="reference internal" href="#ast.NodeTransformer" title="ast.NodeTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeTransformer</span></code></a>) that allows modifications.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">3.8 ç‰ˆåå·²ç§»é™¤: </span>Methods <code class="xref py py-meth docutils literal notranslate"><span class="pre">visit_Num()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">visit_Str()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">visit_Bytes()</span></code>,
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">visit_NameConstant()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">visit_Ellipsis()</span></code> are deprecated
+now and will not be called in future Python versions.  Add the
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">visit_Constant()</span></code> method to handle all constant nodes.</p>
+</div>
 </dd></dl>
 
 <dl class="class">
 <dt id="ast.NodeTransformer">
-<em class="property">class </em><code class="descclassname">ast.</code><code class="descname">NodeTransformer</code><a class="headerlink" href="#ast.NodeTransformer" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>A <a class="reference internal" href="#ast.NodeVisitor" title="ast.NodeVisitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeVisitor</span></code></a> subclass that walks the abstract syntax tree and
-allows modification of nodes.</p>
-<p>The <a class="reference internal" href="#ast.NodeTransformer" title="ast.NodeTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeTransformer</span></code></a> will walk the AST and use the return value of
-the visitor methods to replace or remove the old node.  If the return value
-of the visitor method is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the node will be removed from its
-location, otherwise it is replaced with the return value.  The return value
-may be the original node in which case no replacement takes place.</p>
-<p>Here is an example transformer that rewrites all occurrences of name lookups
-(<code class="docutils literal notranslate"><span class="pre">foo</span></code>) to <code class="docutils literal notranslate"><span class="pre">data['foo']</span></code>:</p>
+<em class="property">class </em><code class="sig-prename descclassname">ast.</code><code class="sig-name descname">NodeTransformer</code><a class="headerlink" href="#ast.NodeTransformer" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å­ç±» <a class="reference internal" href="#ast.NodeVisitor" title="ast.NodeVisitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeVisitor</span></code></a>  ç”¨äºéå†æŠ½è±¡è¯­æ³•æ ‘ï¼Œå¹¶å…è®¸ä¿®æ”¹èŠ‚ç‚¹ã€‚</p>
+<p><a class="reference internal" href="#ast.NodeTransformer" title="ast.NodeTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeTransformer</span></code></a> å°†éå†æŠ½è±¡è¯­æ³•æ ‘å¹¶ä½¿ç”¨visitoræ–¹æ³•çš„è¿”å›å€¼å»æ›¿æ¢æˆ–ç§»é™¤æ—§èŠ‚ç‚¹ã€‚å¦‚æœvisitoræ–¹æ³•çš„è¿”å›å€¼ä¸º <code class="docutils literal notranslate"><span class="pre">None</span></code> , åˆ™è¯¥èŠ‚ç‚¹å°†ä»å…¶ä½ç½®ç§»é™¤ï¼Œå¦åˆ™å°†æ›¿æ¢ä¸ºè¿”å›å€¼ã€‚å½“è¿”å›å€¼æ˜¯åŸå§‹èŠ‚ç‚¹æ—¶ï¼Œæ— éœ€æ›¿æ¢ã€‚</p>
+<p>å¦‚ä¸‹æ˜¯ä¸€ä¸ªè½¬æ¢å™¨ç¤ºä¾‹ï¼Œå®ƒå°†æ‰€æœ‰å‡ºç°çš„åç§° (<code class="docutils literal notranslate"><span class="pre">foo</span></code>) é‡å†™ä¸º <code class="docutils literal notranslate"><span class="pre">data['foo']</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RewriteName</span><span class="p">(</span><span class="n">NodeTransformer</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">visit_Name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">copy_location</span><span class="p">(</span><span class="n">Subscript</span><span class="p">(</span>
+        <span class="k">return</span> <span class="n">Subscript</span><span class="p">(</span>
             <span class="n">value</span><span class="o">=</span><span class="n">Name</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="n">Load</span><span class="p">()),</span>
-            <span class="nb">slice</span><span class="o">=</span><span class="n">Index</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">Str</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">id</span><span class="p">)),</span>
+            <span class="nb">slice</span><span class="o">=</span><span class="n">Index</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">id</span><span class="p">)),</span>
             <span class="n">ctx</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">ctx</span>
-        <span class="p">),</span> <span class="n">node</span><span class="p">)</span>
+        <span class="p">)</span>
 </pre></div>
 </div>
-<p>Keep in mind that if the node you're operating on has child nodes you must
-either transform the child nodes yourself or call the <code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code>
-method for the node first.</p>
-<p>For nodes that were part of a collection of statements (that applies to all
-statement nodes), the visitor may also return a list of nodes rather than
-just a single node.</p>
-<p>Usually you use the transformer like this:</p>
+<p>è¯·è®°ä½ï¼Œå¦‚æœæ‚¨æ­£åœ¨æ“ä½œçš„èŠ‚ç‚¹å…·æœ‰å­èŠ‚ç‚¹ï¼Œåˆ™å¿…é¡»å…ˆè½¬æ¢å…¶å­èŠ‚ç‚¹æˆ–ä¸ºè¯¥èŠ‚ç‚¹è°ƒç”¨ <code class="xref py py-meth docutils literal notranslate"><span class="pre">generic_visit()</span></code> æ–¹æ³•ã€‚</p>
+<p>å¯¹äºå±äºè¯­å¥é›†åˆï¼ˆé€‚ç”¨äºæ‰€æœ‰è¯­å¥èŠ‚ç‚¹ï¼‰çš„èŠ‚ç‚¹ï¼Œè®¿é—®è€…è¿˜å¯ä»¥è¿”å›èŠ‚ç‚¹åˆ—è¡¨è€Œä¸ä»…ä»…æ˜¯å•ä¸ªèŠ‚ç‚¹ã€‚</p>
+<p>If <a class="reference internal" href="#ast.NodeTransformer" title="ast.NodeTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeTransformer</span></code></a> introduces new nodes (that weren't part of
+original tree) without giving them location information (such as
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code>), <a class="reference internal" href="#ast.fix_missing_locations" title="ast.fix_missing_locations"><code class="xref py py-func docutils literal notranslate"><span class="pre">fix_missing_locations()</span></code></a> should be called with
+the new sub-tree to recalculate the location information:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;eval&#39;</span><span class="p">)</span>
+<span class="n">new_tree</span> <span class="o">=</span> <span class="n">fix_missing_locations</span><span class="p">(</span><span class="n">RewriteName</span><span class="p">()</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>é€šå¸¸ä½ å¯ä»¥åƒè¿™æ ·ä½¿ç”¨è½¬æ¢å™¨:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">YourTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -444,18 +509,19 @@ just a single node.</p>
 
 <dl class="function">
 <dt id="ast.dump">
-<code class="descclassname">ast.</code><code class="descname">dump</code><span class="sig-paren">(</span><em>node</em>, <em>annotate_fields=True</em>, <em>include_attributes=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.dump" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">ast.</code><code class="sig-name descname">dump</code><span class="sig-paren">(</span><em class="sig-param">node</em>, <em class="sig-param">annotate_fields=True</em>, <em class="sig-param">include_attributes=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ast.dump" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a formatted dump of the tree in <em>node</em>.  This is mainly useful for
-debugging purposes.  The returned string will show the names and the values
-for fields.  This makes the code impossible to evaluate, so if evaluation is
-wanted <em>annotate_fields</em> must be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Attributes such as line
+debugging purposes.  If <em>annotate_fields</em> is true (by default),
+the returned string will show the names and the values for fields.
+If <em>annotate_fields</em> is false, the result string will be more compact by
+omitting unambiguous field names.  Attributes such as line
 numbers and column offsets are not dumped by default.  If this is wanted,
-<em>include_attributes</em> can be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<em>include_attributes</em> can be set to true.</p>
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://greentreesnakes.readthedocs.io/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://greentreesnakes.readthedocs.io/'" tppabs="https://greentreesnakes.readthedocs.io/">Green Tree Snakes</a>, an external documentation resource, has good
+<p class="admonition-title">å‚è§</p>
+<p><a class="reference external" href="javascript:if(confirm('https://greentreesnakes.readthedocs.io/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://greentreesnakes.readthedocs.io/'" tppabs="https://greentreesnakes.readthedocs.io/">Green Tree Snakes</a>, an external documentation resource, has good
 details on working with Python ASTs.</p>
 </div>
 </div>
@@ -467,28 +533,28 @@ details on working with Python ASTs.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ast</span></code> --- æŠ½è±¡è¯­æ³•æ ‘</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code> --- æŠ½è±¡è¯­æ³•æ ‘</a><ul>
 <li><a class="reference internal" href="#node-classes">èŠ‚ç‚¹ç±»</a></li>
 <li><a class="reference internal" href="#abstract-grammar">æŠ½è±¡æ–‡æ³•</a></li>
-<li><a class="reference internal" href="#ast-helpers"><code class="docutils literal notranslate"><span class="pre">ast</span></code> ä¸­çš„è¾…åŠ©å‡½æ•°</a></li>
+<li><a class="reference internal" href="#ast-helpers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code> ä¸­çš„è¾…åŠ©å‡½æ•°</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="parser.html" tppabs="https://docs.python.org/zh-cn/3/library/parser.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">parser</span></code> --- Access Python parse trees</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">parser</span></code> --- Access Python parse trees</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="symtable.html" tppabs="https://docs.python.org/zh-cn/3/library/symtable.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">symtable</span></code> --- Access to the compiler's symbol tables</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">symtable</span></code> --- Access to the compiler's symbol tables</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/ast.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/ast.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/ast.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/ast.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/ast.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/ast.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -513,14 +579,17 @@ details on working with Python ASTs.</p>
         <li class="right" >
           <a href="parser.html" tppabs="https://docs.python.org/zh-cn/3/library/parser.html" title="parser --- Access Python parse trees"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="language.html" tppabs="https://docs.python.org/zh-cn/3/library/language.html" >Python è¯­è¨€æœåŠ¡</a> &#187;</li>
@@ -542,15 +611,19 @@ details on working with Python ASTs.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

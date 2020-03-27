@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>bz2 --- 对 bzip2 压缩算法的支持 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>bz2 --- 对 bzip2 压缩算法的支持 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="lzma --- 用 LZMA 算法压缩" href="lzma.html" />
     <link rel="prev" title="gzip --- 对 gzip 格式的支持" href="gzip.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/bz2.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="gzip.html" tppabs="https://docs.python.org/zh-cn/3/library/gzip.html" title="gzip --- 对 gzip 格式的支持"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="archiving.html" tppabs="https://docs.python.org/zh-cn/3/library/archiving.html" accesskey="U">数据压缩和存档</a> &#187;</li>
@@ -97,108 +105,86 @@
             
   <div class="section" id="module-bz2">
 <span id="bz2-support-for-bzip2-compression"></span><h1><a class="reference internal" href="#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a> --- 对 <strong class="program">bzip2</strong> 压缩算法的支持<a class="headerlink" href="#module-bz2" title="永久链接至标题">¶</a></h1>
-<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/bz2.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/bz2.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/bz2.py">Lib/bz2.py</a></p>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/bz2.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/bz2.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/bz2.py">Lib/bz2.py</a></p>
 <hr class="docutils" />
 <p>此模块提供了使用 bzip2 压缩算法压缩和解压数据的一套完整的接口。</p>
 <p><a class="reference internal" href="#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a> 模块包含：</p>
 <ul class="simple">
-<li>用于读写压缩文件的 <a class="reference internal" href="#bz2.open" title="bz2.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 函数和 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 类。</li>
-<li>用于增量压缩和解压的 <a class="reference internal" href="#bz2.BZ2Compressor" title="bz2.BZ2Compressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Compressor</span></code></a> 和 <a class="reference internal" href="#bz2.BZ2Decompressor" title="bz2.BZ2Decompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Decompressor</span></code></a> 类。</li>
-<li>用于一次性压缩和解压的 <a class="reference internal" href="#bz2.compress" title="bz2.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a> 和 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> 函数。</li>
+<li><p>用于读写压缩文件的 <a class="reference internal" href="#bz2.open" title="bz2.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 函数和 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 类。</p></li>
+<li><p>用于增量压缩和解压的 <a class="reference internal" href="#bz2.BZ2Compressor" title="bz2.BZ2Compressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Compressor</span></code></a> 和 <a class="reference internal" href="#bz2.BZ2Decompressor" title="bz2.BZ2Decompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Decompressor</span></code></a> 类。</p></li>
+<li><p>用于一次性压缩和解压的 <a class="reference internal" href="#bz2.compress" title="bz2.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a> 和 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> 函数。</p></li>
 </ul>
 <p>此模块中的所有类都能安全地从多个线程访问。</p>
 <div class="section" id="de-compression-of-files">
 <h2>文件压缩和解压<a class="headerlink" href="#de-compression-of-files" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="bz2.open">
-<code class="descclassname">bz2.</code><code class="descname">open</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>compresslevel=9</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>newline=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.open" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">bz2.</code><code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">mode='r'</em>, <em class="sig-param">compresslevel=9</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em>, <em class="sig-param">newline=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.open" title="永久链接至目标">¶</a></dt>
 <dd><p>以二进制或文本模式打开 bzip2 压缩文件，返回一个 <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>。</p>
 <p>和 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 的构造函数类似，<em>filename</em> 参数可以是一个实际的文件名（<a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 或 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象），或是已有的可供读取或写入的文件对象。</p>
 <p><em>mode</em> 参数可设为二进制模式的 <code class="docutils literal notranslate"><span class="pre">'r'</span></code>、<code class="docutils literal notranslate"><span class="pre">'rb'</span></code>、<code class="docutils literal notranslate"><span class="pre">'w'</span></code>、<code class="docutils literal notranslate"><span class="pre">'wb'</span></code>、<code class="docutils literal notranslate"><span class="pre">'x'</span></code>、<code class="docutils literal notranslate"><span class="pre">'xb'</span></code>、<code class="docutils literal notranslate"><span class="pre">'a'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'ab'</span></code>，或者文本模式的 <code class="docutils literal notranslate"><span class="pre">'rt'</span></code>、<code class="docutils literal notranslate"><span class="pre">'wt'</span></code>、<code class="docutils literal notranslate"><span class="pre">'xt'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'at'</span></code>。默认是 <code class="docutils literal notranslate"><span class="pre">'rb'</span></code>。</p>
 <p><em>compresslevel</em> 参数是 1 到 9 的整数，和 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 的构造函数一样。</p>
-<p>For binary mode, this function is equivalent to the <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a>
-constructor: <code class="docutils literal notranslate"><span class="pre">BZ2File(filename,</span> <span class="pre">mode,</span> <span class="pre">compresslevel=compresslevel)</span></code>. In
-this case, the <em>encoding</em>, <em>errors</em> and <em>newline</em> arguments must not be
-provided.</p>
-<p>For text mode, a <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> object is created, and wrapped in an
-<a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> instance with the specified encoding, error
-handling behavior, and line ending(s).</p>
+<p>对于二进制模式，这个函数等价于 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 构造器: <code class="docutils literal notranslate"><span class="pre">BZ2File(filename,</span> <span class="pre">mode,</span> <span class="pre">compresslevel=compresslevel)</span></code>。 在这种情况下，不可提供 <em>encoding</em>, <em>errors</em> 和 <em>newline</em> 参数。</p>
+<p>对于文本模式，将会创建一个 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 对象，并将它包装到一个 <a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> 实例中，此实例带有指定的编码格式、错误处理行为和行结束符。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">'x'</span></code> (仅创建) 模式。</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">'x'</span></code> (单独创建) 模式。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="bz2.BZ2File">
-<em class="property">class </em><code class="descclassname">bz2.</code><code class="descname">BZ2File</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>buffering=None</em>, <em>compresslevel=9</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2File" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bz2.</code><code class="sig-name descname">BZ2File</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">mode='r'</em>, <em class="sig-param">buffering=None</em>, <em class="sig-param">compresslevel=9</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2File" title="永久链接至目标">¶</a></dt>
 <dd><p>用二进制模式打开 bzip2 压缩文件。</p>
-<p>If <em>filename</em> is a <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object, open the named file
-directly. Otherwise, <em>filename</em> should be a <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>, which will
-be used to read or write the compressed data.</p>
-<p>The <em>mode</em> argument can be either <code class="docutils literal notranslate"><span class="pre">'r'</span></code> for reading (default), <code class="docutils literal notranslate"><span class="pre">'w'</span></code> for
-overwriting, <code class="docutils literal notranslate"><span class="pre">'x'</span></code> for exclusive creation, or <code class="docutils literal notranslate"><span class="pre">'a'</span></code> for appending. These
-can equivalently be given as <code class="docutils literal notranslate"><span class="pre">'rb'</span></code>, <code class="docutils literal notranslate"><span class="pre">'wb'</span></code>, <code class="docutils literal notranslate"><span class="pre">'xb'</span></code> and <code class="docutils literal notranslate"><span class="pre">'ab'</span></code>
-respectively.</p>
-<p>If <em>filename</em> is a file object (rather than an actual file name), a mode of
-<code class="docutils literal notranslate"><span class="pre">'w'</span></code> does not truncate the file, and is instead equivalent to <code class="docutils literal notranslate"><span class="pre">'a'</span></code>.</p>
-<p>The <em>buffering</em> argument is ignored. Its use is deprecated.</p>
-<p>If <em>mode</em> is <code class="docutils literal notranslate"><span class="pre">'w'</span></code> or <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <em>compresslevel</em> can be a number between
-<code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code> specifying the level of compression: <code class="docutils literal notranslate"><span class="pre">1</span></code> produces the
-least compression, and <code class="docutils literal notranslate"><span class="pre">9</span></code> (default) produces the most compression.</p>
-<p>If <em>mode</em> is <code class="docutils literal notranslate"><span class="pre">'r'</span></code>, the input file may be the concatenation of multiple
-compressed streams.</p>
-<p><a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> provides all of the members specified by the
-<a class="reference internal" href="io.html#io.BufferedIOBase" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedIOBase</span></code></a>, except for <code class="xref py py-meth docutils literal notranslate"><span class="pre">detach()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">truncate()</span></code>.
-Iteration and the <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement are supported.</p>
-<p><a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> also provides the following method:</p>
+<p>如果 <em>filename</em> 是一个 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 或 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 对象，则打开名称对应的文件目录。 否则的话，<em>filename</em> 应当是一个 <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>，它将被用来读取或写入压缩数据。</p>
+<p><em>mode</em> 参数可以是表示读取的 <code class="docutils literal notranslate"><span class="pre">'r'</span></code> (默认值)，表示覆写的 <code class="docutils literal notranslate"><span class="pre">'w'</span></code>，表示单独创建的 <code class="docutils literal notranslate"><span class="pre">'x'</span></code>，或表示添加的 <code class="docutils literal notranslate"><span class="pre">'a'</span></code>。 这些模式还可分别以 <code class="docutils literal notranslate"><span class="pre">'rb'</span></code>, <code class="docutils literal notranslate"><span class="pre">'wb'</span></code>, <code class="docutils literal notranslate"><span class="pre">'xb'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'ab'</span></code> 的等价形式给出。</p>
+<p>如果 <em>filename</em> 是一个文件对象（而不是实际的文件名），则 <code class="docutils literal notranslate"><span class="pre">'w'</span></code> 模式并不会截断文件，而是会等价于 <code class="docutils literal notranslate"><span class="pre">'a'</span></code>。</p>
+<p><em>buffering</em> 参数会被忽略。 从 Python 3.0 开始它已被弃用。</p>
+<p>如果 <em>mode</em> 为 <code class="docutils literal notranslate"><span class="pre">'w'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'a'</span></code>，则 <em>compresslevel</em> 可以是 <code class="docutils literal notranslate"><span class="pre">1</span></code> 到 <code class="docutils literal notranslate"><span class="pre">9</span></code> 之间的整数，用于指定压缩等级: <code class="docutils literal notranslate"><span class="pre">1</span></code> 产生最低压缩率，而 <code class="docutils literal notranslate"><span class="pre">9</span></code> (默认值) 产生最高压缩率。</p>
+<p>如果 <em>mode</em> 为 <code class="docutils literal notranslate"><span class="pre">'r'</span></code>，则输入文件可以为多个压缩流的拼接。</p>
+<p><a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 提供了 <a class="reference internal" href="io.html#io.BufferedIOBase" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedIOBase</span></code></a> 所指定的所有成员，但 <code class="xref py py-meth docutils literal notranslate"><span class="pre">detach()</span></code> 和 <code class="xref py py-meth docutils literal notranslate"><span class="pre">truncate()</span></code> 除外。 并支持迭代和 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句。</p>
+<p><a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 还提供了以下方法：</p>
 <dl class="method">
 <dt id="bz2.BZ2File.peek">
-<code class="descname">peek</code><span class="sig-paren">(</span><span class="optional">[</span><em>n</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2File.peek" title="永久链接至目标">¶</a></dt>
-<dd><p>Return buffered data without advancing the file position. At least one
-byte of data will be returned (unless at EOF). The exact number of bytes
-returned is unspecified.</p>
+<code class="sig-name descname">peek</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">n</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2File.peek" title="永久链接至目标">¶</a></dt>
+<dd><p>返回缓冲的数据而不前移文件位置。 至少将返回一个字节的数据（除非为 EOF）。 实际返回的字节数不确定。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">While calling <a class="reference internal" href="#bz2.BZ2File.peek" title="bz2.BZ2File.peek"><code class="xref py py-meth docutils literal notranslate"><span class="pre">peek()</span></code></a> does not change the file position of
-the <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a>, it may change the position of the underlying file
-object (e.g. if the <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> was constructed by passing a file
-object for <em>filename</em>).</p>
+<p class="admonition-title">注解</p>
+<p>虽然调用 <a class="reference internal" href="#bz2.BZ2File.peek" title="bz2.BZ2File.peek"><code class="xref py py-meth docutils literal notranslate"><span class="pre">peek()</span></code></a> 不会改变 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 的文件位置，但它可能改变下层文件对象的位置（举例来说如果 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a> 是通过传入一个文件对象作为 <em>filename</em> 的话）。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
-<div class="versionchanged">
-<p><span class="versionmodified">在 3.1 版更改: </span>支持了 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句。</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">3.0 版后已移除: </span>关键字参数 <em>buffering</em> 已弃用，现在会被忽略。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">readable()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">seekable()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">writable()</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">read1()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">readinto()</span></code> methods were added.</p>
+<p><span class="versionmodified changed">在 3.1 版更改: </span>添加了对 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>Support was added for <em>filename</em> being a <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a> instead of an
-actual filename.</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>添加了 <code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">readable()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">seekable()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">writable()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">read1()</span></code> 和 <code class="xref py py-meth docutils literal notranslate"><span class="pre">readinto()</span></code> 方法。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>The <code class="docutils literal notranslate"><span class="pre">'a'</span></code> (append) mode was added, along with support for reading
-multi-stream files.</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>添加了对 <em>filename</em> 使用 <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file object</span></a> 而非实际文件名的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">'x'</span></code> (仅创建) 模式。</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">'a'</span></code> (append) 模式，以及对读取多数据流文件的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The <a class="reference internal" href="io.html#io.BufferedIOBase.read" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase.read" title="io.BufferedIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> method now accepts an argument of
-<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">'x'</span></code> (单独创建) 模式。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span><a class="reference internal" href="io.html#io.BufferedIOBase.read" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.BufferedIOBase.read" title="io.BufferedIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> 方法现在接受 <code class="docutils literal notranslate"><span class="pre">None</span></code> 作为参数。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
@@ -207,93 +193,67 @@ multi-stream files.</p>
 <h2>增量压缩和解压<a class="headerlink" href="#incremental-de-compression" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="bz2.BZ2Compressor">
-<em class="property">class </em><code class="descclassname">bz2.</code><code class="descname">BZ2Compressor</code><span class="sig-paren">(</span><em>compresslevel=9</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Compressor" title="永久链接至目标">¶</a></dt>
-<dd><p>Create a new compressor object. This object may be used to compress data
-incrementally. For one-shot compression, use the <a class="reference internal" href="#bz2.compress" title="bz2.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a> function
-instead.</p>
-<p><em>compresslevel</em>, if given, must be a number between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>. The
-default is <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<em class="property">class </em><code class="sig-prename descclassname">bz2.</code><code class="sig-name descname">BZ2Compressor</code><span class="sig-paren">(</span><em class="sig-param">compresslevel=9</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Compressor" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个新的压缩器对象。 此对象可被用来执行增量数据压缩。 对于一次性压缩，请改用 <a class="reference internal" href="#bz2.compress" title="bz2.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a> 函数。</p>
+<p>如果给定 <em>compresslevel</em>，它必须为 <code class="docutils literal notranslate"><span class="pre">1</span></code> 至 <code class="docutils literal notranslate"><span class="pre">9</span></code> 之间的整数。 默认值为 <code class="docutils literal notranslate"><span class="pre">9</span></code>。</p>
 <dl class="method">
 <dt id="bz2.BZ2Compressor.compress">
-<code class="descname">compress</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Compressor.compress" title="永久链接至目标">¶</a></dt>
-<dd><p>Provide data to the compressor object. Returns a chunk of compressed data
-if possible, or an empty byte string otherwise.</p>
-<p>When you have finished providing data to the compressor, call the
-<a class="reference internal" href="#bz2.BZ2Compressor.flush" title="bz2.BZ2Compressor.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> method to finish the compression process.</p>
+<code class="sig-name descname">compress</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Compressor.compress" title="永久链接至目标">¶</a></dt>
+<dd><p>向压缩器对象提供数据。 在可能的情况下返回一段已压缩数据，否则返回空字节串。</p>
+<p>当你已结束向压缩器提供数据时，请调用 <a class="reference internal" href="#bz2.BZ2Compressor.flush" title="bz2.BZ2Compressor.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> 方法来完成压缩进程。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="bz2.BZ2Compressor.flush">
-<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Compressor.flush" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Compressor.flush" title="永久链接至目标">¶</a></dt>
 <dd><p>结束压缩进程，返回内部缓冲中剩余的压缩完成的数据。</p>
-<p>The compressor object may not be used after this method has been called.</p>
+<p>调用此方法之后压缩器对象将不可再被使用。</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="bz2.BZ2Decompressor">
-<em class="property">class </em><code class="descclassname">bz2.</code><code class="descname">BZ2Decompressor</code><a class="headerlink" href="#bz2.BZ2Decompressor" title="永久链接至目标">¶</a></dt>
-<dd><p>Create a new decompressor object. This object may be used to decompress data
-incrementally. For one-shot compression, use the <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> function
-instead.</p>
+<em class="property">class </em><code class="sig-prename descclassname">bz2.</code><code class="sig-name descname">BZ2Decompressor</code><a class="headerlink" href="#bz2.BZ2Decompressor" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个新的解压缩器对象。 此对象可被用来执行增量数据解压缩。 对于一次性解压缩，请改用 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> 函数。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">This class does not transparently handle inputs containing multiple
-compressed streams, unlike <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> and <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a>. If
-you need to decompress a multi-stream input with <a class="reference internal" href="#bz2.BZ2Decompressor" title="bz2.BZ2Decompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Decompressor</span></code></a>,
-you must use a new decompressor for each stream.</p>
+<p class="admonition-title">注解</p>
+<p>这个类不会透明地处理包含多个已压缩数据流的输入，这不同于 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> 和 <a class="reference internal" href="#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2File</span></code></a>。 如果你需要通过 <a class="reference internal" href="#bz2.BZ2Decompressor" title="bz2.BZ2Decompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Decompressor</span></code></a> 来解压缩多个数据流输入，你必须为每个数据流都使用新的解压缩器。</p>
 </div>
 <dl class="method">
 <dt id="bz2.BZ2Decompressor.decompress">
-<code class="descname">decompress</code><span class="sig-paren">(</span><em>data</em>, <em>max_length=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Decompressor.decompress" title="永久链接至目标">¶</a></dt>
-<dd><p>Decompress <em>data</em> (a <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>), returning
-uncompressed data as bytes. Some of <em>data</em> may be buffered
-internally, for use in later calls to <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a>. The
-returned data should be concatenated with the output of any
-previous calls to <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a>.</p>
-<p>If <em>max_length</em> is nonnegative, returns at most <em>max_length</em>
-bytes of decompressed data. If this limit is reached and further
-output can be produced, the <a class="reference internal" href="#bz2.BZ2Decompressor.needs_input" title="bz2.BZ2Decompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> attribute will
-be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>. In this case, the next call to
-<a class="reference internal" href="#bz2.BZ2Decompressor.decompress" title="bz2.BZ2Decompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> may provide <em>data</em> as <code class="docutils literal notranslate"><span class="pre">b''</span></code> to obtain
-more of the output.</p>
-<p>If all of the input data was decompressed and returned (either
-because this was less than <em>max_length</em> bytes, or because
-<em>max_length</em> was negative), the <a class="reference internal" href="#bz2.BZ2Decompressor.needs_input" title="bz2.BZ2Decompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> attribute
-will be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>Attempting to decompress data after the end of stream is reached
-raises an <cite>EOFError</cite>.  Any data found after the end of the
-stream is ignored and saved in the <a class="reference internal" href="#bz2.BZ2Decompressor.unused_data" title="bz2.BZ2Decompressor.unused_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">unused_data</span></code></a> attribute.</p>
+<code class="sig-name descname">decompress</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">max_length=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.BZ2Decompressor.decompress" title="永久链接至目标">¶</a></dt>
+<dd><p>解压缩 <em>data</em> (一个 <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>)，返回字节串形式的解压缩数据。 某些 <em>data</em> 可以在内部被缓冲，以便用于后续的 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 调用。 返回的数据应当与之前任何 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 调用的输出进行拼接。</p>
+<p>如果 <em>max_length</em> 为非负数，将返回至多 <em>max_length</em> 个字节的解压缩数据。 如果达到此限制并且可以产生后续输出，则 <a class="reference internal" href="#bz2.BZ2Decompressor.needs_input" title="bz2.BZ2Decompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> 属性将被设为 <code class="docutils literal notranslate"><span class="pre">False</span></code>。 在这种情况下，下一次 <a class="reference internal" href="#bz2.BZ2Decompressor.decompress" title="bz2.BZ2Decompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 调用提供的 <em>data</em> 可以为 <code class="docutils literal notranslate"><span class="pre">b''</span></code> 以获取更多的输出。</p>
+<p>如果所有输入数据都已被解压缩并返回（或是因为它少于 <em>max_length</em> 个字节，或是因为 <em>max_length</em> 为负数），则 <a class="reference internal" href="#bz2.BZ2Decompressor.needs_input" title="bz2.BZ2Decompressor.needs_input"><code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input</span></code></a> 属性将被设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<p>在到达数据流末尾之后再尝试解压缩数据会引发 <cite>EOFError</cite>。 在数据流末尾之后获取的任何数据都会被忽略并存储至 <a class="reference internal" href="#bz2.BZ2Decompressor.unused_data" title="bz2.BZ2Decompressor.unused_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">unused_data</span></code></a> 属性。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>Added the <em>max_length</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>添加了 <em>max_length</em> 形参。</p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="bz2.BZ2Decompressor.eof">
-<code class="descname">eof</code><a class="headerlink" href="#bz2.BZ2Decompressor.eof" title="永久链接至目标">¶</a></dt>
-<dd><p>若达到了数据流末尾标识符则为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<code class="sig-name descname">eof</code><a class="headerlink" href="#bz2.BZ2Decompressor.eof" title="永久链接至目标">¶</a></dt>
+<dd><p>若达到了数据流的末尾标记则为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="bz2.BZ2Decompressor.unused_data">
-<code class="descname">unused_data</code><a class="headerlink" href="#bz2.BZ2Decompressor.unused_data" title="永久链接至目标">¶</a></dt>
-<dd><p>压缩数据流的末尾还有数据。</p>
-<p>If this attribute is accessed before the end of the stream has been
-reached, its value will be <code class="docutils literal notranslate"><span class="pre">b''</span></code>.</p>
+<code class="sig-name descname">unused_data</code><a class="headerlink" href="#bz2.BZ2Decompressor.unused_data" title="永久链接至目标">¶</a></dt>
+<dd><p>在压缩数据流的末尾之后获取的数据。</p>
+<p>如果在达到数据流末尾之前访问此属性，其值将为 <code class="docutils literal notranslate"><span class="pre">b''</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="bz2.BZ2Decompressor.needs_input">
-<code class="descname">needs_input</code><a class="headerlink" href="#bz2.BZ2Decompressor.needs_input" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> if the <a class="reference internal" href="#bz2.BZ2Decompressor.decompress" title="bz2.BZ2Decompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> method can provide more
-decompressed data before requiring new uncompressed input.</p>
+<code class="sig-name descname">needs_input</code><a class="headerlink" href="#bz2.BZ2Decompressor.needs_input" title="永久链接至目标">¶</a></dt>
+<dd><p>如果在要求新的未解压缩输入之前 <a class="reference internal" href="#bz2.BZ2Decompressor.decompress" title="bz2.BZ2Decompressor.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decompress()</span></code></a> 方法可以提供更多的解压缩数据则为 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
@@ -301,28 +261,103 @@ decompressed data before requiring new uncompressed input.</p>
 
 </div>
 <div class="section" id="one-shot-de-compression">
-<h2>一次性压缩或解压<a class="headerlink" href="#one-shot-de-compression" title="永久链接至标题">¶</a></h2>
+<h2>一次性压缩或解压缩<a class="headerlink" href="#one-shot-de-compression" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="bz2.compress">
-<code class="descclassname">bz2.</code><code class="descname">compress</code><span class="sig-paren">(</span><em>data</em>, <em>compresslevel=9</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.compress" title="永久链接至目标">¶</a></dt>
-<dd><p>压缩 <em>data</em>。</p>
-<p><em>compresslevel</em>, if given, must be a number between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>. The
-default is <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
-<p>For incremental compression, use a <a class="reference internal" href="#bz2.BZ2Compressor" title="bz2.BZ2Compressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Compressor</span></code></a> instead.</p>
+<code class="sig-prename descclassname">bz2.</code><code class="sig-name descname">compress</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">compresslevel=9</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.compress" title="永久链接至目标">¶</a></dt>
+<dd><p>压缩 <em>data</em>，此参数为一个 <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">字节类对象</span></a>。</p>
+<p>如果给定 <em>compresslevel</em>，它必须为 <code class="docutils literal notranslate"><span class="pre">1</span></code> 至 <code class="docutils literal notranslate"><span class="pre">9</span></code> 之间的整数。 默认值为 <code class="docutils literal notranslate"><span class="pre">9</span></code>。</p>
+<p>对于增量压缩，请改用 <a class="reference internal" href="#bz2.BZ2Compressor" title="bz2.BZ2Compressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Compressor</span></code></a>。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="bz2.decompress">
-<code class="descclassname">bz2.</code><code class="descname">decompress</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.decompress" title="永久链接至目标">¶</a></dt>
-<dd><p>解压 <em>data</em>。</p>
-<p>If <em>data</em> is the concatenation of multiple compressed streams, decompress
-all of the streams.</p>
-<p>For incremental decompression, use a <a class="reference internal" href="#bz2.BZ2Decompressor" title="bz2.BZ2Decompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Decompressor</span></code></a> instead.</p>
+<code class="sig-prename descclassname">bz2.</code><code class="sig-name descname">decompress</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#bz2.decompress" title="永久链接至目标">¶</a></dt>
+<dd><p>解压缩 <em>data</em>，此参数为一个 <a class="reference internal" href="glossary.html#term-bytes-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytes-like-object"><span class="xref std std-term">字节类对象</span></a>。</p>
+<p>如果 <em>data</em> 是多个压缩数据流的拼接，则解压缩所有数据流。</p>
+<p>对于增量解压缩，请改用 <a class="reference internal" href="#bz2.BZ2Decompressor" title="bz2.BZ2Decompressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Decompressor</span></code></a>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>支持了多数据流的输入。</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>支持了多数据流的输入。</p>
 </div>
 </dd></dl>
 
+</div>
+<div class="section" id="examples-of-usage">
+<span id="bz2-usage-examples"></span><h2>用法示例<a class="headerlink" href="#examples-of-usage" title="永久链接至标题">¶</a></h2>
+<p>以下是 <a class="reference internal" href="#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a> 模块典型用法的一些示例。</p>
+<p>使用 <a class="reference internal" href="#bz2.compress" title="bz2.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">compress()</span></code></a> 和 <a class="reference internal" href="#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">decompress()</span></code></a> 来显示往复式的压缩：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bz2</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="gp">... </span><span class="s2">Donec rhoncus quis sapien sit amet molestie. Fusce scelerisque vel augue</span>
+<span class="gp">... </span><span class="s2">nec ullamcorper. Nam rutrum pretium placerat. Aliquam vel tristique lorem,</span>
+<span class="gp">... </span><span class="s2">sit amet cursus ante. In interdum laoreet mi, sit amet ultrices purus</span>
+<span class="gp">... </span><span class="s2">pulvinar a. Nam gravida euismod magna, non varius justo tincidunt feugiat.</span>
+<span class="gp">... </span><span class="s2">Aliquam pharetra lacus non risus vehicula rutrum. Maecenas aliquam leo</span>
+<span class="gp">... </span><span class="s2">felis. Pellentesque semper nunc sit amet nibh ullamcorper, ac elementum</span>
+<span class="gp">... </span><span class="s2">dolor luctus. Curabitur lacinia mi ornare consectetur vestibulum.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">bz2</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># Data compression ratio</span>
+<span class="go">1.513595166163142</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">bz2</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">==</span> <span class="n">d</span>  <span class="c1"># Check equality to original object after round-trip</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>使用 <a class="reference internal" href="#bz2.BZ2Compressor" title="bz2.BZ2Compressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">BZ2Compressor</span></code></a> 进行增量压缩：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bz2</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">gen_data</span><span class="p">(</span><span class="n">chunks</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Yield incremental blocks of chunksize bytes.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">chunks</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">yield</span> <span class="sa">b</span><span class="s2">&quot;z&quot;</span> <span class="o">*</span> <span class="n">chunksize</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span> <span class="o">=</span> <span class="n">bz2</span><span class="o">.</span><span class="n">BZ2Compressor</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">gen_data</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="c1"># Provide data to the compressor object</span>
+<span class="gp">... </span>    <span class="n">out</span> <span class="o">=</span> <span class="n">out</span> <span class="o">+</span> <span class="n">comp</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Finish the compression process.  Call this once you have</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># finished providing data to the compressor.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">out</span> <span class="o">+</span> <span class="n">comp</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>上面的示例使用了十分“非随机”的数据流（即 <cite>b&quot;z&quot;</cite> 块数据流）。 随机数据的压缩率通常很差，而有序、重复的数据通常会产生很高的压缩率。</p>
+<p>用二进制模式写入和读取 bzip2 压缩文件：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bz2</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="gp">... </span><span class="s2">Donec rhoncus quis sapien sit amet molestie. Fusce scelerisque vel augue</span>
+<span class="gp">... </span><span class="s2">nec ullamcorper. Nam rutrum pretium placerat. Aliquam vel tristique lorem,</span>
+<span class="gp">... </span><span class="s2">sit amet cursus ante. In interdum laoreet mi, sit amet ultrices purus</span>
+<span class="gp">... </span><span class="s2">pulvinar a. Nam gravida euismod magna, non varius justo tincidunt feugiat.</span>
+<span class="gp">... </span><span class="s2">Aliquam pharetra lacus non risus vehicula rutrum. Maecenas aliquam leo</span>
+<span class="gp">... </span><span class="s2">felis. Pellentesque semper nunc sit amet nibh ullamcorper, ac elementum</span>
+<span class="gp">... </span><span class="s2">dolor luctus. Curabitur lacinia mi ornare consectetur vestibulum.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">bz2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;myfile.bz2&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="c1"># Write compressed data to file</span>
+<span class="gp">... </span>    <span class="n">unused</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">bz2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;myfile.bz2&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="c1"># Decompress data from file</span>
+<span class="gp">... </span>    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">content</span> <span class="o">==</span> <span class="n">data</span>  <span class="c1"># Check equality to original object after round-trip</span>
+<span class="go">True</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -332,28 +367,29 @@ all of the streams.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">bz2</span></code> --- 对 <strong class="program">bzip2</strong> 压缩算法的支持</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code> --- 对 <strong class="program">bzip2</strong> 压缩算法的支持</a><ul>
 <li><a class="reference internal" href="#de-compression-of-files">文件压缩和解压</a></li>
 <li><a class="reference internal" href="#incremental-de-compression">增量压缩和解压</a></li>
-<li><a class="reference internal" href="#one-shot-de-compression">一次性压缩或解压</a></li>
+<li><a class="reference internal" href="#one-shot-de-compression">一次性压缩或解压缩</a></li>
+<li><a class="reference internal" href="#examples-of-usage">用法示例</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="gzip.html" tppabs="https://docs.python.org/zh-cn/3/library/gzip.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">gzip</span></code> --- 对 <strong class="program">gzip</strong> 格式的支持</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code> --- 对 <strong class="program">gzip</strong> 格式的支持</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="lzma.html" tppabs="https://docs.python.org/zh-cn/3/library/lzma.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">lzma</span></code> --- 用 LZMA 算法压缩</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lzma</span></code> --- 用 LZMA 算法压缩</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/bz2.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/bz2.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/bz2.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/bz2.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/bz2.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/bz2.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -378,14 +414,17 @@ all of the streams.</p>
         <li class="right" >
           <a href="gzip.html" tppabs="https://docs.python.org/zh-cn/3/library/gzip.html" title="gzip --- 对 gzip 格式的支持"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="archiving.html" tppabs="https://docs.python.org/zh-cn/3/library/archiving.html" >数据压缩和存档</a> &#187;</li>
@@ -407,15 +446,19 @@ all of the streams.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

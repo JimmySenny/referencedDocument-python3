@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>heapq --- Heap queue algorithm &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>heapq --- 堆队列算法 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="bisect --- Array bisection algorithm" href="bisect.html" />
+    <link rel="next" title="bisect --- 数组二分查找算法" href="bisect.html" />
     <link rel="prev" title="collections.abc --- 容器的抽象基类" href="collections.abc.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/heapq.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="bisect.html" tppabs="https://docs.python.org/zh-cn/3/library/bisect.html" title="bisect --- Array bisection algorithm"
+          <a href="bisect.html" tppabs="https://docs.python.org/zh-cn/3/library/bisect.html" title="bisect --- 数组二分查找算法"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="collections.abc.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html" title="collections.abc --- 容器的抽象基类"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" accesskey="U">数据类型</a> &#187;</li>
@@ -96,124 +104,77 @@
           <div class="body" role="main">
             
   <div class="section" id="module-heapq">
-<span id="heapq-heap-queue-algorithm"></span><h1><a class="reference internal" href="#module-heapq" title="heapq: Heap queue algorithm (a.k.a. priority queue)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code></a> --- Heap queue algorithm<a class="headerlink" href="#module-heapq" title="永久链接至标题">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/heapq.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/heapq.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/heapq.py">Lib/heapq.py</a></p>
+<span id="heapq-heap-queue-algorithm"></span><h1><a class="reference internal" href="#module-heapq" title="heapq: Heap queue algorithm (a.k.a. priority queue)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code></a> --- 堆队列算法<a class="headerlink" href="#module-heapq" title="永久链接至标题">¶</a></h1>
+<p><strong>源码：</strong><a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue9025  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue9025'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/heapq.py">Lib/heapq.py</a></p>
 <hr class="docutils" />
-<p>This module provides an implementation of the heap queue algorithm, also known
-as the priority queue algorithm.</p>
-<p>Heaps are binary trees for which every parent node has a value less than or
-equal to any of its children.  This implementation uses arrays for which
-<code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span> <span class="pre">heap[2*k+1]</span></code> and <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span> <span class="pre">heap[2*k+2]</span></code> for all <em>k</em>, counting
-elements from zero.  For the sake of comparison, non-existing elements are
-considered to be infinite.  The interesting property of a heap is that its
-smallest element is always the root, <code class="docutils literal notranslate"><span class="pre">heap[0]</span></code>.</p>
-<p>The API below differs from textbook heap algorithms in two aspects: (a) We use
-zero-based indexing.  This makes the relationship between the index for a node
-and the indexes for its children slightly less obvious, but is more suitable
-since Python uses zero-based indexing. (b) Our pop method returns the smallest
-item, not the largest (called a &quot;min heap&quot; in textbooks; a &quot;max heap&quot; is more
-common in texts because of its suitability for in-place sorting).</p>
-<p>These two make it possible to view the heap as a regular Python list without
-surprises: <code class="docutils literal notranslate"><span class="pre">heap[0]</span></code> is the smallest item, and <code class="docutils literal notranslate"><span class="pre">heap.sort()</span></code> maintains the
-heap invariant!</p>
-<p>To create a heap, use a list initialized to <code class="docutils literal notranslate"><span class="pre">[]</span></code>, or you can transform a
-populated list into a heap via function <a class="reference internal" href="#heapq.heapify" title="heapq.heapify"><code class="xref py py-func docutils literal notranslate"><span class="pre">heapify()</span></code></a>.</p>
-<p>The following functions are provided:</p>
+<p>这个模块提供了堆队列算法的实现，也称为优先队列算法。</p>
+<p>堆是一个二叉树，它的每个父节点的值都只会小于或大于所有孩子节点（的值）。它使用了数组来实现：从零开始计数，对于所有的 <em>k</em> ，都有 <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span> <span class="pre">heap[2*k+1]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span> <span class="pre">heap[2*k+2]</span></code>。 为了便于比较，不存在的元素被认为是无限大。 堆最有趣的特性在于最小的元素总是在根结点：<code class="docutils literal notranslate"><span class="pre">heap[0]</span></code>。</p>
+<p>这个API与教材的堆算法实现有所不同，具体区别有两方面：（a）我们使用了从零开始的索引。这使得节点和其孩子节点索引之间的关系不太直观但更加适合，因为 Python 使用从零开始的索引。 （b）我们的 pop 方法返回最小的项而不是最大的项（这在教材中称为“最小堆”；而“最大堆”在教材中更为常见，因为它更适用于原地排序）。</p>
+<p>基于这两方面，把堆看作原生的Python list也没什么奇怪的： <code class="docutils literal notranslate"><span class="pre">heap[0]</span></code> 表示最小的元素，同时 <code class="docutils literal notranslate"><span class="pre">heap.sort()</span></code> 维护了堆的不变性！</p>
+<p>要创建一个堆，可以使用list来初始化为 <code class="docutils literal notranslate"><span class="pre">[]</span></code> ，或者你可以通过一个函数 <a class="reference internal" href="#heapq.heapify" title="heapq.heapify"><code class="xref py py-func docutils literal notranslate"><span class="pre">heapify()</span></code></a> ，来把一个list转换成堆。</p>
+<p>定义了以下函数：</p>
 <dl class="function">
 <dt id="heapq.heappush">
-<code class="descclassname">heapq.</code><code class="descname">heappush</code><span class="sig-paren">(</span><em>heap</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heappush" title="永久链接至目标">¶</a></dt>
-<dd><p>Push the value <em>item</em> onto the <em>heap</em>, maintaining the heap invariant.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">heappush</code><span class="sig-paren">(</span><em class="sig-param">heap</em>, <em class="sig-param">item</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heappush" title="永久链接至目标">¶</a></dt>
+<dd><p>将 <em>item</em> 的值加入 <em>heap</em> 中，保持堆的不变性。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="heapq.heappop">
-<code class="descclassname">heapq.</code><code class="descname">heappop</code><span class="sig-paren">(</span><em>heap</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heappop" title="永久链接至目标">¶</a></dt>
-<dd><p>Pop and return the smallest item from the <em>heap</em>, maintaining the heap
-invariant.  If the heap is empty, <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> is raised.  To access the
-smallest item without popping it, use <code class="docutils literal notranslate"><span class="pre">heap[0]</span></code>.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">heappop</code><span class="sig-paren">(</span><em class="sig-param">heap</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heappop" title="永久链接至目标">¶</a></dt>
+<dd><p>弹出并返回 <em>heap</em> 的最小的元素，保持堆的不变性。如果堆为空，抛出 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> 。使用 <code class="docutils literal notranslate"><span class="pre">heap[0]</span></code> ，可以只访问最小的元素而不弹出它。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="heapq.heappushpop">
-<code class="descclassname">heapq.</code><code class="descname">heappushpop</code><span class="sig-paren">(</span><em>heap</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heappushpop" title="永久链接至目标">¶</a></dt>
-<dd><p>Push <em>item</em> on the heap, then pop and return the smallest item from the
-<em>heap</em>.  The combined action runs more efficiently than <a class="reference internal" href="#heapq.heappush" title="heapq.heappush"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappush()</span></code></a>
-followed by a separate call to <a class="reference internal" href="#heapq.heappop" title="heapq.heappop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappop()</span></code></a>.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">heappushpop</code><span class="sig-paren">(</span><em class="sig-param">heap</em>, <em class="sig-param">item</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heappushpop" title="永久链接至目标">¶</a></dt>
+<dd><p>将 <em>item</em> 放入堆中，然后弹出并返回 <em>heap</em> 的最小元素。该组合操作比先调用  <a class="reference internal" href="#heapq.heappush" title="heapq.heappush"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappush()</span></code></a> 再调用 <a class="reference internal" href="#heapq.heappop" title="heapq.heappop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappop()</span></code></a> 运行起来更有效率。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="heapq.heapify">
-<code class="descclassname">heapq.</code><code class="descname">heapify</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heapify" title="永久链接至目标">¶</a></dt>
-<dd><p>Transform list <em>x</em> into a heap, in-place, in linear time.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">heapify</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heapify" title="永久链接至目标">¶</a></dt>
+<dd><p>将list <em>x</em> 转换成堆，原地，线性时间内。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="heapq.heapreplace">
-<code class="descclassname">heapq.</code><code class="descname">heapreplace</code><span class="sig-paren">(</span><em>heap</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heapreplace" title="永久链接至目标">¶</a></dt>
-<dd><p>Pop and return the smallest item from the <em>heap</em>, and also push the new <em>item</em>.
-The heap size doesn't change. If the heap is empty, <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> is raised.</p>
-<p>This one step operation is more efficient than a <a class="reference internal" href="#heapq.heappop" title="heapq.heappop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappop()</span></code></a> followed by
-<a class="reference internal" href="#heapq.heappush" title="heapq.heappush"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappush()</span></code></a> and can be more appropriate when using a fixed-size heap.
-The pop/push combination always returns an element from the heap and replaces
-it with <em>item</em>.</p>
-<p>The value returned may be larger than the <em>item</em> added.  If that isn't
-desired, consider using <a class="reference internal" href="#heapq.heappushpop" title="heapq.heappushpop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappushpop()</span></code></a> instead.  Its push/pop
-combination returns the smaller of the two values, leaving the larger value
-on the heap.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">heapreplace</code><span class="sig-paren">(</span><em class="sig-param">heap</em>, <em class="sig-param">item</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.heapreplace" title="永久链接至目标">¶</a></dt>
+<dd><p>弹出并返回 <em>heap</em> 中最小的一项，同时推入新的 <em>item</em>。 堆的大小不变。 如果堆为空则引发 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>。</p>
+<p>这个单步骤操作比 <a class="reference internal" href="#heapq.heappop" title="heapq.heappop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappop()</span></code></a> 加 <a class="reference internal" href="#heapq.heappush" title="heapq.heappush"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappush()</span></code></a> 更高效，并且在使用固定大小的堆时更为适宜。 pop/push 组合总是会从堆中返回一个元素并将其替换为 <em>item</em>。</p>
+<p>返回的值可能会比添加的 <em>item</em> 更大。 如果不希望如此，可考虑改用 <a class="reference internal" href="#heapq.heappushpop" title="heapq.heappushpop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappushpop()</span></code></a>。 它的 push/pop 组合会返回两个值中较小的一个，将较大的值留在堆中。</p>
 </dd></dl>
 
-<p>The module also offers three general purpose functions based on heaps.</p>
+<p>该模块还提供了三个基于堆的通用功能函数。</p>
 <dl class="function">
 <dt id="heapq.merge">
-<code class="descclassname">heapq.</code><code class="descname">merge</code><span class="sig-paren">(</span><em>*iterables</em>, <em>key=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.merge" title="永久链接至目标">¶</a></dt>
-<dd><p>Merge multiple sorted inputs into a single sorted output (for example, merge
-timestamped entries from multiple log files).  Returns an <a class="reference internal" href="glossary.html#term-iterator" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a>
-over the sorted values.</p>
-<p>Similar to <code class="docutils literal notranslate"><span class="pre">sorted(itertools.chain(*iterables))</span></code> but returns an iterable, does
-not pull the data into memory all at once, and assumes that each of the input
-streams is already sorted (smallest to largest).</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">*iterables</em>, <em class="sig-param">key=None</em>, <em class="sig-param">reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.merge" title="永久链接至目标">¶</a></dt>
+<dd><p>将多个已排序的输入合并为一个已排序的输出（例如，合并来自多个日志文件的带时间戳的条目）。 返回已排序值的 <a class="reference internal" href="glossary.html#term-iterator" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a>。</p>
+<p>类似于 <code class="docutils literal notranslate"><span class="pre">sorted(itertools.chain(*iterables))</span></code> 但返回一个可迭代对象，不会一次性地将数据全部放入内存，并假定每个输入流都是已排序的（从小到大）。</p>
 <p>具有两个可选参数，它们都必须指定为关键字参数。</p>
-<p><em>key</em> specifies a <a class="reference internal" href="glossary.html#term-key-function" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-key-function"><span class="xref std std-term">key function</span></a> of one argument that is used to
-extract a comparison key from each input element.  The default value is
-<code class="docutils literal notranslate"><span class="pre">None</span></code> (compare the elements directly).</p>
-<p><em>reverse</em> is a boolean value.  If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the input elements
-are merged as if each comparison were reversed. To achieve behavior similar
-to <code class="docutils literal notranslate"><span class="pre">sorted(itertools.chain(*iterables),</span> <span class="pre">reverse=True)</span></code>, all iterables must
-be sorted from largest to smallest.</p>
+<p><em>key</em> 指定带有单个参数的 <a class="reference internal" href="glossary.html#term-key-function" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-key-function"><span class="xref std std-term">key function</span></a>，用于从每个输入元素中提取比较键。 默认值为 <code class="docutils literal notranslate"><span class="pre">None</span></code> (直接比较元素)。</p>
+<p><em>reverse</em> 为一个布尔值。 如果设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则输入元素将按比较结果逆序进行合并。 要达成与 <code class="docutils literal notranslate"><span class="pre">sorted(itertools.chain(*iterables),</span> <span class="pre">reverse=True)</span></code> 类似的行为，所有可迭代对象必须是已从大到小排序的。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>Added the optional <em>key</em> and <em>reverse</em> parameters.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>添加了可选的 <em>key</em> 和 <em>reverse</em> 形参。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="heapq.nlargest">
-<code class="descclassname">heapq.</code><code class="descname">nlargest</code><span class="sig-paren">(</span><em>n</em>, <em>iterable</em>, <em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.nlargest" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list with the <em>n</em> largest elements from the dataset defined by
-<em>iterable</em>.  <em>key</em>, if provided, specifies a function of one argument that is
-used to extract a comparison key from each element in <em>iterable</em> (for example,
-<code class="docutils literal notranslate"><span class="pre">key=str.lower</span></code>).  Equivalent to:  <code class="docutils literal notranslate"><span class="pre">sorted(iterable,</span> <span class="pre">key=key,</span>
-<span class="pre">reverse=True)[:n]</span></code>.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">nlargest</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">iterable</em>, <em class="sig-param">key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.nlargest" title="永久链接至目标">¶</a></dt>
+<dd><p>从 <em>iterable</em> 所定义的数据集中返回前 <em>n</em> 个最大元素组成的列表。 如果提供了 <em>key</em> 则其应指定一个单参数的函数，用于从 <em>iterable</em> 的每个元素中提取比较键 (例如 <code class="docutils literal notranslate"><span class="pre">key=str.lower</span></code>)。 等价于:  <code class="docutils literal notranslate"><span class="pre">sorted(iterable,</span> <span class="pre">key=key,</span> <span class="pre">reverse=True)[:n]</span></code>。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="heapq.nsmallest">
-<code class="descclassname">heapq.</code><code class="descname">nsmallest</code><span class="sig-paren">(</span><em>n</em>, <em>iterable</em>, <em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.nsmallest" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list with the <em>n</em> smallest elements from the dataset defined by
-<em>iterable</em>.  <em>key</em>, if provided, specifies a function of one argument that is
-used to extract a comparison key from each element in <em>iterable</em> (for example,
-<code class="docutils literal notranslate"><span class="pre">key=str.lower</span></code>).  Equivalent to:  <code class="docutils literal notranslate"><span class="pre">sorted(iterable,</span> <span class="pre">key=key)[:n]</span></code>.</p>
+<code class="sig-prename descclassname">heapq.</code><code class="sig-name descname">nsmallest</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">iterable</em>, <em class="sig-param">key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#heapq.nsmallest" title="永久链接至目标">¶</a></dt>
+<dd><p>从 <em>iterable</em> 所定义的数据集中返回前 <em>n</em> 个最小元素组成的列表。 如果提供了 <em>key</em> 则其应指定一个单参数的函数，用于从 <em>iterable</em> 的每个元素中提取比较键 (例如 <code class="docutils literal notranslate"><span class="pre">key=str.lower</span></code>)。 等价于: <code class="docutils literal notranslate"><span class="pre">sorted(iterable,</span> <span class="pre">key=key)[:n]</span></code>。</p>
 </dd></dl>
 
-<p>The latter two functions perform best for smaller values of <em>n</em>.  For larger
-values, it is more efficient to use the <a class="reference internal" href="functions.html#sorted" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> function.  Also, when
-<code class="docutils literal notranslate"><span class="pre">n==1</span></code>, it is more efficient to use the built-in <a class="reference internal" href="functions.html#min" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#min" title="min"><code class="xref py py-func docutils literal notranslate"><span class="pre">min()</span></code></a> and <a class="reference internal" href="functions.html#max" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#max" title="max"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a>
-functions.  If repeated usage of these functions is required, consider turning
-the iterable into an actual heap.</p>
+<p>后两个函数在 <em>n</em> 值较小时性能最好。 对于更大的值，使用 <a class="reference internal" href="functions.html#sorted" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> 函数会更有效率。 此外，当 <code class="docutils literal notranslate"><span class="pre">n==1</span></code> 时，使用内置的 <a class="reference internal" href="functions.html#min" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#min" title="min"><code class="xref py py-func docutils literal notranslate"><span class="pre">min()</span></code></a> 和 <a class="reference internal" href="functions.html#max" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#max" title="max"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a> 函数会更有效率。 如果需要重复使用这些函数，请考虑将可迭代对象转为真正的堆。</p>
 <div class="section" id="basic-examples">
 <h2>基本示例<a class="headerlink" href="#basic-examples" title="永久链接至标题">¶</a></h2>
-<p>A <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Heapsort  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Heapsort'" tppabs="https://en.wikipedia.org/wiki/Heapsort">heapsort</a> can be implemented by
-pushing all values onto a heap and then popping off the smallest values one at a
-time:</p>
+<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue8807  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue8807'" tppabs="https://en.wikipedia.org/wiki/Heapsort">堆排序</a> 可以通过将所有值推入堆中然后每次弹出一个最小值项来实现。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">heapsort</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">h</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">... </span>    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
@@ -224,10 +185,8 @@ time:</p>
 <span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 </pre></div>
 </div>
-<p>This is similar to <code class="docutils literal notranslate"><span class="pre">sorted(iterable)</span></code>, but unlike <a class="reference internal" href="functions.html#sorted" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a>, this
-implementation is not stable.</p>
-<p>Heap elements can be tuples.  This is useful for assigning comparison values
-(such as task priorities) alongside the main record being tracked:</p>
+<p>这类似于 <code class="docutils literal notranslate"><span class="pre">sorted(iterable)</span></code>，但与 <a class="reference internal" href="functions.html#sorted" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> 不同的是这个实现是不稳定的。</p>
+<p>堆元素可以为元组。 这适用于将比较值（例如任务优先级）与跟踪的主记录进行赋值的场合:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;write code&#39;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;release product&#39;</span><span class="p">))</span>
@@ -239,28 +198,18 @@ implementation is not stable.</p>
 </div>
 </div>
 <div class="section" id="priority-queue-implementation-notes">
-<h2>Priority Queue Implementation Notes<a class="headerlink" href="#priority-queue-implementation-notes" title="永久链接至标题">¶</a></h2>
-<p>A <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Priority_queue  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Priority_queue'" tppabs="https://en.wikipedia.org/wiki/Priority_queue">priority queue</a> is common use
-for a heap, and it presents several implementation challenges:</p>
+<h2>优先队列实现说明<a class="headerlink" href="#priority-queue-implementation-notes" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue6706  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue6706'" tppabs="https://en.wikipedia.org/wiki/Priority_queue">优先队列</a> 是堆的常用场合，并且它的实现包含了多个挑战：</p>
 <ul class="simple">
-<li>Sort stability:  how do you get two tasks with equal priorities to be returned
-in the order they were originally added?</li>
-<li>Tuple comparison breaks for (priority, task) pairs if the priorities are equal
-and the tasks do not have a default comparison order.</li>
-<li>If the priority of a task changes, how do you move it to a new position in
-the heap?</li>
-<li>Or if a pending task needs to be deleted, how do you find it and remove it
-from the queue?</li>
+<li><p>排序稳定性：你该如何令相同优先级的两个任务按它们最初被加入时的顺序返回？</p></li>
+<li><p>如果优先级相同且任务没有默认比较顺序，则 (priority, task) 对的元组比较将会中断。</p></li>
+<li><p>如果任务优先级发生改变，你该如何将其移至堆中的新位置？</p></li>
+<li><p>或者如果一个挂起的任务需要被删除，你该如何找到它并将其移出队列？</p></li>
 </ul>
-<p>A solution to the first two challenges is to store entries as 3-element list
-including the priority, an entry count, and the task.  The entry count serves as
-a tie-breaker so that two tasks with the same priority are returned in the order
-they were added. And since no two entry counts are the same, the tuple
-comparison will never attempt to directly compare two tasks.</p>
-<p>Another solution to the problem of non-comparable tasks is to create a wrapper
-class that ignores the task item and only compares the priority field:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="k">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Any</span>
+<p>针对前两项挑战的一种解决方案是将条目保存为包含优先级、条目计数和任务对象 3 个元素的列表。 条目计数可用来打破平局，这样具有相同优先级的任务将按它们的添加顺序返回。 并且由于没有哪两个条目计数是相同的，元组比较将永远不会直接比较两个任务。</p>
+<p>不可比较任务问题的另一种解决方案是创建一个忽略任务条目并且只比较优先级字段的包装器类:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">PrioritizedItem</span><span class="p">:</span>
@@ -268,12 +217,8 @@ class that ignores the task item and only compares the priority field:</p>
     <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="o">=</span><span class="n">field</span><span class="p">(</span><span class="n">compare</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The remaining challenges revolve around finding a pending task and making
-changes to its priority or removing it entirely.  Finding a task can be done
-with a dictionary pointing to an entry in the queue.</p>
-<p>Removing the entry or changing its priority is more difficult because it would
-break the heap structure invariants.  So, a possible solution is to mark the
-entry as removed and add a new entry with the revised priority:</p>
+<p>其余的挑战主要包括找到挂起的任务并修改其优先级或将其完全移除。 找到一个任务可使用一个指向队列中条目的字典来实现。</p>
+<p>移除条目或改变其优先级的操作实现起来更为困难，因为它会破坏堆结构不变量。 因此，一种可能的解决方案是将条目标记为已移除，再添加一个改变了优先级的新条目:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>                         <span class="c1"># list of entries arranged in a heap</span>
 <span class="n">entry_finder</span> <span class="o">=</span> <span class="p">{}</span>               <span class="c1"># mapping of tasks to entries</span>
 <span class="n">REMOVED</span> <span class="o">=</span> <span class="s1">&#39;&lt;removed-task&gt;&#39;</span>      <span class="c1"># placeholder for a removed task</span>
@@ -305,13 +250,9 @@ entry as removed and add a new entry with the revised priority:</p>
 </div>
 </div>
 <div class="section" id="theory">
-<h2>Theory<a class="headerlink" href="#theory" title="永久链接至标题">¶</a></h2>
-<p>Heaps are arrays for which <code class="docutils literal notranslate"><span class="pre">a[k]</span> <span class="pre">&lt;=</span> <span class="pre">a[2*k+1]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[k]</span> <span class="pre">&lt;=</span> <span class="pre">a[2*k+2]</span></code> for all
-<em>k</em>, counting elements from 0.  For the sake of comparison, non-existing
-elements are considered to be infinite.  The interesting property of a heap is
-that <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> is always its smallest element.</p>
-<p>The strange invariant above is meant to be an efficient memory representation
-for a tournament.  The numbers below are <em>k</em>, not <code class="docutils literal notranslate"><span class="pre">a[k]</span></code>:</p>
+<h2>理论<a class="headerlink" href="#theory" title="永久链接至标题">¶</a></h2>
+<p>堆是通过数组来实现的，其中的元素从 0 开始计数，对于所有的 <em>k</em> 都有 <code class="docutils literal notranslate"><span class="pre">a[k]</span> <span class="pre">&lt;=</span> <span class="pre">a[2*k+1]</span></code> 且 <code class="docutils literal notranslate"><span class="pre">a[k]</span> <span class="pre">&lt;=</span> <span class="pre">a[2*k+2]</span></code>。 为了便于比较，不存在的元素被视为无穷大。 堆最有趣的特性在于 <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> 总是其中最小的元素。</p>
+<p>上面的特殊不变量是用来作为一场锦标赛的高效内存表示。 下面的数字是 <em>k</em> 而不是 <code class="docutils literal notranslate"><span class="pre">a[k]</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>                               <span class="mi">0</span>
 
               <span class="mi">1</span>                                 <span class="mi">2</span>
@@ -323,66 +264,19 @@ for a tournament.  The numbers below are <em>k</em>, not <code class="docutils l
 <span class="mi">15</span> <span class="mi">16</span>   <span class="mi">17</span> <span class="mi">18</span>   <span class="mi">19</span> <span class="mi">20</span>   <span class="mi">21</span> <span class="mi">22</span>   <span class="mi">23</span> <span class="mi">24</span>   <span class="mi">25</span> <span class="mi">26</span>   <span class="mi">27</span> <span class="mi">28</span>   <span class="mi">29</span> <span class="mi">30</span>
 </pre></div>
 </div>
-<p>In the tree above, each cell <em>k</em> is topping <code class="docutils literal notranslate"><span class="pre">2*k+1</span></code> and <code class="docutils literal notranslate"><span class="pre">2*k+2</span></code>. In a usual
-binary tournament we see in sports, each cell is the winner over the two cells
-it tops, and we can trace the winner down the tree to see all opponents s/he
-had.  However, in many computer applications of such tournaments, we do not need
-to trace the history of a winner. To be more memory efficient, when a winner is
-promoted, we try to replace it by something else at a lower level, and the rule
-becomes that a cell and the two cells it tops contain three different items, but
-the top cell &quot;wins&quot; over the two topped cells.</p>
-<p>If this heap invariant is protected at all time, index 0 is clearly the overall
-winner.  The simplest algorithmic way to remove it and find the &quot;next&quot; winner is
-to move some loser (let's say cell 30 in the diagram above) into the 0 position,
-and then percolate this new 0 down the tree, exchanging values, until the
-invariant is re-established. This is clearly logarithmic on the total number of
-items in the tree. By iterating over all items, you get an O(n log n) sort.</p>
-<p>A nice feature of this sort is that you can efficiently insert new items while
-the sort is going on, provided that the inserted items are not &quot;better&quot; than the
-last 0'th element you extracted.  This is especially useful in simulation
-contexts, where the tree holds all incoming events, and the &quot;win&quot; condition
-means the smallest scheduled time.  When an event schedules other events for
-execution, they are scheduled into the future, so they can easily go into the
-heap.  So, a heap is a good structure for implementing schedulers (this is what
-I used for my MIDI sequencer :-).</p>
-<p>Various structures for implementing schedulers have been extensively studied,
-and heaps are good for this, as they are reasonably speedy, the speed is almost
-constant, and the worst case is not much different than the average case.
-However, there are other representations which are more efficient overall, yet
-the worst cases might be terrible.</p>
-<p>Heaps are also very useful in big disk sorts.  You most probably all know that a
-big sort implies producing &quot;runs&quot; (which are pre-sorted sequences, whose size is
-usually related to the amount of CPU memory), followed by a merging passes for
-these runs, which merging is often very cleverly organised <a class="footnote-reference" href="#id2" id="id1">[1]</a>. It is very
-important that the initial sort produces the longest runs possible.  Tournaments
-are a good way to achieve that.  If, using all the memory available to hold a
-tournament, you replace and percolate items that happen to fit the current run,
-you'll produce runs which are twice the size of the memory for random input, and
-much better for input fuzzily ordered.</p>
-<p>Moreover, if you output the 0'th item on disk and get an input which may not fit
-in the current tournament (because the value &quot;wins&quot; over the last output value),
-it cannot fit in the heap, so the size of the heap decreases.  The freed memory
-could be cleverly reused immediately for progressively building a second heap,
-which grows at exactly the same rate the first heap is melting.  When the first
-heap completely vanishes, you switch heaps and start a new run.  Clever and
-quite effective!</p>
-<p>In a word, heaps are useful memory structures to know.  I use them in a few
-applications, and I think it is good to keep a 'heap' module around. :-)</p>
+<p>在上面的树中，每个 <em>k</em> 单元都位于 <code class="docutils literal notranslate"><span class="pre">2*k+1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">2*k+2</span></code> 之上。 体育运动中我们经常见到二元锦标赛模式，每个胜者单元都位于另两个单元之上，并且我们可以沿着树形图向下追溯胜者所遇到的所有对手。 但是，在许多采用这种锦标赛模式的计算机应用程序中，我们并不需要追溯胜者的历史。 为了获得更高的内存利用效率，当一个胜者晋级时，我们会用较低层级的另一条目来替代它，因此规则变为一个单元和它之下的两个单元包含三个不同条目，上方单元“胜过”了两个下方单元。</p>
+<p>如果此堆的不变量始终受到保护，则序号 0 显然是最后的赢家。 删除它并找出“下一个”赢家的最简单算法方式是家某个输家（让我们假定是上图中的 30 号单元）移至 0 号位置，然后将这个新的 0 号沿树下行，不断进行值的交换，直到不变量重新建立。 这显然会是树中条目总数的对数。 通过迭代所有条目，你将得到一个 O(n log n) 复杂度的排序。</p>
+<p>此排序有一个很好的特性就是你可以在排序进行期间高效地插入新条目，前提是插入的条目不比你最近取出的 0 号元素“更好”。 这在模拟上下文时特别有用，在这种情况下树保存的是所有传入事件，“胜出”条件是最小调度时间。 当一个事件将其他事件排入执行计划时，它们的调试时间向未来方向延长，这样它们可方便地入堆。 因此，堆结构很适宜用来实现调度器，我的 MIDI 音序器就是用的这个 :-)。</p>
+<p>用于实现调度器的各种结构都得到了充分的研究，堆是非常适宜的一种，因为它们的速度相当快，并且几乎是恒定的，最坏的情况与平均情况没有太大差别。 虽然还存在其他总体而言更高效的实现方式，但其最坏的情况却可能非常糟糕。</p>
+<p>堆在大磁盘排序中也非常有用。 你应该已经了解大规模排序会有多个“运行轮次”（即预排序的序列，其大小通常与 CPU 内存容量相关），随后这些轮次会进入合并通道，轮次合并的组织往往非常巧妙 <a class="footnote-reference brackets" href="#id2" id="id1">1</a>。 非常重要的一点是初始排序应产生尽可能长的运行轮次。 锦标赛模式是达成此目标的好办法。 如果你使用全部有用内存来进行锦标赛，替换和安排恰好适合当前运行轮次的条目，你将可以对于随机输入生成两倍于内存大小的运行轮次，对于模糊排序的输入还会有更好的效果。</p>
+<p>另外，如果你输出磁盘上的第 0 个条目并获得一个可能不适合当前锦标赛的输入（因为其值要“胜过”上一个输出值），它无法被放入堆中，因此堆的尺寸将缩小。 被释放的内存可以被巧妙地立即重用以逐步构建第二个堆，其增长速度与第一个堆的缩减速度正好相同。 当第一个堆完全消失时，你可以切换新堆并启动新的运行轮次。 这样做既聪明又高效！</p>
+<p>总之，堆是值得了解的有用内存结构。 我在一些应用中用到了它们，并且认为保留一个 'heap' 模块是很有意义的。 :-)</p>
 <p class="rubric">脚注</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The disk balancing algorithms which are current, nowadays, are more annoying
-than clever, and this is a consequence of the seeking capabilities of the disks.
-On devices which cannot seek, like big tape drives, the story was quite
-different, and one had to be very clever to ensure (far in advance) that each
-tape movement will be the most effective possible (that is, will best
-participate at &quot;progressing&quot; the merge).  Some tapes were even able to read
-backwards, and this was also used to avoid the rewinding time. Believe me, real
-good tape sorts were quite spectacular to watch! From all times, sorting has
-always been a Great Art! :-)</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>当前时代的磁盘平衡算法与其说是巧妙，不如说是麻烦，这是由磁盘的寻址能力导致的结果。 在无法寻址的设备例如大型磁带机上，情况则相当不同，开发者必须非常聪明地（极为提前地）确保每次磁带转动都尽可能地高效（就是说能够最好地加入到合并“进程”中）。 有些磁带甚至能够反向读取，这也被用来避免倒带的耗时。 请相信我，真正优秀的磁带机排序看起来是极其壮观的，排序从来都是一门伟大的艺术！ :-)</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -392,28 +286,28 @@ always been a Great Art! :-)</td></tr>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">heapq</span></code> --- Heap queue algorithm</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code> --- 堆队列算法</a><ul>
 <li><a class="reference internal" href="#basic-examples">基本示例</a></li>
-<li><a class="reference internal" href="#priority-queue-implementation-notes">Priority Queue Implementation Notes</a></li>
-<li><a class="reference internal" href="#theory">Theory</a></li>
+<li><a class="reference internal" href="#priority-queue-implementation-notes">优先队列实现说明</a></li>
+<li><a class="reference internal" href="#theory">理论</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="collections.abc.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">collections.abc</span></code> --- 容器的抽象基类</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code> --- 容器的抽象基类</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="bisect.html" tppabs="https://docs.python.org/zh-cn/3/library/bisect.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">bisect</span></code> --- Array bisection algorithm</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code> --- 数组二分查找算法</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/heapq.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/heapq.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/heapq.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/heapq.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/heapq.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/heapq.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -433,19 +327,22 @@ always been a Great Art! :-)</td></tr>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="bisect.html" tppabs="https://docs.python.org/zh-cn/3/library/bisect.html" title="bisect --- Array bisection algorithm"
+          <a href="bisect.html" tppabs="https://docs.python.org/zh-cn/3/library/bisect.html" title="bisect --- 数组二分查找算法"
              >下一页</a> |</li>
         <li class="right" >
           <a href="collections.abc.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html" title="collections.abc --- 容器的抽象基类"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" >数据类型</a> &#187;</li>
@@ -467,15 +364,19 @@ always been a Great Art! :-)</td></tr>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

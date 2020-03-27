@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>resource --- Resource usage information &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>resource --- Resource usage information &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="nis --- Interface to Sun&#39;s NIS (Yellow Pages)" href="nis.html" />
+    <link rel="next" title="nis --- Sun çš„ NIS (é»„é¡µ) æ¥å£" href="nis.html" />
     <link rel="prev" title="pipes --- Interface to shell pipelines" href="pipes.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/resource.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="nis.html" tppabs="https://docs.python.org/zh-cn/3/library/nis.html" title="nis --- Interface to Sun&#39;s NIS (Yellow Pages)"
+          <a href="nis.html" tppabs="https://docs.python.org/zh-cn/3/library/nis.html" title="nis --- Sun çš„ NIS (é»„é¡µ) æ¥å£"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="pipes.html" tppabs="https://docs.python.org/zh-cn/3/library/pipes.html" title="pipes --- Interface to shell pipelines"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="unix-1.html" tppabs="https://docs.python.org/zh-cn/3/library/unix.html" accesskey="U">Unix ä¸“æœ‰æœåŠ¡</a> &#187;</li>
@@ -105,10 +113,10 @@ request usage information about either the current process or its children.</p>
 <p>An <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> is raised on syscall failure.</p>
 <dl class="exception">
 <dt id="resource.error">
-<em class="property">exception </em><code class="descclassname">resource.</code><code class="descname">error</code><a class="headerlink" href="#resource.error" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>A deprecated alias of <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
+<em class="property">exception </em><code class="sig-prename descclassname">resource.</code><code class="sig-name descname">error</code><a class="headerlink" href="#resource.error" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ä¸€ä¸ªè¢«å¼ƒç”¨çš„ <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> çš„åˆ«åã€‚</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.3 ç‰ˆæ›´æ”¹: </span>Following <span class="target" id="index-0"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3151  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-3151'" tppabs="https://www.python.org/dev/peps/pep-3151"><strong>PEP 3151</strong></a>, this class was made an alias of <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
+<p><span class="versionmodified changed">åœ¨ 3.3 ç‰ˆæ›´æ”¹: </span>æ ¹æ® <span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3151  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-3151'" tppabs="https://www.python.org/dev/peps/pep-3151"><strong>PEP 3151</strong></a>ï¼Œè¿™ä¸ªç±»æ˜¯ <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> çš„åˆ«åã€‚</p>
 </div>
 </dd></dl>
 
@@ -122,19 +130,19 @@ limit can be lowered to any value greater than the soft limit, but not raised.
 (Only processes with the effective UID of the super-user can raise a hard
 limit.)</p>
 <p>The specific resources that can be limited are system dependent. They are
-described in the <em class="manpage">getrlimit(2)</em> man page.  The resources listed below
+described in the <em class="manpage"><a class="manpage reference external" href="javascript:if(confirm('https://manpages.debian.org/pep-0253  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://manpages.debian.org/pep-0253'" tppabs="https://manpages.debian.org/getrlimit(2)">getrlimit(2)</a></em> man page.  The resources listed below
 are supported when the underlying operating system supports them; resources
 which cannot be checked or controlled by the operating system are not defined in
 this module for those platforms.</p>
 <dl class="data">
 <dt id="resource.RLIM_INFINITY">
-<code class="descclassname">resource.</code><code class="descname">RLIM_INFINITY</code><a class="headerlink" href="#resource.RLIM_INFINITY" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIM_INFINITY</code><a class="headerlink" href="#resource.RLIM_INFINITY" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Constant used to represent the limit for an unlimited resource.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="resource.getrlimit">
-<code class="descclassname">resource.</code><code class="descname">getrlimit</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#resource.getrlimit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">getrlimit</code><span class="sig-paren">(</span><em class="sig-param">resource</em><span class="sig-paren">)</span><a class="headerlink" href="#resource.getrlimit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Returns a tuple <code class="docutils literal notranslate"><span class="pre">(soft,</span> <span class="pre">hard)</span></code> with the current soft and hard limits of
 <em>resource</em>. Raises <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if an invalid resource is specified, or
 <a class="reference internal" href="#resource.error" title="resource.error"><code class="xref py py-exc docutils literal notranslate"><span class="pre">error</span></code></a> if the underlying system call fails unexpectedly.</p>
@@ -142,7 +150,7 @@ this module for those platforms.</p>
 
 <dl class="function">
 <dt id="resource.setrlimit">
-<code class="descclassname">resource.</code><code class="descname">setrlimit</code><span class="sig-paren">(</span><em>resource</em>, <em>limits</em><span class="sig-paren">)</span><a class="headerlink" href="#resource.setrlimit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">setrlimit</code><span class="sig-paren">(</span><em class="sig-param">resource</em>, <em class="sig-param">limits</em><span class="sig-paren">)</span><a class="headerlink" href="#resource.setrlimit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Sets new limits of consumption of <em>resource</em>. The <em>limits</em> argument must be a
 tuple <code class="docutils literal notranslate"><span class="pre">(soft,</span> <span class="pre">hard)</span></code> of two integers describing the new limits. A value of
 <a class="reference internal" href="#resource.RLIM_INFINITY" title="resource.RLIM_INFINITY"><code class="xref py py-data docutils literal notranslate"><span class="pre">RLIM_INFINITY</span></code></a> can be used to request a limit that is
@@ -157,11 +165,13 @@ will still be raised if the requested limit exceeds the system imposed
 limit.</p>
 <p><code class="docutils literal notranslate"><span class="pre">setrlimit</span></code> may also raise <a class="reference internal" href="#resource.error" title="resource.error"><code class="xref py py-exc docutils literal notranslate"><span class="pre">error</span></code></a> if the underlying system call
 fails.</p>
+<p>VxWorks only supports setting <a class="reference internal" href="#resource.RLIMIT_NOFILE" title="resource.RLIMIT_NOFILE"><code class="xref py py-data docutils literal notranslate"><span class="pre">RLIMIT_NOFILE</span></code></a>.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">resource.setrlimit</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">resource</span></code>, <code class="docutils literal notranslate"><span class="pre">limits</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="resource.prlimit">
-<code class="descclassname">resource.</code><code class="descname">prlimit</code><span class="sig-paren">(</span><em>pid</em>, <em>resource</em><span class="optional">[</span>, <em>limits</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#resource.prlimit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">prlimit</code><span class="sig-paren">(</span><em class="sig-param">pid</em>, <em class="sig-param">resource</em><span class="optional">[</span>, <em class="sig-param">limits</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#resource.prlimit" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Combines <a class="reference internal" href="#resource.setrlimit" title="resource.setrlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">setrlimit()</span></code></a> and <a class="reference internal" href="#resource.getrlimit" title="resource.getrlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrlimit()</span></code></a> in one function and
 supports to get and set the resources limits of an arbitrary process. If
 <em>pid</em> is 0, then the call applies to the current process. <em>resource</em> and
@@ -173,23 +183,24 @@ set and the former resource limit is returned.</p>
 <p>Raises <a class="reference internal" href="exceptions.html#ProcessLookupError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ProcessLookupError" title="ProcessLookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ProcessLookupError</span></code></a> when <em>pid</em> can't be found and
 <a class="reference internal" href="exceptions.html#PermissionError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#PermissionError" title="PermissionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PermissionError</span></code></a> when the user doesn't have <code class="docutils literal notranslate"><span class="pre">CAP_SYS_RESOURCE</span></code> for
 the process.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">resource.prlimit</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">pid</span></code>, <code class="docutils literal notranslate"><span class="pre">resource</span></code>, <code class="docutils literal notranslate"><span class="pre">limits</span></code>.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Linux 2.6.36 or later with glibc 2.13 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <p>These symbols define resources whose consumption can be controlled using the
 <a class="reference internal" href="#resource.setrlimit" title="resource.setrlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">setrlimit()</span></code></a> and <a class="reference internal" href="#resource.getrlimit" title="resource.getrlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrlimit()</span></code></a> functions described below. The values of
 these symbols are exactly the constants used by C programs.</p>
-<p>The Unix man page for <em class="manpage">getrlimit(2)</em> lists the available resources.
+<p>The Unix man page for <em class="manpage"><a class="manpage reference external" href="javascript:if(confirm('https://manpages.debian.org/pep-0253  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://manpages.debian.org/pep-0253'" tppabs="https://manpages.debian.org/getrlimit(2)">getrlimit(2)</a></em> lists the available resources.
 Note that not all systems use the same symbol or same value to denote the same
 resource.  This module does not attempt to mask platform differences --- symbols
 not defined for a platform will not be available from this module on that
 platform.</p>
 <dl class="data">
 <dt id="resource.RLIMIT_CORE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_CORE</code><a class="headerlink" href="#resource.RLIMIT_CORE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_CORE</code><a class="headerlink" href="#resource.RLIMIT_CORE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum size (in bytes) of a core file that the current process can create.
 This may result in the creation of a partial core file if a larger core would be
 required to contain the entire process image.</p>
@@ -197,7 +208,7 @@ required to contain the entire process image.</p>
 
 <dl class="data">
 <dt id="resource.RLIMIT_CPU">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_CPU</code><a class="headerlink" href="#resource.RLIMIT_CPU" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_CPU</code><a class="headerlink" href="#resource.RLIMIT_CPU" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum amount of processor time (in seconds) that a process can use. If
 this limit is exceeded, a <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGXCPU</span></code> signal is sent to the process. (See
 the <a class="reference internal" href="signal.html#module-signal" tppabs="https://docs.python.org/zh-cn/3/library/signal.html#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> module documentation for information about how to catch this
@@ -206,148 +217,148 @@ signal and do something useful, e.g. flush open files to disk.)</p>
 
 <dl class="data">
 <dt id="resource.RLIMIT_FSIZE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_FSIZE</code><a class="headerlink" href="#resource.RLIMIT_FSIZE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_FSIZE</code><a class="headerlink" href="#resource.RLIMIT_FSIZE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum size of a file which the process may create.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_DATA">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_DATA</code><a class="headerlink" href="#resource.RLIMIT_DATA" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_DATA</code><a class="headerlink" href="#resource.RLIMIT_DATA" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum size (in bytes) of the process's heap.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_STACK">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_STACK</code><a class="headerlink" href="#resource.RLIMIT_STACK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_STACK</code><a class="headerlink" href="#resource.RLIMIT_STACK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum size (in bytes) of the call stack for the current process.  This only
 affects the stack of the main thread in a multi-threaded process.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_RSS">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_RSS</code><a class="headerlink" href="#resource.RLIMIT_RSS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_RSS</code><a class="headerlink" href="#resource.RLIMIT_RSS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum resident set size that should be made available to the process.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_NPROC">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_NPROC</code><a class="headerlink" href="#resource.RLIMIT_NPROC" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_NPROC</code><a class="headerlink" href="#resource.RLIMIT_NPROC" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum number of processes the current process may create.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_NOFILE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_NOFILE</code><a class="headerlink" href="#resource.RLIMIT_NOFILE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_NOFILE</code><a class="headerlink" href="#resource.RLIMIT_NOFILE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum number of open file descriptors for the current process.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_OFILE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_OFILE</code><a class="headerlink" href="#resource.RLIMIT_OFILE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_OFILE</code><a class="headerlink" href="#resource.RLIMIT_OFILE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The BSD name for <a class="reference internal" href="#resource.RLIMIT_NOFILE" title="resource.RLIMIT_NOFILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">RLIMIT_NOFILE</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_MEMLOCK">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_MEMLOCK</code><a class="headerlink" href="#resource.RLIMIT_MEMLOCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_MEMLOCK</code><a class="headerlink" href="#resource.RLIMIT_MEMLOCK" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum address space which may be locked in memory.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_VMEM">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_VMEM</code><a class="headerlink" href="#resource.RLIMIT_VMEM" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_VMEM</code><a class="headerlink" href="#resource.RLIMIT_VMEM" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The largest area of mapped memory which the process may occupy.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_AS">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_AS</code><a class="headerlink" href="#resource.RLIMIT_AS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_AS</code><a class="headerlink" href="#resource.RLIMIT_AS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum area (in bytes) of address space which may be taken by the process.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_MSGQUEUE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_MSGQUEUE</code><a class="headerlink" href="#resource.RLIMIT_MSGQUEUE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_MSGQUEUE</code><a class="headerlink" href="#resource.RLIMIT_MSGQUEUE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The number of bytes that can be allocated for POSIX message queues.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Linux 2.6.8 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_NICE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_NICE</code><a class="headerlink" href="#resource.RLIMIT_NICE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_NICE</code><a class="headerlink" href="#resource.RLIMIT_NICE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The ceiling for the process's nice level (calculated as 20 - rlim_cur).</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Linux 2.6.12 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_RTPRIO">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_RTPRIO</code><a class="headerlink" href="#resource.RLIMIT_RTPRIO" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_RTPRIO</code><a class="headerlink" href="#resource.RLIMIT_RTPRIO" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The ceiling of the real-time priority.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Linux 2.6.12 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_RTTIME">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_RTTIME</code><a class="headerlink" href="#resource.RLIMIT_RTTIME" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_RTTIME</code><a class="headerlink" href="#resource.RLIMIT_RTTIME" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The time limit (in microseconds) on CPU time that a process can spend
 under real-time scheduling without making a blocking syscall.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Linux 2.6.25 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_SIGPENDING">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_SIGPENDING</code><a class="headerlink" href="#resource.RLIMIT_SIGPENDING" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_SIGPENDING</code><a class="headerlink" href="#resource.RLIMIT_SIGPENDING" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The number of signals which the process may queue.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Linux 2.6.8 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_SBSIZE">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_SBSIZE</code><a class="headerlink" href="#resource.RLIMIT_SBSIZE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_SBSIZE</code><a class="headerlink" href="#resource.RLIMIT_SBSIZE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum size (in bytes) of socket buffer usage for this user.
 This limits the amount of network memory, and hence the amount of mbufs,
 that this user may hold at any time.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: FreeBSD 9 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_SWAP">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_SWAP</code><a class="headerlink" href="#resource.RLIMIT_SWAP" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_SWAP</code><a class="headerlink" href="#resource.RLIMIT_SWAP" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum size (in bytes) of the swap space that may be reserved or
 used by all of this user id's processes.
 This limit is enforced only if bit 1 of the vm.overcommit sysctl is set.
-Please see <em class="manpage">tuning(7)</em> for a complete description of this sysctl.</p>
+Please see <em class="manpage"><a class="manpage reference external" href="javascript:if(confirm('https://manpages.debian.org/pep-0252  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://manpages.debian.org/pep-0252'" tppabs="https://manpages.debian.org/tuning(7)">tuning(7)</a></em> for a complete description of this sysctl.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: FreeBSD 9 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RLIMIT_NPTS">
-<code class="descclassname">resource.</code><code class="descname">RLIMIT_NPTS</code><a class="headerlink" href="#resource.RLIMIT_NPTS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RLIMIT_NPTS</code><a class="headerlink" href="#resource.RLIMIT_NPTS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The maximum number of pseudo-terminals created by this user id.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: FreeBSD 9 or later.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.4 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -357,11 +368,25 @@ Please see <em class="manpage">tuning(7)</em> for a complete description of this
 <p>These functions are used to retrieve resource usage information:</p>
 <dl class="function">
 <dt id="resource.getrusage">
-<code class="descclassname">resource.</code><code class="descname">getrusage</code><span class="sig-paren">(</span><em>who</em><span class="sig-paren">)</span><a class="headerlink" href="#resource.getrusage" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">getrusage</code><span class="sig-paren">(</span><em class="sig-param">who</em><span class="sig-paren">)</span><a class="headerlink" href="#resource.getrusage" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>This function returns an object that describes the resources consumed by either
 the current process or its children, as specified by the <em>who</em> parameter.  The
 <em>who</em> parameter should be specified using one of the <code class="xref py py-const docutils literal notranslate"><span class="pre">RUSAGE_*</span></code>
 constants described below.</p>
+<p>A simple example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">resource</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># a non CPU-bound task</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getrusage</span><span class="p">(</span><span class="n">RUSAGE_SELF</span><span class="p">))</span>
+
+<span class="c1"># a CPU-bound task</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">8</span><span class="p">):</span>
+   <span class="n">_</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getrusage</span><span class="p">(</span><span class="n">RUSAGE_SELF</span><span class="p">))</span>
+</pre></div>
+</div>
 <p>The fields of the return value each describe how a particular system resource
 has been used, e.g. amount of time spent running is user mode or number of times
 the process was swapped out of main memory. Some values are dependent on the
@@ -371,84 +396,84 @@ elements.</p>
 <p>The fields <code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_utime</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_stime</span></code> of the return value are
 floating point values representing the amount of time spent executing in user
 mode and the amount of time spent executing in system mode, respectively. The
-remaining values are integers. Consult the <em class="manpage">getrusage(2)</em> man page for
+remaining values are integers. Consult the <em class="manpage"><a class="manpage reference external" href="javascript:if(confirm('https://manpages.debian.org/pep-0234  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://manpages.debian.org/pep-0234'" tppabs="https://manpages.debian.org/getrusage(2)">getrusage(2)</a></em> man page for
 detailed information about these values. A brief summary is presented here:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="35%" />
-<col width="52%" />
+<col style="width: 12%" />
+<col style="width: 31%" />
+<col style="width: 57%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">ç´¢å¼•</th>
-<th class="head">Field</th>
-<th class="head">Resource</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>ç´¢å¼•</p></th>
+<th class="head"><p>åŸŸ</p></th>
+<th class="head"><p>Resource</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_utime</span></code></td>
-<td>time in user mode (float)</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_utime</span></code></p></td>
+<td><p>time in user mode (float seconds)</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">1</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_stime</span></code></td>
-<td>time in system mode (float)</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_stime</span></code></p></td>
+<td><p>time in system mode (float seconds)</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">2</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_maxrss</span></code></td>
-<td>maximum resident set size</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_maxrss</span></code></p></td>
+<td><p>maximum resident set size</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">3</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_ixrss</span></code></td>
-<td>shared memory size</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_ixrss</span></code></p></td>
+<td><p>shared memory size</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">4</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_idrss</span></code></td>
-<td>unshared memory size</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_idrss</span></code></p></td>
+<td><p>unshared memory size</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">5</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_isrss</span></code></td>
-<td>unshared stack size</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">5</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_isrss</span></code></p></td>
+<td><p>unshared stack size</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">6</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_minflt</span></code></td>
-<td>page faults not requiring I/O</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">6</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_minflt</span></code></p></td>
+<td><p>page faults not requiring I/O</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">7</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_majflt</span></code></td>
-<td>page faults requiring I/O</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">7</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_majflt</span></code></p></td>
+<td><p>page faults requiring I/O</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">8</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nswap</span></code></td>
-<td>number of swap outs</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">8</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nswap</span></code></p></td>
+<td><p>number of swap outs</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">9</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_inblock</span></code></td>
-<td>block input operations</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">9</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_inblock</span></code></p></td>
+<td><p>block input operations</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">10</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_oublock</span></code></td>
-<td>block output operations</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_oublock</span></code></p></td>
+<td><p>block output operations</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">11</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_msgsnd</span></code></td>
-<td>messages sent</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">11</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_msgsnd</span></code></p></td>
+<td><p>messages sent</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">12</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_msgrcv</span></code></td>
-<td>messages received</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">12</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_msgrcv</span></code></p></td>
+<td><p>messages received</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">13</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nsignals</span></code></td>
-<td>signals received</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">13</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nsignals</span></code></p></td>
+<td><p>signals received</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">14</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nvcsw</span></code></td>
-<td>voluntary context switches</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">14</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nvcsw</span></code></p></td>
+<td><p>voluntary context switches</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">15</span></code></td>
-<td><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nivcsw</span></code></td>
-<td>involuntary context switches</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">15</span></code></p></td>
+<td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_nivcsw</span></code></p></td>
+<td><p>involuntary context switches</p></td>
 </tr>
 </tbody>
 </table>
@@ -458,7 +483,7 @@ specified. It may also raise <a class="reference internal" href="#resource.error
 
 <dl class="function">
 <dt id="resource.getpagesize">
-<code class="descclassname">resource.</code><code class="descname">getpagesize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#resource.getpagesize" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">getpagesize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#resource.getpagesize" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Returns the number of bytes in a system page. (This need not be the same as the
 hardware page size.)</p>
 </dd></dl>
@@ -467,32 +492,32 @@ hardware page size.)</p>
 function to specify which processes information should be provided for.</p>
 <dl class="data">
 <dt id="resource.RUSAGE_SELF">
-<code class="descclassname">resource.</code><code class="descname">RUSAGE_SELF</code><a class="headerlink" href="#resource.RUSAGE_SELF" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RUSAGE_SELF</code><a class="headerlink" href="#resource.RUSAGE_SELF" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Pass to <a class="reference internal" href="#resource.getrusage" title="resource.getrusage"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrusage()</span></code></a> to request resources consumed by the calling
 process, which is the sum of resources used by all threads in the process.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RUSAGE_CHILDREN">
-<code class="descclassname">resource.</code><code class="descname">RUSAGE_CHILDREN</code><a class="headerlink" href="#resource.RUSAGE_CHILDREN" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RUSAGE_CHILDREN</code><a class="headerlink" href="#resource.RUSAGE_CHILDREN" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Pass to <a class="reference internal" href="#resource.getrusage" title="resource.getrusage"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrusage()</span></code></a> to request resources consumed by child processes
 of the calling process which have been terminated and waited for.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RUSAGE_BOTH">
-<code class="descclassname">resource.</code><code class="descname">RUSAGE_BOTH</code><a class="headerlink" href="#resource.RUSAGE_BOTH" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RUSAGE_BOTH</code><a class="headerlink" href="#resource.RUSAGE_BOTH" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Pass to <a class="reference internal" href="#resource.getrusage" title="resource.getrusage"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrusage()</span></code></a> to request resources consumed by both the current
 process and child processes.  May not be available on all systems.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="resource.RUSAGE_THREAD">
-<code class="descclassname">resource.</code><code class="descname">RUSAGE_THREAD</code><a class="headerlink" href="#resource.RUSAGE_THREAD" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">resource.</code><code class="sig-name descname">RUSAGE_THREAD</code><a class="headerlink" href="#resource.RUSAGE_THREAD" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Pass to <a class="reference internal" href="#resource.getrusage" title="resource.getrusage"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrusage()</span></code></a> to request resources consumed by the current
 thread.  May not be available on all systems.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -505,9 +530,9 @@ thread.  May not be available on all systems.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">resource</span></code> --- Resource usage information</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code> --- Resource usage information</a><ul>
 <li><a class="reference internal" href="#resource-limits">Resource Limits</a></li>
 <li><a class="reference internal" href="#resource-usage">Resource Usage</a></li>
 </ul>
@@ -516,16 +541,16 @@ thread.  May not be available on all systems.</p>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="pipes.html" tppabs="https://docs.python.org/zh-cn/3/library/pipes.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">pipes</span></code> --- Interface to shell pipelines</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">pipes</span></code> --- Interface to shell pipelines</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="nis.html" tppabs="https://docs.python.org/zh-cn/3/library/nis.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">nis</span></code> --- Interface to Sun's NIS (Yellow Pages)</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code> --- Sun çš„ NIS (é»„é¡µ) æ¥å£</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/resource.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/resource.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/resource.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/resource.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/resource.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/resource.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -545,19 +570,22 @@ thread.  May not be available on all systems.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="nis.html" tppabs="https://docs.python.org/zh-cn/3/library/nis.html" title="nis --- Interface to Sun&#39;s NIS (Yellow Pages)"
+          <a href="nis.html" tppabs="https://docs.python.org/zh-cn/3/library/nis.html" title="nis --- Sun çš„ NIS (é»„é¡µ) æ¥å£"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="pipes.html" tppabs="https://docs.python.org/zh-cn/3/library/pipes.html" title="pipes --- Interface to shell pipelines"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="unix-1.html" tppabs="https://docs.python.org/zh-cn/3/library/unix.html" >Unix ä¸“æœ‰æœåŠ¡</a> &#187;</li>
@@ -579,15 +607,19 @@ thread.  May not be available on all systems.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

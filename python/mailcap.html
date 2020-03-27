@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>mailcap --- Mailcap file handling &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>mailcap --- Mailcap æ–‡ä»¶å¤„ç† &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="mailbox --- Manipulate mailboxes in various formats" href="mailbox.html" />
     <link rel="prev" title="json --- JSON ç¼–ç å’Œè§£ç å™¨" href="json.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/mailcap.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="json.html" tppabs="https://docs.python.org/zh-cn/3/library/json.html" title="json --- JSON ç¼–ç å’Œè§£ç å™¨"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" accesskey="U">äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
@@ -96,64 +104,29 @@
           <div class="body" role="main">
             
   <div class="section" id="module-mailcap">
-<span id="mailcap-mailcap-file-handling"></span><h1><a class="reference internal" href="#module-mailcap" title="mailcap: Mailcap file handling."><code class="xref py py-mod docutils literal notranslate"><span class="pre">mailcap</span></code></a> --- Mailcap file handling<a class="headerlink" href="#module-mailcap" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/mailcap.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/mailcap.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/mailcap.py">Lib/mailcap.py</a></p>
+<span id="mailcap-mailcap-file-handling"></span><h1><a class="reference internal" href="#module-mailcap" title="mailcap: Mailcap file handling."><code class="xref py py-mod docutils literal notranslate"><span class="pre">mailcap</span></code></a> --- Mailcap æ–‡ä»¶å¤„ç†<a class="headerlink" href="#module-mailcap" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue2719  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue2719'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/mailcap.py">Lib/mailcap.py</a></p>
 <hr class="docutils" />
-<p>Mailcap files are used to configure how MIME-aware applications such as mail
-readers and Web browsers react to files with different MIME types. (The name
-&quot;mailcap&quot; is derived from the phrase &quot;mail capability&quot;.)  For example, a mailcap
-file might contain a line like <code class="docutils literal notranslate"><span class="pre">video/mpeg;</span> <span class="pre">xmpeg</span> <span class="pre">%s</span></code>.  Then, if the user
-encounters an email message or Web document with the MIME type
-<em class="mimetype">video/mpeg</em>, <code class="docutils literal notranslate"><span class="pre">%s</span></code> will be replaced by a filename (usually one
-belonging to a temporary file) and the <strong class="program">xmpeg</strong> program can be
-automatically started to view the file.</p>
-<p>The mailcap format is documented in <span class="target" id="index-0"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1524.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1524.html'" tppabs="https://tools.ietf.org/html/rfc1524.html"><strong>RFC 1524</strong></a>, &quot;A User Agent Configuration
-Mechanism For Multimedia Mail Format Information,&quot; but is not an Internet
-standard.  However, mailcap files are supported on most Unix systems.</p>
+<p>Mailcap æ–‡ä»¶å¯ç”¨æ¥é…ç½®æ”¯æŒ MIME çš„åº”ç”¨ä¾‹å¦‚é‚®ä»¶é˜…è¯»å™¨å’Œ Web æµè§ˆå™¨å¦‚ä½•å“åº”å…·æœ‰ä¸åŒ MIME ç±»å‹çš„æ–‡ä»¶ã€‚ ï¼ˆ&quot;mailcap&quot; è¿™ä¸ªåç§°æºè‡ªçŸ­è¯­&quot;mail capability&quot;ã€‚ï¼‰ ä¾‹å¦‚ï¼Œä¸€ä¸ª mailcap æ–‡ä»¶å¯èƒ½åŒ…å« <code class="docutils literal notranslate"><span class="pre">video/mpeg;</span> <span class="pre">xmpeg</span> <span class="pre">%s</span></code> è¿™æ ·çš„è¡Œã€‚ ç„¶åï¼Œå¦‚æœç”¨æˆ·é‡åˆ° MIME ç±»å‹ä¸º <em class="mimetype">video/mpeg</em> çš„é‚®ä»¶æ¶ˆæ¯æˆ– Web æ–‡æ¡£æ—¶ï¼Œ<code class="docutils literal notranslate"><span class="pre">%s</span></code> å°†è¢«æ›¿æ¢ä¸ºä¸€ä¸ªæ–‡ä»¶åï¼ˆé€šå¸¸æ˜¯ä¸€ä¸ªä¸´æ—¶æ–‡ä»¶ï¼‰å¹¶ä¸”å°†è‡ªåŠ¨å¯åŠ¨ <strong class="program">xmpeg</strong> ç¨‹åºæ¥æŸ¥çœ‹è¯¥æ–‡ä»¶ã€‚</p>
+<p>mailcap æ ¼å¼çš„æ–‡æ¡£è§ <span class="target" id="index-4"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/issue1635  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/issue1635'" tppabs="https://tools.ietf.org/html/rfc1524.html"><strong>RFC 1524</strong></a>, &quot;A User Agent Configuration Mechanism For Multimedia Mail Format Information,&quot; ä½†å®ƒå¹¶ä¸æ˜¯ä¸€ä¸ªå› ç‰¹ç½‘æ ‡å‡†ã€‚ ä¸è¿‡ï¼Œmailcap æ–‡ä»¶åœ¨å¤§å¤šæ•° Unix ç³»ç»Ÿä¸Šéƒ½å—åˆ°æ”¯æŒã€‚</p>
 <dl class="function">
 <dt id="mailcap.findmatch">
-<code class="descclassname">mailcap.</code><code class="descname">findmatch</code><span class="sig-paren">(</span><em>caps</em>, <em>MIMEtype</em>, <em>key='view'</em>, <em>filename='/dev/null'</em>, <em>plist=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#mailcap.findmatch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Return a 2-tuple; the first element is a string containing the command line to
-be executed (which can be passed to <a class="reference internal" href="os.html#os.system" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>), and the second element
-is the mailcap entry for a given MIME type.  If no matching MIME type can be
-found, <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None)</span></code> is returned.</p>
-<p><em>key</em> is the name of the field desired, which represents the type of activity to
-be performed; the default value is 'view', since in the  most common case you
-simply want to view the body of the MIME-typed data.  Other possible values
-might be 'compose' and 'edit', if you wanted to create a new body of the given
-MIME type or alter the existing body data.  See <span class="target" id="index-1"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1524.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1524.html'" tppabs="https://tools.ietf.org/html/rfc1524.html"><strong>RFC 1524</strong></a> for a complete list
-of these fields.</p>
-<p><em>filename</em> is the filename to be substituted for <code class="docutils literal notranslate"><span class="pre">%s</span></code> in the command line; the
-default value is <code class="docutils literal notranslate"><span class="pre">'/dev/null'</span></code> which is almost certainly not what you want, so
-usually you'll override it by specifying a filename.</p>
-<p><em>plist</em> can be a list containing named parameters; the default value is simply
-an empty list.  Each entry in the list must be a string containing the parameter
-name, an equals sign (<code class="docutils literal notranslate"><span class="pre">'='</span></code>), and the parameter's value.  Mailcap entries can
-contain  named parameters like <code class="docutils literal notranslate"><span class="pre">%{foo}</span></code>, which will be replaced by the value
-of the parameter named 'foo'.  For example, if the command line <code class="docutils literal notranslate"><span class="pre">showpartial</span>
-<span class="pre">%{id}</span> <span class="pre">%{number}</span> <span class="pre">%{total}</span></code> was in a mailcap file, and <em>plist</em> was set to
-<code class="docutils literal notranslate"><span class="pre">['id=1',</span> <span class="pre">'number=2',</span> <span class="pre">'total=3']</span></code>, the resulting command line would be
-<code class="docutils literal notranslate"><span class="pre">'showpartial</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3'</span></code>.</p>
-<p>In a mailcap file, the &quot;test&quot; field can optionally be specified to test some
-external condition (such as the machine architecture, or the window system in
-use) to determine whether or not the mailcap line applies.  <a class="reference internal" href="#mailcap.findmatch" title="mailcap.findmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">findmatch()</span></code></a>
-will automatically check such conditions and skip the entry if the check fails.</p>
+<code class="sig-prename descclassname">mailcap.</code><code class="sig-name descname">findmatch</code><span class="sig-paren">(</span><em class="sig-param">caps</em>, <em class="sig-param">MIMEtype</em>, <em class="sig-param">key='view'</em>, <em class="sig-param">filename='/dev/null'</em>, <em class="sig-param">plist=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#mailcap.findmatch" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿”å›ä¸€ä¸ª 2 å…ƒç»„ï¼›å…¶ä¸­ç¬¬ä¸€ä¸ªå…ƒç´ æ˜¯åŒ…å«æ‰€è¦æ‰§è¡Œå‘½ä»¤çš„å­—ç¬¦ä¸² (å®ƒå¯è¢«ä¼ é€’ç»™ <a class="reference internal" href="os.html#os.system" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>)ï¼Œç¬¬äºŒä¸ªå…ƒç´ æ˜¯å¯¹åº”äºç»™å®š MIME ç±»å‹çš„ mailcap æ¡ç›®ã€‚ å¦‚æœæ‰¾ä¸åˆ°åŒ¹é…çš„ MIME ç±»å‹ï¼Œåˆ™å°†è¿”å› <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None)</span></code>ã€‚</p>
+<p><em>key</em> æ˜¯æ‰€éœ€å­—æ®µçš„åç§°ï¼Œå®ƒä»£è¡¨è¦æ‰§è¡Œçš„æ´»åŠ¨ç±»å‹ï¼›é»˜è®¤å€¼æ˜¯ 'view'ï¼Œå› ä¸ºåœ¨æœ€é€šå¸¸çš„æƒ…å†µä¸‹ä½ åªæ˜¯æƒ³è¦æŸ¥çœ‹ MIME ç±»å‹æ•°æ®çš„æ­£æ–‡ã€‚ å…¶ä»–å¯èƒ½çš„å€¼è¿˜æœ‰ 'compose' å’Œ 'edit'ï¼Œåˆ†åˆ«ç”¨äºæƒ³è¦åˆ›å»ºç»™å®š MIME ç±»å‹æ­£æ–‡æˆ–ä¿®æ”¹ç°æœ‰æ­£æ–‡æ•°æ®çš„æƒ…å†µã€‚ è¯·å‚é˜… <span class="target" id="index-5"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/issue1635  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/issue1635'" tppabs="https://tools.ietf.org/html/rfc1524.html"><strong>RFC 1524</strong></a> è·å–è¿™äº›å­—æ®µçš„å®Œæ•´åˆ—è¡¨ã€‚</p>
+<p><em>filename</em> æ˜¯åœ¨å‘½ä»¤è¡Œä¸­ç”¨æ¥æ›¿æ¢ <code class="docutils literal notranslate"><span class="pre">%s</span></code> çš„æ–‡ä»¶åï¼›é»˜è®¤å€¼ <code class="docutils literal notranslate"><span class="pre">'/dev/null'</span></code> å‡ ä¹è‚¯å®šä¸æ˜¯ä½ æƒ³è¦çš„ï¼Œå› æ­¤é€šå¸¸ä½ è¦é€šè¿‡æŒ‡å®šä¸€ä¸ªæ–‡ä»¶åæ¥é‡è½½å®ƒã€‚</p>
+<p><em>plist</em> å¯ä»¥æ˜¯ä¸€ä¸ªåŒ…å«å‘½åå½¢å‚çš„åˆ—è¡¨ï¼›é»˜è®¤å€¼åªæ˜¯ä¸€ä¸ªç©ºåˆ—è¡¨ã€‚ åˆ—è¡¨ä¸­çš„æ¯ä¸ªæ¡ç›®å¿…é¡»ä¸ºåŒ…å«å½¢å‚åç§°çš„å­—ç¬¦ä¸²ã€ç­‰äºå· (<code class="docutils literal notranslate"><span class="pre">'='</span></code>) ä»¥åŠå½¢å‚çš„å€¼ã€‚ Mailcap æ¡ç›®å¯ä»¥åŒ…å«å½¢å¦‚ <code class="docutils literal notranslate"><span class="pre">%{foo}</span></code> çš„å‘½åå½¢å‚ï¼Œå®ƒå°†ç”±åä¸º 'foo' çš„å½¢å‚çš„å€¼æ‰€æ›¿æ¢ã€‚ ä¾‹å¦‚ï¼Œå¦‚æœå‘½ä»¤è¡Œ <code class="docutils literal notranslate"><span class="pre">showpartial</span> <span class="pre">%{id}</span> <span class="pre">%{number}</span> <span class="pre">%{total}</span></code> æ˜¯åœ¨ä¸€ä¸ª mailcap æ–‡ä»¶ä¸­ï¼Œå¹¶ä¸” <em>plist</em> è¢«è®¾ä¸º <code class="docutils literal notranslate"><span class="pre">['id=1',</span> <span class="pre">'number=2',</span> <span class="pre">'total=3']</span></code>ï¼Œåˆ™ç»“æœå‘½ä»¤è¡Œå°†ä¸º <code class="docutils literal notranslate"><span class="pre">'showpartial</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3'</span></code>ã€‚</p>
+<p>åœ¨ mailcap æ–‡ä»¶ä¸­ï¼Œå¯ä»¥æŒ‡å®šå¯é€‰çš„ &quot;test&quot; å­—æ®µæ¥æ£€æµ‹æŸäº›å¤–éƒ¨æ¡ä»¶ï¼ˆä¾‹å¦‚æ‰€ä½¿ç”¨çš„æœºå™¨æ¶æ„æˆ–çª—å£ç³»ç»Ÿï¼‰æ¥ç¡®å®šæ˜¯å¦è¦åº”ç”¨ mailcap è¡Œã€‚ <a class="reference internal" href="#mailcap.findmatch" title="mailcap.findmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">findmatch()</span></code></a> å°†è‡ªåŠ¨æ£€æŸ¥æ­¤ç±»æ¡ä»¶å¹¶åœ¨æ£€æŸ¥æœªé€šè¿‡æ—¶è·³è¿‡æ¡ç›®ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="mailcap.getcaps">
-<code class="descclassname">mailcap.</code><code class="descname">getcaps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mailcap.getcaps" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Returns a dictionary mapping MIME types to a list of mailcap file entries. This
-dictionary must be passed to the <a class="reference internal" href="#mailcap.findmatch" title="mailcap.findmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">findmatch()</span></code></a> function.  An entry is stored
-as a list of dictionaries, but it shouldn't be necessary to know the details of
-this representation.</p>
-<p>The information is derived from all of the mailcap files found on the system.
-Settings in the user's mailcap file <code class="file docutils literal notranslate"><span class="pre">$HOME/.mailcap</span></code> will override
-settings in the system mailcap files <code class="file docutils literal notranslate"><span class="pre">/etc/mailcap</span></code>,
-<code class="file docutils literal notranslate"><span class="pre">/usr/etc/mailcap</span></code>, and <code class="file docutils literal notranslate"><span class="pre">/usr/local/etc/mailcap</span></code>.</p>
+<code class="sig-prename descclassname">mailcap.</code><code class="sig-name descname">getcaps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mailcap.getcaps" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿”å›ä¸€ä¸ªå°† MIME ç±»å‹æ˜ å°„åˆ° mailcap æ–‡ä»¶æ¡ç›®åˆ—è¡¨çš„å­—å…¸ã€‚ æ­¤å­—å…¸å¿…é¡»è¢«ä¼ ç»™ <a class="reference internal" href="#mailcap.findmatch" title="mailcap.findmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">findmatch()</span></code></a> å‡½æ•°ã€‚ æ¡ç›®ä¼šè¢«å­˜å‚¨ä¸ºå­—å…¸åˆ—è¡¨ï¼Œä½†å¹¶ä¸éœ€è¦äº†è§£æ­¤è¡¨ç¤ºå½¢å¼çš„ç»†èŠ‚ã€‚</p>
+<p>æ­¤ä¿¡æ¯æ¥è‡ªåœ¨ç³»ç»Ÿä¸­æ‰¾åˆ°çš„æ‰€æœ‰ mailcap æ–‡ä»¶ã€‚ ç”¨æˆ·çš„ mailcap æ–‡ä»¶ <code class="file docutils literal notranslate"><span class="pre">$HOME/.mailcap</span></code> ä¸­çš„è®¾ç½®å°†è¦†ç›–ç³»ç»Ÿ mailcap æ–‡ä»¶ <code class="file docutils literal notranslate"><span class="pre">/etc/mailcap</span></code>, <code class="file docutils literal notranslate"><span class="pre">/usr/etc/mailcap</span></code> å’Œ <code class="file docutils literal notranslate"><span class="pre">/usr/local/etc/mailcap</span></code> ä¸­çš„è®¾ç½®ã€‚</p>
 </dd></dl>
 
-<p>An example usage:</p>
+<p>ä¸€ä¸ªç”¨æ³•ç¤ºä¾‹:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mailcap</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">mailcap</span><span class="o">.</span><span class="n">getcaps</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mailcap</span><span class="o">.</span><span class="n">findmatch</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;video/mpeg&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;tmp1223&#39;</span><span class="p">)</span>
@@ -170,16 +143,16 @@ settings in the system mailcap files <code class="file docutils literal notransl
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="json.html" tppabs="https://docs.python.org/zh-cn/3/library/json.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">json</span></code> --- JSON ç¼–ç å’Œè§£ç å™¨</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code> --- JSON ç¼–ç å’Œè§£ç å™¨</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="mailbox.html" tppabs="https://docs.python.org/zh-cn/3/library/mailbox.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">mailbox</span></code> --- Manipulate mailboxes in various formats</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">mailbox</span></code> --- Manipulate mailboxes in various formats</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/mailcap.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/mailcap.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/mailcap.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/mailcap.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/mailcap.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/mailcap.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -204,14 +177,17 @@ settings in the system mailcap files <code class="file docutils literal notransl
         <li class="right" >
           <a href="json.html" tppabs="https://docs.python.org/zh-cn/3/library/json.html" title="json --- JSON ç¼–ç å’Œè§£ç å™¨"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
@@ -233,15 +209,19 @@ settings in the system mailcap files <code class="file docutils literal notransl
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

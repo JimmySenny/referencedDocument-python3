@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>collections --- 容器数据类型 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>collections --- 容器数据类型 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="collections.abc --- 容器的抽象基类" href="collections.abc.html" />
-    <link rel="prev" title="calendar --- General calendar-related functions" href="calendar.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="calendar --- 日历相关函数" href="calendar.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/collections.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -59,16 +64,19 @@
           <a href="collections.abc.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html" title="collections.abc --- 容器的抽象基类"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="calendar.html" tppabs="https://docs.python.org/zh-cn/3/library/calendar.html" title="calendar --- General calendar-related functions"
+          <a href="calendar.html" tppabs="https://docs.python.org/zh-cn/3/library/calendar.html" title="calendar --- 日历相关函数"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" accesskey="U">数据类型</a> &#187;</li>
@@ -97,57 +105,57 @@
             
   <div class="section" id="module-collections">
 <span id="collections-container-datatypes"></span><h1><a class="reference internal" href="#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> --- 容器数据类型<a class="headerlink" href="#module-collections" title="永久链接至标题">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/collections/__init__.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/collections/__init__.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/collections/__init__.py">Lib/collections/__init__.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/collections/__init__.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/collections/__init__.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/collections/__init__.py">Lib/collections/__init__.py</a></p>
 <hr class="docutils" />
 <p>这个模块实现了特定目标的容器，以提供Python标准内建容器  <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> , <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> , <a class="reference internal" href="stdtypes.html#set" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> , 和 <a class="reference internal" href="stdtypes.html#tuple" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> 的替代选择。</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col style="width: 24%" />
+<col style="width: 76%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a></td>
-<td>创建命名元组子类的工厂函数</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a></p></td>
+<td><p>创建命名元组子类的工厂函数</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a></td>
-<td>类似列表(list)的容器，实现了在两端快速添加(append)和弹出(pop)</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a></p></td>
+<td><p>类似列表(list)的容器，实现了在两端快速添加(append)和弹出(pop)</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a></td>
-<td>类似字典(dict)的容器类，将多个映射集合到一个视图里面</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a></p></td>
+<td><p>类似字典(dict)的容器类，将多个映射集合到一个视图里面</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a></td>
-<td>字典的子类，提供了可哈希对象的计数功能</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a></p></td>
+<td><p>字典的子类，提供了可哈希对象的计数功能</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a></td>
-<td>字典的子类，保存了他们被添加的顺序</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a></p></td>
+<td><p>字典的子类，保存了他们被添加的顺序</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a></td>
-<td>字典的子类，提供了一个工厂函数，为字典查询提供一个默认值</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a></p></td>
+<td><p>字典的子类，提供了一个工厂函数，为字典查询提供一个默认值</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a></td>
-<td>封装了字典对象，简化了字典子类化</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a></p></td>
+<td><p>封装了字典对象，简化了字典子类化</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a></td>
-<td>封装了列表对象，简化了列表子类化</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a></p></td>
+<td><p>封装了列表对象，简化了列表子类化</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a></td>
-<td>封装了列表对象，简化了字符串子类化</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a></p></td>
+<td><p>封装了列表对象，简化了字符串子类化</p></td>
 </tr>
 </tbody>
 </table>
-<div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>将 <a class="reference internal" href="collections.abc.html#collections-abstract-base-classes" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#collections-abstract-base-classes"><span class="std std-ref">Collections Abstract Base Classes</span></a> 移到了 <a class="reference internal" href="collections.abc.html#module-collections.abc" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a> 模块. 在Python 3.7 为了保持兼容性，他们依然在这个模块可见。最终会被全部移除掉。</p>
+<div class="deprecated-removed">
+<p><span class="versionmodified">Deprecated since version 3.3, will be removed in version 3.10: </span>已将 <a class="reference internal" href="collections.abc.html#collections-abstract-base-classes" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#collections-abstract-base-classes"><span class="std std-ref">容器抽象基类</span></a> 移至 <a class="reference internal" href="collections.abc.html#module-collections.abc" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a> 模块。 为了保持向下兼容性，它们在 Python 3.9 版的这个模块中仍然存在。</p>
 </div>
 <div class="section" id="chainmap-objects">
 <h2><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 对象<a class="headerlink" href="#chainmap-objects" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 <p>一个 <a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 类是为了将多个映射快速的链接到一起，这样它们就可以作为一个单元处理。它通常比创建一个新字典和多次调用 <a class="reference internal" href="stdtypes.html#dict.update" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.update" title="dict.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code></a> 要快很多。</p>
 <p>这个类可以用于模拟嵌套作用域，并且在模版化的时候比较有用。</p>
 <dl class="class">
 <dt id="collections.ChainMap">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">ChainMap</code><span class="sig-paren">(</span><em>*maps</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.ChainMap" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">ChainMap</code><span class="sig-paren">(</span><em class="sig-param">*maps</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.ChainMap" title="永久链接至目标">¶</a></dt>
 <dd><p>一个 <a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 将多个字典或者其他映射组合在一起，创建一个单独的可更新的视图。  如果没有 <em>maps</em> 被指定，就提供一个默认的空字典，这样一个新链至少有一个映射。</p>
 <p>底层映射被存储在一个列表中。这个列表是公开的，可以通过 <em>maps</em> 属性存取和更新。没有其他的状态。</p>
 <p>搜索查询底层映射，直到一个键被找到。不同的是，写，更新和删除只操作第一个映射。</p>
@@ -155,22 +163,22 @@
 <p>支持所有常用字典方法。另外还有一个  <em>maps</em> 属性(attribute)，一个创建子上下文的方法(method)， 一个存取它们首个映射的属性(property):</p>
 <dl class="attribute">
 <dt id="collections.ChainMap.maps">
-<code class="descname">maps</code><a class="headerlink" href="#collections.ChainMap.maps" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">maps</code><a class="headerlink" href="#collections.ChainMap.maps" title="永久链接至目标">¶</a></dt>
 <dd><p>一个可以更新的映射列表。这个列表是按照第一次搜索到最后一次搜索的顺序组织的。它是仅有的存储状态，可以被修改。列表最少包含一个映射。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.ChainMap.new_child">
-<code class="descname">new_child</code><span class="sig-paren">(</span><em>m=None</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.ChainMap.new_child" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">new_child</code><span class="sig-paren">(</span><em class="sig-param">m=None</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.ChainMap.new_child" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个新的 <a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 类，包含了一个新映射(map)，后面跟随当前实例的全部映射(map)。如果 <code class="docutils literal notranslate"><span class="pre">m</span></code> 被指定，它就成为不同新的实例，就是在所有映射前加上 m，如果没有指定，就加上一个空字典，这样的话一个 <code class="docutils literal notranslate"><span class="pre">d.new_child()</span></code> 调用等价于 <code class="docutils literal notranslate"><span class="pre">ChainMap({},</span> <span class="pre">*d.maps)</span></code> 。这个方法用于创建子上下文，不改变任何父映射的值。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">m</span></code>  可选参数。</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">m</span></code>  可选参数。</p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="collections.ChainMap.parents">
-<code class="descname">parents</code><a class="headerlink" href="#collections.ChainMap.parents" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">parents</code><a class="headerlink" href="#collections.ChainMap.parents" title="永久链接至目标">¶</a></dt>
 <dd><p>属性返回一个新的 <a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 包含所有的当前实例的映射，除了第一个。这样可以在搜索的时候跳过第一个映射。 使用的场景类似在 <a class="reference internal" href="glossary.html#term-nested-scope" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-nested-scope"><span class="xref std std-term">nested scopes</span></a> 嵌套作用域中使用 <a class="reference internal" href="simple_stmts.html#nonlocal" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#nonlocal"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">nonlocal</span></code></a> 关键词。用例也可以类比内建函数  <a class="reference internal" href="functions.html#super" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#super" title="super"><code class="xref py py-func docutils literal notranslate"><span class="pre">super()</span></code></a> 。一个 <code class="docutils literal notranslate"><span class="pre">d.parents</span></code> 的引用等价于 <code class="docutils literal notranslate"><span class="pre">ChainMap(*d.maps[1:])</span></code> 。</p>
 </dd></dl>
 
@@ -191,12 +199,12 @@
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<ul class="last simple">
-<li><a class="reference external" href="javascript:if(confirm('https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py'" tppabs="https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py">MultiContext class</a> 在 Enthought <a class="reference external" href="javascript:if(confirm('https://github.com/enthought/codetools  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/enthought/codetools'" tppabs="https://github.com/enthought/codetools">CodeTools package</a> 有支持写映射的选项。</li>
-<li>Django 的 <a class="reference external" href="javascript:if(confirm('https://github.com/django/django/blob/master/django/template/context.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/django/django/blob/master/django/template/context.py'" tppabs="https://github.com/django/django/blob/master/django/template/context.py">Context class</a> 模版是只读映射。它的上下文的push和pop特性也类似于 <a class="reference internal" href="#collections.ChainMap.new_child" title="collections.ChainMap.new_child"><code class="xref py py-meth docutils literal notranslate"><span class="pre">new_child()</span></code></a> 方法 <a class="reference internal" href="#collections.ChainMap.parents" title="collections.ChainMap.parents"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parents</span></code></a> 属性。</li>
-<li><a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/577434/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/577434/'" tppabs="https://code.activestate.com/recipes/577434/">Nested Contexts recipe</a> 提供了是否对第一个映射或其他映射进行写和其他修改的选项。</li>
-<li>一个 <a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/305268/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/305268/'" tppabs="https://code.activestate.com/recipes/305268/">极简的只读版 Chainmap</a>.</li>
+<p class="admonition-title">参见</p>
+<ul class="simple">
+<li><p><a class="reference external" href="javascript:if(confirm('https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py'" tppabs="https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py">MultiContext class</a> 在 Enthought <a class="reference external" href="javascript:if(confirm('https://github.com/enthought/codetools  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/enthought/codetools'" tppabs="https://github.com/enthought/codetools">CodeTools package</a> 有支持写映射的选项。</p></li>
+<li><p>Django 的 <a class="reference external" href="javascript:if(confirm('https://github.com/django/django/blob/master/django/template/context.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/django/django/blob/master/django/template/context.py'" tppabs="https://github.com/django/django/blob/master/django/template/context.py">Context class</a> 模版是只读映射。它的上下文的push和pop特性也类似于 <a class="reference internal" href="#collections.ChainMap.new_child" title="collections.ChainMap.new_child"><code class="xref py py-meth docutils literal notranslate"><span class="pre">new_child()</span></code></a> 方法 <a class="reference internal" href="#collections.ChainMap.parents" title="collections.ChainMap.parents"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parents</span></code></a> 属性。</p></li>
+<li><p><a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/577434/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/577434/'" tppabs="https://code.activestate.com/recipes/577434/">Nested Contexts recipe</a> 提供了是否对第一个映射或其他映射进行写和其他修改的选项。</p></li>
+<li><p>一个 <a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/305268/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/305268/'" tppabs="https://code.activestate.com/recipes/305268/">极简的只读版 Chainmap</a>.</p></li>
 </ul>
 </div>
 <div class="section" id="chainmap-examples-and-recipes">
@@ -216,7 +224,7 @@
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-u&#39;</span><span class="p">,</span> <span class="s1">&#39;--user&#39;</span><span class="p">)</span>
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-c&#39;</span><span class="p">,</span> <span class="s1">&#39;--color&#39;</span><span class="p">)</span>
 <span class="n">namespace</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-<span class="n">command_line_args</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">vars</span><span class="p">(</span><span class="n">namespace</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span><span class="p">}</span>
+<span class="n">command_line_args</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">vars</span><span class="p">(</span><span class="n">namespace</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
 
 <span class="n">combined</span> <span class="o">=</span> <span class="n">ChainMap</span><span class="p">(</span><span class="n">command_line_args</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">,</span> <span class="n">defaults</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">combined</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">])</span>
@@ -245,14 +253,14 @@
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeepChainMap</span><span class="p">(</span><span class="n">ChainMap</span><span class="p">):</span>
     <span class="s1">&#39;Variant of ChainMap that allows direct updates to inner scopes&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">maps</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
                 <span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
                 <span class="k">return</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
 
-    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">maps</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
                 <span class="k">del</span> <span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
@@ -289,35 +297,38 @@
 </div>
 <dl class="class">
 <dt id="collections.Counter">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">Counter</code><span class="sig-paren">(</span><span class="optional">[</span><em>iterable-or-mapping</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">Counter</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">iterable-or-mapping</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter" title="永久链接至目标">¶</a></dt>
 <dd><p>一个 <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 是一个 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的子类，用于计数可哈希对象。它是一个集合，元素像字典键(key)一样存储，它们的计数存储为值。计数可以是任何整数值，包括0和负数。 <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 类有点像其他语言中的 bags或multisets。</p>
 <p>元素从一个 <em>iterable</em> 被计数或从其他的 <em>mapping</em> (or counter)初始化：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>                           <span class="c1"># a new, empty counter</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>                           <span class="c1"># a new, empty counter</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="s1">&#39;gallahad&#39;</span><span class="p">)</span>                 <span class="c1"># a new counter from an iterable</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;red&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>      <span class="c1"># a new counter from a mapping</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">cats</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">dogs</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>             <span class="c1"># a new counter from keyword args</span>
 </pre></div>
 </div>
 <p>Counter对象有一个字典接口，如果引用的键没有任何记录，就返回一个0，而不是弹出一个 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">])</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;bacon&#39;</span><span class="p">]</span>                              <span class="c1"># count of a missing element is zero</span>
 <span class="go">0</span>
 </pre></div>
 </div>
 <p>设置一个计数为0不会从计数器中移去一个元素。使用 <code class="docutils literal notranslate"><span class="pre">del</span></code> 来删除它:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;sausage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>                        <span class="c1"># counter entry with a zero count</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;sausage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>                        <span class="c1"># counter entry with a zero count</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;sausage&#39;</span><span class="p">]</span>                        <span class="c1"># del actually removes the entry</span>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">3.1 新版功能.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.7 版更改: </span>作为 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的子类，<a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 继承了记住插入顺序的功能。 <em>Counter</em> 对象进行数学运算时同样会保持顺序。 结果会先按每个元素在运算符左边的出现时间排序，然后再按其在运算符右边的出现时间排序。</p>
 </div>
 <p>计数器对象除了字典方法以外，还提供了三个其他的方法：</p>
 <dl class="method">
 <dt id="collections.Counter.elements">
-<code class="descname">elements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.elements" title="永久链接至目标">¶</a></dt>
-<dd><p>返回一个迭代器，每个元素重复计数的个数。元素顺序是任意的。如果一个元素的计数小于1， <a class="reference internal" href="#collections.Counter.elements" title="collections.Counter.elements"><code class="xref py py-meth docutils literal notranslate"><span class="pre">elements()</span></code></a> 就会忽略它。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+<code class="sig-name descname">elements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.elements" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个迭代器，其中每个元素将重复出现计数值所指定次。 元素会按首次出现的顺序返回。 如果一个元素的计数值小于一，<a class="reference internal" href="#collections.Counter.elements" title="collections.Counter.elements"><code class="xref py py-meth docutils literal notranslate"><span class="pre">elements()</span></code></a> 将会忽略它。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">elements</span><span class="p">())</span>
 <span class="go">[&#39;a&#39;, &#39;a&#39;, &#39;a&#39;, &#39;a&#39;, &#39;b&#39;, &#39;b&#39;]</span>
 </pre></div>
@@ -326,19 +337,19 @@
 
 <dl class="method">
 <dt id="collections.Counter.most_common">
-<code class="descname">most_common</code><span class="sig-paren">(</span><span class="optional">[</span><em>n</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.most_common" title="永久链接至目标">¶</a></dt>
-<dd><p>返回一个列表，提供  <em>n</em> 个频率最高的元素和计数。 如果没提供 <em>n</em> ，或者是 <code class="docutils literal notranslate"><span class="pre">None</span></code> ， <a class="reference internal" href="#collections.Counter.most_common" title="collections.Counter.most_common"><code class="xref py py-meth docutils literal notranslate"><span class="pre">most_common()</span></code></a> 返回计数器中的 <em>所有</em> 元素。相等个数的元素顺序随机：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Counter</span><span class="p">(</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># doctest: +SKIP</span>
-<span class="go">[(&#39;a&#39;, 5), (&#39;r&#39;, 2), (&#39;b&#39;, 2)]</span>
+<code class="sig-name descname">most_common</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">n</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.most_common" title="永久链接至目标">¶</a></dt>
+<dd><p>返回一个列表，其中包含 <em>n</em> 个最常见的元素及出现次数，按常见程度由高到低排序。 如果 <em>n</em> 被省略或为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，<a class="reference internal" href="#collections.Counter.most_common" title="collections.Counter.most_common"><code class="xref py py-meth docutils literal notranslate"><span class="pre">most_common()</span></code></a> 将返回计数器中的 <em>所有</em> 元素。 计数值相等的元素按首次出现的顺序排序：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Counter</span><span class="p">(</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">[(&#39;a&#39;, 5), (&#39;b&#39;, 2), (&#39;r&#39;, 2)]</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.Counter.subtract">
-<code class="descname">subtract</code><span class="sig-paren">(</span><span class="optional">[</span><em>iterable-or-mapping</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.subtract" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">subtract</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">iterable-or-mapping</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.subtract" title="永久链接至目标">¶</a></dt>
 <dd><p>从 <em>迭代对象</em> 或 <em>映射对象</em> 减去元素。像 <a class="reference internal" href="stdtypes.html#dict.update" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.update" title="dict.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.update()</span></code></a> 但是是减去，而不是替换。输入和输出都可以是0或者负数。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
@@ -346,20 +357,20 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">3.2 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <p>通常字典方法都可用于 <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 对象，除了有两个方法工作方式与字典并不相同。</p>
 <dl class="method">
 <dt id="collections.Counter.fromkeys">
-<code class="descname">fromkeys</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.fromkeys" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">fromkeys</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.fromkeys" title="永久链接至目标">¶</a></dt>
 <dd><p>这个类方法没有在 <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 中实现。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.Counter.update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="optional">[</span><em>iterable-or-mapping</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.update" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">iterable-or-mapping</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.Counter.update" title="永久链接至目标">¶</a></dt>
 <dd><p>从 <em>迭代对象</em> 计数元素或者 从另一个 <em>映射对象</em> (或计数器) 添加。 像 <a class="reference internal" href="stdtypes.html#dict.update" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.update" title="dict.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.update()</span></code></a> 但是是加上，而不是替换。另外，<em>迭代对象</em> 应该是序列元素，而不是一个 <code class="docutils literal notranslate"><span class="pre">(key,</span> <span class="pre">value)</span></code> 对。</p>
 </dd></dl>
 
@@ -378,20 +389,20 @@
 </pre></div>
 </div>
 <p>提供了几个数学操作，可以结合  <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 对象，以生产 multisets (计数器中大于0的元素）。 加和减，结合计数器，通过加上或者减去元素的相应计数。交集和并集返回相应计数的最小或最大值。每种操作都可以接受带符号的计数，但是输出会忽略掉结果为零或者小于零的计数。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">+</span> <span class="n">d</span>                       <span class="c1"># add two counters together:  c[x] + d[x]</span>
 <span class="go">Counter({&#39;a&#39;: 4, &#39;b&#39;: 3})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">-</span> <span class="n">d</span>                       <span class="c1"># subtract (keeping only positive counts)</span>
 <span class="go">Counter({&#39;a&#39;: 2})</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">&amp;</span> <span class="n">d</span>                       <span class="c1"># intersection:  min(c[x], d[x]) # doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">&amp;</span> <span class="n">d</span>                       <span class="c1"># intersection:  min(c[x], d[x]) </span>
 <span class="go">Counter({&#39;a&#39;: 1, &#39;b&#39;: 1})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">|</span> <span class="n">d</span>                       <span class="c1"># union:  max(c[x], d[x])</span>
 <span class="go">Counter({&#39;a&#39;: 3, &#39;b&#39;: 2})</span>
 </pre></div>
 </div>
 <p>单目加和减（一元操作符）意思是从空计数器加或者减去。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=-</span><span class="mi">4</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=-</span><span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="o">+</span><span class="n">c</span>
 <span class="go">Counter({&#39;a&#39;: 2})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="n">c</span>
@@ -399,31 +410,27 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能: </span>添加了对一元加，一元减和位置集合操作的支持。</p>
+<p><span class="versionmodified added">3.3 新版功能: </span>添加了对一元加，一元减和位置集合操作的支持。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
+<p class="admonition-title">注解</p>
 <p>计数器主要是为了表达运行的正的计数而设计；但是，小心不要预先排除负数或者其他类型。为了帮助这些用例，这一节记录了最小范围和类型限制。</p>
-<ul class="last simple">
-<li><a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 类是一个字典的子类，不限制键和值。值用于表示计数，但你实际上 <em>可以</em> 存储任何其他值。</li>
-<li><a class="reference internal" href="#collections.Counter.most_common" title="collections.Counter.most_common"><code class="xref py py-meth docutils literal notranslate"><span class="pre">most_common()</span></code></a> 方法在值需要排序的时候用。</li>
-<li>原地操作比如 <code class="docutils literal notranslate"><span class="pre">c[key]</span> <span class="pre">+=</span> <span class="pre">1</span></code> ， 值类型只需要支持加和减。 所以分数，小数，和十进制都可以用，负值也可以支持。这两个方法 <a class="reference internal" href="#collections.Counter.update" title="collections.Counter.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code></a> 和 <a class="reference internal" href="#collections.Counter.subtract" title="collections.Counter.subtract"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subtract()</span></code></a> 的输入和输出也一样支持负数和0。</li>
-<li>Multiset多集合方法只为正值的使用情况设计。输入可以是负数或者0，但只输出计数为正的值。没有类型限制，但值类型需要支持加，减和比较操作。</li>
-<li><a class="reference internal" href="#collections.Counter.elements" title="collections.Counter.elements"><code class="xref py py-meth docutils literal notranslate"><span class="pre">elements()</span></code></a> 方法要求正整数计数。忽略0和负数计数。</li>
+<ul class="simple">
+<li><p><a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 类是一个字典的子类，不限制键和值。值用于表示计数，但你实际上 <em>可以</em> 存储任何其他值。</p></li>
+<li><p><a class="reference internal" href="#collections.Counter.most_common" title="collections.Counter.most_common"><code class="xref py py-meth docutils literal notranslate"><span class="pre">most_common()</span></code></a> 方法在值需要排序的时候用。</p></li>
+<li><p>原地操作比如 <code class="docutils literal notranslate"><span class="pre">c[key]</span> <span class="pre">+=</span> <span class="pre">1</span></code> ， 值类型只需要支持加和减。 所以分数，小数，和十进制都可以用，负值也可以支持。这两个方法 <a class="reference internal" href="#collections.Counter.update" title="collections.Counter.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code></a> 和 <a class="reference internal" href="#collections.Counter.subtract" title="collections.Counter.subtract"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subtract()</span></code></a> 的输入和输出也一样支持负数和0。</p></li>
+<li><p>Multiset多集合方法只为正值的使用情况设计。输入可以是负数或者0，但只输出计数为正的值。没有类型限制，但值类型需要支持加，减和比较操作。</p></li>
+<li><p><a class="reference internal" href="#collections.Counter.elements" title="collections.Counter.elements"><code class="xref py py-meth docutils literal notranslate"><span class="pre">elements()</span></code></a> 方法要求正整数计数。忽略0和负数计数。</p></li>
 </ul>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<ul class="last">
-<li><p class="first"><a class="reference external" href="javascript:if(confirm('https://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html'" tppabs="https://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html">Bag class</a> 在 Smalltalk。</p>
-</li>
-<li><p class="first">Wikipedia 链接 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Multiset  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Multiset'" tppabs="https://en.wikipedia.org/wiki/Multiset">Multisets</a>.</p>
-</li>
-<li><p class="first"><a class="reference external" href="javascript:if(confirm('http://www.java2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.java2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm'" tppabs="http://www.java2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm">C++ multisets</a> 教程和例子。</p>
-</li>
-<li><p class="first">数学操作和多集合用例，参考 <em>Knuth, Donald. The Art of Computer Programming Volume II, Section 4.6.3, Exercise 19</em> 。</p>
-</li>
-<li><p class="first">在给定数量和集合元素枚举所有不同的多集合，参考 <a class="reference internal" href="itertools.html#itertools.combinations_with_replacement" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.combinations_with_replacement" title="itertools.combinations_with_replacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations_with_replacement()</span></code></a></p>
+<p class="admonition-title">参见</p>
+<ul>
+<li><p><a class="reference external" href="javascript:if(confirm('https://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html'" tppabs="https://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html">Bag class</a> 在 Smalltalk。</p></li>
+<li><p>Wikipedia 链接 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Multiset  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Multiset'" tppabs="https://en.wikipedia.org/wiki/Multiset">Multisets</a>.</p></li>
+<li><p><a class="reference external" href="javascript:if(confirm('http://www.java2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.java2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm'" tppabs="http://www.java2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm">C++ multisets</a> 教程和例子。</p></li>
+<li><p>数学操作和多集合用例，参考 <em>Knuth, Donald. The Art of Computer Programming Volume II, Section 4.6.3, Exercise 19</em> 。</p></li>
+<li><p>在给定数量和集合元素枚举所有不同的多集合，参考 <a class="reference internal" href="itertools.html#itertools.combinations_with_replacement" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.combinations_with_replacement" title="itertools.combinations_with_replacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations_with_replacement()</span></code></a></p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="n">Counter</span><span class="p">,</span> <span class="n">combinations_with_replacement</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="c1"># --&gt; AA AB AC BB BC CC</span>
 </pre></div>
 </div>
@@ -435,7 +442,7 @@
 <h2><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a> 对象<a class="headerlink" href="#deque-objects" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="collections.deque">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">deque</code><span class="sig-paren">(</span><span class="optional">[</span><em>iterable</em><span class="optional">[</span>, <em>maxlen</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">deque</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">iterable</em><span class="optional">[</span>, <em class="sig-param">maxlen</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个新的双向队列对象，从左到右初始化(用方法 <a class="reference internal" href="#collections.deque.append" title="collections.deque.append"><code class="xref py py-meth docutils literal notranslate"><span class="pre">append()</span></code></a>) ，从 <em>iterable</em> （迭代对象) 数据创建。如果 <em>iterable</em> 没有指定，新队列为空。</p>
 <p>Deque队列是由栈或者queue队列生成的（发音是 “deck”，”double-ended queue”的简称）。Deque 支持线程安全，内存高效添加(append)和弹出(pop)，从两端都可以，两个方向的大概开销都是 O(1) 复杂度。</p>
 <p>虽然 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 对象也支持类似操作，不过这里优化了定长操作和 <code class="docutils literal notranslate"><span class="pre">pop(0)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">insert(0,</span> <span class="pre">v)</span></code> 的开销。它们引起 O(n) 内存移动的操作，改变底层数据表达的大小和位置。</p>
@@ -443,101 +450,101 @@
 <p>双向队列(deque)对象支持以下方法：</p>
 <dl class="method">
 <dt id="collections.deque.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.append" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.append" title="永久链接至目标">¶</a></dt>
 <dd><p>添加 <em>x</em> 到右端。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.appendleft">
-<code class="descname">appendleft</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.appendleft" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">appendleft</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.appendleft" title="永久链接至目标">¶</a></dt>
 <dd><p>添加 <em>x</em> 到左端。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.clear" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.clear" title="永久链接至目标">¶</a></dt>
 <dd><p>移除所有元素，使其长度为0.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.copy" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.copy" title="永久链接至目标">¶</a></dt>
 <dd><p>创建一份浅拷贝。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.count">
-<code class="descname">count</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.count" title="永久链接至目标">¶</a></dt>
-<dd><p>计算deque中个数等于 <em>x</em> 的元素。</p>
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.count" title="永久链接至目标">¶</a></dt>
+<dd><p>计算 deque 中元素等于 <em>x</em> 的个数。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">3.2 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.extend">
-<code class="descname">extend</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.extend" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.extend" title="永久链接至目标">¶</a></dt>
 <dd><p>扩展deque的右侧，通过添加iterable参数中的元素。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.extendleft">
-<code class="descname">extendleft</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.extendleft" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">extendleft</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.extendleft" title="永久链接至目标">¶</a></dt>
 <dd><p>扩展deque的左侧，通过添加iterable参数中的元素。注意，左添加时，在结果中iterable参数中的顺序将被反过来添加。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.index">
-<code class="descname">index</code><span class="sig-paren">(</span><em>x</em><span class="optional">[</span>, <em>start</em><span class="optional">[</span>, <em>stop</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.index" title="永久链接至目标">¶</a></dt>
-<dd><p>返回第 <em>x</em> 个元素（从 <em>start</em> 开始计算，在 <em>stop</em> 之前）。返回第一个匹配，如果没找到的话，升起  <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 。</p>
+<code class="sig-name descname">index</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="optional">[</span>, <em class="sig-param">start</em><span class="optional">[</span>, <em class="sig-param">stop</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.index" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>x</em> 在 deque 中的位置（在索引 <em>start</em> 之后，索引 <em>stop</em> 之前）。 返回第一个匹配项，如果未找到则引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><em>i</em>, <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.insert" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param">i</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.insert" title="永久链接至目标">¶</a></dt>
 <dd><p>在位置 <em>i</em> 插入 <em>x</em> 。</p>
-<p>如果插入会导致一个限长deque超出长度 <em>maxlen</em> 的话，就升起一个  <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> 。</p>
+<p>如果插入会导致一个限长 deque 超出长度 <em>maxlen</em> 的话，就引发一个 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.pop">
-<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.pop" title="永久链接至目标">¶</a></dt>
-<dd><p>移去并且返回一个元素，deque最右侧的那一个。如果没有元素的话，就升起 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> 索引错误。</p>
+<code class="sig-name descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.pop" title="永久链接至目标">¶</a></dt>
+<dd><p>移去并且返回一个元素，deque 最右侧的那一个。 如果没有元素的话，就引发一个 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.popleft">
-<code class="descname">popleft</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.popleft" title="永久链接至目标">¶</a></dt>
-<dd><p>移去并且返回一个元素，deque最左侧的那一个。如果没有元素的话，就升起 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> 索引错误。</p>
+<code class="sig-name descname">popleft</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.popleft" title="永久链接至目标">¶</a></dt>
+<dd><p>移去并且返回一个元素，deque 最左侧的那一个。 如果没有元素的话，就引发 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.remove">
-<code class="descname">remove</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.remove" title="永久链接至目标">¶</a></dt>
-<dd><p>移去找到的第一个 <em>value</em>。 如果没有的话就升起  <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 。</p>
+<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.remove" title="永久链接至目标">¶</a></dt>
+<dd><p>移除找到的第一个 <em>value</em>。 如果没有的话就引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.reverse">
-<code class="descname">reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.reverse" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.reverse" title="永久链接至目标">¶</a></dt>
 <dd><p>将deque逆序排列。返回 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">3.2 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.deque.rotate">
-<code class="descname">rotate</code><span class="sig-paren">(</span><em>n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.rotate" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">rotate</code><span class="sig-paren">(</span><em class="sig-param">n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.rotate" title="永久链接至目标">¶</a></dt>
 <dd><p>向右循环移动 <em>n</em> 步。 如果 <em>n</em> 是负数，就向左循环。</p>
 <p>如果deque不是空的，向右循环移动一步就等价于 <code class="docutils literal notranslate"><span class="pre">d.appendleft(d.pop())</span></code> ， 向左循环一步就等价于 <code class="docutils literal notranslate"><span class="pre">d.append(d.popleft())</span></code> 。</p>
 </dd></dl>
@@ -545,22 +552,22 @@
 <p>Deque对象同样提供了一个只读属性:</p>
 <dl class="attribute">
 <dt id="collections.deque.maxlen">
-<code class="descname">maxlen</code><a class="headerlink" href="#collections.deque.maxlen" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">maxlen</code><a class="headerlink" href="#collections.deque.maxlen" title="永久链接至目标">¶</a></dt>
 <dd><p>Deque的最大尺寸，如果没有限定的话就是 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">3.1 新版功能.</span></p>
 </div>
 </dd></dl>
 
 </dd></dl>
 
-<p>除了以上，deque还支持迭代，清洗，<code class="docutils literal notranslate"><span class="pre">len(d)</span></code>, <code class="docutils literal notranslate"><span class="pre">reversed(d)</span></code>, <code class="docutils literal notranslate"><span class="pre">copy.copy(d)</span></code>, <code class="docutils literal notranslate"><span class="pre">copy.deepcopy(d)</span></code>, 成员测试 <a class="reference internal" href="expressions.html#in" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a> 操作符，和下标引用 <code class="docutils literal notranslate"><span class="pre">d[-1]</span></code> 。索引存取在两端的复杂度是 O(1)， 在中间的复杂度比 O(n) 略低。要快速存取，使用list来替代。</p>
+<p>除了以上操作，deque 还支持迭代、封存、<code class="docutils literal notranslate"><span class="pre">len(d)</span></code>、<code class="docutils literal notranslate"><span class="pre">reversed(d)</span></code>、<code class="docutils literal notranslate"><span class="pre">copy.copy(d)</span></code>、<code class="docutils literal notranslate"><span class="pre">copy.deepcopy(d)</span></code>、成员检测运算符 <a class="reference internal" href="expressions.html#in" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a> 以及下标引用例如通过 <code class="docutils literal notranslate"><span class="pre">d[0]</span></code> 访问首个元素等。 索引访问在两端的复杂度均为 O(1) 但在中间则会低至 O(n)。 如需快速随机访问，请改用列表。</p>
 <p>Deque从版本3.5开始支持 <code class="docutils literal notranslate"><span class="pre">__add__()</span></code>, <code class="docutils literal notranslate"><span class="pre">__mul__()</span></code>, 和 <code class="docutils literal notranslate"><span class="pre">__imul__()</span></code> 。</p>
 <p>示例:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="s1">&#39;ghi&#39;</span><span class="p">)</span>                 <span class="c1"># make a new deque with three items</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>                   <span class="c1"># iterate over the deque&#39;s elements</span>
-<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
 <span class="go">G</span>
 <span class="go">H</span>
 <span class="go">I</span>
@@ -661,33 +668,33 @@
 <h2><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 对象<a class="headerlink" href="#defaultdict-objects" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="collections.defaultdict">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">defaultdict</code><span class="sig-paren">(</span><span class="optional">[</span><em>default_factory</em><span class="optional">[</span>, <em>...</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.defaultdict" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">defaultdict</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">default_factory</em><span class="optional">[</span>, <em class="sig-param">...</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.defaultdict" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个新的类似字典的对象。 <a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 是内置 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 类的子类。它重载了一个方法并添加了一个可写的实例变量。其余的功能与 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 类相同，此处不再重复说明。</p>
-<p>第一个参数 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 提供了一个初始值。它默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。所有的其他参数都等同与 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 构建器中的参数对待，包括关键词参数。</p>
-<p><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 对象除了支持 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的操作，还支持下面的方法作为扩展:</p>
+<p>本对象包含一个名为 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 的属性，构造时，第一个参数用于为该属性提供初始值，默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。所有其他参数（包括关键字参数）都相当于传递给 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的构造函数。</p>
+<p><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 对象除了支持标准 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的操作，还支持以下方法作为扩展：</p>
 <dl class="method">
 <dt id="collections.defaultdict.__missing__">
-<code class="descname">__missing__</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.defaultdict.__missing__" title="永久链接至目标">¶</a></dt>
-<dd><p>如果 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 是 <code class="docutils literal notranslate"><span class="pre">None</span></code> ， 它就升起一个 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> 并将 <em>key</em> 作为参数。</p>
-<p>如果 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 不为 <code class="docutils literal notranslate"><span class="pre">None</span></code> ， 它就会会被调用，不带参数，为 <em>key</em> 提供一个默认值， 这个值和 <em>key</em> 作为一个对被插入到字典中，并返回。</p>
-<p>如果调用 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 升起了一个例外，这个例外就被扩散传递，不经过改变。</p>
-<p>这个方法在查询键值失败时，会被 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 中的 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 调用。不管它是返回值或升起例外，都会被 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 传递。</p>
-<p>注意 <a class="reference internal" href="#collections.defaultdict.__missing__" title="collections.defaultdict.__missing__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__missing__()</span></code></a> <em>不会</em> 被 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 以外的其他方法调用。意思就是 <code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code> 会向正常的dict那样返回 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，而不是使用 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 。</p>
+<code class="sig-name descname">__missing__</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.defaultdict.__missing__" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 属性为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则调用本方法会抛出 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> 异常，附带参数 <em>key</em>。</p>
+<p>如果 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 不为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则它会被（不带参数地）调用来为 <em>key</em> 提供一个默认值，这个值和 <em>key</em> 作为一对键值对被插入到字典中，并作为本方法的返回值返回。</p>
+<p>如果调用 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 时抛出了异常，这个异常会原封不动地向外层传递。</p>
+<p>在无法找到所需键值时，本方法会被 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 中的 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 方法调用。无论本方法返回了值还是抛出了异常，都会被 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 传递。</p>
+<p>注意，<a class="reference internal" href="#collections.defaultdict.__missing__" title="collections.defaultdict.__missing__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__missing__()</span></code></a> <em>不会</em> 被 <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> 以外的其他方法调用。意味着 <code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code> 会像正常的 dict 那样返回 <code class="docutils literal notranslate"><span class="pre">None</span></code>，而不是使用 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a>。</p>
 </dd></dl>
 
-<p><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 支持以下实例变量:</p>
+<p><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 对象支持以下实例变量：</p>
 <dl class="attribute">
 <dt id="collections.defaultdict.default_factory">
-<code class="descname">default_factory</code><a class="headerlink" href="#collections.defaultdict.default_factory" title="永久链接至目标">¶</a></dt>
-<dd><p>这个属性被 <a class="reference internal" href="#collections.defaultdict.__missing__" title="collections.defaultdict.__missing__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__missing__()</span></code></a> 方法使用；它从构建器的第一个参数初始化，如果提供了的话，否则就是 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
+<code class="sig-name descname">default_factory</code><a class="headerlink" href="#collections.defaultdict.default_factory" title="永久链接至目标">¶</a></dt>
+<dd><p>本属性由 <a class="reference internal" href="#collections.defaultdict.__missing__" title="collections.defaultdict.__missing__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__missing__()</span></code></a> 方法来调用。如果构造对象时提供了第一个参数，则本属性会被初始化成那个参数，如果未提供第一个参数，则本属性为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 </dd></dl>
 
 <div class="section" id="defaultdict-examples">
 <h3><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 例子<a class="headerlink" href="#defaultdict-examples" title="永久链接至标题">¶</a></h3>
-<p>使用 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 作为 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> ，很容易将序列作为键值对加入字典:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<p>使用 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 作为 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a>，很轻松地将（键-值对组成的）序列转换为（键-列表组成的）字典：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
@@ -696,8 +703,8 @@
 <span class="go">[(&#39;blue&#39;, [2, 4]), (&#39;red&#39;, [1]), (&#39;yellow&#39;, [1, 3])]</span>
 </pre></div>
 </div>
-<p>当每个键第一次遇见时，它还没有在字典里面；所以条目自动创建，通过 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 方法，并返回一个空的 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 。 <code class="xref py py-meth docutils literal notranslate"><span class="pre">list.append()</span></code> 操作添加值到这个新的列表里。当键再次被存取时，就正常操作， <code class="xref py py-meth docutils literal notranslate"><span class="pre">list.append()</span></code> 添加另一个值到列表中。这个计数比它的等价方法 <a class="reference internal" href="stdtypes.html#dict.setdefault" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.setdefault" title="dict.setdefault"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.setdefault()</span></code></a> 要快速和简单:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<p>当每个键第一次遇见时，它还没有在字典里面，所以自动创建该条目，即调用 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 方法，返回一个空的 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>。 <code class="xref py py-meth docutils literal notranslate"><span class="pre">list.append()</span></code> 操作添加值到这个新的列表里。当再次存取该键时，就正常操作，<code class="xref py py-meth docutils literal notranslate"><span class="pre">list.append()</span></code> 添加另一个值到列表中。这个计数比它的等价方法 <a class="reference internal" href="stdtypes.html#dict.setdefault" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.setdefault" title="dict.setdefault"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.setdefault()</span></code></a> 要快速和简单：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">d</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 <span class="gp">...</span>
@@ -705,8 +712,8 @@
 <span class="go">[(&#39;blue&#39;, [2, 4]), (&#39;red&#39;, [1]), (&#39;yellow&#39;, [1, 3])]</span>
 </pre></div>
 </div>
-<p>设置 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 为 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> ，使 <a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 在计数方面发挥好的作用（像其他语言中的bag或multiset）:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;mississippi&#39;</span>
+<p>设置 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 为 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>，使 <a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 用于计数（类似其他语言中的 bag 或 multiset）：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;mississippi&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -715,9 +722,9 @@
 <span class="go">[(&#39;i&#39;, 4), (&#39;m&#39;, 1), (&#39;p&#39;, 2), (&#39;s&#39;, 4)]</span>
 </pre></div>
 </div>
-<p>当一个字母首次遇到时，它就查询失败，所以 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 调用 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 来提供一个整数0作为默认值。自增操作然后建立对每个字母的计数。</p>
-<p>函数 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 总是返回0，是常数函数的特殊情况。一个更快和灵活的方法是使用lambda函数，可以提供任何常量值(不只是0):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">constant_factory</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<p>当一个字母首次遇到时，它会查询失败，则 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 会调用 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 来提供一个整数 0 作为默认值。后续的自增操作建立起对每个字母的计数。</p>
+<p>函数 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> 总是返回 0，这是常数函数的特殊情况。一个更快和灵活的方法是使用 lambda 函数，可以提供任何常量值（不只是0）：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">constant_factory</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">value</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">constant_factory</span><span class="p">(</span><span class="s1">&#39;&lt;missing&gt;&#39;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;ran&#39;</span><span class="p">)</span>
@@ -725,8 +732,8 @@
 <span class="go">&#39;John ran to &lt;missing&gt;&#39;</span>
 </pre></div>
 </div>
-<p>设置 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 为 <a class="reference internal" href="stdtypes.html#set" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> 使 <a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 用于构建字典集合:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<p>设置 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 为 <a class="reference internal" href="stdtypes.html#set" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> 使 <a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 用于构建 set 集合：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
@@ -742,7 +749,7 @@
 <p>命名元组赋予每个位置一个含义，提供可读性和自文档性。它们可以用于任何普通元组，并添加了通过名字获取值的能力，通过索引值也是可以的。</p>
 <dl class="function">
 <dt id="collections.namedtuple">
-<code class="descclassname">collections.</code><code class="descname">namedtuple</code><span class="sig-paren">(</span><em>typename</em>, <em>field_names</em>, <em>*</em>, <em>rename=False</em>, <em>defaults=None</em>, <em>module=None</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.namedtuple" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">collections.</code><code class="sig-name descname">namedtuple</code><span class="sig-paren">(</span><em class="sig-param">typename</em>, <em class="sig-param">field_names</em>, <em class="sig-param">*</em>, <em class="sig-param">rename=False</em>, <em class="sig-param">defaults=None</em>, <em class="sig-param">module=None</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.namedtuple" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个新的元组子类，名为 <em>typename</em> 。这个新的子类用于创建类元组的对象，可以通过域名来获取属性值，同样也可以通过索引和迭代获取值。子类实例同样有文档字符串（类名和域名）另外一个有用的 <a class="reference internal" href="datamodel.html#object.__repr__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__repr__" title="object.__repr__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__repr__()</span></code></a> 方法，以 <code class="docutils literal notranslate"><span class="pre">name=value</span></code> 格式列明了元组内容。</p>
 <p><em>field_names</em> 是一个像 <code class="docutils literal notranslate"><span class="pre">[‘x’,</span> <span class="pre">‘y’]</span></code> 一样的字符串序列。另外 <em>field_names</em> 可以是一个纯字符串，用空白或逗号分隔开元素名，比如 <code class="docutils literal notranslate"><span class="pre">'x</span> <span class="pre">y'</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">'x,</span> <span class="pre">y'</span></code> 。</p>
 <p>任何有效的Python 标识符都可以作为域名，除了下划线开头的那些。有效标识符由字母，数字，下划线组成，但首字母不能是数字或下划线，另外不能是关键词 <a class="reference internal" href="keyword.html#module-keyword" tppabs="https://docs.python.org/zh-cn/3/library/keyword.html#module-keyword" title="keyword: Test whether a string is a keyword in Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">keyword</span></code></a> 比如 <em>class</em>, <em>for</em>, <em>return</em>, <em>global</em>, <em>pass</em>, 或 <em>raise</em> 。</p>
@@ -751,23 +758,23 @@
 <p>如果 <em>module</em> 值有定义，命名元组的 <code class="docutils literal notranslate"><span class="pre">__module__</span></code> 属性值就被设置。</p>
 <p>命名元组实例没有字典，所以它们要更轻量，并且占用更小内存。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.1 版更改: </span>添加了对 <em>rename</em> 的支持。</p>
+<p><span class="versionmodified changed">在 3.1 版更改: </span>添加了对 <em>rename</em> 的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span><em>verbose</em> 和 <em>rename</em> 参数成为 <a class="reference internal" href="glossary.html#keyword-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#keyword-only-parameter"><span class="std std-ref">仅限关键字参数</span></a>.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span><em>verbose</em> 和 <em>rename</em> 参数成为 <a class="reference internal" href="glossary.html#keyword-only-parameter" tppabs="https://docs.python.org/zh-cn/3/glossary.html#keyword-only-parameter"><span class="std std-ref">仅限关键字参数</span></a>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>添加了 <em>module</em> 参数。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>添加了 <em>module</em> 参数。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>移去了 <em>verbose</em> 参数和属性 <code class="xref py py-attr docutils literal notranslate"><span class="pre">_source</span></code> 。</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>移除了 <em>verbose</em> 形参和 <code class="xref py py-attr docutils literal notranslate"><span class="pre">_source</span></code> 属性。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>添加了 <em>defaults</em> 参数和 <code class="xref py py-attr docutils literal notranslate"><span class="pre">_field_defaults</span></code> 属性。</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>添加了 <em>defaults</em> 参数和 <code class="xref py py-attr docutils literal notranslate"><span class="pre">_field_defaults</span></code> 属性。</p>
 </div>
 </dd></dl>
 
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Basic example</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Basic example</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>     <span class="c1"># instantiate with positional or keyword arguments</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>             <span class="c1"># indexable like the plain tuple (11, 22)</span>
@@ -797,11 +804,11 @@
 </pre></div>
 </div>
 <p>除了继承元组的方法，命名元组还支持三个额外的方法和两个属性。为了防止域名冲突，方法和属性以下划线开始。</p>
-<dl class="classmethod">
+<dl class="method">
 <dt id="collections.somenamedtuple._make">
-<em class="property">classmethod </em><code class="descclassname">somenamedtuple.</code><code class="descname">_make</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.somenamedtuple._make" title="永久链接至目标">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-prename descclassname">somenamedtuple.</code><code class="sig-name descname">_make</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.somenamedtuple._make" title="永久链接至目标">¶</a></dt>
 <dd><p>类方法从存在的序列或迭代实例创建一个新实例。</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="o">.</span><span class="n">_make</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="go">Point(x=11, y=22)</span>
 </pre></div>
@@ -810,21 +817,24 @@
 
 <dl class="method">
 <dt id="collections.somenamedtuple._asdict">
-<code class="descclassname">somenamedtuple.</code><code class="descname">_asdict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.somenamedtuple._asdict" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">somenamedtuple.</code><code class="sig-name descname">_asdict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.somenamedtuple._asdict" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个新的 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> ，它将字段名称映射到它们对应的值：</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_asdict</span><span class="p">()</span>
-<span class="go">OrderedDict([(&#39;x&#39;, 11), (&#39;y&#39;, 22)])</span>
+<span class="go">{&#39;x&#39;: 11, &#39;y&#39;: 22}</span>
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.1 版更改: </span>返回一个 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 而不是  <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 。</p>
+<p><span class="versionmodified changed">在 3.1 版更改: </span>返回一个 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 而不是  <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>返回一个常规 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 而不是 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a>。 因为自 Python 3.7 起，常规字典已经保证有序。 如果需要 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 的额外特性，推荐的解决方案是将结果转换为需要的类型: <code class="docutils literal notranslate"><span class="pre">OrderedDict(nt._asdict())</span></code>。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.somenamedtuple._replace">
-<code class="descclassname">somenamedtuple.</code><code class="descname">_replace</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.somenamedtuple._replace" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">somenamedtuple.</code><code class="sig-name descname">_replace</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.somenamedtuple._replace" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个新的命名元组实例，并将指定域替换为新的值</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span>
@@ -838,9 +848,9 @@
 
 <dl class="attribute">
 <dt id="collections.somenamedtuple._fields">
-<code class="descclassname">somenamedtuple.</code><code class="descname">_fields</code><a class="headerlink" href="#collections.somenamedtuple._fields" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">somenamedtuple.</code><code class="sig-name descname">_fields</code><a class="headerlink" href="#collections.somenamedtuple._fields" title="永久链接至目标">¶</a></dt>
 <dd><p>字符串元组列出了域名。用于提醒和从现有元组创建一个新的命名元组类型。</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_fields</span>            <span class="c1"># view the field names</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_fields</span>            <span class="c1"># view the field names</span>
 <span class="go">(&#39;x&#39;, &#39;y&#39;)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Color&#39;</span><span class="p">,</span> <span class="s1">&#39;red green blue&#39;</span><span class="p">)</span>
@@ -853,9 +863,9 @@
 
 <dl class="attribute">
 <dt id="collections.somenamedtuple._field_defaults">
-<code class="descclassname">somenamedtuple.</code><code class="descname">_field_defaults</code><a class="headerlink" href="#collections.somenamedtuple._field_defaults" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">somenamedtuple.</code><code class="sig-name descname">_field_defaults</code><a class="headerlink" href="#collections.somenamedtuple._field_defaults" title="永久链接至目标">¶</a></dt>
 <dd><p>默认值的字典。</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Account</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Account&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">],</span> <span class="n">defaults</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Account</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Account&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">],</span> <span class="n">defaults</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Account</span><span class="o">.</span><span class="n">_field_defaults</span>
 <span class="go">{&#39;balance&#39;: 0}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Account</span><span class="p">(</span><span class="s1">&#39;premium&#39;</span><span class="p">)</span>
@@ -865,18 +875,18 @@
 </dd></dl>
 
 <p>要获取这个名字域的值，使用 <a class="reference internal" href="functions.html#getattr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#getattr" title="getattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code></a> 函数 :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">getattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">getattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
 <span class="go">11</span>
 </pre></div>
 </div>
-<p>要将字典转换为命名元组，请使用 <code class="docutils literal notranslate"><span class="pre">**</span></code> 运算符（如 <a class="reference internal" href="controlflow.html#tut-unpacking-arguments" tppabs="https://docs.python.org/zh-cn/3/tutorial/controlflow.html#tut-unpacking-arguments"><span class="std std-ref">解包参数列表</span></a> 中所述）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
+<p>转换一个字典到命名元组，使用 ** 两星操作符 (所述如 <a class="reference internal" href="controlflow.html#tut-unpacking-arguments" tppabs="https://docs.python.org/zh-cn/3/tutorial/controlflow.html#tut-unpacking-arguments"><span class="std std-ref">解包参数列表</span></a>):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
 <span class="go">Point(x=11, y=22)</span>
 </pre></div>
 </div>
 <p>因为一个命名元组是一个正常的Python类，它可以很容易的通过子类更改功能。这里是如何添加一个计算域和定宽输出打印格式:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">])):</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">])):</span>
 <span class="gp">... </span>    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
 <span class="gp">... </span>    <span class="nd">@property</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="nf">hypot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -885,18 +895,18 @@
 <span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;Point: x=</span><span class="si">%6.3f</span><span class="s1">  y=</span><span class="si">%6.3f</span><span class="s1">  hypot=</span><span class="si">%6.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hypot</span><span class="p">)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="o">/</span><span class="mi">7</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="go">Point: x= 3.000  y= 4.000  hypot= 5.000</span>
 <span class="go">Point: x=14.000  y= 0.714  hypot=14.018</span>
 </pre></div>
 </div>
 <p>上面的子类设置 <code class="docutils literal notranslate"><span class="pre">__slots__</span></code> 为一个空元组。通过阻止创建实例字典保持了较低的内存开销。</p>
 <p>子类化对于添加和存储新的名字域是无效的。应当通过 <a class="reference internal" href="#collections.somenamedtuple._fields" title="collections.somenamedtuple._fields"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_fields</span></code></a> 创建一个新的命名元组来实现它:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Point3D</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point3D&#39;</span><span class="p">,</span> <span class="n">Point</span><span class="o">.</span><span class="n">_fields</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Point3D</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point3D&#39;</span><span class="p">,</span> <span class="n">Point</span><span class="o">.</span><span class="n">_fields</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,))</span>
 </pre></div>
 </div>
 <p>文档字符串可以自定义，通过直接赋值给 <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> 属性:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Book</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;authors&#39;</span><span class="p">])</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Book</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;authors&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Book</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="s1">&#39;: Hardcover book in active collection&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Book</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s1">&#39;13-digit ISBN&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Book</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s1">&#39;Title of first printing&#39;</span>
@@ -904,19 +914,12 @@
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>文档字符串属性变成可写。</p>
-</div>
-<p>默认值可以用  <a class="reference internal" href="#collections.somenamedtuple._replace" title="collections.somenamedtuple._replace"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_replace()</span></code></a> 来实现， 通过自定义一个原型实例:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Account</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Account&#39;</span><span class="p">,</span> <span class="s1">&#39;owner balance transaction_count&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">default_account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="s1">&#39;&lt;owner name&gt;&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">johns_account</span> <span class="o">=</span> <span class="n">default_account</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">owner</span><span class="o">=</span><span class="s1">&#39;John&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">janes_account</span> <span class="o">=</span> <span class="n">default_account</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">owner</span><span class="o">=</span><span class="s1">&#39;Jane&#39;</span><span class="p">)</span>
-</pre></div>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>文档字符串属性变成可写。</p>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<ul class="last">
-<li><p class="first">请参阅 <a class="reference internal" href="typing.html#typing.NamedTuple" tppabs="https://docs.python.org/zh-cn/3/library/typing.html#typing.NamedTuple" title="typing.NamedTuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.NamedTuple</span></code></a> ，以获取为命名元组添加类型提示的方法。 它还使用 <a class="reference internal" href="compound_stmts.html#class" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a> 关键字提供了一种优雅的符号:</p>
+<p class="admonition-title">参见</p>
+<ul>
+<li><p>请参阅 <a class="reference internal" href="typing.html#typing.NamedTuple" tppabs="https://docs.python.org/zh-cn/3/library/typing.html#typing.NamedTuple" title="typing.NamedTuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.NamedTuple</span></code></a> ，以获取为命名元组添加类型提示的方法。 它还使用 <a class="reference internal" href="compound_stmts.html#class" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a> 关键字提供了一种优雅的符号:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Component</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
     <span class="n">part_number</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">weight</span><span class="p">:</span> <span class="nb">float</span>
@@ -924,10 +927,8 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">对于以字典为底层的可变域名， 参考 <a class="reference internal" href="types.html#types.SimpleNamespace" tppabs="https://docs.python.org/zh-cn/3/library/types.html#types.SimpleNamespace" title="types.SimpleNamespace"><code class="xref py py-meth docutils literal notranslate"><span class="pre">types.SimpleNamespace()</span></code></a> 。</p>
-</li>
-<li><p class="first"><a class="reference internal" href="dataclasses.html#module-dataclasses" tppabs="https://docs.python.org/zh-cn/3/library/dataclasses.html#module-dataclasses" title="dataclasses: Generate special methods on user-defined classes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dataclasses</span></code></a> 模块提供了一个装饰器和一些函数，用于自动将生成的特殊方法添加到用户定义的类中。</p>
-</li>
+<li><p>对于以字典为底层的可变域名， 参考 <a class="reference internal" href="types.html#types.SimpleNamespace" tppabs="https://docs.python.org/zh-cn/3/library/types.html#types.SimpleNamespace" title="types.SimpleNamespace"><code class="xref py py-meth docutils literal notranslate"><span class="pre">types.SimpleNamespace()</span></code></a> 。</p></li>
+<li><p><a class="reference internal" href="dataclasses.html#module-dataclasses" tppabs="https://docs.python.org/zh-cn/3/library/dataclasses.html#module-dataclasses" title="dataclasses: Generate special methods on user-defined classes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dataclasses</span></code></a> 模块提供了一个装饰器和一些函数，用于自动将生成的特殊方法添加到用户定义的类中。</p></li>
 </ul>
 </div>
 </div>
@@ -936,30 +937,30 @@
 <p>有序词典就像常规词典一样，但有一些与排序操作相关的额外功能。由于内置的 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 类获得了记住插入顺序的能力（在 Python 3.7 中保证了这种新行为），它们变得不那么重要了。</p>
 <p>一些与 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的不同仍然存在：</p>
 <ul class="simple">
-<li>常规的 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 被设计为非常擅长映射操作。 跟踪插入顺序是次要的。</li>
-<li><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 旨在擅长重新排序操作。 空间效率、迭代速度和更新操作的性能是次要的。</li>
-<li>算法上， <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 可以比 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 更好地处理频繁的重新排序操作。 这使其适用于跟踪最近的访问（例如在 <a class="reference external" href="javascript:if(confirm('https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237'" tppabs="https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237">LRU cache</a> 中）。</li>
-<li>对于 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> ，相等操作检查匹配顺序。</li>
-<li><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 类的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">popitem()</span></code> 方法有不同的签名。它接受一个可选参数来指定弹出哪个元素。</li>
-<li><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 类有一个 <code class="xref py py-meth docutils literal notranslate"><span class="pre">move_to_end()</span></code> 方法，可以有效地将元素移动到任一端。</li>
-<li>Python 3.8之前， <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 缺少 <a class="reference internal" href="datamodel.html#object.__reversed__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__reversed__" title="object.__reversed__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__reversed__()</span></code></a> 方法。</li>
+<li><p>常规的 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 被设计为非常擅长映射操作。 跟踪插入顺序是次要的。</p></li>
+<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 旨在擅长重新排序操作。 空间效率、迭代速度和更新操作的性能是次要的。</p></li>
+<li><p>算法上， <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 可以比 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 更好地处理频繁的重新排序操作。 这使其适用于跟踪最近的访问（例如在 <a class="reference external" href="javascript:if(confirm('https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237'" tppabs="https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237">LRU cache</a> 中）。</p></li>
+<li><p>对于 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> ，相等操作检查匹配顺序。</p></li>
+<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 类的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">popitem()</span></code> 方法有不同的签名。它接受一个可选参数来指定弹出哪个元素。</p></li>
+<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 类有一个 <code class="xref py py-meth docutils literal notranslate"><span class="pre">move_to_end()</span></code> 方法，可以有效地将元素移动到任一端。</p></li>
+<li><p>Python 3.8之前， <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 缺少 <a class="reference internal" href="datamodel.html#object.__reversed__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__reversed__" title="object.__reversed__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__reversed__()</span></code></a> 方法。</p></li>
 </ul>
 <dl class="class">
 <dt id="collections.OrderedDict">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">OrderedDict</code><span class="sig-paren">(</span><span class="optional">[</span><em>items</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">OrderedDict</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">items</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 子类的实例，它具有专门用于重新排列字典顺序的方法。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">3.1 新版功能.</span></p>
 </div>
 <dl class="method">
 <dt id="collections.OrderedDict.popitem">
-<code class="descname">popitem</code><span class="sig-paren">(</span><em>last=True</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict.popitem" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">popitem</code><span class="sig-paren">(</span><em class="sig-param">last=True</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict.popitem" title="永久链接至目标">¶</a></dt>
 <dd><p>有序字典的 <a class="reference internal" href="#collections.OrderedDict.popitem" title="collections.OrderedDict.popitem"><code class="xref py py-meth docutils literal notranslate"><span class="pre">popitem()</span></code></a> 方法移除并返回一个 (key, value) 键值对。 如果 <em>last</em> 值为真，则按 <abbr title="last-in, first-out">LIFO</abbr> 后进先出的顺序返回键值对，否则就按 <abbr title="first-in, first-out">FIFO</abbr> 先进先出的顺序返回键值对。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="collections.OrderedDict.move_to_end">
-<code class="descname">move_to_end</code><span class="sig-paren">(</span><em>key</em>, <em>last=True</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict.move_to_end" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">move_to_end</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">last=True</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict.move_to_end" title="永久链接至目标">¶</a></dt>
 <dd><p>将现有 <em>key</em> 移动到有序字典的任一端。 如果 <em>last</em> 为真值（默认）则将元素移至末尾；如果  <em>last</em> 为假值则将元素移至开头。如果 <em>key</em> 不存在则会触发 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
@@ -971,7 +972,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">3.2 新版功能.</span></p>
 </div>
 </dd></dl>
 
@@ -980,10 +981,10 @@
 <p>相对于通常的映射方法，有序字典还另外提供了逆序迭代的支持，通过 <a class="reference internal" href="functions.html#reversed" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#reversed" title="reversed"><code class="xref py py-func docutils literal notranslate"><span class="pre">reversed()</span></code></a> 。</p>
 <p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 之间的相等测试是顺序敏感的，实现为 <code class="docutils literal notranslate"><span class="pre">list(od1.items())==list(od2.items())</span></code> 。 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 对象和其他的  <a class="reference internal" href="collections.abc.html#collections.abc.Mapping" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#collections.abc.Mapping" title="collections.abc.Mapping"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a> 的相等测试，是顺序敏感的字典测试。这允许 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 替换为任何字典可以使用的场所。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 的项(item)，键(key)和值(value) <a class="reference internal" href="glossary.html#term-dictionary-view" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-dictionary-view"><span class="xref std std-term">视图</span></a> 现在支持逆序迭代，通过 <a class="reference internal" href="functions.html#reversed" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#reversed" title="reversed"><code class="xref py py-func docutils literal notranslate"><span class="pre">reversed()</span></code></a> 。</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 的项(item)，键(key)和值(value) <a class="reference internal" href="glossary.html#term-dictionary-view" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-dictionary-view"><span class="xref std std-term">视图</span></a> 现在支持逆序迭代，通过 <a class="reference internal" href="functions.html#reversed" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#reversed" title="reversed"><code class="xref py py-func docutils literal notranslate"><span class="pre">reversed()</span></code></a> 。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span><span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0468  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0468'" tppabs="https://www.python.org/dev/peps/pep-0468"><strong>PEP 468</strong></a> 赞成将关键词参数的顺序保留， 通过传递给 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 构造器和它的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code> 方法。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span><span class="target" id="index-2"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0468  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0468'" tppabs="https://www.python.org/dev/peps/pep-0468"><strong>PEP 468</strong></a> 赞成将关键词参数的顺序保留， 通过传递给 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 构造器和它的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code> 方法。</p>
 </div>
 <div class="section" id="ordereddict-examples-and-recipes">
 <h3><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 例子和用法<a class="headerlink" href="#ordereddict-examples-and-recipes" title="永久链接至标题">¶</a></h3>
@@ -991,25 +992,25 @@
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LastUpdatedOrderedDict</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">):</span>
     <span class="s1">&#39;Store items in the order the keys were last added&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>一个 <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 对于实现 <a class="reference internal" href="functools.html#functools.lru_cache" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.lru_cache" title="functools.lru_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.lru_cache()</span></code></a> 的变体也很有用:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LRU</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">):</span>
     <span class="s1">&#39;Limit size, evicting the least recently looked-up key when full&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxsize</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxsize</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">maxsize</span> <span class="o">=</span> <span class="n">maxsize</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="n">value</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span>
 
-    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxsize</span><span class="p">:</span>
             <span class="n">oldest</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
@@ -1023,12 +1024,12 @@
 <p><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 类是用作字典对象的外包装。对这个类的需求已部分由直接创建 <a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的子类的功能所替代；不过，这个类处理起来更容易，因为底层的字典可以作为属性来访问。</p>
 <dl class="class">
 <dt id="collections.UserDict">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">UserDict</code><span class="sig-paren">(</span><span class="optional">[</span><em>initialdata</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.UserDict" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">UserDict</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">initialdata</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.UserDict" title="永久链接至目标">¶</a></dt>
 <dd><p>模拟一个字典类。这个实例的内容保存为一个正常字典， 可以通过 <a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 实例的 <a class="reference internal" href="#collections.UserDict.data" title="collections.UserDict.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> 属性存取。如果提供了 <em>initialdata</em> 值， <a class="reference internal" href="#collections.UserDict.data" title="collections.UserDict.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> 就被初始化为它的内容；注意一个 <em>initialdata</em> 的引用不会被保留作为其他用途。</p>
 <p><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 实例提供了以下属性作为扩展方法和操作的支持:</p>
 <dl class="attribute">
 <dt id="collections.UserDict.data">
-<code class="descname">data</code><a class="headerlink" href="#collections.UserDict.data" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">data</code><a class="headerlink" href="#collections.UserDict.data" title="永久链接至目标">¶</a></dt>
 <dd><p>一个真实的字典，用于保存 <a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 类的内容。</p>
 </dd></dl>
 
@@ -1041,12 +1042,12 @@
 <p>对这个类的需求已部分由直接创建 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 的子类的功能所替代；不过，这个类处理起来更容易，因为底层的列表可以作为属性来访问。</p>
 <dl class="class">
 <dt id="collections.UserList">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">UserList</code><span class="sig-paren">(</span><span class="optional">[</span><em>list</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.UserList" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">UserList</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">list</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.UserList" title="永久链接至目标">¶</a></dt>
 <dd><p>模拟一个列表。这个实例的内容被保存为一个正常列表，通过 <a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a> 的 <a class="reference internal" href="#collections.UserList.data" title="collections.UserList.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> 属性存取。实例内容被初始化为一个 <em>list</em> 的copy，默认为 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 空列表。 <em>list</em> 可以是迭代对象，比如一个Python列表，或者一个  <a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a> 对象。</p>
 <p><a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a> 提供了以下属性作为可变序列的方法和操作的扩展:</p>
 <dl class="attribute">
 <dt id="collections.UserList.data">
-<code class="descname">data</code><a class="headerlink" href="#collections.UserList.data" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">data</code><a class="headerlink" href="#collections.UserList.data" title="永久链接至目标">¶</a></dt>
 <dd><p>一个 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 对象用于存储 <a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a> 的内容。</p>
 </dd></dl>
 
@@ -1060,17 +1061,17 @@
 <p><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 类是用作字符串对象的外包装。对这个类的需求已部分由直接创建 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 的子类的功能所替代；不过，这个类处理起来更容易，因为底层的字符串可以作为属性来访问。</p>
 <dl class="class">
 <dt id="collections.UserString">
-<em class="property">class </em><code class="descclassname">collections.</code><code class="descname">UserString</code><span class="sig-paren">(</span><em>seq</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.UserString" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">collections.</code><code class="sig-name descname">UserString</code><span class="sig-paren">(</span><em class="sig-param">seq</em><span class="sig-paren">)</span><a class="headerlink" href="#collections.UserString" title="永久链接至目标">¶</a></dt>
 <dd><p>模拟一个字符串对象。这个实例对象的内容保存为一个正常字符串，通过 <a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 的 <a class="reference internal" href="#collections.UserString.data" title="collections.UserString.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> 属性存取。实例内容初始化设置为 <em>seq</em> 的copy。<em>seq</em> 参数可以是任何可通过内建 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> 函数转换为字符串的对象。</p>
 <p><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 提供了以下属性作为字符串方法和操作的额外支持：</p>
 <dl class="attribute">
 <dt id="collections.UserString.data">
-<code class="descname">data</code><a class="headerlink" href="#collections.UserString.data" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">data</code><a class="headerlink" href="#collections.UserString.data" title="永久链接至目标">¶</a></dt>
 <dd><p>一个真正的 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 对象用来存放 <a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 类的内容。</p>
 </dd></dl>
 
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>新方法 <code class="docutils literal notranslate"><span class="pre">__getnewargs__</span></code>, <code class="docutils literal notranslate"><span class="pre">__rmod__</span></code>, <code class="docutils literal notranslate"><span class="pre">casefold</span></code>, <code class="docutils literal notranslate"><span class="pre">format_map</span></code>, <code class="docutils literal notranslate"><span class="pre">isprintable</span></code>, 和 <code class="docutils literal notranslate"><span class="pre">maketrans</span></code>。</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>新方法 <code class="docutils literal notranslate"><span class="pre">__getnewargs__</span></code>, <code class="docutils literal notranslate"><span class="pre">__rmod__</span></code>, <code class="docutils literal notranslate"><span class="pre">casefold</span></code>, <code class="docutils literal notranslate"><span class="pre">format_map</span></code>, <code class="docutils literal notranslate"><span class="pre">isprintable</span></code>, 和 <code class="docutils literal notranslate"><span class="pre">maketrans</span></code>。</p>
 </div>
 </dd></dl>
 
@@ -1083,46 +1084,46 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">collections</span></code> --- 容器数据类型</a><ul>
-<li><a class="reference internal" href="#chainmap-objects"><code class="docutils literal notranslate"><span class="pre">ChainMap</span></code> 对象</a><ul>
-<li><a class="reference internal" href="#chainmap-examples-and-recipes"><code class="docutils literal notranslate"><span class="pre">ChainMap</span></code> 例子和方法</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code> --- 容器数据类型</a><ul>
+<li><a class="reference internal" href="#chainmap-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code> 对象</a><ul>
+<li><a class="reference internal" href="#chainmap-examples-and-recipes"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code> 例子和方法</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#counter-objects"><code class="docutils literal notranslate"><span class="pre">Counter</span></code> 对象</a></li>
-<li><a class="reference internal" href="#deque-objects"><code class="docutils literal notranslate"><span class="pre">deque</span></code> 对象</a><ul>
-<li><a class="reference internal" href="#deque-recipes"><code class="docutils literal notranslate"><span class="pre">deque</span></code> 用法</a></li>
+<li><a class="reference internal" href="#counter-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code> 对象</a></li>
+<li><a class="reference internal" href="#deque-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code> 对象</a><ul>
+<li><a class="reference internal" href="#deque-recipes"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code> 用法</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#defaultdict-objects"><code class="docutils literal notranslate"><span class="pre">defaultdict</span></code> 对象</a><ul>
-<li><a class="reference internal" href="#defaultdict-examples"><code class="docutils literal notranslate"><span class="pre">defaultdict</span></code> 例子</a></li>
+<li><a class="reference internal" href="#defaultdict-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code> 对象</a><ul>
+<li><a class="reference internal" href="#defaultdict-examples"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code> 例子</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#namedtuple-factory-function-for-tuples-with-named-fields"><code class="docutils literal notranslate"><span class="pre">namedtuple()</span></code> 命名元组的工厂函数</a></li>
-<li><a class="reference internal" href="#ordereddict-objects"><code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> 对象</a><ul>
-<li><a class="reference internal" href="#ordereddict-examples-and-recipes"><code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> 例子和用法</a></li>
+<li><a class="reference internal" href="#namedtuple-factory-function-for-tuples-with-named-fields"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code> 命名元组的工厂函数</a></li>
+<li><a class="reference internal" href="#ordereddict-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code> 对象</a><ul>
+<li><a class="reference internal" href="#ordereddict-examples-and-recipes"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code> 例子和用法</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#userdict-objects"><code class="docutils literal notranslate"><span class="pre">UserDict</span></code> 对象</a></li>
-<li><a class="reference internal" href="#userlist-objects"><code class="docutils literal notranslate"><span class="pre">UserList</span></code> 对象</a></li>
-<li><a class="reference internal" href="#userstring-objects"><code class="docutils literal notranslate"><span class="pre">UserString</span></code> 对象</a></li>
+<li><a class="reference internal" href="#userdict-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code> 对象</a></li>
+<li><a class="reference internal" href="#userlist-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code> 对象</a></li>
+<li><a class="reference internal" href="#userstring-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code> 对象</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="calendar.html" tppabs="https://docs.python.org/zh-cn/3/library/calendar.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">calendar</span></code> --- General calendar-related functions</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code> --- 日历相关函数</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="collections.abc.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">collections.abc</span></code> --- 容器的抽象基类</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code> --- 容器的抽象基类</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/collections.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/collections.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/collections.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/collections.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/collections.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/collections.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -1145,16 +1146,19 @@
           <a href="collections.abc.html" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html" title="collections.abc --- 容器的抽象基类"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="calendar.html" tppabs="https://docs.python.org/zh-cn/3/library/calendar.html" title="calendar --- General calendar-related functions"
+          <a href="calendar.html" tppabs="https://docs.python.org/zh-cn/3/library/calendar.html" title="calendar --- 日历相关函数"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" >数据类型</a> &#187;</li>
@@ -1176,15 +1180,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

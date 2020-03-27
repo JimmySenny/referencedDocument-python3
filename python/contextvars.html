@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>contextvars --- Context Variables &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>contextvars --- Context Variables &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="ç½‘ç»œå’Œè¿›ç¨‹é—´é€šä¿¡" href="ipc.html" />
     <link rel="prev" title="dummy_threading --- å¯ç›´æ¥æ›¿ä»£ threading æ¨¡å—ã€‚" href="dummy_threading.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/contextvars.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="dummy_threading.html" tppabs="https://docs.python.org/zh-cn/3/library/dummy_threading.html" title="dummy_threading --- å¯ç›´æ¥æ›¿ä»£ threading æ¨¡å—ã€‚"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" accesskey="U">Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -107,13 +115,13 @@ instead of <a class="reference internal" href="threading.html#threading.local" t
 bleeding to other code unexpectedly, when used in concurrent code.</p>
 <p>See also <span class="target" id="index-0"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0567  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0567'" tppabs="https://www.python.org/dev/peps/pep-0567"><strong>PEP 567</strong></a> for additional details.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.7 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 <div class="section" id="context-variables">
 <h2>Context Variables<a class="headerlink" href="#context-variables" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="class">
 <dt id="contextvars.ContextVar">
-<em class="property">class </em><code class="descclassname">contextvars.</code><code class="descname">ContextVar</code><span class="sig-paren">(</span><em>name</em><span class="optional">[</span>, <em>*</em>, <em>default</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">contextvars.</code><code class="sig-name descname">ContextVar</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="optional">[</span>, <em class="sig-param">*</em>, <em class="sig-param">default</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>This class is used to declare a new Context Variable, e.g.:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">:</span> <span class="n">ContextVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">ContextVar</span><span class="p">(</span><span class="s1">&#39;var&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
@@ -129,31 +137,31 @@ references to context variables which prevents context variables
 from being properly garbage collected.</p>
 <dl class="attribute">
 <dt id="contextvars.ContextVar.name">
-<code class="descname">name</code><a class="headerlink" href="#contextvars.ContextVar.name" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">name</code><a class="headerlink" href="#contextvars.ContextVar.name" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The name of the variable.  This is a read-only property.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7.1 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.7.1 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="contextvars.ContextVar.get">
-<code class="descname">get</code><span class="sig-paren">(</span><span class="optional">[</span><em>default</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar.get" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">default</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar.get" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a value for the context variable for the current context.</p>
 <p>If there is no value for the variable in the current context,
 the method will:</p>
 <ul class="simple">
-<li>return the value of the <em>default</em> argument of the method,
-if provided; or</li>
-<li>return the default value for the context variable,
-if it was created with one; or</li>
-<li>raise a <a class="reference internal" href="exceptions.html#LookupError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a>.</li>
+<li><p>return the value of the <em>default</em> argument of the method,
+if provided; or</p></li>
+<li><p>return the default value for the context variable,
+if it was created with one; or</p></li>
+<li><p>raise a <a class="reference internal" href="exceptions.html#LookupError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a>.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="contextvars.ContextVar.set">
-<code class="descname">set</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar.set" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar.set" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Call to set a new value for the context variable in the current
 context.</p>
 <p>The required <em>value</em> argument is the new value for the context
@@ -165,7 +173,7 @@ to restore the variable to its previous value via the
 
 <dl class="method">
 <dt id="contextvars.ContextVar.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar.reset" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar.reset" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Reset the context variable to the value it had before the
 <a class="reference internal" href="#contextvars.ContextVar.set" title="contextvars.ContextVar.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.set()</span></code></a> that created the <em>token</em> was used.</p>
 <p>ä¾‹å¦‚:</p>
@@ -185,21 +193,21 @@ to restore the variable to its previous value via the
 
 <dl class="class">
 <dt id="contextvars.contextvars.Token">
-<em class="property">class </em><code class="descclassname">contextvars.</code><code class="descname">Token</code><a class="headerlink" href="#contextvars.contextvars.Token" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">contextvars.</code><code class="sig-name descname">Token</code><a class="headerlink" href="#contextvars.contextvars.Token" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p><em>Token</em> objects are returned by the <a class="reference internal" href="#contextvars.ContextVar.set" title="contextvars.ContextVar.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.set()</span></code></a> method.
 They can be passed to the <a class="reference internal" href="#contextvars.ContextVar.reset" title="contextvars.ContextVar.reset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.reset()</span></code></a> method to revert
 the value of the variable to what it was before the corresponding
 <em>set</em>.</p>
 <dl class="attribute">
 <dt id="contextvars.contextvars.Token.Token.var">
-<code class="descclassname">Token.</code><code class="descname">var</code><a class="headerlink" href="#contextvars.contextvars.Token.Token.var" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">Token.</code><code class="sig-name descname">var</code><a class="headerlink" href="#contextvars.contextvars.Token.Token.var" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A read-only property.  Points to the <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVar</span></code></a> object
 that created the token.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="contextvars.contextvars.Token.Token.old_value">
-<code class="descclassname">Token.</code><code class="descname">old_value</code><a class="headerlink" href="#contextvars.contextvars.Token.Token.old_value" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">Token.</code><code class="sig-name descname">old_value</code><a class="headerlink" href="#contextvars.contextvars.Token.Token.old_value" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A read-only property.  Set to the value the variable had before
 the <a class="reference internal" href="#contextvars.ContextVar.set" title="contextvars.ContextVar.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.set()</span></code></a> method call that created the token.
 It points to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Token.MISSING</span></code> is the variable was not set
@@ -208,7 +216,7 @@ before the call.</p>
 
 <dl class="attribute">
 <dt id="contextvars.contextvars.Token.Token.MISSING">
-<code class="descclassname">Token.</code><code class="descname">MISSING</code><a class="headerlink" href="#contextvars.contextvars.Token.Token.MISSING" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">Token.</code><code class="sig-name descname">MISSING</code><a class="headerlink" href="#contextvars.contextvars.Token.Token.MISSING" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A marker object used by <code class="xref py py-attr docutils literal notranslate"><span class="pre">Token.old_value</span></code>.</p>
 </dd></dl>
 
@@ -219,7 +227,7 @@ before the call.</p>
 <h2>Manual Context Management<a class="headerlink" href="#manual-context-management" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="contextvars.copy_context">
-<code class="descclassname">contextvars.</code><code class="descname">copy_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.copy_context" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">contextvars.</code><code class="sig-name descname">copy_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.copy_context" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Returns a copy of the current <a class="reference internal" href="#contextvars.Context" title="contextvars.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code></a> object.</p>
 <p>The following snippet gets a copy of the current context and prints
 all variables and their values that are set in it:</p>
@@ -234,7 +242,7 @@ a lot of them.</p>
 
 <dl class="class">
 <dt id="contextvars.Context">
-<em class="property">class </em><code class="descclassname">contextvars.</code><code class="descname">Context</code><a class="headerlink" href="#contextvars.Context" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">contextvars.</code><code class="sig-name descname">Context</code><a class="headerlink" href="#contextvars.Context" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A mapping of <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVars</span></code></a> to their values.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Context()</span></code> creates an empty context with no values in it.
 To get a copy of the current context use the
@@ -242,7 +250,7 @@ To get a copy of the current context use the
 <p>Context implements the <a class="reference internal" href="collections.abc.html#collections.abc.Mapping" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#collections.abc.Mapping" title="collections.abc.Mapping"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Mapping</span></code></a> interface.</p>
 <dl class="method">
 <dt id="contextvars.Context.run">
-<code class="descname">run</code><span class="sig-paren">(</span><em>callable</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.run" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">callable</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.run" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Execute <code class="docutils literal notranslate"><span class="pre">callable(*args,</span> <span class="pre">**kwargs)</span></code> code in the context object
 the <em>run</em> method is called on.  Return the result of the execution
 or propagate an exception if one occurred.</p>
@@ -282,20 +290,20 @@ recursively.</p>
 
 <dl class="method">
 <dt id="contextvars.Context.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.copy" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.copy" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a shallow copy of the context object.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt>
-<code class="descname">var in context</code></dt>
+<code class="sig-name descname">var in context</code></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <em>context</em> has a value for <em>var</em> set;
 return <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt>
-<code class="descname">context[var]</code></dt>
+<code class="sig-name descname">context[var]</code></dt>
 <dd><p>Return the value of the <em>var</em> <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVar</span></code></a> variable.
 If the variable is not set in the context object, a
 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> is raised.</p>
@@ -303,7 +311,7 @@ If the variable is not set in the context object, a
 
 <dl class="method">
 <dt id="contextvars.Context.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>var</em><span class="optional">[</span>, <em>default</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.get" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">var</em><span class="optional">[</span>, <em class="sig-param">default</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.get" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the value for <em>var</em> if <em>var</em> has the value in the context
 object.  Return <em>default</em> otherwise.  If <em>default</em> is not given,
 return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
@@ -311,32 +319,32 @@ return <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="describe">
 <dt>
-<code class="descname">iter(context)</code></dt>
+<code class="sig-name descname">iter(context)</code></dt>
 <dd><p>Return an iterator over the variables stored in the context
 object.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt>
-<code class="descname">len(proxy)</code></dt>
+<code class="sig-name descname">len(proxy)</code></dt>
 <dd><p>Return the number of variables set in the context object.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="contextvars.Context.keys">
-<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.keys" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.keys" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a list of all variables in the context object.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="contextvars.Context.values">
-<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.values" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.values" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a list of all variables' values in the context object.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="contextvars.Context.items">
-<code class="descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.items" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.Context.items" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a list of 2-tuples containing all variables and their
 values in the context object.</p>
 </dd></dl>
@@ -361,7 +369,7 @@ client:</p>
     <span class="c1"># without passing it explicitly to this function.</span>
 
     <span class="n">client_addr</span> <span class="o">=</span> <span class="n">client_addr_var</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;Good bye, client @ </span><span class="si">{client_addr}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Good bye, client @ </span><span class="si">{client_addr}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">handle_request</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">writer</span><span class="p">):</span>
     <span class="n">addr</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">(</span><span class="s1">&#39;socket&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getpeername</span><span class="p">()</span>
@@ -402,9 +410,9 @@ client:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">contextvars</span></code> --- Context Variables</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code> --- Context Variables</a><ul>
 <li><a class="reference internal" href="#context-variables">Context Variables</a></li>
 <li><a class="reference internal" href="#manual-context-management">Manual Context Management</a></li>
 <li><a class="reference internal" href="#asyncio-support">asyncio support</a></li>
@@ -414,7 +422,7 @@ client:</p>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="dummy_threading.html" tppabs="https://docs.python.org/zh-cn/3/library/dummy_threading.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">dummy_threading</span></code> ---  å¯ç›´æ¥æ›¿ä»£ <code class="docutils literal notranslate"><span class="pre">threading</span></code> æ¨¡å—ã€‚</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">dummy_threading</span></code> ---  å¯ç›´æ¥æ›¿ä»£ <code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code> æ¨¡å—ã€‚</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html"
                         title="ä¸‹ä¸€ç« ">ç½‘ç»œå’Œè¿›ç¨‹é—´é€šä¿¡</a></p>
@@ -423,7 +431,7 @@ client:</p>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/contextvars.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/contextvars.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/contextvars.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/contextvars.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/contextvars.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/contextvars.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -448,14 +456,17 @@ client:</p>
         <li class="right" >
           <a href="dummy_threading.html" tppabs="https://docs.python.org/zh-cn/3/library/dummy_threading.html" title="dummy_threading --- å¯ç›´æ¥æ›¿ä»£ threading æ¨¡å—ã€‚"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -476,15 +487,19 @@ client:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>quopri --- Encode and decode MIME quoted-printable data &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>quopri --- ç¼–ç ä¸è§£ç ç»è¿‡ MIME è½¬ç çš„å¯æ‰“å°æ•°æ® &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="uu --- Encode and decode uuencode files" href="uu.html" />
+    <link rel="next" title="uu --- å¯¹ uuencode æ–‡ä»¶è¿›è¡Œç¼–ç ä¸è§£ç " href="uu.html" />
     <link rel="prev" title="binascii --- äºŒè¿›åˆ¶å’Œ ASCII ç äº’è½¬" href="binascii.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/quopri.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="uu.html" tppabs="https://docs.python.org/zh-cn/3/library/uu.html" title="uu --- Encode and decode uuencode files"
+          <a href="uu.html" tppabs="https://docs.python.org/zh-cn/3/library/uu.html" title="uu --- å¯¹ uuencode æ–‡ä»¶è¿›è¡Œç¼–ç ä¸è§£ç "
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="binascii.html" tppabs="https://docs.python.org/zh-cn/3/library/binascii.html" title="binascii --- äºŒè¿›åˆ¶å’Œ ASCII ç äº’è½¬"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" accesskey="U">äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
@@ -96,60 +104,39 @@
           <div class="body" role="main">
             
   <div class="section" id="module-quopri">
-<span id="quopri-encode-and-decode-mime-quoted-printable-data"></span><h1><a class="reference internal" href="#module-quopri" title="quopri: Encode and decode files using the MIME quoted-printable encoding."><code class="xref py py-mod docutils literal notranslate"><span class="pre">quopri</span></code></a> --- Encode and decode MIME quoted-printable data<a class="headerlink" href="#module-quopri" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/quopri.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/quopri.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/quopri.py">Lib/quopri.py</a></p>
+<span id="quopri-encode-and-decode-mime-quoted-printable-data"></span><h1><a class="reference internal" href="#module-quopri" title="quopri: Encode and decode files using the MIME quoted-printable encoding."><code class="xref py py-mod docutils literal notranslate"><span class="pre">quopri</span></code></a> --- ç¼–ç ä¸è§£ç ç»è¿‡ MIME è½¬ç çš„å¯æ‰“å°æ•°æ®<a class="headerlink" href="#module-quopri" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/pep-0318  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/pep-0318'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/quopri.py">Lib/quopri.py</a></p>
 <hr class="docutils" id="index-0" />
-<p>This module performs quoted-printable transport encoding and decoding, as
-defined in <span class="target" id="index-1"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1521.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1521.html'" tppabs="https://tools.ietf.org/html/rfc1521.html"><strong>RFC 1521</strong></a>: &quot;MIME (Multipurpose Internet Mail Extensions) Part One:
-Mechanisms for Specifying and Describing the Format of Internet Message Bodies&quot;.
-The quoted-printable encoding is designed for data where there are relatively
-few nonprintable characters; the base64 encoding scheme available via the
-<a class="reference internal" href="base64.html#module-base64" tppabs="https://docs.python.org/zh-cn/3/library/base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a> module is more compact if there are many such characters, as when
-sending a graphics file.</p>
+<p>æ­¤æ¨¡å—ä¼šæ‰§è¡Œè½¬æ¢åå¯æ‰“å°çš„ä¼ è¾“ç¼–ç ä¸è§£ç ï¼Œå…·ä½“å®šä¹‰è§ <span class="target" id="index-9"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1521.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1521.html'" tppabs="https://tools.ietf.org/html/rfc1521.html"><strong>RFC 1521</strong></a>: &quot;MIME (Multipurpose Internet Mail Extensions) Part One: Mechanisms for Specifying and Describing the Format of Internet Message Bodies&quot;ã€‚ è½¬æ¢åå¯æ‰“å°çš„ç¼–ç æ ¼å¼è¢«è®¾è®¡ç”¨äºåªåŒ…å«ç›¸å¯¹è¾ƒå°‘çš„ä¸å¯æ‰“å°å­—ç¬¦çš„æ•°æ®ï¼›å¦‚æœå­˜åœ¨å¤§é‡è¿™æ ·çš„å­—ç¬¦ï¼Œé€šè¿‡ <a class="reference internal" href="base64.html#module-base64" tppabs="https://docs.python.org/zh-cn/3/library/base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a> æ¨¡å—æ‰€æä¾›çš„ base64 ç¼–ç æ–¹æ¡ˆä¼šæ›´ä¸ºç´§å‡‘ï¼Œä¾‹å¦‚å½“å‘é€å›¾ç‰‡æ–‡ä»¶æ—¶ã€‚</p>
 <dl class="function">
 <dt id="quopri.decode">
-<code class="descclassname">quopri.</code><code class="descname">decode</code><span class="sig-paren">(</span><em>input</em>, <em>output</em>, <em>header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.decode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Decode the contents of the <em>input</em> file and write the resulting decoded binary
-data to the <em>output</em> file. <em>input</em> and <em>output</em> must be <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">binary file objects</span></a>.  If the optional argument <em>header</em> is present and true, underscore
-will be decoded as space. This is used to decode &quot;Q&quot;-encoded headers as
-described in <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1522.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1522.html'" tppabs="https://tools.ietf.org/html/rfc1522.html"><strong>RFC 1522</strong></a>: &quot;MIME (Multipurpose Internet Mail Extensions)
-Part Two: Message Header Extensions for Non-ASCII Text&quot;.</p>
+<code class="sig-prename descclassname">quopri.</code><code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">output</em>, <em class="sig-param">header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.decode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è§£ç  <em>input</em> æ–‡ä»¶çš„å†…å®¹å¹¶å°†å·²è§£ç äºŒè¿›åˆ¶æ•°æ®ç»“æœå†™å…¥ <em>output</em> æ–‡ä»¶ã€‚ <em>input</em> å’Œ <em>output</em> å¿…é¡»ä¸º <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">äºŒè¿›åˆ¶æ–‡ä»¶å¯¹è±¡</span></a>ã€‚ å¦‚æœæä¾›äº†å¯é€‰å‚æ•° <em>header</em> ä¸”ä¸ºçœŸå€¼ï¼Œä¸‹åˆ’çº¿å°†è¢«è§£ç ä¸ºç©ºæ ¼ã€‚ æ­¤å‡½æ•°å¯ç”¨äºè§£ç â€œQâ€ç¼–ç çš„å¤´æ•°æ®ï¼Œå…·ä½“æè¿°è§ <span class="target" id="index-10"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1522.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1522.html'" tppabs="https://tools.ietf.org/html/rfc1522.html"><strong>RFC 1522</strong></a>: &quot;MIME (Multipurpose Internet Mail Extensions) Part Two: Message Header Extensions for Non-ASCII Text&quot;ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="quopri.encode">
-<code class="descclassname">quopri.</code><code class="descname">encode</code><span class="sig-paren">(</span><em>input</em>, <em>output</em>, <em>quotetabs</em>, <em>header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.encode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Encode the contents of the <em>input</em> file and write the resulting quoted-printable
-data to the <em>output</em> file. <em>input</em> and <em>output</em> must be
-<a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">binary file objects</span></a>. <em>quotetabs</em>, a
-non-optional flag which controls whether to encode embedded spaces
-and tabs; when true it encodes such embedded whitespace, and when
-false it leaves them unencoded.
-Note that spaces and tabs appearing at the end of lines are always encoded,
-as per <span class="target" id="index-3"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1521.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1521.html'" tppabs="https://tools.ietf.org/html/rfc1521.html"><strong>RFC 1521</strong></a>.  <em>header</em> is a flag which controls if spaces are encoded
-as underscores as per <span class="target" id="index-4"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1522.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1522.html'" tppabs="https://tools.ietf.org/html/rfc1522.html"><strong>RFC 1522</strong></a>.</p>
+<code class="sig-prename descclassname">quopri.</code><code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">output</em>, <em class="sig-param">quotetabs</em>, <em class="sig-param">header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.encode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç¼–ç  <em>input</em> æ–‡ä»¶çš„å†…å®¹å¹¶å°†è½¬æ¢åå¯æ‰“å°çš„æ•°æ®ç»“æœå†™å…¥ <em>output</em> æ–‡ä»¶ã€‚ <em>input</em> å’Œ <em>output</em> å¿…é¡»ä¸º <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">äºŒè¿›åˆ¶æ–‡ä»¶å¯¹è±¡</span></a>. <em>quotetabs</em> æ˜¯ä¸€ä¸ªéå¯é€‰çš„æ——æ ‡ï¼Œå®ƒæ§åˆ¶æ˜¯å¦è¦ç¼–ç å†…åµŒçš„ç©ºæ ¼ä¸åˆ¶è¡¨ç¬¦ï¼›å½“ä¸ºçœŸå€¼æ—¶å°†ç¼–ç æ­¤ç±»å†…åµŒç©ºç™½ç¬¦ï¼Œå½“ä¸ºå‡å€¼æ—¶åˆ™ä¿æŒåŸæ ·ä¸è¿›è¡Œç¼–ç ã€‚ è¯·æ³¨æ„å‡ºç°åœ¨è¡Œå°¾çš„ç©ºæ ¼ä¸åˆ¶è¡¨ç¬¦æ€»æ˜¯ä¼šè¢«ç¼–ç ï¼Œå…·ä½“æè¿°è§ <span class="target" id="index-11"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1521.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1521.html'" tppabs="https://tools.ietf.org/html/rfc1521.html"><strong>RFC 1521</strong></a>ã€‚ <em>header</em> æ——æ ‡æ§åˆ¶ç©ºæ ¼ç¬¦æ˜¯å¦è¦ç¼–ç ä¸ºä¸‹åˆ’çº¿ï¼Œå…·ä½“æè¿°è§ <span class="target" id="index-12"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc1522.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc1522.html'" tppabs="https://tools.ietf.org/html/rfc1522.html"><strong>RFC 1522</strong></a>ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="quopri.decodestring">
-<code class="descclassname">quopri.</code><code class="descname">decodestring</code><span class="sig-paren">(</span><em>s</em>, <em>header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.decodestring" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Like <a class="reference internal" href="#quopri.decode" title="quopri.decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">decode()</span></code></a>, except that it accepts a source <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and
-returns the corresponding decoded <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>.</p>
+<code class="sig-prename descclassname">quopri.</code><code class="sig-name descname">decodestring</code><span class="sig-paren">(</span><em class="sig-param">s</em>, <em class="sig-param">header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.decodestring" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç±»ä¼¼ <a class="reference internal" href="#quopri.decode" title="quopri.decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">decode()</span></code></a>ï¼ŒåŒºåˆ«åœ¨äºå®ƒæ¥å—ä¸€ä¸ªæº <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> å¹¶è¿”å›å¯¹åº”çš„å·²è§£ç  <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="quopri.encodestring">
-<code class="descclassname">quopri.</code><code class="descname">encodestring</code><span class="sig-paren">(</span><em>s</em>, <em>quotetabs=False</em>, <em>header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.encodestring" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Like <a class="reference internal" href="#quopri.encode" title="quopri.encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">encode()</span></code></a>, except that it accepts a source <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and
-returns the corresponding encoded <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>. By default, it sends a
-<code class="docutils literal notranslate"><span class="pre">False</span></code> value to <em>quotetabs</em> parameter of the <a class="reference internal" href="#quopri.encode" title="quopri.encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">encode()</span></code></a> function.</p>
+<code class="sig-prename descclassname">quopri.</code><code class="sig-name descname">encodestring</code><span class="sig-paren">(</span><em class="sig-param">s</em>, <em class="sig-param">quotetabs=False</em>, <em class="sig-param">header=False</em><span class="sig-paren">)</span><a class="headerlink" href="#quopri.encodestring" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ç±»å‹ <a class="reference internal" href="#quopri.encode" title="quopri.encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">encode()</span></code></a>ï¼ŒåŒºåˆ«åœ¨äºå®ƒæ¥å—ä¸€ä¸ªæº <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> å¹¶è¿”å›å¯¹åº”çš„å·²ç¼–ç  <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>ã€‚ åœ¨é»˜è®¤æƒ…å†µä¸‹ï¼Œå®ƒä¼šå‘é€ <code class="docutils literal notranslate"><span class="pre">False</span></code> å€¼ç»™ <a class="reference internal" href="#quopri.encode" title="quopri.encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">encode()</span></code></a> å‡½æ•°çš„ <em>quotetabs</em> å½¢å‚ã€‚</p>
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt>æ¨¡å— <a class="reference internal" href="base64.html#module-base64" tppabs="https://docs.python.org/zh-cn/3/library/base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a></dt>
-<dd>Encode and decode MIME base64 data</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt>æ¨¡å— <a class="reference internal" href="base64.html#module-base64" tppabs="https://docs.python.org/zh-cn/3/library/base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a></dt><dd><p>ç¼–ç ä¸è§£ç  MIME base64 æ•°æ®</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -162,16 +149,16 @@ returns the corresponding encoded <a class="reference internal" href="stdtypes.h
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="binascii.html" tppabs="https://docs.python.org/zh-cn/3/library/binascii.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">binascii</span></code> --- äºŒè¿›åˆ¶å’Œ ASCII ç äº’è½¬</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">binascii</span></code> --- äºŒè¿›åˆ¶å’Œ ASCII ç äº’è½¬</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="uu.html" tppabs="https://docs.python.org/zh-cn/3/library/uu.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">uu</span></code> --- Encode and decode uuencode files</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">uu</span></code> --- å¯¹ uuencode æ–‡ä»¶è¿›è¡Œç¼–ç ä¸è§£ç </a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/quopri.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/quopri.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/quopri.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/quopri.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/quopri.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/quopri.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -191,19 +178,22 @@ returns the corresponding encoded <a class="reference internal" href="stdtypes.h
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="uu.html" tppabs="https://docs.python.org/zh-cn/3/library/uu.html" title="uu --- Encode and decode uuencode files"
+          <a href="uu.html" tppabs="https://docs.python.org/zh-cn/3/library/uu.html" title="uu --- å¯¹ uuencode æ–‡ä»¶è¿›è¡Œç¼–ç ä¸è§£ç "
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="binascii.html" tppabs="https://docs.python.org/zh-cn/3/library/binascii.html" title="binascii --- äºŒè¿›åˆ¶å’Œ ASCII ç äº’è½¬"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
@@ -225,15 +215,19 @@ returns the corresponding encoded <a class="reference internal" href="stdtypes.h
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

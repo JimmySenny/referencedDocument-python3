@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>函数式编程指引 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>函数式编程指引 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="日志 HOWTO" href="logging.html" />
     <link rel="prev" title="实现描述器" href="descriptor.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/howto/functional.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="descriptor.html" tppabs="https://docs.python.org/zh-cn/3/howto/descriptor.html" title="实现描述器"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" accesskey="U">Python 常用指引</a> &#187;</li>
     <li class="right">
@@ -96,26 +104,24 @@
             
   <div class="section" id="functional-programming-howto">
 <h1>函数式编程指引<a class="headerlink" href="#functional-programming-howto" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">作者:</th><td class="field-body">A. M. Kuchling</td>
-</tr>
-<tr class="field-even field"><th class="field-name">发布版本:</th><td class="field-body">0.32</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>A. M. Kuchling</p>
+</dd>
+<dt class="field-even">发布版本</dt>
+<dd class="field-even"><p>0.32</p>
+</dd>
+</dl>
 <p>本文档提供恰当的 Python 函数式编程范例，在函数式编程简单的介绍之后，将简单介绍Python中关于函数式编程的特性如 <a class="reference internal" href="glossary.html#term-iterator" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a> 和 <a class="reference internal" href="glossary.html#term-generator" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-generator"><span class="xref std std-term">generator</span></a> 以及相关库模块如 <a class="reference internal" href="itertools.html#module-itertools" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> 和 <a class="reference internal" href="functools.html#module-functools" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> 等。</p>
 <div class="section" id="introduction">
 <h2>概述<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h2>
 <p>本章介绍函数式编程的基本概念。如您仅想学习 Python 语言的特性，可跳过本章直接查看 <a class="reference internal" href="#functional-howto-iterators"><span class="std std-ref">迭代器</span></a>.</p>
 <p>编程语言支持通过以下几种方式来解构具体问题：</p>
 <ul class="simple">
-<li>大多数的编程语言都是 <strong>过程式</strong> 的，所谓程序就是一连串告诉计算机怎样处理程序输入的指令。C、Pascal 甚至 Unix shells 都是过程式语言。</li>
-<li>在 <strong>声明式</strong> 语言中，你编写一个用来描述待解决问题的说明，并且这个语言的具体实现会指明怎样高效的进行计算。 SQL 可能是你最熟悉的声明式语言了。 一个 SQL 查询语句描述了你想要检索的数据集，并且 SQL 引擎会决定是扫描整张表还是使用索引，应该先执行哪些子句等等。</li>
-<li><strong>面向对象</strong> 程序会操作一组对象。 对象拥有内部状态，并能够以某种方式支持请求和修改这个内部状态的方法。Smalltalk 和 Java 都是面向对象的语言。 C++ 和 Python 支持面向对象编程，但并不强制使用面向对象特性。</li>
-<li><strong>函数式</strong> 编程则将一个问题分解成一系列函数。 理想情况下，函数只接受输入并输出结果，对一个给定的输入也不会有影响输出的内部状态。 著名的函数式语言有 ML 家族（Standard ML，Ocaml 以及其他变种）和 Haskell。</li>
+<li><p>大多数的编程语言都是 <strong>过程式</strong> 的，所谓程序就是一连串告诉计算机怎样处理程序输入的指令。C、Pascal 甚至 Unix shells 都是过程式语言。</p></li>
+<li><p>在 <strong>声明式</strong> 语言中，你编写一个用来描述待解决问题的说明，并且这个语言的具体实现会指明怎样高效的进行计算。 SQL 可能是你最熟悉的声明式语言了。 一个 SQL 查询语句描述了你想要检索的数据集，并且 SQL 引擎会决定是扫描整张表还是使用索引，应该先执行哪些子句等等。</p></li>
+<li><p><strong>面向对象</strong> 程序会操作一组对象。 对象拥有内部状态，并能够以某种方式支持请求和修改这个内部状态的方法。Smalltalk 和 Java 都是面向对象的语言。 C++ 和 Python 支持面向对象编程，但并不强制使用面向对象特性。</p></li>
+<li><p><strong>函数式</strong> 编程则将一个问题分解成一系列函数。 理想情况下，函数只接受输入并输出结果，对一个给定的输入也不会有影响输出的内部状态。 著名的函数式语言有 ML 家族（Standard ML，Ocaml 以及其他变种）和 Haskell。</p></li>
 </ul>
 <p>一些语言的设计者选择强调一种特定的编程方式。 这通常会让以不同的方式来编写程序变得困难。其他多范式语言则支持几种不同的编程方式。Lisp，C++ 和 Python 都是多范式语言；使用这些语言，你可以编写主要为过程式，面向对象或者函数式的程序和函数库。在大型程序中，不同的部分可能会采用不同的方式编写；比如 GUI 可能是面向对象的而处理逻辑则是过程式或者函数式。</p>
 <p>在函数式程序里，输入会流经一系列函数。每个函数接受输入并输出结果。函数式风格反对使用带有副作用的函数，这些副作用会修改内部状态，或者引起一些无法体现在函数的返回值中的变化。完全不产生副作用的函数被称作“纯函数”。消除副作用意味着不能使用随程序运行而更新的数据结构；每个函数的输出必须只依赖于输入。</p>
@@ -124,10 +130,10 @@
 <p>函数式编程可以被认为是面向对象编程的对立面。对象就像是颗小胶囊，包裹着内部状态和随之而来的能让你修改这个内部状态的一组调用方法，以及由正确的状态变化所构成的程序。函数式编程希望尽可能地消除状态变化，只和流经函数的数据打交道。在 Python 里你可以把两种编程方式结合起来，在你的应用（电子邮件信息，事务处理）中编写接受和返回对象实例的函数。</p>
 <p>函数式设计在工作中看起来是个奇怪的约束。为什么你要消除对象和副作用呢？不过函数式风格有其理论和实践上的优点：</p>
 <ul class="simple">
-<li>形式证明。</li>
-<li>模块化。</li>
-<li>组合性。</li>
-<li>易于调试和测试。</li>
+<li><p>形式证明。</p></li>
+<li><p>模块化。</p></li>
+<li><p>组合性。</p></li>
+<li><p>易于调试和测试。</p></li>
 </ul>
 <div class="section" id="formal-provability">
 <h3>形式证明<a class="headerlink" href="#formal-provability" title="永久链接至标题">¶</a></h3>
@@ -159,9 +165,9 @@
 <p>迭代器是一个表示数据流的对象；这个对象每次只返回一个元素。Python 迭代器必须支持 <a class="reference internal" href="stdtypes.html#iterator.__next__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#iterator.__next__" title="iterator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> 方法；这个方法不接受参数，并总是返回数据流中的下一个元素。如果数据流中没有元素，<a class="reference internal" href="stdtypes.html#iterator.__next__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#iterator.__next__" title="iterator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> 会抛出 <a class="reference internal" href="exceptions.html#StopIteration" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> 异常。迭代器未必是有限的；完全有理由构造一个输出无限数据流的迭代器。</p>
 <p>内置的 <a class="reference internal" href="functions.html#iter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#iter" title="iter"><code class="xref py py-func docutils literal notranslate"><span class="pre">iter()</span></code></a> 函数接受任意对象并试图返回一个迭代器来输出对象的内容或元素，并会在对象不支持迭代的时候抛出 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> 异常。Python 有几种内置数据类型支持迭代，最常见的就是列表和字典。如果一个对象能生成迭代器，那么它就会被称作 <a class="reference internal" href="glossary.html#term-iterable" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-iterable"><span class="xref std std-term">iterable</span></a>。</p>
 <p>你可以手动试验迭代器的接口。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span>  <span class="c1">#doctest: +ELLIPSIS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span>  
 <span class="go">&lt;...iterator object at ...&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>  <span class="c1"># same as next(it)</span>
 <span class="go">1</span>
@@ -185,7 +191,7 @@
 </pre></div>
 </div>
 <p>可以用 <a class="reference internal" href="stdtypes.html#list" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list"><code class="xref py py-func docutils literal notranslate"><span class="pre">list()</span></code></a> 或 <a class="reference internal" href="stdtypes.html#tuple" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple" title="tuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">tuple()</span></code></a> 这样的构造函数把迭代器具体化成列表或元组:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">iterator</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span>
@@ -193,7 +199,7 @@
 </pre></div>
 </div>
 <p>序列的解压操作也支持迭代器：如果你知道一个迭代器能够返回 N 个元素，你可以把他们解压到有 N 个元素的元组:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">iterator</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
@@ -227,7 +233,7 @@
 <p>注意从 Python 3.7 开始，字典的遍历顺序一定和输入顺序一样。先前的版本并没有明确这一点，所以不同的实现可能不一致。</p>
 <p>对字典使用 <a class="reference internal" href="functions.html#iter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#iter" title="iter"><code class="xref py py-func docutils literal notranslate"><span class="pre">iter()</span></code></a> 总是会遍历键，但字典也有返回其他迭代器的方法。如果你只遍历值或者键/值对，你可以明确地调用 <a class="reference internal" href="stdtypes.html#dict.values" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.values" title="dict.values"><code class="xref py py-meth docutils literal notranslate"><span class="pre">values()</span></code></a> 或 <a class="reference internal" href="stdtypes.html#dict.items" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict.items" title="dict.items"><code class="xref py py-meth docutils literal notranslate"><span class="pre">items()</span></code></a> 方法得到合适的迭代器。</p>
 <p><a class="reference internal" href="stdtypes.html#dict" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict()</span></code></a> 构造函数可以接受一个迭代器，然后返回一个有限的 <code class="docutils literal notranslate"><span class="pre">(key,</span> <span class="pre">value)</span></code> 元组的数据流:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Italy&#39;</span><span class="p">,</span> <span class="s1">&#39;Rome&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Paris&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;Washington DC&#39;</span><span class="p">)]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Italy&#39;</span><span class="p">,</span> <span class="s1">&#39;Rome&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Paris&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;Washington DC&#39;</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
 <span class="go">{&#39;Italy&#39;: &#39;Rome&#39;, &#39;France&#39;: &#39;Paris&#39;, &#39;US&#39;: &#39;Washington DC&#39;}</span>
 </pre></div>
@@ -300,9 +306,9 @@
 </pre></div>
 </div>
 <p>这说明，如果有多个 <code class="docutils literal notranslate"><span class="pre">for...in</span></code> 语句而没有 <code class="docutils literal notranslate"><span class="pre">if</span></code> 语句，输出结果的长度就是所有序列长度的乘积。如果你的两个列表长度为3，那么输出的列表长度就是9:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seq1</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seq1</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seq2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq1</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">seq2</span><span class="p">]</span>  <span class="c1">#doctest: +NORMALIZE_WHITESPACE</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq1</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">seq2</span><span class="p">]</span>  
 <span class="go">[(&#39;a&#39;, 1), (&#39;a&#39;, 2), (&#39;a&#39;, 3),</span>
 <span class="go"> (&#39;b&#39;, 1), (&#39;b&#39;, 2), (&#39;b&#39;, 3),</span>
 <span class="go"> (&#39;c&#39;, 1), (&#39;c&#39;, 2), (&#39;c&#39;, 3)]</span>
@@ -321,7 +327,7 @@
 <p>生成器是一类用来简化编写迭代器工作的特殊函数。普通的函数计算并返回一个值，而生成器返回一个能返回数据流的迭代器。</p>
 <p>毫无疑问，你已经对如何在 Python 和 C 中调用普通函数很熟悉了，这时候函数会获得一个创建局部变量的私有命名空间。当函数到达 <code class="docutils literal notranslate"><span class="pre">return</span></code> 表达式时，局部变量会被销毁然后把返回给调用者。之后调用同样的函数时会创建一个新的私有命名空间和一组全新的局部变量。但是，如果在退出一个函数时不扔掉局部变量会如何呢？如果稍后你能够从退出函数的地方重新恢复又如何呢？这就是生成器所提供的；他们可以被看成可恢复的函数。</p>
 <p>这里有简单的生成器函数示例:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">generate_ints</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">generate_ints</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
 <span class="gp">... </span>   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
 <span class="gp">... </span>       <span class="k">yield</span> <span class="n">i</span>
 </pre></div>
@@ -329,8 +335,8 @@
 <p>任何包含了 <a class="reference internal" href="simple_stmts.html#yield" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> 关键字的函数都是生成器函数；Python 的 <a class="reference internal" href="glossary.html#term-bytecode" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-bytecode"><span class="xref std std-term">bytecode</span></a> 编译器会在编译的时候检测到并因此而特殊处理。</p>
 <p>当你调用一个生成器函数，它并不会返回单独的值，而是返回一个支持生成器协议的生成器对象。当执行 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 表达式时，生成器会输出 <code class="docutils literal notranslate"><span class="pre">i</span></code> 的值，就像 <code class="docutils literal notranslate"><span class="pre">return</span></code> 表达式一样。<code class="docutils literal notranslate"><span class="pre">yield</span></code> 和 <code class="docutils literal notranslate"><span class="pre">return</span></code> 最大的区别在于，到达 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 的时候生成器的执行状态会挂起并保留局部变量。在下一次调用生成器 <a class="reference internal" href="expressions.html#generator.__next__" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.__next__" title="generator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> 方法的时候，函数会恢复执行。</p>
 <p>这里有一个 <code class="docutils literal notranslate"><span class="pre">generate_ints()</span></code> 生成器的示例:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gen</span> <span class="o">=</span> <span class="n">generate_ints</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gen</span>  <span class="c1">#doctest: +ELLIPSIS</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gen</span> <span class="o">=</span> <span class="n">generate_ints</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gen</span>  
 <span class="go">&lt;generator object generate_ints at ...&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">gen</span><span class="p">)</span>
 <span class="go">0</span>
@@ -348,7 +354,7 @@
 <p>同样，你可以写出 <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">generate_ints(5)</span></code>，或者 <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">generate_ints(3)</span></code>。</p>
 <p>在生成器函数里面，<code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">value</span></code> 会触发从 <a class="reference internal" href="expressions.html#generator.__next__" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.__next__" title="generator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> 方法抛出 <code class="docutils literal notranslate"><span class="pre">StopIteration(value)</span></code> 异常。一旦抛出这个异常，或者函数结束，处理数据的过程就会停止，生成器也不会再生成新的值。</p>
 <p>你可以手动编写自己的类来达到生成器的效果，把生成器的所有局部变量作为实例的成员变量存储起来。比如，可以这么返回一个整数列表：把 <code class="docutils literal notranslate"><span class="pre">self.count</span></code> 设为0，然后通过 <code class="xref py py-meth docutils literal notranslate"><span class="pre">count`()</span></code>。然而，对于一个中等复杂程度的生成器，写出一个相应的类可能会相当繁杂。</p>
-<p>包含在 Python 库中的测试套件 <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/test/issue19611  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/test/issue19611'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/test/test_generators.py">Lib/test/test_generators.py</a> 里有很多非常有趣的例子。这里是一个用生成器实现树的递归中序遍历示例。:</p>
+<p>包含在 Python 库中的测试套件 <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/test/issue38469  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/test/issue38469'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/test/test_generators.py">Lib/test/test_generators.py</a> 里有很多非常有趣的例子。这里是一个用生成器实现树的递归中序遍历示例。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A recursive generator that generates Tree leaves in in-order.</span>
 <span class="k">def</span> <span class="nf">inorder</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">t</span><span class="p">:</span>
@@ -373,28 +379,28 @@
 <p>（<span class="target" id="index-5"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0342  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0342'" tppabs="https://www.python.org/dev/peps/pep-0342"><strong>PEP 342</strong></a> 解释了具体的规则，也就是 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 表达式必须括起来，除非是出现在最顶级的赋值表达式的右边。这意味着你可以写 <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">yield</span> <span class="pre">i</span></code>，但是必须在操作的时候加上括号，就像``val = (yield i) + 12``）</p>
 <p>可以调用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">send(value)()</span></code> &lt;generator.send&gt; 方法向生成器发送值。这个方法会恢复执行生成器的代码，然后 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 表达式返回特定的值。如果调用普通的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__`方法，``yield`()</span></code> 会返回 <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <p>这里有一个简单的每次加1的计数器，并允许改变内部计数器的值。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">counter</span><span class="p">(</span><span class="n">maximum</span><span class="p">):</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">counter</span><span class="p">(</span><span class="n">maximum</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maximum</span><span class="p">:</span>
         <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="k">yield</span> <span class="n">i</span><span class="p">)</span>
         <span class="c1"># If value provided, change counter</span>
-        <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">i</span> <span class="o">=</span> <span class="n">val</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>这是改变计数器的一个示例</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">it</span> <span class="o">=</span> <span class="n">counter</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1">#doctest: +SKIP</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  <span class="c1">#doctest: +SKIP</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">it</span> <span class="o">=</span> <span class="n">counter</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  
 <span class="go">0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  <span class="c1">#doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  
 <span class="go">1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1">#doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  
 <span class="go">8</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  <span class="c1">#doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  
 <span class="go">9</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  <span class="c1">#doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>  
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;t.py&quot;</span>, line <span class="m">15</span>, in <span class="n">&lt;module&gt;</span>
     <span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
@@ -404,9 +410,8 @@
 <p>因为 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 很多时候会返回 <code class="docutils literal notranslate"><span class="pre">None</span></code>，所以你应该总是检查这个情况。不要在表达式中使用 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 的值，除非你确定 <a class="reference internal" href="expressions.html#generator.send" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.send" title="generator.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code></a> 是唯一的用来恢复你的生成器函数的方法。</p>
 <p>除了 <a class="reference internal" href="expressions.html#generator.send" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.send" title="generator.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code></a> 之外，生成器还有两个其他的方法:</p>
 <ul>
-<li><p class="first"><a class="reference internal" href="expressions.html#generator.throw" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.throw" title="generator.throw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">throw(type,</span> <span class="pre">value=None,</span> <span class="pre">traceback=None)</span></code></a> 用于在生成器内部抛出异常；这个异常会在生成器暂停执行的时候由 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 表达式抛出。</p>
-</li>
-<li><p class="first"><a class="reference internal" href="expressions.html#generator.close" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.close" title="generator.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generator.close()</span></code></a> 会在生成器内部抛出 <a class="reference internal" href="exceptions.html#GeneratorExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#GeneratorExit" title="GeneratorExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeneratorExit</span></code></a> 异常来结束迭代。当接收到这个异常时，生成器的代码会抛出 <a class="reference internal" href="exceptions.html#GeneratorExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#GeneratorExit" title="GeneratorExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeneratorExit</span></code></a> 或者 <a class="reference internal" href="exceptions.html#StopIteration" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a>；捕捉这个异常作其他处理是非法的，并会出发 <a class="reference internal" href="exceptions.html#RuntimeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>。<a class="reference internal" href="expressions.html#generator.close" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.close" title="generator.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> 也会在 Python 垃圾回收器回收生成器的时候调用。</p>
+<li><p><a class="reference internal" href="expressions.html#generator.throw" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.throw" title="generator.throw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">throw(type,</span> <span class="pre">value=None,</span> <span class="pre">traceback=None)</span></code></a> 用于在生成器内部抛出异常；这个异常会在生成器暂停执行的时候由 <code class="docutils literal notranslate"><span class="pre">yield</span></code> 表达式抛出。</p></li>
+<li><p><a class="reference internal" href="expressions.html#generator.close" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.close" title="generator.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generator.close()</span></code></a> 会在生成器内部抛出 <a class="reference internal" href="exceptions.html#GeneratorExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#GeneratorExit" title="GeneratorExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeneratorExit</span></code></a> 异常来结束迭代。当接收到这个异常时，生成器的代码会抛出 <a class="reference internal" href="exceptions.html#GeneratorExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#GeneratorExit" title="GeneratorExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeneratorExit</span></code></a> 或者 <a class="reference internal" href="exceptions.html#StopIteration" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a>；捕捉这个异常作其他处理是非法的，并会出发 <a class="reference internal" href="exceptions.html#RuntimeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>。<a class="reference internal" href="expressions.html#generator.close" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#generator.close" title="generator.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> 也会在 Python 垃圾回收器回收生成器的时候调用。</p>
 <p>如果你要在 <a class="reference internal" href="exceptions.html#GeneratorExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#GeneratorExit" title="GeneratorExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeneratorExit</span></code></a> 发生的时候清理代码，我建议使用 <code class="docutils literal notranslate"><span class="pre">try:</span> <span class="pre">...</span> <span class="pre">finally:</span></code> 组合来代替 <a class="reference internal" href="exceptions.html#GeneratorExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#GeneratorExit" title="GeneratorExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeneratorExit</span></code></a>。</p>
 </li>
 </ul>
@@ -418,14 +423,13 @@
 <h2>内置函数<a class="headerlink" href="#built-in-functions" title="永久链接至标题">¶</a></h2>
 <p>我们可以看看迭代器常常用到的函数的更多细节。</p>
 <p>Python 内置的两个函数 <a class="reference internal" href="functions.html#map" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code></a> 和 <a class="reference internal" href="functions.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#filter" title="filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter()</span></code></a> 复制了生成器表达式的两个特性:</p>
-<dl class="docutils">
-<dt><a class="reference internal" href="functions.html#map" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">iterA,</span> <span class="pre">iterB,</span> <span class="pre">...)</span></code></a> 返回一个遍历序列的迭代器</dt>
-<dd><p class="first"><code class="docutils literal notranslate"><span class="pre">f(iterA[0],</span> <span class="pre">iterB[0]),</span> <span class="pre">f(iterA[1],</span> <span class="pre">iterB[1]),</span> <span class="pre">f(iterA[2],</span> <span class="pre">iterB[2]),</span> <span class="pre">...</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">upper</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<dl>
+<dt><a class="reference internal" href="functions.html#map" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">iterA,</span> <span class="pre">iterB,</span> <span class="pre">...)</span></code></a> 返回一个遍历序列的迭代器</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f(iterA[0],</span> <span class="pre">iterB[0]),</span> <span class="pre">f(iterA[1],</span> <span class="pre">iterB[1]),</span> <span class="pre">f(iterA[2],</span> <span class="pre">iterB[2]),</span> <span class="pre">...</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">upper</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;sentence&#39;</span><span class="p">,</span> <span class="s1">&#39;fragment&#39;</span><span class="p">]))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;sentence&#39;</span><span class="p">,</span> <span class="s1">&#39;fragment&#39;</span><span class="p">]))</span>
 <span class="go">[&#39;SENTENCE&#39;, &#39;FRAGMENT&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">upper</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sentence&#39;</span><span class="p">,</span> <span class="s1">&#39;fragment&#39;</span><span class="p">]]</span>
 <span class="go">[&#39;SENTENCE&#39;, &#39;FRAGMENT&#39;]</span>
@@ -435,16 +439,16 @@
 </dl>
 <p>你当然也可以用列表推导式达到同样的效果。</p>
 <p><a class="reference internal" href="functions.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#filter" title="filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter(predicate,</span> <span class="pre">iter)</span></code></a> 返回一个遍历序列中满足指定条件的元素的迭代器，和列表推导式的功能相似。 <strong>predicate</strong> （谓词）是一个在特定条件下返回真值的函数；要使用函数 <a class="reference internal" href="functions.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#filter" title="filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter()</span></code></a>，谓词函数必须只能接受一个参数。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
 <span class="go">[0, 2, 4, 6, 8]</span>
 </pre></div>
 </div>
 <p>这也可以写成列表推导式:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="go">[0, 2, 4, 6, 8]</span>
 </pre></div>
 </div>
@@ -477,7 +481,7 @@
 </div>
 <p>（对排序更详细的讨论可参见 <a class="reference internal" href="sorting.html#sortinghowto" tppabs="https://docs.python.org/zh-cn/3/howto/sorting.html#sortinghowto"><span class="std std-ref">排序指南</span></a>。）</p>
 <p>内置函数 <a class="reference internal" href="functions.html#any" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#any" title="any"><code class="xref py py-func docutils literal notranslate"><span class="pre">any(iter)</span></code></a> 和 <a class="reference internal" href="functions.html#all" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#all" title="all"><code class="xref py py-func docutils literal notranslate"><span class="pre">all(iter)</span></code></a> 会查看一个可迭代对象内容的逻辑值。<a class="reference internal" href="functions.html#any" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#any" title="any"><code class="xref py py-func docutils literal notranslate"><span class="pre">any()</span></code></a> 在可迭代对象中任意一个元素为真时返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>，而 <a class="reference internal" href="functions.html#all" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#all" title="all"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a> 在所有元素为真时返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">any</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">any</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">any</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="go">False</span>
@@ -496,7 +500,7 @@
   <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>它并不会在内存创建一个列表并因此在返回前而耗尽输入的迭代器；相反，只有在被请求的时候元组才会创建并返回。（这种行为的技术术语叫惰性计算，参见 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue27172  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue27172'" tppabs="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a>.）</p>
+<p>它并不会在内存创建一个列表并因此在返回前而耗尽输入的迭代器；相反，只有在被请求的时候元组才会创建并返回。（这种行为的技术术语叫惰性计算，参见 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38379  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue38379'" tppabs="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a>.）</p>
 <p>这个迭代器设计用于长度相同的可迭代对象。如果可迭代对象的长度不一致，返回的数据流的长度会和最短的可迭代对象相同</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">=&gt;</span>
   <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -509,10 +513,10 @@
 <p><a class="reference internal" href="itertools.html#module-itertools" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> 模块包含很多常用的迭代器以及用来组合迭代器的函数。本节会用些小的例子来介绍这个模块的内容。</p>
 <p>这个模块里的函数大致可以分为几类：</p>
 <ul class="simple">
-<li>从已有的迭代器创建新的迭代器的函数。</li>
-<li>接受迭代器元素作为参数的函数。</li>
-<li>选取部分迭代器输出的函数。</li>
-<li>给迭代器输出分组的函数。</li>
+<li><p>从已有的迭代器创建新的迭代器的函数。</p></li>
+<li><p>接受迭代器元素作为参数的函数。</p></li>
+<li><p>选取部分迭代器输出的函数。</p></li>
+<li><p>给迭代器输出分组的函数。</p></li>
 </ul>
 <div class="section" id="creating-new-iterators">
 <h3>创建新的迭代器<a class="headerlink" href="#creating-new-iterators" title="永久链接至标题">¶</a></h3>
@@ -525,35 +529,24 @@
   <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.cycle" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.cycle" title="itertools.cycle"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.cycle(iter)</span></code></a> saves a copy of the contents of
-a provided iterable and returns a new iterator that returns its elements from
-first to last.  The new iterator will repeat these elements infinitely.</p>
+<p><a class="reference internal" href="itertools.html#itertools.cycle" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.cycle" title="itertools.cycle"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.cycle(iter)</span></code></a> 保存一份所提供的可迭代对象的副本，并返回一个能产生整个可迭代对象序列的新迭代器。新迭代器会无限重复这些元素。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">cycle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="o">=&gt;</span>
   <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.repeat" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.repeat" title="itertools.repeat"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.repeat(elem,</span> <span class="pre">[n])</span></code></a> returns the provided
-element <em>n</em> times, or returns the element endlessly if <em>n</em> is not provided.</p>
+<p><a class="reference internal" href="itertools.html#itertools.repeat" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.repeat" title="itertools.repeat"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.repeat(elem,</span> <span class="pre">[n])</span></code></a> 返回 <em>n</em> 次所提供的元素，当 <em>n</em> 不存在时，返回无数次所提供的元素。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="o">...</span>
 <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span><span class="p">,</span> <span class="n">abc</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.chain" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.chain" title="itertools.chain"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.chain(iterA,</span> <span class="pre">iterB,</span> <span class="pre">...)</span></code></a> takes an arbitrary
-number of iterables as input, and returns all the elements of the first
-iterator, then all the elements of the second, and so on, until all of the
-iterables have been exhausted.</p>
+<p><a class="reference internal" href="itertools.html#itertools.chain" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.chain" title="itertools.chain"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.chain(iterA,</span> <span class="pre">iterB,</span> <span class="pre">...)</span></code></a> 接受任意数量的可迭代对象作为输入，首先返回第一个迭代器的所有元素，然后是第二个的所有元素，如此一直进行下去，直到消耗掉所有输入的可迭代对象。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">=&gt;</span>
   <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.islice" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.islice" title="itertools.islice"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.islice(iter,</span> <span class="pre">[start],</span> <span class="pre">stop,</span> <span class="pre">[step])</span></code></a> returns
-a stream that's a slice of the iterator.  With a single <em>stop</em> argument, it
-will return the first <em>stop</em> elements.  If you supply a starting index, you'll
-get <em>stop-start</em> elements, and if you supply a value for <em>step</em>, elements
-will be skipped accordingly.  Unlike Python's string and list slicing, you can't
-use negative values for <em>start</em>, <em>stop</em>, or <em>step</em>.</p>
+<p><a class="reference internal" href="itertools.html#itertools.islice" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.islice" title="itertools.islice"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.islice(iter,</span> <span class="pre">[start],</span> <span class="pre">stop,</span> <span class="pre">[step])</span></code></a> 返回一个所输入的迭代器切片的数据流。如果只单独给定 <em>stop</em> 参数的话，它会返回从起始算起 <em>stop</em> 个数量的元素。如果你提供了起始下标 <em>start</em>，你会得到 <em>stop-start</em> 个元素；如果你给定了 <em>step</em> 参数，数据流会跳过相应的元素。和 Python 里的字符串和列表切片不同，你不能在 <em>start</em>, <em>stop</em> 或者 <em>step</em> 这些参数中使用负数。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">8</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span>
 <span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">=&gt;</span>
@@ -562,13 +555,7 @@ use negative values for <em>start</em>, <em>stop</em>, or <em>step</em>.</p>
   <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.tee" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.tee" title="itertools.tee"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.tee(iter,</span> <span class="pre">[n])</span></code></a> replicates an iterator; it
-returns <em>n</em> independent iterators that will all return the contents of the
-source iterator.
-If you don't supply a value for <em>n</em>, the default is 2.  Replicating iterators
-requires saving some of the contents of the source iterator, so this can consume
-significant memory if the iterator is large and one of the new iterators is
-consumed more than the others.</p>
+<p><a class="reference internal" href="itertools.html#itertools.tee" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.tee" title="itertools.tee"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.tee(iter,</span> <span class="pre">[n])</span></code></a> 可以复制一个迭代器；它返回 <em>n</em> 个能够返回源迭代器内容的独立迭代器。如果你不提供参数 <em>n</em>，默认值为 2。复制迭代器需要保存源迭代器的一部分内容，因此在源迭代器比较大的时候会显著地占用内存；同时，在所有新迭代器中，有一个迭代器会比其他迭代器占用更多的内存。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">tee</span><span class="p">(</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="p">)</span> <span class="o">=&gt;</span>
    <span class="n">iterA</span><span class="p">,</span> <span class="n">iterB</span>
 
@@ -581,15 +568,9 @@ consumed more than the others.</p>
 </div>
 </div>
 <div class="section" id="calling-functions-on-elements">
-<h3>Calling functions on elements<a class="headerlink" href="#calling-functions-on-elements" title="永久链接至标题">¶</a></h3>
-<p>The <a class="reference internal" href="operator.html#module-operator" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> module contains a set of functions corresponding to Python's
-operators.  Some examples are <a class="reference internal" href="operator.html#operator.add" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.add" title="operator.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.add(a,</span> <span class="pre">b)</span></code></a> (adds
-two values), <a class="reference internal" href="operator.html#operator.ne" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.ne" title="operator.ne"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.ne(a,</span> <span class="pre">b)</span></code></a> (same as <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code>), and
-<a class="reference internal" href="operator.html#operator.attrgetter" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.attrgetter" title="operator.attrgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.attrgetter('id')</span></code></a>
-(returns a callable that fetches the <code class="docutils literal notranslate"><span class="pre">.id</span></code> attribute).</p>
-<p><a class="reference internal" href="itertools.html#itertools.starmap" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.starmap" title="itertools.starmap"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.starmap(func,</span> <span class="pre">iter)</span></code></a> assumes that the
-iterable will return a stream of tuples, and calls <em>func</em> using these tuples as
-the arguments:</p>
+<h3>对元素使用函数<a class="headerlink" href="#calling-functions-on-elements" title="永久链接至标题">¶</a></h3>
+<p><a class="reference internal" href="operator.html#module-operator" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> 模块包含一组对应于 Python 操作符的函数。比如 <a class="reference internal" href="operator.html#operator.add" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.add" title="operator.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.add(a,</span> <span class="pre">b)</span></code></a> （把两个数加起来），<a class="reference internal" href="operator.html#operator.ne" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.ne" title="operator.ne"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.ne(a,</span> <span class="pre">b)</span></code></a> （和 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code> 相同），以及 <a class="reference internal" href="operator.html#operator.attrgetter" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.attrgetter" title="operator.attrgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.attrgetter('id')</span></code></a> （返回获取 <code class="docutils literal notranslate"><span class="pre">.id</span></code> 属性的可调用对象）。</p>
+<p><a class="reference internal" href="itertools.html#itertools.starmap" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.starmap" title="itertools.starmap"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.starmap(func,</span> <span class="pre">iter)</span></code></a> 假定可迭代对象能够返回一个元组的流，并且利用这些元组作为参数来调用 <em>func</em>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">,</span>
                   <span class="p">[(</span><span class="s1">&#39;/bin&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;/usr&#39;</span><span class="p">,</span> <span class="s1">&#39;bin&#39;</span><span class="p">,</span> <span class="s1">&#39;java&#39;</span><span class="p">),</span>
                    <span class="p">(</span><span class="s1">&#39;/usr&#39;</span><span class="p">,</span> <span class="s1">&#39;bin&#39;</span><span class="p">,</span> <span class="s1">&#39;perl&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;/usr&#39;</span><span class="p">,</span> <span class="s1">&#39;bin&#39;</span><span class="p">,</span> <span class="s1">&#39;ruby&#39;</span><span class="p">)])</span>
@@ -599,19 +580,14 @@ the arguments:</p>
 </div>
 </div>
 <div class="section" id="selecting-elements">
-<h3>Selecting elements<a class="headerlink" href="#selecting-elements" title="永久链接至标题">¶</a></h3>
-<p>Another group of functions chooses a subset of an iterator's elements based on a
-predicate.</p>
-<p><a class="reference internal" href="itertools.html#itertools.filterfalse" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.filterfalse" title="itertools.filterfalse"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.filterfalse(predicate,</span> <span class="pre">iter)</span></code></a> is the
-opposite of <a class="reference internal" href="functions.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#filter" title="filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter()</span></code></a>, returning all elements for which the predicate
-returns false:</p>
+<h3>选择元素<a class="headerlink" href="#selecting-elements" title="永久链接至标题">¶</a></h3>
+<p>另外一系列函数根据谓词选取一个迭代器中元素的子集。</p>
+<p><a class="reference internal" href="itertools.html#itertools.filterfalse" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.filterfalse" title="itertools.filterfalse"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.filterfalse(predicate,</span> <span class="pre">iter)</span></code></a> 和  <a class="reference internal" href="functions.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#filter" title="filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter()</span></code></a> 相反，返回所有让 predicate 返回 false 的元素:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">filterfalse</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">=&gt;</span>
   <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.takewhile" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.takewhile" title="itertools.takewhile"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.takewhile(predicate,</span> <span class="pre">iter)</span></code></a> returns
-elements for as long as the predicate returns true.  Once the predicate returns
-false, the iterator will signal the end of its results.</p>
+<p><a class="reference internal" href="itertools.html#itertools.takewhile" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.takewhile" title="itertools.takewhile"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.takewhile(predicate,</span> <span class="pre">iter)</span></code></a> 返回一直让 predicate 返回 true 的元素。一旦 predicate 返回 false，迭代器就会发出终止结果的信号。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">less_than_10</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span>
 
@@ -622,9 +598,7 @@ false, the iterator will signal the end of its results.</p>
   <span class="mi">0</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.dropwhile" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.dropwhile" title="itertools.dropwhile"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.dropwhile(predicate,</span> <span class="pre">iter)</span></code></a> discards
-elements while the predicate returns true, and then returns the rest of the
-iterable's results.</p>
+<p><a class="reference internal" href="itertools.html#itertools.dropwhile" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.dropwhile" title="itertools.dropwhile"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.dropwhile(predicate,</span> <span class="pre">iter)</span></code></a> 在 predicate 返回 true 的时候丢弃元素，并且返回可迭代对象的剩余结果。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">dropwhile</span><span class="p">(</span><span class="n">less_than_10</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">=&gt;</span>
   <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="o">...</span>
 
@@ -632,19 +606,15 @@ iterable's results.</p>
   <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.compress" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.compress" title="itertools.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.compress(data,</span> <span class="pre">selectors)</span></code></a> takes two
-iterators and returns only those elements of <em>data</em> for which the corresponding
-element of <em>selectors</em> is true, stopping whenever either one is exhausted:</p>
+<p><a class="reference internal" href="itertools.html#itertools.compress" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.compress" title="itertools.compress"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.compress(data,</span> <span class="pre">selectors)</span></code></a> 接受两个迭代器，然后返回 <em>data</em> 中使相应地 <em>selector</em> 中的元素为真的元素；它会在任一个迭代器耗尽的时候停止:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">compress</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span> <span class="o">=&gt;</span>
    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="combinatoric-functions">
-<h3>Combinatoric functions<a class="headerlink" href="#combinatoric-functions" title="永久链接至标题">¶</a></h3>
-<p>The <a class="reference internal" href="itertools.html#itertools.combinations" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.combinations" title="itertools.combinations"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations(iterable,</span> <span class="pre">r)</span></code></a>
-returns an iterator giving all possible <em>r</em>-tuple combinations of the
-elements contained in <em>iterable</em>.</p>
+<h3>组合函数<a class="headerlink" href="#combinatoric-functions" title="永久链接至标题">¶</a></h3>
+<p><a class="reference internal" href="itertools.html#itertools.combinations" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.combinations" title="itertools.combinations"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations(iterable,</span> <span class="pre">r)</span></code></a> 返回一个迭代器，它能给出输入迭代器中所包含的元素的所有可能的 <em>r</em> 元元组的组合。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
   <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
@@ -657,12 +627,7 @@ elements contained in <em>iterable</em>.</p>
   <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The elements within each tuple remain in the same order as
-<em>iterable</em> returned them.  For example, the number 1 is always before
-2, 3, 4, or 5 in the examples above.  A similar function,
-<a class="reference internal" href="itertools.html#itertools.permutations" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.permutations" title="itertools.permutations"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.permutations(iterable,</span> <span class="pre">r=None)</span></code></a>,
-removes this constraint on the order, returning all possible
-arrangements of length <em>r</em>:</p>
+<p>每个元组中的元素保持着 <em>可迭代对象</em> 返回他们的顺序。例如，在上面的例子中数字 1 总是会在 2, 3, 4 或 5 前面。一个类似的函数，<a class="reference internal" href="itertools.html#itertools.permutations" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.permutations" title="itertools.permutations"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.permutations(iterable,</span> <span class="pre">r=None)</span></code></a>，取消了保持顺序的限制，返回所有可能的长度为 <em>r</em> 的排列:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
   <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
@@ -676,22 +641,15 @@ arrangements of length <em>r</em>:</p>
   <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you don't supply a value for <em>r</em> the length of the iterable is used,
-meaning that all the elements are permuted.</p>
-<p>Note that these functions produce all of the possible combinations by
-position and don't require that the contents of <em>iterable</em> are unique:</p>
+<p>如果你不提供 <em>r</em> 参数的值，它会使用可迭代对象的长度，也就是说会排列所有的元素。</p>
+<p>注意这些函数会输出所有可能的位置组合，并不要求 <em>可迭代对象</em> 的内容不重复:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="s1">&#39;aba&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span>
   <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The identical tuple <code class="docutils literal notranslate"><span class="pre">('a',</span> <span class="pre">'a',</span> <span class="pre">'b')</span></code> occurs twice, but the two 'a'
-strings came from different positions.</p>
-<p>The <a class="reference internal" href="itertools.html#itertools.combinations_with_replacement" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.combinations_with_replacement" title="itertools.combinations_with_replacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations_with_replacement(iterable,</span> <span class="pre">r)</span></code></a>
-function relaxes a different constraint: elements can be repeated
-within a single tuple.  Conceptually an element is selected for the
-first position of each tuple and then is replaced before the second
-element is selected.</p>
+<p>同一个元组 <code class="docutils literal notranslate"><span class="pre">('a',</span> <span class="pre">'a',</span> <span class="pre">'b')</span></code> 出现了两次，但是两个 'a' 字符来自不同的位置。</p>
+<p><a class="reference internal" href="itertools.html#itertools.combinations_with_replacement" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.combinations_with_replacement" title="itertools.combinations_with_replacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations_with_replacement(iterable,</span> <span class="pre">r)</span></code></a> 函数放松了一个不同的限制：元组中的元素可以重复。从概念讲，为每个元组第一个位置选取一个元素，然后在选择第二个元素前替换掉它。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations_with_replacement</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=&gt;</span>
   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
   <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
@@ -702,13 +660,9 @@ element is selected.</p>
 </div>
 </div>
 <div class="section" id="grouping-elements">
-<h3>Grouping elements<a class="headerlink" href="#grouping-elements" title="永久链接至标题">¶</a></h3>
-<p>The last function I'll discuss, <a class="reference internal" href="itertools.html#itertools.groupby" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.groupby(iter,</span> <span class="pre">key_func=None)</span></code></a>, is the most complicated.  <code class="docutils literal notranslate"><span class="pre">key_func(elem)</span></code> is a function
-that can compute a key value for each element returned by the iterable.  If you
-don't supply a key function, the key is simply each element itself.</p>
-<p><a class="reference internal" href="itertools.html#itertools.groupby" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> collects all the consecutive elements from the
-underlying iterable that have the same key value, and returns a stream of
-2-tuples containing a key value and an iterator for the elements with that key.</p>
+<h3>为元素分组<a class="headerlink" href="#grouping-elements" title="永久链接至标题">¶</a></h3>
+<p>我要讨论的最后一个函数，<a class="reference internal" href="itertools.html#itertools.groupby" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.groupby(iter,key_func=None)</span></code></a>，是最复杂的函数。 <code class="docutils literal notranslate"><span class="pre">key_func(elem)</span></code> 是一个可以对迭代器返回的每个元素计算键值的函数。 如果你不提供这个键值函数，它就会简化成每个元素自身。</p>
+<p><a class="reference internal" href="itertools.html#itertools.groupby" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> 从所依据的可迭代对象中连续地收集具有相同值的元素，然后返回一个长度为2的元组的数据流, 每个元组包含键值以及对应这个键值的元素所组成的迭代器。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">city_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Decatur&#39;</span><span class="p">,</span> <span class="s1">&#39;AL&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Huntsville&#39;</span><span class="p">,</span> <span class="s1">&#39;AL&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Selma&#39;</span><span class="p">,</span> <span class="s1">&#39;AL&#39;</span><span class="p">),</span>
              <span class="p">(</span><span class="s1">&#39;Anchorage&#39;</span><span class="p">,</span> <span class="s1">&#39;AK&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span> <span class="s1">&#39;AK&#39;</span><span class="p">),</span>
              <span class="p">(</span><span class="s1">&#39;Flagstaff&#39;</span><span class="p">,</span> <span class="s1">&#39;AZ&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Phoenix&#39;</span><span class="p">,</span> <span class="s1">&#39;AZ&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Tucson&#39;</span><span class="p">,</span> <span class="s1">&#39;AZ&#39;</span><span class="p">),</span>
@@ -732,28 +686,15 @@ underlying iterable that have the same key value, and returns a stream of
   <span class="p">(</span><span class="s1">&#39;Flagstaff&#39;</span><span class="p">,</span> <span class="s1">&#39;AZ&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Phoenix&#39;</span><span class="p">,</span> <span class="s1">&#39;AZ&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Tucson&#39;</span><span class="p">,</span> <span class="s1">&#39;AZ&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="itertools.html#itertools.groupby" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> assumes that the underlying iterable's contents will
-already be sorted based on the key.  Note that the returned iterators also use
-the underlying iterable, so you have to consume the results of iterator-1 before
-requesting iterator-2 and its corresponding key.</p>
+<p><a class="reference internal" href="itertools.html#itertools.groupby" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> 假定了所依据的可迭代对象的内容已经根据键值排序。注意，返回的迭代器也会使用所依据的可迭代对象，所以在请求迭代器 2和相应的键之前你必须先消耗迭代器 1 的结果。</p>
 </div>
 </div>
 <div class="section" id="the-functools-module">
-<h2>The functools module<a class="headerlink" href="#the-functools-module" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="functools.html#module-functools" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> module in Python 2.5 contains some higher-order functions.
-A <strong>higher-order function</strong> takes one or more functions as input and returns a
-new function.  The most useful tool in this module is the
-<a class="reference internal" href="functools.html#functools.partial" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> function.</p>
-<p>For programs written in a functional style, you'll sometimes want to construct
-variants of existing functions that have some of the parameters filled in.
-Consider a Python function <code class="docutils literal notranslate"><span class="pre">f(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code>; you may wish to create a new function
-<code class="docutils literal notranslate"><span class="pre">g(b,</span> <span class="pre">c)</span></code> that's equivalent to <code class="docutils literal notranslate"><span class="pre">f(1,</span> <span class="pre">b,</span> <span class="pre">c)</span></code>; you're filling in a value for
-one of <code class="docutils literal notranslate"><span class="pre">f()</span></code>'s parameters.  This is called &quot;partial function application&quot;.</p>
-<p>The constructor for <a class="reference internal" href="functools.html#functools.partial" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">partial()</span></code></a> takes the arguments
-<code class="docutils literal notranslate"><span class="pre">(function,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">...,</span> <span class="pre">kwarg1=value1,</span> <span class="pre">kwarg2=value2)</span></code>.  The resulting
-object is callable, so you can just call it to invoke <code class="docutils literal notranslate"><span class="pre">function</span></code> with the
-filled-in arguments.</p>
-<p>Here's a small but realistic example:</p>
+<h2>functools 模块<a class="headerlink" href="#the-functools-module" title="永久链接至标题">¶</a></h2>
+<p>Python 2.5 中的 <a class="reference internal" href="functools.html#module-functools" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> 模块包含了一些高阶函数。 <strong>高阶函数</strong> 接受一个或多个函数作为输入，返回新的函数。 这个模块中最有用的工具是 <a class="reference internal" href="functools.html#functools.partial" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> 函数。</p>
+<p>对于用函数式风格编写的程序，有时你会希望通过给定部分参数，将已有的函数构变形称新的函数。考虑一个 Python 函数 <code class="docutils literal notranslate"><span class="pre">f(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code>；你希望创建一个和 <code class="docutils literal notranslate"><span class="pre">f(1,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> 等价的新函数 <code class="docutils literal notranslate"><span class="pre">g(b,</span> <span class="pre">c)</span></code>；也就是说你给定了 <code class="docutils literal notranslate"><span class="pre">f()</span></code> 的一个参数的值。这就是所谓的“部分函数应用”。</p>
+<p><a class="reference internal" href="functools.html#functools.partial" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">partial()</span></code></a> 接受参数 <code class="docutils literal notranslate"><span class="pre">(function,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">...,</span> <span class="pre">kwarg1=value1,</span> <span class="pre">kwarg2=value2)</span></code>。它会返回一个可调用的对象，所以你能够直接调用这个结果以使用给定参数的 <code class="docutils literal notranslate"><span class="pre">function</span></code>。</p>
+<p>这里有一个很小但很现实的例子:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">functools</span>
 
 <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">subsystem</span><span class="p">):</span>
@@ -765,17 +706,7 @@ filled-in arguments.</p>
 <span class="n">server_log</span><span class="p">(</span><span class="s1">&#39;Unable to open socket&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce(func,</span> <span class="pre">iter,</span> <span class="pre">[initial_value])</span></code></a>
-cumulatively performs an operation on all the iterable's elements and,
-therefore, can't be applied to infinite iterables. <em>func</em> must be a function
-that takes two elements and returns a single value.  <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a>
-takes the first two elements A and B returned by the iterator and calculates
-<code class="docutils literal notranslate"><span class="pre">func(A,</span> <span class="pre">B)</span></code>.  It then requests the third element, C, calculates
-<code class="docutils literal notranslate"><span class="pre">func(func(A,</span> <span class="pre">B),</span> <span class="pre">C)</span></code>, combines this result with the fourth element returned,
-and continues until the iterable is exhausted.  If the iterable returns no
-values at all, a <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> exception is raised.  If the initial value is
-supplied, it's used as a starting point and <code class="docutils literal notranslate"><span class="pre">func(initial_value,</span> <span class="pre">A)</span></code> is the
-first calculation.</p>
+<p><a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce(func,</span> <span class="pre">iter,</span> <span class="pre">[initial_value])</span></code></a> 持续地在可迭代对象的所有元素上执行操作，因此它不能够用在无限的可迭代对象上。<em>func</em> 必须是一个接受两个元素并返回一个值的函数。<a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a> 接受迭代器返回的前两个元素 A 和 B 并计算 <code class="docutils literal notranslate"><span class="pre">func(A,</span> <span class="pre">B)</span></code> 。然后它会请求第三个元素，C，计算 <code class="docutils literal notranslate"><span class="pre">func(func(A,</span> <span class="pre">B),</span> <span class="pre">C)</span></code>，然后把这个结果再和第四个元素组合并返回，如此继续下去直到消耗整个可迭代对象。如果输入的可迭代对象完全不返回任何值，<a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> 异常就会抛出。如果提供了初值(initial value)，它会被用作起始值，也就是先计算 <code class="docutils literal notranslate"><span class="pre">func(initial_value,</span> <span class="pre">A)</span></code> 。:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">operator</span><span class="o">,</span> <span class="nn">functools</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">concat</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;BB&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
 <span class="go">&#39;ABBC&#39;</span>
@@ -789,10 +720,8 @@ first calculation.</p>
 <span class="go">1</span>
 </pre></div>
 </div>
-<p>If you use <a class="reference internal" href="operator.html#operator.add" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.add" title="operator.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.add()</span></code></a> with <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a>, you'll add up all the
-elements of the iterable.  This case is so common that there's a special
-built-in called <a class="reference internal" href="functions.html#sum" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sum" title="sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> to compute it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">functools</span><span class="o">,</span> <span class="nn">operator</span>
+<p>如果你在 <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a> 中使用 <a class="reference internal" href="operator.html#operator.add" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#operator.add" title="operator.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.add()</span></code></a>，你就会把可迭代对象中的所有元素加起来.这种情况非常常见, 所以 Python 有一个特殊的内置函数 <a class="reference internal" href="functions.html#sum" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sum" title="sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">functools</span><span class="o">,</span> <span class="nn">operator</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 <span class="go">10</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -801,8 +730,7 @@ built-in called <a class="reference internal" href="functions.html#sum" tppabs="
 <span class="go">0</span>
 </pre></div>
 </div>
-<p>For many uses of <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a>, though, it can be clearer to just
-write the obvious <a class="reference internal" href="compound_stmts.html#for" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a> loop:</p>
+<p>不过, 对于很多使用 <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a> 的情形, 使用明显的 <a class="reference internal" href="compound_stmts.html#for" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a> 循环会更清晰:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">functools</span>
 <span class="c1"># Instead of:</span>
 <span class="n">product</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
@@ -813,9 +741,7 @@ write the obvious <a class="reference internal" href="compound_stmts.html#for" t
     <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span>
 </pre></div>
 </div>
-<p>A related function is <a class="reference internal" href="itertools.html#itertools.accumulate" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.accumulate" title="itertools.accumulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.accumulate(iterable,</span> <span class="pre">func=operator.add)</span></code></a>.  It performs the same calculation, but instead of
-returning only the final result, <code class="xref py py-func docutils literal notranslate"><span class="pre">accumulate()</span></code> returns an iterator that
-also yields each partial result:</p>
+<p>一个相关的函数是 <a class="reference internal" href="itertools.html#itertools.accumulate" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.accumulate" title="itertools.accumulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.accumulate(iterable,</span> <span class="pre">func=operator.add)</span></code></a> 。它执行同样的计算, 不过相对于只返回最终结果，<code class="xref py py-func docutils literal notranslate"><span class="pre">accumulate()</span></code> 会返回一个迭代器来输出所有中间结果:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="o">=&gt;</span>
   <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span>
 
@@ -824,43 +750,34 @@ also yields each partial result:</p>
 </pre></div>
 </div>
 <div class="section" id="the-operator-module">
-<h3>The operator module<a class="headerlink" href="#the-operator-module" title="永久链接至标题">¶</a></h3>
-<p>The <a class="reference internal" href="operator.html#module-operator" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> module was mentioned earlier.  It contains a set of
-functions corresponding to Python's operators.  These functions are often useful
-in functional-style code because they save you from writing trivial functions
-that perform a single operation.</p>
-<p>Some of the functions in this module are:</p>
+<h3>operator 模块<a class="headerlink" href="#the-operator-module" title="永久链接至标题">¶</a></h3>
+<p>前面已经提到了 <a class="reference internal" href="operator.html#module-operator" tppabs="https://docs.python.org/zh-cn/3/library/operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> 模块。它包含一系列对应于 Python 操作符的函数。在函数式风格的代码中，这些函数通常很有用，可以帮你省下不少时间，避免写一些琐碎的仅仅执行一个简单操作的函数。</p>
+<p>这个模块里的一些函数：</p>
 <ul class="simple">
-<li>Math operations: <code class="docutils literal notranslate"><span class="pre">add()</span></code>, <code class="docutils literal notranslate"><span class="pre">sub()</span></code>, <code class="docutils literal notranslate"><span class="pre">mul()</span></code>, <code class="docutils literal notranslate"><span class="pre">floordiv()</span></code>, <code class="docutils literal notranslate"><span class="pre">abs()</span></code>, ...</li>
-<li>Logical operations: <code class="docutils literal notranslate"><span class="pre">not_()</span></code>, <code class="docutils literal notranslate"><span class="pre">truth()</span></code>.</li>
-<li>Bitwise operations: <code class="docutils literal notranslate"><span class="pre">and_()</span></code>, <code class="docutils literal notranslate"><span class="pre">or_()</span></code>, <code class="docutils literal notranslate"><span class="pre">invert()</span></code>.</li>
-<li>Comparisons: <code class="docutils literal notranslate"><span class="pre">eq()</span></code>, <code class="docutils literal notranslate"><span class="pre">ne()</span></code>, <code class="docutils literal notranslate"><span class="pre">lt()</span></code>, <code class="docutils literal notranslate"><span class="pre">le()</span></code>, <code class="docutils literal notranslate"><span class="pre">gt()</span></code>, and <code class="docutils literal notranslate"><span class="pre">ge()</span></code>.</li>
-<li>Object identity: <code class="docutils literal notranslate"><span class="pre">is_()</span></code>, <code class="docutils literal notranslate"><span class="pre">is_not()</span></code>.</li>
+<li><p>数学运算： <code class="docutils literal notranslate"><span class="pre">add()</span></code>，<code class="docutils literal notranslate"><span class="pre">sub()</span></code>，<code class="docutils literal notranslate"><span class="pre">mul()</span></code>，<code class="docutils literal notranslate"><span class="pre">floordiv()</span></code>，<code class="docutils literal notranslate"><span class="pre">abs()</span></code>， ...</p></li>
+<li><p>逻辑运算： <code class="docutils literal notranslate"><span class="pre">not_()</span></code>，<code class="docutils literal notranslate"><span class="pre">truth()</span></code>。</p></li>
+<li><p>位运算： <code class="docutils literal notranslate"><span class="pre">and_()</span></code>，<code class="docutils literal notranslate"><span class="pre">or_()</span></code>，<code class="docutils literal notranslate"><span class="pre">invert()</span></code>。</p></li>
+<li><p>比较： <code class="docutils literal notranslate"><span class="pre">eq()</span></code>，<code class="docutils literal notranslate"><span class="pre">ne()</span></code>，<code class="docutils literal notranslate"><span class="pre">lt()</span></code>，<code class="docutils literal notranslate"><span class="pre">le()</span></code>，<code class="docutils literal notranslate"><span class="pre">gt()</span></code>，和 <code class="docutils literal notranslate"><span class="pre">ge()</span></code>。</p></li>
+<li><p>确认对象： <code class="docutils literal notranslate"><span class="pre">is_()</span></code>，<code class="docutils literal notranslate"><span class="pre">is_not()</span></code>。</p></li>
 </ul>
-<p>Consult the operator module's documentation for a complete list.</p>
+<p>全部函数列表可以参考 operator 模块的文档。</p>
 </div>
 </div>
 <div class="section" id="small-functions-and-the-lambda-expression">
-<h2>Small functions and the lambda expression<a class="headerlink" href="#small-functions-and-the-lambda-expression" title="永久链接至标题">¶</a></h2>
-<p>When writing functional-style programs, you'll often need little functions that
-act as predicates or that combine elements in some way.</p>
-<p>If there's a Python built-in or a module function that's suitable, you don't
-need to define a new function at all:</p>
+<h2>小函数和 lambda 表达式<a class="headerlink" href="#small-functions-and-the-lambda-expression" title="永久链接至标题">¶</a></h2>
+<p>编写函数式风格程序时，你会经常需要很小的函数，作为谓词函数或者以某种方式来组合元素。</p>
+<p>如果合适的 Python 内置的或者其他模块中的函数，你就一点也不需要定义新的函数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">stripped_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
 <span class="n">existing_files</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">,</span> <span class="n">file_list</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If the function you need doesn't exist, you need to write it.  One way to write
-small functions is to use the <a class="reference internal" href="expressions.html#lambda" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a> expression.  <code class="docutils literal notranslate"><span class="pre">lambda</span></code> takes a
-number of parameters and an expression combining these parameters, and creates
-an anonymous function that returns the value of the expression:</p>
+<p>如果不存在你需要的函数，你就必须自己编写。一个编写小函数的方式是使用 <a class="reference internal" href="expressions.html#lambda" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a> 表达式。<code class="docutils literal notranslate"><span class="pre">lambda</span></code> 接受一组参数以及组合这些参数的表达式，它会创建一个返回表达式值的匿名函数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">adder</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
 
 <span class="n">print_assign</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;=&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>An alternative is to just use the <code class="docutils literal notranslate"><span class="pre">def</span></code> statement and define a function in the
-usual way:</p>
+<p>另一种替代方案就是通常的使用 <code class="docutils literal notranslate"><span class="pre">def</span></code> 语句来定义函数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 
@@ -868,21 +785,13 @@ usual way:</p>
     <span class="k">return</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;=&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Which alternative is preferable?  That's a style question; my usual course is to
-avoid using <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p>
-<p>One reason for my preference is that <code class="docutils literal notranslate"><span class="pre">lambda</span></code> is quite limited in the
-functions it can define.  The result has to be computable as a single
-expression, which means you can't have multiway <code class="docutils literal notranslate"><span class="pre">if...</span> <span class="pre">elif...</span> <span class="pre">else</span></code>
-comparisons or <code class="docutils literal notranslate"><span class="pre">try...</span> <span class="pre">except</span></code> statements.  If you try to do too much in a
-<code class="docutils literal notranslate"><span class="pre">lambda</span></code> statement, you'll end up with an overly complicated expression that's
-hard to read.  Quick, what's the following code doing?</p>
+<p>哪一种更受青睐呢？这是一个风格问题；我通常的做法是避免使用 <code class="docutils literal notranslate"><span class="pre">lambda</span></code>。</p>
+<p>我这么偏好的一个原因是，<code class="docutils literal notranslate"><span class="pre">lambda</span></code> 能够定义的函数非常受限。函数的结果必须能够作为单独的表达式来计算，这意味着你不能使用多路 <code class="docutils literal notranslate"><span class="pre">if...</span> <span class="pre">elif...</span> <span class="pre">else</span></code> 比较，或者 <code class="docutils literal notranslate"><span class="pre">try...</span> <span class="pre">except</span></code> 语句。如果你尝试在 <code class="docutils literal notranslate"><span class="pre">lambda</span></code> 语句中做太多事情，你最终会把表达式过于复杂以至于难以阅读。你能快速的说出下面的代码做了什么事情吗？:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">functools</span>
 <span class="n">total</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">items</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>You can figure it out, but it takes time to disentangle the expression to figure
-out what's going on.  Using a short nested <code class="docutils literal notranslate"><span class="pre">def</span></code> statements makes things a
-little bit better:</p>
+<p>你可以弄明白，不过要花上时间来理清表达式来搞清楚发生了什么。使用一个简短的嵌套的 <code class="docutils literal notranslate"><span class="pre">def</span></code> 语句可以让情况变得更好:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">functools</span>
 <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -890,58 +799,50 @@ little bit better:</p>
 <span class="n">total</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">combine</span><span class="p">,</span> <span class="n">items</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>But it would be best of all if I had simply used a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:</p>
+<p>如果我仅仅使用一个 <code class="docutils literal notranslate"><span class="pre">for</span></code> 循环会更好:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
     <span class="n">total</span> <span class="o">+=</span> <span class="n">b</span>
 </pre></div>
 </div>
-<p>Or the <a class="reference internal" href="functions.html#sum" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sum" title="sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> built-in and a generator expression:</p>
+<p>或者使用内置的 <a class="reference internal" href="functions.html#sum" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sum" title="sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> 和一个生成器表达式:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">items</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Many uses of <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a> are clearer when written as <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p>
-<p>Fredrik Lundh once suggested the following set of rules for refactoring uses of
-<code class="docutils literal notranslate"><span class="pre">lambda</span></code>:</p>
+<p>许多使用 <a class="reference internal" href="functools.html#functools.reduce" tppabs="https://docs.python.org/zh-cn/3/library/functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a> 的情形可以更清晰地写成 <code class="docutils literal notranslate"><span class="pre">for</span></code> 循环的形式。</p>
+<p>Fredrik Lundh 曾经建议以下一组规则来重构 <code class="docutils literal notranslate"><span class="pre">lambda</span></code> 的使用:</p>
 <ol class="arabic simple">
-<li>Write a lambda function.</li>
-<li>Write a comment explaining what the heck that lambda does.</li>
-<li>Study the comment for a while, and think of a name that captures the essence
-of the comment.</li>
-<li>Convert the lambda to a def statement, using that name.</li>
-<li>Remove the comment.</li>
+<li><p>写一个 lambda 函数。</p></li>
+<li><p>写一句注释来说明这个 lambda 究竟干了什么。</p></li>
+<li><p>研究一会这个注释，然后想出一个抓住注释本质的名字。</p></li>
+<li><p>用这个名字，把这个 lambda 改写成 def 语句。</p></li>
+<li><p>把注释去掉。</p></li>
 </ol>
-<p>I really like these rules, but you're free to disagree
-about whether this lambda-free style is better.</p>
+<p>我非常喜欢这些规则，不过你完全有权利争辩这种消除 lambda 的风格是不是更好。</p>
 </div>
 <div class="section" id="revision-history-and-acknowledgements">
-<h2>Revision History and Acknowledgements<a class="headerlink" href="#revision-history-and-acknowledgements" title="永久链接至标题">¶</a></h2>
-<p>The author would like to thank the following people for offering suggestions,
-corrections and assistance with various drafts of this article: Ian Bicking,
-Nick Coghlan, Nick Efford, Raymond Hettinger, Jim Jewett, Mike Krell, Leandro
-Lameiro, Jussi Salmela, Collin Winter, Blake Winton.</p>
-<p>Version 0.1: posted June 30 2006.</p>
-<p>Version 0.11: posted July 1 2006.  Typo fixes.</p>
-<p>Version 0.2: posted July 10 2006.  Merged genexp and listcomp sections into one.
-Typo fixes.</p>
-<p>Version 0.21: Added more references suggested on the tutor mailing list.</p>
-<p>Version 0.30: Adds a section on the <code class="docutils literal notranslate"><span class="pre">functional</span></code> module written by Collin
-Winter; adds short section on the operator module; a few other edits.</p>
+<h2>修订记录和致谢<a class="headerlink" href="#revision-history-and-acknowledgements" title="永久链接至标题">¶</a></h2>
+<p>作者要感谢以下人员对本文各种草稿给予的建议，更正和协助：Ian Bicking,Nick Coghlan, Nick Efford, Raymond Hettinger, Jim Jewett, Mike Krell,Leandro Lameiro, Jussi Salmela, Collin Winter, Blake Winton。</p>
+<p>0.1 版: 2006 年 6 月 30 日发布。</p>
+<p>0.11 版: 2006 年 7 月 1 日发布。 修正拼写错误。</p>
+<p>0.2 版: 2006 年 7 月 10 日发布。 将 genexp 与 listcomp 两节合二为一。 修正拼写错误。</p>
+<p>0.21 版: 加入了 tutor 邮件列表中建议的更多参考文件。</p>
+<p>0.30 版: 添加了有关 <code class="docutils literal notranslate"><span class="pre">functional</span></code> 模块的小节，由 Collin Winter 撰写；添加了有关 operator 模块的简短小节；其他少量修改。</p>
 </div>
 <div class="section" id="references">
 <h2>引用文献<a class="headerlink" href="#references" title="永久链接至标题">¶</a></h2>
 <div class="section" id="general">
 <h3>通用文献<a class="headerlink" href="#general" title="永久链接至标题">¶</a></h3>
 <p><strong>Structure and Interpretation of Computer Programs</strong>, Harold Abelson, Gerald Jay Sussman 和 Julie Sussman 著。全文可见 <a class="reference external" href="javascript:if(confirm('https://mitpress.mit.edu/sicp/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mitpress.mit.edu/sicp/'" tppabs="https://mitpress.mit.edu/sicp/">https://mitpress.mit.edu/sicp/</a> 。在这部计算机科学的经典教科书中，第二和第三章讨论了使用序列和流来组织程序内部的数据传递。书中的示例采用 Scheme 语言，但其中这些章节中描述的很多设计方法同样适用于函数式风格的 Python 代码。</p>
-<p><a class="reference external" href="javascript:if(confirm('http://www.defmacro.org/ramblings/issue17909  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.defmacro.org/ramblings/issue17909'" tppabs="http://www.defmacro.org/ramblings/fp.html">http://www.defmacro.org/ramblings/fp.html</a>: 一个使用 Java 示例的函数式编程的总体介绍，有很长的历史说明。</p>
-<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue24884  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue24884'" tppabs="https://en.wikipedia.org/wiki/Functional_programming">https://en.wikipedia.org/wiki/Functional_programming</a>: 一般性的函数式编程的 Wikipedia 条目。</p>
+<p><a class="reference external" href="javascript:if(confirm('http://www.defmacro.org/ramblings/issue38449  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.defmacro.org/ramblings/issue38449'" tppabs="http://www.defmacro.org/ramblings/fp.html">http://www.defmacro.org/ramblings/fp.html</a>: 一个使用 Java 示例的函数式编程的总体介绍，有很长的历史说明。</p>
+<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38431  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue38431'" tppabs="https://en.wikipedia.org/wiki/Functional_programming">https://en.wikipedia.org/wiki/Functional_programming</a>: 一般性的函数式编程的 Wikipedia 条目。</p>
 <p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Coroutine  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Coroutine'" tppabs="https://en.wikipedia.org/wiki/Coroutine">https://en.wikipedia.org/wiki/Coroutine</a>: 协程条目。</p>
-<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue6766  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue6766'" tppabs="https://en.wikipedia.org/wiki/Currying">https://en.wikipedia.org/wiki/Currying</a>: 函数柯里化条目。</p>
+<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38109  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue38109'" tppabs="https://en.wikipedia.org/wiki/Currying">https://en.wikipedia.org/wiki/Currying</a>: 函数柯里化条目。</p>
 </div>
 <div class="section" id="python-specific">
 <h3>Python 相关<a class="headerlink" href="#python-specific" title="永久链接至标题">¶</a></h3>
 <p><a class="reference external" href="javascript:if(confirm('http://gnosis.cx/TPiP/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://gnosis.cx/TPiP/'" tppabs="http://gnosis.cx/TPiP/">http://gnosis.cx/TPiP/</a>：David Mertz 书中的第一章 <cite>Text Processing in Python</cite>，&quot;Utilizing Higher-Order Functions in Text Processing&quot; 标题部分讨论了文本处理的函数式编程。</p>
-<p>Mertz 还在 IBM 的 DeveloperWorks 站点上关于函数式编程写了一系列共3篇文章；参见`part 1&lt;<a class="reference external" href="javascript:if(confirm('https://www.ibm.com/developerworks/linux/library/l-prog/index.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.ibm.com/developerworks/linux/library/l-prog/index.html'" tppabs="https://www.ibm.com/developerworks/linux/library/l-prog/index.html">https://www.ibm.com/developerworks/linux/library/l-prog/index.html</a>&gt;`__,`part2&lt;<a class="reference external" href="javascript:if(confirm('https://www.ibm.com/developerworks/linux/library/l-prog2/index.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.ibm.com/developerworks/linux/library/l-prog2/index.html'" tppabs="https://www.ibm.com/developerworks/linux/library/l-prog2/index.html">https://www.ibm.com/developerworks/linux/library/l-prog2/index.html</a>&gt;`__, 和`part 3&lt;<a class="reference external" href="javascript:if(confirm('https://www.ibm.com/developerworks/linux/library/l-prog3/index.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.ibm.com/developerworks/linux/library/l-prog3/index.html'" tppabs="https://www.ibm.com/developerworks/linux/library/l-prog3/index.html">https://www.ibm.com/developerworks/linux/library/l-prog3/index.html</a>&gt;`__,</p>
+<p>Mertz 还在 IBM 的 DeveloperWorks 站点上针对函数式编程撰写了一系列共 3 篇文章；参见 <a class="reference external" href="javascript:if(confirm('https://developer.ibm.com/articles/l-prog/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://developer.ibm.com/articles/l-prog/'" tppabs="https://developer.ibm.com/articles/l-prog/">part 1</a>, <a class="reference external" href="javascript:if(confirm('https://developer.ibm.com/tutorials/l-prog2/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://developer.ibm.com/tutorials/l-prog2/'" tppabs="https://developer.ibm.com/tutorials/l-prog2/">part 2</a> 和 <a class="reference external" href="javascript:if(confirm('https://developer.ibm.com/tutorials/l-prog3/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://developer.ibm.com/tutorials/l-prog3/'" tppabs="https://developer.ibm.com/tutorials/l-prog3/">part 3</a>,</p>
 </div>
 <div class="section" id="python-documentation">
 <h3>Python 文档<a class="headerlink" href="#python-documentation" title="永久链接至标题">¶</a></h3>
@@ -960,7 +861,7 @@ Winter; adds short section on the operator module; a few other edits.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">函数式编程指引</a><ul>
 <li><a class="reference internal" href="#introduction">概述</a><ul>
@@ -982,18 +883,18 @@ Winter; adds short section on the operator module; a few other edits.</p>
 <li><a class="reference internal" href="#built-in-functions">内置函数</a></li>
 <li><a class="reference internal" href="#the-itertools-module">itertools 模块</a><ul>
 <li><a class="reference internal" href="#creating-new-iterators">创建新的迭代器</a></li>
-<li><a class="reference internal" href="#calling-functions-on-elements">Calling functions on elements</a></li>
-<li><a class="reference internal" href="#selecting-elements">Selecting elements</a></li>
-<li><a class="reference internal" href="#combinatoric-functions">Combinatoric functions</a></li>
-<li><a class="reference internal" href="#grouping-elements">Grouping elements</a></li>
+<li><a class="reference internal" href="#calling-functions-on-elements">对元素使用函数</a></li>
+<li><a class="reference internal" href="#selecting-elements">选择元素</a></li>
+<li><a class="reference internal" href="#combinatoric-functions">组合函数</a></li>
+<li><a class="reference internal" href="#grouping-elements">为元素分组</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-functools-module">The functools module</a><ul>
-<li><a class="reference internal" href="#the-operator-module">The operator module</a></li>
+<li><a class="reference internal" href="#the-functools-module">functools 模块</a><ul>
+<li><a class="reference internal" href="#the-operator-module">operator 模块</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#small-functions-and-the-lambda-expression">Small functions and the lambda expression</a></li>
-<li><a class="reference internal" href="#revision-history-and-acknowledgements">Revision History and Acknowledgements</a></li>
+<li><a class="reference internal" href="#small-functions-and-the-lambda-expression">小函数和 lambda 表达式</a></li>
+<li><a class="reference internal" href="#revision-history-and-acknowledgements">修订记录和致谢</a></li>
 <li><a class="reference internal" href="#references">引用文献</a><ul>
 <li><a class="reference internal" href="#general">通用文献</a></li>
 <li><a class="reference internal" href="#python-specific">Python 相关</a></li>
@@ -1015,7 +916,7 @@ Winter; adds short section on the operator module; a few other edits.</p>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/howto/functional.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/howto/functional.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/howto/functional.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/howto/functional.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/howto/functional.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/howto/functional.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -1040,14 +941,17 @@ Winter; adds short section on the operator module; a few other edits.</p>
         <li class="right" >
           <a href="descriptor.html" tppabs="https://docs.python.org/zh-cn/3/howto/descriptor.html" title="实现描述器"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" >Python 常用指引</a> &#187;</li>
     <li class="right">
@@ -1068,15 +972,19 @@ Winter; adds short section on the operator module; a few other edits.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

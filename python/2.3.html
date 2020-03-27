@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>What&#39;s New in Python 2.3 &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>Python 2.3 æœ‰ä»€ä¹ˆæ–°å˜åŒ– &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="What&#39;s New in Python 2.2" href="2.2.html" />
-    <link rel="prev" title="What&#39;s New in Python 2.4" href="2.4.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="next" title="Python 2.2 æœ‰ä»€ä¹ˆæ–°å˜åŒ–" href="2.2.html" />
+    <link rel="prev" title="Python 2.4 æœ‰ä»€ä¹ˆæ–°å˜åŒ–" href="2.4.html" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.3.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="2.2.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.2.html" title="What&#39;s New in Python 2.2"
+          <a href="2.2.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.2.html" title="Python 2.2 æœ‰ä»€ä¹ˆæ–°å˜åŒ–"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="2.4.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.4.html" title="What&#39;s New in Python 2.4"
+          <a href="2.4.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.4.html" title="Python 2.4 æœ‰ä»€ä¹ˆæ–°å˜åŒ–"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/index.html" accesskey="U">Python æœ‰ä»€ä¹ˆæ–°å˜åŒ–ï¼Ÿ</a> &#187;</li>
     <li class="right">
@@ -95,15 +103,12 @@
           <div class="body" role="main">
             
   <div class="section" id="what-s-new-in-python-2-3">
-<h1>What's New in Python 2.3<a class="headerlink" href="#what-s-new-in-python-2-3" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">ä½œè€…:</th><td class="field-body">A.M. Kuchling</td>
-</tr>
-</tbody>
-</table>
+<h1>Python 2.3 æœ‰ä»€ä¹ˆæ–°å˜åŒ–<a class="headerlink" href="#what-s-new-in-python-2-3" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">ä½œè€…</dt>
+<dd class="field-odd"><p>A.M. Kuchling</p>
+</dd>
+</dl>
 <p>This article explains the new features in Python 2.3.  Python 2.3 was released
 on July 29, 2003.</p>
 <p>The main themes for Python 2.3 are polishing some of the features added in 2.2,
@@ -134,7 +139,7 @@ removed.  The <code class="xref py py-class docutils literal notranslate"><span 
 and instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">ImmutableSet</span></code> can therefore be used as dictionary keys.
 Sets are built on top of dictionaries, so the elements within a set must be
 hashable.</p>
-<p>Here's a simple example:</p>
+<p>è¿™æ˜¯ä¸€ä¸ªç®€å•çš„ç¤ºä¾‹ï¼š</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sets</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="n">sets</span><span class="o">.</span><span class="n">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">S</span>
@@ -198,11 +203,10 @@ whether one set is a subset or superset of another:</p>
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-0"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0218  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0218'" tppabs="https://www.python.org/dev/peps/pep-0218"><strong>PEP 218</strong></a> - Adding a Built-In Set Object Type</dt>
-<dd>PEP written by Greg V. Wilson. Implemented by Greg V. Wilson, Alex Martelli, and
-GvR.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-40"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0218  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0218'" tppabs="https://www.python.org/dev/peps/pep-0218"><strong>PEP 218</strong></a> - æ·»åŠ å†…ç½®Setå¯¹è±¡ç±»å‹</dt><dd><p>PEP ç”± Greg V. Wilson æ’°å†™ ; ç”± Greg V. Wilson, Alex Martelli å’Œ GvR å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -316,11 +320,11 @@ compared to Icon's is that a generator's state is represented as a concrete
 object (the iterator) that can be passed around to other functions or stored in
 a data structure.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-32"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0255  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0255'" tppabs="https://www.python.org/dev/peps/pep-0255"><strong>PEP 255</strong></a> - ç®€å•ç”Ÿæˆå™¨</dt>
-<dd>Written by Neil Schemenauer, Tim Peters, Magnus Lie Hetland.  Implemented mostly
-by Neil Schemenauer and Tim Peters, with other fixes from the Python Labs crew.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-41"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0255  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0255'" tppabs="https://www.python.org/dev/peps/pep-0255"><strong>PEP 255</strong></a> - ç®€å•ç”Ÿæˆå™¨</dt><dd><p>Written by Neil Schemenauer, Tim Peters, Magnus Lie Hetland.  Implemented mostly
+by Neil Schemenauer and Tim Peters, with other fixes from the Python Labs crew.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -344,17 +348,16 @@ converted to Unicode using the specified encoding.  Note that Python identifiers
 are still restricted to ASCII characters, so you can't have variable names that
 use characters outside of the usual alphanumerics.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-3"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0263  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0263'" tppabs="https://www.python.org/dev/peps/pep-0263"><strong>PEP 263</strong></a> - Defining Python Source Code Encodings</dt>
-<dd>Written by Marc-AndrÃ© Lemburg and Martin von LÃ¶wis; implemented by Suzuki Hisao
-and Martin von LÃ¶wis.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-3"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0263  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0263'" tppabs="https://www.python.org/dev/peps/pep-0263"><strong>PEP 263</strong></a> - Defining Python Source Code Encodings</dt><dd><p>ç”± Marc-AndrÃ© Lemburg å’Œ Martin von LÃ¶wis æ’°å†™ ; ç”± Suzuki Hisao å’Œ Martin von LÃ¶wis å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="pep-273-importing-modules-from-zip-archives">
-<h2>PEP 273: Importing Modules from ZIP Archives<a class="headerlink" href="#pep-273-importing-modules-from-zip-archives" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>The new <a class="reference internal" href="zipimport.html#module-zipimport" tppabs="https://docs.python.org/zh-cn/3/library/zipimport.html#module-zipimport" title="zipimport: support for importing Python modules from ZIP archives."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipimport</span></code></a> module adds support for importing modules from a
+<h2>PEP 273: ä»ZIPå‹ç¼©åŒ…å¯¼å…¥æ¨¡å—<a class="headerlink" href="#pep-273-importing-modules-from-zip-archives" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The new <a class="reference internal" href="zipimport.html#module-zipimport" tppabs="https://docs.python.org/zh-cn/3/library/zipimport.html#module-zipimport" title="zipimport: Support for importing Python modules from ZIP archives."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipimport</span></code></a> module adds support for importing modules from a
 ZIP-format archive.  You don't need to import the module explicitly; it will be
 automatically imported if a ZIP archive's filename is added to <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>.
 For example:</p>
@@ -385,13 +388,13 @@ corresponding <code class="file docutils literal notranslate"><span class="pre">
 subdirectory; for example, the path <code class="file docutils literal notranslate"><span class="pre">/tmp/example.zip/lib/</span></code> would only
 import from the <code class="file docutils literal notranslate"><span class="pre">lib/</span></code> subdirectory within the archive.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-4"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0273  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0273'" tppabs="https://www.python.org/dev/peps/pep-0273"><strong>PEP 273</strong></a> - Import Modules from Zip Archives</dt>
-<dd>Written by James C. Ahlstrom,  who also provided an implementation. Python 2.3
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-42"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0273  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0273'" tppabs="https://www.python.org/dev/peps/pep-0273"><strong>PEP 273</strong></a> - Â ä»ZIPå‹ç¼©åŒ…å¯¼å…¥æ¨¡å—</dt><dd><p>Written by James C. Ahlstrom,  who also provided an implementation. Python 2.3
 follows the specification in <span class="target" id="index-5"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0273  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0273'" tppabs="https://www.python.org/dev/peps/pep-0273"><strong>PEP 273</strong></a>,  but uses an implementation written by
 Just van Rossum  that uses the import hooks described in <span class="target" id="index-6"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0302  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0302'" tppabs="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a>. See section
-<a class="reference internal" href="#section-pep302"><span class="std std-ref">PEP 302: New Import Hooks</span></a> for a description of the new import hooks.</dd>
+<a class="reference internal" href="#section-pep302"><span class="std std-ref">PEP 302: New Import Hooks</span></a> for a description of the new import hooks.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -414,16 +417,15 @@ supported as file names by checking <a class="reference internal" href="os.path.
 a Boolean value.</p>
 <p>Under MacOS, <a class="reference internal" href="os.html#os.listdir" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.listdir" title="os.listdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.listdir()</span></code></a> may now return Unicode filenames.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0277  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0277'" tppabs="https://www.python.org/dev/peps/pep-0277"><strong>PEP 277</strong></a> - Unicode file name support for Windows NT</dt>
-<dd>Written by Neil Hodgson; implemented by Neil Hodgson, Martin von LÃ¶wis, and Mark
-Hammond.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0277  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0277'" tppabs="https://www.python.org/dev/peps/pep-0277"><strong>PEP 277</strong></a> - Unicode file name support for Windows NT</dt><dd><p>ç”± Neil Hodgson æ’°å†™ ; ç”± Neil Hodgson, Martin von LÃ¶wis å’Œ Mark Hammond å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="pep-278-universal-newline-support">
-<span id="index-8"></span><h2>PEP 278: Universal Newline Support<a class="headerlink" href="#pep-278-universal-newline-support" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="index-8"></span><h2>PEP 278: é€šç”¨æ¢è¡Œæ”¯æŒ<a class="headerlink" href="#pep-278-universal-newline-support" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>The three major operating systems used today are Microsoft Windows, Apple's
 Macintosh OS, and the various Unix derivatives.  A minor irritation of
 cross-platform work  is that these three platforms all use different characters to
@@ -444,10 +446,10 @@ line-endings.</p>
 <code class="xref std std-option docutils literal notranslate"><span class="pre">--without-universal-newlines</span></code> switch when running Python's
 <strong class="program">configure</strong> script.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-9"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0278  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0278'" tppabs="https://www.python.org/dev/peps/pep-0278"><strong>PEP 278</strong></a> - Universal Newline Support</dt>
-<dd>Written and implemented by Jack Jansen.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-43"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0278  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0278'" tppabs="https://www.python.org/dev/peps/pep-0278"><strong>PEP 278</strong></a> - é€šç”¨æ¢è¡Œæ”¯æŒ</dt><dd><p>ç”± Jack Jansen æ’°å†™å¹¶å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -464,22 +466,22 @@ sequence, returns an iterator that will return <code class="docutils literal not
     <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
 </pre></div>
 </div>
-<p>This can be rewritten using <a class="reference internal" href="functions.html#enumerate" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> as:</p>
+<p>å¯ä»¥ä½¿ç”¨ <a class="reference internal" href="functions.html#enumerate" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> é‡å†™ä¸ºï¼š</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="c1"># ... compute some result based on item ...</span>
     <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-10"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0279  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0279'" tppabs="https://www.python.org/dev/peps/pep-0279"><strong>PEP 279</strong></a> - The enumerate() built-in function</dt>
-<dd>Written and implemented by Raymond D. Hettinger.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-44"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0279  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0279'" tppabs="https://www.python.org/dev/peps/pep-0279"><strong>PEP 279</strong></a> - å†…ç½®å‡½æ•° enumerate()</dt><dd><p>ç”± Raymond D. Hettinger æ’°å†™å¹¶å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="pep-282-the-logging-package">
-<h2>PEP 282: The logging Package<a class="headerlink" href="#pep-282-the-logging-package" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>PEP 282: logging åŒ…<a class="headerlink" href="#pep-282-the-logging-package" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>A standard package for writing logs, <a class="reference internal" href="logging.html#module-logging" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a>, has been added to Python
 2.3.  It provides a powerful and flexible mechanism for generating logging
 output which can then be filtered and processed in various ways.  A
@@ -568,15 +570,15 @@ flexibility for even the most complicated applications.  This is only an
 incomplete overview of its features, so please see the package's reference
 documentation for all of the details.  Reading <span class="target" id="index-11"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0282  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0282'" tppabs="https://www.python.org/dev/peps/pep-0282"><strong>PEP 282</strong></a> will also be helpful.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-12"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0282  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0282'" tppabs="https://www.python.org/dev/peps/pep-0282"><strong>PEP 282</strong></a> - A Logging System</dt>
-<dd>Written by Vinay Sajip and Trent Mick; implemented by Vinay Sajip.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-45"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0282  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0282'" tppabs="https://www.python.org/dev/peps/pep-0282"><strong>PEP 282</strong></a> - Logging ç³»ç»Ÿ</dt><dd><p>ç”± Vinay Sajip å’Œ Trent Mick æ’°å†™ ; ç”± Vinay Sajip å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="pep-285-a-boolean-type">
-<span id="section-bool"></span><h2>PEP 285: A Boolean Type<a class="headerlink" href="#pep-285-a-boolean-type" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="section-bool"></span><h2>PEP 285: å¸ƒå°”ç±»å‹<a class="headerlink" href="#pep-285-a-boolean-type" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>A Boolean type was added to Python 2.3.  Two new constants were added to the
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">__builtin__</span></code> module, <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> and <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a>.  (<a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> and
 <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> constants were added to the built-ins in Python 2.2.1, but the
@@ -633,10 +635,10 @@ ways to spell the integer values 1 and 0, with the single difference that
 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> and <a class="reference internal" href="functions.html#repr" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> return the strings <code class="docutils literal notranslate"><span class="pre">'True'</span></code> and <code class="docutils literal notranslate"><span class="pre">'False'</span></code>
 instead of <code class="docutils literal notranslate"><span class="pre">'1'</span></code> and <code class="docutils literal notranslate"><span class="pre">'0'</span></code>.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-14"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0285  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0285'" tppabs="https://www.python.org/dev/peps/pep-0285"><strong>PEP 285</strong></a> - Adding a bool type</dt>
-<dd>Written and implemented by GvR.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-46"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0285  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0285'" tppabs="https://www.python.org/dev/peps/pep-0285"><strong>PEP 285</strong></a> - æ·»åŠ å¸ƒå°”ç±»å‹</dt><dd><p>ç”± GvR æ’°å†™å¹¶å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -660,15 +662,15 @@ either raise an exception or return a replacement string.</p>
 &quot;backslashreplace&quot; uses Python backslash quoting to represent unencodable
 characters and &quot;xmlcharrefreplace&quot; emits XML character references.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-15"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0293  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0293'" tppabs="https://www.python.org/dev/peps/pep-0293"><strong>PEP 293</strong></a> - Codec Error Handling Callbacks</dt>
-<dd>Written and implemented by Walter DÃ¶rwald.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-15"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0293  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0293'" tppabs="https://www.python.org/dev/peps/pep-0293"><strong>PEP 293</strong></a> - Codec Error Handling Callbacks</dt><dd><p>ç”± Walter DÃ¶rwald æ’°å†™å¹¶å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="pep-301-package-index-and-metadata-for-distutils">
-<span id="section-pep301"></span><h2>PEP 301: Package Index and Metadata for Distutils<a class="headerlink" href="#pep-301-package-index-and-metadata-for-distutils" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="section-pep301"></span><h2>PEP 301: Distutilsçš„è½¯ä»¶åŒ…ç´¢å¼•å’Œå…ƒæ•°æ®<a class="headerlink" href="#pep-301-package-index-and-metadata-for-distutils" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>Support for the long-requested Python catalog makes its first appearance in 2.3.</p>
 <p>The heart of the catalog is the new Distutils <strong class="command">register</strong> command.
 Running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">register</span></code> will collect the metadata describing a
@@ -681,7 +683,7 @@ argument has been added to the Distutils <code class="xref py py-func docutils l
 classify the software.</p>
 <p>Here's an example <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> with classifiers, written to be compatible
 with older versions of the Distutils:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils</span> <span class="k">import</span> <span class="n">core</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils</span> <span class="kn">import</span> <span class="n">core</span>
 <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s2">&quot;Quixote&quot;</span><span class="p">,</span>
       <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s2">&quot;0.5.1&quot;</span><span class="p">,</span>
       <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s2">&quot;A highly Pythonic Web application framework&quot;</span><span class="p">,</span>
@@ -701,10 +703,10 @@ with older versions of the Distutils:</p>
 <p>The full list of classifiers can be obtained by running  <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span>
 <span class="pre">register</span> <span class="pre">--list-classifiers</span></code>.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-16"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0301  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0301'" tppabs="https://www.python.org/dev/peps/pep-0301"><strong>PEP 301</strong></a> - Package Index and Metadata for Distutils</dt>
-<dd>Written and implemented by Richard Jones.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-47"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0301  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0301'" tppabs="https://www.python.org/dev/peps/pep-0301"><strong>PEP 301</strong></a> - Distutils çš„è½¯ä»¶åŒ…ç´¢å¼•å’Œå…ƒæ•°æ®</dt><dd><p>ç”± Richard Jones æ’°å†™å¹¶å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -720,16 +722,16 @@ easily usable from C code.</p>
 McMillan's <code class="xref py py-mod docutils literal notranslate"><span class="pre">iu</span></code> module.  Three new items  are added to the <a class="reference internal" href="sys.html#module-sys" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a>
 module:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">sys.path_hooks</span></code> is a list of callable objects; most  often they'll be
+<li><p><code class="docutils literal notranslate"><span class="pre">sys.path_hooks</span></code> is a list of callable objects; most  often they'll be
 classes.  Each callable takes a string containing a path and either returns an
 importer object that will handle imports from this path or raises an
-<a class="reference internal" href="exceptions.html#ImportError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a> exception if it can't handle this path.</li>
-<li><code class="docutils literal notranslate"><span class="pre">sys.path_importer_cache</span></code> caches importer objects for each path, so
-<code class="docutils literal notranslate"><span class="pre">sys.path_hooks</span></code> will only need to be traversed once for each path.</li>
-<li><code class="docutils literal notranslate"><span class="pre">sys.meta_path</span></code> is a list of importer objects that will be traversed before
+<a class="reference internal" href="exceptions.html#ImportError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a> exception if it can't handle this path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys.path_importer_cache</span></code> caches importer objects for each path, so
+<code class="docutils literal notranslate"><span class="pre">sys.path_hooks</span></code> will only need to be traversed once for each path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys.meta_path</span></code> is a list of importer objects that will be traversed before
 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> is checked.  This list is initially empty, but user code can add
 objects to it.  Additional built-in and frozen modules can be imported by an
-object added to this list.</li>
+object added to this list.</p></li>
 </ul>
 <p>Importer objects must have a single method, <code class="docutils literal notranslate"><span class="pre">find_module(fullname,</span>
 <span class="pre">path=None)</span></code>.  <em>fullname</em> will be a module or package name, e.g. <code class="docutils literal notranslate"><span class="pre">string</span></code> or
@@ -759,15 +761,15 @@ corresponding module object.</p>
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-19"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0302  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0302'" tppabs="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</dt>
-<dd>Written by Just van Rossum and Paul Moore. Implemented by Just van Rossum.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-48"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0302  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0302'" tppabs="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - æ–°å¯¼å…¥é’©</dt><dd><p>ç”± Just van Rossum å’Œ Paul Moore æ’°å†™ ; ç”± Just van Rossum å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="pep-305-comma-separated-files">
-<span id="section-pep305"></span><h2>PEP 305: Comma-separated Files<a class="headerlink" href="#pep-305-comma-separated-files" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="section-pep305"></span><h2>PEP 305: é€—å·åˆ†éš”æ–‡ä»¶<a class="headerlink" href="#pep-305-comma-separated-files" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>Comma-separated files are a format frequently used for exporting data from
 databases and spreadsheets.  Python 2.3 adds a parser for comma-separated files.</p>
 <p>Comma-separated format is deceptively simple at first glance:</p>
@@ -797,11 +799,10 @@ currently there are two dialects, both used by Microsoft Excel. A separate
 <a class="reference internal" href="csv.html#csv.writer" tppabs="https://docs.python.org/zh-cn/3/library/csv.html#csv.writer" title="csv.writer"><code class="xref py py-class docutils literal notranslate"><span class="pre">csv.writer</span></code></a> class will generate comma-separated files from a succession
 of tuples or lists, quoting strings that contain the delimiter.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-33"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0305  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0305'" tppabs="https://www.python.org/dev/peps/pep-0305"><strong>PEP 305</strong></a> - CSV æ–‡ä»¶ API</dt>
-<dd>Written and implemented  by Kevin Altis, Dave Cole, Andrew McNamara, Skip
-Montanaro, Cliff Wells.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-49"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0305  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0305'" tppabs="https://www.python.org/dev/peps/pep-0305"><strong>PEP 305</strong></a> - CSV æ–‡ä»¶ API</dt><dd><p>ç”± Kevin Altis, Dave Cole, Andrew McNamara, Skip Montanaro, Cliff Wells æ’°å†™å¹¶å®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -832,15 +833,15 @@ instead of long strings to identify pickled classes. The Python Software
 Foundation will maintain a list of standardized codes; there's also a range of
 codes for private use.  Currently no codes have been specified.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-23"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0307  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0307'" tppabs="https://www.python.org/dev/peps/pep-0307"><strong>PEP 307</strong></a> - Extensions to the pickle protocol</dt>
-<dd>Written and implemented  by Guido van Rossum and Tim Peters.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-23"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0307  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0307'" tppabs="https://www.python.org/dev/peps/pep-0307"><strong>PEP 307</strong></a> - Extensions to the pickle protocol</dt><dd><p>PEP ç”± Guido van Rossum å’Œ Tim Peters æ’°å†™å’Œå®ç°ã€‚</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="extended-slices">
-<span id="section-slices"></span><h2>Extended Slices<a class="headerlink" href="#extended-slices" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<span id="section-slices"></span><h2>æ‰©å±•åˆ‡ç‰‡<a class="headerlink" href="#extended-slices" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>Ever since Python 1.4, the slicing syntax has supported an optional third &quot;step&quot;
 or &quot;stride&quot; argument.  For example, these are all legal Python syntax:
 <code class="docutils literal notranslate"><span class="pre">L[1:10:2]</span></code>, <code class="docutils literal notranslate"><span class="pre">L[:-1:1]</span></code>, <code class="docutils literal notranslate"><span class="pre">L[::-1]</span></code>.  This was added to Python at the
@@ -929,7 +930,7 @@ of confusing details!).  The method is intended to be used like this:</p>
     <span class="o">...</span>
     <span class="k">def</span> <span class="nf">calc_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="o">...</span>
-    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
             <span class="n">indices</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
             <span class="k">return</span> <span class="n">FakeSeq</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_item</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">*</span><span class="n">indices</span><span class="p">)])</span>
@@ -946,40 +947,32 @@ the same change.</p>
 <h2>å…¶ä»–è¯­è¨€ç‰¹æ€§ä¿®æ”¹<a class="headerlink" href="#other-language-changes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>Here are all of the changes that Python 2.3 makes to the core Python language.</p>
 <ul>
-<li><p class="first">The <a class="reference internal" href="simple_stmts.html#yield" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> statement is now always a keyword, as described in
-section <a class="reference internal" href="#section-generators"><span class="std std-ref">PEP 255: Simple Generators</span></a> of this document.</p>
-</li>
-<li><p class="first">A new built-in function <a class="reference internal" href="functions.html#enumerate" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> was added, as described in section
-<a class="reference internal" href="#section-enumerate"><span class="std std-ref">PEP 279: enumerate()</span></a> of this document.</p>
-</li>
-<li><p class="first">Two new constants, <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> and <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> were added along with the
-built-in <a class="reference internal" href="functions.html#bool" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#bool" title="bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> type, as described in section <a class="reference internal" href="#section-bool"><span class="std std-ref">PEP 285: A Boolean Type</span></a> of this
-document.</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> type constructor will now return a long integer instead of
+<li><p>The <a class="reference internal" href="simple_stmts.html#yield" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> statement is now always a keyword, as described in
+section <a class="reference internal" href="#section-generators"><span class="std std-ref">PEP 255: Simple Generators</span></a> of this document.</p></li>
+<li><p>A new built-in function <a class="reference internal" href="functions.html#enumerate" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> was added, as described in section
+<a class="reference internal" href="#section-enumerate"><span class="std std-ref">PEP 279: enumerate()</span></a> of this document.</p></li>
+<li><p>Two new constants, <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> and <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> were added along with the
+built-in <a class="reference internal" href="functions.html#bool" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#bool" title="bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> type, as described in section <a class="reference internal" href="#section-bool"><span class="std std-ref">PEP 285: å¸ƒå°”ç±»å‹</span></a> of this
+document.</p></li>
+<li><p>The <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> type constructor will now return a long integer instead of
 raising an <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> when a string or floating-point number is too
 large to fit into an integer.  This can lead to the paradoxical result that
 <code class="docutils literal notranslate"><span class="pre">isinstance(int(expression),</span> <span class="pre">int)</span></code> is false, but that seems unlikely to cause
-problems in practice.</p>
-</li>
-<li><p class="first">Built-in types now support the extended slicing syntax, as described in
-section <a class="reference internal" href="#section-slices"><span class="std std-ref">Extended Slices</span></a> of this document.</p>
-</li>
-<li><p class="first">A new built-in function, <code class="docutils literal notranslate"><span class="pre">sum(iterable,</span> <span class="pre">start=0)</span></code>,  adds up the numeric
+problems in practice.</p></li>
+<li><p>Built-in types now support the extended slicing syntax, as described in
+section <a class="reference internal" href="#section-slices"><span class="std std-ref">æ‰©å±•åˆ‡ç‰‡</span></a> of this document.</p></li>
+<li><p>A new built-in function, <code class="docutils literal notranslate"><span class="pre">sum(iterable,</span> <span class="pre">start=0)</span></code>,  adds up the numeric
 items in the iterable object and returns their sum.  <a class="reference internal" href="functions.html#sum" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sum" title="sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> only accepts
 numbers, meaning that you can't use it to concatenate a bunch of strings.
-(Contributed by Alex Martelli.)</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">list.insert(pos,</span> <span class="pre">value)</span></code> used to  insert <em>value</em> at the front of the list
+(Contributed by Alex Martelli.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list.insert(pos,</span> <span class="pre">value)</span></code> used to  insert <em>value</em> at the front of the list
 when <em>pos</em> was negative.  The behaviour has now been changed to be consistent
 with slice indexing, so when <em>pos</em> is -1 the value will be inserted before the
-last element, and so forth.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">list.index(value)</span></code>, which searches for <em>value</em>  within the list and returns
+last element, and so forth.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list.index(value)</span></code>, which searches for <em>value</em>  within the list and returns
 its index, now takes optional  <em>start</em> and <em>stop</em> arguments to limit the search
-to  only part of the list.</p>
-</li>
-<li><p class="first">Dictionaries have a new method, <code class="docutils literal notranslate"><span class="pre">pop(key[,</span> <span class="pre">*default*])</span></code>, that returns
+to  only part of the list.</p></li>
+<li><p>Dictionaries have a new method, <code class="docutils literal notranslate"><span class="pre">pop(key[,</span> <span class="pre">*default*])</span></code>, that returns
 the value corresponding to <em>key</em> and removes that key/value pair from the
 dictionary.  If the requested key isn't present in the dictionary, <em>default</em> is
 returned if it's specified and <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> raised if it isn't.</p>
@@ -1011,14 +1004,13 @@ creating small dictionaries:</p>
 <span class="go">{&#39;blue&#39;: 2, &#39;black&#39;: 4, &#39;green&#39;: 3, &#39;red&#39;: 1}</span>
 </pre></div>
 </div>
-<p>(Contributed by Just van Rossum.)</p>
+<p>ï¼ˆç”± Just van Rossum è´¡çŒ®ã€‚ï¼‰</p>
 </li>
-<li><p class="first">The <a class="reference internal" href="simple_stmts.html#assert" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#assert"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">assert</span></code></a> statement no longer checks the <code class="docutils literal notranslate"><span class="pre">__debug__</span></code> flag, so
+<li><p>The <a class="reference internal" href="simple_stmts.html#assert" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#assert"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">assert</span></code></a> statement no longer checks the <code class="docutils literal notranslate"><span class="pre">__debug__</span></code> flag, so
 you can no longer disable assertions by assigning to <code class="docutils literal notranslate"><span class="pre">__debug__</span></code>. Running
 Python with the <a class="reference internal" href="cmdline.html#cmdoption-o" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-o"><code class="xref std std-option docutils literal notranslate"><span class="pre">-O</span></code></a> switch will still generate code that doesn't
-execute any assertions.</p>
-</li>
-<li><p class="first">Most type objects are now callable, so you can use them to create new objects
+execute any assertions.</p></li>
+<li><p>Most type objects are now callable, so you can use them to create new objects
 such as functions, classes, and modules.  (This means that the <code class="xref py py-mod docutils literal notranslate"><span class="pre">new</span></code> module
 can be deprecated in a future Python version, because you can now use the type
 objects available in the <a class="reference internal" href="types.html#module-types" tppabs="https://docs.python.org/zh-cn/3/library/types.html#module-types" title="types: Names for built-in types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code></a> module.) For example, you can create a new
@@ -1032,28 +1024,24 @@ module object with the following code:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">A new warning, <a class="reference internal" href="exceptions.html#PendingDeprecationWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#PendingDeprecationWarning" title="PendingDeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a> was added to indicate features
+<li><p>A new warning, <a class="reference internal" href="exceptions.html#PendingDeprecationWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#PendingDeprecationWarning" title="PendingDeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a> was added to indicate features
 which are in the process of being deprecated.  The warning will <em>not</em> be printed
 by default.  To check for use of features that will be deprecated in the future,
 supply <a class="reference internal" href="cmdline.html#cmdoption-w" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-w"><code class="xref std std-option docutils literal notranslate"><span class="pre">-Walways::PendingDeprecationWarning::</span></code></a> on the command line or
-use <a class="reference internal" href="warnings.html#warnings.filterwarnings" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#warnings.filterwarnings" title="warnings.filterwarnings"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.filterwarnings()</span></code></a>.</p>
-</li>
-<li><p class="first">The process of deprecating string-based exceptions, as in <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">&quot;Error</span>
+use <a class="reference internal" href="warnings.html#warnings.filterwarnings" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#warnings.filterwarnings" title="warnings.filterwarnings"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.filterwarnings()</span></code></a>.</p></li>
+<li><p>The process of deprecating string-based exceptions, as in <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">&quot;Error</span>
 <span class="pre">occurred&quot;</span></code>, has begun.  Raising a string will now trigger
-<a class="reference internal" href="exceptions.html#PendingDeprecationWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#PendingDeprecationWarning" title="PendingDeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a>.</p>
-</li>
-<li><p class="first">Using <code class="docutils literal notranslate"><span class="pre">None</span></code> as a variable name will now result in a <a class="reference internal" href="exceptions.html#SyntaxWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxWarning" title="SyntaxWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxWarning</span></code></a>
-warning.  In a future version of Python, <code class="docutils literal notranslate"><span class="pre">None</span></code> may finally become a keyword.</p>
-</li>
-<li><p class="first">The <code class="xref py py-meth docutils literal notranslate"><span class="pre">xreadlines()</span></code> method of file objects, introduced in Python 2.1, is no
+<a class="reference internal" href="exceptions.html#PendingDeprecationWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#PendingDeprecationWarning" title="PendingDeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a>.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">None</span></code> as a variable name will now result in a <a class="reference internal" href="exceptions.html#SyntaxWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxWarning" title="SyntaxWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxWarning</span></code></a>
+warning.  In a future version of Python, <code class="docutils literal notranslate"><span class="pre">None</span></code> may finally become a keyword.</p></li>
+<li><p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">xreadlines()</span></code> method of file objects, introduced in Python 2.1, is no
 longer necessary because files now behave as their own iterator.
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">xreadlines()</span></code> was originally introduced as a faster way to loop over all
 the lines in a file, but now you can simply write <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">line</span> <span class="pre">in</span> <span class="pre">file_obj</span></code>.
 File objects also have a new read-only <code class="xref py py-attr docutils literal notranslate"><span class="pre">encoding</span></code> attribute that gives the
 encoding used by the file; Unicode strings written to the file will be
-automatically  converted to bytes using the given encoding.</p>
-</li>
-<li><p class="first">The method resolution order used by new-style classes has changed, though
+automatically  converted to bytes using the given encoding.</p></li>
+<li><p>The method resolution order used by new-style classes has changed, though
 you'll only notice the difference if you have a really complicated inheritance
 hierarchy.  Classic classes are unaffected by this change.  Python 2.2
 originally used a topological sort of a class's ancestors, but 2.3 now uses the
@@ -1064,17 +1052,15 @@ understand the motivation for this change,  read Michele Simionato's article
 read the thread on python-dev starting with the message at
 <a class="reference external" href="javascript:if(confirm('https://mail.python.org/pipermail/python-dev/2002-October/029035.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.python.org/pipermail/python-dev/2002-October/029035.html'" tppabs="https://mail.python.org/pipermail/python-dev/2002-October/029035.html">https://mail.python.org/pipermail/python-dev/2002-October/029035.html</a>. Samuele
 Pedroni first pointed out the problem and also implemented the fix by coding the
-C3 algorithm.</p>
-</li>
-<li><p class="first">Python runs multithreaded programs by switching between threads after
+C3 algorithm.</p></li>
+<li><p>Python runs multithreaded programs by switching between threads after
 executing N bytecodes.  The default value for N has been increased from 10 to
 100 bytecodes, speeding up single-threaded applications by reducing the
 switching overhead.  Some multithreaded applications may suffer slower response
 time, but that's easily fixed by setting the limit back to a lower number using
 <code class="docutils literal notranslate"><span class="pre">sys.setcheckinterval(N)</span></code>. The limit can be retrieved with the new
-<a class="reference internal" href="sys.html#sys.getcheckinterval" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.getcheckinterval" title="sys.getcheckinterval"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.getcheckinterval()</span></code></a> function.</p>
-</li>
-<li><p class="first">One minor but far-reaching change is that the names of extension types defined
+<a class="reference internal" href="sys.html#sys.getcheckinterval" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.getcheckinterval" title="sys.getcheckinterval"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.getcheckinterval()</span></code></a> function.</p></li>
+<li><p>One minor but far-reaching change is that the names of extension types defined
 by the modules included with Python now contain the module and a <code class="docutils literal notranslate"><span class="pre">'.'</span></code> in
 front of the type name.  For example, in Python 2.2, if you created a socket and
 printed its <code class="xref py py-attr docutils literal notranslate"><span class="pre">__class__</span></code>, you'd get this output:</p>
@@ -1089,17 +1075,16 @@ printed its <code class="xref py py-attr docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </li>
-<li><p class="first">One of the noted incompatibilities between old- and new-style classes has been
+<li><p>One of the noted incompatibilities between old- and new-style classes has been
 removed: you can now assign to the <a class="reference internal" href="stdtypes.html#definition.__name__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#definition.__name__" title="definition.__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> and <a class="reference internal" href="stdtypes.html#class.__bases__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#class.__bases__" title="class.__bases__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__bases__</span></code></a>
 attributes of new-style classes.  There are some restrictions on what can be
 assigned to <a class="reference internal" href="stdtypes.html#class.__bases__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#class.__bases__" title="class.__bases__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__bases__</span></code></a> along the lines of those relating to assigning to
-an instance's <a class="reference internal" href="stdtypes.html#instance.__class__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#instance.__class__" title="instance.__class__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__class__</span></code></a> attribute.</p>
-</li>
+an instance's <a class="reference internal" href="stdtypes.html#instance.__class__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#instance.__class__" title="instance.__class__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__class__</span></code></a> attribute.</p></li>
 </ul>
 <div class="section" id="string-changes">
 <h3>String Changes<a class="headerlink" href="#string-changes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <ul>
-<li><p class="first">The <a class="reference internal" href="expressions.html#in" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a> operator now works differently for strings. Previously, when
+<li><p>The <a class="reference internal" href="expressions.html#in" tppabs="https://docs.python.org/zh-cn/3/reference/expressions.html#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a> operator now works differently for strings. Previously, when
 evaluating <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">in</span> <span class="pre">Y</span></code> where <em>X</em> and <em>Y</em> are strings, <em>X</em> could only be a single
 character. That's now changed; <em>X</em> can be a string of any length, and <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">in</span> <span class="pre">Y</span></code>
 will return <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> if <em>X</em> is a substring of <em>Y</em>.  If <em>X</em> is the empty
@@ -1115,7 +1100,7 @@ string, the result is always <a class="reference internal" href="constants.html#
 <p>Note that this doesn't tell you where the substring starts; if you need that
 information, use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">find()</span></code> string method.</p>
 </li>
-<li><p class="first">The <code class="xref py py-meth docutils literal notranslate"><span class="pre">strip()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">lstrip()</span></code>, and <code class="xref py py-meth docutils literal notranslate"><span class="pre">rstrip()</span></code> string methods now have
+<li><p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">strip()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">lstrip()</span></code>, and <code class="xref py py-meth docutils literal notranslate"><span class="pre">rstrip()</span></code> string methods now have
 an optional argument for specifying the characters to strip.  The default is
 still to remove all whitespace characters:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;   abc &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -1131,10 +1116,9 @@ still to remove all whitespace characters:</p>
 </div>
 <p>(Suggested by Simon Brunning and implemented by Walter DÃ¶rwald.)</p>
 </li>
-<li><p class="first">The <code class="xref py py-meth docutils literal notranslate"><span class="pre">startswith()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">endswith()</span></code> string methods now accept negative
-numbers for the <em>start</em> and <em>end</em> parameters.</p>
-</li>
-<li><p class="first">Another new string method is <code class="xref py py-meth docutils literal notranslate"><span class="pre">zfill()</span></code>, originally a function in the
+<li><p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">startswith()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">endswith()</span></code> string methods now accept negative
+numbers for the <em>start</em> and <em>end</em> parameters.</p></li>
+<li><p>Another new string method is <code class="xref py py-meth docutils literal notranslate"><span class="pre">zfill()</span></code>, originally a function in the
 <a class="reference internal" href="string.html#module-string" tppabs="https://docs.python.org/zh-cn/3/library/string.html#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> module.  <code class="xref py py-meth docutils literal notranslate"><span class="pre">zfill()</span></code> pads a numeric string with zeros on the
 left until it's the specified width. Note that the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator is still more
 flexible and powerful than <code class="xref py py-meth docutils literal notranslate"><span class="pre">zfill()</span></code>.</p>
@@ -1146,57 +1130,54 @@ flexible and powerful than <code class="xref py py-meth docutils literal notrans
 <span class="go">&#39;0goofy&#39;</span>
 </pre></div>
 </div>
-<p>(Contributed by Walter DÃ¶rwald.)</p>
+<p>ï¼ˆç”± Walter DÃ¶rwald è´¡çŒ®ã€‚ï¼‰</p>
 </li>
-<li><p class="first">A new type object, <code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code>, has been added. Both 8-bit strings and
+<li><p>A new type object, <code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code>, has been added. Both 8-bit strings and
 Unicode strings inherit from this type, so <code class="docutils literal notranslate"><span class="pre">isinstance(obj,</span> <span class="pre">basestring)</span></code> will
 return <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> for either kind of string.  It's a completely abstract
-type, so you can't create <code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code> instances.</p>
-</li>
-<li><p class="first">Interned strings are no longer immortal and will now be garbage-collected in
+type, so you can't create <code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code> instances.</p></li>
+<li><p>Interned strings are no longer immortal and will now be garbage-collected in
 the usual way when the only reference to them is from the internal dictionary of
-interned strings.  (Implemented by Oren Tirosh.)</p>
-</li>
+interned strings.  (Implemented by Oren Tirosh.)</p></li>
 </ul>
 </div>
 <div class="section" id="optimizations">
 <h3>æ€§èƒ½ä¼˜åŒ–<a class="headerlink" href="#optimizations" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <ul class="simple">
-<li>The creation of new-style class instances has been made much faster; they're
-now faster than classic classes!</li>
-<li>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">sort()</span></code> method of list objects has been extensively rewritten by Tim
-Peters, and the implementation is significantly faster.</li>
-<li>Multiplication of large long integers is now much faster thanks to an
+<li><p>The creation of new-style class instances has been made much faster; they're
+now faster than classic classes!</p></li>
+<li><p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">sort()</span></code> method of list objects has been extensively rewritten by Tim
+Peters, and the implementation is significantly faster.</p></li>
+<li><p>Multiplication of large long integers is now much faster thanks to an
 implementation of Karatsuba multiplication, an algorithm that scales better than
 the O(n*n) required for the grade-school multiplication algorithm.  (Original
-patch by Christopher A. Craig, and significantly reworked by Tim Peters.)</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">SET_LINENO</span></code> opcode is now gone.  This may provide a small speed
+patch by Christopher A. Craig, and significantly reworked by Tim Peters.)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">SET_LINENO</span></code> opcode is now gone.  This may provide a small speed
 increase, depending on your compiler's idiosyncrasies. See section
-<a class="reference internal" href="#section-other"><span class="std std-ref">Other Changes and Fixes</span></a> for a longer explanation. (Removed by Michael Hudson.)</li>
-<li><code class="xref py py-func docutils literal notranslate"><span class="pre">xrange()</span></code> objects now have their own iterator, making <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span>
+<a class="reference internal" href="#section-other"><span class="std std-ref">Other Changes and Fixes</span></a> for a longer explanation. (Removed by Michael Hudson.)</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">xrange()</span></code> objects now have their own iterator, making <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span>
 <span class="pre">xrange(n)</span></code> slightly faster than <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(n)</span></code>.  (Patch by Raymond
-Hettinger.)</li>
-<li>A number of small rearrangements have been made in various hotspots to improve
+Hettinger.)</p></li>
+<li><p>A number of small rearrangements have been made in various hotspots to improve
 performance, such as inlining a function or removing some code.  (Implemented
-mostly by GvR, but lots of people have contributed single changes.)</li>
+mostly by GvR, but lots of people have contributed single changes.)</p></li>
 </ul>
 <p>The net result of the 2.3 optimizations is that Python 2.3 runs the  pystone
 benchmark around 25% faster than Python 2.2.</p>
 </div>
 </div>
 <div class="section" id="new-improved-and-deprecated-modules">
-<h2>New, Improved, and Deprecated Modules<a class="headerlink" href="#new-improved-and-deprecated-modules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>æ–°å¢ï¼Œæ”¹è¿›å’Œå¼ƒç”¨çš„æ¨¡å—<a class="headerlink" href="#new-improved-and-deprecated-modules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>As usual, Python's standard library received a number of enhancements and bug
 fixes.  Here's a partial list of the most notable changes, sorted alphabetically
 by module name. Consult the <code class="file docutils literal notranslate"><span class="pre">Misc/NEWS</span></code> file in the source tree for a more
 complete list of changes, or look through the CVS logs for all the details.</p>
 <ul>
-<li><p class="first">The <a class="reference internal" href="array.html#module-array" tppabs="https://docs.python.org/zh-cn/3/library/array.html#module-array" title="array: Space efficient arrays of uniformly typed numeric values."><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> module now supports arrays of Unicode characters using the
+<li><p>The <a class="reference internal" href="array.html#module-array" tppabs="https://docs.python.org/zh-cn/3/library/array.html#module-array" title="array: Space efficient arrays of uniformly typed numeric values."><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> module now supports arrays of Unicode characters using the
 <code class="docutils literal notranslate"><span class="pre">'u'</span></code> format character.  Arrays also now support using the <code class="docutils literal notranslate"><span class="pre">+=</span></code> assignment
 operator to add another array's contents, and the <code class="docutils literal notranslate"><span class="pre">*=</span></code> assignment operator to
-repeat an array. (Contributed by Jason Orendorff.)</p>
-</li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb</span></code> module has been replaced by version 4.1.6 of the <a class="reference external" href="javascript:if(confirm('http://pybsddb.sourceforge.net/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://pybsddb.sourceforge.net/'" tppabs="http://pybsddb.sourceforge.net/">PyBSDDB</a> package, providing a more complete interface
+repeat an array. (Contributed by Jason Orendorff.)</p></li>
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb</span></code> module has been replaced by version 4.1.6 of the <a class="reference external" href="javascript:if(confirm('http://pybsddb.sourceforge.net/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://pybsddb.sourceforge.net/'" tppabs="http://pybsddb.sourceforge.net/">PyBSDDB</a> package, providing a more complete interface
 to the transactional features of the BerkeleyDB library.</p>
 <p>The old version of the module has been renamed to  <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb185</span></code> and is no
 longer built automatically; you'll  have to edit <code class="file docutils literal notranslate"><span class="pre">Modules/Setup</span></code> to enable
@@ -1210,14 +1191,12 @@ will find in the distribution's <code class="file docutils literal notranslate">
 already been using the PyBSDDB package and importing it as <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb3</span></code>, you
 will have to change your <code class="docutils literal notranslate"><span class="pre">import</span></code> statements to import it as <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb</span></code>.</p>
 </li>
-<li><p class="first">The new <a class="reference internal" href="bz2.html#module-bz2" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a> module is an interface to the bz2 data compression library.
+<li><p>The new <a class="reference internal" href="bz2.html#module-bz2" tppabs="https://docs.python.org/zh-cn/3/library/bz2.html#module-bz2" title="bz2: Interfaces for bzip2 compression and decompression."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bz2</span></code></a> module is an interface to the bz2 data compression library.
 bz2-compressed data is usually smaller than  corresponding
-<a class="reference internal" href="zlib.html#module-zlib" tppabs="https://docs.python.org/zh-cn/3/library/zlib.html#module-zlib" title="zlib: Low-level interface to compression and decompression routines compatible with gzip."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code></a>-compressed data. (Contributed by Gustavo Niemeyer.)</p>
-</li>
-<li><p class="first">A set of standard date/time types has been added in the new <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a>
-module.  See the following section for more details.</p>
-</li>
-<li><p class="first">The Distutils <code class="xref py py-class docutils literal notranslate"><span class="pre">Extension</span></code> class now supports an extra constructor
+<a class="reference internal" href="zlib.html#module-zlib" tppabs="https://docs.python.org/zh-cn/3/library/zlib.html#module-zlib" title="zlib: Low-level interface to compression and decompression routines compatible with gzip."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code></a>-compressed data. (Contributed by Gustavo Niemeyer.)</p></li>
+<li><p>A set of standard date/time types has been added in the new <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a>
+module.  See the following section for more details.</p></li>
+<li><p>The Distutils <code class="xref py py-class docutils literal notranslate"><span class="pre">Extension</span></code> class now supports an extra constructor
 argument named <em>depends</em> for listing additional source files that an extension
 depends on.  This lets Distutils recompile the module if any of the dependency
 files are modified.  For example, if <code class="file docutils literal notranslate"><span class="pre">sampmodule.c</span></code> includes the header
@@ -1231,20 +1210,17 @@ this:</p>
 <p>Modifying <code class="file docutils literal notranslate"><span class="pre">sample.h</span></code> would then cause the module to be recompiled.
 (Contributed by Jeremy Hylton.)</p>
 </li>
-<li><p class="first">Other minor changes to Distutils: it now checks for the <span class="target" id="index-24"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CC</span></code>,
+<li><p>Other minor changes to Distutils: it now checks for the <span class="target" id="index-24"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CC</span></code>,
 <span class="target" id="index-25"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CFLAGS</span></code>, <span class="target" id="index-26"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CPP</span></code>, <span class="target" id="index-27"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LDFLAGS</span></code>, and <span class="target" id="index-28"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CPPFLAGS</span></code>
 environment variables, using them to override the settings in Python's
-configuration (contributed by Robert Weber).</p>
-</li>
-<li><p class="first">Previously the <a class="reference internal" href="doctest.html#module-doctest" tppabs="https://docs.python.org/zh-cn/3/library/doctest.html#module-doctest" title="doctest: Test pieces of code within docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> module would only search the docstrings of
+configuration (contributed by Robert Weber).</p></li>
+<li><p>Previously the <a class="reference internal" href="doctest.html#module-doctest" tppabs="https://docs.python.org/zh-cn/3/library/doctest.html#module-doctest" title="doctest: Test pieces of code within docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> module would only search the docstrings of
 public methods and functions for test cases, but it now also examines private
 ones as well.  The <code class="xref py py-func docutils literal notranslate"><span class="pre">DocTestSuite()</span></code> function creates a
-<a class="reference internal" href="unittest.html#unittest.TestSuite" tppabs="https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestSuite" title="unittest.TestSuite"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.TestSuite</span></code></a> object from a set of <a class="reference internal" href="doctest.html#module-doctest" tppabs="https://docs.python.org/zh-cn/3/library/doctest.html#module-doctest" title="doctest: Test pieces of code within docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> tests.</p>
-</li>
-<li><p class="first">The new <code class="docutils literal notranslate"><span class="pre">gc.get_referents(object)</span></code> function returns a list of all the
-objects referenced by <em>object</em>.</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="getopt.html#module-getopt" tppabs="https://docs.python.org/zh-cn/3/library/getopt.html#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getopt</span></code></a> module gained a new function, <code class="xref py py-func docutils literal notranslate"><span class="pre">gnu_getopt()</span></code>, that
+<a class="reference internal" href="unittest.html#unittest.TestSuite" tppabs="https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestSuite" title="unittest.TestSuite"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.TestSuite</span></code></a> object from a set of <a class="reference internal" href="doctest.html#module-doctest" tppabs="https://docs.python.org/zh-cn/3/library/doctest.html#module-doctest" title="doctest: Test pieces of code within docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> tests.</p></li>
+<li><p>The new <code class="docutils literal notranslate"><span class="pre">gc.get_referents(object)</span></code> function returns a list of all the
+objects referenced by <em>object</em>.</p></li>
+<li><p>The <a class="reference internal" href="getopt.html#module-getopt" tppabs="https://docs.python.org/zh-cn/3/library/getopt.html#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getopt</span></code></a> module gained a new function, <code class="xref py py-func docutils literal notranslate"><span class="pre">gnu_getopt()</span></code>, that
 supports the same arguments as the existing <a class="reference internal" href="getopt.html#module-getopt" tppabs="https://docs.python.org/zh-cn/3/library/getopt.html#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-func docutils literal notranslate"><span class="pre">getopt()</span></code></a> function but uses
 GNU-style scanning mode. The existing <a class="reference internal" href="getopt.html#module-getopt" tppabs="https://docs.python.org/zh-cn/3/library/getopt.html#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-func docutils literal notranslate"><span class="pre">getopt()</span></code></a> stops processing options as
 soon as a non-option argument is encountered, but in GNU-style mode processing
@@ -1255,9 +1231,9 @@ continues, meaning that options and arguments can be mixed.  For example:</p>
 <span class="go">([(&#39;-f&#39;, &#39;filename&#39;), (&#39;-v&#39;, &#39;&#39;)], [&#39;output&#39;])</span>
 </pre></div>
 </div>
-<p>(Contributed by Peter Ã…strand.)</p>
+<p>ï¼ˆç”± Peter Ã…strand è´¡çŒ®ã€‚ï¼‰</p>
 </li>
-<li><p class="first">The <a class="reference internal" href="grp.html#module-grp" tppabs="https://docs.python.org/zh-cn/3/library/grp.html#module-grp" title="grp: The group database (getgrnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code></a>, <a class="reference internal" href="pwd.html#module-pwd" tppabs="https://docs.python.org/zh-cn/3/library/pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a>, and <a class="reference internal" href="resource.html#module-resource" tppabs="https://docs.python.org/zh-cn/3/library/resource.html#module-resource" title="resource: An interface to provide resource usage information on the current process. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code></a> modules now return enhanced
+<li><p>The <a class="reference internal" href="grp.html#module-grp" tppabs="https://docs.python.org/zh-cn/3/library/grp.html#module-grp" title="grp: The group database (getgrnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code></a>, <a class="reference internal" href="pwd.html#module-pwd" tppabs="https://docs.python.org/zh-cn/3/library/pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a>, and <a class="reference internal" href="resource.html#module-resource" tppabs="https://docs.python.org/zh-cn/3/library/resource.html#module-resource" title="resource: An interface to provide resource usage information on the current process. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code></a> modules now return enhanced
 tuples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">grp</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">grp</span><span class="o">.</span><span class="n">getgrnam</span><span class="p">(</span><span class="s1">&#39;amk&#39;</span><span class="p">)</span>
@@ -1266,9 +1242,8 @@ tuples:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">The <a class="reference internal" href="gzip.html#module-gzip" tppabs="https://docs.python.org/zh-cn/3/library/gzip.html#module-gzip" title="gzip: Interfaces for gzip compression and decompression using file objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code></a> module can now handle files exceeding 2 GiB.</p>
-</li>
-<li><p class="first">The new <a class="reference internal" href="heapq.html#module-heapq" tppabs="https://docs.python.org/zh-cn/3/library/heapq.html#module-heapq" title="heapq: Heap queue algorithm (a.k.a. priority queue)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code></a> module contains an implementation of a heap queue
+<li><p>The <a class="reference internal" href="gzip.html#module-gzip" tppabs="https://docs.python.org/zh-cn/3/library/gzip.html#module-gzip" title="gzip: Interfaces for gzip compression and decompression using file objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code></a> module can now handle files exceeding 2 GiB.</p></li>
+<li><p>The new <a class="reference internal" href="heapq.html#module-heapq" tppabs="https://docs.python.org/zh-cn/3/library/heapq.html#module-heapq" title="heapq: Heap queue algorithm (a.k.a. priority queue)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code></a> module contains an implementation of a heap queue
 algorithm.  A heap is an array-like data structure that keeps items in a
 partially sorted order such that, for every index <em>k</em>, <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span>
 <span class="pre">heap[2*k+1]</span></code> and <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span> <span class="pre">heap[2*k+2]</span></code>.  This makes it quick to remove the
@@ -1293,40 +1268,35 @@ other mutable Python sequence type.  Here's an example that uses a Python list:<
 <span class="go">[5, 7, 11]</span>
 </pre></div>
 </div>
-<p>(Contributed by Kevin O'Connor.)</p>
+<p>ï¼ˆç”± Kevin O'Connor è´¡çŒ®ã€‚ï¼‰</p>
 </li>
-<li><p class="first">The IDLE integrated development environment has been updated using the code
+<li><p>The IDLE integrated development environment has been updated using the code
 from the IDLEfork project (<a class="reference external" href="javascript:if(confirm('http://idlefork.sourceforge.net/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://idlefork.sourceforge.net/'" tppabs="http://idlefork.sourceforge.net/">http://idlefork.sourceforge.net</a>).  The most notable feature is
 that the code being developed is now executed in a subprocess, meaning that
 there's no longer any need for manual <code class="docutils literal notranslate"><span class="pre">reload()</span></code> operations. IDLE's core code
-has been incorporated into the standard library as the <code class="xref py py-mod docutils literal notranslate"><span class="pre">idlelib</span></code> package.</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="imaplib.html#module-imaplib" tppabs="https://docs.python.org/zh-cn/3/library/imaplib.html#module-imaplib" title="imaplib: IMAP4 protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">imaplib</span></code></a> module now supports IMAP over SSL. (Contributed by Piers
-Lauder and Tino Lange.)</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="itertools.html#module-itertools" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> contains a number of useful functions for use with
+has been incorporated into the standard library as the <code class="xref py py-mod docutils literal notranslate"><span class="pre">idlelib</span></code> package.</p></li>
+<li><p>The <a class="reference internal" href="imaplib.html#module-imaplib" tppabs="https://docs.python.org/zh-cn/3/library/imaplib.html#module-imaplib" title="imaplib: IMAP4 protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">imaplib</span></code></a> module now supports IMAP over SSL. (Contributed by Piers
+Lauder and Tino Lange.)</p></li>
+<li><p>The <a class="reference internal" href="itertools.html#module-itertools" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> contains a number of useful functions for use with
 iterators, inspired by various functions provided by the ML and Haskell
 languages.  For example, <code class="docutils literal notranslate"><span class="pre">itertools.ifilter(predicate,</span> <span class="pre">iterator)</span></code> returns all
 elements in the iterator for which the function <code class="xref py py-func docutils literal notranslate"><span class="pre">predicate()</span></code> returns
 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>, and <code class="docutils literal notranslate"><span class="pre">itertools.repeat(obj,</span> <span class="pre">N)</span></code> returns <code class="docutils literal notranslate"><span class="pre">obj</span></code> <em>N</em> times.
 There are a number of other functions in the module; see the package's reference
 documentation for details.
-(Contributed by Raymond Hettinger.)</p>
-</li>
-<li><p class="first">Two new functions in the <a class="reference internal" href="math.html#module-math" tppabs="https://docs.python.org/zh-cn/3/library/math.html#module-math" title="math: Mathematical functions (sin() etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a> module, <code class="docutils literal notranslate"><span class="pre">degrees(rads)</span></code> and
+(Contributed by Raymond Hettinger.)</p></li>
+<li><p>Two new functions in the <a class="reference internal" href="math.html#module-math" tppabs="https://docs.python.org/zh-cn/3/library/math.html#module-math" title="math: Mathematical functions (sin() etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a> module, <code class="docutils literal notranslate"><span class="pre">degrees(rads)</span></code> and
 <code class="docutils literal notranslate"><span class="pre">radians(degs)</span></code>, convert between radians and degrees.  Other functions in
 the <a class="reference internal" href="math.html#module-math" tppabs="https://docs.python.org/zh-cn/3/library/math.html#module-math" title="math: Mathematical functions (sin() etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a> module such as <a class="reference internal" href="math.html#math.sin" tppabs="https://docs.python.org/zh-cn/3/library/math.html#math.sin" title="math.sin"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.sin()</span></code></a> and <a class="reference internal" href="math.html#math.cos" tppabs="https://docs.python.org/zh-cn/3/library/math.html#math.cos" title="math.cos"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.cos()</span></code></a> have always
 required input values measured in radians.  Also, an optional <em>base</em> argument
 was added to <a class="reference internal" href="math.html#math.log" tppabs="https://docs.python.org/zh-cn/3/library/math.html#math.log" title="math.log"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.log()</span></code></a> to make it easier to compute logarithms for bases
-other than <code class="docutils literal notranslate"><span class="pre">e</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>.  (Contributed by Raymond Hettinger.)</p>
-</li>
-<li><p class="first">Several new POSIX functions (<code class="xref py py-func docutils literal notranslate"><span class="pre">getpgid()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">killpg()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">lchown()</span></code>,
+other than <code class="docutils literal notranslate"><span class="pre">e</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>.  (Contributed by Raymond Hettinger.)</p></li>
+<li><p>Several new POSIX functions (<code class="xref py py-func docutils literal notranslate"><span class="pre">getpgid()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">killpg()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">lchown()</span></code>,
 <code class="xref py py-func docutils literal notranslate"><span class="pre">loadavg()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">major()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">makedev()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">minor()</span></code>, and
 <code class="xref py py-func docutils literal notranslate"><span class="pre">mknod()</span></code>) were added to the <a class="reference internal" href="posix.html#module-posix" tppabs="https://docs.python.org/zh-cn/3/library/posix.html#module-posix" title="posix: The most common POSIX system calls (normally used via module os). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">posix</span></code></a> module that underlies the
 <a class="reference internal" href="os.html#module-os" tppabs="https://docs.python.org/zh-cn/3/library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module. (Contributed by Gustavo Niemeyer, Geert Jansen, and Denis S.
-Otkidach.)</p>
-</li>
-<li><p class="first">In the <a class="reference internal" href="os.html#module-os" tppabs="https://docs.python.org/zh-cn/3/library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module, the <code class="xref py py-func docutils literal notranslate"><span class="pre">*stat()</span></code> family of functions can now report
+Otkidach.)</p></li>
+<li><p>In the <a class="reference internal" href="os.html#module-os" tppabs="https://docs.python.org/zh-cn/3/library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module, the <code class="xref py py-func docutils literal notranslate"><span class="pre">*stat()</span></code> family of functions can now report
 fractions of a second in a timestamp.  Such time stamps are represented as
 floats, similar to the value returned by <a class="reference internal" href="time.html#time.time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#time.time" title="time.time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.time()</span></code></a>.</p>
 <p>During testing, it was found that some applications will break if time stamps
@@ -1348,28 +1318,24 @@ work properly when confronted with floating point time stamps, or if they use
 the tuple API. If used, the feature should be activated on an application level
 instead of trying to enable it on a per-use basis.</p>
 </li>
-<li><p class="first">The <a class="reference internal" href="optparse.html#module-optparse" tppabs="https://docs.python.org/zh-cn/3/library/optparse.html#module-optparse" title="optparse: Command-line option parsing library. (å·²ç§»é™¤)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code></a> module contains a new parser for command-line arguments
+<li><p>The <a class="reference internal" href="optparse.html#module-optparse" tppabs="https://docs.python.org/zh-cn/3/library/optparse.html#module-optparse" title="optparse: Command-line option parsing library. (å·²ç§»é™¤)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code></a> module contains a new parser for command-line arguments
 that can convert option values to a particular Python type  and will
 automatically generate a usage message.  See the following section for  more
-details.</p>
-</li>
-<li><p class="first">The old and never-documented <code class="xref py py-mod docutils literal notranslate"><span class="pre">linuxaudiodev</span></code> module has been deprecated,
+details.</p></li>
+<li><p>The old and never-documented <code class="xref py py-mod docutils literal notranslate"><span class="pre">linuxaudiodev</span></code> module has been deprecated,
 and a new version named <a class="reference internal" href="ossaudiodev.html#module-ossaudiodev" tppabs="https://docs.python.org/zh-cn/3/library/ossaudiodev.html#module-ossaudiodev" title="ossaudiodev: Access to OSS-compatible audio devices. (Linux, FreeBSD)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ossaudiodev</span></code></a> has been added.  The module was
 renamed because the OSS sound drivers can be used on platforms other than Linux,
 and the interface has also been tidied and brought up to date in various ways.
-(Contributed by Greg Ward and Nicholas FitzRoy-Dale.)</p>
-</li>
-<li><p class="first">The new <a class="reference internal" href="platform.html#module-platform" tppabs="https://docs.python.org/zh-cn/3/library/platform.html#module-platform" title="platform: Retrieves as much platform identifying data as possible."><code class="xref py py-mod docutils literal notranslate"><span class="pre">platform</span></code></a> module contains a number of functions that try to
+(Contributed by Greg Ward and Nicholas FitzRoy-Dale.)</p></li>
+<li><p>The new <a class="reference internal" href="platform.html#module-platform" tppabs="https://docs.python.org/zh-cn/3/library/platform.html#module-platform" title="platform: Retrieves as much platform identifying data as possible."><code class="xref py py-mod docutils literal notranslate"><span class="pre">platform</span></code></a> module contains a number of functions that try to
 determine various properties of the platform you're running on.  There are
 functions for getting the architecture, CPU type, the Windows OS version, and
-even the Linux distribution version. (Contributed by Marc-AndrÃ© Lemburg.)</p>
-</li>
-<li><p class="first">The parser objects provided by the <code class="xref py py-mod docutils literal notranslate"><span class="pre">pyexpat</span></code> module can now optionally
+even the Linux distribution version. (Contributed by Marc-AndrÃ© Lemburg.)</p></li>
+<li><p>The parser objects provided by the <code class="xref py py-mod docutils literal notranslate"><span class="pre">pyexpat</span></code> module can now optionally
 buffer character data, resulting in fewer calls to your character data handler
 and therefore faster performance.  Setting the parser object's
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">buffer_text</span></code> attribute to <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> will enable buffering.</p>
-</li>
-<li><p class="first">The <code class="docutils literal notranslate"><span class="pre">sample(population,</span> <span class="pre">k)</span></code> function was added to the <a class="reference internal" href="random.html#module-random" tppabs="https://docs.python.org/zh-cn/3/library/random.html#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a>
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">buffer_text</span></code> attribute to <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> will enable buffering.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">sample(population,</span> <span class="pre">k)</span></code> function was added to the <a class="reference internal" href="random.html#module-random" tppabs="https://docs.python.org/zh-cn/3/library/random.html#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a>
 module.  <em>population</em> is a sequence or <code class="xref py py-class docutils literal notranslate"><span class="pre">xrange</span></code> object containing the
 elements of a population, and <code class="xref py py-func docutils literal notranslate"><span class="pre">sample()</span></code> chooses <em>k</em> elements from the
 population without replacing chosen elements.  <em>k</em> can be any value up to
@@ -1396,11 +1362,10 @@ implemented in C.  It's faster and more extensively studied than the previous
 algorithm.</p>
 <p>(All changes contributed by Raymond Hettinger.)</p>
 </li>
-<li><p class="first">The <a class="reference internal" href="readline.html#module-readline" tppabs="https://docs.python.org/zh-cn/3/library/readline.html#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> module also gained a number of new functions:
+<li><p>The <a class="reference internal" href="readline.html#module-readline" tppabs="https://docs.python.org/zh-cn/3/library/readline.html#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> module also gained a number of new functions:
 <code class="xref py py-func docutils literal notranslate"><span class="pre">get_history_item()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">get_current_history_length()</span></code>, and
-<code class="xref py py-func docutils literal notranslate"><span class="pre">redisplay()</span></code>.</p>
-</li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">rexec</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">Bastion</span></code> modules have been declared dead, and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">redisplay()</span></code>.</p></li>
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">rexec</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">Bastion</span></code> modules have been declared dead, and
 attempts to import them will fail with a <a class="reference internal" href="exceptions.html#RuntimeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>.  New-style classes
 provide new ways to break out of the restricted execution environment provided
 by <code class="xref py py-mod docutils literal notranslate"><span class="pre">rexec</span></code>, and no one has interest in fixing them or time to do so.  If
@@ -1409,18 +1374,15 @@ you have applications using <code class="xref py py-mod docutils literal notrans
 because there are known bugs in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">rexec</span></code> module in those versions.  To
 repeat: if you're using <code class="xref py py-mod docutils literal notranslate"><span class="pre">rexec</span></code>, stop using it immediately.)</p>
 </li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">rotor</span></code> module has been deprecated because the  algorithm it uses for
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">rotor</span></code> module has been deprecated because the  algorithm it uses for
 encryption is not believed to be secure.  If you need encryption, use one of the
-several AES Python modules that are available separately.</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="shutil.html#module-shutil" tppabs="https://docs.python.org/zh-cn/3/library/shutil.html#module-shutil" title="shutil: High-level file operations, including copying."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shutil</span></code></a> module gained a <code class="docutils literal notranslate"><span class="pre">move(src,</span> <span class="pre">dest)</span></code> function that
-recursively moves a file or directory to a new location.</p>
-</li>
-<li><p class="first">Support for more advanced POSIX signal handling was added to the <a class="reference internal" href="signal.html#module-signal" tppabs="https://docs.python.org/zh-cn/3/library/signal.html#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a>
+several AES Python modules that are available separately.</p></li>
+<li><p>The <a class="reference internal" href="shutil.html#module-shutil" tppabs="https://docs.python.org/zh-cn/3/library/shutil.html#module-shutil" title="shutil: High-level file operations, including copying."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shutil</span></code></a> module gained a <code class="docutils literal notranslate"><span class="pre">move(src,</span> <span class="pre">dest)</span></code> function that
+recursively moves a file or directory to a new location.</p></li>
+<li><p>Support for more advanced POSIX signal handling was added to the <a class="reference internal" href="signal.html#module-signal" tppabs="https://docs.python.org/zh-cn/3/library/signal.html#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a>
 but then removed again as it proved impossible to make it work reliably across
-platforms.</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="socket.html#module-socket" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a> module now supports timeouts.  You can call the
+platforms.</p></li>
+<li><p>The <a class="reference internal" href="socket.html#module-socket" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a> module now supports timeouts.  You can call the
 <code class="docutils literal notranslate"><span class="pre">settimeout(t)</span></code> method on a socket object to set a timeout of <em>t</em> seconds.
 Subsequent socket operations that take longer than <em>t</em> seconds to complete will
 abort and raise a <a class="reference internal" href="socket.html#socket.timeout" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#socket.timeout" title="socket.timeout"><code class="xref py py-exc docutils literal notranslate"><span class="pre">socket.timeout</span></code></a> exception.</p>
@@ -1430,17 +1392,14 @@ lengthy review.  After the code was checked in, Guido van Rossum rewrote parts
 of it.  (This is a good example of a collaborative development process in
 action.)</p>
 </li>
-<li><p class="first">On Windows, the <a class="reference internal" href="socket.html#module-socket" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a> module now ships with Secure  Sockets Layer
-(SSL) support.</p>
-</li>
-<li><p class="first">The value of the C <code class="xref py py-const docutils literal notranslate"><span class="pre">PYTHON_API_VERSION</span></code> macro is now exposed at the
+<li><p>On Windows, the <a class="reference internal" href="socket.html#module-socket" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a> module now ships with Secure  Sockets Layer
+(SSL) support.</p></li>
+<li><p>The value of the C <code class="xref py py-const docutils literal notranslate"><span class="pre">PYTHON_API_VERSION</span></code> macro is now exposed at the
 Python level as <code class="docutils literal notranslate"><span class="pre">sys.api_version</span></code>.  The current exception can be cleared by
-calling the new <code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exc_clear()</span></code> function.</p>
-</li>
-<li><p class="first">The new <a class="reference internal" href="tarfile.html#module-tarfile" tppabs="https://docs.python.org/zh-cn/3/library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> module  allows reading from and writing to
-<strong class="program">tar</strong>-format archive files. (Contributed by Lars GustÃ¤bel.)</p>
-</li>
-<li><p class="first">The new <a class="reference internal" href="textwrap.html#module-textwrap" tppabs="https://docs.python.org/zh-cn/3/library/textwrap.html#module-textwrap" title="textwrap: Text wrapping and filling"><code class="xref py py-mod docutils literal notranslate"><span class="pre">textwrap</span></code></a> module contains functions for wrapping strings
+calling the new <code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exc_clear()</span></code> function.</p></li>
+<li><p>The new <a class="reference internal" href="tarfile.html#module-tarfile" tppabs="https://docs.python.org/zh-cn/3/library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> module  allows reading from and writing to
+<strong class="program">tar</strong>-format archive files. (Contributed by Lars GustÃ¤bel.)</p></li>
+<li><p>The new <a class="reference internal" href="textwrap.html#module-textwrap" tppabs="https://docs.python.org/zh-cn/3/library/textwrap.html#module-textwrap" title="textwrap: Text wrapping and filling"><code class="xref py py-mod docutils literal notranslate"><span class="pre">textwrap</span></code></a> module contains functions for wrapping strings
 containing paragraphs of text.  The <code class="docutils literal notranslate"><span class="pre">wrap(text,</span> <span class="pre">width)</span></code> function takes a
 string and returns a list containing the text split into lines of no more than
 the chosen width.  The <code class="docutils literal notranslate"><span class="pre">fill(text,</span> <span class="pre">width)</span></code> function returns a single
@@ -1468,7 +1427,7 @@ the text wrapping strategy.   Both the <code class="xref py py-class docutils li
 arguments for fine-tuning the formatting; consult the module's documentation
 for details. (Contributed by Greg Ward.)</p>
 </li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">thread</span></code> and <a class="reference internal" href="threading.html#module-threading" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> modules now have companion modules,
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">thread</span></code> and <a class="reference internal" href="threading.html#module-threading" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> modules now have companion modules,
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">dummy_thread</span></code> and <a class="reference internal" href="dummy_threading.html#module-dummy_threading" tppabs="https://docs.python.org/zh-cn/3/library/dummy_threading.html#module-dummy_threading" title="dummy_threading: Drop-in replacement for the threading module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dummy_threading</span></code></a>, that provide a do-nothing
 implementation of the <code class="xref py py-mod docutils literal notranslate"><span class="pre">thread</span></code> module's interface for platforms where
 threads are not supported.  The intention is to simplify thread-aware modules
@@ -1488,13 +1447,12 @@ code slightly clearer.  This module will not magically make multithreaded code
 run without threads; code that waits for another thread to return or to do
 something will simply hang forever.</p>
 </li>
-<li><p class="first">The <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module's <code class="xref py py-func docutils literal notranslate"><span class="pre">strptime()</span></code> function has long been an annoyance
+<li><p>The <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module's <code class="xref py py-func docutils literal notranslate"><span class="pre">strptime()</span></code> function has long been an annoyance
 because it uses the platform C library's <code class="xref py py-func docutils literal notranslate"><span class="pre">strptime()</span></code> implementation, and
 different platforms sometimes have odd bugs.  Brett Cannon contributed a
 portable implementation that's written in pure Python and should behave
-identically on all platforms.</p>
-</li>
-<li><p class="first">The new <a class="reference internal" href="timeit.html#module-timeit" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> module helps measure how long snippets of Python code
+identically on all platforms.</p></li>
+<li><p>The new <a class="reference internal" href="timeit.html#module-timeit" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> module helps measure how long snippets of Python code
 take to execute.  The <code class="file docutils literal notranslate"><span class="pre">timeit.py</span></code> file can be run directly from the
 command line, or the module's <code class="xref py py-class docutils literal notranslate"><span class="pre">Timer</span></code> class can be imported and used
 directly.  Here's a short example that figures out whether it's faster to
@@ -1515,10 +1473,9 @@ by using the <code class="xref py py-func docutils literal notranslate"><span cl
 </pre></div>
 </div>
 </li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">Tix</span></code> module has received various bug fixes and updates for the
-current version of the Tix package.</p>
-</li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">Tkinter</span></code> module now works with a thread-enabled  version of Tcl.
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">Tix</span></code> module has received various bug fixes and updates for the
+current version of the Tix package.</p></li>
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">Tkinter</span></code> module now works with a thread-enabled  version of Tcl.
 Tcl's threading model requires that widgets only be accessed from the thread in
 which they're created; accesses from another thread can cause Tcl to panic.  For
 certain Tcl interfaces, <code class="xref py py-mod docutils literal notranslate"><span class="pre">Tkinter</span></code> will now automatically avoid this  when a
@@ -1527,9 +1484,8 @@ to the correct thread, and waiting for the results.  Other interfaces can't be
 handled automatically but <code class="xref py py-mod docutils literal notranslate"><span class="pre">Tkinter</span></code> will now raise an exception on such an
 access so that you can at least find out about the problem.  See
 <a class="reference external" href="javascript:if(confirm('https://mail.python.org/pipermail/python-dev/2002-December/031107.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.python.org/pipermail/python-dev/2002-December/031107.html'" tppabs="https://mail.python.org/pipermail/python-dev/2002-December/031107.html">https://mail.python.org/pipermail/python-dev/2002-December/031107.html</a> for a more
-detailed explanation of this change.  (Implemented by Martin von LÃ¶wis.)</p>
-</li>
-<li><p class="first">Calling Tcl methods through <code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code> no longer  returns only strings.
+detailed explanation of this change.  (Implemented by Martin von LÃ¶wis.)</p></li>
+<li><p>Calling Tcl methods through <code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code> no longer  returns only strings.
 Instead, if Tcl returns other objects those objects are converted to their
 Python equivalent, if one exists, or wrapped with a <code class="xref py py-class docutils literal notranslate"><span class="pre">_tkinter.Tcl_Obj</span></code>
 object if no Python equivalent exists. This behavior can be controlled through
@@ -1547,7 +1503,7 @@ creating the first <code class="xref py py-class docutils literal notranslate"><
 </div>
 <p>Any breakage caused by this change should be reported as a bug.</p>
 </li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">UserDict</span></code> module has a new <code class="xref py py-class docutils literal notranslate"><span class="pre">DictMixin</span></code> class which defines
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">UserDict</span></code> module has a new <code class="xref py py-class docutils literal notranslate"><span class="pre">DictMixin</span></code> class which defines
 all dictionary methods for classes that already have a minimum mapping
 interface.  This greatly simplifies writing classes that need to be
 substitutable for dictionaries, such as the classes in  the <a class="reference internal" href="shelve.html#module-shelve" tppabs="https://docs.python.org/zh-cn/3/library/shelve.html#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a>
@@ -1558,23 +1514,23 @@ whenever the class defines <a class="reference internal" href="datamodel.html#ob
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">UserDict</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">SeqDict</span><span class="p">(</span><span class="n">UserDict</span><span class="o">.</span><span class="n">DictMixin</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Dictionary lookalike implemented with lists.&quot;&quot;&quot;</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">keylist</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">valuelist</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">try</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">keylist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 <span class="gp">... </span>        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">raise</span> <span class="ne">KeyError</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valuelist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">try</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">keylist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 <span class="gp">... </span>            <span class="bp">self</span><span class="o">.</span><span class="n">valuelist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
 <span class="gp">... </span>        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="bp">self</span><span class="o">.</span><span class="n">keylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 <span class="gp">... </span>            <span class="bp">self</span><span class="o">.</span><span class="n">valuelist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">try</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">keylist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 <span class="gp">... </span>        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
@@ -1593,25 +1549,22 @@ whenever the class defines <a class="reference internal" href="datamodel.html#ob
 <span class="go"> &#39;setdefault&#39;, &#39;update&#39;, &#39;valuelist&#39;, &#39;values&#39;]</span>
 </pre></div>
 </div>
-<p>(Contributed by Raymond Hettinger.)</p>
+<p>ï¼ˆç”± Raymond Hettinger è´¡çŒ®ã€‚ï¼‰</p>
 </li>
-<li><p class="first">The DOM implementation in <a class="reference internal" href="xml.dom.minidom.html#module-xml.dom.minidom" tppabs="https://docs.python.org/zh-cn/3/library/xml.dom.minidom.html#module-xml.dom.minidom" title="xml.dom.minidom: Minimal Document Object Model (DOM) implementation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code></a> can now generate XML output
+<li><p>The DOM implementation in <a class="reference internal" href="xml.dom.minidom.html#module-xml.dom.minidom" tppabs="https://docs.python.org/zh-cn/3/library/xml.dom.minidom.html#module-xml.dom.minidom" title="xml.dom.minidom: Minimal Document Object Model (DOM) implementation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code></a> can now generate XML output
 in a particular encoding by providing an optional encoding argument to the
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">toxml()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">toprettyxml()</span></code> methods of DOM nodes.</p>
-</li>
-<li><p class="first">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">xmlrpclib</span></code> module now supports an XML-RPC extension for handling nil
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">toxml()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">toprettyxml()</span></code> methods of DOM nodes.</p></li>
+<li><p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">xmlrpclib</span></code> module now supports an XML-RPC extension for handling nil
 data values such as Python's <code class="docutils literal notranslate"><span class="pre">None</span></code>.  Nil values are always supported on
 unmarshalling an XML-RPC response.  To generate requests containing <code class="docutils literal notranslate"><span class="pre">None</span></code>,
 you must supply a true value for the <em>allow_none</em> parameter when creating a
-<code class="xref py py-class docutils literal notranslate"><span class="pre">Marshaller</span></code> instance.</p>
-</li>
-<li><p class="first">The new <code class="xref py py-mod docutils literal notranslate"><span class="pre">DocXMLRPCServer</span></code> module allows writing self-documenting XML-RPC
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Marshaller</span></code> instance.</p></li>
+<li><p>The new <code class="xref py py-mod docutils literal notranslate"><span class="pre">DocXMLRPCServer</span></code> module allows writing self-documenting XML-RPC
 servers. Run it in demo mode (as a program) to see it in action.   Pointing the
 Web browser to the RPC server produces pydoc-style documentation; pointing
 xmlrpclib to the server allows invoking the actual methods. (Contributed by
-Brian Quinlan.)</p>
-</li>
-<li><p class="first">Support for internationalized domain names (RFCs 3454, 3490, 3491, and 3492)
+Brian Quinlan.)</p></li>
+<li><p>Support for internationalized domain names (RFCs 3454, 3490, 3491, and 3492)
 has been added. The &quot;idna&quot; encoding can be used to convert between a Unicode
 domain name and the ASCII-compatible encoding (ACE) of that name.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="p">{}</span><span class="o">&gt;</span><span class="p">{}</span><span class="o">&gt;</span> <span class="sa">u</span><span class="s2">&quot;www.AlliancefranÃ§aise.nu&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;idna&quot;</span><span class="p">)</span>
@@ -1630,7 +1583,7 @@ tool and the <code class="docutils literal notranslate"><span class="pre">punyco
 </li>
 </ul>
 <div class="section" id="date-time-type">
-<h3>Date/Time Type<a class="headerlink" href="#date-time-type" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<h3>Date/Time ç±»å‹<a class="headerlink" href="#date-time-type" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <p>Date and time types suitable for expressing timestamps were added as the
 <a class="reference internal" href="datetime.html#module-datetime" tppabs="https://docs.python.org/zh-cn/3/library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> module.  The types don't support different calendars or many
 fancy features, and just stick to the basics of representing time.</p>
@@ -1677,7 +1630,7 @@ support for parsing strings and getting back a <code class="xref py py-class doc
 (Contributed by Tim Peters.)</p>
 </div>
 <div class="section" id="the-optparse-module">
-<h3>The optparse Module<a class="headerlink" href="#the-optparse-module" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<h3>optparse æ¨¡å—<a class="headerlink" href="#the-optparse-module" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <p>The <a class="reference internal" href="getopt.html#module-getopt" tppabs="https://docs.python.org/zh-cn/3/library/getopt.html#module-getopt" title="getopt: Portable parser for command line options; support both short and long option names."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getopt</span></code></a> module provides simple parsing of command-line arguments.  The
 new <a class="reference internal" href="optparse.html#module-optparse" tppabs="https://docs.python.org/zh-cn/3/library/optparse.html#module-optparse" title="optparse: Command-line option parsing library. (å·²ç§»é™¤)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code></a> module (originally named Optik) provides more elaborate
 command-line parsing that follows the Unix conventions, automatically creates
@@ -1686,7 +1639,7 @@ options.</p>
 <p>You start by creating an instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">OptionParser</span></code> and telling it what
 your program's options are.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">optparse</span> <span class="k">import</span> <span class="n">OptionParser</span>
+<span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
 
 <span class="n">op</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">()</span>
 <span class="n">op</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="s1">&#39;--input&#39;</span><span class="p">,</span>
@@ -1729,7 +1682,7 @@ Note that the length argument is automatically converted to an integer.</p>
 <span class="gp">$</span>
 </pre></div>
 </div>
-<p>See the module's documentation for more details.</p>
+<p>æœ‰å…³æ›´å¤šè¯¦ç»†ä¿¡æ¯ï¼Œè¯·å‚è§æ¨¡å—çš„æ–‡æ¡£ã€‚</p>
 <p>Optik was written by Greg Ward, with suggestions from the readers of the Getopt
 SIG.</p>
 </div>
@@ -1767,13 +1720,13 @@ family must not be manipulated with functions from the other family.  There is
 one family for allocating chunks of memory and another family of functions
 specifically for allocating Python objects.</p>
 <ul class="simple">
-<li>To allocate and free an undistinguished chunk of memory use the &quot;raw memory&quot;
-family: <a class="reference internal" href="memory.html#c.PyMem_Malloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyMem_Malloc" title="PyMem_Malloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Malloc()</span></code></a>, <a class="reference internal" href="memory.html#c.PyMem_Realloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyMem_Realloc" title="PyMem_Realloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Realloc()</span></code></a>, and <a class="reference internal" href="memory.html#c.PyMem_Free" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyMem_Free" title="PyMem_Free"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Free()</span></code></a>.</li>
-<li>The &quot;object memory&quot; family is the interface to the pymalloc facility described
+<li><p>To allocate and free an undistinguished chunk of memory use the &quot;raw memory&quot;
+family: <a class="reference internal" href="memory.html#c.PyMem_Malloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyMem_Malloc" title="PyMem_Malloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Malloc()</span></code></a>, <a class="reference internal" href="memory.html#c.PyMem_Realloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyMem_Realloc" title="PyMem_Realloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Realloc()</span></code></a>, and <a class="reference internal" href="memory.html#c.PyMem_Free" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyMem_Free" title="PyMem_Free"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Free()</span></code></a>.</p></li>
+<li><p>The &quot;object memory&quot; family is the interface to the pymalloc facility described
 above and is biased towards a large number of &quot;small&quot; allocations:
-<a class="reference internal" href="memory.html#c.PyObject_Malloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyObject_Malloc" title="PyObject_Malloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Malloc()</span></code></a>, <a class="reference internal" href="memory.html#c.PyObject_Realloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyObject_Realloc" title="PyObject_Realloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Realloc()</span></code></a>, and <a class="reference internal" href="memory.html#c.PyObject_Free" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyObject_Free" title="PyObject_Free"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Free()</span></code></a>.</li>
-<li>To allocate and free Python objects, use the &quot;object&quot; family
-<a class="reference internal" href="allocation.html#c.PyObject_New" tppabs="https://docs.python.org/zh-cn/3/c-api/allocation.html#c.PyObject_New" title="PyObject_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_New()</span></code></a>, <a class="reference internal" href="allocation.html#c.PyObject_NewVar" tppabs="https://docs.python.org/zh-cn/3/c-api/allocation.html#c.PyObject_NewVar" title="PyObject_NewVar"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_NewVar()</span></code></a>, and <a class="reference internal" href="allocation.html#c.PyObject_Del" tppabs="https://docs.python.org/zh-cn/3/c-api/allocation.html#c.PyObject_Del" title="PyObject_Del"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Del()</span></code></a>.</li>
+<a class="reference internal" href="memory.html#c.PyObject_Malloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyObject_Malloc" title="PyObject_Malloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Malloc()</span></code></a>, <a class="reference internal" href="memory.html#c.PyObject_Realloc" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyObject_Realloc" title="PyObject_Realloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Realloc()</span></code></a>, and <a class="reference internal" href="memory.html#c.PyObject_Free" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#c.PyObject_Free" title="PyObject_Free"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Free()</span></code></a>.</p></li>
+<li><p>To allocate and free Python objects, use the &quot;object&quot; family
+<a class="reference internal" href="allocation.html#c.PyObject_New" tppabs="https://docs.python.org/zh-cn/3/c-api/allocation.html#c.PyObject_New" title="PyObject_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_New()</span></code></a>, <a class="reference internal" href="allocation.html#c.PyObject_NewVar" tppabs="https://docs.python.org/zh-cn/3/c-api/allocation.html#c.PyObject_NewVar" title="PyObject_NewVar"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_NewVar()</span></code></a>, and <a class="reference internal" href="allocation.html#c.PyObject_Del" tppabs="https://docs.python.org/zh-cn/3/c-api/allocation.html#c.PyObject_Del" title="PyObject_Del"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Del()</span></code></a>.</p></li>
 </ul>
 <p>Thanks to lots of work by Tim Peters, pymalloc in 2.3 also provides debugging
 features to catch memory overwrites and doubled frees in both extension modules
@@ -1786,62 +1739,62 @@ the 2.3 interfaces to memory allocation while compiling against any version of
 Python since 1.5.2.  You would copy the file from Python's source distribution
 and bundle it with the source of your extension.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><a class="reference external" href="javascript:if(confirm('https://hg.python.org/cpython/file/default/Objects/obmalloc.c  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://hg.python.org/cpython/file/default/Objects/obmalloc.c'" tppabs="https://hg.python.org/cpython/file/default/Objects/obmalloc.c">https://hg.python.org/cpython/file/default/Objects/obmalloc.c</a></dt>
-<dd>For the full details of the pymalloc implementation, see the comments at
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><a class="reference external" href="javascript:if(confirm('https://hg.python.org/cpython/file/default/Objects/obmalloc.c  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://hg.python.org/cpython/file/default/Objects/obmalloc.c'" tppabs="https://hg.python.org/cpython/file/default/Objects/obmalloc.c">https://hg.python.org/cpython/file/default/Objects/obmalloc.c</a></dt><dd><p>For the full details of the pymalloc implementation, see the comments at
 the top of the file <code class="file docutils literal notranslate"><span class="pre">Objects/obmalloc.c</span></code> in the Python source code.
-The above link points to the file within the python.org SVN browser.</dd>
+The above link points to the file within the python.org SVN browser.</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="build-and-c-api-changes">
-<h2>Build and C API Changes<a class="headerlink" href="#build-and-c-api-changes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>æ„å»ºå’Œ C API çš„æ”¹å˜<a class="headerlink" href="#build-and-c-api-changes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>Changes to Python's build process and to the C API include:</p>
 <ul class="simple">
-<li>The cycle detection implementation used by the garbage collection has proven
+<li><p>The cycle detection implementation used by the garbage collection has proven
 to be stable, so it's now been made mandatory.  You can no longer compile Python
 without it, and the <code class="xref std std-option docutils literal notranslate"><span class="pre">--with-cycle-gc</span></code> switch to <strong class="program">configure</strong> has
-been removed.</li>
-<li>Python can now optionally be built as a shared library
+been removed.</p></li>
+<li><p>Python can now optionally be built as a shared library
 (<code class="file docutils literal notranslate"><span class="pre">libpython2.3.so</span></code>) by supplying <code class="xref std std-option docutils literal notranslate"><span class="pre">--enable-shared</span></code> when running
-Python's <strong class="program">configure</strong> script.  (Contributed by Ondrej Palkovsky.)</li>
-<li>The <code class="xref c c-macro docutils literal notranslate"><span class="pre">DL_EXPORT</span></code> and <code class="xref c c-macro docutils literal notranslate"><span class="pre">DL_IMPORT</span></code> macros are now deprecated.
+Python's <strong class="program">configure</strong> script.  (Contributed by Ondrej Palkovsky.)</p></li>
+<li><p>The <code class="xref c c-macro docutils literal notranslate"><span class="pre">DL_EXPORT</span></code> and <code class="xref c c-macro docutils literal notranslate"><span class="pre">DL_IMPORT</span></code> macros are now deprecated.
 Initialization functions for Python extension modules should now be declared
 using the new macro <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyMODINIT_FUNC</span></code>, while the Python core will
-generally use the <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyAPI_FUNC</span></code> and <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyAPI_DATA</span></code> macros.</li>
-<li>The interpreter can be compiled without any docstrings for the built-in
+generally use the <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyAPI_FUNC</span></code> and <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyAPI_DATA</span></code> macros.</p></li>
+<li><p>The interpreter can be compiled without any docstrings for the built-in
 functions and modules by supplying <code class="xref std std-option docutils literal notranslate"><span class="pre">--without-doc-strings</span></code> to the
 <strong class="program">configure</strong> script. This makes the Python executable about 10% smaller,
 but will also mean that you can't get help for Python's built-ins.  (Contributed
-by Gustavo Niemeyer.)</li>
-<li>The <code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_NoArgs()</span></code> macro is now deprecated, and code that uses it
+by Gustavo Niemeyer.)</p></li>
+<li><p>The <code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_NoArgs()</span></code> macro is now deprecated, and code that uses it
 should be changed.  For Python 2.2 and later, the method definition table can
 specify the <a class="reference internal" href="structures.html#METH_NOARGS" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#METH_NOARGS" title="METH_NOARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">METH_NOARGS</span></code></a> flag, signalling that there are no arguments,
 and the argument checking can then be removed.  If compatibility with pre-2.2
 versions of Python is important, the code could use <code class="docutils literal notranslate"><span class="pre">PyArg_ParseTuple(args,</span>
-<span class="pre">&quot;&quot;)</span></code> instead, but this will be slower than using <a class="reference internal" href="structures.html#METH_NOARGS" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#METH_NOARGS" title="METH_NOARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">METH_NOARGS</span></code></a>.</li>
-<li><a class="reference internal" href="arg.html#c.PyArg_ParseTuple" tppabs="https://docs.python.org/zh-cn/3/c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a> accepts new format characters for various sizes of
+<span class="pre">&quot;&quot;)</span></code> instead, but this will be slower than using <a class="reference internal" href="structures.html#METH_NOARGS" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#METH_NOARGS" title="METH_NOARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">METH_NOARGS</span></code></a>.</p></li>
+<li><p><a class="reference internal" href="arg.html#c.PyArg_ParseTuple" tppabs="https://docs.python.org/zh-cn/3/c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a> accepts new format characters for various sizes of
 unsigned integers: <code class="docutils literal notranslate"><span class="pre">B</span></code> for <code class="xref c c-type docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code>, <code class="docutils literal notranslate"><span class="pre">H</span></code> for <code class="xref c c-type docutils literal notranslate"><span class="pre">unsigned</span>
 <span class="pre">short</span> <span class="pre">int</span></code>,  <code class="docutils literal notranslate"><span class="pre">I</span></code> for <code class="xref c c-type docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span></code>,  and <code class="docutils literal notranslate"><span class="pre">K</span></code> for <code class="xref c c-type docutils literal notranslate"><span class="pre">unsigned</span>
-<span class="pre">long</span> <span class="pre">long</span></code>.</li>
-<li>A new function, <code class="docutils literal notranslate"><span class="pre">PyObject_DelItemString(mapping,</span> <span class="pre">char</span> <span class="pre">*key)</span></code> was added
-as shorthand for <code class="docutils literal notranslate"><span class="pre">PyObject_DelItem(mapping,</span> <span class="pre">PyString_New(key))</span></code>.</li>
-<li>File objects now manage their internal string buffer differently, increasing
+<span class="pre">long</span> <span class="pre">long</span></code>.</p></li>
+<li><p>A new function, <code class="docutils literal notranslate"><span class="pre">PyObject_DelItemString(mapping,</span> <span class="pre">char</span> <span class="pre">*key)</span></code> was added
+as shorthand for <code class="docutils literal notranslate"><span class="pre">PyObject_DelItem(mapping,</span> <span class="pre">PyString_New(key))</span></code>.</p></li>
+<li><p>File objects now manage their internal string buffer differently, increasing
 it exponentially when needed.  This results in the benchmark tests in
 <code class="file docutils literal notranslate"><span class="pre">Lib/test/test_bufio.py</span></code> speeding up considerably (from 57 seconds to 1.7
-seconds, according to one measurement).</li>
-<li>It's now possible to define class and static methods for a C extension type by
+seconds, according to one measurement).</p></li>
+<li><p>It's now possible to define class and static methods for a C extension type by
 setting either the <a class="reference internal" href="structures.html#METH_CLASS" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#METH_CLASS" title="METH_CLASS"><code class="xref py py-const docutils literal notranslate"><span class="pre">METH_CLASS</span></code></a> or <a class="reference internal" href="structures.html#METH_STATIC" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#METH_STATIC" title="METH_STATIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">METH_STATIC</span></code></a> flags in a
-method's <a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMethodDef</span></code></a> structure.</li>
-<li>Python now includes a copy of the Expat XML parser's source code, removing any
-dependence on a system version or local installation of Expat.</li>
-<li>If you dynamically allocate type objects in your extension, you should be
+method's <a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMethodDef</span></code></a> structure.</p></li>
+<li><p>Python now includes a copy of the Expat XML parser's source code, removing any
+dependence on a system version or local installation of Expat.</p></li>
+<li><p>If you dynamically allocate type objects in your extension, you should be
 aware of a change in the rules relating to the <code class="xref py py-attr docutils literal notranslate"><span class="pre">__module__</span></code> and
 <a class="reference internal" href="stdtypes.html#definition.__name__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#definition.__name__" title="definition.__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> attributes.  In summary, you will want to ensure the type's
 dictionary contains a <code class="docutils literal notranslate"><span class="pre">'__module__'</span></code> key; making the module name the part of
 the type name leading up to the final period will no longer have the desired
-effect.  For more detail, read the API reference documentation or the  source.</li>
+effect.  For more detail, read the API reference documentation or the  source.</p></li>
 </ul>
 <div class="section" id="port-specific-changes">
 <h3>Port-Specific Changes<a class="headerlink" href="#port-specific-changes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
@@ -1871,22 +1824,19 @@ were 523 patches applied and 514 bugs fixed between Python 2.2 and 2.3.  Both
 figures are likely to be underestimates.</p>
 <p>Some of the more notable changes are:</p>
 <ul>
-<li><p class="first">If the <span class="target" id="index-29"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONINSPECT" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONINSPECT"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONINSPECT</span></code></a> environment variable is set, the Python
+<li><p>If the <span class="target" id="index-29"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONINSPECT" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONINSPECT"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONINSPECT</span></code></a> environment variable is set, the Python
 interpreter will enter the interactive prompt after running a Python program, as
 if Python had been invoked with the <a class="reference internal" href="cmdline.html#cmdoption-i" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-i"><code class="xref std std-option docutils literal notranslate"><span class="pre">-i</span></code></a> option. The environment
 variable can be set before running the Python interpreter, or it can be set by
-the Python program as part of its execution.</p>
-</li>
-<li><p class="first">The <code class="file docutils literal notranslate"><span class="pre">regrtest.py</span></code> script now provides a way to allow &quot;all resources
+the Python program as part of its execution.</p></li>
+<li><p>The <code class="file docutils literal notranslate"><span class="pre">regrtest.py</span></code> script now provides a way to allow &quot;all resources
 except <em>foo</em>.&quot;  A resource name passed to the <code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code> option can now be
 prefixed with a hyphen (<code class="docutils literal notranslate"><span class="pre">'-'</span></code>) to mean &quot;remove this resource.&quot;  For example,
 the option '<code class="docutils literal notranslate"><span class="pre">-uall,-bsddb</span></code>' could be used to enable the use of all resources
-except <code class="docutils literal notranslate"><span class="pre">bsddb</span></code>.</p>
-</li>
-<li><p class="first">The tools used to build the documentation now work under Cygwin as well as
-Unix.</p>
-</li>
-<li><p class="first">The <code class="docutils literal notranslate"><span class="pre">SET_LINENO</span></code> opcode has been removed.  Back in the mists of time, this
+except <code class="docutils literal notranslate"><span class="pre">bsddb</span></code>.</p></li>
+<li><p>The tools used to build the documentation now work under Cygwin as well as
+Unix.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">SET_LINENO</span></code> opcode has been removed.  Back in the mists of time, this
 opcode was needed to produce line numbers in tracebacks and support trace
 functions (for, e.g., <a class="reference internal" href="pdb.html#module-pdb" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a>). Since Python 1.5, the line numbers in
 tracebacks have been computed using a different mechanism that works with
@@ -1907,30 +1857,25 @@ taking advantage of this new feature. (Implemented by Richie Hindle.)</p>
 </ul>
 </div>
 <div class="section" id="porting-to-python-2-3">
-<h2>Porting to Python 2.3<a class="headerlink" href="#porting-to-python-2-3" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>ç§»æ¤åˆ° Python 2.3<a class="headerlink" href="#porting-to-python-2-3" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>This section lists previously described changes that may require changes to your
 code:</p>
 <ul>
-<li><p class="first"><a class="reference internal" href="simple_stmts.html#yield" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> is now always a keyword; if it's used as a variable name in
-your code, a different name must be chosen.</p>
-</li>
-<li><p class="first">For strings <em>X</em> and <em>Y</em>, <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">in</span> <span class="pre">Y</span></code> now works if <em>X</em> is more than one
-character long.</p>
-</li>
-<li><p class="first">The <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> type constructor will now return a long integer instead of
+<li><p><a class="reference internal" href="simple_stmts.html#yield" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> is now always a keyword; if it's used as a variable name in
+your code, a different name must be chosen.</p></li>
+<li><p>For strings <em>X</em> and <em>Y</em>, <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">in</span> <span class="pre">Y</span></code> now works if <em>X</em> is more than one
+character long.</p></li>
+<li><p>The <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> type constructor will now return a long integer instead of
 raising an <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> when a string or floating-point number is too
-large to fit into an integer.</p>
-</li>
-<li><p class="first">If you have Unicode strings that contain 8-bit characters, you must declare
+large to fit into an integer.</p></li>
+<li><p>If you have Unicode strings that contain 8-bit characters, you must declare
 the file's encoding (UTF-8, Latin-1, or whatever) by adding a comment to the top
-of the file.  See section <a class="reference internal" href="#section-encodings"><span class="std std-ref">PEP 263: Source Code Encodings</span></a> for more information.</p>
-</li>
-<li><p class="first">Calling Tcl methods through <code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code> no longer  returns only strings.
+of the file.  See section <a class="reference internal" href="#section-encodings"><span class="std std-ref">PEP 263: Source Code Encodings</span></a> for more information.</p></li>
+<li><p>Calling Tcl methods through <code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code> no longer  returns only strings.
 Instead, if Tcl returns other objects those objects are converted to their
 Python equivalent, if one exists, or wrapped with a <code class="xref py py-class docutils literal notranslate"><span class="pre">_tkinter.Tcl_Obj</span></code>
-object if no Python equivalent exists.</p>
-</li>
-<li><p class="first">Large octal and hex literals such as <code class="docutils literal notranslate"><span class="pre">0xffffffff</span></code> now trigger a
+object if no Python equivalent exists.</p></li>
+<li><p>Large octal and hex literals such as <code class="docutils literal notranslate"><span class="pre">0xffffffff</span></code> now trigger a
 <a class="reference internal" href="exceptions.html#FutureWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#FutureWarning" title="FutureWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FutureWarning</span></code></a>. Currently they're stored as 32-bit numbers and result in a
 negative value, but in Python 2.4 they'll become positive long integers.</p>
 <p>There are a few ways to fix this warning.  If you really need a positive number,
@@ -1940,14 +1885,13 @@ integer with low bits set and have previously used an expression such as <code c
 desired upper bits. For example, to clear just the top bit (bit 31), you could
 write <code class="docutils literal notranslate"><span class="pre">0xffffffffL</span> <span class="pre">&amp;~(1L&lt;&lt;31)</span></code>.</p>
 </li>
-<li><p class="first">You can no longer disable assertions by assigning to <code class="docutils literal notranslate"><span class="pre">__debug__</span></code>.</p>
-</li>
-<li><p class="first">The Distutils <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code> function has gained various new keyword arguments
+<li><p>You can no longer disable assertions by assigning to <code class="docutils literal notranslate"><span class="pre">__debug__</span></code>.</p></li>
+<li><p>The Distutils <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code> function has gained various new keyword arguments
 such as <em>depends</em>.  Old versions of the Distutils will abort if passed unknown
 keywords.  A solution is to check for the presence of the new
 <code class="xref py py-func docutils literal notranslate"><span class="pre">get_distutil_options()</span></code> function in your <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> and only uses the
 new keywords with a version of the Distutils that supports them:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils</span> <span class="k">import</span> <span class="n">core</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils</span> <span class="kn">import</span> <span class="n">core</span>
 
 <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sources&#39;</span><span class="p">:</span> <span class="s1">&#39;foo.c&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
 <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">core</span><span class="p">,</span> <span class="s1">&#39;get_distutil_options&#39;</span><span class="p">):</span>
@@ -1956,24 +1900,15 @@ new keywords with a version of the Distutils that supports them:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Using <code class="docutils literal notranslate"><span class="pre">None</span></code> as a variable name will now result in a <a class="reference internal" href="exceptions.html#SyntaxWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxWarning" title="SyntaxWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxWarning</span></code></a>
-warning.</p>
-</li>
-<li><p class="first">Names of extension types defined by the modules included with Python now
-contain the module and a <code class="docutils literal notranslate"><span class="pre">'.'</span></code> in front of the type name.</p>
-</li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">None</span></code> as a variable name will now result in a <a class="reference internal" href="exceptions.html#SyntaxWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxWarning" title="SyntaxWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxWarning</span></code></a>
+warning.</p></li>
+<li><p>Names of extension types defined by the modules included with Python now
+contain the module and a <code class="docutils literal notranslate"><span class="pre">'.'</span></code> in front of the type name.</p></li>
 </ul>
 </div>
 <div class="section" id="acknowledgements">
-<span id="acks"></span><h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>The author would like to thank the following people for offering suggestions,
-corrections and assistance with various drafts of this article: Jeff Bauer,
-Simon Brunning, Brett Cannon, Michael Chermside, Andrew Dalke, Scott David
-Daniels, Fred L. Drake, Jr., David Fraser,  Kelly Gerber, Raymond Hettinger,
-Michael Hudson, Chris Lambert, Detlef Lannert, Martin von LÃ¶wis, Andrew
-MacIntyre, Lalo Martins, Chad Netzer, Gustavo Niemeyer, Neal Norwitz, Hans
-Nowak, Chris Reedy, Francesco Ricciardi, Vinay Sajip, Neil Schemenauer, Roman
-Suzi, Jason Tishler, Just van Rossum.</p>
+<span id="acks"></span><h2>è‡´è°¢<a class="headerlink" href="#acknowledgements" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>ä½œè€…æ„Ÿè°¢ä»¥ä¸‹äººå‘˜ä¸ºæœ¬æ–‡çš„å„ç§è‰æ¡ˆæä¾›å»ºè®®ï¼Œæ›´æ­£å’Œå¸®åŠ©ï¼š Jeff Bauer, Simon Brunning, Brett Cannon, Michael Chermside, Andrew Dalke, Scott David Daniels, Fred L. Drake, Jr., David Fraser,  Kelly Gerber, Raymond Hettinger, Michael Hudson, Chris Lambert, Detlef Lannert, Martin von LÃ¶wis, Andrew MacIntyre, Lalo Martins, Chad Netzer, Gustavo Niemeyer, Neal Norwitz, Hans Nowak, Chris Reedy, Francesco Ricciardi, Vinay Sajip, Neil Schemenauer, Roman Suzi, Jason Tishler, Just van Rossum.</p>
 </div>
 </div>
 
@@ -1983,58 +1918,58 @@ Suzi, Jason Tishler, Just van Rossum.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#">What's New in Python 2.3</a><ul>
+<li><a class="reference internal" href="#">Python 2.3 æœ‰ä»€ä¹ˆæ–°å˜åŒ–</a><ul>
 <li><a class="reference internal" href="#pep-218-a-standard-set-datatype">PEP 218: A Standard Set Datatype</a></li>
 <li><a class="reference internal" href="#pep-255-simple-generators">PEP 255: Simple Generators</a></li>
 <li><a class="reference internal" href="#pep-263-source-code-encodings">PEP 263: Source Code Encodings</a></li>
-<li><a class="reference internal" href="#pep-273-importing-modules-from-zip-archives">PEP 273: Importing Modules from ZIP Archives</a></li>
+<li><a class="reference internal" href="#pep-273-importing-modules-from-zip-archives">PEP 273: ä»ZIPå‹ç¼©åŒ…å¯¼å…¥æ¨¡å—</a></li>
 <li><a class="reference internal" href="#pep-277-unicode-file-name-support-for-windows-nt">PEP 277: Unicode file name support for Windows NT</a></li>
-<li><a class="reference internal" href="#pep-278-universal-newline-support">PEP 278: Universal Newline Support</a></li>
+<li><a class="reference internal" href="#pep-278-universal-newline-support">PEP 278: é€šç”¨æ¢è¡Œæ”¯æŒ</a></li>
 <li><a class="reference internal" href="#pep-279-enumerate">PEP 279: enumerate()</a></li>
-<li><a class="reference internal" href="#pep-282-the-logging-package">PEP 282: The logging Package</a></li>
-<li><a class="reference internal" href="#pep-285-a-boolean-type">PEP 285: A Boolean Type</a></li>
+<li><a class="reference internal" href="#pep-282-the-logging-package">PEP 282: logging åŒ…</a></li>
+<li><a class="reference internal" href="#pep-285-a-boolean-type">PEP 285: å¸ƒå°”ç±»å‹</a></li>
 <li><a class="reference internal" href="#pep-293-codec-error-handling-callbacks">PEP 293: Codec Error Handling Callbacks</a></li>
-<li><a class="reference internal" href="#pep-301-package-index-and-metadata-for-distutils">PEP 301: Package Index and Metadata for Distutils</a></li>
+<li><a class="reference internal" href="#pep-301-package-index-and-metadata-for-distutils">PEP 301: Distutilsçš„è½¯ä»¶åŒ…ç´¢å¼•å’Œå…ƒæ•°æ®</a></li>
 <li><a class="reference internal" href="#pep-302-new-import-hooks">PEP 302: New Import Hooks</a></li>
-<li><a class="reference internal" href="#pep-305-comma-separated-files">PEP 305: Comma-separated Files</a></li>
+<li><a class="reference internal" href="#pep-305-comma-separated-files">PEP 305: é€—å·åˆ†éš”æ–‡ä»¶</a></li>
 <li><a class="reference internal" href="#pep-307-pickle-enhancements">PEP 307: Pickle Enhancements</a></li>
-<li><a class="reference internal" href="#extended-slices">Extended Slices</a></li>
+<li><a class="reference internal" href="#extended-slices">æ‰©å±•åˆ‡ç‰‡</a></li>
 <li><a class="reference internal" href="#other-language-changes">å…¶ä»–è¯­è¨€ç‰¹æ€§ä¿®æ”¹</a><ul>
 <li><a class="reference internal" href="#string-changes">String Changes</a></li>
 <li><a class="reference internal" href="#optimizations">æ€§èƒ½ä¼˜åŒ–</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#new-improved-and-deprecated-modules">New, Improved, and Deprecated Modules</a><ul>
-<li><a class="reference internal" href="#date-time-type">Date/Time Type</a></li>
-<li><a class="reference internal" href="#the-optparse-module">The optparse Module</a></li>
+<li><a class="reference internal" href="#new-improved-and-deprecated-modules">æ–°å¢ï¼Œæ”¹è¿›å’Œå¼ƒç”¨çš„æ¨¡å—</a><ul>
+<li><a class="reference internal" href="#date-time-type">Date/Time ç±»å‹</a></li>
+<li><a class="reference internal" href="#the-optparse-module">optparse æ¨¡å—</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pymalloc-a-specialized-object-allocator">Pymalloc: A Specialized Object Allocator</a></li>
-<li><a class="reference internal" href="#build-and-c-api-changes">Build and C API Changes</a><ul>
+<li><a class="reference internal" href="#build-and-c-api-changes">æ„å»ºå’Œ C API çš„æ”¹å˜</a><ul>
 <li><a class="reference internal" href="#port-specific-changes">Port-Specific Changes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#other-changes-and-fixes">Other Changes and Fixes</a></li>
-<li><a class="reference internal" href="#porting-to-python-2-3">Porting to Python 2.3</a></li>
-<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li><a class="reference internal" href="#porting-to-python-2-3">ç§»æ¤åˆ° Python 2.3</a></li>
+<li><a class="reference internal" href="#acknowledgements">è‡´è°¢</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="2.4.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.4.html"
-                        title="ä¸Šä¸€ç« ">What's New in Python 2.4</a></p>
+                        title="ä¸Šä¸€ç« ">Python 2.4 æœ‰ä»€ä¹ˆæ–°å˜åŒ–</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="2.2.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.2.html"
-                        title="ä¸‹ä¸€ç« ">What's New in Python 2.2</a></p>
+                        title="ä¸‹ä¸€ç« ">Python 2.2 æœ‰ä»€ä¹ˆæ–°å˜åŒ–</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/whatsnew/2.3.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/whatsnew/2.3.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/whatsnew/2.3.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/whatsnew/2.3.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/whatsnew/2.3.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/whatsnew/2.3.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -2054,19 +1989,22 @@ Suzi, Jason Tishler, Just van Rossum.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="2.2.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.2.html" title="What&#39;s New in Python 2.2"
+          <a href="2.2.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.2.html" title="Python 2.2 æœ‰ä»€ä¹ˆæ–°å˜åŒ–"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="2.4.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.4.html" title="What&#39;s New in Python 2.4"
+          <a href="2.4.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/2.4.html" title="Python 2.4 æœ‰ä»€ä¹ˆæ–°å˜åŒ–"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" tppabs="https://docs.python.org/zh-cn/3/whatsnew/index.html" >Python æœ‰ä»€ä¹ˆæ–°å˜åŒ–ï¼Ÿ</a> &#187;</li>
     <li class="right">
@@ -2087,15 +2025,19 @@ Suzi, Jason Tishler, Just van Rossum.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

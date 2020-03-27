@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>3. Python 的非正式介绍 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>3. Python 的非正式介绍 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="4. 其他流程控制工具" href="controlflow.html" />
     <link rel="prev" title="2. 使用 Python 解释器" href="interpreter.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/tutorial/introduction.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="interpreter.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/interpreter.html" title="2. 使用 Python 解释器"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" accesskey="U">Python 教程</a> &#187;</li>
     <li class="right">
@@ -95,8 +103,8 @@
           <div class="body" role="main">
             
   <div class="section" id="an-informal-introduction-to-python">
-<span id="tut-informal"></span><h1>3. Python 的非正式介绍<a class="headerlink" href="#an-informal-introduction-to-python" title="永久链接至标题">¶</a></h1>
-<p>在下面的例子中，通过提示符 (<a class="reference internal" href="glossary.html#term" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term"><span class="xref std std-term">&gt;&gt;&gt;</span></a> 与 <a class="reference internal" href="glossary.html#term-1" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-1"><span class="xref std std-term">...</span></a>) 的出现与否来区分输入和输出：如果你想复现这些例子，当提示符出现后，你必须在提示符后键入例子中的每一个词；不以提示符开头的那些行是解释器的输出。注意例子中某行中出现第二个提示符意味着你必须键入一个空白行；这是用来结束多行命令的。</p>
+<span id="tut-informal"></span><h1><span class="section-number">3. </span>Python 的非正式介绍<a class="headerlink" href="#an-informal-introduction-to-python" title="永久链接至标题">¶</a></h1>
+<p>在下面的例子中，通过提示符 (<a class="reference internal" href="glossary.html#term-0" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-0"><span class="xref std std-term">&gt;&gt;&gt;</span></a> 与 <a class="reference internal" href="glossary.html#term-1" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-1"><span class="xref std std-term">...</span></a>) 的出现与否来区分输入和输出：如果你想复现这些例子，当提示符出现后，你必须在提示符后键入例子中的每一个词；不以提示符开头的那些行是解释器的输出。注意例子中某行中出现第二个提示符意味着你必须键入一个空白行；这是用来结束多行命令的。</p>
 <p id="index-0">这个手册中的许多例子都包含注释，甚至交互性命令中也有。Python中的注释以井号 <code class="docutils literal notranslate"><span class="pre">#</span></code> 开头，并且一直延伸到该文本行结束为止。注释可以出现在一行的开头或者是空白和代码的后边，但是不能出现在字符串中间。字符串中的井号就是井号。因为注释是用来阐明代码的，不会被 Python 解释，所以在键入这些例子时，注释是可以被忽略的。</p>
 <p>几个例子:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is the first comment</span>
@@ -106,10 +114,10 @@
 </pre></div>
 </div>
 <div class="section" id="using-python-as-a-calculator">
-<span id="tut-calculator"></span><h2>3.1. Python 作为计算器使用<a class="headerlink" href="#using-python-as-a-calculator" title="永久链接至标题">¶</a></h2>
+<span id="tut-calculator"></span><h2><span class="section-number">3.1. </span>Python 作为计算器使用<a class="headerlink" href="#using-python-as-a-calculator" title="永久链接至标题">¶</a></h2>
 <p>让我们尝试一些简单的 Python 命令。启动解释器，等待界面中的提示符，<code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> （这应该花不了多少时间）。</p>
 <div class="section" id="numbers">
-<span id="tut-numbers"></span><h3>3.1.1. 数字<a class="headerlink" href="#numbers" title="永久链接至标题">¶</a></h3>
+<span id="tut-numbers"></span><h3><span class="section-number">3.1.1. </span>数字<a class="headerlink" href="#numbers" title="永久链接至标题">¶</a></h3>
 <p>解释器就像一个简单的计算器一样：你可以在里面输入一个表达式然后它会写出答案。 表达式的语法很直接：运算符 <code class="docutils literal notranslate"><span class="pre">+</span></code>、<code class="docutils literal notranslate"><span class="pre">-</span></code>、<code class="docutils literal notranslate"><span class="pre">*</span></code>、<code class="docutils literal notranslate"><span class="pre">/</span></code> 的用法和其他大部分语言一样（比如 Pascal 或者 C 语言）；括号 (<code class="docutils literal notranslate"><span class="pre">()</span></code>) 用来分组。比如:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="go">4</span>
@@ -121,7 +129,7 @@
 <span class="go">1.6</span>
 </pre></div>
 </div>
-<p>整数（比如 <code class="docutils literal notranslate"><span class="pre">2</span></code>、<code class="docutils literal notranslate"><span class="pre">4</span></code>、<code class="docutils literal notranslate"><span class="pre">20</span></code> ）有 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> 类型，有小数部分的（比如 <code class="docutils literal notranslate"><span class="pre">5.0</span></code>、<code class="docutils literal notranslate"><span class="pre">1.6</span></code> ）有 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> 类型。在这个手册的后半部分我们会看到更多的数值类型。</p>
+<p>整数（比如 <code class="docutils literal notranslate"><span class="pre">2</span></code>、<code class="docutils literal notranslate"><span class="pre">4</span></code>、<code class="docutils literal notranslate"><span class="pre">20</span></code> ）的类型是 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>，有小数部分的（比如 <code class="docutils literal notranslate"><span class="pre">5.0</span></code>、<code class="docutils literal notranslate"><span class="pre">1.6</span></code> ）的类型是 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>。 在这个手册的后半部分我们会看到更多的数字类型。</p>
 <p>除法运算 (<code class="docutils literal notranslate"><span class="pre">/</span></code>) 永远返回浮点数类型。如果要做 <a class="reference internal" href="glossary.html#term-floor-division" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-floor-division"><span class="xref std std-term">floor division</span></a> 得到一个整数结果（忽略小数部分）你可以使用 <code class="docutils literal notranslate"><span class="pre">//</span></code> 运算符；如果要计算余数，可以使用 <code class="docutils literal notranslate"><span class="pre">%</span></code></p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">/</span> <span class="mi">3</span>  <span class="c1"># classic division returns a float</span>
 <span class="go">5.666666666666667</span>
@@ -134,7 +142,7 @@
 <span class="go">17</span>
 </pre></div>
 </div>
-<p>在Python中，可以使用 <code class="docutils literal notranslate"><span class="pre">**</span></code> 运算符来计算乘方 <a class="footnote-reference" href="#id3" id="id1">[1]</a></p>
+<p>在Python中，可以使用 <code class="docutils literal notranslate"><span class="pre">**</span></code> 运算符来计算乘方 <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># 5 squared</span>
 <span class="go">25</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">7</span>  <span class="c1"># 2 to the power of 7</span>
@@ -175,8 +183,8 @@
 <p>除了 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> 和 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>，Python也支持其他类型的数字，例如 <a class="reference internal" href="decimal.html#decimal.Decimal" tppabs="https://docs.python.org/zh-cn/3/library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 或者 <a class="reference internal" href="fractions.html#fractions.Fraction" tppabs="https://docs.python.org/zh-cn/3/library/fractions.html#fractions.Fraction" title="fractions.Fraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fraction</span></code></a>。Python 也内置对 <a class="reference internal" href="stdtypes.html#typesnumeric" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#typesnumeric"><span class="std std-ref">复数</span></a> 的支持，使用后缀 <code class="docutils literal notranslate"><span class="pre">j</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">J</span></code> 就可以表示虚数部分（例如 <code class="docutils literal notranslate"><span class="pre">3+5j</span></code> ）。</p>
 </div>
 <div class="section" id="strings">
-<span id="tut-strings"></span><h3>3.1.2. 字符串<a class="headerlink" href="#strings" title="永久链接至标题">¶</a></h3>
-<p>除了数字，Python 也可以操作字符串。字符串有多种形式，可以使用单引号（<code class="docutils literal notranslate"><span class="pre">'……'</span></code>），双引号（<code class="docutils literal notranslate"><span class="pre">&quot;……&quot;</span></code>）都可以获得同样的结果 <a class="footnote-reference" href="#id4" id="id2">[2]</a>。反斜杠 <code class="docutils literal notranslate"><span class="pre">\</span></code> 可以用来转义:</p>
+<span id="tut-strings"></span><h3><span class="section-number">3.1.2. </span>字符串<a class="headerlink" href="#strings" title="永久链接至标题">¶</a></h3>
+<p>除了数字，Python 也可以操作字符串。字符串有多种形式，可以使用单引号（<code class="docutils literal notranslate"><span class="pre">'……'</span></code>），双引号（<code class="docutils literal notranslate"><span class="pre">&quot;……&quot;</span></code>）都可以获得同样的结果 <a class="footnote-reference brackets" href="#id4" id="id2">2</a>。反斜杠 <code class="docutils literal notranslate"><span class="pre">\</span></code> 可以用来转义:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;spam eggs&#39;</span>  <span class="c1"># single quotes</span>
 <span class="go">&#39;spam eggs&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t&#39;</span>  <span class="c1"># use \&#39; to escape the single quote...</span>
@@ -353,30 +361,30 @@
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<dl class="last docutils">
-<dt><a class="reference internal" href="stdtypes.html#textseq" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#textseq"><span class="std std-ref">文本序列类型 --- str</span></a></dt>
-<dd>字符串是一种 <em>序列类型</em> ，因此也支持序列类型的各种操作。</dd>
-<dt><a class="reference internal" href="stdtypes.html#string-methods" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods"><span class="std std-ref">字符串的方法</span></a></dt>
-<dd>字符串支持许多变换和查找的方法。</dd>
-<dt><a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">格式化字符串字面值</span></a></dt>
-<dd>内嵌表达式的字符串字面值。</dd>
-<dt><a class="reference internal" href="string.html#formatstrings" tppabs="https://docs.python.org/zh-cn/3/library/string.html#formatstrings"><span class="std std-ref">Format String Syntax</span></a></dt>
-<dd>使用 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> 进行字符串格式化。</dd>
-<dt><a class="reference internal" href="stdtypes.html#old-string-formatting" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#old-string-formatting"><span class="std std-ref">printf 风格的字符串格式化</span></a></dt>
-<dd>这里详述了使用 <code class="docutils literal notranslate"><span class="pre">%</span></code> 运算符进行字符串格式化。</dd>
+<p class="admonition-title">参见</p>
+<dl class="simple">
+<dt><a class="reference internal" href="stdtypes.html#textseq" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#textseq"><span class="std std-ref">文本序列类型 --- str</span></a></dt><dd><p>字符串是一种 <em>序列类型</em> ，因此也支持序列类型的各种操作。</p>
+</dd>
+<dt><a class="reference internal" href="stdtypes.html#string-methods" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods"><span class="std std-ref">字符串的方法</span></a></dt><dd><p>字符串支持许多变换和查找的方法。</p>
+</dd>
+<dt><a class="reference internal" href="lexical_analysis.html#f-strings" tppabs="https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings"><span class="std std-ref">格式化字符串字面值</span></a></dt><dd><p>内嵌表达式的字符串字面值。</p>
+</dd>
+<dt><a class="reference internal" href="string.html#formatstrings" tppabs="https://docs.python.org/zh-cn/3/library/string.html#formatstrings"><span class="std std-ref">格式字符串语法</span></a></dt><dd><p>使用 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> 进行字符串格式化。</p>
+</dd>
+<dt><a class="reference internal" href="stdtypes.html#old-string-formatting" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#old-string-formatting"><span class="std std-ref">printf 风格的字符串格式化</span></a></dt><dd><p>这里详述了使用 <code class="docutils literal notranslate"><span class="pre">%</span></code> 运算符进行字符串格式化。</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="lists">
-<span id="tut-lists"></span><h3>3.1.3. 列表<a class="headerlink" href="#lists" title="永久链接至标题">¶</a></h3>
+<span id="tut-lists"></span><h3><span class="section-number">3.1.3. </span>列表<a class="headerlink" href="#lists" title="永久链接至标题">¶</a></h3>
 <p>Python 中可以通过组合一些值得到多种 <em>复合</em> 数据类型。其中最常用的 <em>列表</em> ，可以通过方括号括起、逗号分隔的一组值得到。一个 <em>列表</em> 可以包含不同类型的元素，但通常使用时各个元素类型相同:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span>
 <span class="go">[1, 4, 9, 16, 25]</span>
 </pre></div>
 </div>
-<p>和字符串及各种内建的 <a class="reference internal" href="glossary.html#term-sequence" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-sequence"><span class="xref std std-term">sequence</span></a> 类型一样，列表也支持索引和切片:</p>
+<p>和字符串（以及各种内置的 <a class="reference internal" href="glossary.html#term-sequence" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-sequence"><span class="xref std std-term">sequence</span></a> 类型）一样，列表也支持索引和切片:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># indexing returns the item</span>
 <span class="go">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -385,7 +393,7 @@
 <span class="go">[9, 16, 25]</span>
 </pre></div>
 </div>
-<p>所有的切片操作都返回一个新列表，这个新列表包含所需要的元素。就是说，如下的切片会返回列表的一个新的(浅)拷贝:</p>
+<p>所有的切片操作都返回一个包含所请求元素的新列表。 这意味着以下切片操作会返回列表的一个 <a class="reference internal" href="copy.html#shallow-vs-deep-copy" tppabs="https://docs.python.org/zh-cn/3/library/copy.html#shallow-vs-deep-copy"><span class="std std-ref">浅拷贝</span></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[:]</span>
 <span class="go">[1, 4, 9, 16, 25]</span>
 </pre></div>
@@ -450,8 +458,8 @@
 </div>
 </div>
 <div class="section" id="first-steps-towards-programming">
-<span id="tut-firststeps"></span><h2>3.2. 走向编程的第一步<a class="headerlink" href="#first-steps-towards-programming" title="永久链接至标题">¶</a></h2>
-<p>当然，我们可以将 Python 用于更复杂的任务，而不是仅仅两个和两个一起添加。 例如，我们可以编写 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Fibonacci_number  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Fibonacci_number'" tppabs="https://en.wikipedia.org/wiki/Fibonacci_number">斐波那契数列</a> 的初始子序列，如下所示:</p>
+<span id="tut-firststeps"></span><h2><span class="section-number">3.2. </span>走向编程的第一步<a class="headerlink" href="#first-steps-towards-programming" title="永久链接至标题">¶</a></h2>
+<p>当然，我们可以将 Python 用于更复杂的任务，而不是仅仅两个和两个一起添加。 例如，我们可以编写 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38668  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue38668'" tppabs="https://en.wikipedia.org/wiki/Fibonacci_number">斐波那契数列</a> 的初始子序列，如下所示:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Fibonacci series:</span>
 <span class="gp">... </span><span class="c1"># the sum of two elements defines the next</span>
 <span class="gp">... </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
@@ -470,13 +478,10 @@
 </div>
 <p>这个例子引入了几个新的特点。</p>
 <ul>
-<li><p class="first">第一行含有一个 <em>多重赋值</em>: 变量 <code class="docutils literal notranslate"><span class="pre">a</span></code> 和 <code class="docutils literal notranslate"><span class="pre">b</span></code> 同时得到了新值 0 和 1.  最后一行又用了一次多重赋值, 这体现出了右手边的表达式，在任何赋值发生之前就被求值了。右手边的表达式是从左到右被求值的。</p>
-</li>
-<li><p class="first"><a class="reference internal" href="compound_stmts.html#while" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#while"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">while</span></code></a> 循环只要它的条件（这里指： <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">10</span></code>）保持为真就会一直执行。Python 和 C 一样，任何非零整数都为真；零为假。这个条件也可以是字符串或是列表的值，事实上任何序列都可以；长度非零就为真，空序列就为假。在这个例子里，判断条件是一个简单的比较。标准的比较操作符的写法和 C 语言里是一样： <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> （小于）、 <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> （大于）、 <code class="docutils literal notranslate"><span class="pre">==</span></code> （等于）、 <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> （小于或等于)、 <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> （大于或等于）以及 <code class="docutils literal notranslate"><span class="pre">!=</span></code> （不等于）。</p>
-</li>
-<li><p class="first"><em>循环体</em> 是 <em>缩进的</em> ：缩进是 Python 组织语句的方式。在交互式命令行里，你得给每个缩进的行敲下 Tab 键或者（多个）空格键。实际上用文本编辑器的话，你要准备更复杂的输入方式；所有像样的文本编辑器都有自动缩进的设置。交互式命令行里，当一个组合的语句输入时, 需要在最后敲一个空白行表示完成（因为语法分析器猜不出来你什么时候打的是最后一行）。注意，在同一块语句中的每一行，都要缩进相同的长度。</p>
-</li>
-<li><p class="first"><a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> 函数将所有传进来的参数值打印出来. 它和直接输入你要显示的表达式(比如我们之前在计算器的例子里做的)不一样， print() 能处理多个参数，包括浮点数，字符串。 字符串会打印不带引号的内容, 并且在参数项之间会插入一个空格, 这样你就可以很好的把东西格式化, 像这样:</p>
+<li><p>第一行含有一个 <em>多重赋值</em>: 变量 <code class="docutils literal notranslate"><span class="pre">a</span></code> 和 <code class="docutils literal notranslate"><span class="pre">b</span></code> 同时得到了新值 0 和 1.  最后一行又用了一次多重赋值, 这体现出了右手边的表达式，在任何赋值发生之前就被求值了。右手边的表达式是从左到右被求值的。</p></li>
+<li><p><a class="reference internal" href="compound_stmts.html#while" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#while"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">while</span></code></a> 循环只要它的条件（这里指： <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">10</span></code>）保持为真就会一直执行。Python 和 C 一样，任何非零整数都为真；零为假。这个条件也可以是字符串或是列表的值，事实上任何序列都可以；长度非零就为真，空序列就为假。在这个例子里，判断条件是一个简单的比较。标准的比较操作符的写法和 C 语言里是一样： <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> （小于）、 <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> （大于）、 <code class="docutils literal notranslate"><span class="pre">==</span></code> （等于）、 <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> （小于或等于)、 <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> （大于或等于）以及 <code class="docutils literal notranslate"><span class="pre">!=</span></code> （不等于）。</p></li>
+<li><p><em>循环体</em> 是 <em>缩进的</em> ：缩进是 Python 组织语句的方式。在交互式命令行里，你得给每个缩进的行敲下 Tab 键或者（多个）空格键。实际上用文本编辑器的话，你要准备更复杂的输入方式；所有像样的文本编辑器都有自动缩进的设置。交互式命令行里，当一个组合的语句输入时, 需要在最后敲一个空白行表示完成（因为语法分析器猜不出来你什么时候打的是最后一行）。注意，在同一块语句中的每一行，都要缩进相同的长度。</p></li>
+<li><p><a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> 函数将所有传进来的参数值打印出来. 它和直接输入你要显示的表达式(比如我们之前在计算器的例子里做的)不一样， print() 能处理多个参数，包括浮点数，字符串。 字符串会打印不带引号的内容, 并且在参数项之间会插入一个空格, 这样你就可以很好的把东西格式化, 像这样:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">256</span><span class="o">*</span><span class="mi">256</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of i is&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 <span class="go">The value of i is 65536</span>
@@ -494,18 +499,14 @@
 </li>
 </ul>
 <p class="rubric">脚注</p>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>因为 <code class="docutils literal notranslate"><span class="pre">**</span></code> 比 <code class="docutils literal notranslate"><span class="pre">-</span></code> 有更高的优先级, 所以 <code class="docutils literal notranslate"><span class="pre">-3**2</span></code> 会被解释成 <code class="docutils literal notranslate"><span class="pre">-(3**2)</span></code> ，因此结果是 <code class="docutils literal notranslate"><span class="pre">-9</span></code>.  为了避免这个并且得到结果 <code class="docutils literal notranslate"><span class="pre">9</span></code>, 你可以用这个式子 <code class="docutils literal notranslate"><span class="pre">(-3)**2</span></code>.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>和其他语言不一样的是, 特殊字符比如说 <code class="docutils literal notranslate"><span class="pre">\n</span></code> 在单引号 (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) 和双引号 (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) 里有一样的意义. 这两种引号唯一的区别是，你不需要在单引号里转义双引号 <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (但是你必须把单引号转义成 <code class="docutils literal notranslate"><span class="pre">\'</span></code>) ， 反之亦然.</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>因为 <code class="docutils literal notranslate"><span class="pre">**</span></code> 比 <code class="docutils literal notranslate"><span class="pre">-</span></code> 有更高的优先级, 所以 <code class="docutils literal notranslate"><span class="pre">-3**2</span></code> 会被解释成 <code class="docutils literal notranslate"><span class="pre">-(3**2)</span></code> ，因此结果是 <code class="docutils literal notranslate"><span class="pre">-9</span></code>.  为了避免这个并且得到结果 <code class="docutils literal notranslate"><span class="pre">9</span></code>, 你可以用这个式子 <code class="docutils literal notranslate"><span class="pre">(-3)**2</span></code>.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>和其他语言不一样的是, 特殊字符比如说 <code class="docutils literal notranslate"><span class="pre">\n</span></code> 在单引号 (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) 和双引号 (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) 里有一样的意义. 这两种引号唯一的区别是，你不需要在单引号里转义双引号 <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (但是你必须把单引号转义成 <code class="docutils literal notranslate"><span class="pre">\'</span></code>) ， 反之亦然.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -515,7 +516,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">3. Python 的非正式介绍</a><ul>
 <li><a class="reference internal" href="#using-python-as-a-calculator">3.1. Python 作为计算器使用</a><ul>
@@ -531,16 +532,16 @@
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="interpreter.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/interpreter.html"
-                        title="上一章">2. 使用 Python 解释器</a></p>
+                        title="上一章"><span class="section-number">2. </span>使用 Python 解释器</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="controlflow.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/controlflow.html"
-                        title="下一章">4. 其他流程控制工具</a></p>
+                        title="下一章"><span class="section-number">4. </span>其他流程控制工具</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/tutorial/introduction.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/tutorial/introduction.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/tutorial/introduction.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/tutorial/introduction.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/tutorial/introduction.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/tutorial/introduction.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -565,14 +566,17 @@
         <li class="right" >
           <a href="interpreter.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/interpreter.html" title="2. 使用 Python 解释器"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" >Python 教程</a> &#187;</li>
     <li class="right">
@@ -593,15 +597,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>codeop --- Compile Python code &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>codeop --- ç¼–è¯‘Pythonä»£ç  &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="å¯¼å…¥æ¨¡å—" href="modules.html" />
-    <link rel="prev" title="code --- Interpreter base classes" href="code.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="code --- è§£é‡Šå™¨åŸºç±»" href="code.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/codeop.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -59,16 +64,19 @@
           <a href="modules-1.html" tppabs="https://docs.python.org/zh-cn/3/library/modules.html" title="å¯¼å…¥æ¨¡å—"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="code.html" tppabs="https://docs.python.org/zh-cn/3/library/code.html" title="code --- Interpreter base classes"
+          <a href="code.html" tppabs="https://docs.python.org/zh-cn/3/library/code.html" title="code --- è§£é‡Šå™¨åŸºç±»"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="custominterp.html" tppabs="https://docs.python.org/zh-cn/3/library/custominterp.html" accesskey="U">è‡ªå®šä¹‰ Python è§£é‡Šå™¨</a> &#187;</li>
@@ -96,65 +104,39 @@
           <div class="body" role="main">
             
   <div class="section" id="module-codeop">
-<span id="codeop-compile-python-code"></span><h1><a class="reference internal" href="#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> --- Compile Python code<a class="headerlink" href="#module-codeop" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/codeop.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/codeop.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/codeop.py">Lib/codeop.py</a></p>
+<span id="codeop-compile-python-code"></span><h1><a class="reference internal" href="#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> --- ç¼–è¯‘Pythonä»£ç <a class="headerlink" href="#module-codeop" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç ï¼š</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/codeop.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/codeop.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/codeop.py">Lib/codeop.py</a></p>
 <hr class="docutils" />
-<p>The <a class="reference internal" href="#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> module provides utilities upon which the Python
-read-eval-print loop can be emulated, as is done in the <a class="reference internal" href="code.html#module-code" tppabs="https://docs.python.org/zh-cn/3/library/code.html#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a> module.  As
-a result, you probably don't want to use the module directly; if you want to
-include such a loop in your program you probably want to use the <a class="reference internal" href="code.html#module-code" tppabs="https://docs.python.org/zh-cn/3/library/code.html#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a>
-module instead.</p>
-<p>There are two parts to this job:</p>
+<p><a class="reference internal" href="#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> æ¨¡å—æä¾›äº†å¯ä»¥æ¨¡æ‹ŸPythonè¯»å–-æ‰§è¡Œ-æ‰“å°å¾ªç¯çš„å®ç”¨ç¨‹åºï¼Œå°±åƒåœ¨ <a class="reference internal" href="code.html#module-code" tppabs="https://docs.python.org/zh-cn/3/library/code.html#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a> æ¨¡å—ä¸­ä¸€æ ·ã€‚å› æ­¤ï¼Œæ‚¨å¯èƒ½ä¸å¸Œæœ›ç›´æ¥ä½¿ç”¨è¯¥æ¨¡å—ï¼›å¦‚æœä½ æƒ³åœ¨ç¨‹åºä¸­åŒ…å«è¿™æ ·ä¸€ä¸ªå¾ªç¯ï¼Œä½ å¯èƒ½éœ€è¦ä½¿ç”¨ <a class="reference internal" href="code.html#module-code" tppabs="https://docs.python.org/zh-cn/3/library/code.html#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a> æ¨¡å—ã€‚</p>
+<p>è¿™ä¸ªä»»åŠ¡æœ‰ä¸¤ä¸ªéƒ¨åˆ†:</p>
 <ol class="arabic simple">
-<li>Being able to tell if a line of input completes a Python  statement: in
-short, telling whether to print '<code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>' or '<code class="docutils literal notranslate"><span class="pre">...</span></code>' next.</li>
-<li>Remembering which future statements the user has entered, so  subsequent
-input can be compiled with these in effect.</li>
+<li><p>èƒ½å¤Ÿåˆ¤æ–­ä¸€è¡Œè¾“å…¥æ˜¯å¦å®Œæˆäº†ä¸€ä¸ªPythonè¯­å¥ï¼šç®€è€Œè¨€ä¹‹ï¼Œå‘Šè¯‰æˆ‘ä»¬æ˜¯å¦è¦æ‰“å°'&quot;&gt;&gt;&gt;&quot;'æˆ–'&quot;...&quot;'ã€‚</p></li>
+<li><p>è®°ä½ç”¨æˆ·å·²è¾“å…¥äº†å“ªäº› future è¯­å¥ï¼Œè¿™æ ·åç»­çš„è¾“å…¥å¯ä»¥åœ¨è¿™äº›è¯­å¥è¢«å¯ç”¨çš„çŠ¶æ€ä¸‹è¢«ç¼–è¯‘ã€‚</p></li>
 </ol>
-<p>The <a class="reference internal" href="#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> module provides a way of doing each of these things, and a way
-of doing them both.</p>
-<p>To do just the former:</p>
+<p><a class="reference internal" href="#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> æ¨¡å—æä¾›äº†åˆ†åˆ«ä»¥åŠåŒæ—¶æ‰§è¡Œè¿™ä¸¤ä¸ªéƒ¨åˆ†çš„æ–¹å¼ã€‚</p>
+<p>åªæ‰§è¡Œå‰ä¸€éƒ¨åˆ†ï¼š</p>
 <dl class="function">
 <dt id="codeop.compile_command">
-<code class="descclassname">codeop.</code><code class="descname">compile_command</code><span class="sig-paren">(</span><em>source</em>, <em>filename=&quot;&lt;input&gt;&quot;</em>, <em>symbol=&quot;single&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#codeop.compile_command" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Tries to compile <em>source</em>, which should be a string of Python code and return a
-code object if <em>source</em> is valid Python code. In that case, the filename
-attribute of the code object will be <em>filename</em>, which defaults to
-<code class="docutils literal notranslate"><span class="pre">'&lt;input&gt;'</span></code>. Returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if <em>source</em> is <em>not</em> valid Python code, but is a
-prefix of valid Python code.</p>
-<p>If there is a problem with <em>source</em>, an exception will be raised.
-<a class="reference internal" href="exceptions.html#SyntaxError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a> is raised if there is invalid Python syntax, and
-<a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> or <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if there is an invalid literal.</p>
-<p>The <em>symbol</em> argument determines whether <em>source</em> is compiled as a statement
-(<code class="docutils literal notranslate"><span class="pre">'single'</span></code>, the default) or as an <a class="reference internal" href="glossary.html#term-expression" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-expression"><span class="xref std std-term">expression</span></a> (<code class="docutils literal notranslate"><span class="pre">'eval'</span></code>).  Any
-other value will cause <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> to  be raised.</p>
+<code class="sig-prename descclassname">codeop.</code><code class="sig-name descname">compile_command</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">filename=&quot;&lt;input&gt;&quot;</em>, <em class="sig-param">symbol=&quot;single&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#codeop.compile_command" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>å°è¯•ç¼–è¯‘ <em>source</em>ï¼Œè¿™åº”å½“æ˜¯ä¸€ä¸ª Python ä»£ç å­—ç¬¦ä¸²ï¼Œå¹¶ä¸”åœ¨ <em>source</em> æ˜¯æœ‰æ•ˆçš„ Python ä»£ç æ—¶è¿”å›ä¸€ä¸ªä»£ç å¯¹è±¡ã€‚ åœ¨æ­¤æƒ…å†µä¸‹ï¼Œä»£ç å¯¹è±¡çš„ filename å±æ€§å°†ä¸º <em>filename</em>ï¼Œå…¶é»˜è®¤å€¼ä¸º <code class="docutils literal notranslate"><span class="pre">'&lt;input&gt;'</span></code>ã€‚ å¦‚æœ <em>source</em> <em>ä¸æ˜¯</em> æœ‰æ•ˆçš„ Python ä»£ç è€Œæ˜¯æœ‰æ•ˆçš„ Python ä»£ç çš„ä¸€ä¸ªå‰ç¼€æ—¶å°†è¿”å› <code class="docutils literal notranslate"><span class="pre">None</span></code>ã€‚</p>
+<p>å¦‚æœ <em>source</em> å­˜åœ¨é—®é¢˜ï¼Œå°†å¼•å‘å¼‚å¸¸ã€‚ å¦‚æœå­˜åœ¨æ— æ•ˆçš„ Python è¯­æ³•å°†å¼•å‘ <a class="reference internal" href="exceptions.html#SyntaxError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a>ï¼Œè€Œå¦‚æœå­˜åœ¨æ— æ•ˆçš„å­—é¢å€¼åˆ™å°†å¼•å‘ <a class="reference internal" href="exceptions.html#OverflowError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> æˆ– <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>ã€‚</p>
+<p><em>symbol</em> å‚æ•°ç¡®å®š <em>source</em> æ˜¯ç¼–è¯‘ä¸ºè¯­å¥ (å¯¹åº”é»˜è®¤å€¼ <code class="docutils literal notranslate"><span class="pre">'single'</span></code>) è¿˜æ˜¯ <a class="reference internal" href="glossary.html#term-expression" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-expression"><span class="xref std std-term">expression</span></a> (<code class="docutils literal notranslate"><span class="pre">'eval'</span></code>)ã€‚ ä»»ä½•å…¶ä»–å€¼éƒ½å°†å¯¼è‡´å¼•å‘ <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>ã€‚</p>
 <div class="admonition note">
-<p class="first admonition-title">æ³¨è§£</p>
-<p class="last">It is possible (but not likely) that the parser stops parsing with a
-successful outcome before reaching the end of the source; in this case,
-trailing symbols may be ignored instead of causing an error.  For example,
-a backslash followed by two newlines may be followed by arbitrary garbage.
-This will be fixed once the API for the parser is better.</p>
+<p class="admonition-title">æ³¨è§£</p>
+<p>è§£æå™¨æœ‰å¯èƒ½ï¼ˆä½†å¾ˆä¸å¸¸è§ï¼‰ä¼šåœ¨åˆ°è¾¾æºç ç»“å°¾ä¹‹å‰åœæ­¢è§£æå¹¶æˆåŠŸè¾“å‡ºç»“æœï¼›åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œæœ«å°¾çš„ç¬¦å·å¯èƒ½ä¼šè¢«å¿½ç•¥è€Œä¸æ˜¯å¼•å‘é”™è¯¯ã€‚ ä¾‹å¦‚ï¼Œä¸€ä¸ªåæ–œæ åŠ ä¸¤ä¸ªæ¢è¡Œç¬¦ä¹‹åå¯ä»¥è·Ÿéšä»»ä½•æ— æ„ä¹‰çš„ç¬¦å·ã€‚ ä¸€æ—¦è§£æå™¨ API å¾—åˆ°æ”¹è¿›å°†ä¿®æ­£è¿™ä¸ªé—®é¢˜ã€‚</p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="codeop.Compile">
-<em class="property">class </em><code class="descclassname">codeop.</code><code class="descname">Compile</code><a class="headerlink" href="#codeop.Compile" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Instances of this class have <a class="reference internal" href="datamodel.html#object.__call__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__call__" title="object.__call__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__call__()</span></code></a> methods identical in signature to
-the built-in function <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a>, but with the difference that if the
-instance compiles program text containing a <a class="reference internal" href="__future__.html#module-__future__" tppabs="https://docs.python.org/zh-cn/3/library/__future__.html#module-__future__" title="__future__: Future statement definitions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__future__</span></code></a> statement, the
-instance 'remembers' and compiles all subsequent program texts with the
-statement in force.</p>
+<em class="property">class </em><code class="sig-prename descclassname">codeop.</code><code class="sig-name descname">Compile</code><a class="headerlink" href="#codeop.Compile" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿™ä¸ªç±»çš„å®ä¾‹å…·æœ‰ <a class="reference internal" href="datamodel.html#object.__call__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__call__" title="object.__call__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__call__()</span></code></a> æ–¹æ³•ï¼Œå…¶ç­¾åä¸å†…ç½®å‡½æ•° <a class="reference internal" href="functions.html#compile" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> ç›¸ä¼¼ï¼ŒåŒºåˆ«åœ¨äºå¦‚æœè¯¥å®ä¾‹ç¼–è¯‘äº†åŒ…å« <a class="reference internal" href="__future__.html#module-__future__" tppabs="https://docs.python.org/zh-cn/3/library/__future__.html#module-__future__" title="__future__: Future statement definitions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__future__</span></code></a> è¯­å¥çš„ç¨‹åºæ–‡æœ¬ï¼Œåˆ™å®ä¾‹ä¼šâ€˜è®°ä½â€™å¹¶ä½¿ç”¨å·²ç”Ÿæ•ˆçš„è¯­å¥ç¼–è¯‘æ‰€æœ‰åç»­ç¨‹åºæ–‡æœ¬ã€‚</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="codeop.CommandCompiler">
-<em class="property">class </em><code class="descclassname">codeop.</code><code class="descname">CommandCompiler</code><a class="headerlink" href="#codeop.CommandCompiler" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Instances of this class have <a class="reference internal" href="datamodel.html#object.__call__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__call__" title="object.__call__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__call__()</span></code></a> methods identical in signature to
-<a class="reference internal" href="#codeop.compile_command" title="codeop.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a>; the difference is that if the instance compiles program
-text containing a <code class="docutils literal notranslate"><span class="pre">__future__</span></code> statement, the instance 'remembers' and
-compiles all subsequent program texts with the statement in force.</p>
+<em class="property">class </em><code class="sig-prename descclassname">codeop.</code><code class="sig-name descname">CommandCompiler</code><a class="headerlink" href="#codeop.CommandCompiler" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>è¿™ä¸ªç±»çš„å®ä¾‹å…·æœ‰ <a class="reference internal" href="datamodel.html#object.__call__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__call__" title="object.__call__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__call__()</span></code></a> æ–¹æ³•ï¼Œå…¶ç­¾åä¸ <a class="reference internal" href="#codeop.compile_command" title="codeop.compile_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile_command()</span></code></a> ç›¸ä¼¼ï¼›åŒºåˆ«åœ¨äºå¦‚æœè¯¥å®ä¾‹ç¼–è¯‘äº†åŒ…å« <code class="docutils literal notranslate"><span class="pre">__future__</span></code> è¯­å¥çš„ç¨‹åºæ–‡æœ¬ï¼Œåˆ™å®ä¾‹ä¼šâ€˜è®°ä½â€™å¹¶ä½¿ç”¨å·²ç”Ÿæ•ˆçš„è¯­å¥ç¼–è¯‘ç¼–è¯‘æ‰€æœ‰åç»­ç¨‹åºæ–‡æœ¬ã€‚</p>
 </dd></dl>
 
 </div>
@@ -167,7 +149,7 @@ compiles all subsequent program texts with the statement in force.</p>
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="code.html" tppabs="https://docs.python.org/zh-cn/3/library/code.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">code</span></code> --- Interpreter base classes</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code> --- è§£é‡Šå™¨åŸºç±»</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="modules-1.html" tppabs="https://docs.python.org/zh-cn/3/library/modules.html"
                         title="ä¸‹ä¸€ç« ">å¯¼å…¥æ¨¡å—</a></p>
@@ -176,7 +158,7 @@ compiles all subsequent program texts with the statement in force.</p>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/codeop.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/codeop.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/codeop.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/codeop.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/codeop.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/codeop.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -199,16 +181,19 @@ compiles all subsequent program texts with the statement in force.</p>
           <a href="modules-1.html" tppabs="https://docs.python.org/zh-cn/3/library/modules.html" title="å¯¼å…¥æ¨¡å—"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="code.html" tppabs="https://docs.python.org/zh-cn/3/library/code.html" title="code --- Interpreter base classes"
+          <a href="code.html" tppabs="https://docs.python.org/zh-cn/3/library/code.html" title="code --- è§£é‡Šå™¨åŸºç±»"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="custominterp.html" tppabs="https://docs.python.org/zh-cn/3/library/custominterp.html" >è‡ªå®šä¹‰ Python è§£é‡Šå™¨</a> &#187;</li>
@@ -230,15 +215,19 @@ compiles all subsequent program texts with the statement in force.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

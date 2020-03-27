@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Platform Support &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>å¹³å°æ”¯æŒ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="é«˜çº§APIç´¢å¼•" href="asyncio-api-index.html" />
-    <link rel="prev" title="Policies" href="asyncio-policy.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="ç­–ç•¥" href="asyncio-policy.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/asyncio-platforms.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -59,20 +64,23 @@
           <a href="asyncio-api-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-api-index.html" title="é«˜çº§APIç´¢å¼•"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="asyncio-policy.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html" title="Policies"
+          <a href="asyncio-policy.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html" title="ç­–ç•¥"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >ç½‘ç»œå’Œè¿›ç¨‹é—´é€šä¿¡</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
     <li class="right">
         
 
@@ -97,77 +105,49 @@
           <div class="body" role="main">
             
   <div class="section" id="platform-support">
-<span id="asyncio-platform-support"></span><h1>Platform Support<a class="headerlink" href="#platform-support" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p>The <a class="reference internal" href="asyncio.html#module-asyncio" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> module is designed to be portable,
-but some platforms have subtle differences and limitations
-due to the platforms' underlying architecture and capabilities.</p>
+<span id="asyncio-platform-support"></span><h1>å¹³å°æ”¯æŒ<a class="headerlink" href="#platform-support" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><a class="reference internal" href="asyncio.html#module-asyncio" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> æ¨¡å—è¢«è®¾è®¡ä¸ºå¯ç§»æ¤çš„,ä½†ç”±äºå¹³å°çš„åº•å±‚æ¶æ„å’ŒåŠŸèƒ½ï¼Œä¸€äº›å¹³å°å­˜åœ¨ç»†å¾®çš„å·®å¼‚å’Œé™åˆ¶ã€‚</p>
 <div class="section" id="all-platforms">
-<h2>All Platforms<a class="headerlink" href="#all-platforms" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>æ‰€æœ‰å¹³å°<a class="headerlink" href="#all-platforms" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_reader" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_reader" title="asyncio.loop.add_reader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_reader()</span></code></a> and <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_writer" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_writer" title="asyncio.loop.add_writer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_writer()</span></code></a>
-cannot be used to monitor file I/O.</li>
+<li><p><a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_reader" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_reader" title="asyncio.loop.add_reader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_reader()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_writer" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_writer" title="asyncio.loop.add_writer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_writer()</span></code></a> ä¸èƒ½ç”¨æ¥ç›‘è§†æ–‡ä»¶I/Oã€‚</p></li>
 </ul>
 </div>
 <div class="section" id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>All event loops on Windows do not support the following methods:</p>
-<ul class="simple">
-<li><a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_unix_connection" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_unix_connection" title="asyncio.loop.create_unix_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_unix_connection()</span></code></a> and
-<a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_unix_server" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_unix_server" title="asyncio.loop.create_unix_server"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_unix_server()</span></code></a> are not supported.
-The <a class="reference internal" href="socket.html#socket.AF_UNIX" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_UNIX" title="socket.AF_UNIX"><code class="xref py py-data docutils literal notranslate"><span class="pre">socket.AF_UNIX</span></code></a> socket family is specific to Unix.</li>
-<li><a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_signal_handler" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_signal_handler" title="asyncio.loop.add_signal_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_signal_handler()</span></code></a> and
-<a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.remove_signal_handler" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.remove_signal_handler" title="asyncio.loop.remove_signal_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.remove_signal_handler()</span></code></a> are not supported.</li>
-</ul>
-<p><a class="reference internal" href="asyncio-eventloop.html#asyncio.SelectorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a> has the following limitations:</p>
-<ul class="simple">
-<li><a class="reference internal" href="selectors.html#selectors.SelectSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.SelectSelector" title="selectors.SelectSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectSelector</span></code></a> is used to wait on socket events:
-it supports sockets and is limited to 512 sockets.</li>
-<li><a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_reader" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_reader" title="asyncio.loop.add_reader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_reader()</span></code></a> and <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_writer" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_writer" title="asyncio.loop.add_writer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_writer()</span></code></a> only accept
-socket handles (e.g. pipe file descriptors are not supported).</li>
-<li>Pipes are not supported, so the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.connect_read_pipe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.connect_read_pipe" title="asyncio.loop.connect_read_pipe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.connect_read_pipe()</span></code></a>
-and <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.connect_write_pipe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.connect_write_pipe" title="asyncio.loop.connect_write_pipe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.connect_write_pipe()</span></code></a> methods are not implemented.</li>
-<li><a class="reference internal" href="asyncio-subprocess.html#asyncio-subprocess" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-subprocess.html#asyncio-subprocess"><span class="std std-ref">Subprocesses</span></a> are not supported, i.e.
-<a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_exec" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.subprocess_exec" title="asyncio.loop.subprocess_exec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_exec()</span></code></a> and <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_shell" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.subprocess_shell" title="asyncio.loop.subprocess_shell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_shell()</span></code></a>
-methods are not implemented.</li>
-</ul>
-<p><a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> has the following limitations:</p>
-<ul class="simple">
-<li>The <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_datagram_endpoint" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_datagram_endpoint" title="asyncio.loop.create_datagram_endpoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_datagram_endpoint()</span></code></a> method
-is not supported.</li>
-<li>The <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_reader" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_reader" title="asyncio.loop.add_reader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_reader()</span></code></a> and <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_writer" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_writer" title="asyncio.loop.add_writer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_writer()</span></code></a>
-methods are not supported.</li>
-</ul>
-<p>The resolution of the monotonic clock on Windows is usually around 15.6
-msec.  The best resolution is 0.5 msec. The resolution depends on the
-hardware (availability of <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue25227  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://en.wikipedia.org/wiki/issue25227'" tppabs="https://en.wikipedia.org/wiki/High_Precision_Event_Timer">HPET</a>) and on the
-Windows configuration.</p>
-<div class="section" id="subprocess-support-on-windows">
-<span id="asyncio-windows-subprocess"></span><h3>Subprocess Support on Windows<a class="headerlink" href="#subprocess-support-on-windows" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
-<p><a class="reference internal" href="asyncio-eventloop.html#asyncio.SelectorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a> on Windows does not support subproceses.
-On Windows, <a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> should be used instead:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
-
-<span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop_policy</span><span class="p">(</span>
-    <span class="n">asyncio</span><span class="o">.</span><span class="n">WindowsProactorEventLoopPolicy</span><span class="p">())</span>
-
-<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">your_code</span><span class="p">())</span>
-</pre></div>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue22347  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue22347'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/asyncio/proactor_events.py">Lib/asyncio/proactor_events.py</a>, <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37885  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37885'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/asyncio/windows_events.py">Lib/asyncio/windows_events.py</a>, <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37785  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/asyncio/issue37785'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/asyncio/windows_utils.py">Lib/asyncio/windows_utils.py</a></p>
+<hr class="docutils" />
+<div class="versionchanged">
+<p><span class="versionmodified changed">åœ¨ 3.8 ç‰ˆæ›´æ”¹: </span>åœ¨ Windows ä¸Šï¼Œ<a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> ç°åœ¨æ˜¯é»˜è®¤çš„äº‹ä»¶å¾ªç¯ã€‚</p>
 </div>
-<p>The <a class="reference internal" href="asyncio-policy.html#asyncio.AbstractEventLoopPolicy.set_child_watcher" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.set_child_watcher" title="asyncio.AbstractEventLoopPolicy.set_child_watcher"><code class="xref py py-meth docutils literal notranslate"><span class="pre">policy.set_child_watcher()</span></code></a> function is also
-not supported, as <a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> has a different mechanism
-to watch child processes.</p>
+<p>Windowsä¸Šçš„æ‰€æœ‰äº‹ä»¶å¾ªç¯éƒ½ä¸æ”¯æŒä»¥ä¸‹æ–¹æ³•:</p>
+<ul class="simple">
+<li><p>ä¸æ”¯æŒ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_unix_connection" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_unix_connection" title="asyncio.loop.create_unix_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_unix_connection()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_unix_server" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.create_unix_server" title="asyncio.loop.create_unix_server"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_unix_server()</span></code></a> ã€‚ <a class="reference internal" href="socket.html#socket.AF_UNIX" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_UNIX" title="socket.AF_UNIX"><code class="xref py py-data docutils literal notranslate"><span class="pre">socket.AF_UNIX</span></code></a> å¥—æ¥å­—ç›¸å…³å‚æ•°ä»…é™äºUnixã€‚</p></li>
+<li><p>ä¸æ”¯æŒ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_signal_handler" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_signal_handler" title="asyncio.loop.add_signal_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_signal_handler()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.remove_signal_handler" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.remove_signal_handler" title="asyncio.loop.remove_signal_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.remove_signal_handler()</span></code></a> ã€‚</p></li>
+</ul>
+<p><a class="reference internal" href="asyncio-eventloop.html#asyncio.SelectorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a> æœ‰ä¸‹åˆ—é™åˆ¶:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="selectors.html#selectors.SelectSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.SelectSelector" title="selectors.SelectSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectSelector</span></code></a> åªè¢«ç”¨äºç­‰å¾…å¥—æ¥å­—äº‹ä»¶ï¼šå®ƒæ”¯æŒå¥—æ¥å­—ä¸”æœ€å¤šæ”¯æŒ512ä¸ªå¥—æ¥å­—ã€‚</p></li>
+<li><p><a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_reader" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_reader" title="asyncio.loop.add_reader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_reader()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_writer" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_writer" title="asyncio.loop.add_writer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_writer()</span></code></a> åªæ¥å—å¥—æ¥å­—å¤„ç†å›è°ƒå‡½æ•°(å¦‚ç®¡é“ã€æ–‡ä»¶æè¿°ç¬¦ç­‰éƒ½ä¸æ”¯æŒ)ã€‚</p></li>
+<li><p>å› ä¸ºä¸æ”¯æŒç®¡é“ï¼Œæ‰€ä»¥  <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.connect_read_pipe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.connect_read_pipe" title="asyncio.loop.connect_read_pipe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.connect_read_pipe()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.connect_write_pipe" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.connect_write_pipe" title="asyncio.loop.connect_write_pipe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.connect_write_pipe()</span></code></a> æ–¹æ³•æ²¡æœ‰å®ç°ã€‚</p></li>
+<li><p>ä¸æ”¯æŒ <a class="reference internal" href="asyncio-subprocess.html#asyncio-subprocess" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-subprocess.html#asyncio-subprocess"><span class="std std-ref">Subprocesses</span></a> ï¼Œä¹Ÿå°±æ˜¯  <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_exec" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.subprocess_exec" title="asyncio.loop.subprocess_exec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_exec()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_shell" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.subprocess_shell" title="asyncio.loop.subprocess_shell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_shell()</span></code></a> æ–¹æ³•æ²¡æœ‰å®ç°ã€‚</p></li>
+</ul>
+<p><a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> æœ‰ä¸‹åˆ—é™åˆ¶:</p>
+<ul class="simple">
+<li><p>ä¸æ”¯æŒ  <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_reader" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_reader" title="asyncio.loop.add_reader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_reader()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.add_writer" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.add_writer" title="asyncio.loop.add_writer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.add_writer()</span></code></a> æ–¹æ³•ã€‚</p></li>
+</ul>
+<p>Windowsä¸Šå•è°ƒæ—¶é’Ÿçš„åˆ†è¾¨ç‡å¤§çº¦ä¸º 15.6 æ¯«ç§’ã€‚æœ€ä½³çš„åˆ†è¾¨ç‡æ˜¯ 0.5 æ¯«ç§’ã€‚åˆ†è¾¨ç‡ä¾èµ–äºå…·ä½“çš„ç¡¬ä»¶ï¼ˆ<a class="reference external" href="javascript:if(confirm('https://zh.wikipedia.org/wiki/issue11953  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://zh.wikipedia.org/wiki/issue11953'" tppabs="https://zh.wikipedia.org/wiki/é«˜ç²¾åº¦äº‹ä»¶è®¡æ—¶å™¨">HPET</a>ï¼‰å’ŒWindowsçš„è®¾ç½®ã€‚</p>
+<div class="section" id="subprocess-support-on-windows">
+<span id="asyncio-windows-subprocess"></span><h3>Windowsçš„å­è¿›ç¨‹æ”¯æŒ<a class="headerlink" href="#subprocess-support-on-windows" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>åœ¨ Windows ä¸Šï¼Œé»˜è®¤çš„äº‹ä»¶å¾ªç¯ <a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> æ”¯æŒå­è¿›ç¨‹ï¼Œè€Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.SelectorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a> åˆ™ä¸æ”¯æŒã€‚</p>
+<p>ä¹Ÿä¸æ”¯æŒ <a class="reference internal" href="asyncio-policy.html#asyncio.AbstractEventLoopPolicy.set_child_watcher" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.set_child_watcher" title="asyncio.AbstractEventLoopPolicy.set_child_watcher"><code class="xref py py-meth docutils literal notranslate"><span class="pre">policy.set_child_watcher()</span></code></a> å‡½æ•°ï¼Œ<a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> æœ‰ä¸åŒçš„æœºåˆ¶æ¥ç›‘è§†å­è¿›ç¨‹ã€‚</p>
 </div>
 </div>
 <div class="section" id="macos">
 <h2>macOS<a class="headerlink" href="#macos" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>Modern macOS versions are fully supported.</p>
+<p>å®Œæ•´æ”¯æŒæµè¡Œçš„macOSç‰ˆæœ¬ã€‚</p>
 <p class="rubric">macOS &lt;= 10.8</p>
-<p>On macOS 10.6, 10.7 and 10.8, the default event loop
-uses <a class="reference internal" href="selectors.html#selectors.KqueueSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.KqueueSelector" title="selectors.KqueueSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">selectors.KqueueSelector</span></code></a>, which does not support
-character devices on these versions.  The <a class="reference internal" href="asyncio-eventloop.html#asyncio.SelectorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a>
-can be manually configured to use <a class="reference internal" href="selectors.html#selectors.SelectSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.SelectSelector" title="selectors.SelectSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectSelector</span></code></a>
-or <a class="reference internal" href="selectors.html#selectors.PollSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.PollSelector" title="selectors.PollSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">PollSelector</span></code></a> to support character devices on
-these older versions of macOS.  Example:</p>
+<p>åœ¨ macOS 10.6, 10.7 å’Œ 10.8 ä¸Šï¼Œé»˜è®¤çš„äº‹ä»¶å¾ªç¯ä½¿ç”¨ <a class="reference internal" href="selectors.html#selectors.KqueueSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.KqueueSelector" title="selectors.KqueueSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">selectors.KqueueSelector</span></code></a>ï¼Œåœ¨è¿™äº›ç‰ˆæœ¬ä¸Šå®ƒå¹¶ä¸æ”¯æŒå­—ç¬¦è®¾å¤‡ã€‚ å¯ä»¥æ‰‹å·¥é…ç½® <a class="reference internal" href="asyncio-eventloop.html#asyncio.SelectorEventLoop" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a> æ¥ä½¿ç”¨ <a class="reference internal" href="selectors.html#selectors.SelectSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.SelectSelector" title="selectors.SelectSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectSelector</span></code></a> æˆ– <a class="reference internal" href="selectors.html#selectors.PollSelector" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#selectors.PollSelector" title="selectors.PollSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">PollSelector</span></code></a> ä»¥åœ¨è¿™äº›è¾ƒè€ç‰ˆæœ¬çš„ macOS ä¸Šæ”¯æŒå­—ç¬¦è®¾å¤‡ã€‚ ä¾‹å¦‚:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="kn">import</span> <span class="nn">selectors</span>
 
@@ -185,12 +165,12 @@ these older versions of macOS.  Example:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Platform Support</a><ul>
-<li><a class="reference internal" href="#all-platforms">All Platforms</a></li>
+<li><a class="reference internal" href="#">å¹³å°æ”¯æŒ</a><ul>
+<li><a class="reference internal" href="#all-platforms">æ‰€æœ‰å¹³å°</a></li>
 <li><a class="reference internal" href="#windows">Windows</a><ul>
-<li><a class="reference internal" href="#subprocess-support-on-windows">Subprocess Support on Windows</a></li>
+<li><a class="reference internal" href="#subprocess-support-on-windows">Windowsçš„å­è¿›ç¨‹æ”¯æŒ</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#macos">macOS</a></li>
@@ -200,7 +180,7 @@ these older versions of macOS.  Example:</p>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="asyncio-policy.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html"
-                        title="ä¸Šä¸€ç« ">Policies</a></p>
+                        title="ä¸Šä¸€ç« ">ç­–ç•¥</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="asyncio-api-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-api-index.html"
                         title="ä¸‹ä¸€ç« ">é«˜çº§APIç´¢å¼•</a></p>
@@ -209,7 +189,7 @@ these older versions of macOS.  Example:</p>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-platforms.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-platforms.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-platforms.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-platforms.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-platforms.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-platforms.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -232,20 +212,23 @@ these older versions of macOS.  Example:</p>
           <a href="asyncio-api-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-api-index.html" title="é«˜çº§APIç´¢å¼•"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="asyncio-policy.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html" title="Policies"
+          <a href="asyncio-policy.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-policy.html" title="ç­–ç•¥"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >ç½‘ç»œå’Œè¿›ç¨‹é—´é€šä¿¡</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
     <li class="right">
         
 
@@ -264,15 +247,19 @@ these older versions of macOS.  Example:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>è¿­ä»£å™¨å¯¹è±¡ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>è¿­ä»£å™¨å¯¹è±¡ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="æè¿°ç¬¦å¯¹è±¡" href="descriptor.html" />
-    <link rel="prev" title="Module Objects" href="module.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="æ¨¡å—å¯¹è±¡" href="module.html" />
     <link rel="canonical" href="https://docs.python.org/3/c-api/iterator.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -59,19 +64,22 @@
           <a href="descriptor-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/descriptor.html" title="æè¿°ç¬¦å¯¹è±¡"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="module.html" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html" title="Module Objects"
+          <a href="module.html" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html" title="æ¨¡å—å¯¹è±¡"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -100,37 +108,37 @@
 <p>Python æä¾›äº†ä¸¤ä¸ªé€šç”¨è¿­ä»£å™¨å¯¹è±¡ã€‚ ç¬¬ä¸€ä¸ªæ˜¯åºåˆ—è¿­ä»£å™¨ï¼Œå®ƒä½¿ç”¨æ”¯æŒ <a class="reference internal" href="datamodel.html#object.__getitem__" tppabs="https://docs.python.org/zh-cn/3/reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> æ–¹æ³•çš„ä»»æ„åºåˆ—ã€‚ ç¬¬äºŒä¸ªä½¿ç”¨å¯è°ƒç”¨å¯¹è±¡å’Œä¸€ä¸ª sentinel å€¼ï¼Œä¸ºåºåˆ—ä¸­çš„æ¯ä¸ªé¡¹è°ƒç”¨å¯è°ƒç”¨å¯¹è±¡ï¼Œå¹¶åœ¨è¿”å› sentinel å€¼æ—¶ç»“æŸè¿­ä»£ã€‚</p>
 <dl class="var">
 <dt id="c.PySeqIter_Type">
-<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="descname">PySeqIter_Type</code><a class="headerlink" href="#c.PySeqIter_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="sig-name descname">PySeqIter_Type</code><a class="headerlink" href="#c.PySeqIter_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p><a class="reference internal" href="#c.PySeqIter_New" title="PySeqIter_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySeqIter_New()</span></code></a> è¿”å›è¿­ä»£å™¨å¯¹è±¡çš„ç±»å‹å¯¹è±¡å’Œå†…ç½®åºåˆ—ç±»å‹å†…ç½®å‡½æ•° <a class="reference internal" href="functions.html#iter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#iter" title="iter"><code class="xref py py-func docutils literal notranslate"><span class="pre">iter()</span></code></a> çš„å•å‚æ•°å½¢å¼ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PySeqIter_Check">
-int <code class="descname">PySeqIter_Check</code><span class="sig-paren">(</span>op<span class="sig-paren">)</span><a class="headerlink" href="#c.PySeqIter_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PySeqIter_Check</code><span class="sig-paren">(</span>op<span class="sig-paren">)</span><a class="headerlink" href="#c.PySeqIter_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>å¦‚æœ <em>op</em> çš„ç±»å‹ä¸º <a class="reference internal" href="#c.PySeqIter_Type" title="PySeqIter_Type"><code class="xref c c-data docutils literal notranslate"><span class="pre">PySeqIter_Type</span></code></a> åˆ™è¿”å› trueã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PySeqIter_New">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PySeqIter_New</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*seq</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PySeqIter_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PySeqIter_New</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *seq</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PySeqIter_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>è¿”å›ä¸€ä¸ªä¸å¸¸è§„åºåˆ—å¯¹è±¡ä¸€èµ·ä½¿ç”¨çš„è¿­ä»£å™¨ <em>seq</em>ã€‚ å½“åºåˆ—è®¢é˜…æ“ä½œå¼•å‘ <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> æ—¶ï¼Œè¿­ä»£ç»“æŸã€‚</p>
 </dd></dl>
 
 <dl class="var">
 <dt id="c.PyCallIter_Type">
-<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="descname">PyCallIter_Type</code><a class="headerlink" href="#c.PyCallIter_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="sig-name descname">PyCallIter_Type</code><a class="headerlink" href="#c.PyCallIter_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>ç”±å‡½æ•° <a class="reference internal" href="#c.PyCallIter_New" title="PyCallIter_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyCallIter_New()</span></code></a> å’Œ <a class="reference internal" href="functions.html#iter" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#iter" title="iter"><code class="xref py py-func docutils literal notranslate"><span class="pre">iter()</span></code></a> å†…ç½®å‡½æ•°çš„åŒå‚æ•°å½¢å¼è¿”å›çš„è¿­ä»£å™¨å¯¹è±¡ç±»å‹å¯¹è±¡ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCallIter_Check">
-int <code class="descname">PyCallIter_Check</code><span class="sig-paren">(</span>op<span class="sig-paren">)</span><a class="headerlink" href="#c.PyCallIter_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyCallIter_Check</code><span class="sig-paren">(</span>op<span class="sig-paren">)</span><a class="headerlink" href="#c.PyCallIter_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>å¦‚æœ <em>op</em> çš„ç±»å‹ä¸º <a class="reference internal" href="#c.PyCallIter_Type" title="PyCallIter_Type"><code class="xref c c-data docutils literal notranslate"><span class="pre">PyCallIter_Type</span></code></a> åˆ™è¿”å› trueã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyCallIter_New">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyCallIter_New</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*callable</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*sentinel</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCallIter_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyCallIter_New</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *callable</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *sentinel</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyCallIter_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>è¿”å›ä¸€ä¸ªæ–°çš„è¿­ä»£å™¨ã€‚ ç¬¬ä¸€ä¸ªå‚æ•° <em>callable</em> å¯ä»¥æ˜¯ä»»ä½•å¯ä»¥åœ¨æ²¡æœ‰å‚æ•°çš„æƒ…å†µä¸‹è°ƒç”¨çš„ Python å¯è°ƒç”¨å¯¹è±¡ï¼›æ¯æ¬¡è°ƒç”¨éƒ½åº”è¯¥è¿”å›è¿­ä»£ä¸­çš„ä¸‹ä¸€ä¸ªé¡¹ç›®ã€‚ å½“ <em>callable</em> è¿”å›ç­‰äº <em>sentinel</em> çš„å€¼æ—¶ï¼Œè¿­ä»£å°†ç»ˆæ­¢ã€‚</p>
 </dd></dl>
 
@@ -144,7 +152,7 @@ int <code class="descname">PyCallIter_Check</code><span class="sig-paren">(</spa
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="module.html" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html"
-                        title="ä¸Šä¸€ç« ">Module Objects</a></p>
+                        title="ä¸Šä¸€ç« ">æ¨¡å—å¯¹è±¡</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="descriptor-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/descriptor.html"
                         title="ä¸‹ä¸€ç« ">æè¿°ç¬¦å¯¹è±¡</a></p>
@@ -153,7 +161,7 @@ int <code class="descname">PyCallIter_Check</code><span class="sig-paren">(</spa
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/iterator.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/iterator.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/iterator.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/c-api/iterator.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/c-api/iterator.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/c-api/iterator.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -176,19 +184,22 @@ int <code class="descname">PyCallIter_Check</code><span class="sig-paren">(</spa
           <a href="descriptor-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/descriptor.html" title="æè¿°ç¬¦å¯¹è±¡"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="module.html" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html" title="Module Objects"
+          <a href="module.html" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html" title="æ¨¡å—å¯¹è±¡"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -207,15 +218,19 @@ int <code class="descname">PyCallIter_Check</code><span class="sig-paren">(</spa
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

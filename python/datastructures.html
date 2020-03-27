@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>5. 数据结构 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>5. 数据结构 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="6. 模块" href="modules.html" />
     <link rel="prev" title="4. 其他流程控制工具" href="controlflow.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/tutorial/datastructures.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="controlflow.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/controlflow.html" title="4. 其他流程控制工具"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" accesskey="U">Python 教程</a> &#187;</li>
     <li class="right">
@@ -95,75 +103,75 @@
           <div class="body" role="main">
             
   <div class="section" id="data-structures">
-<span id="tut-structures"></span><h1>5. 数据结构<a class="headerlink" href="#data-structures" title="永久链接至标题">¶</a></h1>
+<span id="tut-structures"></span><h1><span class="section-number">5. </span>数据结构<a class="headerlink" href="#data-structures" title="永久链接至标题">¶</a></h1>
 <p>本章将详细介绍一些您已经了解的内容，并添加了一些新内容。</p>
 <div class="section" id="more-on-lists">
-<span id="tut-morelists"></span><h2>5.1. 列表的更多特性<a class="headerlink" href="#more-on-lists" title="永久链接至标题">¶</a></h2>
+<span id="tut-morelists"></span><h2><span class="section-number">5.1. </span>列表的更多特性<a class="headerlink" href="#more-on-lists" title="永久链接至标题">¶</a></h2>
 <p>列表数据类型还有很多的方法。这里是列表对象方法的清单：</p>
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">append</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span></dt>
 <dd><p>在列表的末尾添加一个元素。相当于 <code class="docutils literal notranslate"><span class="pre">a[len(a):]</span> <span class="pre">=</span> <span class="pre">[x]</span></code> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">extend</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span></dt>
 <dd><p>使用可迭代对象中的所有元素来扩展列表。相当于  <code class="docutils literal notranslate"><span class="pre">a[len(a):]</span> <span class="pre">=</span> <span class="pre">iterable</span></code> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">insert</code><span class="sig-paren">(</span><em>i</em>, <em>x</em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param">i</em>, <em class="sig-param">x</em><span class="sig-paren">)</span></dt>
 <dd><p>在给定的位置插入一个元素。第一个参数是要插入的元素的索引，所以 <code class="docutils literal notranslate"><span class="pre">a.insert(0,</span> <span class="pre">x)</span></code> 插入列表头部， <code class="docutils literal notranslate"><span class="pre">a.insert(len(a),</span> <span class="pre">x)</span></code> 等同于 <code class="docutils literal notranslate"><span class="pre">a.append(x)</span></code> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">remove</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span></dt>
 <dd><p>移除列表中第一个值为 <em>x</em> 的元素。如果没有这样的元素，则抛出 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 异常。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">pop</code><span class="sig-paren">(</span><span class="optional">[</span><em>i</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">pop</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">i</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
 <dd><p>删除列表中给定位置的元素并返回它。如果没有给定位置，<code class="docutils literal notranslate"><span class="pre">a.pop()</span></code> 将会删除并返回列表中的最后一个元素。（ 方法签名中 <em>i</em> 两边的方括号表示这个参数是可选的，而不是要你输入方括号。你会在 Python 参考库中经常看到这种表示方法)。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>删除列表中所有的元素。相当于 <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">a[:]</span></code> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">index</code><span class="sig-paren">(</span><em>x</em><span class="optional">[</span>, <em>start</em><span class="optional">[</span>, <em>end</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">index</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="optional">[</span>, <em class="sig-param">start</em><span class="optional">[</span>, <em class="sig-param">end</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span></dt>
 <dd><p>返回列表中第一个值为 <em>x</em> 的元素的从零开始的索引。如果没有这样的元素将会抛出 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 异常。</p>
 <p>可选参数 <em>start</em> 和 <em>end</em> 是切片符号，用于将搜索限制为列表的特定子序列。返回的索引是相对于整个序列的开始计算的，而不是 <em>start</em> 参数。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">count</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">count</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span></dt>
 <dd><p>返回元素 <em>x</em> 在列表中出现的次数。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">sort</code><span class="sig-paren">(</span><em>key=None</em>, <em>reverse=False</em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">sort</code><span class="sig-paren">(</span><em class="sig-param">key=None</em>, <em class="sig-param">reverse=False</em><span class="sig-paren">)</span></dt>
 <dd><p>对列表中的元素进行排序（参数可用于自定义排序，解释请参见 <a class="reference internal" href="functions.html#sorted" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a>）。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>反转列表中的元素。</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<code class="descclassname">list.</code><code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">list.</code><code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>返回列表的一个浅拷贝。相当于 <code class="docutils literal notranslate"><span class="pre">a[:]</span></code>  。</p>
 </dd></dl>
 
@@ -190,9 +198,10 @@
 <span class="go">&#39;pear&#39;</span>
 </pre></div>
 </div>
-<p>你可能已经注意到，像 <code class="docutils literal notranslate"><span class="pre">insert</span></code> ，<code class="docutils literal notranslate"><span class="pre">remove</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">sort</span></code> 方法，只修改列表，没有打印出返回值——它们返回默认值 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。<a class="footnote-reference" href="#id2" id="id1">[1]</a> 这是Python中所有可变数据结构的设计原则。</p>
+<p>你可能已经注意到，像 <code class="docutils literal notranslate"><span class="pre">insert</span></code> ，<code class="docutils literal notranslate"><span class="pre">remove</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">sort</span></code> 方法，只修改列表，没有打印出返回值——它们返回默认值 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。<a class="footnote-reference brackets" href="#id2" id="id1">1</a> 这是Python中所有可变数据结构的设计原则。</p>
+<p>你可能会注意到的另一件事是并非所有数据或可以排序或比较。 例如，<code class="docutils literal notranslate"><span class="pre">[None,</span> <span class="pre">'hello',</span> <span class="pre">10]</span></code> 就不可排序，因为整数不能与字符串比较，而 <em>None</em> 不能与其他类型比较。 并且还存在一些没有定义顺序关系的类型。 例如，<code class="docutils literal notranslate"><span class="pre">3+4j</span> <span class="pre">&lt;</span> <span class="pre">5+7j</span></code> 就不是一个合法的比较。</p>
 <div class="section" id="using-lists-as-stacks">
-<span id="tut-lists-as-stacks"></span><h3>5.1.1. 列表作为栈使用<a class="headerlink" href="#using-lists-as-stacks" title="永久链接至标题">¶</a></h3>
+<span id="tut-lists-as-stacks"></span><h3><span class="section-number">5.1.1. </span>列表作为栈使用<a class="headerlink" href="#using-lists-as-stacks" title="永久链接至标题">¶</a></h3>
 <p>列表方法使得列表作为堆栈非常容易，最后一个插入，最先取出（“后进先出”）。要添加一个元素到堆栈的顶端，使用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">append()</span></code> 。要从堆栈顶部取出一个元素，使用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">pop()</span></code> ，不用指定索引。例如</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -213,10 +222,10 @@
 </div>
 </div>
 <div class="section" id="using-lists-as-queues">
-<span id="tut-lists-as-queues"></span><h3>5.1.2. 列表作为队列使用<a class="headerlink" href="#using-lists-as-queues" title="永久链接至标题">¶</a></h3>
+<span id="tut-lists-as-queues"></span><h3><span class="section-number">5.1.2. </span>列表作为队列使用<a class="headerlink" href="#using-lists-as-queues" title="永久链接至标题">¶</a></h3>
 <p>列表也可以用作队列，其中先添加的元素被最先取出 (“先进先出”)；然而列表用作这个目的相当低效。因为在列表的末尾添加和弹出元素非常快，但是在列表的开头插入或弹出元素却很慢 (因为所有的其他元素都必须移动一位)。</p>
 <p>若要实现一个队列， <a class="reference internal" href="collections.html#collections.deque" tppabs="https://docs.python.org/zh-cn/3/library/collections.html#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.deque</span></code></a> 被设计用于快速地从两端操作。例如</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">deque</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="s2">&quot;Eric&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Terry&quot;</span><span class="p">)</span>           <span class="c1"># Terry arrives</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Graham&quot;</span><span class="p">)</span>          <span class="c1"># Graham arrives</span>
@@ -230,7 +239,7 @@
 </div>
 </div>
 <div class="section" id="list-comprehensions">
-<span id="tut-listcomps"></span><h3>5.1.3. 列表推导式<a class="headerlink" href="#list-comprehensions" title="永久链接至标题">¶</a></h3>
+<span id="tut-listcomps"></span><h3><span class="section-number">5.1.3. </span>列表推导式<a class="headerlink" href="#list-comprehensions" title="永久链接至标题">¶</a></h3>
 <p>列表推导式提供了一个更简单的创建列表的方法。常见的用法是把某种操作应用于序列或可迭代对象的每个元素上，然后使用其结果来创建列表，或者通过满足某些特定条件元素来创建子序列。</p>
 <p>例如，假设我们想创建一个平方列表，像这样</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
@@ -266,7 +275,7 @@
 <span class="go">[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]</span>
 </pre></div>
 </div>
-<p>注意在上面两个代码片段中， <a class="reference internal" href="compound_stmts.html#for" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a>&nbsp;和 <a class="reference internal" href="compound_stmts.html#if" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">if</span></code></a>&nbsp;的顺序是相同的。</p>
+<p>注意在上面两个代码片段中， <a class="reference internal" href="compound_stmts.html#for" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a> 和 <a class="reference internal" href="compound_stmts.html#if" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">if</span></code></a> 的顺序是相同的。</p>
 <p>如果表达式是一个元组（例如上面的 <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code>），那么就必须加上括号</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># create a new list with the values doubled</span>
@@ -298,14 +307,14 @@
 </pre></div>
 </div>
 <p>列表推导式可以使用复杂的表达式和嵌套函数</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
 <span class="go">[&#39;3.1&#39;, &#39;3.14&#39;, &#39;3.142&#39;, &#39;3.1416&#39;, &#39;3.14159&#39;]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="nested-list-comprehensions">
-<h3>5.1.4. 嵌套的列表推导式<a class="headerlink" href="#nested-list-comprehensions" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.4. </span>嵌套的列表推导式<a class="headerlink" href="#nested-list-comprehensions" title="永久链接至标题">¶</a></h3>
 <p>列表推导式中的初始表达式可以是任何表达式，包括另一个列表推导式。</p>
 <p>考虑下面这个 3x4的矩阵，它由3个长度为4的列表组成</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
@@ -351,7 +360,7 @@
 </div>
 </div>
 <div class="section" id="the-del-statement">
-<span id="tut-del"></span><h2>5.2. <code class="xref std std-keyword docutils literal notranslate"><span class="pre">del</span></code> 语句<a class="headerlink" href="#the-del-statement" title="永久链接至标题">¶</a></h2>
+<span id="tut-del"></span><h2><span class="section-number">5.2. </span><code class="xref std std-keyword docutils literal notranslate"><span class="pre">del</span></code> 语句<a class="headerlink" href="#the-del-statement" title="永久链接至标题">¶</a></h2>
 <p>有一种方式可以从列表按照给定的索引而不是值来移除一个元素: 那就是 <a class="reference internal" href="simple_stmts.html#del" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">del</span></code></a> 语句。 它不同于会返回一个值的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">pop()</span></code> 方法。 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">del</span></code> 语句也可以用来从列表中移除切片或者清空整个列表（我们之前用过的方式是将一个空列表赋值给指定的切片）。 例如:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">66.25</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mf">1234.5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -372,7 +381,7 @@
 <p>此后再引用 <code class="docutils literal notranslate"><span class="pre">a</span></code> 时会报错（直到另一个值被赋给它）。我们会在后面了解到 <a class="reference internal" href="simple_stmts.html#del" tppabs="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">del</span></code></a> 的其他用法。</p>
 </div>
 <div class="section" id="tuples-and-sequences">
-<span id="tut-tuples"></span><h2>5.3. 元组和序列<a class="headerlink" href="#tuples-and-sequences" title="永久链接至标题">¶</a></h2>
+<span id="tut-tuples"></span><h2><span class="section-number">5.3. </span>元组和序列<a class="headerlink" href="#tuples-and-sequences" title="永久链接至标题">¶</a></h2>
 <p>我们看到列表和字符串有很多共同特性，例如索引和切片操作。他们是 <em>序列</em> 数据类型（参见 <a class="reference internal" href="stdtypes.html#typesseq" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#typesseq"><span class="std std-ref">序列类型 --- list, tuple, range</span></a>）中的两种。随着 Python 语言的发展，其他的序列类型也会被加入其中。这里介绍另一种标准序列类型: <em>元组</em>。</p>
 <p>一个元组由几个被逗号隔开的值组成，例如</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">54321</span><span class="p">,</span> <span class="s1">&#39;hello!&#39;</span>
@@ -412,10 +421,10 @@
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
 </pre></div>
 </div>
-<p>这被称为 <em>序列解包</em>  也是很恰当的，因为解包操作的等号右侧可以是任何序列。序列解包要求等号左侧的变量数与右侧序列里所含的元素数相同。注意可变参数其实也只是元组打包和序列解包的组合。</p>
+<p>这被称为 <em>序列解包</em>  也是很恰当的，因为解包操作的等号右侧可以是任何序列。序列解包要求等号左侧的变量数与右侧序列里所含的元素数相同。注意多重赋值其实也只是元组打包和序列解包的组合。</p>
 </div>
 <div class="section" id="sets">
-<span id="tut-sets"></span><h2>5.4. 集合<a class="headerlink" href="#sets" title="永久链接至标题">¶</a></h2>
+<span id="tut-sets"></span><h2><span class="section-number">5.4. </span>集合<a class="headerlink" href="#sets" title="永久链接至标题">¶</a></h2>
 <p>Python也包含有 <em>集合</em> 类型。集合是由不重复元素组成的无序的集。它的基本用法包括成员检测和消除重复元素。集合对象也支持像 联合，交集，差集，对称差分等数学运算。</p>
 <p>花括号或 <a class="reference internal" href="stdtypes.html#set" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#set" title="set"><code class="xref py py-func docutils literal notranslate"><span class="pre">set()</span></code></a> 函数可以用来创建集合。注意：要创建一个空集合你只能用 <code class="docutils literal notranslate"><span class="pre">set()</span></code> 而不能用 <code class="docutils literal notranslate"><span class="pre">{}</span></code>，因为后者是创建一个空字典，这种数据结构我们会在下一节进行讨论。</p>
 <p>以下是一些简单的示例：</p>
@@ -451,7 +460,7 @@
 </div>
 </div>
 <div class="section" id="dictionaries">
-<span id="tut-dictionaries"></span><h2>5.5. 字典<a class="headerlink" href="#dictionaries" title="永久链接至标题">¶</a></h2>
+<span id="tut-dictionaries"></span><h2><span class="section-number">5.5. </span>字典<a class="headerlink" href="#dictionaries" title="永久链接至标题">¶</a></h2>
 <p>另一个非常有用的 Python 內置数据类型是 <em>字典</em> (参见 <a class="reference internal" href="stdtypes.html#typesmapping" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#typesmapping"><span class="std std-ref">映射类型 --- dict</span></a>)。字典在其他语言里可能会被叫做 <em>联合内存</em> 或 <em>联合数组</em>。与以连续整数为索引的序列不同，字典是以 <em>关键字</em> 为索引的，关键字可以是任意不可变类型，通常是字符串或数字。如果一个元组只包含字符串、数字或元组，那么这个元组也可以用作关键字。但如果元组直接或间接地包含了可变对象，那么它就不能用作关键字。列表不能用作关键字，因为列表可以通过索引、切片或 <code class="xref py py-meth docutils literal notranslate"><span class="pre">append()</span></code> 和 <code class="xref py py-meth docutils literal notranslate"><span class="pre">extend()</span></code> 之类的方法来改变。</p>
 <p>理解字典的最好方式，就是将它看做是一个 <em>键: 值</em> 对的集合，键必须是唯一的（在一个字典中）。一对花括号可以创建一个空字典：<code class="docutils literal notranslate"><span class="pre">{}</span></code> 。另一种初始化字典的方式是在一对花括号里放置一些以逗号分隔的键值对，而这也是字典输出的方式。</p>
 <p>字典主要的操作是使用关键字存储和解析值。也可以用 <code class="docutils literal notranslate"><span class="pre">del</span></code> 来删除一个键值对。如果你使用了一个已经存在的关键字来存储值，那么之前与这个关键字关联的值就会被遗忘。用一个不存在的键来取值则会报错。</p>
@@ -494,7 +503,7 @@
 </div>
 </div>
 <div class="section" id="looping-techniques">
-<span id="tut-loopidioms"></span><h2>5.6. 循环的技巧<a class="headerlink" href="#looping-techniques" title="永久链接至标题">¶</a></h2>
+<span id="tut-loopidioms"></span><h2><span class="section-number">5.6. </span>循环的技巧<a class="headerlink" href="#looping-techniques" title="永久链接至标题">¶</a></h2>
 <p>当在字典中循环时，用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">items()</span></code> 方法可将关键字和对应的值同时取出</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">knights</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;gallahad&#39;</span><span class="p">:</span> <span class="s1">&#39;the pure&#39;</span><span class="p">,</span> <span class="s1">&#39;robin&#39;</span><span class="p">:</span> <span class="s1">&#39;the brave&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">knights</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -560,12 +569,12 @@
 </div>
 </div>
 <div class="section" id="more-on-conditions">
-<span id="tut-conditions"></span><h2>5.7. 深入条件控制<a class="headerlink" href="#more-on-conditions" title="永久链接至标题">¶</a></h2>
+<span id="tut-conditions"></span><h2><span class="section-number">5.7. </span>深入条件控制<a class="headerlink" href="#more-on-conditions" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> 和 <code class="docutils literal notranslate"><span class="pre">if</span></code> 条件句中可以使用任意操作，而不仅仅是比较操作。</p>
-<p>比较操作符 <code class="docutils literal notranslate"><span class="pre">in</span></code> 和 <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> 校验一个值是否在（或不在）一个序列里。操作符 <code class="docutils literal notranslate"><span class="pre">is</span></code> 和 <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> 比较两个对象是不是同一个对象，这只跟像列表这样的可变对象有关。所有的比较操作符都有相同的优先级，且这个优先级比数值运算符低。</p>
+<p>比较操作符 <code class="docutils literal notranslate"><span class="pre">in</span></code> 和 <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> 校验一个值是否在（或不在）一个序列里。操作符 <code class="docutils literal notranslate"><span class="pre">is</span></code> 和 <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> 比较两个对象是不是同一个对象，这只对像列表这样的可变对象比较重要。所有的比较操作符都有相同的优先级，且这个优先级比数值运算符低。</p>
 <p>比较操作可以传递。例如 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">==</span> <span class="pre">c</span></code> 会校验是否 <code class="docutils literal notranslate"><span class="pre">a</span></code> 小于 <code class="docutils literal notranslate"><span class="pre">b</span></code> 并且 <code class="docutils literal notranslate"><span class="pre">b</span></code> 等于 <code class="docutils literal notranslate"><span class="pre">c</span></code>。</p>
 <p>比较操作可以通过布尔运算符 <code class="docutils literal notranslate"><span class="pre">and</span></code> 和 <code class="docutils literal notranslate"><span class="pre">or</span></code> 来组合，并且比较操作（或其他任何布尔运算）的结果都可以用 <code class="docutils literal notranslate"><span class="pre">not</span></code> 来取反。这些操作符的优先级低于比较操作符；在它们之中，<code class="docutils literal notranslate"><span class="pre">not</span></code> 优先级最高， <code class="docutils literal notranslate"><span class="pre">or</span></code> 优先级最低，因此 <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">B</span> <span class="pre">or</span> <span class="pre">C</span></code> 等价于 <code class="docutils literal notranslate"><span class="pre">(A</span> <span class="pre">and</span> <span class="pre">(not</span> <span class="pre">B))</span> <span class="pre">or</span> <span class="pre">C</span></code>。和之前一样，你也可以在这种式子里使用圆括号。</p>
-<p>布尔运算符 <code class="docutils literal notranslate"><span class="pre">and</span></code> 和 <code class="docutils literal notranslate"><span class="pre">or</span></code> 也被称为 <em>短路</em> 运算符：它们的参数从左至右解析，一旦可以确定结果解析就会停止。例如，如果 <code class="docutils literal notranslate"><span class="pre">A</span></code> 和 <code class="docutils literal notranslate"><span class="pre">C</span></code> 为真而 <code class="docutils literal notranslate"><span class="pre">B</span></code> 为假，那么 <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">and</span> <span class="pre">B</span> <span class="pre">and</span> <span class="pre">C</span></code> 不会解析 <code class="docutils literal notranslate"><span class="pre">C</span></code>。当作用于普通值而非布尔值时，短路操作符的返回值通常是最后一个变量。</p>
+<p>布尔运算符 <code class="docutils literal notranslate"><span class="pre">and</span></code> 和 <code class="docutils literal notranslate"><span class="pre">or</span></code> 也被称为 <em>短路</em> 运算符：它们的参数从左至右解析，一旦可以确定结果解析就会停止。例如，如果 <code class="docutils literal notranslate"><span class="pre">A</span></code> 和 <code class="docutils literal notranslate"><span class="pre">C</span></code> 为真而 <code class="docutils literal notranslate"><span class="pre">B</span></code> 为假，那么 <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">and</span> <span class="pre">B</span> <span class="pre">and</span> <span class="pre">C</span></code> 不会解析 <code class="docutils literal notranslate"><span class="pre">C</span></code>。当用作普通值而非布尔值时，短路操作符的返回值通常是最后一个变量。</p>
 <p>也可以把比较操作或者逻辑表达式的结果赋值给一个变量，例如</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">,</span> <span class="n">string3</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Trondheim&#39;</span><span class="p">,</span> <span class="s1">&#39;Hammer Dance&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">non_null</span> <span class="o">=</span> <span class="n">string1</span> <span class="ow">or</span> <span class="n">string2</span> <span class="ow">or</span> <span class="n">string3</span>
@@ -573,11 +582,11 @@
 <span class="go">&#39;Trondheim&#39;</span>
 </pre></div>
 </div>
-<p>注意 Python 与 C 不同，赋值操作不能发生在表达式内部。C程序员可能会对此抱怨，但它避免了一类C程序中常见的错误：想在表达式中写 <code class="docutils literal notranslate"><span class="pre">==</span></code> 时却写成了 <code class="docutils literal notranslate"><span class="pre">=</span></code>。</p>
+<p>请注意 Python 与 C 不同，在表达式内部赋值必须显式地使用 <a class="reference internal" href="design.html#why-can-t-i-use-an-assignment-in-an-expression" tppabs="https://docs.python.org/zh-cn/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression"><span class="std std-ref">海象运算符</span></a> <code class="docutils literal notranslate"><span class="pre">:=</span></code> 来完成。 这避免了 C 程序中常见的一种问题：想要在表达式中写 <code class="docutils literal notranslate"><span class="pre">==</span></code> 时却写成了 <code class="docutils literal notranslate"><span class="pre">=</span></code>。</p>
 </div>
 <div class="section" id="comparing-sequences-and-other-types">
-<span id="tut-comparing"></span><h2>5.8. 序列和其它类型的比较<a class="headerlink" href="#comparing-sequences-and-other-types" title="永久链接至标题">¶</a></h2>
-<p>序列对象可以与相同类型的其他对象比较。它们使用 <em>字典顺序</em> 进行比较：首先比较两个序列的第一个元素，如果不同，那么这就决定了比较操作的结果。如果它们相同，就再比较每个序列的第二个元素，以此类推，直到有一个序列被耗尽。如果要比较的两个元素本身就是相同类型的序列，那么就递归进行字典顺序比较。如果两个序列中所有的元素都相等，那么我们认为这两个序列相等。如果一个序列是另一个序列的初始子序列，那么短序列就小于另一个。字典顺序对字符串来说，是使用单字符的 Unicode 码的顺序。下面是同类型序列之间比较的例子</p>
+<span id="tut-comparing"></span><h2><span class="section-number">5.8. </span>序列和其它类型的比较<a class="headerlink" href="#comparing-sequences-and-other-types" title="永久链接至标题">¶</a></h2>
+<p>序列对象通常可以与相同序列类型的其他对象比较。 这种比较使用 <em>字典式</em> 顺序：首先比较开头的两个对应元素，如果两者不相等则比较结果就由此确定；如果两者相等则比较之后的两个元素，以此类推，直到有一个序列被耗尽。 如果要比较的两个元素本身又是相同类型的序列，则会递归地执行字典式顺序比较。 如果两个序列中所有的对应元素都相等，则两个序列也将被视为相等。 如果一个序列是另一个的初始子序列，则较短的序列就被视为较小（较少）。 对于字符串来说，字典式顺序是使用 Unicode 码位序号对单个字符排序。 下面是一些相同类型序列之间比较的例子:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>              <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>              <span class="o">&lt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="s1">&#39;ABC&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;C&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;Pascal&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;Python&#39;</span>
@@ -589,12 +598,11 @@
 </div>
 <p>注意对不同类型对象来说，只要待比较对象提供了合适的比较方法，就可以使用 <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> 来比较。例如，混合数值类型是通过他们的数值进行比较的，所以 0 等于 0.0，等等。否则，解释器将抛出一个 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> 异常，而不是随便给出一个结果。</p>
 <p class="rubric">脚注</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>别的语言可能会返回一个可变对象，他们允许方法连续执行，例如 <code class="docutils literal notranslate"><span class="pre">d-&gt;insert(&quot;a&quot;)-&gt;remove(&quot;b&quot;)-&gt;sort();</span></code>。</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>别的语言可能会返回一个可变对象，他们允许方法连续执行，例如 <code class="docutils literal notranslate"><span class="pre">d-&gt;insert(&quot;a&quot;)-&gt;remove(&quot;b&quot;)-&gt;sort();</span></code>。</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -604,7 +612,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">5. 数据结构</a><ul>
 <li><a class="reference internal" href="#more-on-lists">5.1. 列表的更多特性</a><ul>
@@ -627,16 +635,16 @@
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="controlflow.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/controlflow.html"
-                        title="上一章">4. 其他流程控制工具</a></p>
+                        title="上一章"><span class="section-number">4. </span>其他流程控制工具</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="modules.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/modules.html"
-                        title="下一章">6. 模块</a></p>
+                        title="下一章"><span class="section-number">6. </span>模块</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/tutorial/datastructures.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/tutorial/datastructures.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/tutorial/datastructures.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/tutorial/datastructures.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/tutorial/datastructures.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/tutorial/datastructures.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -661,14 +669,17 @@
         <li class="right" >
           <a href="controlflow.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/controlflow.html" title="4. 其他流程控制工具"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-1.html" tppabs="https://docs.python.org/zh-cn/3/tutorial/index.html" >Python 教程</a> &#187;</li>
     <li class="right">
@@ -689,15 +700,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

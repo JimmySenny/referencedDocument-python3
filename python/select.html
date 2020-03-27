@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>select --- Waiting for I/O completion &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>select --- 等待 I/O 完成 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="selectors --- 高级 I/O 复用库" href="selectors.html" />
-    <link rel="prev" title="ssl --- TLS/SSL wrapper for socket objects" href="ssl.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="ssl --- 套接字对象的TLS/SSL封装" href="ssl.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/select.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -59,16 +64,19 @@
           <a href="selectors.html" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html" title="selectors --- 高级 I/O 复用库"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="ssl.html" tppabs="https://docs.python.org/zh-cn/3/library/ssl.html" title="ssl --- TLS/SSL wrapper for socket objects"
+          <a href="ssl.html" tppabs="https://docs.python.org/zh-cn/3/library/ssl.html" title="ssl --- 套接字对象的TLS/SSL封装"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" accesskey="U">网络和进程间通信</a> &#187;</li>
@@ -96,590 +104,448 @@
           <div class="body" role="main">
             
   <div class="section" id="module-select">
-<span id="select-waiting-for-i-o-completion"></span><h1><a class="reference internal" href="#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> --- Waiting for I/O completion<a class="headerlink" href="#module-select" title="永久链接至标题">¶</a></h1>
+<span id="select-waiting-for-i-o-completion"></span><h1><a class="reference internal" href="#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> --- 等待 I/O 完成<a class="headerlink" href="#module-select" title="永久链接至标题">¶</a></h1>
 <hr class="docutils" />
-<p>This module provides access to the <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> and <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> functions
-available in most operating systems, <code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> available on
-Solaris and derivatives, <code class="xref c c-func docutils literal notranslate"><span class="pre">epoll()</span></code> available on Linux 2.5+ and
-<code class="xref c c-func docutils literal notranslate"><span class="pre">kqueue()</span></code> available on most BSD.
-Note that on Windows, it only works for sockets; on other operating systems,
-it also works for other file types (in particular, on Unix, it works on pipes).
-It cannot be used on regular files to determine whether a file has grown since
-it was last read.</p>
+<p>该模块提供了对 <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> 和 <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 函数的访问，这些函数在大多数操作系统中是可用的。在 Solaris 及其衍生版本上可用 <code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code>，在 Linux 2.5+ 上可用 <code class="xref c c-func docutils literal notranslate"><span class="pre">epoll()</span></code>，在大多数 BSD 上可用 <code class="xref c c-func docutils literal notranslate"><span class="pre">kqueue()</span></code>。注意，在 Windows 上，本模块仅适用于套接字；在其他操作系统上，本模块也适用于其他文件类型（特别地，在 Unix 上也适用于管道）。本模块不能用于常规文件，不能检测出（自上次读取文件后）文件是否有新数据写入。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">The <a class="reference internal" href="selectors.html#module-selectors" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a> module allows high-level and efficient I/O
-multiplexing, built upon the <a class="reference internal" href="#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> module primitives. Users are
-encouraged to use the <a class="reference internal" href="selectors.html#module-selectors" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a> module instead, unless they want
-precise control over the OS-level primitives used.</p>
+<p class="admonition-title">注解</p>
+<p><a class="reference internal" href="selectors.html#module-selectors" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a> 模块是在 <a class="reference internal" href="#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> 模块原型的基础上进行高级且高效的 I/O 复用。推荐用户改用 <a class="reference internal" href="selectors.html#module-selectors" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a> 模块，除非用户希望对 OS 级的函数原型进行精确控制。</p>
 </div>
-<p>The module defines the following:</p>
+<p>该模块定义以下内容：</p>
 <dl class="exception">
 <dt id="select.error">
-<em class="property">exception </em><code class="descclassname">select.</code><code class="descname">error</code><a class="headerlink" href="#select.error" title="永久链接至目标">¶</a></dt>
-<dd><p>A deprecated alias of <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
+<em class="property">exception </em><code class="sig-prename descclassname">select.</code><code class="sig-name descname">error</code><a class="headerlink" href="#select.error" title="永久链接至目标">¶</a></dt>
+<dd><p>一个被弃用的 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 的别名。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>Following <span class="target" id="index-0"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3151  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3151'" tppabs="https://www.python.org/dev/peps/pep-3151"><strong>PEP 3151</strong></a>, this class was made an alias of <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>根据 <span class="target" id="index-14"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-3151  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-3151'" tppabs="https://www.python.org/dev/peps/pep-3151"><strong>PEP 3151</strong></a>，这个类是 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 的别名。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="select.devpoll">
-<code class="descclassname">select.</code><code class="descname">devpoll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll" title="永久链接至目标">¶</a></dt>
-<dd><p>(Only supported on Solaris and derivatives.)  Returns a <code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code>
-polling object; see section <a class="reference internal" href="#devpoll-objects"><span class="std std-ref">/dev/poll Polling Objects</span></a> below for the
-methods supported by devpoll objects.</p>
-<p><code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> objects are linked to the number of file
-descriptors allowed at the time of instantiation. If your program
-reduces this value, <code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> will fail. If your program
-increases this value, <code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> may return an
-incomplete list of active file descriptors.</p>
-<p>The new file descriptor is <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">non-inheritable</span></a>.</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">devpoll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll" title="永久链接至目标">¶</a></dt>
+<dd><p>（仅支持 Solaris 及其衍生版本）返回一个 <code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> 轮询对象，请参阅下方 <a class="reference internal" href="#devpoll-objects"><span class="std std-ref">/dev/poll 轮询对象</span></a> 获取 devpoll 对象所支持的方法。</p>
+<p><code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> 对象与实例化时允许的文件描述符数量有关，如果在程序中降低了此数值，<code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> 调用将失败。如果程序提高了此数值，<code class="xref c c-func docutils literal notranslate"><span class="pre">devpoll()</span></code> 可能会返回一个不完整的活动文件描述符列表。</p>
+<p>新的文件描述符是 <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">不可继承的</span></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>新的文件描述符现在是不可继承的。</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>新的文件描述符现在是不可继承的。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="select.epoll">
-<code class="descclassname">select.</code><code class="descname">epoll</code><span class="sig-paren">(</span><em>sizehint=-1</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll" title="永久链接至目标">¶</a></dt>
-<dd><p>(Only supported on Linux 2.5.44 and newer.) Return an edge polling object,
-which can be used as Edge or Level Triggered interface for I/O
-events.</p>
-<p><em>sizehint</em> informs epoll about the expected number of events to be
-registered.  It must be positive, or <cite>-1</cite> to use the default. It is only
-used on older systems where <code class="xref c c-func docutils literal notranslate"><span class="pre">epoll_create1()</span></code> is not available;
-otherwise it has no effect (though its value is still checked).</p>
-<p><em>flags</em> is deprecated and completely ignored.  However, when supplied, its
-value must be <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">select.EPOLL_CLOEXEC</span></code>, otherwise <code class="docutils literal notranslate"><span class="pre">OSError</span></code> is
-raised.</p>
-<p>See the <a class="reference internal" href="#epoll-objects"><span class="std std-ref">Edge and Level Trigger Polling (epoll) Objects</span></a> section below for the methods supported by
-epolling objects.</p>
-<p><code class="docutils literal notranslate"><span class="pre">epoll</span></code> objects support the context management protocol: when used in a
-<a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement, the new file descriptor is automatically closed
-at the end of the block.</p>
-<p>The new file descriptor is <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">non-inheritable</span></a>.</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">epoll</code><span class="sig-paren">(</span><em class="sig-param">sizehint=-1</em>, <em class="sig-param">flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll" title="永久链接至目标">¶</a></dt>
+<dd><p>（仅支持 Linux 2.5.44 或更高版本）返回一个 edge poll 对象，该对象可作为 I/O 事件的边缘触发或水平触发接口。</p>
+<p><em>sizehint</em> 指示 epoll 预计需要注册的事件数。它必须为正数，或为 <cite>-1</cite> 以使用默认值。它仅在 <code class="xref c c-func docutils literal notranslate"><span class="pre">epoll_create1()</span></code> 不可用的旧系统上会被用到，其他情况下它没有任何作用（尽管仍会检查其值）。</p>
+<p><em>flags</em> 已经弃用且完全被忽略。但是，如果提供该值，则它必须是 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或 <code class="docutils literal notranslate"><span class="pre">select.EPOLL_CLOEXEC</span></code>，否则会抛出 <code class="docutils literal notranslate"><span class="pre">OSError</span></code> 异常。</p>
+<p>请参阅下方 <a class="reference internal" href="#epoll-objects"><span class="std std-ref">边缘触发和水平触发的轮询 (epoll) 对象</span></a> 获取 epoll 对象所支持的方法。</p>
+<p><code class="docutils literal notranslate"><span class="pre">epoll</span></code> 对象支持上下文管理器：当在 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句中使用时，新建的文件描述符会在运行至语句块结束时自动关闭。</p>
+<p>新的文件描述符是 <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">不可继承的</span></a>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>Added the <em>flags</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>增加了 <em>flags</em> 参数。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Support for the <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement was added.
-The new file descriptor is now non-inheritable.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>增加了对 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句的支持。新的文件描述符现在是不可继承的。</p>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified">3.4 版后已移除: </span>The <em>flags</em> parameter.  <code class="docutils literal notranslate"><span class="pre">select.EPOLL_CLOEXEC</span></code> is used by default now.
-Use <a class="reference internal" href="os.html#os.set_inheritable" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.set_inheritable" title="os.set_inheritable"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.set_inheritable()</span></code></a> to make the file descriptor inheritable.</p>
+<p><span class="versionmodified deprecated">3.4 版后已移除: </span><em>flags</em> 参数。现在默认采用 <code class="docutils literal notranslate"><span class="pre">select.EPOLL_CLOEXEC</span></code> 标志。使用 <a class="reference internal" href="os.html#os.set_inheritable" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.set_inheritable" title="os.set_inheritable"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.set_inheritable()</span></code></a> 来让文件描述符可继承。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="select.poll">
-<code class="descclassname">select.</code><code class="descname">poll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.poll" title="永久链接至目标">¶</a></dt>
-<dd><p>(Not supported by all operating systems.)  Returns a polling object, which
-supports registering and unregistering file descriptors, and then polling them
-for I/O events; see section <a class="reference internal" href="#poll-objects"><span class="std std-ref">Polling Objects</span></a> below for the methods supported
-by polling objects.</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">poll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.poll" title="永久链接至目标">¶</a></dt>
+<dd><p>（部分操作系统不支持）返回一个 poll 对象，该对象支持注册和注销文件描述符，支持对描述符进行轮询以获取 I/O 事件。请参阅下方 <a class="reference internal" href="#poll-objects"><span class="std std-ref">Poll 对象</span></a> 获取 poll 对象所支持的方法。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="select.kqueue">
-<code class="descclassname">select.</code><code class="descname">kqueue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue" title="永久链接至目标">¶</a></dt>
-<dd><p>(Only supported on BSD.)  Returns a kernel queue object; see section
-<a class="reference internal" href="#kqueue-objects"><span class="std std-ref">Kqueue Objects</span></a> below for the methods supported by kqueue objects.</p>
-<p>The new file descriptor is <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">non-inheritable</span></a>.</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">kqueue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue" title="永久链接至目标">¶</a></dt>
+<dd><p>（仅支持 BSD）返回一个内核队列对象，请参阅下方 <a class="reference internal" href="#kqueue-objects"><span class="std std-ref">Kqueue 对象</span></a> 获取 kqueue 对象所支持的方法。</p>
+<p>新的文件描述符是 <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">不可继承的</span></a>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>新的文件描述符现在是不可继承的。</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>新的文件描述符现在是不可继承的。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="select.kevent">
-<code class="descclassname">select.</code><code class="descname">kevent</code><span class="sig-paren">(</span><em>ident</em>, <em>filter=KQ_FILTER_READ</em>, <em>flags=KQ_EV_ADD</em>, <em>fflags=0</em>, <em>data=0</em>, <em>udata=0</em><span class="sig-paren">)</span><a class="headerlink" href="#select.kevent" title="永久链接至目标">¶</a></dt>
-<dd><p>(Only supported on BSD.)  Returns a kernel event object; see section
-<a class="reference internal" href="#kevent-objects"><span class="std std-ref">Kevent Objects</span></a> below for the methods supported by kevent objects.</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">kevent</code><span class="sig-paren">(</span><em class="sig-param">ident</em>, <em class="sig-param">filter=KQ_FILTER_READ</em>, <em class="sig-param">flags=KQ_EV_ADD</em>, <em class="sig-param">fflags=0</em>, <em class="sig-param">data=0</em>, <em class="sig-param">udata=0</em><span class="sig-paren">)</span><a class="headerlink" href="#select.kevent" title="永久链接至目标">¶</a></dt>
+<dd><p>（仅支持 BSD）返回一个内核事件对象，请参阅下方 <a class="reference internal" href="#kevent-objects"><span class="std std-ref">Kevent 对象</span></a> 获取 kevent 对象所支持的方法。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="select.select">
-<code class="descclassname">select.</code><code class="descname">select</code><span class="sig-paren">(</span><em>rlist</em>, <em>wlist</em>, <em>xlist</em><span class="optional">[</span>, <em>timeout</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.select" title="永久链接至目标">¶</a></dt>
-<dd><p>This is a straightforward interface to the Unix <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> system call.
-The first three arguments are sequences of 'waitable objects': either
-integers representing file descriptors or objects with a parameterless method
-named <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> returning such an integer:</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param">rlist</em>, <em class="sig-param">wlist</em>, <em class="sig-param">xlist</em><span class="optional">[</span>, <em class="sig-param">timeout</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.select" title="永久链接至目标">¶</a></dt>
+<dd><p>这是 Unix <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> 系统调用的直接接口。前三个参数是由“等待对象”组成的序列，“等待对象”可以是表示文件描述符的整数，也可以是带有 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法的对象（该方法没有参数，返回一个整数）：</p>
 <ul class="simple">
-<li><em>rlist</em>: wait until ready for reading</li>
-<li><em>wlist</em>: wait until ready for writing</li>
-<li><em>xlist</em>: wait for an &quot;exceptional condition&quot; (see the manual page for what
-your system considers such a condition)</li>
+<li><p><em>rlist</em>：等待，直到可以开始读取</p></li>
+<li><p><em>wlist</em>：等待，直到可以开始写入</p></li>
+<li><p><em>xlist</em>：等待“异常情况”（请参阅当前系统的手册，以获取哪些情况称为异常情况）</p></li>
 </ul>
-<p>Empty sequences are allowed, but acceptance of three empty sequences is
-platform-dependent. (It is known to work on Unix but not on Windows.)  The
-optional <em>timeout</em> argument specifies a time-out as a floating point number
-in seconds.  When the <em>timeout</em> argument is omitted the function blocks until
-at least one file descriptor is ready.  A time-out value of zero specifies a
-poll and never blocks.</p>
-<p>The return value is a triple of lists of objects that are ready: subsets of the
-first three arguments.  When the time-out is reached without a file descriptor
-becoming ready, three empty lists are returned.</p>
-<p id="index-1">Among the acceptable object types in the sequences are Python <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">file
-objects</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>, or objects returned by
-<a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> or <a class="reference internal" href="os.html#os.popen" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code></a>), socket objects returned by
-<a class="reference internal" href="socket.html#socket.socket" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#socket.socket" title="socket.socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.socket()</span></code></a>.  You may also define a <em class="dfn">wrapper</em> class yourself,
-as long as it has an appropriate <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method (that
-really returns a file descriptor, not just a random integer).</p>
+<p>允许使用空序列，但是否接受三个空序列取决于平台。（目前已知在 Unix 上可以但 Windows 上不行。）可选的 <em>timeout</em> 参数指定超时时长，为浮点数，以秒为单位。如果省略了 <em>timeout</em> 参数，则该函数将阻塞，直到至少一个文件描述符准备就绪。超时值为零表示轮询且永不阻塞。</p>
+<p>返回值是三个列表，包含已就绪对象，返回的三个列表是前三个参数的子集。当超时时间已到且没有文件描述符就绪时，返回三个空列表。</p>
+<p id="index-1">序列中可接受的对象类型包括 Python <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">文件对象</span></a> (例如 <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>、<a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 或 <a class="reference internal" href="os.html#os.popen" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code></a> 返回的对象)，<a class="reference internal" href="socket.html#socket.socket" tppabs="https://docs.python.org/zh-cn/3/library/socket.html#socket.socket" title="socket.socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.socket()</span></code></a> 返回的套接字对象。 你也可以自定义 <em class="dfn">wrapper</em> 类，只要它具有合适的 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法（该方法应返回实际的文件描述符，而不仅仅返回一个随机整数）。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last" id="index-2">File objects on Windows are not acceptable, but sockets are.  On Windows,
-the underlying <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> function is provided by the WinSock
-library, and does not handle file descriptors that don't originate from
-WinSock.</p>
+<p class="admonition-title">注解</p>
+<p id="index-2">Windows 上不接受文件对象，但接受套接字。在 Windows 上，底层的 <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> 函数由 WinSock 库提供，且不处理不是源自 WinSock 的文件描述符。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The function is now retried with a recomputed timeout when interrupted by
-a signal, except if the signal handler raises an exception (see
-<span class="target" id="index-3"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale), instead of raising
-<a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>现在，当本函数被信号中断时，重试超时将从头开始计时，不会抛出 <a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> 异常。除非信号处理程序抛出异常（相关原理请参阅 <span class="target" id="index-15"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a>）。</p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="select.PIPE_BUF">
-<code class="descclassname">select.</code><code class="descname">PIPE_BUF</code><a class="headerlink" href="#select.PIPE_BUF" title="永久链接至目标">¶</a></dt>
-<dd><p>The minimum number of bytes which can be written without blocking to a pipe
-when the pipe has been reported as ready for writing by <a class="reference internal" href="#select.select" title="select.select"><code class="xref py py-func docutils literal notranslate"><span class="pre">select()</span></code></a>,
-<a class="reference internal" href="#select.poll" title="select.poll"><code class="xref py py-func docutils literal notranslate"><span class="pre">poll()</span></code></a> or another interface in this module.  This doesn't apply
-to other kind of file-like objects such as sockets.</p>
-<p>This value is guaranteed by POSIX to be at least 512.</p>
-<p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix</p>
+<code class="sig-prename descclassname">select.</code><code class="sig-name descname">PIPE_BUF</code><a class="headerlink" href="#select.PIPE_BUF" title="永久链接至目标">¶</a></dt>
+<dd><p>当一个管道已经被 <a class="reference internal" href="#select.select" title="select.select"><code class="xref py py-func docutils literal notranslate"><span class="pre">select()</span></code></a>、<a class="reference internal" href="#select.poll" title="select.poll"><code class="xref py py-func docutils literal notranslate"><span class="pre">poll()</span></code></a> 或本模块中的某个接口报告为可写入时，可以在不阻塞该管道的情况下写入的最小字节数。它不适用于套接字等其他类型的文件类对象。</p>
+<p>POSIX 上须保证该值不小于 512。</p>
+<p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">可用性</span></a>: Unix</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">3.2 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <div class="section" id="dev-poll-polling-objects">
-<span id="devpoll-objects"></span><h2><code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> Polling Objects<a class="headerlink" href="#dev-poll-polling-objects" title="永久链接至标题">¶</a></h2>
-<p>Solaris and derivatives have <code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code>. While <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> is
-O(highest file descriptor) and <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> is O(number of file
-descriptors), <code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> is O(active file descriptors).</p>
-<p><code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> behaviour is very close to the standard <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code>
-object.</p>
+<span id="devpoll-objects"></span><h2><code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> 轮询对象<a class="headerlink" href="#dev-poll-polling-objects" title="永久链接至标题">¶</a></h2>
+<p>Solaris 及其衍生版本具备 <code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code>。<code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> 复杂度为 O（最高文件描述符），<code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 为 O（文件描述符数量），而 <code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> 为 O（活动的文件描述符）。</p>
+<p><code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> 的行为与标准 <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 对象十分类似。</p>
 <dl class="method">
 <dt id="select.devpoll.close">
-<code class="descclassname">devpoll.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.close" title="永久链接至目标">¶</a></dt>
-<dd><p>Close the file descriptor of the polling object.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.close" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭轮询对象的文件描述符。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 新版功能.</span></p>
+<p><span class="versionmodified added">3.4 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="select.devpoll.closed">
-<code class="descclassname">devpoll.</code><code class="descname">closed</code><a class="headerlink" href="#select.devpoll.closed" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the polling object is closed.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">closed</code><a class="headerlink" href="#select.devpoll.closed" title="永久链接至目标">¶</a></dt>
+<dd><p>如果轮询对象已关闭，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 新版功能.</span></p>
+<p><span class="versionmodified added">3.4 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.devpoll.fileno">
-<code class="descclassname">devpoll.</code><code class="descname">fileno</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.fileno" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the file descriptor number of the polling object.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">fileno</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.fileno" title="永久链接至目标">¶</a></dt>
+<dd><p>返回轮询对象的文件描述符对应的数字。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 新版功能.</span></p>
+<p><span class="versionmodified added">3.4 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.devpoll.register">
-<code class="descclassname">devpoll.</code><code class="descname">register</code><span class="sig-paren">(</span><em>fd</em><span class="optional">[</span>, <em>eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.register" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a file descriptor with the polling object.  Future calls to the
-<a class="reference internal" href="#select.poll" title="select.poll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poll()</span></code></a> method will then check whether the file descriptor has any
-pending I/O events.  <em>fd</em> can be either an integer, or an object with a
-<a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method that returns an integer.  File objects
-implement <code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code>, so they can also be used as the argument.</p>
-<p><em>eventmask</em> is an optional bitmask describing the type of events you want to
-check for. The constants are the same that with <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code>
-object. The default value is a combination of the constants <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code>,
-<code class="xref py py-const docutils literal notranslate"><span class="pre">POLLPRI</span></code>, and <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code>.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="optional">[</span>, <em class="sig-param">eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.register" title="永久链接至目标">¶</a></dt>
+<dd><p>在轮询对象中注册文件描述符。这样，将来调用 <a class="reference internal" href="#select.poll" title="select.poll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poll()</span></code></a> 方法时将检查文件描述符是否有未处理的 I/O 事件。<em>fd</em> 可以是整数，也可以是带有 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法的对象（该方法返回一个整数）。文件对象已经实现了 <code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code>，因此它们也可以用作参数。</p>
+<p><em>eventmask</em> 是可选的位掩码，用于指定要检查的事件类型。这些常量与 <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 对象所用的相同。本参数的默认值是常量 <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code>、<code class="xref py py-const docutils literal notranslate"><span class="pre">POLLPRI</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code> 的组合。</p>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">Registering a file descriptor that's already registered is not an
-error, but the result is undefined. The appropriate action is to
-unregister or modify it first. This is an important difference
-compared with <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code>.</p>
+<p class="admonition-title">警告</p>
+<p>注册已注册过的文件描述符不会报错，但是结果是不确定的。正确的操作是先注销或直接修改它。与 <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 相比，这是一个重要的区别。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.devpoll.modify">
-<code class="descclassname">devpoll.</code><code class="descname">modify</code><span class="sig-paren">(</span><em>fd</em><span class="optional">[</span>, <em>eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.modify" title="永久链接至目标">¶</a></dt>
-<dd><p>This method does an <a class="reference internal" href="#select.devpoll.unregister" title="select.devpoll.unregister"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unregister()</span></code></a> followed by a
-<a class="reference internal" href="#select.devpoll.register" title="select.devpoll.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a>. It is (a bit) more efficient that doing the same
-explicitly.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">modify</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="optional">[</span>, <em class="sig-param">eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.modify" title="永久链接至目标">¶</a></dt>
+<dd><p>此方法先执行 <a class="reference internal" href="#select.devpoll.unregister" title="select.devpoll.unregister"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unregister()</span></code></a> 后执行 <a class="reference internal" href="#select.devpoll.register" title="select.devpoll.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a>。直接执行此操作效率（稍微）高一些。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.devpoll.unregister">
-<code class="descclassname">devpoll.</code><code class="descname">unregister</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.unregister" title="永久链接至目标">¶</a></dt>
-<dd><p>Remove a file descriptor being tracked by a polling object.  Just like the
-<a class="reference internal" href="#select.devpoll.register" title="select.devpoll.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a> method, <em>fd</em> can be an integer or an object with a
-<a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method that returns an integer.</p>
-<p>Attempting to remove a file descriptor that was never registered is
-safely ignored.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.unregister" title="永久链接至目标">¶</a></dt>
+<dd><p>删除轮询对象正在跟踪的某个文件描述符。与 <a class="reference internal" href="#select.devpoll.register" title="select.devpoll.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a> 方法类似，<em>fd</em> 可以是整数，也可以是带有 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法的对象（该方法返回一个整数）。</p>
+<p>尝试删除从未注册过的文件描述符将被安全地忽略。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.devpoll.poll">
-<code class="descclassname">devpoll.</code><code class="descname">poll</code><span class="sig-paren">(</span><span class="optional">[</span><em>timeout</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.poll" title="永久链接至目标">¶</a></dt>
-<dd><p>Polls the set of registered file descriptors, and returns a possibly-empty list
-containing <code class="docutils literal notranslate"><span class="pre">(fd,</span> <span class="pre">event)</span></code> 2-tuples for the descriptors that have events or
-errors to report. <em>fd</em> is the file descriptor, and <em>event</em> is a bitmask with
-bits set for the reported events for that descriptor --- <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code> for
-waiting input, <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code> to indicate that the descriptor can be written
-to, and so forth. An empty list indicates that the call timed out and no file
-descriptors had any events to report. If <em>timeout</em> is given, it specifies the
-length of time in milliseconds which the system will wait for events before
-returning. If <em>timeout</em> is omitted, -1, or <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>, the call will
-block until there is an event for this poll object.</p>
+<code class="sig-prename descclassname">devpoll.</code><code class="sig-name descname">poll</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">timeout</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.devpoll.poll" title="永久链接至目标">¶</a></dt>
+<dd><p>轮询已注册的文件描述符的集合，并返回一个列表，列表可能为空，也可能有多个 <code class="docutils literal notranslate"><span class="pre">(fd,</span> <span class="pre">event)</span></code> 二元组，其中包含了要报告事件或错误的描述符。<em>fd</em> 是文件描述符，<em>event</em> 是一个位掩码，表示该描述符所报告的事件 --- <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code> 表示可以读取，<code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code> 表示该描述符可以写入，依此类推。空列表表示调用超时，没有任何文件描述符报告事件。如果指定了 <em>timeout</em>，它将指定系统等待事件时，等待多长时间后返回（以毫秒为单位）。如果 <em>timeout</em> 为空，-1 或 <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>，则本调用将阻塞，直到轮询对象发生事件为止。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The function is now retried with a recomputed timeout when interrupted by
-a signal, except if the signal handler raises an exception (see
-<span class="target" id="index-4"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale), instead of raising
-<a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>现在，当本函数被信号中断时，重试超时将从头开始计时，不会抛出 <a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> 异常。除非信号处理程序抛出异常（相关原理请参阅 <span class="target" id="index-16"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a>）。</p>
 </div>
 </dd></dl>
 
 </div>
 <div class="section" id="edge-and-level-trigger-polling-epoll-objects">
-<span id="epoll-objects"></span><h2>Edge and Level Trigger Polling (epoll) Objects<a class="headerlink" href="#edge-and-level-trigger-polling-epoll-objects" title="永久链接至标题">¶</a></h2>
+<span id="epoll-objects"></span><h2>边缘触发和水平触发的轮询 (epoll) 对象<a class="headerlink" href="#edge-and-level-trigger-polling-epoll-objects" title="永久链接至标题">¶</a></h2>
 <blockquote>
-<div><p><a class="reference external" href="javascript:if(confirm('https://linux.die.net/man/4/epoll  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://linux.die.net/man/4/epoll'" tppabs="https://linux.die.net/man/4/epoll">https://linux.die.net/man/4/epoll</a></p>
+<div><p><a class="reference external" href="javascript:if(confirm('https://linux.die.net/man/4/pep-0236  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://linux.die.net/man/4/pep-0236'" tppabs="https://linux.die.net/man/4/epoll">https://linux.die.net/man/4/epoll</a></p>
 <p><em>eventmask</em></p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col style="width: 35%" />
+<col style="width: 65%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLIN</span></code></td>
-<td>Available for read</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLIN</span></code></p></td>
+<td><p>可读</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLOUT</span></code></td>
-<td>Available for write</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLOUT</span></code></p></td>
+<td><p>可写</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLPRI</span></code></td>
-<td>Urgent data for read</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLPRI</span></code></p></td>
+<td><p>紧急数据读取</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLERR</span></code></td>
-<td>Error condition happened on the assoc. fd</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLERR</span></code></p></td>
+<td><p>在关联的文件描述符上有错误情况发生</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLHUP</span></code></td>
-<td>Hang up happened on the assoc. fd</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLHUP</span></code></p></td>
+<td><p>关联的文件描述符已挂起</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLET</span></code></td>
-<td>Set Edge Trigger behavior, the default is
-Level Trigger behavior</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLET</span></code></p></td>
+<td><p>设置触发方式为边缘触发，默认为水平触发</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLONESHOT</span></code></td>
-<td>Set one-shot behavior. After one event is
-pulled out, the fd is internally disabled</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLONESHOT</span></code></p></td>
+<td><p>设置 one-shot 模式。触发一次事件后，该描述符会在轮询对象内部被禁用。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLEXCLUSIVE</span></code></td>
-<td>Wake only one epoll object when the
-associated fd has an event. The default (if
-this flag is not set) is to wake all epoll
-objects polling on a fd.</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLEXCLUSIVE</span></code></p></td>
+<td><p>当已关联的描述符发生事件时，仅唤醒一个 epoll 对象。默认（如果未设置此标志）是唤醒所有轮询该描述符的 epoll 对象。</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLRDHUP</span></code></td>
-<td>Stream socket peer closed connection or shut
-down writing half of connection.</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLRDHUP</span></code></p></td>
+<td><p>流套接字的对侧关闭了连接或关闭了写入到一半的连接。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLRDNORM</span></code></td>
-<td>Equivalent to <code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLIN</span></code></td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLRDNORM</span></code></p></td>
+<td><p>等同于 <code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLIN</span></code></p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLRDBAND</span></code></td>
-<td>Priority data band can be read.</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLRDBAND</span></code></p></td>
+<td><p>可以读取优先数据带。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLWRNORM</span></code></td>
-<td>Equivalent to <code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLOUT</span></code></td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLWRNORM</span></code></p></td>
+<td><p>等同于 <code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLOUT</span></code></p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLWRBAND</span></code></td>
-<td>Priority data may be written.</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLWRBAND</span></code></p></td>
+<td><p>可以写入优先级数据。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLMSG</span></code></td>
-<td>Ignored.</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLMSG</span></code></p></td>
+<td><p>忽略</p></td>
 </tr>
 </tbody>
 </table>
 <div class="versionadded">
-<p><span class="versionmodified">3.6 新版功能: </span><code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLEXCLUSIVE</span></code> was added.  It's only supported by Linux Kernel 4.5
-or later.</p>
+<p><span class="versionmodified added">3.6 新版功能: </span>增加了 <code class="xref py py-const docutils literal notranslate"><span class="pre">EPOLLEXCLUSIVE</span></code>。仅支持 Linux Kernel 4.5 或更高版本。</p>
 </div>
 </div></blockquote>
 <dl class="method">
 <dt id="select.epoll.close">
-<code class="descclassname">epoll.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.close" title="永久链接至目标">¶</a></dt>
-<dd><p>Close the control file descriptor of the epoll object.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.close" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭用于控制 epoll 对象的文件描述符。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="select.epoll.closed">
-<code class="descclassname">epoll.</code><code class="descname">closed</code><a class="headerlink" href="#select.epoll.closed" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the epoll object is closed.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">closed</code><a class="headerlink" href="#select.epoll.closed" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 epoll 对象已关闭，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.epoll.fileno">
-<code class="descclassname">epoll.</code><code class="descname">fileno</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.fileno" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the file descriptor number of the control fd.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">fileno</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.fileno" title="永久链接至目标">¶</a></dt>
+<dd><p>返回文件描述符对应的数字，该描述符用于控制 epoll 对象。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.epoll.fromfd">
-<code class="descclassname">epoll.</code><code class="descname">fromfd</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.fromfd" title="永久链接至目标">¶</a></dt>
-<dd><p>Create an epoll object from a given file descriptor.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">fromfd</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.fromfd" title="永久链接至目标">¶</a></dt>
+<dd><p>根据给定的文件描述符创建 epoll 对象。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.epoll.register">
-<code class="descclassname">epoll.</code><code class="descname">register</code><span class="sig-paren">(</span><em>fd</em><span class="optional">[</span>, <em>eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.register" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a fd descriptor with the epoll object.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="optional">[</span>, <em class="sig-param">eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.register" title="永久链接至目标">¶</a></dt>
+<dd><p>在 epoll 对象中注册一个文件描述符。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.epoll.modify">
-<code class="descclassname">epoll.</code><code class="descname">modify</code><span class="sig-paren">(</span><em>fd</em>, <em>eventmask</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.modify" title="永久链接至目标">¶</a></dt>
-<dd><p>Modify a registered file descriptor.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">modify</code><span class="sig-paren">(</span><em class="sig-param">fd</em>, <em class="sig-param">eventmask</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.modify" title="永久链接至目标">¶</a></dt>
+<dd><p>修改一个已注册的文件描述符。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.epoll.unregister">
-<code class="descclassname">epoll.</code><code class="descname">unregister</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.unregister" title="永久链接至目标">¶</a></dt>
-<dd><p>Remove a registered file descriptor from the epoll object.</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.unregister" title="永久链接至目标">¶</a></dt>
+<dd><p>从 epoll 对象中删除一个已注册的文件描述符。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.epoll.poll">
-<code class="descclassname">epoll.</code><code class="descname">poll</code><span class="sig-paren">(</span><em>timeout=-1</em>, <em>maxevents=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.poll" title="永久链接至目标">¶</a></dt>
-<dd><p>Wait for events. timeout in seconds (float)</p>
+<code class="sig-prename descclassname">epoll.</code><code class="sig-name descname">poll</code><span class="sig-paren">(</span><em class="sig-param">timeout=None</em>, <em class="sig-param">maxevents=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#select.epoll.poll" title="永久链接至目标">¶</a></dt>
+<dd><p>等待事件发生，timeout 是浮点数，单位为秒。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The function is now retried with a recomputed timeout when interrupted by
-a signal, except if the signal handler raises an exception (see
-<span class="target" id="index-5"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale), instead of raising
-<a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>现在，当本函数被信号中断时，重试超时将从头开始计时，不会抛出 <a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> 异常。除非信号处理程序抛出异常（相关原理请参阅 <span class="target" id="index-17"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a>）。</p>
 </div>
 </dd></dl>
 
 </div>
 <div class="section" id="polling-objects">
-<span id="poll-objects"></span><h2>Polling Objects<a class="headerlink" href="#polling-objects" title="永久链接至标题">¶</a></h2>
-<p>The <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> system call, supported on most Unix systems, provides better
-scalability for network servers that service many, many clients at the same
-time. <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> scales better because the system call only requires listing
-the file descriptors of interest, while <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> builds a bitmap, turns
-on bits for the fds of interest, and then afterward the whole bitmap has to be
-linearly scanned again. <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> is O(highest file descriptor), while
-<code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> is O(number of file descriptors).</p>
+<span id="poll-objects"></span><h2>Poll 对象<a class="headerlink" href="#polling-objects" title="永久链接至标题">¶</a></h2>
+<p>大多数 Unix 系统支持 <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 系统调用，为服务器提供了更好的可伸缩性，使服务器可以同时服务于大量客户端。<code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 的伸缩性更好，因为该调用内部仅列出所关注的文件描述符，而 <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> 会构造一个 bitmap，在其中将所关注的描述符所对应的 bit 打开，然后重新遍历整个 bitmap。因此 <code class="xref c c-func docutils literal notranslate"><span class="pre">select()</span></code> 复杂度是 O（最高文件描述符），而 <code class="xref c c-func docutils literal notranslate"><span class="pre">poll()</span></code> 是 O（文件描述符数量）。</p>
 <dl class="method">
 <dt id="select.poll.register">
-<code class="descclassname">poll.</code><code class="descname">register</code><span class="sig-paren">(</span><em>fd</em><span class="optional">[</span>, <em>eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.register" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a file descriptor with the polling object.  Future calls to the
-<a class="reference internal" href="#select.poll" title="select.poll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poll()</span></code></a> method will then check whether the file descriptor has any
-pending I/O events.  <em>fd</em> can be either an integer, or an object with a
-<a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method that returns an integer.  File objects
-implement <code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code>, so they can also be used as the argument.</p>
-<p><em>eventmask</em> is an optional bitmask describing the type of events you want to
-check for, and can be a combination of the constants <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code>,
-<code class="xref py py-const docutils literal notranslate"><span class="pre">POLLPRI</span></code>, and <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code>, described in the table below.  If not
-specified, the default value used will check for all 3 types of events.</p>
-<table border="1" class="docutils">
+<code class="sig-prename descclassname">poll.</code><code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="optional">[</span>, <em class="sig-param">eventmask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.register" title="永久链接至目标">¶</a></dt>
+<dd><p>在轮询对象中注册文件描述符。这样，将来调用 <a class="reference internal" href="#select.poll" title="select.poll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poll()</span></code></a> 方法时将检查文件描述符是否有未处理的 I/O 事件。<em>fd</em> 可以是整数，也可以是带有 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法的对象（该方法返回一个整数）。文件对象已经实现了 <code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code>，因此它们也可以用作参数。</p>
+<p><em>eventmask</em> 是可选的位掩码，用于指定要检查的事件类型，它可以是常量 <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code>、<code class="xref py py-const docutils literal notranslate"><span class="pre">POLLPRI</span></code> 和 <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code> 的组合，如下表所述。如果未指定本参数，默认将会检查所有 3 种类型的事件。</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="31%" />
-<col width="69%" />
+<col style="width: 31%" />
+<col style="width: 69%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code></td>
-<td>There is data to read</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code></p></td>
+<td><p>有要读取的数据</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLPRI</span></code></td>
-<td>There is urgent data to read</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLPRI</span></code></p></td>
+<td><p>有紧急数据需要读取</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code></td>
-<td>Ready for output: writing will not block</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code></p></td>
+<td><p>准备输出：写不会阻塞</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLERR</span></code></td>
-<td>Error condition of some sort</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLERR</span></code></p></td>
+<td><p>某种错误条件</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLHUP</span></code></td>
-<td>Hung up</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLHUP</span></code></p></td>
+<td><p>挂起</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLRDHUP</span></code></td>
-<td>Stream socket peer closed connection, or
-shut down writing half of connection</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLRDHUP</span></code></p></td>
+<td><p>流套接字的对侧关闭了连接，或关闭了写入到一半的连接</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLNVAL</span></code></td>
-<td>Invalid request: descriptor not open</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">POLLNVAL</span></code></p></td>
+<td><p>无效的请求：描述符未打开</p></td>
 </tr>
 </tbody>
 </table>
-<p>Registering a file descriptor that's already registered is not an error, and has
-the same effect as registering the descriptor exactly once.</p>
+<p>注册已注册过的文件描述符不会报错，且等同于只注册一次该描述符。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.poll.modify">
-<code class="descclassname">poll.</code><code class="descname">modify</code><span class="sig-paren">(</span><em>fd</em>, <em>eventmask</em><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.modify" title="永久链接至目标">¶</a></dt>
-<dd><p>Modifies an already registered fd. This has the same effect as
-<code class="docutils literal notranslate"><span class="pre">register(fd,</span> <span class="pre">eventmask)</span></code>.  Attempting to modify a file descriptor
-that was never registered causes an <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> exception with errno
-<code class="xref py py-const docutils literal notranslate"><span class="pre">ENOENT</span></code> to be raised.</p>
+<code class="sig-prename descclassname">poll.</code><code class="sig-name descname">modify</code><span class="sig-paren">(</span><em class="sig-param">fd</em>, <em class="sig-param">eventmask</em><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.modify" title="永久链接至目标">¶</a></dt>
+<dd><p>修改一个已注册的文件描述符，等同于 <code class="docutils literal notranslate"><span class="pre">register(fd,</span> <span class="pre">eventmask)</span></code>。尝试修改未注册的文件描述符会抛出 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 异常，错误码为 <code class="xref py py-const docutils literal notranslate"><span class="pre">ENOENT</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.poll.unregister">
-<code class="descclassname">poll.</code><code class="descname">unregister</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.unregister" title="永久链接至目标">¶</a></dt>
-<dd><p>Remove a file descriptor being tracked by a polling object.  Just like the
-<a class="reference internal" href="#select.poll.register" title="select.poll.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a> method, <em>fd</em> can be an integer or an object with a
-<a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method that returns an integer.</p>
-<p>Attempting to remove a file descriptor that was never registered causes a
-<a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> exception to be raised.</p>
+<code class="sig-prename descclassname">poll.</code><code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.unregister" title="永久链接至目标">¶</a></dt>
+<dd><p>删除轮询对象正在跟踪的某个文件描述符。与 <a class="reference internal" href="#select.poll.register" title="select.poll.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a> 方法类似，<em>fd</em> 可以是整数，也可以是带有 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法的对象（该方法返回一个整数）。</p>
+<p>尝试删除从未注册过的文件描述符会抛出 <a class="reference internal" href="exceptions.html#KeyError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> 异常。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.poll.poll">
-<code class="descclassname">poll.</code><code class="descname">poll</code><span class="sig-paren">(</span><span class="optional">[</span><em>timeout</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.poll" title="永久链接至目标">¶</a></dt>
-<dd><p>Polls the set of registered file descriptors, and returns a possibly-empty list
-containing <code class="docutils literal notranslate"><span class="pre">(fd,</span> <span class="pre">event)</span></code> 2-tuples for the descriptors that have events or
-errors to report. <em>fd</em> is the file descriptor, and <em>event</em> is a bitmask with
-bits set for the reported events for that descriptor --- <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code> for
-waiting input, <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code> to indicate that the descriptor can be written
-to, and so forth. An empty list indicates that the call timed out and no file
-descriptors had any events to report. If <em>timeout</em> is given, it specifies the
-length of time in milliseconds which the system will wait for events before
-returning. If <em>timeout</em> is omitted, negative, or <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>, the call will
-block until there is an event for this poll object.</p>
+<code class="sig-prename descclassname">poll.</code><code class="sig-name descname">poll</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">timeout</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#select.poll.poll" title="永久链接至目标">¶</a></dt>
+<dd><p>轮询已注册的文件描述符的集合，并返回一个列表，列表可能为空，也可能有多个 <code class="docutils literal notranslate"><span class="pre">(fd,</span> <span class="pre">event)</span></code> 二元组，其中包含了要报告事件或错误的描述符。<em>fd</em> 是文件描述符，<em>event</em> 是一个位掩码，表示该描述符所报告的事件 --- <code class="xref py py-const docutils literal notranslate"><span class="pre">POLLIN</span></code> 表示可以读取，<code class="xref py py-const docutils literal notranslate"><span class="pre">POLLOUT</span></code> 表示该描述符可以写入，依此类推。空列表表示调用超时，没有任何文件描述符报告事件。如果指定了 <em>timeout</em>，它将指定系统等待事件时，等待多长时间后返回（以毫秒为单位）。如果 <em>timeout</em> 为空、负数 或 <a class="reference internal" href="constants.html#None" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>，则本调用将阻塞，直到轮询对象发生事件为止。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The function is now retried with a recomputed timeout when interrupted by
-a signal, except if the signal handler raises an exception (see
-<span class="target" id="index-6"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale), instead of raising
-<a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>现在，当本函数被信号中断时，重试超时将从头开始计时，不会抛出 <a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> 异常。除非信号处理程序抛出异常（相关原理请参阅 <span class="target" id="index-18"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a>）。</p>
 </div>
 </dd></dl>
 
 </div>
 <div class="section" id="kqueue-objects">
-<span id="id1"></span><h2>Kqueue Objects<a class="headerlink" href="#kqueue-objects" title="永久链接至标题">¶</a></h2>
+<span id="id1"></span><h2>Kqueue 对象<a class="headerlink" href="#kqueue-objects" title="永久链接至标题">¶</a></h2>
 <dl class="method">
 <dt id="select.kqueue.close">
-<code class="descclassname">kqueue.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue.close" title="永久链接至目标">¶</a></dt>
-<dd><p>Close the control file descriptor of the kqueue object.</p>
+<code class="sig-prename descclassname">kqueue.</code><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue.close" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭用于控制 kqueue 对象的文件描述符。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="select.kqueue.closed">
-<code class="descclassname">kqueue.</code><code class="descname">closed</code><a class="headerlink" href="#select.kqueue.closed" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the kqueue object is closed.</p>
+<code class="sig-prename descclassname">kqueue.</code><code class="sig-name descname">closed</code><a class="headerlink" href="#select.kqueue.closed" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 kqueue 对象已关闭，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.kqueue.fileno">
-<code class="descclassname">kqueue.</code><code class="descname">fileno</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue.fileno" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the file descriptor number of the control fd.</p>
+<code class="sig-prename descclassname">kqueue.</code><code class="sig-name descname">fileno</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue.fileno" title="永久链接至目标">¶</a></dt>
+<dd><p>返回文件描述符对应的数字，该描述符用于控制 epoll 对象。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.kqueue.fromfd">
-<code class="descclassname">kqueue.</code><code class="descname">fromfd</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue.fromfd" title="永久链接至目标">¶</a></dt>
-<dd><p>Create a kqueue object from a given file descriptor.</p>
+<code class="sig-prename descclassname">kqueue.</code><code class="sig-name descname">fromfd</code><span class="sig-paren">(</span><em class="sig-param">fd</em><span class="sig-paren">)</span><a class="headerlink" href="#select.kqueue.fromfd" title="永久链接至目标">¶</a></dt>
+<dd><p>根据给定的文件描述符创建 kqueue 对象。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="select.kqueue.control">
-<code class="descclassname">kqueue.</code><code class="descname">control</code><span class="sig-paren">(</span><em>changelist</em>, <em>max_events</em><span class="optional">[</span>, <em>timeout=None</em><span class="optional">]</span><span class="sig-paren">)</span> &#x2192; eventlist<a class="headerlink" href="#select.kqueue.control" title="永久链接至目标">¶</a></dt>
-<dd><p>Low level interface to kevent</p>
+<code class="sig-prename descclassname">kqueue.</code><code class="sig-name descname">control</code><span class="sig-paren">(</span><em class="sig-param">changelist</em>, <em class="sig-param">max_events</em><span class="optional">[</span>, <em class="sig-param">timeout</em><span class="optional">]</span><span class="sig-paren">)</span> &#x2192; eventlist<a class="headerlink" href="#select.kqueue.control" title="永久链接至目标">¶</a></dt>
+<dd><p>Kevent 的低级接口</p>
 <ul class="simple">
-<li>changelist must be an iterable of kevent object or <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
-<li>max_events must be 0 or a positive integer</li>
-<li>timeout in seconds (floats possible)</li>
+<li><p>changelist 必须是一个可迭代对象，迭代出 kevent 对象，否则置为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p></li>
+<li><p>max_events 必须是 0 或一个正整数。</p></li>
+<li><p>timeout 单位为秒（一般为浮点数），默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，即永不超时。</p></li>
 </ul>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>The function is now retried with a recomputed timeout when interrupted by
-a signal, except if the signal handler raises an exception (see
-<span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale), instead of raising
-<a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>现在，当本函数被信号中断时，重试超时将从头开始计时，不会抛出 <a class="reference internal" href="exceptions.html#InterruptedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> 异常。除非信号处理程序抛出异常（相关原理请参阅 <span class="target" id="index-19"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0475  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0475'" tppabs="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a>）。</p>
 </div>
 </dd></dl>
 
 </div>
 <div class="section" id="kevent-objects">
-<span id="id2"></span><h2>Kevent Objects<a class="headerlink" href="#kevent-objects" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="javascript:if(confirm('https://www.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2'" tppabs="https://www.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2">https://www.freebsd.org/cgi/man.cgi?query=kqueue&amp;sektion=2</a></p>
+<span id="id2"></span><h2>Kevent 对象<a class="headerlink" href="#kevent-objects" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="javascript:if(confirm('https://www.freebsd.org/cgi/pep-0207  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.freebsd.org/cgi/pep-0207'" tppabs="https://www.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2">https://www.freebsd.org/cgi/man.cgi?query=kqueue&amp;sektion=2</a></p>
 <dl class="attribute">
 <dt id="select.kevent.ident">
-<code class="descclassname">kevent.</code><code class="descname">ident</code><a class="headerlink" href="#select.kevent.ident" title="永久链接至目标">¶</a></dt>
-<dd><p>Value used to identify the event. The interpretation depends on the filter
-but it's usually the file descriptor. In the constructor ident can either
-be an int or an object with a <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method. kevent
-stores the integer internally.</p>
+<code class="sig-prename descclassname">kevent.</code><code class="sig-name descname">ident</code><a class="headerlink" href="#select.kevent.ident" title="永久链接至目标">¶</a></dt>
+<dd><p>用于区分事件的标识值。其解释取决于筛选器，但该值通常是文件描述符。在构造函数中，该标识值可以是整数或带有 <a class="reference internal" href="io.html#io.IOBase.fileno" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> 方法的对象。kevent 在内部存储整数。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="select.kevent.filter">
-<code class="descclassname">kevent.</code><code class="descname">filter</code><a class="headerlink" href="#select.kevent.filter" title="永久链接至目标">¶</a></dt>
-<dd><p>Name of the kernel filter.</p>
-<table border="1" class="docutils">
+<code class="sig-prename descclassname">kevent.</code><code class="sig-name descname">filter</code><a class="headerlink" href="#select.kevent.filter" title="永久链接至目标">¶</a></dt>
+<dd><p>内核筛选器的名称。</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="38%" />
-<col width="63%" />
+<col style="width: 38%" />
+<col style="width: 63%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_READ</span></code></td>
-<td>Takes a descriptor and returns whenever
-there is data available to read</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_READ</span></code></p></td>
+<td><p>获取描述符，并在有数据可读时返回</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_WRITE</span></code></td>
-<td>Takes a descriptor and returns whenever
-there is data available to write</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_WRITE</span></code></p></td>
+<td><p>获取描述符，并在有数据可写时返回</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_AIO</span></code></td>
-<td>AIO requests</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_AIO</span></code></p></td>
+<td><p>AIO 请求</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_VNODE</span></code></td>
-<td>Returns when one or more of the requested
-events watched in <em>fflag</em> occurs</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_VNODE</span></code></p></td>
+<td><p>当在 <em>fflag</em> 中监视的一个或多个请求事件发生时返回</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_PROC</span></code></td>
-<td>Watch for events on a process id</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_PROC</span></code></p></td>
+<td><p>监视进程ID上的事件</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_NETDEV</span></code></td>
-<td>Watch for events on a network device
-[not available on Mac OS X]</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_NETDEV</span></code></p></td>
+<td><p>观察网络设备上的事件[在Mac OS X上不可用]</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_SIGNAL</span></code></td>
-<td>Returns whenever the watched signal is
-delivered to the process</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_SIGNAL</span></code></p></td>
+<td><p>每当监视的信号传递到进程时返回</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_TIMER</span></code></td>
-<td>Establishes an arbitrary timer</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_TIMER</span></code></p></td>
+<td><p>建立一个任意的计时器</p></td>
 </tr>
 </tbody>
 </table>
@@ -687,48 +553,48 @@ delivered to the process</td>
 
 <dl class="attribute">
 <dt id="select.kevent.flags">
-<code class="descclassname">kevent.</code><code class="descname">flags</code><a class="headerlink" href="#select.kevent.flags" title="永久链接至目标">¶</a></dt>
-<dd><p>Filter action.</p>
-<table border="1" class="docutils">
+<code class="sig-prename descclassname">kevent.</code><code class="sig-name descname">flags</code><a class="headerlink" href="#select.kevent.flags" title="永久链接至目标">¶</a></dt>
+<dd><p>筛选器操作。</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="38%" />
-<col width="63%" />
+<col style="width: 38%" />
+<col style="width: 63%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ADD</span></code></td>
-<td>Adds or modifies an event</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ADD</span></code></p></td>
+<td><p>添加或修改事件</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_DELETE</span></code></td>
-<td>Removes an event from the queue</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_DELETE</span></code></p></td>
+<td><p>从队列中删除事件</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ENABLE</span></code></td>
-<td>Permitscontrol() to returns the event</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ENABLE</span></code></p></td>
+<td><p>Permitscontrol() 返回事件</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_DISABLE</span></code></td>
-<td>Disablesevent</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_DISABLE</span></code></p></td>
+<td><p>禁用事件</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ONESHOT</span></code></td>
-<td>Removes event after first occurrence</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ONESHOT</span></code></p></td>
+<td><p>在第一次发生后删除事件</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_CLEAR</span></code></td>
-<td>Reset the state after an event is retrieved</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_CLEAR</span></code></p></td>
+<td><p>检索事件后重置状态</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_SYSFLAGS</span></code></td>
-<td>internal event</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_SYSFLAGS</span></code></p></td>
+<td><p>内部事件</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_FLAG1</span></code></td>
-<td>internal event</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_FLAG1</span></code></p></td>
+<td><p>内部事件</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_EOF</span></code></td>
-<td>Filter specific EOF condition</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_EOF</span></code></p></td>
+<td><p>筛选特定EOF条件</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ERROR</span></code></td>
-<td>See return values</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_EV_ERROR</span></code></p></td>
+<td><p>请参阅返回值</p></td>
 </tr>
 </tbody>
 </table>
@@ -736,119 +602,118 @@ delivered to the process</td>
 
 <dl class="attribute">
 <dt id="select.kevent.fflags">
-<code class="descclassname">kevent.</code><code class="descname">fflags</code><a class="headerlink" href="#select.kevent.fflags" title="永久链接至目标">¶</a></dt>
-<dd><p>Filter specific flags.</p>
-<p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_READ</span></code> and  <code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_WRITE</span></code> filter flags:</p>
-<table border="1" class="docutils">
+<code class="sig-prename descclassname">kevent.</code><code class="sig-name descname">fflags</code><a class="headerlink" href="#select.kevent.fflags" title="永久链接至目标">¶</a></dt>
+<dd><p>筛选特定标志。</p>
+<p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_READ</span></code> 和  <code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_WRITE</span></code> 筛选标志：</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="39%" />
-<col width="61%" />
+<col style="width: 39%" />
+<col style="width: 61%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LOWAT</span></code></td>
-<td>low water mark of a socket buffer</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LOWAT</span></code></p></td>
+<td><p>套接字缓冲区的低水线</p></td>
 </tr>
 </tbody>
 </table>
-<p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_VNODE</span></code> filter flags:</p>
-<table border="1" class="docutils">
+<p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_VNODE</span></code> 筛选标志：</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="39%" />
-<col width="61%" />
+<col style="width: 39%" />
+<col style="width: 61%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_DELETE</span></code></td>
-<td><em>unlink()</em> was called</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_DELETE</span></code></p></td>
+<td><p>已调用 <em>unlink()</em></p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_WRITE</span></code></td>
-<td>a write occurred</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_WRITE</span></code></p></td>
+<td><p>发生写入</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_EXTEND</span></code></td>
-<td>the file was extended</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_EXTEND</span></code></p></td>
+<td><p>文件已扩展</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_ATTRIB</span></code></td>
-<td>an attribute was changed</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_ATTRIB</span></code></p></td>
+<td><p>属性已更改</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINK</span></code></td>
-<td>the link count has changed</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINK</span></code></p></td>
+<td><p>链接计数已更改</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_RENAME</span></code></td>
-<td>the file was renamed</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_RENAME</span></code></p></td>
+<td><p>文件已重命名</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_REVOKE</span></code></td>
-<td>access to the file was revoked</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_REVOKE</span></code></p></td>
+<td><p>对文件的访问权限已被撤销</p></td>
 </tr>
 </tbody>
 </table>
 <p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_PROC</span></code> filter flags:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="39%" />
-<col width="61%" />
+<col style="width: 39%" />
+<col style="width: 61%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_EXIT</span></code></td>
-<td>the process has exited</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_EXIT</span></code></p></td>
+<td><p>进程已退出</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_FORK</span></code></td>
-<td>the process has called <em>fork()</em></td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_FORK</span></code></p></td>
+<td><p>该进程调用了 <em>fork()</em></p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_EXEC</span></code></td>
-<td>the process has executed a new process</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_EXEC</span></code></p></td>
+<td><p>进程已执行新进程</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_PCTRLMASK</span></code></td>
-<td>internal filter flag</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_PCTRLMASK</span></code></p></td>
+<td><p>内部筛选器标志</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_PDATAMASK</span></code></td>
-<td>internal filter flag</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_PDATAMASK</span></code></p></td>
+<td><p>内部筛选器标志</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_TRACK</span></code></td>
-<td>follow a process across <em>fork()</em></td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_TRACK</span></code></p></td>
+<td><p>跨  <em>fork()</em> 执行进程</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_CHILD</span></code></td>
-<td>returned on the child process for
-<em>NOTE_TRACK</em></td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_CHILD</span></code></p></td>
+<td><p>在  <em>NOTE_TRACK</em> 的子进程上返回</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_TRACKERR</span></code></td>
-<td>unable to attach to a child</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_TRACKERR</span></code></p></td>
+<td><p>无法附加到子对象</p></td>
 </tr>
 </tbody>
 </table>
-<p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_NETDEV</span></code> filter flags (not available on Mac OS X):</p>
-<table border="1" class="docutils">
+<p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_FILTER_NETDEV</span></code> 筛选器标志（在 Mac OS X 上不可用）：</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="39%" />
-<col width="61%" />
+<col style="width: 39%" />
+<col style="width: 61%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">常数</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>常数</p></th>
+<th class="head"><p>意义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINKUP</span></code></td>
-<td>link is up</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINKUP</span></code></p></td>
+<td><p>链接已建立</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINKDOWN</span></code></td>
-<td>link is down</td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINKDOWN</span></code></p></td>
+<td><p>链接已断开</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINKINV</span></code></td>
-<td>link state is invalid</td>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">KQ_NOTE_LINKINV</span></code></p></td>
+<td><p>链接状态无效</p></td>
 </tr>
 </tbody>
 </table>
@@ -856,14 +721,14 @@ delivered to the process</td>
 
 <dl class="attribute">
 <dt id="select.kevent.data">
-<code class="descclassname">kevent.</code><code class="descname">data</code><a class="headerlink" href="#select.kevent.data" title="永久链接至目标">¶</a></dt>
-<dd><p>Filter specific data.</p>
+<code class="sig-prename descclassname">kevent.</code><code class="sig-name descname">data</code><a class="headerlink" href="#select.kevent.data" title="永久链接至目标">¶</a></dt>
+<dd><p>筛选特定数据。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="select.kevent.udata">
-<code class="descclassname">kevent.</code><code class="descname">udata</code><a class="headerlink" href="#select.kevent.udata" title="永久链接至目标">¶</a></dt>
-<dd><p>User defined value.</p>
+<code class="sig-prename descclassname">kevent.</code><code class="sig-name descname">udata</code><a class="headerlink" href="#select.kevent.udata" title="永久链接至目标">¶</a></dt>
+<dd><p>用户自定义值。</p>
 </dd></dl>
 
 </div>
@@ -875,30 +740,30 @@ delivered to the process</td>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">select</span></code> --- Waiting for I/O completion</a><ul>
-<li><a class="reference internal" href="#dev-poll-polling-objects"><code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> Polling Objects</a></li>
-<li><a class="reference internal" href="#edge-and-level-trigger-polling-epoll-objects">Edge and Level Trigger Polling (epoll) Objects</a></li>
-<li><a class="reference internal" href="#polling-objects">Polling Objects</a></li>
-<li><a class="reference internal" href="#kqueue-objects">Kqueue Objects</a></li>
-<li><a class="reference internal" href="#kevent-objects">Kevent Objects</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code> --- 等待 I/O 完成</a><ul>
+<li><a class="reference internal" href="#dev-poll-polling-objects"><code class="docutils literal notranslate"><span class="pre">/dev/poll</span></code> 轮询对象</a></li>
+<li><a class="reference internal" href="#edge-and-level-trigger-polling-epoll-objects">边缘触发和水平触发的轮询 (epoll) 对象</a></li>
+<li><a class="reference internal" href="#polling-objects">Poll 对象</a></li>
+<li><a class="reference internal" href="#kqueue-objects">Kqueue 对象</a></li>
+<li><a class="reference internal" href="#kevent-objects">Kevent 对象</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="ssl.html" tppabs="https://docs.python.org/zh-cn/3/library/ssl.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">ssl</span></code> --- TLS/SSL wrapper for socket objects</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code> --- 套接字对象的TLS/SSL封装</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="selectors.html" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">selectors</span></code> --- 高级 I/O 复用库</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code> --- 高级 I/O 复用库</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/select.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/select.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/select.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/select.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/select.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/select.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -921,16 +786,19 @@ delivered to the process</td>
           <a href="selectors.html" tppabs="https://docs.python.org/zh-cn/3/library/selectors.html" title="selectors --- 高级 I/O 复用库"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="ssl.html" tppabs="https://docs.python.org/zh-cn/3/library/ssl.html" title="ssl --- TLS/SSL wrapper for socket objects"
+          <a href="ssl.html" tppabs="https://docs.python.org/zh-cn/3/library/ssl.html" title="ssl --- 套接字对象的TLS/SSL封装"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >网络和进程间通信</a> &#187;</li>
@@ -952,15 +820,19 @@ delivered to the process</td>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

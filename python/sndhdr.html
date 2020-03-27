@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>sndhdr --- æŽ¨æµ‹å£°éŸ³æ–‡ä»¶çš„ç±»åž‹ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>sndhdr --- æŽ¨æµ‹å£°éŸ³æ–‡ä»¶çš„ç±»åž‹ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºŽè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="ossaudiodev --- Access to OSS-compatible audio devices" href="ossaudiodev.html" />
     <link rel="prev" title="imghdr --- æŽ¨æµ‹å›¾åƒç±»åž‹" href="imghdr.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/sndhdr.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="imghdr.html" tppabs="https://docs.python.org/zh-cn/3/library/imghdr.html" title="imghdr --- æŽ¨æµ‹å›¾åƒç±»åž‹"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="mm.html" tppabs="https://docs.python.org/zh-cn/3/library/mm.html" accesskey="U">å¤šåª’ä½“æœåŠ¡</a> &#187;</li>
@@ -97,24 +105,24 @@
             
   <div class="section" id="module-sndhdr">
 <span id="sndhdr-determine-type-of-sound-file"></span><h1><a class="reference internal" href="#module-sndhdr" title="sndhdr: Determine type of a sound file."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sndhdr</span></code></a> --- æŽ¨æµ‹å£°éŸ³æ–‡ä»¶çš„ç±»åž‹<a class="headerlink" href="#module-sndhdr" title="æ°¸ä¹…é“¾æŽ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>æºä»£ç </strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/sndhdr.py  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/sndhdr.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/sndhdr.py">Lib/sndhdr.py</a></p>
+<p><strong>æºä»£ç </strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/asynchat.py  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/asynchat.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/sndhdr.py">Lib/sndhdr.py</a></p>
 <hr class="docutils" id="index-0" />
 <p><a class="reference internal" href="#module-sndhdr" title="sndhdr: Determine type of a sound file."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sndhdr</span></code></a> æä¾›äº†ä¼å›¾çŒœæµ‹æ–‡ä»¶ä¸­çš„å£°éŸ³æ•°æ®ç±»åž‹çš„åŠŸèƒ½å‡½æ•°ã€‚å½“è¿™äº›å‡½æ•°å¯ä»¥æŽ¨æµ‹å‡ºå­˜å‚¨åœ¨æ–‡ä»¶ä¸­çš„å£°éŸ³æ•°æ®çš„ç±»åž‹æ˜¯ï¼Œå®ƒä»¬è¿”å›žä¸€ä¸ª <a class="reference internal" href="collections.html#collections.namedtuple" tppabs="https://docs.python.org/zh-cn/3/library/collections.html#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">collections.namedtuple()</span></code></a>ï¼ŒåŒ…å«äº†äº”ç§å±žæ€§ï¼šï¼ˆ<code class="docutils literal notranslate"><span class="pre">filetype</span></code>, <code class="docutils literal notranslate"><span class="pre">framerate</span></code>, <code class="docutils literal notranslate"><span class="pre">nchannels</span></code>, <code class="docutils literal notranslate"><span class="pre">nframes</span></code>, <code class="docutils literal notranslate"><span class="pre">sampwidth</span></code>ï¼‰ã€‚è¿™äº› <em>type</em> çš„å€¼è¡¨ç¤ºæ•°æ®çš„ç±»åž‹ï¼Œä¼šæ˜¯ä»¥ä¸‹å­—ç¬¦ä¸²ä¹‹ä¸€ï¼š <code class="docutils literal notranslate"><span class="pre">'aifc'</span></code>, <code class="docutils literal notranslate"><span class="pre">'aiff'</span></code>, <code class="docutils literal notranslate"><span class="pre">'au'</span></code>, <code class="docutils literal notranslate"><span class="pre">'hcom'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sndr'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sndt'</span></code>, <code class="docutils literal notranslate"><span class="pre">'voc'</span></code>, <code class="docutils literal notranslate"><span class="pre">'wav'</span></code>, <code class="docutils literal notranslate"><span class="pre">'8svx'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sb'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ub'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'ul'</span></code> ã€‚ <em>sampling_rate</em> å¯èƒ½æ˜¯å®žé™…å€¼æˆ–è€…å½“æœªçŸ¥æˆ–è€…éš¾ä»¥è§£ç æ—¶çš„ <code class="docutils literal notranslate"><span class="pre">0</span></code>ã€‚ç±»ä¼¼çš„ï¼Œ <em>channels</em> ä¹Ÿä¼šè¿”å›žå®žé™…å€¼æˆ–è€…åœ¨æ— æ³•æŽ¨æµ‹æˆ–è€…éš¾ä»¥è§£ç æ—¶è¿”å›ž <code class="docutils literal notranslate"><span class="pre">0</span></code>ã€‚ <em>frames</em> åˆ™æ˜¯å®žé™…å€¼æˆ– <code class="docutils literal notranslate"><span class="pre">-1</span></code>ã€‚ å…ƒç»„çš„æœ€åŽä¸€é¡¹ï¼Œ <em>bits_per_sample</em> å°†ä¼šä¸ºæ¯”ç‰¹è¡¨ç¤ºçš„ sample å¤§å°æˆ–è€… A-LAW æ—¶ä¸º <code class="docutils literal notranslate"><span class="pre">'A'</span></code>ï¼Œ u-LAW æ—¶ä¸º <code class="docutils literal notranslate"><span class="pre">'U'</span></code>ã€‚</p>
 <dl class="function">
 <dt id="sndhdr.what">
-<code class="descclassname">sndhdr.</code><code class="descname">what</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#sndhdr.what" title="æ°¸ä¹…é“¾æŽ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sndhdr.</code><code class="sig-name descname">what</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#sndhdr.what" title="æ°¸ä¹…é“¾æŽ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>ä½¿ç”¨ <a class="reference internal" href="#sndhdr.whathdr" title="sndhdr.whathdr"><code class="xref py py-func docutils literal notranslate"><span class="pre">whathdr()</span></code></a> æŽ¨æµ‹å­˜å‚¨åœ¨ <em>filename</em> æ–‡ä»¶ä¸­çš„å£°éŸ³æ•°æ®çš„ç±»åž‹ã€‚å¦‚æžœæˆåŠŸï¼Œè¿”å›žä¸Šè¿°çš„å‘½åå…ƒç»„ï¼Œå¦åˆ™è¿”å›ž <code class="docutils literal notranslate"><span class="pre">None</span></code>ã€‚</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>å°†ç»“æžœä»Žå…ƒç»„æ”¹ä¸ºå‘½åå…ƒç»„ã€‚</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>å°†ç»“æžœä»Žå…ƒç»„æ”¹ä¸ºå‘½åå…ƒç»„ã€‚</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="sndhdr.whathdr">
-<code class="descclassname">sndhdr.</code><code class="descname">whathdr</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#sndhdr.whathdr" title="æ°¸ä¹…é“¾æŽ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sndhdr.</code><code class="sig-name descname">whathdr</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#sndhdr.whathdr" title="æ°¸ä¹…é“¾æŽ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>åŸºäºŽæ–‡ä»¶å¤´æŽ¨æµ‹å­˜å‚¨åœ¨æ–‡ä»¶ä¸­çš„å£°éŸ³æ•°æ®ç±»åž‹ã€‚æ–‡ä»¶åç”± <em>filename</em> ç»™å‡ºã€‚è¿™ä¸ªå‡½æ•°åœ¨æˆåŠŸæ—¶è¿”å›žä¸Šè¿°å‘½åå…ƒç»„ï¼Œæˆ–è€…åœ¨å¤±è´¥æ—¶è¿”å›ž <code class="docutils literal notranslate"><span class="pre">None</span></code>ã€‚</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>å°†ç»“æžœä»Žå…ƒç»„æ”¹ä¸ºå‘½åå…ƒç»„ã€‚</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>å°†ç»“æžœä»Žå…ƒç»„æ”¹ä¸ºå‘½åå…ƒç»„ã€‚</p>
 </div>
 </dd></dl>
 
@@ -128,16 +136,16 @@
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="imghdr.html" tppabs="https://docs.python.org/zh-cn/3/library/imghdr.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">imghdr</span></code> --- æŽ¨æµ‹å›¾åƒç±»åž‹</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code> --- æŽ¨æµ‹å›¾åƒç±»åž‹</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="ossaudiodev.html" tppabs="https://docs.python.org/zh-cn/3/library/ossaudiodev.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">ossaudiodev</span></code> --- Access to OSS-compatible audio devices</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">ossaudiodev</span></code> --- Access to OSS-compatible audio devices</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/sndhdr.rst  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/sndhdr.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/sndhdr.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/sndhdr.rst  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/sndhdr.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/sndhdr.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -162,14 +170,17 @@
         <li class="right" >
           <a href="imghdr.html" tppabs="https://docs.python.org/zh-cn/3/library/imghdr.html" title="imghdr --- æŽ¨æµ‹å›¾åƒç±»åž‹"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="mm.html" tppabs="https://docs.python.org/zh-cn/3/library/mm.html" >å¤šåª’ä½“æœåŠ¡</a> &#187;</li>
@@ -191,15 +202,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéžç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åŽæ›´æ–°äºŽ 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘çŽ°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åŽæ›´æ–°äºŽ 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

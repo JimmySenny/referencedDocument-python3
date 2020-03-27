@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>å¹¶å‘æ‰§è¡Œ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>å¹¶å‘æ‰§è¡Œ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="threading --- åŸºäºçº¿ç¨‹çš„å¹¶è¡Œ" href="threading.html" />
     <link rel="prev" title="ctypes --- Python çš„å¤–éƒ¨å‡½æ•°åº“" href="ctypes.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/concurrency.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="ctypes.html" tppabs="https://docs.python.org/zh-cn/3/library/ctypes.html" title="ctypes --- Python çš„å¤–éƒ¨å‡½æ•°åº“"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" accesskey="U">Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -99,14 +107,14 @@
 <p>æœ¬ç« ä¸­æè¿°çš„æ¨¡å—æ”¯æŒå¹¶å‘æ‰§è¡Œä»£ç ã€‚ é€‚å½“çš„å·¥å…·é€‰æ‹©å–å†³äºè¦æ‰§è¡Œçš„ä»»åŠ¡ï¼ˆCPUå¯†é›†å‹æˆ–IOå¯†é›†å‹ï¼‰å’Œåå¥½çš„å¼€å‘é£æ ¼ï¼ˆäº‹ä»¶é©±åŠ¨çš„åä½œå¼å¤šä»»åŠ¡æˆ–æŠ¢å å¼å¤šä»»åŠ¡å¤„ç†ï¼‰ã€‚ è¿™æ˜¯ä¸€ä¸ªæ¦‚è¿°ï¼š</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="threading.html" tppabs="https://docs.python.org/zh-cn/3/library/threading.html"><code class="docutils literal notranslate"><span class="pre">threading</span></code> --- åŸºäºçº¿ç¨‹çš„å¹¶è¡Œ</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="threading.html" tppabs="https://docs.python.org/zh-cn/3/library/threading.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code> --- åŸºäºçº¿ç¨‹çš„å¹¶è¡Œ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#thread-local-data" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#thread-local-data">çº¿ç¨‹æœ¬åœ°æ•°æ®</a></li>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#thread-objects" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#thread-objects">çº¿ç¨‹å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#lock-objects" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#lock-objects">é”å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#rlock-objects" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#rlock-objects">é€’å½’é”å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#condition-objects" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#condition-objects">æ¡ä»¶å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#semaphore-objects" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#semaphore-objects">ä¿¡å·é‡å¯¹è±¡</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="threading.html#semaphore-example" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#semaphore-example"><code class="docutils literal notranslate"><span class="pre">Semaphore</span></code> ä¾‹å­</a></li>
+<li class="toctree-l3"><a class="reference internal" href="threading.html#semaphore-example" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#semaphore-example"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code> ä¾‹å­</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threading.html#event-objects" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#event-objects">äº‹ä»¶å¯¹è±¡</a></li>
@@ -115,62 +123,63 @@
 <li class="toctree-l2"><a class="reference internal" href="threading.html#using-locks-conditions-and-semaphores-in-the-with-statement" tppabs="https://docs.python.org/zh-cn/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement">åœ¨ <code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code> è¯­å¥ä¸­ä½¿ç”¨é”ã€æ¡ä»¶å’Œä¿¡å·é‡</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html"><code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> --- åŸºäºè¿›ç¨‹çš„å¹¶è¡Œ</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code> --- åŸºäºè¿›ç¨‹çš„å¹¶è¡Œ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="multiprocessing.html#introduction" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#introduction">æ¦‚è¿°</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#the-process-class" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#the-process-class"><code class="docutils literal notranslate"><span class="pre">Process</span></code> ç±»</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#the-process-class" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#the-process-class"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> ç±»</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#contexts-and-start-methods" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#contexts-and-start-methods">ä¸Šä¸‹æ–‡å’Œå¯åŠ¨æ–¹æ³•</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#exchanging-objects-between-processes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#exchanging-objects-between-processes">åœ¨è¿›ç¨‹ä¹‹é—´äº¤æ¢å¯¹è±¡</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#synchronization-between-processes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#synchronization-between-processes">è¿›ç¨‹ä¹‹é—´çš„åŒæ­¥</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#sharing-state-between-processes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#sharing-state-between-processes">åœ¨è¿›ç¨‹ä¹‹é—´å…±äº«çŠ¶æ€</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#synchronization-between-processes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#synchronization-between-processes">è¿›ç¨‹é—´åŒæ­¥</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#sharing-state-between-processes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#sharing-state-between-processes">è¿›ç¨‹é—´å…±äº«çŠ¶æ€</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#using-a-pool-of-workers" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#using-a-pool-of-workers">ä½¿ç”¨å·¥ä½œè¿›ç¨‹</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="multiprocessing.html#reference" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#reference">å‚è€ƒ</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#process-and-exceptions" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#process-and-exceptions"><code class="docutils literal notranslate"><span class="pre">Process</span></code> å’Œå¼‚å¸¸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#process-and-exceptions" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#process-and-exceptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> å’Œå¼‚å¸¸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#pipes-and-queues" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#pipes-and-queues">ç®¡é“å’Œé˜Ÿåˆ—</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#miscellaneous" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#miscellaneous">æ‚é¡¹</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#connection-objects" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#connection-objects">è¿æ¥ï¼ˆConnectionï¼‰å¯¹è±¡</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#synchronization-primitives" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#synchronization-primitives">Synchronization primitives</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#shared-ctypes-objects" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#shared-ctypes-objects">Shared <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> Objects</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.sharedctypes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.sharedctypes">The <code class="docutils literal notranslate"><span class="pre">multiprocessing.sharedctypes</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#synchronization-primitives" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#synchronization-primitives">åŒæ­¥åŸè¯­</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#shared-ctypes-objects" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#shared-ctypes-objects">å…±äº« <code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code> å¯¹è±¡</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.sharedctypes" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.sharedctypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.sharedctypes</span></code> æ¨¡å—</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#managers" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#managers">Managers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#customized-managers" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#customized-managers">Customized managers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#using-a-remote-manager" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#using-a-remote-manager">Using a remote manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#managers" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#managers">ç®¡ç†å™¨</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#customized-managers" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#customized-managers">è‡ªå®šä¹‰ç®¡ç†å™¨</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#using-a-remote-manager" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#using-a-remote-manager">ä½¿ç”¨è¿œç¨‹ç®¡ç†å™¨</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#proxy-objects" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#proxy-objects">ä»£ç†å¯¹è±¡</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#cleanup" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#cleanup">Cleanup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#cleanup" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#cleanup">æ¸…ç†</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.pool" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.pool">è¿›ç¨‹æ± </a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.connection" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.connection">Listeners and Clients</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#address-formats" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#address-formats">Address Formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.connection" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.connection">ç›‘å¬è€…åŠå®¢æˆ·ç«¯</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.html#address-formats" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#address-formats">åœ°å€æ ¼å¼</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#authentication-keys" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#authentication-keys">Authentication keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#authentication-keys" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#authentication-keys">è®¤è¯å¯†ç </a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#logging" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#logging">æ—¥å¿—</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.dummy" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.dummy">The <code class="docutils literal notranslate"><span class="pre">multiprocessing.dummy</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#module-multiprocessing.dummy" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing.dummy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.dummy</span></code> æ¨¡å—</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="multiprocessing.html#programming-guidelines" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#programming-guidelines">Programming guidelines</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#all-start-methods" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#all-start-methods">All start methods</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#the-spawn-and-forkserver-start-methods" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#the-spawn-and-forkserver-start-methods">The <em>spawn</em> and <em>forkserver</em> start methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiprocessing.html#programming-guidelines" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#programming-guidelines">ç¼–ç¨‹æŒ‡å¯¼</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#all-start-methods" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#all-start-methods">æ‰€æœ‰startæ–¹æ³•</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.html#the-spawn-and-forkserver-start-methods" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#the-spawn-and-forkserver-start-methods"><em>spawn</em> å’Œ <em>forkserver</em> å¯åŠ¨æ–¹å¼</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="multiprocessing.html#examples" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#examples">ç¤ºä¾‹</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concurrent.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.html"><code class="docutils literal notranslate"><span class="pre">concurrent</span></code> åŒ…</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concurrent.futures.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html"><code class="docutils literal notranslate"><span class="pre">concurrent.futures</span></code> --- å¯åŠ¨å¹¶è¡Œä»»åŠ¡</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.shared_memory.html" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.shared_memory.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.shared_memory</span></code> --- å¯ä»è¿›ç¨‹ç›´æ¥è®¿é—®çš„å…±äº«å†…å­˜</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concurrent.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent</span></code> åŒ…</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concurrent.futures.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code> --- å¯åŠ¨å¹¶è¡Œä»»åŠ¡</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="concurrent.futures.html#executor-objects" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#executor-objects">æ‰§è¡Œå™¨å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concurrent.futures.html#threadpoolexecutor" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#threadpoolexecutor">ThreadPoolExecutor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="concurrent.futures.html#threadpoolexecutor-example" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#threadpoolexecutor-example">ProcessPoolExecutorä¾‹å­</a></li>
+<li class="toctree-l3"><a class="reference internal" href="concurrent.futures.html#threadpoolexecutor-example" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#threadpoolexecutor-example">ThreadPoolExecutor ä¾‹å­</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="concurrent.futures.html#processpoolexecutor" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#processpoolexecutor">ProcessPoolExecutor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="concurrent.futures.html#processpoolexecutor-example" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#processpoolexecutor-example">ProcessPoolExecutorä¾‹å­</a></li>
+<li class="toctree-l3"><a class="reference internal" href="concurrent.futures.html#processpoolexecutor-example" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#processpoolexecutor-example">ProcessPoolExecutor ä¾‹å­</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="concurrent.futures.html#future-objects" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#future-objects">æœŸç¨‹å¯¹è±¡</a></li>
@@ -178,8 +187,8 @@
 <li class="toctree-l2"><a class="reference internal" href="concurrent.futures.html#exception-classes" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#exception-classes">Exceptionç±»</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="subprocess.html" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html"><code class="docutils literal notranslate"><span class="pre">subprocess</span></code> --- å­è¿›ç¨‹ç®¡ç†</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="subprocess.html#using-the-subprocess-module" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#using-the-subprocess-module">ä½¿ç”¨ <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> æ¨¡å—</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="subprocess.html" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> --- å­è¿›ç¨‹ç®¡ç†</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.html#using-the-subprocess-module" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#using-the-subprocess-module">ä½¿ç”¨ <code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> æ¨¡å—</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="subprocess.html#frequently-used-arguments" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#frequently-used-arguments">å¸¸ç”¨å‚æ•°</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subprocess.html#popen-constructor" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#popen-constructor">Popen æ„é€ å‡½æ•°</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subprocess.html#exceptions" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#exceptions">å¼‚å¸¸</a></li>
@@ -188,17 +197,17 @@
 <li class="toctree-l2"><a class="reference internal" href="subprocess.html#security-considerations" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#security-considerations">å®‰å…¨è€ƒé‡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subprocess.html#popen-objects" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#popen-objects">Popen å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subprocess.html#windows-popen-helpers" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#windows-popen-helpers">Windows Popen åŠ©æ‰‹</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subprocess.html#windows-constants" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#windows-constants">Windows Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html#windows-constants" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#windows-constants">Windows å¸¸æ•°</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="subprocess.html#older-high-level-api" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#older-high-level-api">Older high-level API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="subprocess.html#replacing-older-functions-with-the-subprocess-module" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-older-functions-with-the-subprocess-module">Replacing Older Functions with the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-bin-sh-shell-backquote" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-bin-sh-shell-backquote">Replacing /bin/sh shell backquote</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.html#replacing-older-functions-with-the-subprocess-module" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-older-functions-with-the-subprocess-module">Replacing Older Functions with the <code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-bin-sh-shell-command-substitution" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-bin-sh-shell-command-substitution">Replacing <strong class="program">/bin/sh</strong> shell command substitution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-shell-pipeline" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-shell-pipeline">Replacing shell pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-os-system" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-os-system">Replacing <code class="docutils literal notranslate"><span class="pre">os.system()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-the-os-spawn-family" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-the-os-spawn-family">Replacing the <code class="docutils literal notranslate"><span class="pre">os.spawn</span></code> family</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-os-popen-os-popen2-os-popen3" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-os-popen-os-popen2-os-popen3">Replacing <code class="docutils literal notranslate"><span class="pre">os.popen()</span></code>, <code class="docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="docutils literal notranslate"><span class="pre">os.popen3()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-functions-from-the-popen2-module" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-functions-from-the-popen2-module">Replacing functions from the <code class="docutils literal notranslate"><span class="pre">popen2</span></code> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-os-system" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-os-system">Replacing <code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-the-os-spawn-family" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-the-os-spawn-family">Replacing the <code class="xref py py-func docutils literal notranslate"><span class="pre">os.spawn</span></code> family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-os-popen-os-popen2-os-popen3" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-os-popen-os-popen2-os-popen3">Replacing <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen3()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html#replacing-functions-from-the-popen2-module" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#replacing-functions-from-the-popen2-module">Replacing functions from the <code class="xref py py-mod docutils literal notranslate"><span class="pre">popen2</span></code> module</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="subprocess.html#legacy-shell-invocation-functions" tppabs="https://docs.python.org/zh-cn/3/library/subprocess.html#legacy-shell-invocation-functions">Legacy Shell Invocation Functions</a></li>
@@ -208,11 +217,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sched.html" tppabs="https://docs.python.org/zh-cn/3/library/sched.html"><code class="docutils literal notranslate"><span class="pre">sched</span></code> --- äº‹ä»¶è°ƒåº¦å™¨</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="sched.html" tppabs="https://docs.python.org/zh-cn/3/library/sched.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sched</span></code> --- äº‹ä»¶è°ƒåº¦å™¨</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sched.html#scheduler-objects" tppabs="https://docs.python.org/zh-cn/3/library/sched.html#scheduler-objects">è°ƒåº¦å™¨å¯¹è±¡</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="queue.html" tppabs="https://docs.python.org/zh-cn/3/library/queue.html"><code class="docutils literal notranslate"><span class="pre">queue</span></code> --- ä¸€ä¸ªåŒæ­¥çš„é˜Ÿåˆ—ç±»</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="queue.html" tppabs="https://docs.python.org/zh-cn/3/library/queue.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code> --- ä¸€ä¸ªåŒæ­¥çš„é˜Ÿåˆ—ç±»</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="queue.html#queue-objects" tppabs="https://docs.python.org/zh-cn/3/library/queue.html#queue-objects">Queueå¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="queue.html#simplequeue-objects" tppabs="https://docs.python.org/zh-cn/3/library/queue.html#simplequeue-objects">SimpleQueue å¯¹è±¡</a></li>
 </ul>
@@ -222,9 +231,9 @@
 <p>ä»¥ä¸‹æ˜¯ä¸Šè¿°æŸäº›æœåŠ¡çš„æ”¯æŒæ¨¡å—ï¼š</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="_thread.html" tppabs="https://docs.python.org/zh-cn/3/library/_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> --- åº•å±‚å¤šçº¿ç¨‹ API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_dummy_thread.html" tppabs="https://docs.python.org/zh-cn/3/library/_dummy_thread.html"><code class="docutils literal notranslate"><span class="pre">_dummy_thread</span></code> --- <code class="docutils literal notranslate"><span class="pre">_thread</span></code> çš„æ›¿ä»£æ¨¡å—</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dummy_threading.html" tppabs="https://docs.python.org/zh-cn/3/library/dummy_threading.html"><code class="docutils literal notranslate"><span class="pre">dummy_threading</span></code> ---  å¯ç›´æ¥æ›¿ä»£ <code class="docutils literal notranslate"><span class="pre">threading</span></code> æ¨¡å—ã€‚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_thread.html" tppabs="https://docs.python.org/zh-cn/3/library/_thread.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">_thread</span></code> --- åº•å±‚å¤šçº¿ç¨‹ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_dummy_thread.html" tppabs="https://docs.python.org/zh-cn/3/library/_dummy_thread.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">_dummy_thread</span></code> --- <code class="xref py py-mod docutils literal notranslate"><span class="pre">_thread</span></code> çš„æ›¿ä»£æ¨¡å—</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dummy_threading.html" tppabs="https://docs.python.org/zh-cn/3/library/dummy_threading.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dummy_threading</span></code> ---  å¯ç›´æ¥æ›¿ä»£ <code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code> æ¨¡å—ã€‚</a></li>
 </ul>
 </div>
 </div>
@@ -237,16 +246,16 @@
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="ctypes.html" tppabs="https://docs.python.org/zh-cn/3/library/ctypes.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">ctypes</span></code> --- Python çš„å¤–éƒ¨å‡½æ•°åº“</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code> --- Python çš„å¤–éƒ¨å‡½æ•°åº“</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="threading.html" tppabs="https://docs.python.org/zh-cn/3/library/threading.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">threading</span></code> --- åŸºäºçº¿ç¨‹çš„å¹¶è¡Œ</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code> --- åŸºäºçº¿ç¨‹çš„å¹¶è¡Œ</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/concurrency.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/concurrency.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/concurrency.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/concurrency.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/concurrency.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/concurrency.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -271,14 +280,17 @@
         <li class="right" >
           <a href="ctypes.html" tppabs="https://docs.python.org/zh-cn/3/library/ctypes.html" title="ctypes --- Python çš„å¤–éƒ¨å‡½æ•°åº“"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -299,15 +311,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

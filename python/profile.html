@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>The Python Profilers &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>Python Profilers 分析器 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="timeit --- 测量小代码片段的执行时间" href="timeit.html" />
-    <link rel="prev" title="pdb --- The Python Debugger" href="pdb.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="pdb --- Python的调试器" href="pdb.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/profile.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -59,16 +64,19 @@
           <a href="timeit.html" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html" title="timeit --- 测量小代码片段的执行时间"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- The Python Debugger"
+          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- Python的调试器"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="debug.html" tppabs="https://docs.python.org/zh-cn/3/library/debug.html" accesskey="U">调试和分析</a> &#187;</li>
@@ -96,52 +104,33 @@
           <div class="body" role="main">
             
   <div class="section" id="the-python-profilers">
-<span id="profile"></span><h1>The Python Profilers<a class="headerlink" href="#the-python-profilers" title="永久链接至标题">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/profile.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/profile.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/profile.py">Lib/profile.py</a> and <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/pstats.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/pstats.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/pstats.py">Lib/pstats.py</a></p>
+<span id="profile"></span><h1>Python Profilers 分析器<a class="headerlink" href="#the-python-profilers" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/profile.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/profile.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/profile.py">Lib/profile.py</a> 和 <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/pstats.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/pstats.py'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/pstats.py">Lib/pstats.py</a></p>
 <hr class="docutils" />
 <div class="section" id="introduction-to-the-profilers">
-<span id="profiler-introduction"></span><h2>Introduction to the profilers<a class="headerlink" href="#introduction-to-the-profilers" title="永久链接至标题">¶</a></h2>
-<p id="index-0"><a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> and <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> provide <em class="dfn">deterministic profiling</em> of
-Python programs. A <em class="dfn">profile</em> is a set of statistics that describes how
-often and for how long various parts of the program executed. These statistics
-can be formatted into reports via the <a class="reference internal" href="#module-pstats" title="pstats: Statistics object for use with the profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pstats</span></code></a> module.</p>
-<p>The Python standard library provides two different implementations of the same
-profiling interface:</p>
+<span id="profiler-introduction"></span><h2>profile分析器简介<a class="headerlink" href="#introduction-to-the-profilers" title="永久链接至标题">¶</a></h2>
+<p id="index-0"><a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 和 <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 提供了 Python 程序的 <em class="dfn">确定性性能分析</em> 。 <em class="dfn">profile</em> 是一组统计数据，描述程序的各个部分执行的频率和时间。这些统计数据可以通过 <a class="reference internal" href="#module-pstats" title="pstats: Statistics object for use with the profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pstats</span></code></a> 模块格式化为报表。</p>
+<p>Python 标准库提供了同一分析接口的两种不同实现：</p>
 <ol class="arabic simple">
-<li><a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> is recommended for most users; it's a C extension with
-reasonable overhead that makes it suitable for profiling long-running
-programs.  Based on <code class="xref py py-mod docutils literal notranslate"><span class="pre">lsprof</span></code>, contributed by Brett Rosen and Ted
-Czotter.</li>
-<li><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a>, a pure Python module whose interface is imitated by
-<a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a>, but which adds significant overhead to profiled programs.
-If you're trying to extend the profiler in some way, the task might be easier
-with this module.  Originally designed and written by Jim Roskind.</li>
+<li><p>对于大多数用户，建议使用 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> ；这是一个 C 扩展插件，因为其合理的运行开销，所以适合于分析长时间运行的程序。该插件基于 <code class="xref py py-mod docutils literal notranslate"><span class="pre">lsprof</span></code> ，由 Brett Rosen 和 Ted Chaotter 贡献。</p></li>
+<li><p><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 是一个纯 Python 模块（<a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 就是模拟其接口的 C 语言实现），但它会显著增加配置程序的开销。如果你正在尝试以某种方式扩展分析器，则使用此模块可能会更容易完成任务。该模块最初由 Jim Roskind  设计和编写。</p></li>
 </ol>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">The profiler modules are designed to provide an execution profile for a given
-program, not for benchmarking purposes (for that, there is <a class="reference internal" href="timeit.html#module-timeit" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> for
-reasonably accurate results).  This particularly applies to benchmarking
-Python code against C code: the profilers introduce overhead for Python code,
-but not for C-level functions, and so the C code would seem faster than any
-Python one.</p>
+<p class="admonition-title">注解</p>
+<p>profiler 分析器模块被设计为给指定的程序提供执行概要文件，而不是用于基准测试目的（ <a class="reference internal" href="timeit.html#module-timeit" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html#module-timeit" title="timeit: Measure the execution time of small code snippets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> 才是用于此目标的，它能获得合理准确的结果）。这特别适用于将 Python 代码与 C 代码进行基准测试：分析器为Python 代码引入开销，但不会为 C级别的函数引入开销，因此 C 代码似乎比任何Python 代码都更快。</p>
 </div>
 </div>
 <div class="section" id="instant-user-s-manual">
-<span id="profile-instant"></span><h2>Instant User's Manual<a class="headerlink" href="#instant-user-s-manual" title="永久链接至标题">¶</a></h2>
-<p>This section is provided for users that &quot;don't want to read the manual.&quot; It
-provides a very brief overview, and allows a user to rapidly perform profiling
-on an existing application.</p>
-<p>To profile a function that takes a single argument, you can do:</p>
+<span id="profile-instant"></span><h2>实时用户手册<a class="headerlink" href="#instant-user-s-manual" title="永久链接至标题">¶</a></h2>
+<p>本节是为 “不想阅读手册” 的用户提供的。它提供了非常简短的概述，并允许用户快速对现有应用程序执行评测。</p>
+<p>要分析采用单个参数的函数，可以执行以下操作：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cProfile</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="n">cProfile</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;re.compile(&quot;foo|bar&quot;)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(Use <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> instead of <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> if the latter is not available on
-your system.)</p>
-<p>The above action would run <a class="reference internal" href="re.html#re.compile" tppabs="https://docs.python.org/zh-cn/3/library/re.html#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> and print profile results like
-the following:</p>
+<p>（如果 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 在您的系统上不可用，请使用 <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 。）</p>
+<p>上述操作将运行 <a class="reference internal" href="re.html#re.compile" tppabs="https://docs.python.org/zh-cn/3/library/re.html#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> 并打印分析结果，如下所示：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>      <span class="mi">197</span> <span class="n">function</span> <span class="n">calls</span> <span class="p">(</span><span class="mi">192</span> <span class="n">primitive</span> <span class="n">calls</span><span class="p">)</span> <span class="ow">in</span> <span class="mf">0.002</span> <span class="n">seconds</span>
 
 <span class="n">Ordered</span> <span class="n">by</span><span class="p">:</span> <span class="n">standard</span> <span class="n">name</span>
@@ -156,58 +145,48 @@ the following:</p>
    <span class="mi">3</span><span class="o">/</span><span class="mi">1</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span> <span class="n">sre_compile</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">33</span><span class="p">(</span><span class="n">_compile</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The first line indicates that 197 calls were monitored.  Of those calls, 192
-were <em class="dfn">primitive</em>, meaning that the call was not induced via recursion. The
-next line: <code class="docutils literal notranslate"><span class="pre">Ordered</span> <span class="pre">by:</span> <span class="pre">standard</span> <span class="pre">name</span></code>, indicates that the text string in the
-far right column was used to sort the output. The column headings include:</p>
-<dl class="docutils">
-<dt>ncalls</dt>
-<dd>for the number of calls.</dd>
-<dt>tottime</dt>
-<dd>for the total time spent in the given function (and excluding time made in
-calls to sub-functions)</dd>
-<dt>percall</dt>
-<dd>is the quotient of <code class="docutils literal notranslate"><span class="pre">tottime</span></code> divided by <code class="docutils literal notranslate"><span class="pre">ncalls</span></code></dd>
-<dt>cumtime</dt>
-<dd>is the cumulative time spent in this and all subfunctions (from invocation
-till exit). This figure is accurate <em>even</em> for recursive functions.</dd>
-<dt>percall</dt>
-<dd>is the quotient of <code class="docutils literal notranslate"><span class="pre">cumtime</span></code> divided by primitive calls</dd>
-<dt>filename:lineno(function)</dt>
-<dd>provides the respective data of each function</dd>
+<p>第一行显示监听了197个调用。在这些调用中，有192个是 <em class="dfn">原始的</em> ，这意味着调用不是通过递归引发的。下一行: <code class="docutils literal notranslate"><span class="pre">Ordered</span> <span class="pre">by:</span> <span class="pre">standard</span> <span class="pre">name</span></code> ，表示最右边列中的文本字符串用于对输出进行排序。列标题包括：</p>
+<dl class="simple">
+<dt>ncalls</dt><dd><p>调用次数</p>
+</dd>
+<dt>tottime</dt><dd><p>在指定函数中消耗的总时间（不包括调用子函数的时间）</p>
+</dd>
+<dt>percall</dt><dd><p>是 <code class="docutils literal notranslate"><span class="pre">tottime</span></code> 除以 <code class="docutils literal notranslate"><span class="pre">ncalls</span></code> 的商</p>
+</dd>
+<dt>cumtime</dt><dd><p>指定的函数及其所有子函数（从调用到退出）消耗的累积时间。这个数字对于递归函数来说是准确的。</p>
+</dd>
+<dt>percall</dt><dd><p>是 <code class="docutils literal notranslate"><span class="pre">cumtime</span></code> 除以原始调用（次数）的商（即：函数运行一次的平均时间）</p>
+</dd>
+<dt>filename:lineno(function)</dt><dd><p>提供相应数据的每个函数</p>
+</dd>
 </dl>
-<p>When there are two numbers in the first column (for example <code class="docutils literal notranslate"><span class="pre">3/1</span></code>), it means
-that the function recursed.  The second value is the number of primitive calls
-and the former is the total number of calls.  Note that when the function does
-not recurse, these two values are the same, and only the single figure is
-printed.</p>
-<p>Instead of printing the output at the end of the profile run, you can save the
-results to a file by specifying a filename to the <code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code> function:</p>
+<p>如果第一列中有两个数字（例如3/1），则表示函数递归。第二个值是原始调用次数，第一个是调用的总次数。请注意，当函数不递归时，这两个值是相同的，并且只打印单个数字。</p>
+<p>profile 运行结束时，打印输出不是必须的。也可以通过为 <code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code> 函数指定文件名，将结果保存到文件中：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cProfile</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="n">cProfile</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;re.compile(&quot;foo|bar&quot;)&#39;</span><span class="p">,</span> <span class="s1">&#39;restats&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">pstats.Stats</span></code></a> class reads profile results from a file and formats
-them in various ways.</p>
-<p>The file <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> can also be invoked as a script to profile another
-script.  For example:</p>
+<p><a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">pstats.Stats</span></code></a> 类从文件中读取 profile 结果，并以各种方式对其进行格式化。</p>
+<p><a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 和 <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 文件也可以作为脚本调用，以分析另一个脚本。例如：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">cProfile</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">output_file</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">sort_order</span><span class="p">]</span> <span class="p">(</span><span class="o">-</span><span class="n">m</span> <span class="n">module</span> <span class="o">|</span> <span class="n">myscript</span><span class="o">.</span><span class="n">py</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">-o</span></code> writes the profile results to a file instead of to stdout</p>
-<p><code class="docutils literal notranslate"><span class="pre">-s</span></code> specifies one of the <a class="reference internal" href="#pstats.Stats.sort_stats" title="pstats.Stats.sort_stats"><code class="xref py py-func docutils literal notranslate"><span class="pre">sort_stats()</span></code></a> sort values to sort
-the output by. This only applies when <code class="docutils literal notranslate"><span class="pre">-o</span></code> is not supplied.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-m</span></code> specifies that a module is being profiled instead of a script.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-o</span></code> 将profile 结果写入文件而不是标准输出</p>
+<p><code class="docutils literal notranslate"><span class="pre">-s</span></code> 指定 <a class="reference internal" href="#pstats.Stats.sort_stats" title="pstats.Stats.sort_stats"><code class="xref py py-func docutils literal notranslate"><span class="pre">sort_stats()</span></code></a> 排序值之一以对输出进行排序。这仅适用于未提供 <code class="docutils literal notranslate"><span class="pre">-o</span></code> 的情况</p>
+<p><code class="docutils literal notranslate"><span class="pre">-m</span></code> 指定要分析的是模块而不是脚本。</p>
 <blockquote>
 <div><div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能: </span>Added the <code class="docutils literal notranslate"><span class="pre">-m</span></code> option.</p>
+<p><span class="versionmodified added">3.7 新版功能: </span><a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 添加 <code class="docutils literal notranslate"><span class="pre">-m</span></code> 选项</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">3.8 新版功能: </span><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 添加 <code class="docutils literal notranslate"><span class="pre">-m</span></code> 选项</p>
 </div>
 </div></blockquote>
 <p>The <a class="reference internal" href="#module-pstats" title="pstats: Statistics object for use with the profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pstats</span></code></a> module's <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class has a variety of methods
 for manipulating and printing the data saved into a profile results file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pstats</span>
-<span class="kn">from</span> <span class="nn">pstats</span> <span class="k">import</span> <span class="n">SortKey</span>
+<span class="kn">from</span> <span class="nn">pstats</span> <span class="kn">import</span> <span class="n">SortKey</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pstats</span><span class="o">.</span><span class="n">Stats</span><span class="p">(</span><span class="s1">&#39;restats&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">strip_dirs</span><span class="p">()</span><span class="o">.</span><span class="n">sort_stats</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">print_stats</span><span class="p">()</span>
 </pre></div>
@@ -237,7 +216,7 @@ of time, you would do:</p>
 </div>
 <p>to sort according to time spent within each function, and then print the
 statistics for the top ten functions.</p>
-<p>You might also try:</p>
+<p>你也可以尝试：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">sort_stats</span><span class="p">(</span><span class="n">SortKey</span><span class="o">.</span><span class="n">FILENAME</span><span class="p">)</span><span class="o">.</span><span class="n">print_stats</span><span class="p">(</span><span class="s1">&#39;__init__&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -268,12 +247,11 @@ reading and examining profile dumps.  It has a simple line-oriented interface
 (implemented using <a class="reference internal" href="cmd.html#module-cmd" tppabs="https://docs.python.org/zh-cn/3/library/cmd.html#module-cmd" title="cmd: Build line-oriented command interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmd</span></code></a>) and interactive help.</p>
 </div>
 <div class="section" id="module-cProfile">
-<span id="profile-and-cprofile-module-reference"></span><h2><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> and <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> Module Reference<a class="headerlink" href="#module-cProfile" title="永久链接至标题">¶</a></h2>
-<span class="target" id="module-profile"></span><p>Both the <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> and <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> modules provide the following
-functions:</p>
+<span id="profile-and-cprofile-module-reference"></span><h2><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 和 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 模块参考<a class="headerlink" href="#module-cProfile" title="永久链接至标题">¶</a></h2>
+<span class="target" id="module-profile"></span><p><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 和 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 模块都提供下列函数：</p>
 <dl class="function">
 <dt id="profile.run">
-<code class="descclassname">profile.</code><code class="descname">run</code><span class="sig-paren">(</span><em>command</em>, <em>filename=None</em>, <em>sort=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.run" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">profile.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">command</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">sort=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.run" title="永久链接至目标">¶</a></dt>
 <dd><p>This function takes a single argument that can be passed to the <a class="reference internal" href="functions.html#exec" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a>
 function, and an optional file name.  In all cases this routine executes:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">exec</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">__main__</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">,</span> <span class="n">__main__</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
@@ -288,7 +266,7 @@ results are sorted.</p>
 
 <dl class="function">
 <dt id="profile.runctx">
-<code class="descclassname">profile.</code><code class="descname">runctx</code><span class="sig-paren">(</span><em>command</em>, <em>globals</em>, <em>locals</em>, <em>filename=None</em>, <em>sort=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.runctx" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">profile.</code><code class="sig-name descname">runctx</code><span class="sig-paren">(</span><em class="sig-param">command</em>, <em class="sig-param">globals</em>, <em class="sig-param">locals</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">sort=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.runctx" title="永久链接至目标">¶</a></dt>
 <dd><p>This function is similar to <a class="reference internal" href="#profile.run" title="profile.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a>, with added arguments to supply the
 globals and locals dictionaries for the <em>command</em> string. This routine
 executes:</p>
@@ -300,7 +278,7 @@ executes:</p>
 
 <dl class="class">
 <dt id="profile.Profile">
-<em class="property">class </em><code class="descclassname">profile.</code><code class="descname">Profile</code><span class="sig-paren">(</span><em>timer=None</em>, <em>timeunit=0.0</em>, <em>subcalls=True</em>, <em>builtins=True</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">profile.</code><code class="sig-name descname">Profile</code><span class="sig-paren">(</span><em class="sig-param">timer=None</em>, <em class="sig-param">timeunit=0.0</em>, <em class="sig-param">subcalls=True</em>, <em class="sig-param">builtins=True</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile" title="永久链接至目标">¶</a></dt>
 <dd><p>This class is normally only used if more precise control over profiling is
 needed than what the <code class="xref py py-func docutils literal notranslate"><span class="pre">cProfile.run()</span></code> function provides.</p>
 <p>A custom timer can be supplied for measuring how long code takes to run via
@@ -312,7 +290,7 @@ time unit would be <code class="docutils literal notranslate"><span class="pre">
 <p>Directly using the <a class="reference internal" href="#profile.Profile" title="profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code></a> class allows formatting profile results
 without writing the profile data to a file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cProfile</span><span class="o">,</span> <span class="nn">pstats</span><span class="o">,</span> <span class="nn">io</span>
-<span class="kn">from</span> <span class="nn">pstats</span> <span class="k">import</span> <span class="n">SortKey</span>
+<span class="kn">from</span> <span class="nn">pstats</span> <span class="kn">import</span> <span class="n">SortKey</span>
 <span class="n">pr</span> <span class="o">=</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
 <span class="n">pr</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
 <span class="c1"># ... do something ...</span>
@@ -324,54 +302,66 @@ without writing the profile data to a file:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
 </pre></div>
 </div>
+<p>The <a class="reference internal" href="#profile.Profile" title="profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code></a> class can also be used as a context manager (supported
+only in <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> module. see <a class="reference internal" href="stdtypes.html#typecontextmanager" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#typecontextmanager"><span class="std std-ref">上下文管理器类型</span></a>):</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cProfile</span>
+
+<span class="k">with</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span> <span class="k">as</span> <span class="n">pr</span><span class="p">:</span>
+    <span class="c1"># ... do something ...</span>
+
+<span class="n">pr</span><span class="o">.</span><span class="n">print_stats</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>添加了上下文管理器支持。</p>
+</div>
 <dl class="method">
 <dt id="profile.Profile.enable">
-<code class="descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.enable" title="永久链接至目标">¶</a></dt>
-<dd><p>Start collecting profiling data.</p>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.enable" title="永久链接至目标">¶</a></dt>
+<dd><p>开始收集分析数据。仅在 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 可用。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.disable">
-<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.disable" title="永久链接至目标">¶</a></dt>
-<dd><p>Stop collecting profiling data.</p>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.disable" title="永久链接至目标">¶</a></dt>
+<dd><p>停止收集分析数据。仅在 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 可用。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.create_stats">
-<code class="descname">create_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.create_stats" title="永久链接至目标">¶</a></dt>
-<dd><p>Stop collecting profiling data and record the results internally
-as the current profile.</p>
+<code class="sig-name descname">create_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.create_stats" title="永久链接至目标">¶</a></dt>
+<dd><p>停止收集分析数据，并在内部将结果记录为当前 profile。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.print_stats">
-<code class="descname">print_stats</code><span class="sig-paren">(</span><em>sort=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.print_stats" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">print_stats</code><span class="sig-paren">(</span><em class="sig-param">sort=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.print_stats" title="永久链接至目标">¶</a></dt>
 <dd><p>Create a <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> object based on the current
 profile and print the results to stdout.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.dump_stats">
-<code class="descname">dump_stats</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.dump_stats" title="永久链接至目标">¶</a></dt>
-<dd><p>Write the results of the current profile to <em>filename</em>.</p>
+<code class="sig-name descname">dump_stats</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.dump_stats" title="永久链接至目标">¶</a></dt>
+<dd><p>将当前profile 的结果写入 <em>filename</em> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.run">
-<code class="descname">run</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.run" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.run" title="永久链接至目标">¶</a></dt>
 <dd><p>Profile the cmd via <a class="reference internal" href="functions.html#exec" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.runctx">
-<code class="descname">runctx</code><span class="sig-paren">(</span><em>cmd</em>, <em>globals</em>, <em>locals</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.runctx" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">runctx</code><span class="sig-paren">(</span><em class="sig-param">cmd</em>, <em class="sig-param">globals</em>, <em class="sig-param">locals</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.runctx" title="永久链接至目标">¶</a></dt>
 <dd><p>Profile the cmd via <a class="reference internal" href="functions.html#exec" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a> with the specified global and
 local environment.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="profile.Profile.runcall">
-<code class="descname">runcall</code><span class="sig-paren">(</span><em>func</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.runcall" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">runcall</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#profile.Profile.runcall" title="永久链接至目标">¶</a></dt>
 <dd><p>Profile <code class="docutils literal notranslate"><span class="pre">func(*args,</span> <span class="pre">**kwargs)</span></code></p>
 </dd></dl>
 
@@ -383,11 +373,11 @@ during the called command/function execution) no profiling results will be
 printed.</p>
 </div>
 <div class="section" id="the-stats-class">
-<span id="profile-stats"></span><h2>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code> Class<a class="headerlink" href="#the-stats-class" title="永久链接至标题">¶</a></h2>
+<span id="profile-stats"></span><h2><a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> 类<a class="headerlink" href="#the-stats-class" title="永久链接至标题">¶</a></h2>
 <p>Analysis of the profiler data is done using the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class.</p>
 <span class="target" id="module-pstats"></span><dl class="class">
 <dt id="pstats.Stats">
-<em class="property">class </em><code class="descclassname">pstats.</code><code class="descname">Stats</code><span class="sig-paren">(</span><em>*filenames or profile</em>, <em>stream=sys.stdout</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pstats.</code><code class="sig-name descname">Stats</code><span class="sig-paren">(</span><em class="sig-param">*filenames or profile</em>, <em class="sig-param">stream=sys.stdout</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats" title="永久链接至目标">¶</a></dt>
 <dd><p>This class constructor creates an instance of a &quot;statistics object&quot; from a
 <em>filename</em> (or list of filenames) or from a <code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code> instance. Output
 will be printed to the stream specified by <em>stream</em>.</p>
@@ -403,10 +393,10 @@ existing <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"
 can be used.</p>
 <p>Instead of reading the profile data from a file, a <code class="xref py py-class docutils literal notranslate"><span class="pre">cProfile.Profile</span></code>
 or <a class="reference internal" href="#profile.Profile" title="profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">profile.Profile</span></code></a> object can be used as the profile data source.</p>
-<p><a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> objects have the following methods:</p>
+<p><a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> 对象有以下方法:</p>
 <dl class="method">
 <dt id="pstats.Stats.strip_dirs">
-<code class="descname">strip_dirs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.strip_dirs" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">strip_dirs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.strip_dirs" title="永久链接至目标">¶</a></dt>
 <dd><p>This method for the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class removes all leading path
 information from file names.  It is very useful in reducing the size of
 the printout to fit within (close to) 80 columns.  This method modifies
@@ -421,7 +411,7 @@ are accumulated into a single entry.</p>
 
 <dl class="method">
 <dt id="pstats.Stats.add">
-<code class="descname">add</code><span class="sig-paren">(</span><em>*filenames</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.add" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">*filenames</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.add" title="永久链接至目标">¶</a></dt>
 <dd><p>This method of the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class accumulates additional profiling
 information into the current profiling object.  Its arguments should refer
 to filenames created by the corresponding version of <a class="reference internal" href="#profile.run" title="profile.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">profile.run()</span></code></a>
@@ -432,7 +422,7 @@ statistics.</p>
 
 <dl class="method">
 <dt id="pstats.Stats.dump_stats">
-<code class="descname">dump_stats</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.dump_stats" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">dump_stats</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.dump_stats" title="永久链接至目标">¶</a></dt>
 <dd><p>Save the data loaded into the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> object to a file named
 <em>filename</em>.  The file is created if it does not exist, and is overwritten
 if it already exists.  This is equivalent to the method of the same name
@@ -441,7 +431,7 @@ on the <a class="reference internal" href="#profile.Profile" title="profile.Prof
 
 <dl class="method">
 <dt id="pstats.Stats.sort_stats">
-<code class="descname">sort_stats</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.sort_stats" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">sort_stats</code><span class="sig-paren">(</span><em class="sig-param">*keys</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.sort_stats" title="永久链接至目标">¶</a></dt>
 <dd><p>This method modifies the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> object by sorting it according to
 the supplied criteria.  The argument can be either a string or a SortKey
 enum identifying the basis of a sort (example: <code class="docutils literal notranslate"><span class="pre">'time'</span></code>, <code class="docutils literal notranslate"><span class="pre">'name'</span></code>,
@@ -456,74 +446,74 @@ all the entries according to their function name, and resolve all ties
 <p>For the string argument, abbreviations can be used for any key names, as
 long as the abbreviation is unambiguous.</p>
 <p>The following are the valid string and SortKey:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="30%" />
-<col width="34%" />
-<col width="36%" />
+<col style="width: 30%" />
+<col style="width: 34%" />
+<col style="width: 36%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Valid String Arg</th>
-<th class="head">Valid enum Arg</th>
-<th class="head">意义</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>有效字符串参数</p></th>
+<th class="head"><p>有效枚举参数</p></th>
+<th class="head"><p>含义</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'calls'</span></code></td>
-<td>SortKey.CALLS</td>
-<td>call count</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'calls'</span></code></p></td>
+<td><p>SortKey.CALLS</p></td>
+<td><p>调用次数</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'cumulative'</span></code></td>
-<td>SortKey.CUMULATIVE</td>
-<td>cumulative time</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'cumulative'</span></code></p></td>
+<td><p>SortKey.CUMULATIVE</p></td>
+<td><p>累积时间</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'cumtime'</span></code></td>
-<td>N/A</td>
-<td>cumulative time</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'cumtime'</span></code></p></td>
+<td><p>N/A</p></td>
+<td><p>累积时间</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'file'</span></code></td>
-<td>N/A</td>
-<td>file name</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'file'</span></code></p></td>
+<td><p>N/A</p></td>
+<td><p>文件名</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'filename'</span></code></td>
-<td>SortKey.FILENAME</td>
-<td>file name</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'filename'</span></code></p></td>
+<td><p>SortKey.FILENAME</p></td>
+<td><p>文件名</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'module'</span></code></td>
-<td>N/A</td>
-<td>file name</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'module'</span></code></p></td>
+<td><p>N/A</p></td>
+<td><p>文件名</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'ncalls'</span></code></td>
-<td>N/A</td>
-<td>call count</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'ncalls'</span></code></p></td>
+<td><p>N/A</p></td>
+<td><p>调用次数</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'pcalls'</span></code></td>
-<td>SortKey.PCALLS</td>
-<td>primitive call count</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'pcalls'</span></code></p></td>
+<td><p>SortKey.PCALLS</p></td>
+<td><p>原始调用计数</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'line'</span></code></td>
-<td>SortKey.LINE</td>
-<td>line number</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'line'</span></code></p></td>
+<td><p>SortKey.LINE</p></td>
+<td><p>行号</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'name'</span></code></td>
-<td>SortKey.NAME</td>
-<td>function name</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'name'</span></code></p></td>
+<td><p>SortKey.NAME</p></td>
+<td><p>函数名称</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'nfl'</span></code></td>
-<td>SortKey.NFL</td>
-<td>name/file/line</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'nfl'</span></code></p></td>
+<td><p>SortKey.NFL</p></td>
+<td><p>名称/文件/行</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'stdname'</span></code></td>
-<td>SortKey.STDNAME</td>
-<td>standard name</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'stdname'</span></code></p></td>
+<td><p>SortKey.STDNAME</p></td>
+<td><p>标准名称</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'time'</span></code></td>
-<td>SortKey.TIME</td>
-<td>internal time</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'time'</span></code></p></td>
+<td><p>SortKey.TIME</p></td>
+<td><p>内部时间</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'tottime'</span></code></td>
-<td>N/A</td>
-<td>internal time</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'tottime'</span></code></p></td>
+<td><p>N/A</p></td>
+<td><p>内部时间</p></td>
 </tr>
 </tbody>
 </table>
@@ -543,13 +533,13 @@ In fact, <code class="docutils literal notranslate"><span class="pre">sort_stats
 style format (numeric) is used, only one sort key (the numeric key) will
 be used, and additional arguments will be silently ignored.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能: </span>Added the SortKey enum.</p>
+<p><span class="versionmodified added">3.7 新版功能: </span>Added the SortKey enum.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pstats.Stats.reverse_order">
-<code class="descname">reverse_order</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.reverse_order" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">reverse_order</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.reverse_order" title="永久链接至目标">¶</a></dt>
 <dd><p>This method for the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class reverses the ordering of the
 basic list within the object.  Note that by default ascending vs
 descending order is properly selected based on the sort key of choice.</p>
@@ -557,7 +547,7 @@ descending order is properly selected based on the sort key of choice.</p>
 
 <dl class="method">
 <dt id="pstats.Stats.print_stats">
-<code class="descname">print_stats</code><span class="sig-paren">(</span><em>*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.print_stats" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">print_stats</code><span class="sig-paren">(</span><em class="sig-param">*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.print_stats" title="永久链接至目标">¶</a></dt>
 <dd><p>This method for the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class prints out a report as described
 in the <a class="reference internal" href="#profile.run" title="profile.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">profile.run()</span></code></a> definition.</p>
 <p>The order of the printing is based on the last
@@ -587,7 +577,7 @@ and then proceed to only print the first 10% of them.</p>
 
 <dl class="method">
 <dt id="pstats.Stats.print_callers">
-<code class="descname">print_callers</code><span class="sig-paren">(</span><em>*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.print_callers" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">print_callers</code><span class="sig-paren">(</span><em class="sig-param">*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.print_callers" title="永久链接至目标">¶</a></dt>
 <dd><p>This method for the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class prints a list of all functions
 that called each function in the profiled database.  The ordering is
 identical to that provided by <a class="reference internal" href="#pstats.Stats.print_stats" title="pstats.Stats.print_stats"><code class="xref py py-meth docutils literal notranslate"><span class="pre">print_stats()</span></code></a>, and the
@@ -595,20 +585,20 @@ definition of the restricting argument is also identical.  Each caller is
 reported on its own line.  The format differs slightly depending on the
 profiler that produced the stats:</p>
 <ul class="simple">
-<li>With <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a>, a number is shown in parentheses after each caller
+<li><p>With <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a>, a number is shown in parentheses after each caller
 to show how many times this specific call was made.  For convenience, a
 second non-parenthesized number repeats the cumulative time spent in the
-function at the right.</li>
-<li>With <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a>, each caller is preceded by three numbers: the
+function at the right.</p></li>
+<li><p>With <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a>, each caller is preceded by three numbers: the
 number of times this specific call was made, and the total and
 cumulative times spent in the current function while it was invoked by
-this specific caller.</li>
+this specific caller.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pstats.Stats.print_callees">
-<code class="descname">print_callees</code><span class="sig-paren">(</span><em>*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.print_callees" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">print_callees</code><span class="sig-paren">(</span><em class="sig-param">*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#pstats.Stats.print_callees" title="永久链接至目标">¶</a></dt>
 <dd><p>This method for the <a class="reference internal" href="#pstats.Stats" title="pstats.Stats"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code></a> class prints a list of all function
 that were called by the indicated function.  Aside from this reversal of
 direction of calls (re: called vs was called by), the arguments and
@@ -619,67 +609,20 @@ ordering are identical to the <a class="reference internal" href="#pstats.Stats.
 
 </div>
 <div class="section" id="what-is-deterministic-profiling">
-<span id="deterministic-profiling"></span><h2>What Is Deterministic Profiling?<a class="headerlink" href="#what-is-deterministic-profiling" title="永久链接至标题">¶</a></h2>
-<p><em class="dfn">Deterministic profiling</em> is meant to reflect the fact that all <em>function
-call</em>, <em>function return</em>, and <em>exception</em> events are monitored, and precise
-timings are made for the intervals between these events (during which time the
-user's code is executing).  In contrast, <em class="dfn">statistical profiling</em> (which is
-not done by this module) randomly samples the effective instruction pointer, and
-deduces where time is being spent.  The latter technique traditionally involves
-less overhead (as the code does not need to be instrumented), but provides only
-relative indications of where time is being spent.</p>
-<p>In Python, since there is an interpreter active during execution, the presence
-of instrumented code is not required to do deterministic profiling.  Python
-automatically provides a <em class="dfn">hook</em> (optional callback) for each event.  In
-addition, the interpreted nature of Python tends to add so much overhead to
-execution, that deterministic profiling tends to only add small processing
-overhead in typical applications.  The result is that deterministic profiling is
-not that expensive, yet provides extensive run time statistics about the
-execution of a Python program.</p>
-<p>Call count statistics can be used to identify bugs in code (surprising counts),
-and to identify possible inline-expansion points (high call counts).  Internal
-time statistics can be used to identify &quot;hot loops&quot; that should be carefully
-optimized.  Cumulative time statistics should be used to identify high level
-errors in the selection of algorithms.  Note that the unusual handling of
-cumulative times in this profiler allows statistics for recursive
-implementations of algorithms to be directly compared to iterative
-implementations.</p>
+<span id="deterministic-profiling"></span><h2>什么是确定性性能分析？<a class="headerlink" href="#what-is-deterministic-profiling" title="永久链接至标题">¶</a></h2>
+<p><em class="dfn">确定性性能分析</em> 旨在反映这样一个事实：即所有 <em>函数调用</em> 、 <em>函数返回</em> 和 <em>异常</em> 事件都被监控，并且对这些事件之间的间隔（在此期间用户的代码正在执行）进行精确计时。相反，统计分析（不是由该模块完成）随机采样有效指令指针，并推断时间花费在哪里。后一种技术传统上涉及较少的开销（因为代码不需要检测），但只提供了时间花在哪里的相对指示。</p>
+<p>在Python中，由于在执行过程中总有一个活动的解释器，因此执行确定性评测不需要插入指令的代码。Python 自动为每个事件提供一个:dfn:<cite>钩子</cite> （可选回调）。此外，Python 的解释特性往往会给执行增加太多开销，以至于在典型的应用程序中，确定性分析往往只会增加很小的处理开销。结果是，确定性分析并没有那么代价高昂，但是它提供了有关 Python 程序执行的大量运行时统计信息。</p>
+<p>调用计数统计信息可用于识别代码中的错误（意外计数），并识别可能的内联扩展点（高频调用）。内部时间统计可用于识别应仔细优化的 &quot;热循环&quot; 。累积时间统计可用于识别算法选择上的高级别错误。请注意，该分析器中对累积时间的异常处理，允许直接比较算法的递归实现与迭代实现的统计信息。</p>
 </div>
 <div class="section" id="limitations">
-<span id="profile-limitations"></span><h2>Limitations<a class="headerlink" href="#limitations" title="永久链接至标题">¶</a></h2>
-<p>One limitation has to do with accuracy of timing information. There is a
-fundamental problem with deterministic profilers involving accuracy.  The most
-obvious restriction is that the underlying &quot;clock&quot; is only ticking at a rate
-(typically) of about .001 seconds.  Hence no measurements will be more accurate
-than the underlying clock.  If enough measurements are taken, then the &quot;error&quot;
-will tend to average out. Unfortunately, removing this first error induces a
-second source of error.</p>
-<p>The second problem is that it &quot;takes a while&quot; from when an event is dispatched
-until the profiler's call to get the time actually <em>gets</em> the state of the
-clock.  Similarly, there is a certain lag when exiting the profiler event
-handler from the time that the clock's value was obtained (and then squirreled
-away), until the user's code is once again executing.  As a result, functions
-that are called many times, or call many functions, will typically accumulate
-this error. The error that accumulates in this fashion is typically less than
-the accuracy of the clock (less than one clock tick), but it <em>can</em> accumulate
-and become very significant.</p>
-<p>The problem is more important with <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> than with the lower-overhead
-<a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a>.  For this reason, <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> provides a means of
-calibrating itself for a given platform so that this error can be
-probabilistically (on the average) removed. After the profiler is calibrated, it
-will be more accurate (in a least square sense), but it will sometimes produce
-negative numbers (when call counts are exceptionally low, and the gods of
-probability work against you :-). )  Do <em>not</em> be alarmed by negative numbers in
-the profile.  They should <em>only</em> appear if you have calibrated your profiler,
-and the results are actually better than without calibration.</p>
+<span id="profile-limitations"></span><h2>局限性<a class="headerlink" href="#limitations" title="永久链接至标题">¶</a></h2>
+<p>一个限制是关于时间信息的准确性。确定性性能分析存在一个涉及精度的基本问题。最明显的限制是，底层的 &quot;时钟&quot; 周期大约为0.001秒（通常）。因此，没有什么测量会比底层时钟更精确。如果进行了足够的测量，那么 &quot;误差&quot; 将趋于平均。不幸的是，删除第一个错误会导致第二个错误来源。</p>
+<p>第二个问题是，从调度事件到分析器调用获取时间函数实际 <em>获取</em> 时钟状态，这需要 &quot;一段时间&quot; 。类似地，从获取时钟值（然后保存）开始，直到再次执行用户代码为止，退出分析器事件句柄时也存在一定的延迟。因此，多次调用单个函数或调用多个函数通常会累积此错误。尽管这种方式的误差通常小于时钟的精度（小于一个时钟周期），但它 <em>可以</em> 累积并变得非常可观。</p>
+<p>与开销较低的 <a class="reference internal" href="#module-cProfile" title="cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code></a> 相比， <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 的问题更为严重。出于这个原因， <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 提供了一种针对指定平台的自我校准方法，以便可以在很大程度上（平均地）消除此误差。  校准后，结果将更准确（在最小二乘意义上），但它有时会产生负数（当调用计数异常低，且概率之神对您不利时：-）。因此 <em>不要</em> 对产生的负数感到惊慌。它们应该只在你手工校准分析器的情况下才会出现，实际上结果比没有校准的情况要好。</p>
 </div>
 <div class="section" id="calibration">
-<span id="profile-calibration"></span><h2>Calibration<a class="headerlink" href="#calibration" title="永久链接至标题">¶</a></h2>
-<p>The profiler of the <a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> module subtracts a constant from each event
-handling time to compensate for the overhead of calling the time function, and
-socking away the results.  By default, the constant is 0. The following
-procedure can be used to obtain a better constant for a given platform (see
-<a class="reference internal" href="#profile-limitations"><span class="std std-ref">Limitations</span></a>).</p>
+<span id="profile-calibration"></span><h2>准确估量<a class="headerlink" href="#calibration" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="#module-profile" title="profile: Python source profiler."><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code></a> 模块的 profiler 会从每个事件处理时间中减去一个常量，以补偿调用 time 函数和存储结果的开销。默认情况下，常数为0。对于特定的平台，可用以下程序获得更好修正常数（ <a class="reference internal" href="#profile-limitations"><span class="std std-ref">局限性</span></a> ）。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">profile</span>
 <span class="n">pr</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -694,7 +637,7 @@ the timer, the magical number is about 4.04e-6.</p>
 <p>The object of this exercise is to get a fairly consistent result. If your
 computer is <em>very</em> fast, or your timer function has poor resolution, you might
 have to pass 100000, or even 1000000, to get consistent results.</p>
-<p>When you have a consistent answer, there are three ways you can use it:</p>
+<p>当你有一个一致的答案时，有三种方法可以使用：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">profile</span>
 
 <span class="c1"># 1. Apply computed bias to all Profile instances created hereafter.</span>
@@ -712,7 +655,7 @@ have to pass 100000, or even 1000000, to get consistent results.</p>
 your results will &quot;less often&quot; show up as negative in profile statistics.</p>
 </div>
 <div class="section" id="using-a-custom-timer">
-<span id="profile-timers"></span><h2>Using a custom timer<a class="headerlink" href="#using-a-custom-timer" title="永久链接至标题">¶</a></h2>
+<span id="profile-timers"></span><h2>使用自定义计时器<a class="headerlink" href="#using-a-custom-timer" title="永久链接至标题">¶</a></h2>
 <p>If you want to change how current time is determined (for example, to force use
 of wall-clock time or elapsed process time), pass the timing function you want
 to the <code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code> class constructor:</p>
@@ -722,15 +665,14 @@ to the <code class="xref py py-class docutils literal notranslate"><span class="
 <p>The resulting profiler will then call <code class="docutils literal notranslate"><span class="pre">your_time_func</span></code>. Depending on whether
 you are using <a class="reference internal" href="#profile.Profile" title="profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">profile.Profile</span></code></a> or <code class="xref py py-class docutils literal notranslate"><span class="pre">cProfile.Profile</span></code>,
 <code class="docutils literal notranslate"><span class="pre">your_time_func</span></code>'s return value will be interpreted differently:</p>
-<dl class="docutils">
-<dt><a class="reference internal" href="#profile.Profile" title="profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">profile.Profile</span></code></a></dt>
-<dd><p class="first"><code class="docutils literal notranslate"><span class="pre">your_time_func</span></code> should return a single number, or a list of numbers whose
+<dl>
+<dt><a class="reference internal" href="#profile.Profile" title="profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">profile.Profile</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">your_time_func</span></code> should return a single number, or a list of numbers whose
 sum is the current time (like what <a class="reference internal" href="os.html#os.times" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.times" title="os.times"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.times()</span></code></a> returns).  If the
 function returns a single time number, or the list of returned numbers has
 length 2, then you will get an especially fast version of the dispatch
 routine.</p>
-<p class="last">Be warned that you should calibrate the profiler class for the timer function
-that you choose (see <a class="reference internal" href="#profile-calibration"><span class="std std-ref">Calibration</span></a>).  For most machines, a timer
+<p>Be warned that you should calibrate the profiler class for the timer function
+that you choose (see <a class="reference internal" href="#profile-calibration"><span class="std std-ref">准确估量</span></a>).  For most machines, a timer
 that returns a lone integer value will provide the best results in terms of
 low overhead during profiling.  (<a class="reference internal" href="os.html#os.times" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.times" title="os.times"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.times()</span></code></a> is <em>pretty</em> bad, as it
 returns a tuple of floating point values).  If you want to substitute a
@@ -738,8 +680,7 @@ better timer in the cleanest fashion, derive a class and hardwire a
 replacement dispatch method that best handles your timer call, along with the
 appropriate calibration constant.</p>
 </dd>
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">cProfile.Profile</span></code></dt>
-<dd><p class="first"><code class="docutils literal notranslate"><span class="pre">your_time_func</span></code> should return a single number.  If it returns integers,
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">cProfile.Profile</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">your_time_func</span></code> should return a single number.  If it returns integers,
 you can also invoke the class constructor with a second argument specifying
 the real duration of one unit of time.  For example, if
 <code class="docutils literal notranslate"><span class="pre">your_integer_time_func</span></code> returns times measured in thousands of seconds,
@@ -747,7 +688,7 @@ you would construct the <code class="xref py py-class docutils literal notransla
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">Profile</span><span class="p">(</span><span class="n">your_integer_time_func</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="last">As the <code class="xref py py-class docutils literal notranslate"><span class="pre">cProfile.Profile</span></code> class cannot be calibrated, custom timer
+<p>As the <code class="xref py py-class docutils literal notranslate"><span class="pre">cProfile.Profile</span></code> class cannot be calibrated, custom timer
 functions should be used with care and should be as fast as possible.  For
 the best results with a custom timer, it might be necessary to hard-code it
 in the C source of the internal <code class="xref py py-mod docutils literal notranslate"><span class="pre">_lsprof</span></code> module.</p>
@@ -765,33 +706,33 @@ precise measurements of process or wall-clock time. For example, see
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">The Python Profilers</a><ul>
-<li><a class="reference internal" href="#introduction-to-the-profilers">Introduction to the profilers</a></li>
-<li><a class="reference internal" href="#instant-user-s-manual">Instant User's Manual</a></li>
-<li><a class="reference internal" href="#module-cProfile"><code class="docutils literal notranslate"><span class="pre">profile</span></code> and <code class="docutils literal notranslate"><span class="pre">cProfile</span></code> Module Reference</a></li>
-<li><a class="reference internal" href="#the-stats-class">The <code class="docutils literal notranslate"><span class="pre">Stats</span></code> Class</a></li>
-<li><a class="reference internal" href="#what-is-deterministic-profiling">What Is Deterministic Profiling?</a></li>
-<li><a class="reference internal" href="#limitations">Limitations</a></li>
-<li><a class="reference internal" href="#calibration">Calibration</a></li>
-<li><a class="reference internal" href="#using-a-custom-timer">Using a custom timer</a></li>
+<li><a class="reference internal" href="#">Python Profilers 分析器</a><ul>
+<li><a class="reference internal" href="#introduction-to-the-profilers">profile分析器简介</a></li>
+<li><a class="reference internal" href="#instant-user-s-manual">实时用户手册</a></li>
+<li><a class="reference internal" href="#module-cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code> 和 <code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code> 模块参考</a></li>
+<li><a class="reference internal" href="#the-stats-class"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code> 类</a></li>
+<li><a class="reference internal" href="#what-is-deterministic-profiling">什么是确定性性能分析？</a></li>
+<li><a class="reference internal" href="#limitations">局限性</a></li>
+<li><a class="reference internal" href="#calibration">准确估量</a></li>
+<li><a class="reference internal" href="#using-a-custom-timer">使用自定义计时器</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">pdb</span></code> --- The Python Debugger</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code> --- Python的调试器</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="timeit.html" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">timeit</span></code> --- 测量小代码片段的执行时间</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code> --- 测量小代码片段的执行时间</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/profile.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/profile.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/profile.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/profile.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/profile.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/profile.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -814,16 +755,19 @@ precise measurements of process or wall-clock time. For example, see
           <a href="timeit.html" tppabs="https://docs.python.org/zh-cn/3/library/timeit.html" title="timeit --- 测量小代码片段的执行时间"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- The Python Debugger"
+          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- Python的调试器"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="debug.html" tppabs="https://docs.python.org/zh-cn/3/library/debug.html" >调试和分析</a> &#187;</li>
@@ -845,15 +789,19 @@ precise measurements of process or wall-clock time. For example, see
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

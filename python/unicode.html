@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Unicode æŒ‡å— &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>Unicode æŒ‡å— &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="å¦‚ä½•ä½¿ç”¨urllibåŒ…è·å–ç½‘ç»œèµ„æº" href="urllib2.html" />
+    <link rel="next" title="HOWTO ä½¿ç”¨ urllib åŒ…è·å–ç½‘ç»œèµ„æº" href="urllib2.html" />
     <link rel="prev" title="æ’åºæŒ‡å—" href="sorting.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/howto/unicode.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="urllib2.html" tppabs="https://docs.python.org/zh-cn/3/howto/urllib2.html" title="å¦‚ä½•ä½¿ç”¨urllibåŒ…è·å–ç½‘ç»œèµ„æº"
+          <a href="urllib2.html" tppabs="https://docs.python.org/zh-cn/3/howto/urllib2.html" title="HOWTO ä½¿ç”¨ urllib åŒ…è·å–ç½‘ç»œèµ„æº"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="sorting.html" tppabs="https://docs.python.org/zh-cn/3/howto/sorting.html" title="æ’åºæŒ‡å—"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" accesskey="U">Python å¸¸ç”¨æŒ‡å¼•</a> &#187;</li>
     <li class="right">
@@ -96,14 +104,11 @@
             
   <div class="section" id="unicode-howto">
 <span id="id1"></span><h1>Unicode æŒ‡å—<a class="headerlink" href="#unicode-howto" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">å‘å¸ƒç‰ˆæœ¬:</th><td class="field-body">1.12</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">å‘å¸ƒç‰ˆæœ¬</dt>
+<dd class="field-odd"><p>1.12</p>
+</dd>
+</dl>
 <p>æœ¬æŒ‡å—è®¨è®ºäº† Python å¯¹äºè¡¨è¾¾æ–‡æœ¬æ•°æ®çš„ Unicode è§„èŒƒçš„æ”¯æŒï¼Œå¹¶ä¸”è§£é‡Šäº†äººä»¬è¯•å›¾ä½¿ç”¨ Unicode æ—¶ç»å¸¸é‡åˆ°çš„é—®é¢˜ã€‚</p>
 <div class="section" id="introduction-to-unicode">
 <h2>Unicode æ¦‚è¿°<a class="headerlink" href="#introduction-to-unicode" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
@@ -111,62 +116,33 @@
 <h3>å®šä¹‰<a class="headerlink" href="#definitions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <p>å¦‚ä»Šçš„ç¨‹åºéœ€è¦å…·æœ‰å¤„ç†è®¸å¤šä¸åŒç±»å‹å­—ç¬¦çš„èƒ½åŠ›ã€‚åº”ç”¨ç¨‹åºå¸¸å¸¸éœ€è¦å›½é™…åŒ–ä»¥ä¾¿ä»¥ç”¨æˆ·å¯é€‰æ‹©çš„ä¸åŒè¯­è¨€æ˜¾ç¤ºä¿¡æ¯å’Œè¾“å‡ºã€‚åŒä¸€ä¸ªç¨‹åºå¯èƒ½éœ€è¦ä»¥è‹±è¯­ã€æ³•è¯­ã€æ—¥è¯­ã€å¸Œä¼¯æ¥è¯­æˆ–ä¿„è¯­è¾“å‡ºé”™è¯¯ä¿¡æ¯ã€‚ç½‘é¡µå†…å®¹å¯èƒ½ç”±ä»»ä½•è¯­è¨€å†™æˆï¼Œå¹¶ä¸”å¯èƒ½åŒ…å«ä¸åŒçš„è¡¨æƒ…ç¬¦å·ã€‚Python çš„å­—ç¬¦ä¸²ç±»å‹ä½¿ç”¨ Unicode æ ‡å‡†æ¥è¡¨ç¤ºå­—ç¬¦ï¼Œè¿™ä½¿ Python ç¨‹åºèƒ½å¤Ÿæ­£å¸¸å¤„ç†æ‰€æœ‰è¿™äº›å¯èƒ½çš„å­—ç¬¦ã€‚</p>
 <p>Unicode è§„èŒƒ (<a class="reference external" href="javascript:if(confirm('https://www.unicode.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.unicode.org/'" tppabs="https://www.unicode.org/">https://www.unicode.org/</a>) æ—¨åœ¨åˆ—å‡ºäººç±»è¯­è¨€ä¸­ç”¨åˆ°çš„æ¯ä¸ªå­—ç¬¦ï¼Œå¹¶èµ‹äºˆæ¯ä¸ªå­—ç¬¦å”¯ä¸€çš„ç¼–ç ã€‚è¯¥è§„èŒƒæŒç»­è¿›è¡Œä¿®è®¢å’Œæ›´æ–°ä»¥æ·»åŠ æ–°çš„è¯­è¨€å’Œç¬¦å·ã€‚</p>
-<p>A <strong>character</strong> is the smallest possible component of a text.  'A', 'B', 'C',
-etc., are all different characters.  So are 'Ãˆ' and 'Ã'.  Characters vary
-depending on the language or context you're talking
-about.  For example, there's a character for &quot;Roman Numeral One&quot;, 'â… ', that's
-separate from the uppercase letter 'I'.  They'll usually look the same,
-but these are two different characters that have different meanings.</p>
-<p>The Unicode standard describes how characters are represented by
-<strong>code points</strong>.  A code point value is an integer in the range 0 to
-0x10FFFF (about 1.1 million values, with some 110 thousand assigned so
-far).  In the standard and in this document, a code point is written
-using the notation <code class="docutils literal notranslate"><span class="pre">U+265E</span></code> to mean the character with value
-<code class="docutils literal notranslate"><span class="pre">0x265e</span></code> (9,822 in decimal).</p>
-<p>The Unicode standard contains a lot of tables listing characters and
-their corresponding code points:</p>
+<p>ä¸€ä¸ª**å­—ç¬¦**æ˜¯æ–‡æœ¬çš„æœ€å°å¯èƒ½éƒ¨ä»¶ã€‚â€˜Aâ€™ã€â€˜Bâ€™ã€â€˜Câ€™ ç­‰éƒ½æ˜¯ä¸åŒçš„å­—ç¬¦ã€‚â€˜Ãˆâ€™ å’Œ â€˜Ãâ€™ ä¹Ÿä¸€æ ·ã€‚å­—ç¬¦ä¼šéšç€è¯­è¨€æˆ–è€…ä¸Šä¸‹æ–‡çš„å˜åŒ–è€Œå˜åŒ–ã€‚æ¯”å¦‚ï¼Œâ€˜â… â€™ æ˜¯ä¸€ä¸ªè¡¨ç¤º â€œç½—é©¬æ•°å­— 1â€ çš„å­—ç¬¦ï¼Œå®ƒä¸å¤§å†™å­—æ¯ â€˜Iâ€™ ä¸åŒã€‚å®ƒä»¬å¸¸å¸¸çœ‹èµ·æ¥ç›¸åŒï¼Œä½†è¿™æ˜¯ä¸¤ä¸ªæœ‰ç€ä¸åŒå«ä¹‰çš„ä¸åŒå­—ç¬¦ã€‚</p>
+<p>Unicode æ ‡å‡†æè¿°äº†**ç ä½**å¦‚ä½•è¡¨ç¤ºå­—ç¬¦ã€‚ä¸€ä¸ªç ä½çš„å€¼æ˜¯åœ¨ 0 åˆ° 0x10FFFF ï¼ˆå¤§çº¦ 110 ä¸‡ä¸ªå€¼ï¼Œç›®å‰æœ‰å…¶ä¸­ 11 ä¸‡ä¸ªè¢«æŒ‡æ´¾ï¼‰ã€‚åœ¨è¿™ä¸€æ ‡å‡†ä¸­å¹¶ä¸”åœ¨è¿™ä¸€æ–‡æ¡£ä¸­ï¼Œä¸€ä¸ªç ä½å†™ä½œ <code class="docutils literal notranslate"><span class="pre">U+265E</span></code> æ¥è¡¨ç¤ºæ‹¥æœ‰å€¼ <code class="docutils literal notranslate"><span class="pre">0x265e</span></code> çš„å­—ç¬¦ï¼ˆåè¿›åˆ¶ä¸‹ä¸º 9,822ï¼‰ã€‚</p>
+<p>Unicode æ ‡å‡†åŒ…å«äº†è®¸å¤šè¡¨æ ¼æ¥åˆ—å‡ºå­—ç¬¦å’Œå¯¹åº”çš„ç ä½ã€‚</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0061    &#39;a&#39;; LATIN SMALL LETTER A
 0062    &#39;b&#39;; LATIN SMALL LETTER B
 0063    &#39;c&#39;; LATIN SMALL LETTER C
 ...
 007B    &#39;{&#39;; LEFT CURLY BRACKET
 ...
-2167    &#39;â…¦&#39;: ROMAN NUMERAL EIGHT
-2168    &#39;â…¨&#39;: ROMAN NUMERAL NINE
+2167    &#39;â…§&#39;; ROMAN NUMERAL EIGHT
+2168    &#39;â…¨&#39;; ROMAN NUMERAL NINE
 ...
-265E    &#39;â™&#39;: BLACK CHESS KNIGHT
-265F    &#39;â™Ÿ&#39;: BLACK CHESS PAWN
+265E    &#39;â™&#39;; BLACK CHESS KNIGHT
+265F    &#39;â™Ÿ&#39;; BLACK CHESS PAWN
 ...
-1F600   &#39;ğŸ˜€&#39;: GRINNING FACE
-1F609   &#39;ğŸ˜‰&#39;: WINKING FACE
+1F600   &#39;ğŸ˜€&#39;; GRINNING FACE
+1F609   &#39;ğŸ˜‰&#39;; WINKING FACE
 ...
 </pre></div>
 </div>
-<p>Strictly, these definitions imply that it's meaningless to say 'this is
-character <code class="docutils literal notranslate"><span class="pre">U+265E</span></code>'.  <code class="docutils literal notranslate"><span class="pre">U+265E</span></code> is a code point, which represents some particular
-character; in this case, it represents the character 'BLACK CHESS KNIGHT',
-'â™'.  In
-informal contexts, this distinction between code points and characters will
-sometimes be forgotten.</p>
-<p>A character is represented on a screen or on paper by a set of graphical
-elements that's called a <strong>glyph</strong>.  The glyph for an uppercase A, for example,
-is two diagonal strokes and a horizontal stroke, though the exact details will
-depend on the font being used.  Most Python code doesn't need to worry about
-glyphs; figuring out the correct glyph to display is generally the job of a GUI
-toolkit or a terminal's font renderer.</p>
+<p>ä¸¥æ ¼åœ°è¯´ï¼Œè¿™äº›å®šä¹‰æš—ç¤ºäº†è¿™æ ·çš„è¯´æ³•æ˜¯æ²¡æœ‰æ„ä¹‰çš„ï¼šâ€œè¿™æ˜¯å­—ç¬¦ <code class="docutils literal notranslate"><span class="pre">U+265E</span></code>â€ã€‚<code class="docutils literal notranslate"><span class="pre">U+265E</span></code> æ˜¯ä¸€ä¸ªç ä½ï¼Œå…¶ä»£è¡¨äº†æŸç‰¹å®šçš„å­—ç¬¦ â€”â€” åœ¨è¿™ä¸€æƒ…å½¢ä¸‹ï¼Œå®ƒä»£è¡¨äº†å­—ç¬¦ â€œå›½é™…è±¡æ£‹é»‘æ–¹éª‘å£«ï¼ˆé»‘é©¬ï¼‰â€ â€˜â™â€™ã€‚åœ¨éæ­£å¼ä¸Šä¸‹æ–‡ä¸­ï¼Œç ä½å’Œå­—ç¬¦çš„å·®å¼‚æœ‰æ—¶ä¼šè¢«å¿½ç•¥ã€‚</p>
+<p>ä¸€ä¸ªå­—ç¬¦åœ¨å±å¹•ä¸Šæˆ–åœ¨çº¸ä¸Šè¢«è¡¨ç¤ºä¸ºä¸€ç»„å›¾å½¢å…ƒç´ ï¼Œè¢«ç§°ä¸º**å­—å½¢**ã€‚æ¯”å¦‚ï¼Œå¤§å†™å­—æ¯ A çš„å­—å½¢ï¼Œæ˜¯æ–œå‘çš„ä¸¤ç¬”å’Œæ°´å¹³çš„ä¸€ç¬”ï¼Œè€Œå…·ä½“çš„ç»†èŠ‚å–å†³äºæ‰€ä½¿ç”¨çš„å­—ä½“ã€‚å¤§éƒ¨åˆ† Python ä»£ç ä¸å¿…æ‹…å¿ƒå­—å½¢ï¼Œæ‰¾åˆ°åº”è¢«æ˜¾ç¤ºçš„æ­£ç¡®å­—å½¢ä¸€èˆ¬æ¥è¯´æ˜¯ç”¨æˆ·å›¾å½¢ç•Œé¢å·¥å…·ç®±æˆ–è€…ç»ˆç«¯çš„å­—ä½“æ¸²æŸ“å™¨çš„å·¥ä½œã€‚</p>
 </div>
 <div class="section" id="encodings">
-<h3>Encodings<a class="headerlink" href="#encodings" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
-<p>To summarize the previous section: a Unicode string is a sequence of
-code points, which are numbers from 0 through <code class="docutils literal notranslate"><span class="pre">0x10FFFF</span></code> (1,114,111
-decimal).  This sequence of code points needs to be represented in
-memory as a set of <strong>code units</strong>, and <strong>code units</strong> are then mapped
-to 8-bit bytes.  The rules for translating a Unicode string into a
-sequence of bytes are called a <strong>character encoding</strong>, or just
-an <strong>encoding</strong>.</p>
-<p>The first encoding you might think of is using 32-bit integers as the
-code unit, and then using the CPU's representation of 32-bit integers.
-In this representation, the string &quot;Python&quot; might look like this:</p>
+<h3>ç¼–ç <a class="headerlink" href="#encodings" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>ä¸Šä¸€æ®µå¯ä»¥å½’ç»“ä¸ºï¼šä¸€ä¸ª Unicode å­—ç¬¦ä¸²æ˜¯ä¸€ç³»åˆ—ç ä½ï¼ˆä» 0 åˆ° <code class="docutils literal notranslate"><span class="pre">0x10FFFF</span></code> æˆ–è€…è¯´åè¿›åˆ¶çš„ 1,114,111 çš„æ•°å­—ï¼‰ç»„æˆçš„åºåˆ—ã€‚è¿™ä¸€åºåˆ—åœ¨å†…å­˜ä¸­éœ€è¦è¢«è¡¨ç¤ºä¸ºä¸€ç»„**ç å…ƒ**ï¼Œç„¶å**ç å…ƒ** ä¼šå¯¹åº”åˆ°åŒ…å«å…«ä¸ªäºŒè¿›åˆ¶ä½çš„å­—èŠ‚ã€‚å°† Unicode å­—ç¬¦ä¸²ç¿»è¯‘æˆå­—èŠ‚åºåˆ—çš„è§„åˆ™è¢«ç§°ä¸º**å­—ç¬¦ç¼–ç **ï¼Œæˆ–è€…**ç¼–ç **ã€‚</p>
+<p>ä½ å¯èƒ½ä¼šæƒ³åˆ°çš„ç¬¬ä¸€ç§ç¼–ç æ˜¯ä½¿ç”¨ä¸€ä¸ª 32 ä½çš„æ•´æ•°æ¥ä»£è¡¨ä¸€ä¸ªä»£ç ä½ï¼Œç„¶åä½¿ç”¨ CPU å¯¹ 32 ä½æ•´æ•°çš„è¡¨è¾¾æ–¹å¼ã€‚åœ¨è¿™ä¸€è¡¨è¾¾æ–¹å¼ä¸­ï¼Œå­—ç¬¦ä¸² â€œPythonâ€ å¯èƒ½çœ‹èµ·æ¥åƒæ˜¯è¿™æ ·ï¼š</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   P           y           t           h           o           n
 0x50 00 00 00 79 00 00 00 74 00 00 00 68 00 00 00 6f 00 00 00 6e 00 00 00
    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
@@ -175,16 +151,16 @@ In this representation, the string &quot;Python&quot; might look like this:</p>
 <p>This representation is straightforward but using it presents a number of
 problems.</p>
 <ol class="arabic simple">
-<li>It's not portable; different processors order the bytes differently.</li>
-<li>It's very wasteful of space.  In most texts, the majority of the code points
+<li><p>It's not portable; different processors order the bytes differently.</p></li>
+<li><p>It's very wasteful of space.  In most texts, the majority of the code points
 are less than 127, or less than 255, so a lot of space is occupied by <code class="docutils literal notranslate"><span class="pre">0x00</span></code>
 bytes.  The above string takes 24 bytes compared to the 6 bytes needed for an
 ASCII representation.  Increased RAM usage doesn't matter too much (desktop
 computers have gigabytes of RAM, and strings aren't usually that large), but
 expanding our usage of disk and network bandwidth by a factor of 4 is
-intolerable.</li>
-<li>It's not compatible with existing C functions such as <code class="docutils literal notranslate"><span class="pre">strlen()</span></code>, so a new
-family of wide string functions would need to be used.</li>
+intolerable.</p></li>
+<li><p>It's not compatible with existing C functions such as <code class="docutils literal notranslate"><span class="pre">strlen()</span></code>, so a new
+family of wide string functions would need to be used.</p></li>
 </ol>
 <p>Therefore this encoding isn't used very much, and people instead choose other
 encodings that are more efficient and convenient, such as UTF-8.</p>
@@ -194,23 +170,29 @@ and the '8' means that 8-bit values are used in the encoding.  (There
 are also UTF-16 and UTF-32 encodings, but they are less frequently
 used than UTF-8.)  UTF-8 uses the following rules:</p>
 <ol class="arabic simple">
-<li>If the code point is &lt; 128, it's represented by the corresponding byte value.</li>
-<li>If the code point is &gt;= 128, it's turned into a sequence of two, three, or
-four bytes, where each byte of the sequence is between 128 and 255.</li>
+<li><p>If the code point is &lt; 128, it's represented by the corresponding byte value.</p></li>
+<li><p>If the code point is &gt;= 128, it's turned into a sequence of two, three, or
+four bytes, where each byte of the sequence is between 128 and 255.</p></li>
 </ol>
 <p>UTF-8 has several convenient properties:</p>
 <ol class="arabic simple">
-<li>It can handle any Unicode code point.</li>
-<li>A Unicode string is turned into a sequence of bytes containing no embedded zero
-bytes.  This avoids byte-ordering issues, and means UTF-8 strings can be
-processed by C functions such as <code class="docutils literal notranslate"><span class="pre">strcpy()</span></code> and sent through protocols that
-can't handle zero bytes.</li>
-<li>A string of ASCII text is also valid UTF-8 text.</li>
-<li>UTF-8 is fairly compact; the majority of commonly used characters can be
-represented with one or two bytes.</li>
-<li>If bytes are corrupted or lost, it's possible to determine the start of the
+<li><p>It can handle any Unicode code point.</p></li>
+<li><p>A Unicode string is turned into a sequence of bytes that contains embedded
+zero bytes only where they represent the null character (U+0000). This means
+that UTF-8 strings can be processed by C functions such as <code class="docutils literal notranslate"><span class="pre">strcpy()</span></code> and sent
+through protocols that can't handle zero bytes for anything other than
+end-of-string markers.</p></li>
+<li><p>A string of ASCII text is also valid UTF-8 text.</p></li>
+<li><p>UTF-8 is fairly compact; the majority of commonly used characters can be
+represented with one or two bytes.</p></li>
+<li><p>If bytes are corrupted or lost, it's possible to determine the start of the
 next UTF-8-encoded code point and resynchronize.  It's also unlikely that
-random 8-bit data will look like valid UTF-8.</li>
+random 8-bit data will look like valid UTF-8.</p></li>
+<li><p>UTF-8 is a byte oriented encoding. The encoding specifies that each
+character is represented by a specific sequence of one or more bytes. This
+avoids the byte-ordering issues that can occur with integer and word oriented
+encodings, like UTF-16 and UTF-32, where the sequence of bytes varies depending
+on the hardware on which the string was encoded.</p></li>
 </ol>
 </div>
 <div class="section" id="references">
@@ -220,16 +202,16 @@ glossary, and PDF versions of the Unicode specification.  Be prepared for some
 difficult reading.  <a class="reference external" href="javascript:if(confirm('http://www.unicode.org/history/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.unicode.org/history/'" tppabs="http://www.unicode.org/history/">A chronology</a> of the
 origin and development of Unicode is also available on the site.</p>
 <p>On the Computerphile Youtube channel, Tom Scott briefly
-<cite>discusses the history of Unicode and UTF-8 &lt;https://www.youtube.com/watch?v=MijmeoH9LT4&gt;</cite>
+<a class="reference external" href="javascript:if(confirm('https://www.youtube.com/issue38344  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.youtube.com/issue38344'" tppabs="https://www.youtube.com/watch?v=MijmeoH9LT4">discusses the history of Unicode and UTF-8</a>
 (9 minutes 36 seconds).</p>
-<p>To help understand the standard, Jukka Korpela has written <a class="reference external" href="javascript:if(confirm('http://jkorpela.fi/unicode/issue433028  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://jkorpela.fi/unicode/issue433028'" tppabs="http://jkorpela.fi/unicode/guide.html">an introductory
+<p>To help understand the standard, Jukka Korpela has written <a class="reference external" href="javascript:if(confirm('http://jkorpela.fi/unicode/issue38841  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://jkorpela.fi/unicode/issue38841'" tppabs="http://jkorpela.fi/unicode/guide.html">an introductory
 guide</a> to reading the
 Unicode character tables.</p>
 <p>Another <a class="reference external" href="javascript:if(confirm('https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/'" tppabs="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">good introductory article</a>
 was written by Joel Spolsky.
 If this introduction didn't make things clear to you, you should try
 reading this alternate article before continuing.</p>
-<p>Wikipedia entries are often helpful; see the entries for &quot;<a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue24454  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://en.wikipedia.org/wiki/issue24454'" tppabs="https://en.wikipedia.org/wiki/Character_encoding">character encoding</a>&quot; and <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue27177  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://en.wikipedia.org/wiki/issue27177'" tppabs="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>, for example.</p>
+<p>Wikipedia entries are often helpful; see the entries for &quot;<a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38359  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://en.wikipedia.org/wiki/issue38359'" tppabs="https://en.wikipedia.org/wiki/Character_encoding">character encoding</a>&quot; and <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38355  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://en.wikipedia.org/wiki/issue38355'" tppabs="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>, for example.</p>
 </div>
 </div>
 <div class="section" id="python-s-unicode-support">
@@ -533,14 +515,14 @@ and <code class="docutils literal notranslate"><span class="pre">\s</span></code
 <h3>å¼•ç”¨æ–‡çŒ®<a class="headerlink" href="#id2" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <p>Some good alternative discussions of Python's Unicode support are:</p>
 <ul class="simple">
-<li><a class="reference external" href="javascript:if(confirm('http://python-notes.curiousefficiency.org/en/latest/python3/issue26870  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://python-notes.curiousefficiency.org/en/latest/python3/issue26870'" tppabs="http://python-notes.curiousefficiency.org/en/latest/python3/text_file_processing.html">Processing Text Files in Python 3</a>, by Nick Coghlan.</li>
-<li><a class="reference external" href="javascript:if(confirm('https://nedbatchelder.com/text/issue25011  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://nedbatchelder.com/text/issue25011'" tppabs="https://nedbatchelder.com/text/unipain.html">Pragmatic Unicode</a>, a PyCon 2012 presentation by Ned Batchelder.</li>
+<li><p><a class="reference external" href="javascript:if(confirm('http://python-notes.curiousefficiency.org/en/latest/python3/issue36698  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://python-notes.curiousefficiency.org/en/latest/python3/issue36698'" tppabs="http://python-notes.curiousefficiency.org/en/latest/python3/text_file_processing.html">Processing Text Files in Python 3</a>, by Nick Coghlan.</p></li>
+<li><p><a class="reference external" href="javascript:if(confirm('https://nedbatchelder.com/text/issue38118  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://nedbatchelder.com/text/issue38118'" tppabs="https://nedbatchelder.com/text/unipain.html">Pragmatic Unicode</a>, a PyCon 2012 presentation by Ned Batchelder.</p></li>
 </ul>
 <p>The <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> type is described in the Python library reference at
 <a class="reference internal" href="stdtypes.html#textseq" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#textseq"><span class="std std-ref">æ–‡æœ¬åºåˆ—ç±»å‹ --- str</span></a>.</p>
 <p>The documentation for the <a class="reference internal" href="unicodedata.html#module-unicodedata" tppabs="https://docs.python.org/zh-cn/3/library/unicodedata.html#module-unicodedata" title="unicodedata: Access the Unicode Database."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unicodedata</span></code></a> module.</p>
 <p>The documentation for the <a class="reference internal" href="codecs.html#module-codecs" tppabs="https://docs.python.org/zh-cn/3/library/codecs.html#module-codecs" title="codecs: Encode and decode data and streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code></a> module.</p>
-<p>Marc-AndrÃ© Lemburg gave <a class="reference external" href="javascript:if(confirm('https://downloads.egenix.com/python/issue25209  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://downloads.egenix.com/python/issue25209'" tppabs="https://downloads.egenix.com/python/Unicode-EPC2002-Talk.pdf">a presentation titled &quot;Python and Unicode&quot; (PDF slides)</a> at
+<p>Marc-AndrÃ© Lemburg gave <a class="reference external" href="javascript:if(confirm('https://downloads.egenix.com/python/issue38347  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://downloads.egenix.com/python/issue38347'" tppabs="https://downloads.egenix.com/python/Unicode-EPC2002-Talk.pdf">a presentation titled &quot;Python and Unicode&quot; (PDF slides)</a> at
 EuroPython 2002.  The slides are an excellent overview of the design of Python
 2's Unicode features (where the Unicode string type is called <code class="docutils literal notranslate"><span class="pre">unicode</span></code> and
 literals start with <code class="docutils literal notranslate"><span class="pre">u</span></code>).</p>
@@ -663,8 +645,9 @@ pretty much only Unix systems now.</p>
 Unicode.</p>
 <p>The most important tip is:</p>
 <blockquote>
-<div>Software should only work with Unicode strings internally, decoding the input
-data as soon as possible and encoding the output only at the end.</div></blockquote>
+<div><p>Software should only work with Unicode strings internally, decoding the input
+data as soon as possible and encoding the output only at the end.</p>
+</div></blockquote>
 <p>If you attempt to write processing functions that accept both Unicode and byte
 strings, you will find your program vulnerable to bugs wherever you combine the
 two different kinds of strings.  There is no automatic encoding or decoding: if
@@ -720,19 +703,19 @@ encode the data and write it back out.</p>
 </div>
 <div class="section" id="id3">
 <h3>å¼•ç”¨æ–‡çŒ®<a class="headerlink" href="#id3" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
-<p>One section of <a class="reference external" href="javascript:if(confirm('http://pyvideo.org/video/289/issue1521950  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://pyvideo.org/video/289/issue1521950'" tppabs="http://pyvideo.org/video/289/pycon-2010--mastering-python-3-i-o">Mastering Python 3 Input/Output</a>,
+<p>One section of <a class="reference external" href="javascript:if(confirm('http://pyvideo.org/video/289/issue38395  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://pyvideo.org/video/289/issue38395'" tppabs="http://pyvideo.org/video/289/pycon-2010--mastering-python-3-i-o">Mastering Python 3 Input/Output</a>,
 a PyCon 2010 talk by David Beazley, discusses text processing and binary data handling.</p>
-<p>The <a class="reference external" href="javascript:if(confirm('https://downloads.egenix.com/python/issue26587  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://downloads.egenix.com/python/issue26587'" tppabs="https://downloads.egenix.com/python/LSM2005-Developing-Unicode-aware-applications-in-Python.pdf">PDF slides for Marc-AndrÃ© Lemburg's presentation &quot;Writing Unicode-aware
+<p>The <a class="reference external" href="javascript:if(confirm('https://downloads.egenix.com/python/issue38243  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://downloads.egenix.com/python/issue38243'" tppabs="https://downloads.egenix.com/python/LSM2005-Developing-Unicode-aware-applications-in-Python.pdf">PDF slides for Marc-AndrÃ© Lemburg's presentation &quot;Writing Unicode-aware
 Applications in Python&quot;</a>
 discuss questions of character encodings as well as how to internationalize
 and localize an application.  These slides cover Python 2.x only.</p>
-<p><a class="reference external" href="javascript:if(confirm('http://pyvideo.org/video/1768/issue16864  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://pyvideo.org/video/1768/issue16864'" tppabs="http://pyvideo.org/video/1768/the-guts-of-unicode-in-python">The Guts of Unicode in Python</a>
+<p><a class="reference external" href="javascript:if(confirm('http://pyvideo.org/video/1768/issue38174  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://pyvideo.org/video/1768/issue38174'" tppabs="http://pyvideo.org/video/1768/the-guts-of-unicode-in-python">The Guts of Unicode in Python</a>
 is a PyCon 2013 talk by Benjamin Peterson that discusses the internal Unicode
 representation in Python 3.3.</p>
 </div>
 </div>
 <div class="section" id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<h2>è‡´è°¢<a class="headerlink" href="#acknowledgements" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>The initial draft of this document was written by Andrew Kuchling.
 It has since been revised further by Alexander Belopolsky, Georg Brandl,
 Andrew Kuchling, and Ezio Melotti.</p>
@@ -750,12 +733,12 @@ Eryk Sun, Chad Whitacre, Graham Wideman.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Unicode æŒ‡å—</a><ul>
 <li><a class="reference internal" href="#introduction-to-unicode">Unicode æ¦‚è¿°</a><ul>
 <li><a class="reference internal" href="#definitions">å®šä¹‰</a></li>
-<li><a class="reference internal" href="#encodings">Encodings</a></li>
+<li><a class="reference internal" href="#encodings">ç¼–ç </a></li>
 <li><a class="reference internal" href="#references">å¼•ç”¨æ–‡çŒ®</a></li>
 </ul>
 </li>
@@ -779,7 +762,7 @@ Eryk Sun, Chad Whitacre, Graham Wideman.</p>
 <li><a class="reference internal" href="#id3">å¼•ç”¨æ–‡çŒ®</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li><a class="reference internal" href="#acknowledgements">è‡´è°¢</a></li>
 </ul>
 </li>
 </ul>
@@ -789,13 +772,13 @@ Eryk Sun, Chad Whitacre, Graham Wideman.</p>
                         title="ä¸Šä¸€ç« ">æ’åºæŒ‡å—</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="urllib2.html" tppabs="https://docs.python.org/zh-cn/3/howto/urllib2.html"
-                        title="ä¸‹ä¸€ç« ">å¦‚ä½•ä½¿ç”¨urllibåŒ…è·å–ç½‘ç»œèµ„æº</a></p>
+                        title="ä¸‹ä¸€ç« ">HOWTO ä½¿ç”¨ urllib åŒ…è·å–ç½‘ç»œèµ„æº</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/howto/unicode.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/howto/unicode.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/howto/unicode.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/howto/unicode.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/howto/unicode.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/howto/unicode.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -815,19 +798,22 @@ Eryk Sun, Chad Whitacre, Graham Wideman.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="urllib2.html" tppabs="https://docs.python.org/zh-cn/3/howto/urllib2.html" title="å¦‚ä½•ä½¿ç”¨urllibåŒ…è·å–ç½‘ç»œèµ„æº"
+          <a href="urllib2.html" tppabs="https://docs.python.org/zh-cn/3/howto/urllib2.html" title="HOWTO ä½¿ç”¨ urllib åŒ…è·å–ç½‘ç»œèµ„æº"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="sorting.html" tppabs="https://docs.python.org/zh-cn/3/howto/sorting.html" title="æ’åºæŒ‡å—"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" >Python å¸¸ç”¨æŒ‡å¼•</a> &#187;</li>
     <li class="right">
@@ -848,15 +834,19 @@ Eryk Sun, Chad Whitacre, Graham Wideman.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

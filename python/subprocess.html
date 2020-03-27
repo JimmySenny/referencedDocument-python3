@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>subprocess --- 子进程管理 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>subprocess --- 子进程管理 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="sched --- 事件调度器" href="sched.html" />
     <link rel="prev" title="concurrent.futures --- 启动并行任务" href="concurrent.futures.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/subprocess.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="concurrent.futures.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html" title="concurrent.futures --- 启动并行任务"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="concurrency.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrency.html" accesskey="U">并发执行</a> &#187;</li>
@@ -97,7 +105,7 @@
             
   <div class="section" id="module-subprocess">
 <span id="subprocess-subprocess-management"></span><h1><a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> --- 子进程管理<a class="headerlink" href="#module-subprocess" title="永久链接至标题">¶</a></h1>
-<p><strong>源代码:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/subprocess.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/subprocess.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/subprocess.py">Lib/subprocess.py</a></p>
+<p><strong>源代码:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue30566  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue30566'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/subprocess.py">Lib/subprocess.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> 模块允许你生成新的进程，连接它们的输入、输出、错误管道，并且获取它们的返回码。此模块打算代替一些老旧的模块与功能：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span>
@@ -106,8 +114,8 @@
 </div>
 <p>在下面的段落中，你可以找到关于 <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> 模块如何代替这些模块和功能的相关信息。</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0324  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0324'" tppabs="https://www.python.org/dev/peps/pep-0324"><strong>PEP 324</strong></a> -- 提出 subprocess 模块的 PEP</p>
+<p class="admonition-title">参见</p>
+<p><span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0324  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0324'" tppabs="https://www.python.org/dev/peps/pep-0324"><strong>PEP 324</strong></a> -- 提出 subprocess 模块的 PEP</p>
 </div>
 <div class="section" id="using-the-subprocess-module">
 <h2>使用 <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> 模块<a class="headerlink" href="#using-the-subprocess-module" title="永久链接至标题">¶</a></h2>
@@ -115,12 +123,12 @@
 <p><a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 函数是在 Python 3.5 被添加的；如果你需要与旧版本保持兼容，查看 <a class="reference internal" href="#call-function-trio"><span class="std std-ref">Older high-level API</span></a> 段落。</p>
 <dl class="function">
 <dt id="subprocess.run">
-<code class="descclassname">subprocess.</code><code class="descname">run</code><span class="sig-paren">(</span><em>args</em>, <em>*</em>, <em>stdin=None</em>, <em>input=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>capture_output=False</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>timeout=None</em>, <em>check=False</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>text=None</em>, <em>env=None</em>, <em>universal_newlines=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.run" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">*</em>, <em class="sig-param">stdin=None</em>, <em class="sig-param">input=None</em>, <em class="sig-param">stdout=None</em>, <em class="sig-param">stderr=None</em>, <em class="sig-param">capture_output=False</em>, <em class="sig-param">shell=False</em>, <em class="sig-param">cwd=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">check=False</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em>, <em class="sig-param">text=None</em>, <em class="sig-param">env=None</em>, <em class="sig-param">universal_newlines=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.run" title="永久链接至目标">¶</a></dt>
 <dd><p>运行被 <em>arg</em> 描述的指令。等待指令完成，然后返回一个 <a class="reference internal" href="#subprocess.CompletedProcess" title="subprocess.CompletedProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompletedProcess</span></code></a> 示例。</p>
 <p>以上显示的参数仅仅是最简单的一些，下面 <a class="reference internal" href="#frequently-used-arguments"><span class="std std-ref">常用参数</span></a> 描述（因此在缩写签名中使用仅关键字标示）。完整的函数头和 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 的构造函数一样，此函数接受的大多数参数都被传递给该接口。（<em>timeout</em>, <em>input</em>, <em>check</em> 和 <em>capture_output</em> 除外）。</p>
-<p>如果 <em>capture_output</em> 为 True，标准输出和标准错误将被捕获。当使用时，内部的 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 对象将会自动地被创建，伴随着 <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> 以及 <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> 设置。 <em>stdout</em> 和 <em>stderr</em> 参数不应当和 <em>capture_output</em> 同时传入。</p>
+<p>如果 <em>capture_output</em> 设为 true，stdout 和 stderr 将会被捕获。在使用时，内置的 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 对象将自动用 <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> 和 <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> 创建。<em>stdout</em> 和 <em>stderr</em> 参数不应当与 <em>capture_output</em> 同时提供。如果你希望捕获并将两个流合并在一起，使用 <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> 和 <code class="docutils literal notranslate"><span class="pre">stderr=STDOUT</span></code> 来代替 <em>capture_output</em>。</p>
 <p><em>timeout</em> 参数将被传递给 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a>。如果发生超时，子进程将被杀死并等待。 <a class="reference internal" href="#subprocess.TimeoutExpired" title="subprocess.TimeoutExpired"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutExpired</span></code></a> 异常将在子进程中断后被抛出。</p>
-<p><em>input</em> 参数将被传递给 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a> 以及子进程的标准输入. 如果使用此参数, 它必须是一个字节序列. 如果指定了 <em>encoding</em> 或 <em>errors</em> 或者将 <em>text</em> 设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code>, 那么也可以是一个字符串. 当使用此参数时, 内部的 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 对象将自动被创建, 伴随着设置 <code class="docutils literal notranslate"><span class="pre">stdin=PIPE</span></code>, 并且 <em>stdin</em>  可能不被使用.</p>
+<p><em>input</em> 参数将被传递给 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a> 以及子进程的标准输入。 如果使用此参数，它必须是一个字节序列。 如果指定了 <em>encoding</em> 或 <em>errors</em> 或者将 <em>text</em> 设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，那么也可以是一个字符串。 当使用此参数时，在创建内部 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 对象时将自动带上 <code class="docutils literal notranslate"><span class="pre">stdin=PIPE</span></code>，并且不能再手动指定 <em>stdin</em> 参数。</p>
 <p>如果 <em>check</em> 设为 True, 并且进程以非零状态码退出, 一个 <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a> 异常将被抛出. 这个异常的属性将设置为参数, 退出码, 以及标准输出和标准错误, 如果被捕获到.</p>
 <p>如果 <em>encoding</em> 或者 <em>error</em> 被指定, 或者 <em>text</em> 被设为 True, 标准输入, 标准输出和标准错误的文件对象将通过指定的 <em>encoding</em> 和 <em>errors</em> 以文本模式打开, 否则以默认的 <a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> 打开. <em>universal_newline</em> 参数等同于 <em>text</em> 并且提供了向后兼容性. 默认情况下, 文件对象是以二进制模式打开的.</p>
 <p>如果 <em>env</em> 不是 <code class="docutils literal notranslate"><span class="pre">None</span></code>, 它必须是一个字典, 为新的进程设置环境变量; 它用于替换继承的当前进程的环境的默认行为. 它将直接被传递给 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a>.</p>
@@ -139,165 +147,165 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>添加了 <em>encoding</em> 和 <em>errors</em> 形参.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>添加了 <em>encoding</em> 和 <em>errors</em> 形参.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>添加了 <em>text</em> 形参, 作为 <em>universal_newlines</em> 的一个更好理解的别名. 添加了 <em>capture_output</em> 形参.</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>添加了 <em>text</em> 形参, 作为 <em>universal_newlines</em> 的一个更好理解的别名. 添加了 <em>capture_output</em> 形参.</p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="subprocess.CompletedProcess">
-<em class="property">class </em><code class="descclassname">subprocess.</code><code class="descname">CompletedProcess</code><a class="headerlink" href="#subprocess.CompletedProcess" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CompletedProcess</code><a class="headerlink" href="#subprocess.CompletedProcess" title="永久链接至目标">¶</a></dt>
 <dd><p><a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 的返回值, 代表一个进程已经结束.</p>
 <dl class="attribute">
 <dt id="subprocess.CompletedProcess.args">
-<code class="descname">args</code><a class="headerlink" href="#subprocess.CompletedProcess.args" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">args</code><a class="headerlink" href="#subprocess.CompletedProcess.args" title="永久链接至目标">¶</a></dt>
 <dd><p>被用作启动进程的参数. 可能是一个列表或字符串.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CompletedProcess.returncode">
-<code class="descname">returncode</code><a class="headerlink" href="#subprocess.CompletedProcess.returncode" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">returncode</code><a class="headerlink" href="#subprocess.CompletedProcess.returncode" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的退出状态码. 通常来说, 一个为 0 的退出码表示进程运行正常.</p>
 <p>一个负值 <code class="docutils literal notranslate"><span class="pre">-N</span></code> 表示子进程被信号 <code class="docutils literal notranslate"><span class="pre">N</span></code> 中断 (仅 POSIX).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CompletedProcess.stdout">
-<code class="descname">stdout</code><a class="headerlink" href="#subprocess.CompletedProcess.stdout" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">stdout</code><a class="headerlink" href="#subprocess.CompletedProcess.stdout" title="永久链接至目标">¶</a></dt>
 <dd><p>从子进程捕获到的标准输出. 一个字节序列, 或一个字符串, 如果 <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 是设置了 <em>encoding</em>, <em>errors</em> 或者 <code class="docutils literal notranslate"><span class="pre">text=True</span></code> 来运行的. 如果未有捕获, 则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <p>如果你通过 <code class="docutils literal notranslate"><span class="pre">stderr=subprocess.STDOUT</span></code> 运行, 标准输入和标准错误将被组合在一起, 并且 <code class="xref py py-attr docutils literal notranslate"><span class="pre">stderr`</span></code> 将为 <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CompletedProcess.stderr">
-<code class="descname">stderr</code><a class="headerlink" href="#subprocess.CompletedProcess.stderr" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">stderr</code><a class="headerlink" href="#subprocess.CompletedProcess.stderr" title="永久链接至目标">¶</a></dt>
 <dd><p>捕获到的子进程的标准错误. 一个字节序列, 或者一个字符串, 如果 <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 是设置了参数 <em>encoding</em>, <em>errors</em> 或者 <code class="docutils literal notranslate"><span class="pre">text=True</span></code> 运行的. 如果未有捕获, 则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="subprocess.CompletedProcess.check_returncode">
-<code class="descname">check_returncode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.CompletedProcess.check_returncode" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">check_returncode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.CompletedProcess.check_returncode" title="永久链接至目标">¶</a></dt>
 <dd><p>如果 <a class="reference internal" href="#subprocess.CompletedProcess.returncode" title="subprocess.CompletedProcess.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> 非零, 抛出 <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a>.</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.DEVNULL">
-<code class="descclassname">subprocess.</code><code class="descname">DEVNULL</code><a class="headerlink" href="#subprocess.DEVNULL" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">DEVNULL</code><a class="headerlink" href="#subprocess.DEVNULL" title="永久链接至目标">¶</a></dt>
 <dd><p>可被 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 的 <em>stdin</em>, <em>stdout</em> 或者 <em>stderr</em> 参数使用的特殊值, 表示使用特殊文件 <a class="reference internal" href="os.html#os.devnull" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.PIPE">
-<code class="descclassname">subprocess.</code><code class="descname">PIPE</code><a class="headerlink" href="#subprocess.PIPE" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">PIPE</code><a class="headerlink" href="#subprocess.PIPE" title="永久链接至目标">¶</a></dt>
 <dd><p>可被 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 的 <em>stdin</em>, <em>stdout</em> 或者 <em>stderr</em> 参数使用的特殊值, 表示打开标准流的管道. 常用于 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.STDOUT">
-<code class="descclassname">subprocess.</code><code class="descname">STDOUT</code><a class="headerlink" href="#subprocess.STDOUT" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STDOUT</code><a class="headerlink" href="#subprocess.STDOUT" title="永久链接至目标">¶</a></dt>
 <dd><p>可被 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 的 <em>stdin</em> ， <em>stdout</em> 或者 <em>stderr</em> 参数使用的特殊值， 表示标准错误与标准输出使用同一句柄。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="subprocess.SubprocessError">
-<em class="property">exception </em><code class="descclassname">subprocess.</code><code class="descname">SubprocessError</code><a class="headerlink" href="#subprocess.SubprocessError" title="永久链接至目标">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">SubprocessError</code><a class="headerlink" href="#subprocess.SubprocessError" title="永久链接至目标">¶</a></dt>
 <dd><p>此模块的其他异常的基类。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="exception">
 <dt id="subprocess.TimeoutExpired">
-<em class="property">exception </em><code class="descclassname">subprocess.</code><code class="descname">TimeoutExpired</code><a class="headerlink" href="#subprocess.TimeoutExpired" title="永久链接至目标">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">TimeoutExpired</code><a class="headerlink" href="#subprocess.TimeoutExpired" title="永久链接至目标">¶</a></dt>
 <dd><p><a class="reference internal" href="#subprocess.SubprocessError" title="subprocess.SubprocessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SubprocessError</span></code></a> 的子类，等待子进程的过程中发生超时时被抛出。</p>
 <dl class="attribute">
 <dt id="subprocess.TimeoutExpired.cmd">
-<code class="descname">cmd</code><a class="headerlink" href="#subprocess.TimeoutExpired.cmd" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">cmd</code><a class="headerlink" href="#subprocess.TimeoutExpired.cmd" title="永久链接至目标">¶</a></dt>
 <dd><p>用于创建子进程的指令。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.TimeoutExpired.timeout">
-<code class="descname">timeout</code><a class="headerlink" href="#subprocess.TimeoutExpired.timeout" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">timeout</code><a class="headerlink" href="#subprocess.TimeoutExpired.timeout" title="永久链接至目标">¶</a></dt>
 <dd><p>超时秒数。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.TimeoutExpired.output">
-<code class="descname">output</code><a class="headerlink" href="#subprocess.TimeoutExpired.output" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">output</code><a class="headerlink" href="#subprocess.TimeoutExpired.output" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的输出， 如果被 <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 或 <a class="reference internal" href="#subprocess.check_output" title="subprocess.check_output"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_output()</span></code></a> 捕获。否则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.TimeoutExpired.stdout">
-<code class="descname">stdout</code><a class="headerlink" href="#subprocess.TimeoutExpired.stdout" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">stdout</code><a class="headerlink" href="#subprocess.TimeoutExpired.stdout" title="永久链接至目标">¶</a></dt>
 <dd><p>对 output 的别名，对应的有 <a class="reference internal" href="#subprocess.TimeoutExpired.stderr" title="subprocess.TimeoutExpired.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stderr</span></code></a>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.TimeoutExpired.stderr">
-<code class="descname">stderr</code><a class="headerlink" href="#subprocess.TimeoutExpired.stderr" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">stderr</code><a class="headerlink" href="#subprocess.TimeoutExpired.stderr" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的标准错误输出，如果被 <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 捕获。 否则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>添加了 <em>stdout</em> 和 <em>stderr</em> 属性。</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>添加了 <em>stdout</em> 和 <em>stderr</em> 属性。</p>
 </div>
 </dd></dl>
 
 <dl class="exception">
 <dt id="subprocess.CalledProcessError">
-<em class="property">exception </em><code class="descclassname">subprocess.</code><code class="descname">CalledProcessError</code><a class="headerlink" href="#subprocess.CalledProcessError" title="永久链接至目标">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CalledProcessError</code><a class="headerlink" href="#subprocess.CalledProcessError" title="永久链接至目标">¶</a></dt>
 <dd><p><a class="reference internal" href="#subprocess.SubprocessError" title="subprocess.SubprocessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SubprocessError</span></code></a> 的子类，当一个被 <a class="reference internal" href="#subprocess.check_call" title="subprocess.check_call"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_call()</span></code></a> 或 <a class="reference internal" href="#subprocess.check_output" title="subprocess.check_output"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_output()</span></code></a> 函数运行的子进程返回了非零退出码时被抛出。</p>
 <dl class="attribute">
 <dt id="subprocess.CalledProcessError.returncode">
-<code class="descname">returncode</code><a class="headerlink" href="#subprocess.CalledProcessError.returncode" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">returncode</code><a class="headerlink" href="#subprocess.CalledProcessError.returncode" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的退出状态。如果程序由一个信号终止，这将会被设为一个负的信号码。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CalledProcessError.cmd">
-<code class="descname">cmd</code><a class="headerlink" href="#subprocess.CalledProcessError.cmd" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">cmd</code><a class="headerlink" href="#subprocess.CalledProcessError.cmd" title="永久链接至目标">¶</a></dt>
 <dd><p>用于创建子进程的指令。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CalledProcessError.output">
-<code class="descname">output</code><a class="headerlink" href="#subprocess.CalledProcessError.output" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">output</code><a class="headerlink" href="#subprocess.CalledProcessError.output" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的输出， 如果被 <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 或 <a class="reference internal" href="#subprocess.check_output" title="subprocess.check_output"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_output()</span></code></a> 捕获。否则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CalledProcessError.stdout">
-<code class="descname">stdout</code><a class="headerlink" href="#subprocess.CalledProcessError.stdout" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">stdout</code><a class="headerlink" href="#subprocess.CalledProcessError.stdout" title="永久链接至目标">¶</a></dt>
 <dd><p>对 output 的别名，对应的有 <a class="reference internal" href="#subprocess.CalledProcessError.stderr" title="subprocess.CalledProcessError.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stderr</span></code></a>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.CalledProcessError.stderr">
-<code class="descname">stderr</code><a class="headerlink" href="#subprocess.CalledProcessError.stderr" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">stderr</code><a class="headerlink" href="#subprocess.CalledProcessError.stderr" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的标准错误输出，如果被 <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> 捕获。 否则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>添加了 <em>stdout</em> 和 <em>stderr</em> 属性。</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>添加了 <em>stdout</em> 和 <em>stderr</em> 属性。</p>
 </div>
 </dd></dl>
 
@@ -311,22 +319,22 @@
 <p>当构造函数的 <em>newline</em> 参数为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 时。对于 <em>stdin</em>， 输入的换行符 <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> 将被转换为默认的换行符 <a class="reference internal" href="os.html#os.linesep" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.linesep" title="os.linesep"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.linesep</span></code></a>。对于 <em>stdout</em> 和 <em>stderr</em>， 所有输出的换行符都被转换为 <code class="docutils literal notranslate"><span class="pre">'\n'</span></code>。更多信息，查看 <a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> 类的文档。</p>
 <p>如果文本模式未被使用， <em>stdin</em>， <em>stdout</em> 和 <em>stderr</em> 将会以二进制流模式打开。没有编码与换行符转换发生。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.6 新版功能: </span>添加了 <em>encoding</em> 和 <em>errors</em> 形参。</p>
+<p><span class="versionmodified added">3.6 新版功能: </span>添加了 <em>encoding</em> 和 <em>errors</em> 形参。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能: </span>添加了 <em>text</em> 形参作为 <em>universal_newlines</em> 的别名。</p>
+<p><span class="versionmodified added">3.7 新版功能: </span>添加了 <em>text</em> 形参作为 <em>universal_newlines</em> 的别名。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">文件对象 <a class="reference internal" href="#subprocess.Popen.stdin" title="subprocess.Popen.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Popen.stdin</span></code></a> 、 <a class="reference internal" href="#subprocess.Popen.stdout" title="subprocess.Popen.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Popen.stdout</span></code></a> 和 <a class="reference internal" href="#subprocess.Popen.stderr" title="subprocess.Popen.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Popen.stderr</span></code></a> 的换行符属性不会被 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a> 方法更新。</p>
+<p class="admonition-title">注解</p>
+<p>文件对象 <a class="reference internal" href="#subprocess.Popen.stdin" title="subprocess.Popen.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Popen.stdin</span></code></a> 、 <a class="reference internal" href="#subprocess.Popen.stdout" title="subprocess.Popen.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Popen.stdout</span></code></a> 和 <a class="reference internal" href="#subprocess.Popen.stderr" title="subprocess.Popen.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Popen.stderr</span></code></a> 的换行符属性不会被 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a> 方法更新。</p>
 </div>
 <p>如果 <em>shell</em> 设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>,，则使用 shell 执行指定的指令。如果您主要使用 Python 增强的控制流（它比大多数系统 shell 提供的强大），并且仍然希望方便地使用其他 shell 功能，如 shell 管道、文件通配符、环境变量展开以及 <code class="docutils literal notranslate"><span class="pre">~</span></code> 展开到用户家目录，这将非常有用。但是，注意 Python 自己也实现了许多类似 shell 的特性（例如 <a class="reference internal" href="glob.html#module-glob" tppabs="https://docs.python.org/zh-cn/3/library/glob.html#module-glob" title="glob: Unix shell style pathname pattern expansion."><code class="xref py py-mod docutils literal notranslate"><span class="pre">glob</span></code></a>, <a class="reference internal" href="fnmatch.html#module-fnmatch" tppabs="https://docs.python.org/zh-cn/3/library/fnmatch.html#module-fnmatch" title="fnmatch: Unix shell style filename pattern matching."><code class="xref py py-mod docutils literal notranslate"><span class="pre">fnmatch</span></code></a>, <a class="reference internal" href="os.html#os.walk" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.walk" title="os.walk"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.walk()</span></code></a>, <a class="reference internal" href="os.path.html#os.path.expandvars" tppabs="https://docs.python.org/zh-cn/3/library/os.path.html#os.path.expandvars" title="os.path.expandvars"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.expandvars()</span></code></a>, <a class="reference internal" href="os.path.html#os.path.expanduser" tppabs="https://docs.python.org/zh-cn/3/library/os.path.html#os.path.expanduser" title="os.path.expanduser"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.expanduser()</span></code></a> 和 <a class="reference internal" href="shutil.html#module-shutil" tppabs="https://docs.python.org/zh-cn/3/library/shutil.html#module-shutil" title="shutil: High-level file operations, including copying."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shutil</span></code></a>）。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>当 <em>universal_newline</em> 被设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则类使用 <a class="reference internal" href="locale.html#locale.getpreferredencoding" tppabs="https://docs.python.org/zh-cn/3/library/locale.html#locale.getpreferredencoding" title="locale.getpreferredencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.getpreferredencoding(False)</span></code></a> 编码来代替 <code class="docutils literal notranslate"><span class="pre">locale.getpreferredencoding()</span></code>。关于它们的区别的更多信息，见 <a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a>。</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span>当 <em>universal_newline</em> 被设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则类使用 <a class="reference internal" href="locale.html#locale.getpreferredencoding" tppabs="https://docs.python.org/zh-cn/3/library/locale.html#locale.getpreferredencoding" title="locale.getpreferredencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.getpreferredencoding(False)</span></code></a> 编码来代替 <code class="docutils literal notranslate"><span class="pre">locale.getpreferredencoding()</span></code>。关于它们的区别的更多信息，见 <a class="reference internal" href="io.html#io.TextIOWrapper" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a>。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">在使用 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 之前， 请阅读 <a class="reference internal" href="#security-considerations">Security Considerations</a> 段落。</p>
+<p class="admonition-title">注解</p>
+<p>在使用 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 之前， 请阅读 <a class="reference internal" href="#security-considerations">Security Considerations</a> 段落。</p>
 </div>
 </div></blockquote>
 <p>这些选项以及所有其他选项在 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 构造函数文档中有更详细的描述。</p>
@@ -336,13 +344,26 @@
 <p>此模块的底层的进程创建与管理由 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 类处理。它提供了很大的灵活性，因此开发者能够处理未被便利函数覆盖的不常见用例。</p>
 <dl class="class">
 <dt id="subprocess.Popen">
-<em class="property">class </em><code class="descclassname">subprocess.</code><code class="descname">Popen</code><span class="sig-paren">(</span><em>args</em>, <em>bufsize=-1</em>, <em>executable=None</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>preexec_fn=None</em>, <em>close_fds=True</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>env=None</em>, <em>universal_newlines=None</em>, <em>startupinfo=None</em>, <em>creationflags=0</em>, <em>restore_signals=True</em>, <em>start_new_session=False</em>, <em>pass_fds=()</em>, <em>*</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">Popen</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">bufsize=-1</em>, <em class="sig-param">executable=None</em>, <em class="sig-param">stdin=None</em>, <em class="sig-param">stdout=None</em>, <em class="sig-param">stderr=None</em>, <em class="sig-param">preexec_fn=None</em>, <em class="sig-param">close_fds=True</em>, <em class="sig-param">shell=False</em>, <em class="sig-param">cwd=None</em>, <em class="sig-param">env=None</em>, <em class="sig-param">universal_newlines=None</em>, <em class="sig-param">startupinfo=None</em>, <em class="sig-param">creationflags=0</em>, <em class="sig-param">restore_signals=True</em>, <em class="sig-param">start_new_session=False</em>, <em class="sig-param">pass_fds=()</em>, <em class="sig-param">*</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em>, <em class="sig-param">text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen" title="永久链接至目标">¶</a></dt>
 <dd><p>在一个新的进程中执行子程序。在 POSIX，此类使用类似于 <a class="reference internal" href="os.html#os.execvp" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.execvp" title="os.execvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">os.execvp()</span></code></a> 的行为来执行子程序。在 Windows，此类使用了 Windows <code class="docutils literal notranslate"><span class="pre">CreateProcess()</span></code> 函数。 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 的参数如下：</p>
-<p><em>args</em> 应当是一个程序的参数列表或者一个简单的字符串。默认情况下，如果 <em>args</em> 是一个序列，将运行的程序是此序列的第一项。如果 <em>args</em> 是一个字符串，解释是平台相关的，如下所述。有关默认行为的其他差异，见 <em>shell</em> 和 <em>executable</em> 参数。除非另有说明，推荐将 <em>args</em> 作为序列传递。</p>
+<p><em>args</em> should be a sequence of program arguments or else a single string
+or <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.
+By default, the program to execute is the first item in <em>args</em> if <em>args</em> is
+a sequence.  If <em>args</em> is a string, the interpretation is
+platform-dependent and described below.  See the <em>shell</em> and <em>executable</em>
+arguments for additional differences from the default behavior.  Unless
+otherwise stated, it is recommended to pass <em>args</em> as a sequence.</p>
+<p>An example of passing some arguments to an external program
+as a sequence is:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Popen</span><span class="p">([</span><span class="s2">&quot;/usr/bin/git&quot;</span><span class="p">,</span> <span class="s2">&quot;commit&quot;</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;Fixes a bug.&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>在 POSIX，如果 <em>args</em> 是一个字符串，此字符串被作为将被执行的程序的命名或路径解释。但是，只有在不传递任何参数给程序的情况下才能这么做。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p><a class="reference internal" href="shlex.html#shlex.split" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html#shlex.split" title="shlex.split"><code class="xref py py-meth docutils literal notranslate"><span class="pre">shlex.split()</span></code></a> 在确定正确 <em>args</em> 的正确标记化时非常有用，尤其是在复杂情况下:</p>
+<p class="admonition-title">注解</p>
+<p>It may not be obvious how to break a shell command into a sequence of arguments,
+especially in complex cases. <a class="reference internal" href="shlex.html#shlex.split" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html#shlex.split" title="shlex.split"><code class="xref py py-meth docutils literal notranslate"><span class="pre">shlex.split()</span></code></a> can illustrate how to
+determine the correct tokenization for <em>args</em>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">shlex</span><span class="o">,</span> <span class="nn">subprocess</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">command_line</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="go">/bin/vikings -input eggs.txt -output &quot;spam spam.txt&quot; -cmd &quot;echo &#39;$MONEY&#39;&quot;</span>
@@ -352,9 +373,18 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="c1"># Success!</span>
 </pre></div>
 </div>
-<p class="last">特别注意，由 shell 中的空格分隔的选项（例如 <em>-input</em>）和参数（例如 <em>eggs.txt</em> ）位于分开的列表元素中，而在需要时使用引号或反斜杠转义的参数在 shell （例如包含空格的文件名或上面显示的 <em>echo</em> 命令）是单独的列表元素。</p>
+<p>特别注意，由 shell 中的空格分隔的选项（例如 <em>-input</em>）和参数（例如 <em>eggs.txt</em> ）位于分开的列表元素中，而在需要时使用引号或反斜杠转义的参数在 shell （例如包含空格的文件名或上面显示的 <em>echo</em> 命令）是单独的列表元素。</p>
 </div>
 <p>在 Windows，如果 <em>args</em> 是一个序列，他将通过一个在 <a class="reference internal" href="#converting-argument-sequence"><span class="std std-ref">Converting an argument sequence to a string on Windows</span></a> 描述的方式被转换为一个字符串。这是因为底层的 <code class="docutils literal notranslate"><span class="pre">CreateProcess()</span></code> 只处理字符串。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.6 版更改: </span><em>args</em> parameter accepts a <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> if <em>shell</em> is
+<code class="docutils literal notranslate"><span class="pre">False</span></code> and a sequence containing path-like objects on POSIX.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span><em>args</em> parameter accepts a <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> if <em>shell</em> is
+<code class="docutils literal notranslate"><span class="pre">False</span></code> and a sequence containing bytes and path-like objects
+on Windows.</p>
+</div>
 <p>参数 <em>shell</em> （默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code>）指定是否使用 shell 执行程序。如果 <em>shell</em> 为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，更推荐将 <em>args</em> 作为字符串传递而非序列。</p>
 <p>在 POSIX，当 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>， shell 默认为 <code class="file docutils literal notranslate"><span class="pre">/bin/sh</span></code>。如果 <em>args</em> 是一个字符串，此字符串指定将通过 shell 执行的命令。这意味着字符串的格式必须和在命令提示符中所输入的完全相同。这包括，例如，引号和反斜杠转义包含空格的文件名。如果 <em>args</em> 是一个序列，第一项指定了命令，另外的项目将作为传递给 shell （而非命令） 的参数对待。也就是说， <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 等同于:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;/bin/sh&#39;</span><span class="p">,</span> <span class="s1">&#39;-c&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">...</span><span class="p">])</span>
@@ -362,81 +392,104 @@
 </div>
 <p>在 Windows，使用 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>，环境变量 <span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">COMSPEC</span></code> 指定了默认 shell。在 Windows 你唯一需要指定 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 的情况是你想要执行内置在 shell 中的命令（例如 <strong class="command">dir</strong> 或者 <strong class="command">copy</strong>）。在运行一个批处理文件或者基于控制台的可执行文件时，不需要 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">在使用 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 之前， 请阅读 <a class="reference internal" href="#security-considerations">Security Considerations</a> 段落。</p>
+<p class="admonition-title">注解</p>
+<p>在使用 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 之前， 请阅读 <a class="reference internal" href="#security-considerations">Security Considerations</a> 段落。</p>
 </div>
 <p><em>bufsize</em> 将在 <a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 函数创建了 stdin/stdout/stderr 管道文件对象时作为对应的参数供应:</p>
 <ul class="simple">
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">0</span></code> 表示不使用缓冲区 （读取与写入是一个系统调用并且可以返回短内容）</li>
-<li><code class="xref py py-const docutils literal notranslate"><span class="pre">1</span></code> 表示行缓冲（只有 <code class="docutils literal notranslate"><span class="pre">universal_newlines=True</span></code> 时才有用，例如，在文本模式中）</li>
-<li>任何其他正值表示使用一个约为对应大小的缓冲区</li>
-<li>负的 <em>bufsize</em> （默认）表示使用系统默认的 io.DEFAULT_BUFFER_SIZE。</li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">0</span></code> 表示不使用缓冲区 （读取与写入是一个系统调用并且可以返回短内容）</p></li>
+<li><p><code class="xref py py-const docutils literal notranslate"><span class="pre">1</span></code> 表示行缓冲（只有 <code class="docutils literal notranslate"><span class="pre">universal_newlines=True</span></code> 时才有用，例如，在文本模式中）</p></li>
+<li><p>任何其他正值表示使用一个约为对应大小的缓冲区</p></li>
+<li><p>负的 <em>bufsize</em> （默认）表示使用系统默认的 io.DEFAULT_BUFFER_SIZE。</p></li>
 </ul>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3.1 版更改: </span><em>bufsize</em> 现在默认为 -1 来启用缓冲，以符合大多数代码所期望的行为。在 Python 3.2.4 和 3.3.1 之前的版本中，它错误地将默认值设为了为 <code class="xref py py-const docutils literal notranslate"><span class="pre">0</span></code>，这是无缓冲的并且允许短读取。这是无意的，并且与大多数代码所期望的 Python 2 的行为不一致。</p>
+<p><span class="versionmodified changed">在 3.3.1 版更改: </span><em>bufsize</em> 现在默认为 -1 来启用缓冲，以符合大多数代码所期望的行为。在 Python 3.2.4 和 3.3.1 之前的版本中，它错误地将默认值设为了为 <code class="xref py py-const docutils literal notranslate"><span class="pre">0</span></code>，这是无缓冲的并且允许短读取。这是无意的，并且与大多数代码所期望的 Python 2 的行为不一致。</p>
 </div>
 <p><em>executable</em> 参数指定一个要执行的替换程序。这很少需要。当 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>， <em>executable</em> 替换 <em>args</em> 指定运行的程序。但是，原始的 <em>args</em> 仍然被传递给程序。大多数程序将被 <em>args</em> 指定的程序作为命令名对待，这可以与实际运行的程序不同。在 POSIX， <em>args</em> 名作为实际调用程序中可执行文件的显示名称，例如 <strong class="program">ps</strong>。如果 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>，在 POSIX， <em>executable</em> 参数指定用于替换默认 shell <code class="file docutils literal notranslate"><span class="pre">/bin/sh</span></code> 的 shell。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.6 版更改: </span><em>executable</em> parameter accepts a <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> on POSIX.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span><em>executable</em> parameter accepts a bytes and <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>
+on Windows.</p>
+</div>
 <p><em>stdin</em>, <em>stdout</em> 和 <em>stderr</em> 分别指定被运行的程序的标准输入、输出和标准错误的文件句柄。合法的值有 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a> ， <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a> ， 一个存在的文件描述符（一个正整数），一个存在的 <a class="reference internal" href="glossary.html#term-file-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-file-object"><span class="xref std std-term">文件对象</span></a> 以及 <code class="docutils literal notranslate"><span class="pre">None</span></code>。 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a> 表示应创建一个新的对子进程的管道。 <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a> 表示使用特殊的 <a class="reference internal" href="os.html#os.devnull" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a> 文件。使用默认的 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则不进行成定向；子进程的文件流将继承自父进程。另外， <em>stderr</em> 可设为 <a class="reference internal" href="#subprocess.STDOUT" title="subprocess.STDOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">STDOUT</span></code></a>，表示应用程序的标准错误数据应和标准输出一同捕获。</p>
 <p>如果 <em>preexec_fn</em> 被设为一个可调用对象，此对象将在子进程刚创建时被调用。（仅 POSIX）</p>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last"><em>preexec_fn</em> 形参在应用程序中存在多线程时是不安全的。子进程在调用前可能死锁。如果你必须使用它，保持警惕！最小化你调用的库的数量。</p>
+<p class="admonition-title">警告</p>
+<p><em>preexec_fn</em> 形参在应用程序中存在多线程时是不安全的。子进程在调用前可能死锁。如果你必须使用它，保持警惕！最小化你调用的库的数量。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">如果你需要修改子进程环境，使用 <em>env</em> 形参而非在 <em>preexec_fn</em> 中进行。 <em>start_new_session</em> 形参可以代替之前常用的 <em>preexec_fn</em> 来在子进程中调用 os.setsid()。</p>
+<p class="admonition-title">注解</p>
+<p>如果你需要修改子进程环境，使用 <em>env</em> 形参而非在 <em>preexec_fn</em> 中进行。 <em>start_new_session</em> 形参可以代替之前常用的 <em>preexec_fn</em> 来在子进程中调用 os.setsid()。</p>
 </div>
-<p>如果 <em>close_fds</em> 为真，所有文件描述符除了 <code class="xref py py-const docutils literal notranslate"><span class="pre">0</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">1</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">2</span></code> 之外都会在子进程执行前关闭。而当 <em>close_fds</em> 为假时，文件描述符遵守它们继承的标志，如 <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">Inheritance of File Descriptors</span></a> 所述。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>The <em>preexec_fn</em> parameter is no longer supported in subinterpreters.
+The use of the parameter in a subinterpreter raises
+<a class="reference internal" href="exceptions.html#RuntimeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>. The new restriction may affect applications that
+are deployed in mod_wsgi, uWSGI, and other embedded environments.</p>
+</div>
+<p>如果 <em>close_fds</em> 为真，所有文件描述符除了 <code class="xref py py-const docutils literal notranslate"><span class="pre">0</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">1</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">2</span></code> 之外都会在子进程执行前关闭。而当 <em>close_fds</em> 为假时，文件描述符遵守它们继承的标志，如 <a class="reference internal" href="os.html#fd-inheritance" tppabs="https://docs.python.org/zh-cn/3/library/os.html#fd-inheritance"><span class="std std-ref">文件描述符的继承</span></a> 所述。</p>
 <p>在 Windows，如果 <em>close_fds</em> 为真， 则子进程不会继承任何句柄，除非在 <code class="xref py py-attr docutils literal notranslate"><span class="pre">STARTUPINFO.IpAttributeList</span></code> 的 <code class="docutils literal notranslate"><span class="pre">handle_list</span></code> 的键中显式传递，或者通过标准句柄重定向传递。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span><em>close_fds</em> 的默认值已经从 <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> 修改为上述值。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span><em>close_fds</em> 的默认值已经从 <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> 修改为上述值。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>在 Windows，当重定向标准句柄时 <em>close_fds</em> 的默认值从 <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> 变为 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>。现在重定向标准句柄时有可能设置 <em>close_fds</em> 为 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>。（标准句柄指三个 stdio 的句柄）</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>在 Windows，当重定向标准句柄时 <em>close_fds</em> 的默认值从 <a class="reference internal" href="constants.html#False" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> 变为 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>。现在重定向标准句柄时有可能设置 <em>close_fds</em> 为 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>。（标准句柄指三个 stdio 的句柄）</p>
 </div>
 <p><em>pass_fds</em> 是一个可选的在父子进程间保持打开的文件描述符序列。提供任何 <em>pass_fds</em> 将强制 <em>close_fds</em> 为 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>。（仅 POSIX）</p>
-<div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能: </span>加入了 <em>pass_fds</em> 形参。</p>
-</div>
-<p>如果 <em>cwd</em> 不为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，此函数在执行子进程前改变当前工作目录为 <em>cwd</em>。 <em>cwd</em> 可以为一个 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 和 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like</span></a> 对象。特别要注意，当可执行文件的路径为相对路径时，此函数按相对于 <em>cwd</em> 的路径来寻找 <em>executable</em> (或者 <em>args</em> 的第一项）。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span><em>cwd</em> 形参接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>加入了 <em>pass_fds</em> 形参。</p>
 </div>
-<p>&nbsp;如果 <em>restore_signals</em> 为 true（默认值），则 Python 设置为 SIG_IGN 的所有信号将在 exec 之前的子进程中恢复为 SIG_DFL。目前，这包括 SIGPIPE ，SIGXFZ 和 SIGXFSZ 信号。 （仅 POSIX）</p>
+<p>If <em>cwd</em> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, the function changes the working directory to
+<em>cwd</em> before executing the child.  <em>cwd</em> can be a string, bytes or
+<a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like</span></a> object.  In particular, the function
+looks for <em>executable</em> (or for the first item in <em>args</em>) relative to <em>cwd</em>
+if the executable path is a relative path.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span><em>restore_signals</em> 被加入。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span><em>cwd</em> parameter accepts a <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> on POSIX.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.7 版更改: </span><em>cwd</em> parameter accepts a <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> on Windows.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span><em>cwd</em> parameter accepts a bytes object on Windows.</p>
+</div>
+<p> 如果 <em>restore_signals</em> 为 true（默认值），则 Python 设置为 SIG_IGN 的所有信号将在 exec 之前的子进程中恢复为 SIG_DFL。目前，这包括 SIGPIPE ，SIGXFZ 和 SIGXFSZ 信号。 （仅 POSIX）</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.2 版更改: </span><em>restore_signals</em> 被加入。</p>
 </div>
 <p>如果 <em>start_new_session</em> 为 true，则 setsid() 系统调用将在子进程执行之前被执行。（仅 POSIX）</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span><em>start_new_session</em> 被添加。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span><em>start_new_session</em> 被添加。</p>
 </div>
 <p>如果 <em>env</em> 不为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则必须为一个为新进程定义了环境变量的字典；这些用于替换继承的当前进程环境的默认行为。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">如果指定， <em>env</em> 必须提供所有被子进程需求的变量。在 Windows，为了运行一个 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Side-by-Side_Assembly  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Side-by-Side_Assembly'" tppabs="https://en.wikipedia.org/wiki/Side-by-Side_Assembly">side-by-side assembly</a> ，指定的 <em>env</em> <strong>必须</strong> 包含一个有效的 <span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SystemRoot</span></code>。</p>
+<p class="admonition-title">注解</p>
+<p>如果指定， <em>env</em> 必须提供所有被子进程需求的变量。在 Windows，为了运行一个 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue39548  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue39548'" tppabs="https://en.wikipedia.org/wiki/Side-by-Side_Assembly">side-by-side assembly</a> ，指定的 <em>env</em> <strong>必须</strong> 包含一个有效的 <span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SystemRoot</span></code>。</p>
 </div>
 <p>如果 <em>encoding</em> 或 <em>errors</em> 被指定，或者 <em>text</em> 为 true，则文件对象 <em>stdin</em>, <em>stdout</em> 和 <em>stderr</em> 将会以指定的编码和 <em>errors</em> 以文本模式打开，如同 <a class="reference internal" href="#frequently-used-arguments"><span class="std std-ref">常用参数</span></a> 所述。 <em>universal_newlines</em> 参数等同于 <em>text</em> 并且提供向后兼容性。默认情况下，文件对象都以二进制模式打开。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.6 新版功能: </span><em>encoding</em> 和 <em>errors</em> 被添加。</p>
+<p><span class="versionmodified added">3.6 新版功能: </span><em>encoding</em> 和 <em>errors</em> 被添加。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能: </span><em>text</em> 作为 <em>universal_newlines</em> 的一个更具可读性的别名被添加。</p>
+<p><span class="versionmodified added">3.7 新版功能: </span><em>text</em> 作为 <em>universal_newlines</em> 的一个更具可读性的别名被添加。</p>
 </div>
 <p>如果给出， <em>startupinfo</em> 将是一个将被传递给底层的 <code class="docutils literal notranslate"><span class="pre">CreateProcess</span></code> 函数的 <a class="reference internal" href="#subprocess.STARTUPINFO" title="subprocess.STARTUPINFO"><code class="xref py py-class docutils literal notranslate"><span class="pre">STARTUPINFO</span></code></a> 对象。 <em>creationflags</em>，如果给出，可以是一个或多个以下标志之一：</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="#subprocess.CREATE_NEW_CONSOLE" title="subprocess.CREATE_NEW_CONSOLE"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_NEW_CONSOLE</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.CREATE_NEW_PROCESS_GROUP" title="subprocess.CREATE_NEW_PROCESS_GROUP"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_NEW_PROCESS_GROUP</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.ABOVE_NORMAL_PRIORITY_CLASS" title="subprocess.ABOVE_NORMAL_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">ABOVE_NORMAL_PRIORITY_CLASS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.BELOW_NORMAL_PRIORITY_CLASS" title="subprocess.BELOW_NORMAL_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">BELOW_NORMAL_PRIORITY_CLASS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.HIGH_PRIORITY_CLASS" title="subprocess.HIGH_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">HIGH_PRIORITY_CLASS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.IDLE_PRIORITY_CLASS" title="subprocess.IDLE_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">IDLE_PRIORITY_CLASS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.NORMAL_PRIORITY_CLASS" title="subprocess.NORMAL_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">NORMAL_PRIORITY_CLASS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.REALTIME_PRIORITY_CLASS" title="subprocess.REALTIME_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">REALTIME_PRIORITY_CLASS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.CREATE_NO_WINDOW" title="subprocess.CREATE_NO_WINDOW"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_NO_WINDOW</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.DETACHED_PROCESS" title="subprocess.DETACHED_PROCESS"><code class="xref py py-data docutils literal notranslate"><span class="pre">DETACHED_PROCESS</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.CREATE_DEFAULT_ERROR_MODE" title="subprocess.CREATE_DEFAULT_ERROR_MODE"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_DEFAULT_ERROR_MODE</span></code></a></li>
-<li><a class="reference internal" href="#subprocess.CREATE_BREAKAWAY_FROM_JOB" title="subprocess.CREATE_BREAKAWAY_FROM_JOB"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_BREAKAWAY_FROM_JOB</span></code></a></li>
+<li><p><a class="reference internal" href="#subprocess.CREATE_NEW_CONSOLE" title="subprocess.CREATE_NEW_CONSOLE"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_NEW_CONSOLE</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.CREATE_NEW_PROCESS_GROUP" title="subprocess.CREATE_NEW_PROCESS_GROUP"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_NEW_PROCESS_GROUP</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.ABOVE_NORMAL_PRIORITY_CLASS" title="subprocess.ABOVE_NORMAL_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">ABOVE_NORMAL_PRIORITY_CLASS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.BELOW_NORMAL_PRIORITY_CLASS" title="subprocess.BELOW_NORMAL_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">BELOW_NORMAL_PRIORITY_CLASS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.HIGH_PRIORITY_CLASS" title="subprocess.HIGH_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">HIGH_PRIORITY_CLASS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.IDLE_PRIORITY_CLASS" title="subprocess.IDLE_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">IDLE_PRIORITY_CLASS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.NORMAL_PRIORITY_CLASS" title="subprocess.NORMAL_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">NORMAL_PRIORITY_CLASS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.REALTIME_PRIORITY_CLASS" title="subprocess.REALTIME_PRIORITY_CLASS"><code class="xref py py-data docutils literal notranslate"><span class="pre">REALTIME_PRIORITY_CLASS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.CREATE_NO_WINDOW" title="subprocess.CREATE_NO_WINDOW"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_NO_WINDOW</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.DETACHED_PROCESS" title="subprocess.DETACHED_PROCESS"><code class="xref py py-data docutils literal notranslate"><span class="pre">DETACHED_PROCESS</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.CREATE_DEFAULT_ERROR_MODE" title="subprocess.CREATE_DEFAULT_ERROR_MODE"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_DEFAULT_ERROR_MODE</span></code></a></p></li>
+<li><p><a class="reference internal" href="#subprocess.CREATE_BREAKAWAY_FROM_JOB" title="subprocess.CREATE_BREAKAWAY_FROM_JOB"><code class="xref py py-data docutils literal notranslate"><span class="pre">CREATE_BREAKAWAY_FROM_JOB</span></code></a></p></li>
 </ul>
 </div></blockquote>
 <p>Popen 对象支持通过 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句作为上下文管理器，在退出时关闭文件描述符并等待进程:</p>
@@ -444,11 +497,23 @@
     <span class="n">log</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 </div>
+<p class="audit-hook"><p>Popen and the other functions in this module that use it raise an
+<a class="reference internal" href="sys.html#auditing" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">subprocess.Popen</span></code> with arguments
+<code class="docutils literal notranslate"><span class="pre">executable</span></code>, <code class="docutils literal notranslate"><span class="pre">args</span></code>, <code class="docutils literal notranslate"><span class="pre">cwd</span></code>, and <code class="docutils literal notranslate"><span class="pre">env</span></code>. The value for <code class="docutils literal notranslate"><span class="pre">args</span></code>
+may be a single string or a list of strings, depending on platform.</p>
+</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span>添加了上下文管理器支持。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>添加了上下文管理器支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>现在，如果 Popen 析构时子进程仍然在运行，则析构器会发送一个 <a class="reference internal" href="exceptions.html#ResourceWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> 警告。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>现在，如果 Popen 析构时子进程仍然在运行，则析构器会发送一个 <a class="reference internal" href="exceptions.html#ResourceWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> 警告。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>Popen can use <a class="reference internal" href="os.html#os.posix_spawn" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.posix_spawn" title="os.posix_spawn"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.posix_spawn()</span></code></a> in some cases for better
+performance. On Windows Subsystem for Linux and QEMU User Emulation,
+Popen constructor using <a class="reference internal" href="os.html#os.posix_spawn" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.posix_spawn" title="os.posix_spawn"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.posix_spawn()</span></code></a> no longer raise an
+exception on errors like missing program, but the child process fails
+with a non-zero <a class="reference internal" href="#subprocess.Popen.returncode" title="subprocess.Popen.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a>.</p>
 </div>
 </dd></dl>
 
@@ -463,14 +528,14 @@
 <p>此模块中定义的异常都继承自 <a class="reference internal" href="#subprocess.SubprocessError" title="subprocess.SubprocessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SubprocessError</span></code></a>。</p>
 <blockquote>
 <div><div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能: </span>基类 <a class="reference internal" href="#subprocess.SubprocessError" title="subprocess.SubprocessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SubprocessError</span></code></a> 被添加。</p>
+<p><span class="versionmodified added">3.3 新版功能: </span>基类 <a class="reference internal" href="#subprocess.SubprocessError" title="subprocess.SubprocessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SubprocessError</span></code></a> 被添加。</p>
 </div>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="security-considerations">
 <h2>安全考量<a class="headerlink" href="#security-considerations" title="永久链接至标题">¶</a></h2>
-<p>不像一些其他的 popen 功能，此实现绝不会隐式调用一个系统 shell。这意味着任何字符，包括 shell 元字符，可以安全地被传递给子进程。如果 shell 被明确地调用，通过 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 设置，则确保所有空白字符和元字符被恰当地包裹在引号内以避免 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Shell_injection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Shell_injection#Shell_injection'" tppabs="https://en.wikipedia.org/wiki/Shell_injection#Shell_injection">shell 注入</a> 漏洞就由应用程序负责了。</p>
+<p>不像一些其他的 popen 功能，此实现绝不会隐式调用一个系统 shell。这意味着任何字符，包括 shell 元字符，可以安全地被传递给子进程。如果 shell 被明确地调用，通过 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 设置，则确保所有空白字符和元字符被恰当地包裹在引号内以避免 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38971  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue38971#Shell_injection'" tppabs="https://en.wikipedia.org/wiki/Shell_injection#Shell_injection">shell 注入</a> 漏洞就由应用程序负责了。</p>
 <p>当使用 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>， <a class="reference internal" href="shlex.html#shlex.quote" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html#shlex.quote" title="shlex.quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">shlex.quote()</span></code></a> 函数可以作为在将被用于构造 shell 指令的字符串中转义空白字符以及 shell 元字符的方案。</p>
 </div>
 <div class="section" id="popen-objects">
@@ -478,31 +543,31 @@
 <p><a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 类的实例拥有以下方法：</p>
 <dl class="method">
 <dt id="subprocess.Popen.poll">
-<code class="descclassname">Popen.</code><code class="descname">poll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.poll" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">poll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.poll" title="永久链接至目标">¶</a></dt>
 <dd><p>检查子进程是否已被终止。设置并返回 <a class="reference internal" href="#subprocess.Popen.returncode" title="subprocess.Popen.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> 属性。否则返回 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="subprocess.Popen.wait">
-<code class="descclassname">Popen.</code><code class="descname">wait</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.wait" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">wait</code><span class="sig-paren">(</span><em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.wait" title="永久链接至目标">¶</a></dt>
 <dd><p>等待子进程被终止。设置并返回 <a class="reference internal" href="#subprocess.Popen.returncode" title="subprocess.Popen.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> 属性。</p>
 <p>如果进程在 <em>timeout</em> 秒后未中断，抛出一个 <a class="reference internal" href="#subprocess.TimeoutExpired" title="subprocess.TimeoutExpired"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutExpired</span></code></a> 异常，可以安全地捕获此异常并重新等待。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">当 <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> 并且子进程产生了足以阻塞 OS 管道缓冲区接收更多数据的输出到管道时，将会发生死锁。当使用管道时用 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a> 来规避它。</p>
+<p class="admonition-title">注解</p>
+<p>当 <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> 并且子进程产生了足以阻塞 OS 管道缓冲区接收更多数据的输出到管道时，将会发生死锁。当使用管道时用 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.communicate()</span></code></a> 来规避它。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">此函数使用了一个 busy loop （非阻塞调用以及短睡眠） 实现。使用 <a class="reference internal" href="asyncio.html#module-asyncio" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> 模块进行异步等待： 参阅 <a class="reference internal" href="asyncio-subprocess.html#asyncio.create_subprocess_exec" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-subprocess.html#asyncio.create_subprocess_exec" title="asyncio.create_subprocess_exec"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.create_subprocess_exec</span></code></a>。</p>
+<p class="admonition-title">注解</p>
+<p>此函数使用了一个 busy loop （非阻塞调用以及短睡眠） 实现。使用 <a class="reference internal" href="asyncio.html#module-asyncio" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> 模块进行异步等待： 参阅 <a class="reference internal" href="asyncio-subprocess.html#asyncio.create_subprocess_exec" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-subprocess.html#asyncio.create_subprocess_exec" title="asyncio.create_subprocess_exec"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.create_subprocess_exec</span></code></a>。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="subprocess.Popen.communicate">
-<code class="descclassname">Popen.</code><code class="descname">communicate</code><span class="sig-paren">(</span><em>input=None</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.communicate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">communicate</code><span class="sig-paren">(</span><em class="sig-param">input=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.communicate" title="永久链接至目标">¶</a></dt>
 <dd><p>与进程交互：向 stdin 传输数据。从 stdout 和 stderr 读取数据，直到文件结束符。等待进程终止。可选的 <em>input</em> 参数应当未被传输给子进程的数据，如果没有数据应被传输给子进程则为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。如果流以文本模式打开， <em>input</em> 必须为字符串。否则，它必须为字节。</p>
 <p><a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> 返回一个 <code class="docutils literal notranslate"><span class="pre">(stdout_data,</span> <span class="pre">stderr_data)</span></code> 元组。如果文件以文本模式打开则为字符串；否则字节。</p>
 <p>注意如果你想要向进程的 stdin 传输数据，你需要通过 <code class="docutils literal notranslate"><span class="pre">stdin=PIPE</span></code> 创建此 Popen 对象。类似的，要从结果元组获取任何非 <code class="docutils literal notranslate"><span class="pre">None</span></code> 值，你同样需要设置 <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code>。</p>
@@ -517,78 +582,78 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">内存里数据读取是缓冲的，所以如果数据尺寸过大或无限，不要使用此方法。</p>
+<p class="admonition-title">注解</p>
+<p>内存里数据读取是缓冲的，所以如果数据尺寸过大或无限，不要使用此方法。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="subprocess.Popen.send_signal">
-<code class="descclassname">Popen.</code><code class="descname">send_signal</code><span class="sig-paren">(</span><em>signal</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.send_signal" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">send_signal</code><span class="sig-paren">(</span><em class="sig-param">signal</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.send_signal" title="永久链接至目标">¶</a></dt>
 <dd><p>将信号 <em>signal</em> 发送给子进程。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">在 Windows， SIGTERM 是一个 <a class="reference internal" href="#subprocess.Popen.terminate" title="subprocess.Popen.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a> 的别名。 CTRL_C_EVENT 和 CTRL_BREAK_EVENT 可以被发送给以包含 <code class="docutils literal notranslate"><span class="pre">CREATE_NEW_PROCESS</span></code> 的 <em>creationflags</em> 形参启动的进程。</p>
+<p class="admonition-title">注解</p>
+<p>在 Windows， SIGTERM 是一个 <a class="reference internal" href="#subprocess.Popen.terminate" title="subprocess.Popen.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a> 的别名。 CTRL_C_EVENT 和 CTRL_BREAK_EVENT 可以被发送给以包含 <code class="docutils literal notranslate"><span class="pre">CREATE_NEW_PROCESS</span></code> 的 <em>creationflags</em> 形参启动的进程。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="subprocess.Popen.terminate">
-<code class="descclassname">Popen.</code><code class="descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.terminate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.terminate" title="永久链接至目标">¶</a></dt>
 <dd><p>停止子进程。在 Posix 操作系统上，此方法发送 SIGTERM。在 Windows，调用 Win32 API 函数 <code class="xref c c-func docutils literal notranslate"><span class="pre">TerminateProcess()</span></code>  来停止子进程。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="subprocess.Popen.kill">
-<code class="descclassname">Popen.</code><code class="descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.kill" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.Popen.kill" title="永久链接至目标">¶</a></dt>
 <dd><p>杀死子进程。在 Posix 操作系统上，此函数给子进程发送 SIGKILL 信号。在 Windows 上， <a class="reference internal" href="#subprocess.Popen.kill" title="subprocess.Popen.kill"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kill()</span></code></a> 是 <a class="reference internal" href="#subprocess.Popen.terminate" title="subprocess.Popen.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a> 的别名。</p>
 </dd></dl>
 
 <p>以下属性也是可用的：</p>
 <dl class="attribute">
 <dt id="subprocess.Popen.args">
-<code class="descclassname">Popen.</code><code class="descname">args</code><a class="headerlink" href="#subprocess.Popen.args" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">args</code><a class="headerlink" href="#subprocess.Popen.args" title="永久链接至目标">¶</a></dt>
 <dd><p><em>args</em> 参数传递给 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> -- 一个程序参数的序列或者一个简单字符串。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.Popen.stdin">
-<code class="descclassname">Popen.</code><code class="descname">stdin</code><a class="headerlink" href="#subprocess.Popen.stdin" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">stdin</code><a class="headerlink" href="#subprocess.Popen.stdin" title="永久链接至目标">¶</a></dt>
 <dd><p>如果 <em>stdin</em> 参数为 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>，此属性是一个类似 <a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 返回的可写的流对象。如果 <em>encoding</em> 或 <em>errors</em> 参数被指定或者 <em>universal_newlines</em> 参数为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则此流是一个文本流，否则是字节流。如果 <em>stdin</em> 参数非 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>， 此属性为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.Popen.stdout">
-<code class="descclassname">Popen.</code><code class="descname">stdout</code><a class="headerlink" href="#subprocess.Popen.stdout" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">stdout</code><a class="headerlink" href="#subprocess.Popen.stdout" title="永久链接至目标">¶</a></dt>
 <dd><p>如果 <em>stdout</em> 参数是 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>，此属性是一个类似 <a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 返回的可读流。从流中读取子进程提供的输出。如果 <em>encoding</em> 或 <em>errors</em> 参数被指定或者 <em>universal_newlines</em> 参数为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，此流为文本流，否则为字节流。如果 <em>stdout</em> 参数非 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>，此属性为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.Popen.stderr">
-<code class="descclassname">Popen.</code><code class="descname">stderr</code><a class="headerlink" href="#subprocess.Popen.stderr" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">stderr</code><a class="headerlink" href="#subprocess.Popen.stderr" title="永久链接至目标">¶</a></dt>
 <dd><p>如果 <em>stderr</em> 参数是 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>，此属性是一个类似 <a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 返回的可读流。从流中读取子进程提供的输出。如果 <em>encoding</em> 或 <em>errors</em> 参数被指定或者 <em>universal_newlines</em> 参数为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，此流为文本流，否则为字节流。如果 <em>stderr</em> 参数非 <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>，此属性为 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </dd></dl>
 
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">使用 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> 而非 <a class="reference internal" href="#subprocess.Popen.stdin" title="subprocess.Popen.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">.stdin.write</span></code></a>， <a class="reference internal" href="#subprocess.Popen.stdout" title="subprocess.Popen.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">.stdout.read</span></code></a> 或者 <a class="reference internal" href="#subprocess.Popen.stderr" title="subprocess.Popen.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">.stderr.read</span></code></a> 来避免由于任意其他 OS 管道缓冲区被子进程填满阻塞而导致的死锁。</p>
+<p class="admonition-title">警告</p>
+<p>使用 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> 而非 <a class="reference internal" href="#subprocess.Popen.stdin" title="subprocess.Popen.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">.stdin.write</span></code></a>， <a class="reference internal" href="#subprocess.Popen.stdout" title="subprocess.Popen.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">.stdout.read</span></code></a> 或者 <a class="reference internal" href="#subprocess.Popen.stderr" title="subprocess.Popen.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">.stderr.read</span></code></a> 来避免由于任意其他 OS 管道缓冲区被子进程填满阻塞而导致的死锁。</p>
 </div>
 <dl class="attribute">
 <dt id="subprocess.Popen.pid">
-<code class="descclassname">Popen.</code><code class="descname">pid</code><a class="headerlink" href="#subprocess.Popen.pid" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">pid</code><a class="headerlink" href="#subprocess.Popen.pid" title="永久链接至目标">¶</a></dt>
 <dd><p>子进程的进程号。</p>
 <p>注意如果你设置了 <em>shell</em> 参数为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则这是生成的子 shell 的进程号。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.Popen.returncode">
-<code class="descclassname">Popen.</code><code class="descname">returncode</code><a class="headerlink" href="#subprocess.Popen.returncode" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">Popen.</code><code class="sig-name descname">returncode</code><a class="headerlink" href="#subprocess.Popen.returncode" title="永久链接至目标">¶</a></dt>
 <dd><p>此进程的退出码，由 <a class="reference internal" href="#subprocess.Popen.poll" title="subprocess.Popen.poll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poll()</span></code></a> 和 <a class="reference internal" href="#subprocess.Popen.wait" title="subprocess.Popen.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> 设置（以及直接由 <a class="reference internal" href="#subprocess.Popen.communicate" title="subprocess.Popen.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> 设置）。一个 <code class="docutils literal notranslate"><span class="pre">None</span></code> 值 表示此进程仍未结束。</p>
 <p>一个负值 <code class="docutils literal notranslate"><span class="pre">-N</span></code> 表示子进程被信号 <code class="docutils literal notranslate"><span class="pre">N</span></code> 中断 (仅 POSIX).</p>
 </dd></dl>
@@ -599,16 +664,15 @@
 <p><a class="reference internal" href="#subprocess.STARTUPINFO" title="subprocess.STARTUPINFO"><code class="xref py py-class docutils literal notranslate"><span class="pre">STARTUPINFO</span></code></a> 类和以下常数仅在 Windows 有效。</p>
 <dl class="class">
 <dt id="subprocess.STARTUPINFO">
-<em class="property">class </em><code class="descclassname">subprocess.</code><code class="descname">STARTUPINFO</code><span class="sig-paren">(</span><em>*</em>, <em>dwFlags=0</em>, <em>hStdInput=None</em>, <em>hStdOutput=None</em>, <em>hStdError=None</em>, <em>wShowWindow=0</em>, <em>lpAttributeList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.STARTUPINFO" title="永久链接至目标">¶</a></dt>
-<dd><p>在 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 创建时部分支持 Windows 的 <a class="reference external" href="javascript:if(confirm('https://msdn.microsoft.com/en-us/library/ms686331(v=vs.85).aspx  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://msdn.microsoft.com/en-us/library/ms686331(v=vs.85).aspx'" tppabs="https://msdn.microsoft.com/en-us/library/ms686331(v=vs.85).aspx">STARTUPINFO</a> 结构。接下来的属性仅能通过关键词参数设置。</p>
+<em class="property">class </em><code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STARTUPINFO</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dwFlags=0</em>, <em class="sig-param">hStdInput=None</em>, <em class="sig-param">hStdOutput=None</em>, <em class="sig-param">hStdError=None</em>, <em class="sig-param">wShowWindow=0</em>, <em class="sig-param">lpAttributeList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.STARTUPINFO" title="永久链接至目标">¶</a></dt>
+<dd><p>在 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 创建时部分支持 Windows 的 <a class="reference external" href="javascript:if(confirm('https://msdn.microsoft.com/en-us/library/issue38410  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://msdn.microsoft.com/en-us/library/issue38410'" tppabs="https://msdn.microsoft.com/en-us/library/ms686331(v=vs.85).aspx">STARTUPINFO</a> 结构。接下来的属性仅能通过关键词参数设置。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.7 版更改: </span>仅关键词参数支持被加入。</p>
+<p><span class="versionmodified changed">在 3.7 版更改: </span>仅关键词参数支持被加入。</p>
 </div>
 <dl class="attribute">
 <dt id="subprocess.STARTUPINFO.dwFlags">
-<code class="descname">dwFlags</code><a class="headerlink" href="#subprocess.STARTUPINFO.dwFlags" title="永久链接至目标">¶</a></dt>
-<dd><p>A bit field that determines whether certain <a class="reference internal" href="#subprocess.STARTUPINFO" title="subprocess.STARTUPINFO"><code class="xref py py-class docutils literal notranslate"><span class="pre">STARTUPINFO</span></code></a>
-attributes are used when the process creates a window.</p>
+<code class="sig-name descname">dwFlags</code><a class="headerlink" href="#subprocess.STARTUPINFO.dwFlags" title="永久链接至目标">¶</a></dt>
+<dd><p>一个位域，用于确定属性 <a class="reference internal" href="#subprocess.STARTUPINFO" title="subprocess.STARTUPINFO"><code class="xref py py-class docutils literal notranslate"><span class="pre">STARTUPINFO</span></code></a> 是否在进程创建窗口时使用。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">si</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">STARTUPINFO</span><span class="p">()</span>
 <span class="n">si</span><span class="o">.</span><span class="n">dwFlags</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">STARTF_USESTDHANDLES</span> <span class="o">|</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">STARTF_USESHOWWINDOW</span>
 </pre></div>
@@ -617,109 +681,80 @@ attributes are used when the process creates a window.</p>
 
 <dl class="attribute">
 <dt id="subprocess.STARTUPINFO.hStdInput">
-<code class="descname">hStdInput</code><a class="headerlink" href="#subprocess.STARTUPINFO.hStdInput" title="永久链接至目标">¶</a></dt>
-<dd><p>If <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> specifies <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a>, this attribute
-is the standard input handle for the process. If
-<a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a> is not specified, the default for standard
-input is the keyboard buffer.</p>
+<code class="sig-name descname">hStdInput</code><a class="headerlink" href="#subprocess.STARTUPINFO.hStdInput" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> 被指定为 <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a>，此值是进程的标准输入句柄，如果 <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a> 未指定，则默认的标准输入是键盘缓冲区。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.STARTUPINFO.hStdOutput">
-<code class="descname">hStdOutput</code><a class="headerlink" href="#subprocess.STARTUPINFO.hStdOutput" title="永久链接至目标">¶</a></dt>
-<dd><p>If <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> specifies <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a>, this attribute
-is the standard output handle for the process. Otherwise, this attribute
-is ignored and the default for standard output is the console window's
-buffer.</p>
+<code class="sig-name descname">hStdOutput</code><a class="headerlink" href="#subprocess.STARTUPINFO.hStdOutput" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> 指定为 <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a>，此属性是进程的标准输出句柄。除此之外，此此属性将被忽略并且默认标准输出是控制台窗口缓冲区。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.STARTUPINFO.hStdError">
-<code class="descname">hStdError</code><a class="headerlink" href="#subprocess.STARTUPINFO.hStdError" title="永久链接至目标">¶</a></dt>
-<dd><p>If <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> specifies <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a>, this attribute
-is the standard error handle for the process. Otherwise, this attribute is
-ignored and the default for standard error is the console window's buffer.</p>
+<code class="sig-name descname">hStdError</code><a class="headerlink" href="#subprocess.STARTUPINFO.hStdError" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> 被指定为 <a class="reference internal" href="#subprocess.STARTF_USESTDHANDLES" title="subprocess.STARTF_USESTDHANDLES"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESTDHANDLES</span></code></a>，则此属性是进程的标准错误句柄。除此之外，此属性将被忽略并且默认标准错误为控制台窗口的缓冲区。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.STARTUPINFO.wShowWindow">
-<code class="descname">wShowWindow</code><a class="headerlink" href="#subprocess.STARTUPINFO.wShowWindow" title="永久链接至目标">¶</a></dt>
-<dd><p>If <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> specifies <a class="reference internal" href="#subprocess.STARTF_USESHOWWINDOW" title="subprocess.STARTF_USESHOWWINDOW"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESHOWWINDOW</span></code></a>, this attribute
-can be any of the values that can be specified in the <code class="docutils literal notranslate"><span class="pre">nCmdShow</span></code>
-parameter for the
-<a class="reference external" href="javascript:if(confirm('https://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx'" tppabs="https://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx">ShowWindow</a>
-function, except for <code class="docutils literal notranslate"><span class="pre">SW_SHOWDEFAULT</span></code>. Otherwise, this attribute is
-ignored.</p>
-<p><a class="reference internal" href="#subprocess.SW_HIDE" title="subprocess.SW_HIDE"><code class="xref py py-data docutils literal notranslate"><span class="pre">SW_HIDE</span></code></a> is provided for this attribute. It is used when
-<a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> is called with <code class="docutils literal notranslate"><span class="pre">shell=True</span></code>.</p>
+<code class="sig-name descname">wShowWindow</code><a class="headerlink" href="#subprocess.STARTUPINFO.wShowWindow" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <a class="reference internal" href="#subprocess.STARTUPINFO.dwFlags" title="subprocess.STARTUPINFO.dwFlags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dwFlags</span></code></a> 指定了 <a class="reference internal" href="#subprocess.STARTF_USESHOWWINDOW" title="subprocess.STARTF_USESHOWWINDOW"><code class="xref py py-data docutils literal notranslate"><span class="pre">STARTF_USESHOWWINDOW</span></code></a>，此属性可为能被指定为 函数 <a class="reference external" href="javascript:if(confirm('https://msdn.microsoft.com/en-us/library/issue39868  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://msdn.microsoft.com/en-us/library/issue39868'" tppabs="https://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx">ShowWindow</a> 的nCmdShow 的形参的任意值，除了 <code class="docutils literal notranslate"><span class="pre">SW_SHOWDEFAULT</span></code>。如此之外，此属性被忽略。</p>
+<p><a class="reference internal" href="#subprocess.SW_HIDE" title="subprocess.SW_HIDE"><code class="xref py py-data docutils literal notranslate"><span class="pre">SW_HIDE</span></code></a> 被提供给此属性。它在 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 由 <code class="docutils literal notranslate"><span class="pre">shell=True</span></code> 调用时使用。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="subprocess.STARTUPINFO.lpAttributeList">
-<code class="descname">lpAttributeList</code><a class="headerlink" href="#subprocess.STARTUPINFO.lpAttributeList" title="永久链接至目标">¶</a></dt>
-<dd><p>A dictionary of additional attributes for process creation as given in
-<code class="docutils literal notranslate"><span class="pre">STARTUPINFOEX</span></code>, see
-<a class="reference external" href="javascript:if(confirm('https://msdn.microsoft.com/en-us/library/windows/desktop/ms686880(v=vs.85).aspx  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://msdn.microsoft.com/en-us/library/windows/desktop/ms686880(v=vs.85).aspx'" tppabs="https://msdn.microsoft.com/en-us/library/windows/desktop/ms686880(v=vs.85).aspx">UpdateProcThreadAttribute</a>.</p>
-<p>Supported attributes:</p>
-<dl class="docutils">
-<dt><strong>handle_list</strong></dt>
-<dd><p class="first">Sequence of handles that will be inherited. <em>close_fds</em> must be true if
-non-empty.</p>
-<p>The handles must be temporarily made inheritable by
-<a class="reference internal" href="os.html#os.set_handle_inheritable" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.set_handle_inheritable" title="os.set_handle_inheritable"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.set_handle_inheritable()</span></code></a> when passed to the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a>
-constructor, else <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-class docutils literal notranslate"><span class="pre">OSError</span></code></a> will be raised with Windows error
-<code class="docutils literal notranslate"><span class="pre">ERROR_INVALID_PARAMETER</span></code> (87).</p>
-<div class="last admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">In a multithreaded process, use caution to avoid leaking handles
-that are marked inheritable when combining this feature with
-concurrent calls to other process creation functions that inherit
-all handles such as <a class="reference internal" href="os.html#os.system" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>.  This also applies to
-standard handle redirection, which temporarily creates inheritable
-handles.</p>
+<code class="sig-name descname">lpAttributeList</code><a class="headerlink" href="#subprocess.STARTUPINFO.lpAttributeList" title="永久链接至目标">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">STARTUPINFOEX</span></code> 给出的用于进程创建的额外属性字典，参阅 <a class="reference external" href="javascript:if(confirm('https://msdn.microsoft.com/en-us/library/windows/desktop/issue13790  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://msdn.microsoft.com/en-us/library/windows/desktop/issue13790'" tppabs="https://msdn.microsoft.com/en-us/library/windows/desktop/ms686880(v=vs.85).aspx">UpdateProcThreadAttribute</a>。</p>
+<p>支持的属性：</p>
+<dl>
+<dt><strong>handle_list</strong></dt><dd><p>将被继承的句柄的序列。如果非空， <em>close_fds</em> 必须为 true。</p>
+<p>当传递给 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> 构造函数时，这些句柄必须暂时地能被 <a class="reference internal" href="os.html#os.set_handle_inheritable" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.set_handle_inheritable" title="os.set_handle_inheritable"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.set_handle_inheritable()</span></code></a> 继承，否则 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-class docutils literal notranslate"><span class="pre">OSError</span></code></a> 将以 Windows error <code class="docutils literal notranslate"><span class="pre">ERROR_INVALID_PARAMETER</span></code> (87) 抛出。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>在多线程进程中，请谨慎使用，以便在将此功能与对继承所有句柄的其他进程创建函数（例如 <a class="reference internal" href="os.html#os.system" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>）的并发调用相结合时，避免泄漏标记为可继承的句柄。这也应用于临时性创建可继承句柄的标准句柄重定向。</p>
 </div>
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 </dd></dl>
 
 <div class="section" id="windows-constants">
-<h3>Windows Constants<a class="headerlink" href="#windows-constants" title="永久链接至标题">¶</a></h3>
-<p>The <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> module exposes the following constants.</p>
+<h3>Windows 常数<a class="headerlink" href="#windows-constants" title="永久链接至标题">¶</a></h3>
+<p><a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> 模块曝出以下常数。</p>
 <dl class="data">
 <dt id="subprocess.STD_INPUT_HANDLE">
-<code class="descclassname">subprocess.</code><code class="descname">STD_INPUT_HANDLE</code><a class="headerlink" href="#subprocess.STD_INPUT_HANDLE" title="永久链接至目标">¶</a></dt>
-<dd><p>The standard input device. Initially, this is the console input buffer,
-<code class="docutils literal notranslate"><span class="pre">CONIN$</span></code>.</p>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STD_INPUT_HANDLE</code><a class="headerlink" href="#subprocess.STD_INPUT_HANDLE" title="永久链接至目标">¶</a></dt>
+<dd><p>标准输入设备，这是控制台输入缓冲区 <code class="docutils literal notranslate"><span class="pre">CONIN$</span></code>。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.STD_OUTPUT_HANDLE">
-<code class="descclassname">subprocess.</code><code class="descname">STD_OUTPUT_HANDLE</code><a class="headerlink" href="#subprocess.STD_OUTPUT_HANDLE" title="永久链接至目标">¶</a></dt>
-<dd><p>The standard output device. Initially, this is the active console screen
-buffer, <code class="docutils literal notranslate"><span class="pre">CONOUT$</span></code>.</p>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STD_OUTPUT_HANDLE</code><a class="headerlink" href="#subprocess.STD_OUTPUT_HANDLE" title="永久链接至目标">¶</a></dt>
+<dd><p>标准输出设备。最初，这是活动控制台屏幕缓冲区 <code class="docutils literal notranslate"><span class="pre">CONOUT$</span></code>。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.STD_ERROR_HANDLE">
-<code class="descclassname">subprocess.</code><code class="descname">STD_ERROR_HANDLE</code><a class="headerlink" href="#subprocess.STD_ERROR_HANDLE" title="永久链接至目标">¶</a></dt>
-<dd><p>The standard error device. Initially, this is the active console screen
-buffer, <code class="docutils literal notranslate"><span class="pre">CONOUT$</span></code>.</p>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STD_ERROR_HANDLE</code><a class="headerlink" href="#subprocess.STD_ERROR_HANDLE" title="永久链接至目标">¶</a></dt>
+<dd><p>标准错误设备。最初，这是活动控制台屏幕缓冲区 <code class="docutils literal notranslate"><span class="pre">CONOUT$</span></code>。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.SW_HIDE">
-<code class="descclassname">subprocess.</code><code class="descname">SW_HIDE</code><a class="headerlink" href="#subprocess.SW_HIDE" title="永久链接至目标">¶</a></dt>
-<dd><p>Hides the window. Another window will be activated.</p>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">SW_HIDE</code><a class="headerlink" href="#subprocess.SW_HIDE" title="永久链接至目标">¶</a></dt>
+<dd><p>隐藏窗口。另一个窗口将被激活。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.STARTF_USESTDHANDLES">
-<code class="descclassname">subprocess.</code><code class="descname">STARTF_USESTDHANDLES</code><a class="headerlink" href="#subprocess.STARTF_USESTDHANDLES" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STARTF_USESTDHANDLES</code><a class="headerlink" href="#subprocess.STARTF_USESTDHANDLES" title="永久链接至目标">¶</a></dt>
 <dd><p>Specifies that the <a class="reference internal" href="#subprocess.STARTUPINFO.hStdInput" title="subprocess.STARTUPINFO.hStdInput"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STARTUPINFO.hStdInput</span></code></a>,
 <a class="reference internal" href="#subprocess.STARTUPINFO.hStdOutput" title="subprocess.STARTUPINFO.hStdOutput"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STARTUPINFO.hStdOutput</span></code></a>, and <a class="reference internal" href="#subprocess.STARTUPINFO.hStdError" title="subprocess.STARTUPINFO.hStdError"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STARTUPINFO.hStdError</span></code></a> attributes
 contain additional information.</p>
@@ -727,21 +762,21 @@ contain additional information.</p>
 
 <dl class="data">
 <dt id="subprocess.STARTF_USESHOWWINDOW">
-<code class="descclassname">subprocess.</code><code class="descname">STARTF_USESHOWWINDOW</code><a class="headerlink" href="#subprocess.STARTF_USESHOWWINDOW" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">STARTF_USESHOWWINDOW</code><a class="headerlink" href="#subprocess.STARTF_USESHOWWINDOW" title="永久链接至目标">¶</a></dt>
 <dd><p>Specifies that the <a class="reference internal" href="#subprocess.STARTUPINFO.wShowWindow" title="subprocess.STARTUPINFO.wShowWindow"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STARTUPINFO.wShowWindow</span></code></a> attribute contains
 additional information.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.CREATE_NEW_CONSOLE">
-<code class="descclassname">subprocess.</code><code class="descname">CREATE_NEW_CONSOLE</code><a class="headerlink" href="#subprocess.CREATE_NEW_CONSOLE" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CREATE_NEW_CONSOLE</code><a class="headerlink" href="#subprocess.CREATE_NEW_CONSOLE" title="永久链接至目标">¶</a></dt>
 <dd><p>The new process has a new console, instead of inheriting its parent's
 console (the default).</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.CREATE_NEW_PROCESS_GROUP">
-<code class="descclassname">subprocess.</code><code class="descname">CREATE_NEW_PROCESS_GROUP</code><a class="headerlink" href="#subprocess.CREATE_NEW_PROCESS_GROUP" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CREATE_NEW_PROCESS_GROUP</code><a class="headerlink" href="#subprocess.CREATE_NEW_PROCESS_GROUP" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 group will be created. This flag is necessary for using <a class="reference internal" href="os.html#os.kill" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.kill" title="os.kill"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.kill()</span></code></a>
 on the subprocess.</p>
@@ -750,57 +785,57 @@ on the subprocess.</p>
 
 <dl class="data">
 <dt id="subprocess.ABOVE_NORMAL_PRIORITY_CLASS">
-<code class="descclassname">subprocess.</code><code class="descname">ABOVE_NORMAL_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.ABOVE_NORMAL_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">ABOVE_NORMAL_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.ABOVE_NORMAL_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will have an above average priority.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.BELOW_NORMAL_PRIORITY_CLASS">
-<code class="descclassname">subprocess.</code><code class="descname">BELOW_NORMAL_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.BELOW_NORMAL_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">BELOW_NORMAL_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.BELOW_NORMAL_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will have a below average priority.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.HIGH_PRIORITY_CLASS">
-<code class="descclassname">subprocess.</code><code class="descname">HIGH_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.HIGH_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">HIGH_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.HIGH_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will have a high priority.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.IDLE_PRIORITY_CLASS">
-<code class="descclassname">subprocess.</code><code class="descname">IDLE_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.IDLE_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">IDLE_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.IDLE_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will have an idle (lowest) priority.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.NORMAL_PRIORITY_CLASS">
-<code class="descclassname">subprocess.</code><code class="descname">NORMAL_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.NORMAL_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">NORMAL_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.NORMAL_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will have an normal priority. (default)</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.REALTIME_PRIORITY_CLASS">
-<code class="descclassname">subprocess.</code><code class="descname">REALTIME_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.REALTIME_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">REALTIME_PRIORITY_CLASS</code><a class="headerlink" href="#subprocess.REALTIME_PRIORITY_CLASS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will have realtime priority.
 You should almost never use REALTIME_PRIORITY_CLASS, because this interrupts
@@ -808,51 +843,51 @@ system threads that manage mouse input, keyboard input, and background disk
 flushing. This class can be appropriate for applications that &quot;talk&quot; directly
 to hardware or that perform brief tasks that should have limited interruptions.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.CREATE_NO_WINDOW">
-<code class="descclassname">subprocess.</code><code class="descname">CREATE_NO_WINDOW</code><a class="headerlink" href="#subprocess.CREATE_NO_WINDOW" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CREATE_NO_WINDOW</code><a class="headerlink" href="#subprocess.CREATE_NO_WINDOW" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will not create a window.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.DETACHED_PROCESS">
-<code class="descclassname">subprocess.</code><code class="descname">DETACHED_PROCESS</code><a class="headerlink" href="#subprocess.DETACHED_PROCESS" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">DETACHED_PROCESS</code><a class="headerlink" href="#subprocess.DETACHED_PROCESS" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 will not inherit its parent's console.
 This value cannot be used with CREATE_NEW_CONSOLE.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.CREATE_DEFAULT_ERROR_MODE">
-<code class="descclassname">subprocess.</code><code class="descname">CREATE_DEFAULT_ERROR_MODE</code><a class="headerlink" href="#subprocess.CREATE_DEFAULT_ERROR_MODE" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CREATE_DEFAULT_ERROR_MODE</code><a class="headerlink" href="#subprocess.CREATE_DEFAULT_ERROR_MODE" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 does not inherit the error mode of the calling process. Instead, the new
 process gets the default error mode.
 This feature is particularly useful for multithreaded shell applications
 that run with hard errors disabled.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="subprocess.CREATE_BREAKAWAY_FROM_JOB">
-<code class="descclassname">subprocess.</code><code class="descname">CREATE_BREAKAWAY_FROM_JOB</code><a class="headerlink" href="#subprocess.CREATE_BREAKAWAY_FROM_JOB" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">CREATE_BREAKAWAY_FROM_JOB</code><a class="headerlink" href="#subprocess.CREATE_BREAKAWAY_FROM_JOB" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> <code class="docutils literal notranslate"><span class="pre">creationflags</span></code> parameter to specify that a new process
 is not associated with the job.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
@@ -865,65 +900,67 @@ subprocess. You can now use <a class="reference internal" href="#subprocess.run"
 calls these functions.</p>
 <dl class="function">
 <dt id="subprocess.call">
-<code class="descclassname">subprocess.</code><code class="descname">call</code><span class="sig-paren">(</span><em>args</em>, <em>*</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.call" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">call</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">*</em>, <em class="sig-param">stdin=None</em>, <em class="sig-param">stdout=None</em>, <em class="sig-param">stderr=None</em>, <em class="sig-param">shell=False</em>, <em class="sig-param">cwd=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.call" title="永久链接至目标">¶</a></dt>
 <dd><p>Run the command described by <em>args</em>.  Wait for command to complete, then
 return the <a class="reference internal" href="#subprocess.Popen.returncode" title="subprocess.Popen.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> attribute.</p>
 <p>Code needing to capture stdout or stderr should use <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> instead:</p>
-<blockquote>
-<div>run(...).returncode</div></blockquote>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">returncode</span>
+</pre></div>
+</div>
 <p>To suppress stdout or stderr, supply a value of <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a>.</p>
 <p>The arguments shown above are merely some common ones.
 The full function signature is the
 same as that of the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> constructor - this function passes all
 supplied arguments other than <em>timeout</em> directly through to that interface.</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">Do not use <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> or <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> with this
+<p class="admonition-title">注解</p>
+<p>Do not use <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> or <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> with this
 function.  The child process will block if it generates enough
 output to a pipe to fill up the OS pipe buffer as the pipes are
 not being read from.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="subprocess.check_call">
-<code class="descclassname">subprocess.</code><code class="descname">check_call</code><span class="sig-paren">(</span><em>args</em>, <em>*</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.check_call" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">check_call</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">*</em>, <em class="sig-param">stdin=None</em>, <em class="sig-param">stdout=None</em>, <em class="sig-param">stderr=None</em>, <em class="sig-param">shell=False</em>, <em class="sig-param">cwd=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.check_call" title="永久链接至目标">¶</a></dt>
 <dd><p>Run command with arguments.  Wait for command to complete. If the return
 code was zero then return, otherwise raise <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a>. The
 <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a> object will have the return code in the
 <a class="reference internal" href="#subprocess.CalledProcessError.returncode" title="subprocess.CalledProcessError.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> attribute.</p>
 <p>Code needing to capture stdout or stderr should use <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> instead:</p>
-<blockquote>
-<div>run(..., check=True)</div></blockquote>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>To suppress stdout or stderr, supply a value of <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a>.</p>
 <p>The arguments shown above are merely some common ones.
 The full function signature is the
 same as that of the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> constructor - this function passes all
 supplied arguments other than <em>timeout</em> directly through to that interface.</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">Do not use <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> or <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> with this
+<p class="admonition-title">注解</p>
+<p>Do not use <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> or <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> with this
 function.  The child process will block if it generates enough
 output to a pipe to fill up the OS pipe buffer as the pipes are
 not being read from.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="subprocess.check_output">
-<code class="descclassname">subprocess.</code><code class="descname">check_output</code><span class="sig-paren">(</span><em>args</em>, <em>*</em>, <em>stdin=None</em>, <em>stderr=None</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>universal_newlines=None</em>, <em>timeout=None</em>, <em>text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.check_output" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">check_output</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">*</em>, <em class="sig-param">stdin=None</em>, <em class="sig-param">stderr=None</em>, <em class="sig-param">shell=False</em>, <em class="sig-param">cwd=None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">errors=None</em>, <em class="sig-param">universal_newlines=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.check_output" title="永久链接至目标">¶</a></dt>
 <dd><p>Run command with arguments and return its output.</p>
 <p>If the return code was non-zero it raises a <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a>. The
 <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a> object will have the return code in the
 <a class="reference internal" href="#subprocess.CalledProcessError.returncode" title="subprocess.CalledProcessError.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> attribute and any output in the
 <a class="reference internal" href="#subprocess.CalledProcessError.output" title="subprocess.CalledProcessError.output"><code class="xref py py-attr docutils literal notranslate"><span class="pre">output</span></code></a> attribute.</p>
-<p>This is equivalent to:</p>
+<p>这相当于:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span>
 </pre></div>
 </div>
@@ -948,19 +985,19 @@ or <em>universal_newlines</em> to <code class="docutils literal notranslate"><sp
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">3.1 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span><em>timeout</em> 被添加</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Support for the <em>input</em> keyword argument was added.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>Support for the <em>input</em> keyword argument was added.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span><em>encoding</em> and <em>errors</em> were added.  See <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> for details.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span><em>encoding</em> and <em>errors</em> were added.  See <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> for details.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能: </span><em>text</em> 作为 <em>universal_newlines</em> 的一个更具可读性的别名被添加。</p>
+<p><span class="versionmodified added">3.7 新版功能: </span><em>text</em> 作为 <em>universal_newlines</em> 的一个更具可读性的别名被添加。</p>
 </div>
 </dd></dl>
 
@@ -969,20 +1006,20 @@ or <em>universal_newlines</em> to <code class="docutils literal notranslate"><sp
 <span id="subprocess-replacements"></span><h2>Replacing Older Functions with the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> Module<a class="headerlink" href="#replacing-older-functions-with-the-subprocess-module" title="永久链接至标题">¶</a></h2>
 <p>In this section, &quot;a becomes b&quot; means that b can be used as a replacement for a.</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
+<p class="admonition-title">注解</p>
 <p>All &quot;a&quot; functions in this section fail (more or less) silently if the
 executed program cannot be found; the &quot;b&quot; replacements raise <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>
 instead.</p>
-<p class="last">In addition, the replacements using <a class="reference internal" href="#subprocess.check_output" title="subprocess.check_output"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_output()</span></code></a> will fail with a
+<p>In addition, the replacements using <a class="reference internal" href="#subprocess.check_output" title="subprocess.check_output"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_output()</span></code></a> will fail with a
 <a class="reference internal" href="#subprocess.CalledProcessError" title="subprocess.CalledProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">CalledProcessError</span></code></a> if the requested operation produces a non-zero
 return code. The output is still available as the
 <a class="reference internal" href="#subprocess.CalledProcessError.output" title="subprocess.CalledProcessError.output"><code class="xref py py-attr docutils literal notranslate"><span class="pre">output</span></code></a> attribute of the raised exception.</p>
 </div>
 <p>In the following examples, we assume that the relevant functions have already
 been imported from the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> module.</p>
-<div class="section" id="replacing-bin-sh-shell-backquote">
-<h3>Replacing /bin/sh shell backquote<a class="headerlink" href="#replacing-bin-sh-shell-backquote" title="永久链接至标题">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="sb">`</span>mycmd myarg<span class="sb">`</span>
+<div class="section" id="replacing-bin-sh-shell-command-substitution">
+<h3>Replacing <strong class="program">/bin/sh</strong> shell command substitution<a class="headerlink" href="#replacing-bin-sh-shell-command-substitution" title="永久链接至标题">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>mycmd myarg<span class="k">)</span>
 </pre></div>
 </div>
 <p>becomes:</p>
@@ -992,7 +1029,7 @@ been imported from the <a class="reference internal" href="#module-subprocess" t
 </div>
 <div class="section" id="replacing-shell-pipeline">
 <h3>Replacing shell pipeline<a class="headerlink" href="#replacing-shell-pipeline" title="永久链接至标题">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="sb">`</span>dmesg <span class="p">|</span> grep hda<span class="sb">`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>dmesg <span class="p">|</span> grep hda<span class="k">)</span>
 </pre></div>
 </div>
 <p>becomes:</p>
@@ -1002,11 +1039,11 @@ been imported from the <a class="reference internal" href="#module-subprocess" t
 <span class="n">output</span> <span class="o">=</span> <span class="n">p2</span><span class="o">.</span><span class="n">communicate</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The p1.stdout.close() call after starting the p2 is important in order for p1
-to receive a SIGPIPE if p2 exits before p1.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">p1.stdout.close()</span></code> call after starting the p2 is important in order for
+p1 to receive a SIGPIPE if p2 exits before p1.</p>
 <p>Alternatively, for trusted input, the shell's own pipeline support may still
 be used directly:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="sb">`</span>dmesg <span class="p">|</span> grep hda<span class="sb">`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>dmesg <span class="p">|</span> grep hda<span class="k">)</span>
 </pre></div>
 </div>
 <p>becomes:</p>
@@ -1023,7 +1060,7 @@ be used directly:</p>
 </div>
 <p>注释:</p>
 <ul class="simple">
-<li>Calling the program through the shell is usually not required.</li>
+<li><p>Calling the program through the shell is usually not required.</p></li>
 </ul>
 <p>A more realistic example would look like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -1109,8 +1146,8 @@ be used directly:</p>
 <div class="section" id="replacing-functions-from-the-popen2-module">
 <h3>Replacing functions from the <code class="xref py py-mod docutils literal notranslate"><span class="pre">popen2</span></code> module<a class="headerlink" href="#replacing-functions-from-the-popen2-module" title="永久链接至标题">¶</a></h3>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">If the cmd argument to popen2 functions is a string, the command is executed
+<p class="admonition-title">注解</p>
+<p>If the cmd argument to popen2 functions is a string, the command is executed
 through /bin/sh.  If it is a list, the command is directly executed.</p>
 </div>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">child_stdout</span><span class="p">,</span> <span class="n">child_stdin</span><span class="p">)</span> <span class="o">=</span> <span class="n">popen2</span><span class="o">.</span><span class="n">popen2</span><span class="p">(</span><span class="s2">&quot;somestring&quot;</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
@@ -1130,12 +1167,12 @@ through /bin/sh.  If it is a list, the command is directly executed.</p>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">popen2.Popen3</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">popen2.Popen4</span></code> basically work as
 <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">subprocess.Popen</span></code></a>, except that:</p>
 <ul class="simple">
-<li><a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> raises an exception if the execution fails.</li>
-<li>The <em>capturestderr</em> argument is replaced with the <em>stderr</em> argument.</li>
-<li><code class="docutils literal notranslate"><span class="pre">stdin=PIPE</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> must be specified.</li>
-<li>popen2 closes all file descriptors by default, but you have to specify
+<li><p><a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> raises an exception if the execution fails.</p></li>
+<li><p>The <em>capturestderr</em> argument is replaced with the <em>stderr</em> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdin=PIPE</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> must be specified.</p></li>
+<li><p>popen2 closes all file descriptors by default, but you have to specify
 <code class="docutils literal notranslate"><span class="pre">close_fds=True</span></code> with <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> to guarantee this behavior on
-all platforms or past Python versions.</li>
+all platforms or past Python versions.</p></li>
 </ul>
 </div>
 </div>
@@ -1147,7 +1184,7 @@ none of the guarantees described above regarding security and exception
 handling consistency are valid for these functions.</p>
 <dl class="function">
 <dt id="subprocess.getstatusoutput">
-<code class="descclassname">subprocess.</code><code class="descname">getstatusoutput</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.getstatusoutput" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">getstatusoutput</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.getstatusoutput" title="永久链接至目标">¶</a></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">(exitcode,</span> <span class="pre">output)</span></code> of executing <em>cmd</em> in a shell.</p>
 <p>Execute the string <em>cmd</em> in a shell with <code class="xref py py-meth docutils literal notranslate"><span class="pre">Popen.check_output()</span></code> and
 return a 2-tuple <code class="docutils literal notranslate"><span class="pre">(exitcode,</span> <span class="pre">output)</span></code>. The locale encoding is used;
@@ -1167,7 +1204,7 @@ of subprocess.  Example:</p>
 </div>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: POSIX &amp; Windows.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3.4 版更改: </span>Windows support was added.</p>
+<p><span class="versionmodified changed">在 3.3.4 版更改: </span>Windows support was added.</p>
 <p>The function now returns (exitcode, output) instead of (status, output)
 as it did in Python 3.3.3 and earlier.  exitcode has the same value as
 <a class="reference internal" href="#subprocess.Popen.returncode" title="subprocess.Popen.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a>.</p>
@@ -1176,7 +1213,7 @@ as it did in Python 3.3.3 and earlier.  exitcode has the same value as
 
 <dl class="function">
 <dt id="subprocess.getoutput">
-<code class="descclassname">subprocess.</code><code class="descname">getoutput</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.getoutput" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">subprocess.</code><code class="sig-name descname">getoutput</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.getoutput" title="永久链接至目标">¶</a></dt>
 <dd><p>Return output (stdout and stderr) of executing <em>cmd</em> in a shell.</p>
 <p>Like <a class="reference internal" href="#subprocess.getstatusoutput" title="subprocess.getstatusoutput"><code class="xref py py-func docutils literal notranslate"><span class="pre">getstatusoutput()</span></code></a>, except the exit code is ignored and the return
 value is a string containing the command's output.  Example:</p>
@@ -1186,7 +1223,7 @@ value is a string containing the command's output.  Example:</p>
 </div>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">Availability</span></a>: POSIX &amp; Windows.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3.4 版更改: </span>Windows support added</p>
+<p><span class="versionmodified changed">在 3.3.4 版更改: </span>Windows support added</p>
 </div>
 </dd></dl>
 
@@ -1199,27 +1236,27 @@ value is a string containing the command's output.  Example:</p>
 using the following rules (which correspond to the rules used by the MS C
 runtime):</p>
 <ol class="arabic simple">
-<li>Arguments are delimited by white space, which is either a
-space or a tab.</li>
-<li>A string surrounded by double quotation marks is
+<li><p>Arguments are delimited by white space, which is either a
+space or a tab.</p></li>
+<li><p>A string surrounded by double quotation marks is
 interpreted as a single argument, regardless of white space
 contained within.  A quoted string can be embedded in an
-argument.</li>
-<li>A double quotation mark preceded by a backslash is
-interpreted as a literal double quotation mark.</li>
-<li>Backslashes are interpreted literally, unless they
-immediately precede a double quotation mark.</li>
-<li>If backslashes immediately precede a double quotation mark,
+argument.</p></li>
+<li><p>A double quotation mark preceded by a backslash is
+interpreted as a literal double quotation mark.</p></li>
+<li><p>Backslashes are interpreted literally, unless they
+immediately precede a double quotation mark.</p></li>
+<li><p>If backslashes immediately precede a double quotation mark,
 every pair of backslashes is interpreted as a literal
 backslash.  If the number of backslashes is odd, the last
 backslash escapes the next double quotation mark as
-described in rule 3.</li>
+described in rule 3.</p></li>
 </ol>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<dl class="last docutils">
-<dt><a class="reference internal" href="shlex.html#module-shlex" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html#module-shlex" title="shlex: Simple lexical analysis for Unix shell-like languages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shlex</span></code></a></dt>
-<dd>Module which provides function to parse and escape command lines.</dd>
+<p class="admonition-title">参见</p>
+<dl class="simple">
+<dt><a class="reference internal" href="shlex.html#module-shlex" tppabs="https://docs.python.org/zh-cn/3/library/shlex.html#module-shlex" title="shlex: Simple lexical analysis for Unix shell-like languages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shlex</span></code></a></dt><dd><p>Module which provides function to parse and escape command lines.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -1232,10 +1269,10 @@ described in rule 3.</li>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">subprocess</span></code> --- 子进程管理</a><ul>
-<li><a class="reference internal" href="#using-the-subprocess-module">使用 <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> 模块</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> --- 子进程管理</a><ul>
+<li><a class="reference internal" href="#using-the-subprocess-module">使用 <code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> 模块</a><ul>
 <li><a class="reference internal" href="#frequently-used-arguments">常用参数</a></li>
 <li><a class="reference internal" href="#popen-constructor">Popen 构造函数</a></li>
 <li><a class="reference internal" href="#exceptions">异常</a></li>
@@ -1244,17 +1281,17 @@ described in rule 3.</li>
 <li><a class="reference internal" href="#security-considerations">安全考量</a></li>
 <li><a class="reference internal" href="#popen-objects">Popen 对象</a></li>
 <li><a class="reference internal" href="#windows-popen-helpers">Windows Popen 助手</a><ul>
-<li><a class="reference internal" href="#windows-constants">Windows Constants</a></li>
+<li><a class="reference internal" href="#windows-constants">Windows 常数</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#older-high-level-api">Older high-level API</a></li>
-<li><a class="reference internal" href="#replacing-older-functions-with-the-subprocess-module">Replacing Older Functions with the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> Module</a><ul>
-<li><a class="reference internal" href="#replacing-bin-sh-shell-backquote">Replacing /bin/sh shell backquote</a></li>
+<li><a class="reference internal" href="#replacing-older-functions-with-the-subprocess-module">Replacing Older Functions with the <code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> Module</a><ul>
+<li><a class="reference internal" href="#replacing-bin-sh-shell-command-substitution">Replacing <strong class="program">/bin/sh</strong> shell command substitution</a></li>
 <li><a class="reference internal" href="#replacing-shell-pipeline">Replacing shell pipeline</a></li>
-<li><a class="reference internal" href="#replacing-os-system">Replacing <code class="docutils literal notranslate"><span class="pre">os.system()</span></code></a></li>
-<li><a class="reference internal" href="#replacing-the-os-spawn-family">Replacing the <code class="docutils literal notranslate"><span class="pre">os.spawn</span></code> family</a></li>
-<li><a class="reference internal" href="#replacing-os-popen-os-popen2-os-popen3">Replacing <code class="docutils literal notranslate"><span class="pre">os.popen()</span></code>, <code class="docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="docutils literal notranslate"><span class="pre">os.popen3()</span></code></a></li>
-<li><a class="reference internal" href="#replacing-functions-from-the-popen2-module">Replacing functions from the <code class="docutils literal notranslate"><span class="pre">popen2</span></code> module</a></li>
+<li><a class="reference internal" href="#replacing-os-system">Replacing <code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a></li>
+<li><a class="reference internal" href="#replacing-the-os-spawn-family">Replacing the <code class="xref py py-func docutils literal notranslate"><span class="pre">os.spawn</span></code> family</a></li>
+<li><a class="reference internal" href="#replacing-os-popen-os-popen2-os-popen3">Replacing <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen3()</span></code></a></li>
+<li><a class="reference internal" href="#replacing-functions-from-the-popen2-module">Replacing functions from the <code class="xref py py-mod docutils literal notranslate"><span class="pre">popen2</span></code> module</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#legacy-shell-invocation-functions">Legacy Shell Invocation Functions</a></li>
@@ -1268,16 +1305,16 @@ described in rule 3.</li>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="concurrent.futures.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">concurrent.futures</span></code> --- 启动并行任务</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code> --- 启动并行任务</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="sched.html" tppabs="https://docs.python.org/zh-cn/3/library/sched.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">sched</span></code> --- 事件调度器</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sched</span></code> --- 事件调度器</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/subprocess.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/subprocess.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/subprocess.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/subprocess.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/subprocess.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/subprocess.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -1302,14 +1339,17 @@ described in rule 3.</li>
         <li class="right" >
           <a href="concurrent.futures.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html" title="concurrent.futures --- 启动并行任务"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="concurrency.html" tppabs="https://docs.python.org/zh-cn/3/library/concurrency.html" >并发执行</a> &#187;</li>
@@ -1331,15 +1371,19 @@ described in rule 3.</li>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

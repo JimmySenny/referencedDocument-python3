@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>faulthandler --- Dump the Python traceback &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>faulthandler --- Dump the Python traceback &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
-    <link rel="next" title="pdb --- The Python Debugger" href="pdb.html" />
+    <link rel="next" title="pdb --- Pythonçš„è°ƒè¯•å™¨" href="pdb.html" />
     <link rel="prev" title="bdb --- Debugger framework" href="bdb.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/faulthandler.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- The Python Debugger"
+          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- Pythonçš„è°ƒè¯•å™¨"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="bdb.html" tppabs="https://docs.python.org/zh-cn/3/library/bdb.html" title="bdb --- Debugger framework"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="debug.html" tppabs="https://docs.python.org/zh-cn/3/library/debug.html" accesskey="U">è°ƒè¯•å’Œåˆ†æ</a> &#187;</li>
@@ -98,7 +106,7 @@
   <div class="section" id="module-faulthandler">
 <span id="faulthandler-dump-the-python-traceback"></span><h1><a class="reference internal" href="#module-faulthandler" title="faulthandler: Dump the Python traceback."><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code></a> --- Dump the Python traceback<a class="headerlink" href="#module-faulthandler" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 <hr class="docutils" />
 <p>This module contains functions to dump Python tracebacks explicitly, on a fault,
@@ -116,13 +124,13 @@ signal-safe functions (e.g. it cannot allocate memory on the heap). Because of
 this limitation traceback dumping is minimal compared to normal Python
 tracebacks:</p>
 <ul class="simple">
-<li>Only ASCII is supported. The <code class="docutils literal notranslate"><span class="pre">backslashreplace</span></code> error handler is used on
-encoding.</li>
-<li>Each string is limited to 500 characters.</li>
-<li>Only the filename, the function name and the line number are
-displayed. (no source code)</li>
-<li>It is limited to 100 frames and 100 threads.</li>
-<li>The order is reversed: the most recent call is shown first.</li>
+<li><p>Only ASCII is supported. The <code class="docutils literal notranslate"><span class="pre">backslashreplace</span></code> error handler is used on
+encoding.</p></li>
+<li><p>Each string is limited to 500 characters.</p></li>
+<li><p>Only the filename, the function name and the line number are
+displayed. (no source code)</p></li>
+<li><p>It is limited to 100 frames and 100 threads.</p></li>
+<li><p>The order is reversed: the most recent call is shown first.</p></li>
 </ul>
 <p>By default, the Python traceback is written to <a class="reference internal" href="sys.html#sys.stderr" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>. To see
 tracebacks, applications must be run in the terminal. A log file can
@@ -133,11 +141,11 @@ Python is deadlocked.</p>
 <h2>Dumping the traceback<a class="headerlink" href="#dumping-the-traceback" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="faulthandler.dump_traceback">
-<code class="descclassname">faulthandler.</code><code class="descname">dump_traceback</code><span class="sig-paren">(</span><em>file=sys.stderr</em>, <em>all_threads=True</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.dump_traceback" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">dump_traceback</code><span class="sig-paren">(</span><em class="sig-param">file=sys.stderr</em>, <em class="sig-param">all_threads=True</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.dump_traceback" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Dump the tracebacks of all threads into <em>file</em>. If <em>all_threads</em> is
 <code class="docutils literal notranslate"><span class="pre">False</span></code>, dump only the current thread.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
 </div>
 </dd></dl>
 
@@ -146,7 +154,7 @@ Python is deadlocked.</p>
 <h2>Fault handler state<a class="headerlink" href="#fault-handler-state" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="faulthandler.enable">
-<code class="descclassname">faulthandler.</code><code class="descname">enable</code><span class="sig-paren">(</span><em>file=sys.stderr</em>, <em>all_threads=True</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.enable" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">enable</code><span class="sig-paren">(</span><em class="sig-param">file=sys.stderr</em>, <em class="sig-param">all_threads=True</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.enable" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Enable the fault handler: install handlers for the <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGSEGV</span></code>,
 <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGFPE</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGABRT</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGBUS</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGILL</span></code>
 signals to dump the Python traceback. If <em>all_threads</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>,
@@ -155,23 +163,23 @@ thread.</p>
 <p>The <em>file</em> must be kept open until the fault handler is disabled: see
 <a class="reference internal" href="#faulthandler-fd"><span class="std std-ref">issue with file descriptors</span></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.6 ç‰ˆæ›´æ”¹: </span>On Windows, a handler for Windows exception is also installed.</p>
+<p><span class="versionmodified changed">åœ¨ 3.6 ç‰ˆæ›´æ”¹: </span>On Windows, a handler for Windows exception is also installed.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="faulthandler.disable">
-<code class="descclassname">faulthandler.</code><code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.disable" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.disable" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Disable the fault handler: uninstall the signal handlers installed by
 <a class="reference internal" href="#faulthandler.enable" title="faulthandler.enable"><code class="xref py py-func docutils literal notranslate"><span class="pre">enable()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="faulthandler.is_enabled">
-<code class="descclassname">faulthandler.</code><code class="descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.is_enabled" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.is_enabled" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Check if the fault handler is enabled.</p>
 </dd></dl>
 
@@ -180,7 +188,7 @@ thread.</p>
 <h2>Dumping the tracebacks after a timeout<a class="headerlink" href="#dumping-the-tracebacks-after-a-timeout" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="faulthandler.dump_traceback_later">
-<code class="descclassname">faulthandler.</code><code class="descname">dump_traceback_later</code><span class="sig-paren">(</span><em>timeout</em>, <em>repeat=False</em>, <em>file=sys.stderr</em>, <em>exit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.dump_traceback_later" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">dump_traceback_later</code><span class="sig-paren">(</span><em class="sig-param">timeout</em>, <em class="sig-param">repeat=False</em>, <em class="sig-param">file=sys.stderr</em>, <em class="sig-param">exit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.dump_traceback_later" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Dump the tracebacks of all threads, after a timeout of <em>timeout</em> seconds, or
 every <em>timeout</em> seconds if <em>repeat</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.  If <em>exit</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, call
 <code class="xref c c-func docutils literal notranslate"><span class="pre">_exit()</span></code> with status=1 after dumping the tracebacks.  (Note
@@ -191,16 +199,18 @@ sub-second resolution.</p>
 <p>The <em>file</em> must be kept open until the traceback is dumped or
 <a class="reference internal" href="#faulthandler.cancel_dump_traceback_later" title="faulthandler.cancel_dump_traceback_later"><code class="xref py py-func docutils literal notranslate"><span class="pre">cancel_dump_traceback_later()</span></code></a> is called: see <a class="reference internal" href="#faulthandler-fd"><span class="std std-ref">issue with file
 descriptors</span></a>.</p>
-<p>This function is implemented using a watchdog thread and therefore is not
-available if Python is compiled with threads disabled.</p>
+<p>This function is implemented using a watchdog thread.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
+<p><span class="versionmodified changed">åœ¨ 3.7 ç‰ˆæ›´æ”¹: </span>This function is now always available.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="faulthandler.cancel_dump_traceback_later">
-<code class="descclassname">faulthandler.</code><code class="descname">cancel_dump_traceback_later</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.cancel_dump_traceback_later" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">cancel_dump_traceback_later</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.cancel_dump_traceback_later" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Cancel the last call to <a class="reference internal" href="#faulthandler.dump_traceback_later" title="faulthandler.dump_traceback_later"><code class="xref py py-func docutils literal notranslate"><span class="pre">dump_traceback_later()</span></code></a>.</p>
 </dd></dl>
 
@@ -209,7 +219,7 @@ available if Python is compiled with threads disabled.</p>
 <h2>Dumping the traceback on a user signal<a class="headerlink" href="#dumping-the-traceback-on-a-user-signal" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="faulthandler.register">
-<code class="descclassname">faulthandler.</code><code class="descname">register</code><span class="sig-paren">(</span><em>signum</em>, <em>file=sys.stderr</em>, <em>all_threads=True</em>, <em>chain=False</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.register" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">signum</em>, <em class="sig-param">file=sys.stderr</em>, <em class="sig-param">all_threads=True</em>, <em class="sig-param">chain=False</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.register" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Register a user signal: install a handler for the <em>signum</em> signal to dump
 the traceback of all threads, or of the current thread if <em>all_threads</em> is
 <code class="docutils literal notranslate"><span class="pre">False</span></code>, into <em>file</em>. Call the previous handler if chain is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
@@ -217,13 +227,13 @@ the traceback of all threads, or of the current thread if <em>all_threads</em> i
 <a class="reference internal" href="#faulthandler.unregister" title="faulthandler.unregister"><code class="xref py py-func docutils literal notranslate"><span class="pre">unregister()</span></code></a>: see <a class="reference internal" href="#faulthandler-fd"><span class="std std-ref">issue with file descriptors</span></a>.</p>
 <p>Not available on Windows.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Added support for passing file descriptor to this function.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="faulthandler.unregister">
-<code class="descclassname">faulthandler.</code><code class="descname">unregister</code><span class="sig-paren">(</span><em>signum</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.unregister" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">faulthandler.</code><code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param">signum</em><span class="sig-paren">)</span><a class="headerlink" href="#faulthandler.unregister" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Unregister a user signal: uninstall the handler of the <em>signum</em> signal
 installed by <a class="reference internal" href="#faulthandler.register" title="faulthandler.register"><code class="xref py py-func docutils literal notranslate"><span class="pre">register()</span></code></a>. Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the signal was registered,
 <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
@@ -266,9 +276,9 @@ handler:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">faulthandler</span></code> --- Dump the Python traceback</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code> --- Dump the Python traceback</a><ul>
 <li><a class="reference internal" href="#dumping-the-traceback">Dumping the traceback</a></li>
 <li><a class="reference internal" href="#fault-handler-state">Fault handler state</a></li>
 <li><a class="reference internal" href="#dumping-the-tracebacks-after-a-timeout">Dumping the tracebacks after a timeout</a></li>
@@ -281,16 +291,16 @@ handler:</p>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="bdb.html" tppabs="https://docs.python.org/zh-cn/3/library/bdb.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">bdb</span></code> --- Debugger framework</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">bdb</span></code> --- Debugger framework</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">pdb</span></code> --- The Python Debugger</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code> --- Pythonçš„è°ƒè¯•å™¨</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/faulthandler.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/faulthandler.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/faulthandler.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/faulthandler.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/faulthandler.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/faulthandler.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -310,19 +320,22 @@ handler:</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- The Python Debugger"
+          <a href="pdb.html" tppabs="https://docs.python.org/zh-cn/3/library/pdb.html" title="pdb --- Pythonçš„è°ƒè¯•å™¨"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="bdb.html" tppabs="https://docs.python.org/zh-cn/3/library/bdb.html" title="bdb --- Debugger framework"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="debug.html" tppabs="https://docs.python.org/zh-cn/3/library/debug.html" >è°ƒè¯•å’Œåˆ†æ</a> &#187;</li>
@@ -344,15 +357,19 @@ handler:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

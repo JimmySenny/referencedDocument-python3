@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>email.iterators: Iterators &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>email.iterators: è¿­ä»£å™¨ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="json --- JSON ç¼–ç å’Œè§£ç å™¨" href="json.html" />
     <link rel="prev" title="email.utils: å…¶ä»–å·¥å…·" href="email.utils.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/email.iterators.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,18 +66,21 @@
         <li class="right" >
           <a href="email.utils.html" tppabs="https://docs.python.org/zh-cn/3/library/email.utils.html" title="email.utils: å…¶ä»–å·¥å…·"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
     <li class="right">
         
 
@@ -97,45 +105,31 @@
           <div class="body" role="main">
             
   <div class="section" id="module-email.iterators">
-<span id="email-iterators-iterators"></span><h1><a class="reference internal" href="#module-email.iterators" title="email.iterators: Iterate over a  message object tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.iterators</span></code></a>: Iterators<a class="headerlink" href="#module-email.iterators" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/email/iterators.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/email/iterators.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/email/iterators.py">Lib/email/iterators.py</a></p>
+<span id="email-iterators-iterators"></span><h1><a class="reference internal" href="#module-email.iterators" title="email.iterators: Iterate over a  message object tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.iterators</span></code></a>: è¿­ä»£å™¨<a class="headerlink" href="#module-email.iterators" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p><strong>æºä»£ç :</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/email/issue8806  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/email/issue8806'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/email/iterators.py">Lib/email/iterators.py</a></p>
 <hr class="docutils" />
-<p>Iterating over a message object tree is fairly easy with the
-<a class="reference internal" href="email.compat32-message.html#email.message.Message.walk" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message.walk" title="email.message.Message.walk"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Message.walk</span></code></a> method.  The
-<a class="reference internal" href="#module-email.iterators" title="email.iterators: Iterate over a  message object tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.iterators</span></code></a> module provides some useful higher level iterations over
-message object trees.</p>
+<p>é€šè¿‡ <a class="reference internal" href="email.compat32-message.html#email.message.Message.walk" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message.walk" title="email.message.Message.walk"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Message.walk</span></code></a> æ–¹æ³•æ¥è¿­ä»£æ¶ˆæ¯å¯¹è±¡æ ‘æ˜¯ç›¸å½“å®¹æ˜“çš„ã€‚ <a class="reference internal" href="#module-email.iterators" title="email.iterators: Iterate over a  message object tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.iterators</span></code></a> æ¨¡å—æä¾›äº†ä¸€äº›é€‚ç”¨äºæ¶ˆæ¯å¯¹è±¡æ ‘çš„é«˜å±‚çº§è¿­ä»£å™¨ã€‚</p>
 <dl class="function">
 <dt id="email.iterators.body_line_iterator">
-<code class="descclassname">email.iterators.</code><code class="descname">body_line_iterator</code><span class="sig-paren">(</span><em>msg</em>, <em>decode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators.body_line_iterator" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>This iterates over all the payloads in all the subparts of <em>msg</em>, returning the
-string payloads line-by-line.  It skips over all the subpart headers, and it
-skips over any subpart with a payload that isn't a Python string.  This is
-somewhat equivalent to reading the flat text representation of the message from
-a file using <a class="reference internal" href="io.html#io.TextIOBase.readline" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOBase.readline" title="io.TextIOBase.readline"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readline()</span></code></a>, skipping over all the
-intervening headers.</p>
-<p>Optional <em>decode</em> is passed through to <a class="reference internal" href="email.compat32-message.html#email.message.Message.get_payload" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message.get_payload" title="email.message.Message.get_payload"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Message.get_payload</span></code></a>.</p>
+<code class="sig-prename descclassname">email.iterators.</code><code class="sig-name descname">body_line_iterator</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">decode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators.body_line_iterator" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>æ­¤å‡½æ•°ä¼šè¿­ä»£ <em>msg</em> çš„æ‰€æœ‰å­éƒ¨åˆ†ä¸­çš„æ‰€æœ‰è½½è·ï¼Œé€è¡Œè¿”å›å­—ç¬¦ä¸²è½½è·ã€‚ å®ƒä¼šè·³è¿‡æ‰€æœ‰å­éƒ¨åˆ†çš„æ ‡å¤´ï¼Œå¹¶ä¸”å®ƒä¹Ÿä¼šè·³è¿‡ä»»ä½•åŒ…å«ä¸ä¸º Python å­—ç¬¦ä¸²çš„è½½è·çš„å­éƒ¨åˆ†ã€‚ è¿™åŸºæœ¬ä¸Šç­‰ä»·äºä½¿ç”¨ <a class="reference internal" href="io.html#io.TextIOBase.readline" tppabs="https://docs.python.org/zh-cn/3/library/io.html#io.TextIOBase.readline" title="io.TextIOBase.readline"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readline()</span></code></a> ä»ä¸€ä¸ªæ–‡ä»¶è¯»å–æ¶ˆæ¯çš„çº¯æ–‡æœ¬è¡¨ç¤ºå½¢å¼ï¼Œå¹¶è·³è¿‡æ‰€æœ‰ä¸­é—´çš„æ ‡å¤´ã€‚</p>
+<p>å¯é€‰çš„ <em>decode</em> ä¼šè¢«ä¼ é€’ç»™ <a class="reference internal" href="email.compat32-message.html#email.message.Message.get_payload" tppabs="https://docs.python.org/zh-cn/3/library/email.compat32-message.html#email.message.Message.get_payload" title="email.message.Message.get_payload"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Message.get_payload</span></code></a>ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="email.iterators.typed_subpart_iterator">
-<code class="descclassname">email.iterators.</code><code class="descname">typed_subpart_iterator</code><span class="sig-paren">(</span><em>msg</em>, <em>maintype='text'</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators.typed_subpart_iterator" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>This iterates over all the subparts of <em>msg</em>, returning only those subparts that
-match the MIME type specified by <em>maintype</em> and <em>subtype</em>.</p>
-<p>Note that <em>subtype</em> is optional; if omitted, then subpart MIME type matching is
-done only with the main type.  <em>maintype</em> is optional too; it defaults to
-<em class="mimetype">text</em>.</p>
-<p>Thus, by default <a class="reference internal" href="#email.iterators.typed_subpart_iterator" title="email.iterators.typed_subpart_iterator"><code class="xref py py-func docutils literal notranslate"><span class="pre">typed_subpart_iterator()</span></code></a> returns each subpart that has a
-MIME type of <em class="mimetype">text/*</em>.</p>
+<code class="sig-prename descclassname">email.iterators.</code><code class="sig-name descname">typed_subpart_iterator</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">maintype='text'</em>, <em class="sig-param">subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators.typed_subpart_iterator" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>æ­¤å‡½æ•°ä¼šè¿­ä»£ <em>msg</em> çš„æ‰€æœ‰å­éƒ¨åˆ†ï¼Œåªè¿”å›å…¶ä¸­ä¸ <em>maintype</em> å’Œ <em>subtype</em> æ‰€æŒ‡å®šçš„ MIME ç±»å‹ç›¸åŒ¹é…çš„å­éƒ¨åˆ†ã€‚</p>
+<p>è¯·æ³¨æ„ <em>subtype</em> æ˜¯å¯é€‰é¡¹ï¼›å¦‚æœçœç•¥ï¼Œåˆ™ä»…ä½¿ç”¨ä¸»ç±»å‹æ¥è¿›è¡Œå­éƒ¨åˆ† MIME ç±»å‹çš„åŒ¹é…ã€‚ <em>maintype</em> ä¹Ÿæ˜¯å¯é€‰é¡¹ï¼›å®ƒçš„é»˜è®¤å€¼ä¸º <em class="mimetype">text</em>ã€‚</p>
+<p>å› æ­¤ï¼Œåœ¨é»˜è®¤æƒ…å†µä¸‹ <a class="reference internal" href="#email.iterators.typed_subpart_iterator" title="email.iterators.typed_subpart_iterator"><code class="xref py py-func docutils literal notranslate"><span class="pre">typed_subpart_iterator()</span></code></a> ä¼šè¿”å›æ¯ä¸€ä¸ª MIME ç±»å‹ä¸º <em class="mimetype">text/*</em> çš„å­éƒ¨åˆ†ã€‚</p>
 </dd></dl>
 
-<p>The following function has been added as a useful debugging tool.  It should
-<em>not</em> be considered part of the supported public interface for the package.</p>
+<p>å¢åŠ äº†ä»¥ä¸‹å‡½æ•°ä½œä¸ºæœ‰ç”¨çš„è°ƒè¯•å·¥å…·ã€‚ å®ƒ <em>ä¸åº”å½“</em> è¢«è§†ä¸ºè¯¥åŒ…æ‰€æ”¯æŒçš„å…¬å…±æ¥å£çš„ç»„æˆéƒ¨åˆ†ã€‚</p>
 <dl class="function">
 <dt id="email.iterators._structure">
-<code class="descclassname">email.iterators.</code><code class="descname">_structure</code><span class="sig-paren">(</span><em>msg</em>, <em>fp=None</em>, <em>level=0</em>, <em>include_default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators._structure" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Prints an indented representation of the content types of the message object
-structure.  For example:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">message_from_file</span><span class="p">(</span><span class="n">somefile</span><span class="p">)</span>
+<code class="sig-prename descclassname">email.iterators.</code><code class="sig-name descname">_structure</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">fp=None</em>, <em class="sig-param">level=0</em>, <em class="sig-param">include_default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators._structure" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>æ‰“å°æ¶ˆæ¯å¯¹è±¡ç»“æ„çš„å†…å®¹ç±»å‹çš„ç¼©è¿›è¡¨ç¤ºå½¢å¼ã€‚ ä¾‹å¦‚:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">message_from_file</span><span class="p">(</span><span class="n">somefile</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_structure</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 <span class="go">multipart/mixed</span>
 <span class="go">    text/plain</span>
@@ -154,9 +148,7 @@ structure.  For example:</p>
 <span class="go">    text/plain</span>
 </pre></div>
 </div>
-<p>Optional <em>fp</em> is a file-like object to print the output to.  It must be
-suitable for Python's <a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> function.  <em>level</em> is used internally.
-<em>include_default</em>, if true, prints the default type as well.</p>
+<p>å¯é€‰é¡¹ <em>fp</em> æ˜¯ä¸€ä¸ªä½œä¸ºæ‰“å°è¾“å‡ºç›®æ ‡çš„æ–‡ä»¶ç±»å¯¹è±¡ã€‚ å®ƒå¿…é¡»é€‚ç”¨äº Python çš„ <a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> å‡½æ•°ã€‚ <em>level</em> æ˜¯ä¾›å†…éƒ¨ä½¿ç”¨çš„ã€‚ <em>include_default</em> å¦‚æœä¸ºçœŸå€¼ï¼Œåˆ™ä¼šåŒæ—¶æ‰“å°é»˜è®¤ç±»å‹ã€‚</p>
 </dd></dl>
 
 </div>
@@ -169,16 +161,16 @@ suitable for Python's <a class="reference internal" href="functions.html#print" 
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="email.utils.html" tppabs="https://docs.python.org/zh-cn/3/library/email.utils.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">email.utils</span></code>: å…¶ä»–å·¥å…·</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.utils</span></code>: å…¶ä»–å·¥å…·</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="json.html" tppabs="https://docs.python.org/zh-cn/3/library/json.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">json</span></code> --- JSON ç¼–ç å’Œè§£ç å™¨</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code> --- JSON ç¼–ç å’Œè§£ç å™¨</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/email.iterators.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/email.iterators.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/email.iterators.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/email.iterators.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/email.iterators.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/email.iterators.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -203,18 +195,21 @@ suitable for Python's <a class="reference internal" href="functions.html#print" 
         <li class="right" >
           <a href="email.utils.html" tppabs="https://docs.python.org/zh-cn/3/library/email.utils.html" title="email.utils: å…¶ä»–å·¥å…·"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="netdata.html" tppabs="https://docs.python.org/zh-cn/3/library/netdata.html" >äº’è”ç½‘æ•°æ®å¤„ç†</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="email.html" tppabs="https://docs.python.org/zh-cn/3/library/email.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code> --- ç”µå­é‚®ä»¶ä¸ MIME å¤„ç†åŒ…</a> &#187;</li>
     <li class="right">
         
 
@@ -233,15 +228,19 @@ suitable for Python's <a class="reference internal" href="functions.html#print" 
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

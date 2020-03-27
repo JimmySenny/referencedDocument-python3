@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>安装 Python 模块 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>安装 Python 模块 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="Python 常用指引" href="../howto/index.html" />
     <link rel="prev" title="分发 Python 模块" href="../distributing/index.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/installing/index.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="index-7.html" tppabs="https://docs.python.org/zh-cn/3/distributing/index.html" title="分发 Python 模块"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
     <li class="right">
         
@@ -95,41 +103,35 @@
             
   <div class="section" id="installing-python-modules">
 <span id="installing-index"></span><h1>安装 Python 模块<a class="headerlink" href="#installing-python-modules" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">电子邮箱:</th><td class="field-body"><a class="reference external" href="mailto:distutils-sig&#37;&#52;&#48;python&#46;org">distutils-sig<span>&#64;</span>python<span>&#46;</span>org</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">电子邮箱</dt>
+<dd class="field-odd"><p><a class="reference external" href="mailto:distutils-sig&#37;&#52;&#48;python&#46;org">distutils-sig<span>&#64;</span>python<span>&#46;</span>org</a></p>
+</dd>
+</dl>
 <p>作为一个流行的开源开发项目，Python拥有一个活跃的贡献者和用户支持社区，这些社区也可以让他们的软件可供其他Python开发人员在开源许可条款下使用。</p>
 <p>这允许Python用户有效地共享和协作，从其他人已经创建的解决方案中受益于常见（有时甚至是罕见的）问题，以及可以提供他们自己的解决方案。</p>
 <p>本指南涵盖了分发部分的流程。有关安装其他Python项目的指南，请参阅 <a class="reference internal" href="index-7.html#distributing-index" tppabs="https://docs.python.org/zh-cn/3/distributing/index.html#distributing-index"><span class="std std-ref">安装指南</span></a>。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">对于企业和其他机构用户，请注意许多组织都有自己的政策来使用和贡献开源软件。在使用Python提供的分发和安装工具时，请考虑这些政策。</p>
+<p class="admonition-title">注解</p>
+<p>对于企业和其他机构用户，请注意许多组织都有自己的政策来使用和贡献开源软件。在使用Python提供的分发和安装工具时，请考虑这些政策。</p>
 </div>
 <div class="section" id="key-terms">
 <h2>关键术语<a class="headerlink" href="#key-terms" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">pip</span></code> 是首选的安装程序。从Python 3.4开始，它默认包含在Python二进制安装程序中。</li>
-<li><em>virtual environment</em> 是一种半隔离的 Python 环境，允许为特定的应用安装各自的包，而不是安装到整个系统。</li>
-<li><code class="docutils literal notranslate"><span class="pre">venv</span></code> 是创建虚拟环境的标准工具，从 Python 3.3 开始成为 Python 的组成部分。 从 Python 3.4 开始，它会默认安装 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 到所创建的全部虚拟环境。</li>
-<li><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> 是 <code class="docutils literal notranslate"><span class="pre">venv</span></code> 的第三方替代（及其前身）。 它允许在 Python 3.4 之前的版本中使用虚拟环境，那些版本或是完全不提供 <code class="docutils literal notranslate"><span class="pre">venv</span></code>，或是不会自动安装 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 到所创建的虚拟环境。</li>
-<li><a class="reference external" href="javascript:if(confirm('https://pypi.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://pypi.org/'" tppabs="https://pypi.org/">Python Packaging Index</a> 是一个由 Python 用户向其他用户发布开源许可软件包的公共仓库。</li>
-<li><a class="reference external" href="javascript:if(confirm('https://www.pypa.io/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.pypa.io/'" tppabs="https://www.pypa.io/">Python Packaging Authority</a> 是负责标准打包工具以及相关元数据和文件格式标准维护与改进的开发人员和文档作者团队。 他们基于 <a class="reference external" href="javascript:if(confirm('https://github.com/pypa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/pypa'" tppabs="https://github.com/pypa">GitHub</a> 和 <a class="reference external" href="javascript:if(confirm('https://bitbucket.org/pypa/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://bitbucket.org/pypa/'" tppabs="https://bitbucket.org/pypa/">BitBucket</a> 这两个平台维护着各种工具、文档和问题追踪系统。</li>
-<li><code class="docutils literal notranslate"><span class="pre">distutils</span></code> 是最初的构建和分发系统，于 1998 年首次加入 Python 标准库。 虽然直接使用 <code class="docutils literal notranslate"><span class="pre">distutils</span></code> 的方式已被淘汰，它仍然是当前打包和分发架构的基础，而且它不仅仍然是标准库的一部分，这个名称还以其他方式存在（例如用于协调 Python 打包标准开发流程的邮件列表就以此命名）。</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> 是首选的安装程序。从Python 3.4开始，它默认包含在Python二进制安装程序中。</p></li>
+<li><p><em>virtual environment</em> 是一种半隔离的 Python 环境，允许为特定的应用安装各自的包，而不是安装到整个系统。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">venv</span></code> 是创建虚拟环境的标准工具，从 Python 3.3 开始成为 Python 的组成部分。 从 Python 3.4 开始，它会默认安装 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 到所创建的全部虚拟环境。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> 是 <code class="docutils literal notranslate"><span class="pre">venv</span></code> 的第三方替代（及其前身）。 它允许在 Python 3.4 之前的版本中使用虚拟环境，那些版本或是完全不提供 <code class="docutils literal notranslate"><span class="pre">venv</span></code>，或是不会自动安装 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 到所创建的虚拟环境。</p></li>
+<li><p><a class="reference external" href="javascript:if(confirm('https://pypi.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://pypi.org/'" tppabs="https://pypi.org/">Python Packaging Index</a> 是一个由 Python 用户向其他用户发布开源许可软件包的公共仓库。</p></li>
+<li><p><a class="reference external" href="javascript:if(confirm('https://www.pypa.io/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.pypa.io/'" tppabs="https://www.pypa.io/">Python Packaging Authority</a> 是负责标准打包工具以及相关元数据和文件格式标准维护与改进的开发人员和文档作者团队。 他们基于 <a class="reference external" href="javascript:if(confirm('https://github.com/pypa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/pypa'" tppabs="https://github.com/pypa">GitHub</a> 和 <a class="reference external" href="javascript:if(confirm('https://bitbucket.org/pypa/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://bitbucket.org/pypa/'" tppabs="https://bitbucket.org/pypa/">Bitbucket</a> 这两个平台维护着各种工具、文档和问题追踪系统。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distutils</span></code> 是最初的构建和分发系统，于 1998 年首次加入 Python 标准库。 虽然直接使用 <code class="docutils literal notranslate"><span class="pre">distutils</span></code> 的方式已被淘汰，它仍然是当前打包和分发架构的基础，而且它不仅仍然是标准库的一部分，这个名称还以其他方式存在（例如用于协调 Python 打包标准开发流程的邮件列表就以此命名）。</p></li>
 </ul>
-<div class="deprecated">
-<p><span class="versionmodified">3.6 版后已移除: </span><code class="docutils literal notranslate"><span class="pre">pyvenv</span></code> 是 Python 3.3 和 3.4 中创建虚拟环境的推荐工具，不过 <a class="reference external" href="javascript:if(confirm('https://docs.python.org/dev/whatsnew/3.6.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/dev/whatsnew/3.6.html#deprecated-features'" tppabs="https://docs.python.org/dev/whatsnew/3.6.html#deprecated-features">在 Python 3.6 中已弃用</a>。</p>
-</div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.5 版更改: </span>现在推荐使用 <code class="docutils literal notranslate"><span class="pre">venv</span></code> 来创建虚拟环境。</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>现在推荐使用 <code class="docutils literal notranslate"><span class="pre">venv</span></code> 来创建虚拟环境。</p>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/installing/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/installing/#creating-virtual-environments'" tppabs="https://packaging.python.org/installing/#creating-virtual-environments">Python 软件包用户指南：创建和使用虚拟环境</a></p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/installing/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/installing/#creating-virtual-environments'" tppabs="https://packaging.python.org/installing/#creating-virtual-environments">Python 软件包用户指南：创建和使用虚拟环境</a></p>
 </div>
 </div>
 <div class="section" id="basic-usage">
@@ -140,9 +142,9 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
+<p class="admonition-title">注解</p>
 <p>对于 POSIX 用户（包括 Mac OS X 和 Linux 用户）本指南中的示例假定使用了 <a class="reference internal" href="glossary.html#term-virtual-environment" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-virtual-environment"><span class="xref std std-term">virtual environment</span></a>。</p>
-<p class="last">对于 Windows 用户，本指南中的示例假定在安装 Python 时选择了修改系统 PATH 环境变量。</p>
+<p>对于 Windows 用户，本指南中的示例假定在安装 Python 时选择了修改系统 PATH 环境变量。</p>
 </div>
 <p>在命令行中指定一个准确或最小版本也是可以的。 当使用比较运算符例如 <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> 或其他某些可以被终端所解析的特殊字符时，包名称与版本号应当用双引号括起来:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m pip install SomePackage==1.0.4    # specific version
@@ -156,8 +158,8 @@ python -m pip install &quot;SomePackage&gt;=1.0.4&quot;  # minimum version
 <p>更多有关 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 及其功能的信息和资源可以在 <a class="reference external" href="javascript:if(confirm('https://packaging.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/'" tppabs="https://packaging.python.org/">Python 软件包用户指南</a> 中找到。</p>
 <p>虚拟环境的创建可使用 <a class="reference internal" href="venv.html#module-venv" tppabs="https://docs.python.org/zh-cn/3/library/venv.html#module-venv" title="venv: Creation of virtual environments."><code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code></a> 模块来完成。 向已激活虚拟环境安装软件包可使用上文所介绍的命令。</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/installing/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/installing/'" tppabs="https://packaging.python.org/installing/">Python 软件包用户指南：安装 Python 分发包</a></p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/installing/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/installing/'" tppabs="https://packaging.python.org/installing/">Python 软件包用户指南：安装 Python 分发包</a></p>
 </div>
 </div>
 <div class="section" id="how-do-i">
@@ -167,8 +169,8 @@ python -m pip install &quot;SomePackage&gt;=1.0.4&quot;  # minimum version
 <h3>... 在 Python 3.4 之前的 Python 版本中安装 <code class="docutils literal notranslate"><span class="pre">pip</span></code> ？<a class="headerlink" href="#install-pip-in-versions-of-python-prior-to-python-3-4" title="永久链接至标题">¶</a></h3>
 <p>Python 捆绑 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 是从 Python 3.4 才开始的。 对于更早的版本，<code class="docutils literal notranslate"><span class="pre">pip</span></code> 需要“引导安装bootstrapped”，具体说明参见 Python 软件包用户指南。</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/installing/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/installing/#requirements-for-installing-packages'" tppabs="https://packaging.python.org/installing/#requirements-for-installing-packages">Python 软件包用户指南：安装软件包的前提要求</a></p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/installing/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/installing/#requirements-for-installing-packages'" tppabs="https://packaging.python.org/installing/#requirements-for-installing-packages">Python 软件包用户指南：安装软件包的前提要求</a></p>
 </div>
 </div>
 <div class="section" id="install-packages-just-for-the-current-user">
@@ -179,8 +181,8 @@ python -m pip install &quot;SomePackage&gt;=1.0.4&quot;  # minimum version
 <h3>... 安装科学计算类 Python 软件包？<a class="headerlink" href="#install-scientific-python-packages" title="永久链接至标题">¶</a></h3>
 <p>许多科学计算类 Python 软件包都有复杂的二进制编译文件依赖，直接使用 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 安装目前并不太容易。 在当前情况下，通过 <a class="reference external" href="javascript:if(confirm('https://packaging.python.org/science/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/science/'" tppabs="https://packaging.python.org/science/">其他方式</a> 而非尝试用 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 安装这些软件包对用户来说通常会更容易。</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/science/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/science/'" tppabs="https://packaging.python.org/science/">Python 软件包用户指南：安装科学计算类软件包</a></p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/science/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/science/'" tppabs="https://packaging.python.org/science/">Python 软件包用户指南：安装科学计算类软件包</a></p>
 </div>
 </div>
 <div class="section" id="work-with-multiple-versions-of-python-installed-in-parallel">
@@ -223,8 +225,8 @@ py -3.4 -m pip install SomePackage  # specifically Python 3.4
 <p>随着对二进制码 <code class="docutils literal notranslate"><span class="pre">wheel</span></code> 格式支持的引入，以及通过 Python Packaging Index 至少发布 Windows 和 Mac OS X 版的 wheel 文件，预计此问题将逐步得到解决，因为用户将能够更频繁地安装预编译扩展，而不再需要自己编译它们。</p>
 <p>某些用来安装 <a class="reference external" href="javascript:if(confirm('https://packaging.python.org/science/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/science/'" tppabs="https://packaging.python.org/science/">科学计算类软件包</a> 的解决方案对于尚未提供预编译 <code class="docutils literal notranslate"><span class="pre">wheel</span></code> 文件的那些扩展模块来说，也有助于用户在无需进行本机编译的情况下获取二进制码扩展模块。</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/extensions/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/extensions/'" tppabs="https://packaging.python.org/extensions/">Python 软件包用户指南：二进制码扩展</a></p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://packaging.python.org/extensions/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://packaging.python.org/extensions/'" tppabs="https://packaging.python.org/extensions/">Python 软件包用户指南：二进制码扩展</a></p>
 </div>
 </div>
 </div>
@@ -236,7 +238,7 @@ py -3.4 -m pip install SomePackage  # specifically Python 3.4
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">安装 Python 模块</a><ul>
 <li><a class="reference internal" href="#key-terms">关键术语</a></li>
@@ -269,7 +271,7 @@ py -3.4 -m pip install SomePackage  # specifically Python 3.4
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/installing/index.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/installing/index.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/installing/index.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/installing/index.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/installing/index.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/installing/index.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -294,14 +296,17 @@ py -3.4 -m pip install SomePackage  # specifically Python 3.4
         <li class="right" >
           <a href="index-7.html" tppabs="https://docs.python.org/zh-cn/3/distributing/index.html" title="分发 Python 模块"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
     <li class="right">
         
@@ -321,15 +326,19 @@ py -3.4 -m pip install SomePackage  # specifically Python 3.4
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>è½¯ä»¶æ‰“åŒ…å’Œåˆ†å‘ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>è½¯ä»¶æ‰“åŒ…å’Œåˆ†å‘ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="distutils --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—" href="distutils.html" />
-    <link rel="prev" title="tracemalloc --- Trace memory allocations" href="tracemalloc.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="tracemalloc --- è·Ÿè¸ªå†…å­˜åˆ†é…" href="tracemalloc.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/distribution.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -59,16 +64,19 @@
           <a href="distutils.html" tppabs="https://docs.python.org/zh-cn/3/library/distutils.html" title="distutils --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="tracemalloc.html" tppabs="https://docs.python.org/zh-cn/3/library/tracemalloc.html" title="tracemalloc --- Trace memory allocations"
+          <a href="tracemalloc.html" tppabs="https://docs.python.org/zh-cn/3/library/tracemalloc.html" title="tracemalloc --- è·Ÿè¸ªå†…å­˜åˆ†é…"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" accesskey="U">Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -99,19 +107,19 @@
 <p>è¿™äº›åº“å¯å¸®åŠ©ä½ å‘å¸ƒå’Œå®‰è£… Python è½¯ä»¶ã€‚ è™½ç„¶è¿™äº›æ¨¡å—è®¾è®¡ä¸ºä¸`Python åŒ…ç´¢å¼• &lt;<a class="reference external" href="javascript:if(confirm('https://pypi.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://pypi.org/'" tppabs="https://pypi.org/">https://pypi.org</a>&gt;`__ç»“åˆä½¿ç”¨ï¼Œä½†å®ƒä»¬ä¹Ÿå¯ä»¥ä¸æœ¬åœ°ç´¢å¼•æœåŠ¡å™¨ä¸€èµ·ä½¿ç”¨ï¼Œæˆ–è€…æ ¹æœ¬ä¸ä½¿ç”¨ä»»ä½•ç´¢å¼•æœåŠ¡å™¨ã€‚</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html" tppabs="https://docs.python.org/zh-cn/3/library/distutils.html"><code class="docutils literal notranslate"><span class="pre">distutils</span></code> --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ensurepip.html" tppabs="https://docs.python.org/zh-cn/3/library/ensurepip.html"><code class="docutils literal notranslate"><span class="pre">ensurepip</span></code> --- Bootstrapping the <code class="docutils literal notranslate"><span class="pre">pip</span></code> installer</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="distutils.html" tppabs="https://docs.python.org/zh-cn/3/library/distutils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils</span></code> --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ensurepip.html" tppabs="https://docs.python.org/zh-cn/3/library/ensurepip.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensurepip</span></code> --- Bootstrapping the <code class="docutils literal notranslate"><span class="pre">pip</span></code> installer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ensurepip.html#command-line-interface" tppabs="https://docs.python.org/zh-cn/3/library/ensurepip.html#command-line-interface">Command line interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensurepip.html#module-api" tppabs="https://docs.python.org/zh-cn/3/library/ensurepip.html#module-api">Module API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html" tppabs="https://docs.python.org/zh-cn/3/library/venv.html"><code class="docutils literal notranslate"><span class="pre">venv</span></code> --- åˆ›å»ºè™šæ‹Ÿç¯å¢ƒ</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="venv.html" tppabs="https://docs.python.org/zh-cn/3/library/venv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code> --- åˆ›å»ºè™šæ‹Ÿç¯å¢ƒ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#creating-virtual-environments" tppabs="https://docs.python.org/zh-cn/3/library/venv.html#creating-virtual-environments">åˆ›å»ºè™šæ‹Ÿç¯å¢ƒ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#api" tppabs="https://docs.python.org/zh-cn/3/library/venv.html#api">API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#an-example-of-extending-envbuilder" tppabs="https://docs.python.org/zh-cn/3/library/venv.html#an-example-of-extending-envbuilder">ä¸€ä¸ªæ‰©å±• <code class="docutils literal notranslate"><span class="pre">EnvBuilder</span></code> çš„ä¾‹å­</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="zipapp.html" tppabs="https://docs.python.org/zh-cn/3/library/zipapp.html"><code class="docutils literal notranslate"><span class="pre">zipapp</span></code> --- Manage executable Python zip archives</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="zipapp.html" tppabs="https://docs.python.org/zh-cn/3/library/zipapp.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code> --- Manage executable Python zip archives</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="zipapp.html#basic-example" tppabs="https://docs.python.org/zh-cn/3/library/zipapp.html#basic-example">Basic Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zipapp.html#command-line-interface" tppabs="https://docs.python.org/zh-cn/3/library/zipapp.html#command-line-interface">å‘½ä»¤è¡Œç•Œé¢</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zipapp.html#python-api" tppabs="https://docs.python.org/zh-cn/3/library/zipapp.html#python-api">Python API</a></li>
@@ -137,16 +145,16 @@
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="tracemalloc.html" tppabs="https://docs.python.org/zh-cn/3/library/tracemalloc.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- Trace memory allocations</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- è·Ÿè¸ªå†…å­˜åˆ†é…</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="distutils.html" tppabs="https://docs.python.org/zh-cn/3/library/distutils.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">distutils</span></code> --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils</span></code> --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/distribution.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/distribution.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/distribution.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/distribution.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/distribution.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/distribution.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -169,16 +177,19 @@
           <a href="distutils.html" tppabs="https://docs.python.org/zh-cn/3/library/distutils.html" title="distutils --- æ„å»ºå’Œå®‰è£… Python æ¨¡å—"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="tracemalloc.html" tppabs="https://docs.python.org/zh-cn/3/library/tracemalloc.html" title="tracemalloc --- Trace memory allocations"
+          <a href="tracemalloc.html" tppabs="https://docs.python.org/zh-cn/3/library/tracemalloc.html" title="tracemalloc --- è·Ÿè¸ªå†…å­˜åˆ†é…"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
     <li class="right">
@@ -199,15 +210,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

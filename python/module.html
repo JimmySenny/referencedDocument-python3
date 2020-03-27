@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Module Objects &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>æ¨¡å—å¯¹è±¡ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="è¿­ä»£å™¨å¯¹è±¡" href="iterator.html" />
     <link rel="prev" title="æ–‡ä»¶å¯¹è±¡" href="file.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/c-api/module.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,17 +66,20 @@
         <li class="right" >
           <a href="file.html" tppabs="https://docs.python.org/zh-cn/3/c-api/file.html" title="æ–‡ä»¶å¯¹è±¡"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" accesskey="U">å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -96,57 +104,57 @@
           <div class="body" role="main">
             
   <div class="section" id="module-objects">
-<span id="moduleobjects"></span><h1>Module Objects<a class="headerlink" href="#module-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<span id="moduleobjects"></span><h1>æ¨¡å—å¯¹è±¡<a class="headerlink" href="#module-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
 <span class="target" id="index-0"></span><dl class="var">
 <dt id="c.PyModule_Type">
-<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="descname">PyModule_Type</code><a class="headerlink" href="#c.PyModule_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject">PyTypeObject</a> <code class="sig-name descname">PyModule_Type</code><a class="headerlink" href="#c.PyModule_Type" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p id="index-1">This instance of <a class="reference internal" href="type.html#c.PyTypeObject" tppabs="https://docs.python.org/zh-cn/3/c-api/type.html#c.PyTypeObject" title="PyTypeObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTypeObject</span></code></a> represents the Python module type.  This
 is exposed to Python programs as <code class="docutils literal notranslate"><span class="pre">types.ModuleType</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_Check">
-int <code class="descname">PyModule_Check</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_Check</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Check" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return true if <em>p</em> is a module object, or a subtype of a module object.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_CheckExact">
-int <code class="descname">PyModule_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_CheckExact" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_CheckExact</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_CheckExact" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return true if <em>p</em> is a module object, but not a subtype of
 <a class="reference internal" href="#c.PyModule_Type" title="PyModule_Type"><code class="xref c c-data docutils literal notranslate"><span class="pre">PyModule_Type</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_NewObject">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_NewObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_NewObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><em class="refcount">Return value: New reference.</em><p id="index-2">Return a new module object with the <a class="reference internal" href="import.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> attribute set to <em>name</em>.
-The module's <a class="reference internal" href="import.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>, <a class="reference internal" href="import.html#__package__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__package__" title="__package__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__package__</span></code></a>, and
-<a class="reference internal" href="import.html#__loader__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__loader__" title="__loader__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__loader__</span></code></a> attributes are filled in (all but <a class="reference internal" href="import.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> are set
-to <code class="docutils literal notranslate"><span class="pre">None</span></code>); the caller is responsible for providing a <a class="reference internal" href="import.html#__file__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__file__" title="__file__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__file__</span></code></a>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_NewObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_NewObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p id="index-2">Return a new module object with the <a class="reference internal" href="import-1.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> attribute set to <em>name</em>.
+The module's <a class="reference internal" href="import-1.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>, <a class="reference internal" href="import-1.html#__package__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__package__" title="__package__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__package__</span></code></a>, and
+<a class="reference internal" href="import-1.html#__loader__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__loader__" title="__loader__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__loader__</span></code></a> attributes are filled in (all but <a class="reference internal" href="import-1.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> are set
+to <code class="docutils literal notranslate"><span class="pre">None</span></code>); the caller is responsible for providing a <a class="reference internal" href="import-1.html#__file__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__file__" title="__file__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__file__</span></code></a>
 attribute.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.4 ç‰ˆæ›´æ”¹: </span><a class="reference internal" href="import.html#__package__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__package__" title="__package__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__package__</span></code></a> and <a class="reference internal" href="import.html#__loader__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__loader__" title="__loader__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__loader__</span></code></a> are set to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p><span class="versionmodified changed">åœ¨ 3.4 ç‰ˆæ›´æ”¹: </span><a class="reference internal" href="import-1.html#__package__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__package__" title="__package__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__package__</span></code></a> and <a class="reference internal" href="import-1.html#__loader__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__loader__" title="__loader__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__loader__</span></code></a> are set to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_New">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_New</code><span class="sig-paren">(</span>const char<em>&nbsp;*name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_New</code><span class="sig-paren">(</span>const char<em>Â *name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_New" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Similar to <a class="reference internal" href="#c.PyModule_NewObject" title="PyModule_NewObject"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_NewObject()</span></code></a>, but the name is a UTF-8 encoded
 string instead of a Unicode object.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_GetDict">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_GetDict</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetDict" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_GetDict</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetDict" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: Borrowed reference.</em><p id="index-3">Return the dictionary object that implements <em>module</em>'s namespace; this object
 is the same as the <a class="reference internal" href="stdtypes.html#object.__dict__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> attribute of the module object.
 If <em>module</em> is not a module object (or a subtype of a module object),
-<a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> is raised and <em>NULL</em> is returned.</p>
+<a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> is raised and <code class="docutils literal notranslate"><span class="pre">NULL</span></code> is returned.</p>
 <p>It is recommended extensions use other <code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_*()</span></code> and
 <code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_*()</span></code> functions rather than directly manipulate a module's
 <a class="reference internal" href="stdtypes.html#object.__dict__" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a>.</p>
@@ -154,55 +162,55 @@ If <em>module</em> is not a module object (or a subtype of a module object),
 
 <dl class="function">
 <dt id="c.PyModule_GetNameObject">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_GetNameObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetNameObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><em class="refcount">Return value: New reference.</em><p id="index-4">Return <em>module</em>'s <a class="reference internal" href="import.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> value.  If the module does not provide one,
-or if it is not a string, <a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> is raised and <em>NULL</em> is returned.</p>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_GetNameObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetNameObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><em class="refcount">Return value: New reference.</em><p id="index-4">Return <em>module</em>'s <a class="reference internal" href="import-1.html#__name__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__name__" title="__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> value.  If the module does not provide one,
+or if it is not a string, <a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> is raised and <code class="docutils literal notranslate"><span class="pre">NULL</span></code> is returned.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_GetName">
-const char* <code class="descname">PyModule_GetName</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetName" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+const char* <code class="sig-name descname">PyModule_GetName</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetName" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Similar to <a class="reference internal" href="#c.PyModule_GetNameObject" title="PyModule_GetNameObject"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetNameObject()</span></code></a> but return the name encoded to
 <code class="docutils literal notranslate"><span class="pre">'utf-8'</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_GetState">
-void* <code class="descname">PyModule_GetState</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetState" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void* <code class="sig-name descname">PyModule_GetState</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetState" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the &quot;state&quot; of the module, that is, a pointer to the block of memory
-allocated at module creation time, or <em>NULL</em>.  See
+allocated at module creation time, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.  See
 <a class="reference internal" href="#c.PyModuleDef.m_size" title="PyModuleDef.m_size"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyModuleDef.m_size</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_GetDef">
-<a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a>* <code class="descname">PyModule_GetDef</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetDef" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a>* <code class="sig-name descname">PyModule_GetDef</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetDef" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a pointer to the <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyModuleDef</span></code></a> struct from which the module was
-created, or <em>NULL</em> if the module wasn't created from a definition.</p>
+created, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if the module wasn't created from a definition.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_GetFilenameObject">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_GetFilenameObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetFilenameObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_GetFilenameObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetFilenameObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p id="index-5">Return the name of the file from which <em>module</em> was loaded using <em>module</em>'s
-<a class="reference internal" href="import.html#__file__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__file__" title="__file__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__file__</span></code></a> attribute.  If this is not defined, or if it is not a
-unicode string, raise <a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> and return <em>NULL</em>; otherwise return
+<a class="reference internal" href="import-1.html#__file__" tppabs="https://docs.python.org/zh-cn/3/reference/import.html#__file__" title="__file__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__file__</span></code></a> attribute.  If this is not defined, or if it is not a
+unicode string, raise <a class="reference internal" href="exceptions.html#SystemError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>; otherwise return
 a reference to a Unicode object.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_GetFilename">
-const char* <code class="descname">PyModule_GetFilename</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetFilename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+const char* <code class="sig-name descname">PyModule_GetFilename</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_GetFilename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Similar to <a class="reference internal" href="#c.PyModule_GetFilenameObject" title="PyModule_GetFilenameObject"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetFilenameObject()</span></code></a> but return the filename
 encoded to 'utf-8'.</p>
 <div class="deprecated">
-<p><span class="versionmodified">3.2 ç‰ˆåå·²ç§»é™¤: </span><a class="reference internal" href="#c.PyModule_GetFilename" title="PyModule_GetFilename"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetFilename()</span></code></a> raises <code class="xref c c-type docutils literal notranslate"><span class="pre">UnicodeEncodeError</span></code> on
+<p><span class="versionmodified deprecated">3.2 ç‰ˆåå·²ç§»é™¤: </span><a class="reference internal" href="#c.PyModule_GetFilename" title="PyModule_GetFilename"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetFilename()</span></code></a> raises <code class="xref c c-type docutils literal notranslate"><span class="pre">UnicodeEncodeError</span></code> on
 unencodable filenames, use <a class="reference internal" href="#c.PyModule_GetFilenameObject" title="PyModule_GetFilenameObject"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetFilenameObject()</span></code></a> instead.</p>
 </div>
 </dd></dl>
@@ -211,39 +219,39 @@ unencodable filenames, use <a class="reference internal" href="#c.PyModule_GetFi
 <span id="initializing-modules"></span><h2>Initializing C modules<a class="headerlink" href="#initializing-c-modules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>Modules objects are usually created from extension modules (shared libraries
 which export an initialization function), or compiled-in modules
-(where the initialization function is added using <a class="reference internal" href="import-1.html#c.PyImport_AppendInittab" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html#c.PyImport_AppendInittab" title="PyImport_AppendInittab"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyImport_AppendInittab()</span></code></a>).
-See <a class="reference internal" href="building.html#building" tppabs="https://docs.python.org/zh-cn/3/extending/building.html#building"><span class="std std-ref">Building C and C++ Extensions</span></a> or <a class="reference internal" href="embedding.html#extending-with-embedding" tppabs="https://docs.python.org/zh-cn/3/extending/embedding.html#extending-with-embedding"><span class="std std-ref">Extending Embedded Python</span></a> for details.</p>
+(where the initialization function is added using <a class="reference internal" href="import.html#c.PyImport_AppendInittab" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html#c.PyImport_AppendInittab" title="PyImport_AppendInittab"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyImport_AppendInittab()</span></code></a>).
+See <a class="reference internal" href="building.html#building" tppabs="https://docs.python.org/zh-cn/3/extending/building.html#building"><span class="std std-ref">æ„å»ºC/C++æ‰©å±•</span></a> or <a class="reference internal" href="embedding.html#extending-with-embedding" tppabs="https://docs.python.org/zh-cn/3/extending/embedding.html#extending-with-embedding"><span class="std std-ref">Extending Embedded Python</span></a> for details.</p>
 <p>The initialization function can either pass a module definition instance
 to <a class="reference internal" href="#c.PyModule_Create" title="PyModule_Create"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_Create()</span></code></a>, and return the resulting module object,
 or request &quot;multi-phase initialization&quot; by returning the definition struct itself.</p>
 <dl class="type">
 <dt id="c.PyModuleDef">
-<code class="descname">PyModuleDef</code><a class="headerlink" href="#c.PyModuleDef" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">PyModuleDef</code><a class="headerlink" href="#c.PyModuleDef" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The module definition struct, which holds all information needed to create
 a module object. There is usually only one statically initialized variable
 of this type for each module.</p>
 <dl class="member">
 <dt id="c.PyModuleDef.m_base">
-PyModuleDef_Base <code class="descname">m_base</code><a class="headerlink" href="#c.PyModuleDef.m_base" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+PyModuleDef_Base <code class="sig-name descname">m_base</code><a class="headerlink" href="#c.PyModuleDef.m_base" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Always initialize this member to <code class="xref py py-const docutils literal notranslate"><span class="pre">PyModuleDef_HEAD_INIT</span></code>.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_name">
-const char *<code class="descname">m_name</code><a class="headerlink" href="#c.PyModuleDef.m_name" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+const char *<code class="sig-name descname">m_name</code><a class="headerlink" href="#c.PyModuleDef.m_name" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Name for the new module.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_doc">
-const char *<code class="descname">m_doc</code><a class="headerlink" href="#c.PyModuleDef.m_doc" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+const char *<code class="sig-name descname">m_doc</code><a class="headerlink" href="#c.PyModuleDef.m_doc" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Docstring for the module; usually a docstring variable created with
 <code class="xref c c-func docutils literal notranslate"><span class="pre">PyDoc_STRVAR()</span></code> is used.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_size">
-Py_ssize_t <code class="descname">m_size</code><a class="headerlink" href="#c.PyModuleDef.m_size" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+Py_ssize_t <code class="sig-name descname">m_size</code><a class="headerlink" href="#c.PyModuleDef.m_size" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Module state may be kept in a per-module memory area that can be
 retrieved with <a class="reference internal" href="#c.PyModule_GetState" title="PyModule_GetState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetState()</span></code></a>, rather than in static globals.
 This makes modules safe for use in multiple sub-interpreters.</p>
@@ -261,24 +269,24 @@ initialization.</p>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_methods">
-<a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef">PyMethodDef</a>* <code class="descname">m_methods</code><a class="headerlink" href="#c.PyModuleDef.m_methods" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef">PyMethodDef</a>* <code class="sig-name descname">m_methods</code><a class="headerlink" href="#c.PyModuleDef.m_methods" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A pointer to a table of module-level functions, described by
-<a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMethodDef</span></code></a> values.  Can be <em>NULL</em> if no functions are present.</p>
+<a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMethodDef</span></code></a> values.  Can be <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if no functions are present.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_slots">
-<a class="reference internal" href="#c.PyModuleDef_Slot" title="PyModuleDef_Slot">PyModuleDef_Slot</a>* <code class="descname">m_slots</code><a class="headerlink" href="#c.PyModuleDef.m_slots" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="#c.PyModuleDef_Slot" title="PyModuleDef_Slot">PyModuleDef_Slot</a>* <code class="sig-name descname">m_slots</code><a class="headerlink" href="#c.PyModuleDef.m_slots" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>An array of slot definitions for multi-phase initialization, terminated by
 a <code class="docutils literal notranslate"><span class="pre">{0,</span> <span class="pre">NULL}</span></code> entry.
-When using single-phase initialization, <em>m_slots</em> must be <em>NULL</em>.</p>
+When using single-phase initialization, <em>m_slots</em> must be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Prior to version 3.5, this member was always set to <em>NULL</em>,
+<p><span class="versionmodified changed">åœ¨ 3.5 ç‰ˆæ›´æ”¹: </span>Prior to version 3.5, this member was always set to <code class="docutils literal notranslate"><span class="pre">NULL</span></code>,
 and was defined as:</p>
 <blockquote>
 <div><dl class="member">
 <dt id="c.PyModuleDef.m_reload">
-<a class="reference internal" href="gcsupport.html#c.inquiry" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html#c.inquiry" title="inquiry">inquiry</a> <code class="descname">m_reload</code><a class="headerlink" href="#c.PyModuleDef.m_reload" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="gcsupport.html#c.inquiry" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html#c.inquiry" title="inquiry">inquiry</a> <code class="sig-name descname">m_reload</code><a class="headerlink" href="#c.PyModuleDef.m_reload" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd></dd></dl>
 
 </div></blockquote>
@@ -287,26 +295,26 @@ and was defined as:</p>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_traverse">
-<a class="reference internal" href="gcsupport.html#c.traverseproc" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html#c.traverseproc" title="traverseproc">traverseproc</a> <code class="descname">m_traverse</code><a class="headerlink" href="#c.PyModuleDef.m_traverse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="gcsupport.html#c.traverseproc" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html#c.traverseproc" title="traverseproc">traverseproc</a> <code class="sig-name descname">m_traverse</code><a class="headerlink" href="#c.PyModuleDef.m_traverse" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A traversal function to call during GC traversal of the module object, or
-<em>NULL</em> if not needed. This function may be called before module state
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code> if not needed. This function may be called before module state
 is allocated (<a class="reference internal" href="#c.PyModule_GetState" title="PyModule_GetState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetState()</span></code></a> may return <cite>NULL</cite>),
 and before the <a class="reference internal" href="#c.Py_mod_exec" title="Py_mod_exec"><code class="xref c c-member docutils literal notranslate"><span class="pre">Py_mod_exec</span></code></a> function is executed.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_clear">
-<a class="reference internal" href="gcsupport.html#c.inquiry" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html#c.inquiry" title="inquiry">inquiry</a> <code class="descname">m_clear</code><a class="headerlink" href="#c.PyModuleDef.m_clear" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="gcsupport.html#c.inquiry" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html#c.inquiry" title="inquiry">inquiry</a> <code class="sig-name descname">m_clear</code><a class="headerlink" href="#c.PyModuleDef.m_clear" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A clear function to call during GC clearing of the module object, or
-<em>NULL</em> if not needed. This function may be called before module state
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code> if not needed. This function may be called before module state
 is allocated (<a class="reference internal" href="#c.PyModule_GetState" title="PyModule_GetState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetState()</span></code></a> may return <cite>NULL</cite>),
 and before the <a class="reference internal" href="#c.Py_mod_exec" title="Py_mod_exec"><code class="xref c c-member docutils literal notranslate"><span class="pre">Py_mod_exec</span></code></a> function is executed.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef.m_free">
-freefunc <code class="descname">m_free</code><a class="headerlink" href="#c.PyModuleDef.m_free" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>A function to call during deallocation of the module object, or <em>NULL</em> if
+<a class="reference internal" href="typeobj.html#c.freefunc" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#c.freefunc" title="freefunc">freefunc</a> <code class="sig-name descname">m_free</code><a class="headerlink" href="#c.PyModuleDef.m_free" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>A function to call during deallocation of the module object, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if
 not needed. This function may be called before module state
 is allocated (<a class="reference internal" href="#c.PyModule_GetState" title="PyModule_GetState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetState()</span></code></a> may return <cite>NULL</cite>),
 and before the <a class="reference internal" href="#c.Py_mod_exec" title="Py_mod_exec"><code class="xref c c-member docutils literal notranslate"><span class="pre">Py_mod_exec</span></code></a> function is executed.</p>
@@ -321,7 +329,7 @@ directly. This is referred to as &quot;single-phase initialization&quot;, and us
 of the following two module creation functions:</p>
 <dl class="function">
 <dt id="c.PyModule_Create">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_Create</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Create" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_Create</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Create" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Create a new module object, given the definition in <em>def</em>.  This behaves
 like <a class="reference internal" href="#c.PyModule_Create2" title="PyModule_Create2"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_Create2()</span></code></a> with <em>module_api_version</em> set to
 <code class="xref py py-const docutils literal notranslate"><span class="pre">PYTHON_API_VERSION</span></code>.</p>
@@ -329,13 +337,13 @@ like <a class="reference internal" href="#c.PyModule_Create2" title="PyModule_Cr
 
 <dl class="function">
 <dt id="c.PyModule_Create2">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModule_Create2</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em>, int<em>&nbsp;module_api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Create2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModule_Create2</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em>, int<em>Â module_api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Create2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Create a new module object, given the definition in <em>def</em>, assuming the
 API version <em>module_api_version</em>.  If that version does not match the version
 of the running interpreter, a <a class="reference internal" href="exceptions.html#RuntimeWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeWarning" title="RuntimeWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></a> is emitted.</p>
 <div class="admonition note">
-<p class="first admonition-title">æ³¨è§£</p>
-<p class="last">Most uses of this function should be using <a class="reference internal" href="#c.PyModule_Create" title="PyModule_Create"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_Create()</span></code></a>
+<p class="admonition-title">æ³¨è§£</p>
+<p>Most uses of this function should be using <a class="reference internal" href="#c.PyModule_Create" title="PyModule_Create"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_Create()</span></code></a>
 instead; only use this if you are sure you need it.</p>
 </div>
 </dd></dl>
@@ -369,12 +377,12 @@ are independent is typically enough to achieve this.</p>
 instance must be initialized with the following function:</p>
 <dl class="function">
 <dt id="c.PyModuleDef_Init">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyModuleDef_Init</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModuleDef_Init" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyModuleDef_Init</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModuleDef_Init" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: Borrowed reference.</em><p>Ensures a module definition is a properly initialized Python object that
 correctly reports its type and reference count.</p>
-<p>Returns <em>def</em> cast to <code class="docutils literal notranslate"><span class="pre">PyObject*</span></code>, or <em>NULL</em> if an error occurred.</p>
+<p>Returns <em>def</em> cast to <code class="docutils literal notranslate"><span class="pre">PyObject*</span></code>, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if an error occurred.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -382,21 +390,21 @@ correctly reports its type and reference count.</p>
 <code class="docutils literal notranslate"><span class="pre">PyModuleDef_Slot</span></code> structures:</p>
 <dl class="type">
 <dt id="c.PyModuleDef_Slot">
-<code class="descname">PyModuleDef_Slot</code><a class="headerlink" href="#c.PyModuleDef_Slot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">PyModuleDef_Slot</code><a class="headerlink" href="#c.PyModuleDef_Slot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><dl class="member">
 <dt id="c.PyModuleDef_Slot.slot">
-int <code class="descname">slot</code><a class="headerlink" href="#c.PyModuleDef_Slot.slot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">slot</code><a class="headerlink" href="#c.PyModuleDef_Slot.slot" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>A slot ID, chosen from the available values explained below.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.PyModuleDef_Slot.value">
-void* <code class="descname">value</code><a class="headerlink" href="#c.PyModuleDef_Slot.value" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+void* <code class="sig-name descname">value</code><a class="headerlink" href="#c.PyModuleDef_Slot.value" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Value of the slot, whose meaning depends on the slot ID.</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -404,18 +412,18 @@ void* <code class="descname">value</code><a class="headerlink" href="#c.PyModule
 <p>The available slot types are:</p>
 <dl class="var">
 <dt id="c.Py_mod_create">
-<code class="descname">Py_mod_create</code><a class="headerlink" href="#c.Py_mod_create" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">Py_mod_create</code><a class="headerlink" href="#c.Py_mod_create" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Specifies a function that is called to create the module object itself.
 The <em>value</em> pointer of this slot must point to a function of the signature:</p>
 <dl class="function">
 <dt id="c.create_module">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">create_module</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*spec</em>, <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.create_module" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">create_module</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *spec</em>, <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.create_module" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd></dd></dl>
 
 <p>The function receives a <a class="reference internal" href="importlib.html#importlib.machinery.ModuleSpec" tppabs="https://docs.python.org/zh-cn/3/library/importlib.html#importlib.machinery.ModuleSpec" title="importlib.machinery.ModuleSpec"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleSpec</span></code></a>
 instance, as defined in <span class="target" id="index-7"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0451  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0451'" tppabs="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a>, and the module definition.
 It should return a new module object, or set an error
-and return <em>NULL</em>.</p>
+and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 <p>This function should be kept minimal. In particular, it should not
 call arbitrary Python code, as trying to import the same module again may
 result in an infinite loop.</p>
@@ -430,20 +438,20 @@ names through symlinks, all while sharing a single module definition.</p>
 <a class="reference internal" href="#c.PyModule_Type" title="PyModule_Type"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyModule_Type</span></code></a>. Any type can be used, as long as it supports
 setting and getting import-related attributes.
 However, only <code class="docutils literal notranslate"><span class="pre">PyModule_Type</span></code> instances may be returned if the
-<code class="docutils literal notranslate"><span class="pre">PyModuleDef</span></code> has non-<em>NULL</em> <code class="docutils literal notranslate"><span class="pre">m_traverse</span></code>, <code class="docutils literal notranslate"><span class="pre">m_clear</span></code>,
+<code class="docutils literal notranslate"><span class="pre">PyModuleDef</span></code> has non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code> <code class="docutils literal notranslate"><span class="pre">m_traverse</span></code>, <code class="docutils literal notranslate"><span class="pre">m_clear</span></code>,
 <code class="docutils literal notranslate"><span class="pre">m_free</span></code>; non-zero <code class="docutils literal notranslate"><span class="pre">m_size</span></code>; or slots other than <code class="docutils literal notranslate"><span class="pre">Py_mod_create</span></code>.</p>
 </dd></dl>
 
 <dl class="var">
 <dt id="c.Py_mod_exec">
-<code class="descname">Py_mod_exec</code><a class="headerlink" href="#c.Py_mod_exec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">Py_mod_exec</code><a class="headerlink" href="#c.Py_mod_exec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Specifies a function that is called to <em>execute</em> the module.
 This is equivalent to executing the code of a Python module: typically,
 this function adds classes and constants to the module.
 The signature of the function is:</p>
 <dl class="function">
 <dt id="c.exec_module">
-int <code class="descname">exec_module</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>*<em>&nbsp;module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.exec_module" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">exec_module</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>*<em>Â module</em><span class="sig-paren">)</span><a class="headerlink" href="#c.exec_module" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd></dd></dl>
 
 <p>If multiple <code class="docutils literal notranslate"><span class="pre">Py_mod_exec</span></code> slots are specified, they are processed in the
@@ -460,57 +468,57 @@ objects dynamically. Note that both <code class="docutils literal notranslate"><
 <code class="docutils literal notranslate"><span class="pre">PyModule_ExecDef</span></code> must be called to fully initialize a module.</p>
 <dl class="function">
 <dt id="c.PyModule_FromDefAndSpec">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a> * <code class="descname">PyModule_FromDefAndSpec</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*spec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_FromDefAndSpec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a> * <code class="sig-name descname">PyModule_FromDefAndSpec</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *spec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_FromDefAndSpec" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Create a new module object, given the definition in <em>module</em> and the
 ModuleSpec <em>spec</em>.  This behaves like <a class="reference internal" href="#c.PyModule_FromDefAndSpec2" title="PyModule_FromDefAndSpec2"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_FromDefAndSpec2()</span></code></a>
 with <em>module_api_version</em> set to <code class="xref py py-const docutils literal notranslate"><span class="pre">PYTHON_API_VERSION</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_FromDefAndSpec2">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a> * <code class="descname">PyModule_FromDefAndSpec2</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*spec</em>, int<em>&nbsp;module_api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_FromDefAndSpec2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a> * <code class="sig-name descname">PyModule_FromDefAndSpec2</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *spec</em>, int<em>Â module_api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_FromDefAndSpec2" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Create a new module object, given the definition in <em>module</em> and the
 ModuleSpec <em>spec</em>, assuming the API version <em>module_api_version</em>.
 If that version does not match the version of the running interpreter,
 a <a class="reference internal" href="exceptions.html#RuntimeWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeWarning" title="RuntimeWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></a> is emitted.</p>
 <div class="admonition note">
-<p class="first admonition-title">æ³¨è§£</p>
-<p class="last">Most uses of this function should be using <a class="reference internal" href="#c.PyModule_FromDefAndSpec" title="PyModule_FromDefAndSpec"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_FromDefAndSpec()</span></code></a>
+<p class="admonition-title">æ³¨è§£</p>
+<p>Most uses of this function should be using <a class="reference internal" href="#c.PyModule_FromDefAndSpec" title="PyModule_FromDefAndSpec"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_FromDefAndSpec()</span></code></a>
 instead; only use this if you are sure you need it.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_ExecDef">
-int <code class="descname">PyModule_ExecDef</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_ExecDef" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_ExecDef</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_ExecDef" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Process any execution slots (<a class="reference internal" href="#c.Py_mod_exec" title="Py_mod_exec"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_mod_exec</span></code></a>) given in <em>def</em>.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_SetDocString">
-int <code class="descname">PyModule_SetDocString</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, const char<em>&nbsp;*docstring</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_SetDocString" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_SetDocString</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, const char<em>Â *docstring</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_SetDocString" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Set the docstring for <em>module</em> to <em>docstring</em>.
 This function is called automatically when creating a module from
 <code class="docutils literal notranslate"><span class="pre">PyModuleDef</span></code>, using either <code class="docutils literal notranslate"><span class="pre">PyModule_Create</span></code> or
 <code class="docutils literal notranslate"><span class="pre">PyModule_FromDefAndSpec</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_AddFunctions">
-int <code class="descname">PyModule_AddFunctions</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, <a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef">PyMethodDef</a><em>&nbsp;*functions</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddFunctions" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Add the functions from the <em>NULL</em> terminated <em>functions</em> array to <em>module</em>.
+int <code class="sig-name descname">PyModule_AddFunctions</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, <a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef">PyMethodDef</a><em>Â *functions</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddFunctions" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Add the functions from the <code class="docutils literal notranslate"><span class="pre">NULL</span></code> terminated <em>functions</em> array to <em>module</em>.
 Refer to the <a class="reference internal" href="structures.html#c.PyMethodDef" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyMethodDef" title="PyMethodDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMethodDef</span></code></a> documentation for details on individual
 entries (due to the lack of a shared module namespace, module level
 &quot;functions&quot; implemented in C typically receive the module as their first
@@ -519,7 +527,7 @@ This function is called automatically when creating a module from
 <code class="docutils literal notranslate"><span class="pre">PyModuleDef</span></code>, using either <code class="docutils literal notranslate"><span class="pre">PyModule_Create</span></code> or
 <code class="docutils literal notranslate"><span class="pre">PyModule_FromDefAndSpec</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.5 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -532,15 +540,30 @@ initialization), can use the following functions to help initialize the module
 state:</p>
 <dl class="function">
 <dt id="c.PyModule_AddObject">
-int <code class="descname">PyModule_AddObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, const char<em>&nbsp;*name</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_AddObject</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, const char<em>Â *name</em>, <a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddObject" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Add an object to <em>module</em> as <em>name</em>.  This is a convenience function which can
 be used from the module's initialization function.  This steals a reference to
-<em>value</em>.  Return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error, <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.</p>
+<em>value</em> on success.  Return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error, <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.</p>
+<div class="admonition note">
+<p class="admonition-title">æ³¨è§£</p>
+<p>Unlike other functions that steal references, <code class="docutils literal notranslate"><span class="pre">PyModule_AddObject()</span></code> only
+decrements the reference count of <em>value</em> <strong>on success</strong>.</p>
+<p>This means that its return value must be checked, and calling code must
+<a class="reference internal" href="refcounting.html#c.Py_DECREF" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a> <em>value</em> manually on error. Example usage:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Py_INCREF</span><span class="p">(</span><span class="n">spam</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">PyModule_AddObject</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s">&quot;spam&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">module</span><span class="p">);</span>
+    <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">spam</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_AddIntConstant">
-int <code class="descname">PyModule_AddIntConstant</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, const char<em>&nbsp;*name</em>, long<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddIntConstant" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_AddIntConstant</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, const char<em>Â *name</em>, long<em>Â value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddIntConstant" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Add an integer constant to <em>module</em> as <em>name</em>.  This convenience function can be
 used from the module's initialization function. Return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error, <code class="docutils literal notranslate"><span class="pre">0</span></code> on
 success.</p>
@@ -548,15 +571,15 @@ success.</p>
 
 <dl class="function">
 <dt id="c.PyModule_AddStringConstant">
-int <code class="descname">PyModule_AddStringConstant</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, const char<em>&nbsp;*name</em>, const char<em>&nbsp;*value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddStringConstant" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_AddStringConstant</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, const char<em>Â *name</em>, const char<em>Â *value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddStringConstant" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Add a string constant to <em>module</em> as <em>name</em>.  This convenience function can be
 used from the module's initialization function.  The string <em>value</em> must be
-<em>NULL</em>-terminated.  Return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error, <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.</p>
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code>-terminated.  Return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error, <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyModule_AddIntMacro">
-int <code class="descname">PyModule_AddIntMacro</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, macro<span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddIntMacro" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_AddIntMacro</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, macro<span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddIntMacro" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Add an int constant to <em>module</em>. The name and the value are taken from
 <em>macro</em>. For example <code class="docutils literal notranslate"><span class="pre">PyModule_AddIntMacro(module,</span> <span class="pre">AF_INET)</span></code> adds the int
 constant <em>AF_INET</em> with the value of <em>AF_INET</em> to <em>module</em>.
@@ -565,7 +588,7 @@ Return <code class="docutils literal notranslate"><span class="pre">-1</span></c
 
 <dl class="function">
 <dt id="c.PyModule_AddStringMacro">
-int <code class="descname">PyModule_AddStringMacro</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, macro<span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddStringMacro" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyModule_AddStringMacro</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, macro<span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddStringMacro" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Add a string constant to <em>module</em>.</p>
 </dd></dl>
 
@@ -580,30 +603,39 @@ retrieved later with only a reference to the module definition.</p>
 since multiple such modules can be created from a single definition.</p>
 <dl class="function">
 <dt id="c.PyState_FindModule">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyState_FindModule</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyState_FindModule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyState_FindModule</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyState_FindModule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><em class="refcount">Return value: Borrowed reference.</em><p>Returns the module object that was created from <em>def</em> for the current interpreter.
 This method requires that the module object has been attached to the interpreter state with
 <a class="reference internal" href="#c.PyState_AddModule" title="PyState_AddModule"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyState_AddModule()</span></code></a> beforehand. In case the corresponding module object is not
-found or has not been attached to the interpreter state yet, it returns <em>NULL</em>.</p>
+found or has not been attached to the interpreter state yet, it returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyState_AddModule">
-int <code class="descname">PyState_AddModule</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>&nbsp;*module</em>, <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyState_AddModule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+int <code class="sig-name descname">PyState_AddModule</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a><em>Â *module</em>, <a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyState_AddModule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Attaches the module object passed to the function to the interpreter state. This allows
 the module object to be accessible via <a class="reference internal" href="#c.PyState_FindModule" title="PyState_FindModule"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyState_FindModule()</span></code></a>.</p>
 <p>Only effective on modules created using single-phase initialization.</p>
+<p>Python calls <code class="docutils literal notranslate"><span class="pre">PyState_AddModule</span></code> automatically after importing a module,
+so it is unnecessary (but harmless) to call it from module initialization
+code. An explicit call is needed only if the module's own init code
+subsequently calls <code class="docutils literal notranslate"><span class="pre">PyState_FindModule</span></code>.
+The function is mainly intended for implementing alternative import
+mechanisms (either by calling it directly, or by referring to its
+implementation for details of the required state updates).</p>
+<p>Return 0 on success or -1 on failure.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyState_RemoveModule">
-int <code class="descname">PyState_RemoveModule</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>&nbsp;*def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyState_RemoveModule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>Removes the module object created from <em>def</em> from the interpreter state.</p>
+int <code class="sig-name descname">PyState_RemoveModule</code><span class="sig-paren">(</span><a class="reference internal" href="#c.PyModuleDef" title="PyModuleDef">PyModuleDef</a><em>Â *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyState_RemoveModule" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>Removes the module object created from <em>def</em> from the interpreter state.
+Return 0 on success or -1 on failure.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.3 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
@@ -616,9 +648,9 @@ int <code class="descname">PyState_RemoveModule</code><span class="sig-paren">(<
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Module Objects</a><ul>
+<li><a class="reference internal" href="#">æ¨¡å—å¯¹è±¡</a><ul>
 <li><a class="reference internal" href="#initializing-c-modules">Initializing C modules</a><ul>
 <li><a class="reference internal" href="#single-phase-initialization">Single-phase initialization</a></li>
 <li><a class="reference internal" href="#multi-phase-initialization">Multi-phase initialization</a></li>
@@ -642,7 +674,7 @@ int <code class="descname">PyState_RemoveModule</code><span class="sig-paren">(<
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/module.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/module.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/module.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/c-api/module.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/c-api/module.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/c-api/module.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -667,17 +699,20 @@ int <code class="descname">PyState_RemoveModule</code><span class="sig-paren">(<
         <li class="right" >
           <a href="file.html" tppabs="https://docs.python.org/zh-cn/3/c-api/file.html" title="æ–‡ä»¶å¯¹è±¡"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API å‚è€ƒæ‰‹å†Œ</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >Concrete Objects Layer</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html" >å…·ä½“çš„å¯¹è±¡å±‚</a> &#187;</li>
     <li class="right">
         
 
@@ -696,15 +731,19 @@ int <code class="descname">PyState_RemoveModule</code><span class="sig-paren">(<
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

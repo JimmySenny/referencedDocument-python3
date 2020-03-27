@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>概述 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>概述 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="稳定的应用程序二进制接口" href="stable.html" />
     <link rel="prev" title="Python/C API 参考手册" href="index.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/c-api/intro.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" title="Python/C API 参考手册"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" accesskey="U">Python/C API 参考手册</a> &#187;</li>
     <li class="right">
@@ -112,92 +120,116 @@
 </div>
 <p>这意味着包含以下标准头文件：<code class="docutils literal notranslate"><span class="pre">&lt;stdio.h&gt;</span></code>，<code class="docutils literal notranslate"><span class="pre">&lt;string.h&gt;</span></code>，<code class="docutils literal notranslate"><span class="pre">&lt;errno.h&gt;</span></code>，<code class="docutils literal notranslate"><span class="pre">&lt;limits.h&gt;</span></code>，<code class="docutils literal notranslate"><span class="pre">&lt;assert.h&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;stdlib.h&gt;</span></code>（如果可用）。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
+<p class="admonition-title">注解</p>
 <p>由于 Python 可能会定义一些能在某些系统上影响标准头文件的预处理器定义，因此在包含任何标准头文件之前，你 <em>必须</em> 先包含 <code class="file docutils literal notranslate"><span class="pre">Python.h</span></code>。</p>
-<p class="last">It is recommended to always define <code class="docutils literal notranslate"><span class="pre">PY_SSIZE_T_CLEAN</span></code> before including
+<p>It is recommended to always define <code class="docutils literal notranslate"><span class="pre">PY_SSIZE_T_CLEAN</span></code> before including
 <code class="docutils literal notranslate"><span class="pre">Python.h</span></code>.  See <a class="reference internal" href="arg.html#arg-parsing" tppabs="https://docs.python.org/zh-cn/3/c-api/arg.html#arg-parsing"><span class="std std-ref">语句解释及变量编译</span></a> for a description of this macro.</p>
 </div>
 <p>Python.h 所定义的全部用户可见名称（由包含的标准头文件所定义的除外）都带有前缀 <code class="docutils literal notranslate"><span class="pre">Py</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">_Py</span></code>。以 <code class="docutils literal notranslate"><span class="pre">_Py</span></code> 打头的名称是供 Python 实现内部使用的，不应被扩展编写者使用。结构成员名称没有保留前缀。</p>
-<p><strong>重要：</strong>  用户代码永远不应该定义以 <code class="docutils literal notranslate"><span class="pre">Py`</span> <span class="pre">`或</span> <span class="pre">``_Py</span></code> 开头的名称。这会使读者感到困惑，并危及用户代码对未来 Python 版本的可移植性，因为未来版本可能会额外定义以这些前缀之一开头的名称。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>User code should never define names that begin with <code class="docutils literal notranslate"><span class="pre">Py</span></code> or <code class="docutils literal notranslate"><span class="pre">_Py</span></code>. This
+confuses the reader, and jeopardizes the portability of the user code to
+future Python versions, which may define additional names beginning with one
+of these prefixes.</p>
+</div>
 <p>头文件通常会与 Python 一起安装。在 Unix 上，它们位于以下目录：<code class="file docutils literal notranslate"><em><span class="pre">prefix</span></em><span class="pre">/include/pythonversion/</span></code> 和 <code class="file docutils literal notranslate"><em><span class="pre">exec_prefix</span></em><span class="pre">/include/pythonversion/</span></code>，其中 <span class="target" id="index-37"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">prefix</span></code> 和 <span class="target" id="index-38"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">exec_prefix</span></code> 是由向 Python 的 <strong class="program">configure</strong> 脚本传入的对应形参所定义，而 <em>version</em> 则为 <code class="docutils literal notranslate"><span class="pre">'%d.%d'</span> <span class="pre">%</span> <span class="pre">sys.version_info[:2]</span></code>。在 Windows 上，头文件安装于 <code class="file docutils literal notranslate"><em><span class="pre">prefix</span></em><span class="pre">/include</span></code>，其中 <span class="target" id="index-39"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">prefix</span></code> 是向安装程序指定的安装目录。</p>
 <p>要包含头文件，请将两个目录（如果不同）都放到你所用编译器的包含搜索路径中。请 <em>不要</em> 将父目录放入搜索路径然后使用 <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;pythonX.Y/Python.h&gt;</span></code>；这将使得多平台编译不可用，因为 <span class="target" id="index-40"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">prefix</span></code> 下平台无关的头文件需要包含来自 <span class="target" id="index-41"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">exec_prefix</span></code> 下特定平台的头文件。</p>
-<p>C++ 用户应该注意，尽管 API 是完全使用 C 来定义的，但头文件正确地将入口点声明为 <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">&quot;C&quot;</span></code>，因此 API 在 C++ 中使用此 API 不必再做任何特殊处理。</p>
+<p>C++ users should note that although the API is defined entirely using C, the
+header files properly declare the entry points to be <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">&quot;C&quot;</span></code>. As a result,
+there is no need to do anything special to use the API from C++.</p>
 </div>
 <div class="section" id="useful-macros">
 <h2>有用的宏<a class="headerlink" href="#useful-macros" title="永久链接至标题">¶</a></h2>
 <p>Python 头文件中定义了一些有用的宏。许多是在靠近它们被使用的地方定义的（例如 <a class="reference internal" href="none.html#c.Py_RETURN_NONE" tppabs="https://docs.python.org/zh-cn/3/c-api/none.html#c.Py_RETURN_NONE" title="Py_RETURN_NONE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_RETURN_NONE</span></code></a>）。其他更为通用的则定义在这里。这里所显示的并不是一个完整的列表。</p>
 <dl class="macro">
 <dt id="c.Py_UNREACHABLE">
-<code class="descname">Py_UNREACHABLE</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_UNREACHABLE" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_UNREACHABLE</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_UNREACHABLE" title="永久链接至目标">¶</a></dt>
 <dd><p>这个可以在你有一个不打算被触及的代码路径时使用。例如，当一个 <code class="docutils literal notranslate"><span class="pre">switch</span></code> 语句中所有可能的值都已被 <code class="docutils literal notranslate"><span class="pre">case</span></code> 子句覆盖了，就可将其用在 <code class="docutils literal notranslate"><span class="pre">default:</span></code> 子句中。当你非常想在某个位置放一个 <code class="docutils literal notranslate"><span class="pre">assert(0)</span></code> 或 <code class="docutils literal notranslate"><span class="pre">abort()</span></code> 调用时也可以用这个。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 新版功能.</span></p>
+<p><span class="versionmodified added">3.7 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_ABS">
-<code class="descname">Py_ABS</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_ABS" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_ABS</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_ABS" title="永久链接至目标">¶</a></dt>
 <dd><p>返回 <code class="docutils literal notranslate"><span class="pre">x</span></code> 的绝对值。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_MIN">
-<code class="descname">Py_MIN</code><span class="sig-paren">(</span>x, y<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MIN" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_MIN</code><span class="sig-paren">(</span>x, y<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MIN" title="永久链接至目标">¶</a></dt>
 <dd><p>返回 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y</span></code> 当中的最小值。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_MAX">
-<code class="descname">Py_MAX</code><span class="sig-paren">(</span>x, y<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MAX" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_MAX</code><span class="sig-paren">(</span>x, y<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MAX" title="永久链接至目标">¶</a></dt>
 <dd><p>返回 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y</span></code> 当中的最大值。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.3 新版功能.</span></p>
+<p><span class="versionmodified added">3.3 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_STRINGIFY">
-<code class="descname">Py_STRINGIFY</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_STRINGIFY" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_STRINGIFY</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_STRINGIFY" title="永久链接至目标">¶</a></dt>
 <dd><p>将 <code class="docutils literal notranslate"><span class="pre">x</span></code> 转换为 C 字符串。例如 <code class="docutils literal notranslate"><span class="pre">Py_STRINGIFY(123)</span></code> 返回 <code class="docutils literal notranslate"><span class="pre">&quot;123&quot;</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 新版功能.</span></p>
+<p><span class="versionmodified added">3.4 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_MEMBER_SIZE">
-<code class="descname">Py_MEMBER_SIZE</code><span class="sig-paren">(</span>type, member<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MEMBER_SIZE" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_MEMBER_SIZE</code><span class="sig-paren">(</span>type, member<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MEMBER_SIZE" title="永久链接至目标">¶</a></dt>
 <dd><p>返回结构 (<code class="docutils literal notranslate"><span class="pre">type</span></code>) <code class="docutils literal notranslate"><span class="pre">member</span></code> 的大小，以字节表示。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.6 新版功能.</span></p>
+<p><span class="versionmodified added">3.6 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_CHARMASK">
-<code class="descname">Py_CHARMASK</code><span class="sig-paren">(</span>c<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_CHARMASK" title="永久链接至目标">¶</a></dt>
+<code class="sig-name descname">Py_CHARMASK</code><span class="sig-paren">(</span>c<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_CHARMASK" title="永久链接至目标">¶</a></dt>
 <dd><p>参数必须为 [-128, 127] 或 [0, 255] 范围内的字符或整数类型。这个宏将 <code class="docutils literal notranslate"><span class="pre">c</span></code> 强制转换为 <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code> 返回。</p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_GETENV">
-<code class="descname">Py_GETENV</code><span class="sig-paren">(</span>s<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_GETENV" title="永久链接至目标">¶</a></dt>
-<dd><p>类似 <code class="docutils literal notranslate"><span class="pre">getenv(s)</span></code> 但会在以下情况返回 <em>NULL</em> ：如果通过命令行传入 <a class="reference internal" href="cmdline.html#cmdoption-e" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-e"><code class="xref std std-option docutils literal notranslate"><span class="pre">-E</span></code></a> （即设置了 <code class="docutils literal notranslate"><span class="pre">Py_IgnoreEnvironmentFlag</span></code> ）。</p>
+<code class="sig-name descname">Py_GETENV</code><span class="sig-paren">(</span>s<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_GETENV" title="永久链接至目标">¶</a></dt>
+<dd><p>Like <code class="docutils literal notranslate"><span class="pre">getenv(s)</span></code>, but returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if <a class="reference internal" href="cmdline.html#cmdoption-e" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-e"><code class="xref std std-option docutils literal notranslate"><span class="pre">-E</span></code></a> was passed on the
+command line (i.e. if <code class="docutils literal notranslate"><span class="pre">Py_IgnoreEnvironmentFlag</span></code> is set).</p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.Py_UNUSED">
-<code class="descname">Py_UNUSED</code><span class="sig-paren">(</span>arg<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_UNUSED" title="永久链接至目标">¶</a></dt>
-<dd><p>这个可用于函数定义中未使用的参数以隐藏编译器警告，例如 <code class="docutils literal notranslate"><span class="pre">PyObject*</span> <span class="pre">func(PyObject</span> <span class="pre">*Py_UNUSED(ignored))</span></code>。</p>
+<code class="sig-name descname">Py_UNUSED</code><span class="sig-paren">(</span>arg<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_UNUSED" title="永久链接至目标">¶</a></dt>
+<dd><p>Use this for unused arguments in a function definition to silence compiler
+warnings. Example: <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">func(int</span> <span class="pre">a,</span> <span class="pre">int</span> <span class="pre">Py_UNUSED(b))</span> <span class="pre">{</span> <span class="pre">return</span> <span class="pre">a;</span> <span class="pre">}</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 新版功能.</span></p>
+<p><span class="versionmodified added">3.4 新版功能.</span></p>
+</div>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.Py_DEPRECATED">
+<code class="sig-name descname">Py_DEPRECATED</code><span class="sig-paren">(</span>version<span class="sig-paren">)</span><a class="headerlink" href="#c.Py_DEPRECATED" title="永久链接至目标">¶</a></dt>
+<dd><p>Use this for deprecated declarations.  The macro must be placed before the
+symbol name.</p>
+<p>示例:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Py_DEPRECATED</span><span class="p">(</span><span class="mf">3.8</span><span class="p">)</span> <span class="n">PyAPI_FUNC</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">Py_OldFunction</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>MSVC support was added.</p>
 </div>
 </dd></dl>
 
@@ -247,7 +279,7 @@ duration of the call.</p>
 <p>However, a common pitfall is to extract an object from a list and hold on to it
 for a while without incrementing its reference count. Some other operation might
 conceivably remove the object from the list, decrementing its reference count
-and possible deallocating it. The real danger is that innocent-looking
+and possibly deallocating it. The real danger is that innocent-looking
 operations may invoke arbitrary Python code which could do this; there is a code
 path which allows control to flow back to the user from a <a class="reference internal" href="refcounting.html#c.Py_DECREF" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a>, so
 almost any operation is potentially dangerous.</p>
@@ -430,7 +462,7 @@ functions in the Python/C API can raise exceptions, unless an explicit claim is
 made otherwise in a function's documentation.  In general, when a function
 encounters an error, it sets an exception, discards any object references that
 it owns, and returns an error indicator.  If not documented otherwise, this
-indicator is either <em>NULL</em> or <code class="docutils literal notranslate"><span class="pre">-1</span></code>, depending on the function's return type.
+indicator is either <code class="docutils literal notranslate"><span class="pre">NULL</span></code> or <code class="docutils literal notranslate"><span class="pre">-1</span></code>, depending on the function's return type.
 A few functions return a Boolean true/false result, with false indicating an
 error.  Very few functions return no explicit error indicator or have an
 ambiguous return value, and require explicit testing for errors with
@@ -440,12 +472,12 @@ using global storage in an unthreaded application).  A  thread can be in one of
 two states: an exception has occurred, or not. The function
 <a class="reference internal" href="exceptions-1.html#c.PyErr_Occurred" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a> can be used to check for this: it returns a borrowed
 reference to the exception type object when an exception has occurred, and
-<em>NULL</em> otherwise.  There are a number of functions to set the exception state:
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code> otherwise.  There are a number of functions to set the exception state:
 <a class="reference internal" href="exceptions-1.html#c.PyErr_SetString" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_SetString" title="PyErr_SetString"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_SetString()</span></code></a> is the most common (though not the most general)
 function to set the exception state, and <a class="reference internal" href="exceptions-1.html#c.PyErr_Clear" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_Clear" title="PyErr_Clear"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Clear()</span></code></a> clears the
 exception state.</p>
 <p>The full exception state consists of three objects (all of which can  be
-<em>NULL</em>): the exception type, the corresponding exception  value, and the
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code>): the exception type, the corresponding exception  value, and the
 traceback.  These have the same meanings as the Python result of
 <code class="docutils literal notranslate"><span class="pre">sys.exc_info()</span></code>; however, they are not the same: the Python objects represent
 the last exception being handled by a Python  <a class="reference internal" href="compound_stmts.html#try" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> ...
@@ -530,10 +562,10 @@ Python, we show the equivalent Python code:</p>
 <span class="target" id="index-18"></span><p id="index-19">This example represents an endorsed use of the <code class="docutils literal notranslate"><span class="pre">goto</span></code> statement  in C!
 It illustrates the use of <a class="reference internal" href="exceptions-1.html#c.PyErr_ExceptionMatches" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_ExceptionMatches" title="PyErr_ExceptionMatches"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_ExceptionMatches()</span></code></a> and
 <a class="reference internal" href="exceptions-1.html#c.PyErr_Clear" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#c.PyErr_Clear" title="PyErr_Clear"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Clear()</span></code></a> to handle specific exceptions, and the use of
-<a class="reference internal" href="refcounting.html#c.Py_XDECREF" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html#c.Py_XDECREF" title="Py_XDECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XDECREF()</span></code></a> to dispose of owned references that may be <em>NULL</em> (note the
+<a class="reference internal" href="refcounting.html#c.Py_XDECREF" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html#c.Py_XDECREF" title="Py_XDECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XDECREF()</span></code></a> to dispose of owned references that may be <code class="docutils literal notranslate"><span class="pre">NULL</span></code> (note the
 <code class="docutils literal notranslate"><span class="pre">'X'</span></code> in the name; <a class="reference internal" href="refcounting.html#c.Py_DECREF" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a> would crash when confronted with a
-<em>NULL</em> reference).  It is important that the variables used to hold owned
-references are initialized to <em>NULL</em> for this to work; likewise, the proposed
+<code class="docutils literal notranslate"><span class="pre">NULL</span></code> reference).  It is important that the variables used to hold owned
+references are initialized to <code class="docutils literal notranslate"><span class="pre">NULL</span></code> for this to work; likewise, the proposed
 return value is initialized to <code class="docutils literal notranslate"><span class="pre">-1</span></code> (failure) and only set to success after
 the final call made is successful.</p>
 </div>
@@ -601,15 +633,15 @@ not-Python-specific <code class="xref c c-macro docutils literal notranslate"><s
 in the Unix build, compiler optimization is disabled.</p>
 <p>除了前面描述的引用计数调试之外，还执行以下额外检查：</p>
 <ul class="simple">
-<li>额外检查将添加到对象分配器。</li>
-<li>额外的检查将添加到解析器和编译器中。</li>
-<li>Downcasts from wide types to narrow types are checked for loss of information.</li>
-<li>许多断言被添加到字典和集合实现中。另外，集合对象需要 <code class="xref py py-meth docutils literal notranslate"><span class="pre">test_c_api()</span></code> 方法。</li>
-<li>输入参数的完整性检查被添加到框架创建中。</li>
-<li>使用已知的无效模式初始化整型的存储，以捕获对未初始化数字的引用。</li>
-<li>添加底层跟踪和额外的异常检查到虚拟机的运行时中。</li>
-<li>Extra checks are added to the memory arena implementation.</li>
-<li>添加额外调试到线程模块。</li>
+<li><p>额外检查将添加到对象分配器。</p></li>
+<li><p>额外的检查将添加到解析器和编译器中。</p></li>
+<li><p>Downcasts from wide types to narrow types are checked for loss of information.</p></li>
+<li><p>许多断言被添加到字典和集合实现中。另外，集合对象需要 <code class="xref py py-meth docutils literal notranslate"><span class="pre">test_c_api()</span></code> 方法。</p></li>
+<li><p>输入参数的完整性检查被添加到框架创建中。</p></li>
+<li><p>使用已知的无效模式初始化整型的存储，以捕获对未初始化数字的引用。</p></li>
+<li><p>添加底层跟踪和额外的异常检查到虚拟机的运行时中。</p></li>
+<li><p>Extra checks are added to the memory arena implementation.</p></li>
+<li><p>添加额外调试到线程模块。</p></li>
 </ul>
 <p>这里可能没有提到的额外的检查。</p>
 <p>Defining <code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_TRACE_REFS</span></code> enables reference tracing.  When defined, a
@@ -627,7 +659,7 @@ after every statement run by the interpreter.)  Implied by <code class="xref c c
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">概述</a><ul>
 <li><a class="reference internal" href="#coding-standards">代码标准</a></li>
@@ -659,7 +691,7 @@ after every statement run by the interpreter.)  Implied by <code class="xref c c
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/intro.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/intro.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/intro.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/c-api/intro.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/c-api/intro.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/c-api/intro.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -684,14 +716,17 @@ after every statement run by the interpreter.)  Implied by <code class="xref c c
         <li class="right" >
           <a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" title="Python/C API 参考手册"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-9.html" tppabs="https://docs.python.org/zh-cn/3/c-api/index.html" >Python/C API 参考手册</a> &#187;</li>
     <li class="right">
@@ -712,15 +747,19 @@ after every statement run by the interpreter.)  Implied by <code class="xref c c
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

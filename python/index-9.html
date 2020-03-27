@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Python/C API å‚è€ƒæ‰‹å†Œ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>Python/C API å‚è€ƒæ‰‹å†Œ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="æ¦‚è¿°" href="intro.html" />
     <link rel="prev" title="1. Embedding Python in Another Application" href="../extending/embedding.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/c-api/index.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="embedding.html" tppabs="https://docs.python.org/zh-cn/3/extending/embedding.html" title="1. Embedding Python in Another Application"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
     <li class="right">
         
@@ -110,7 +118,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="stable.html" tppabs="https://docs.python.org/zh-cn/3/c-api/stable.html">ç¨³å®šçš„åº”ç”¨ç¨‹åºäºŒè¿›åˆ¶æ¥å£</a></li>
 <li class="toctree-l1"><a class="reference internal" href="veryhigh.html" tppabs="https://docs.python.org/zh-cn/3/c-api/veryhigh.html">The Very High Level Layer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="refcounting.html" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html">Reference Counting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="refcounting.html" tppabs="https://docs.python.org/zh-cn/3/c-api/refcounting.html">å¼•ç”¨è®¡æ•°</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html">å¼‚å¸¸å¤„ç†</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="exceptions-1.html#printing-and-clearing" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#printing-and-clearing">Printing and clearing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions-1.html#raising-exceptions" tppabs="https://docs.python.org/zh-cn/3/c-api/exceptions.html#raising-exceptions">æŠ›å‡ºå¼‚å¸¸</a></li>
@@ -126,10 +134,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html" tppabs="https://docs.python.org/zh-cn/3/c-api/utilities.html">å·¥å…·</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sys-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/sys.html">Operating System Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sys-1.html#system-functions" tppabs="https://docs.python.org/zh-cn/3/c-api/sys.html#system-functions">System Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sys-1.html#process-control" tppabs="https://docs.python.org/zh-cn/3/c-api/sys.html#process-control">Process Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="import-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html">å¯¼å…¥æ¨¡å—</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sys-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/sys.html">æ“ä½œç³»ç»Ÿå®ç”¨ç¨‹åº</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sys-1.html#system-functions" tppabs="https://docs.python.org/zh-cn/3/c-api/sys.html#system-functions">ç³»ç»ŸåŠŸèƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sys-1.html#process-control" tppabs="https://docs.python.org/zh-cn/3/c-api/sys.html#process-control">è¿‡ç¨‹æ§åˆ¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html" tppabs="https://docs.python.org/zh-cn/3/c-api/import.html">å¯¼å…¥æ¨¡å—</a></li>
 <li class="toctree-l2"><a class="reference internal" href="marshal-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/marshal.html">Data marshalling support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arg.html" tppabs="https://docs.python.org/zh-cn/3/c-api/arg.html">è¯­å¥è§£é‡ŠåŠå˜é‡ç¼–è¯‘</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conversion.html" tppabs="https://docs.python.org/zh-cn/3/c-api/conversion.html">å­—ç¬¦ä¸²è½¬æ¢ä¸æ ¼å¼åŒ–</a></li>
@@ -138,18 +146,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="abstract.html" tppabs="https://docs.python.org/zh-cn/3/c-api/abstract.html">æŠ½è±¡å¯¹è±¡å±‚</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="object.html" tppabs="https://docs.python.org/zh-cn/3/c-api/object.html">Object Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html" tppabs="https://docs.python.org/zh-cn/3/c-api/object.html">å¯¹è±¡åè®®</a></li>
 <li class="toctree-l2"><a class="reference internal" href="number.html" tppabs="https://docs.python.org/zh-cn/3/c-api/number.html">æ•°å­—åè®®</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sequence.html" tppabs="https://docs.python.org/zh-cn/3/c-api/sequence.html">Sequence Protocol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping.html" tppabs="https://docs.python.org/zh-cn/3/c-api/mapping.html">Mapping Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sequence.html" tppabs="https://docs.python.org/zh-cn/3/c-api/sequence.html">åºåˆ—åè®®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping.html" tppabs="https://docs.python.org/zh-cn/3/c-api/mapping.html">æ˜ å°„åè®®</a></li>
 <li class="toctree-l2"><a class="reference internal" href="iter.html" tppabs="https://docs.python.org/zh-cn/3/c-api/iter.html">è¿­ä»£å™¨åè®®</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buffer.html" tppabs="https://docs.python.org/zh-cn/3/c-api/buffer.html">ç¼“å†²åè®®</a></li>
-<li class="toctree-l2"><a class="reference internal" href="objbuffer.html" tppabs="https://docs.python.org/zh-cn/3/c-api/objbuffer.html">Old Buffer Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objbuffer.html" tppabs="https://docs.python.org/zh-cn/3/c-api/objbuffer.html">æ—§ç¼“å†²åè®®</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html">Concrete Objects Layer</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="concrete.html" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html">å…·ä½“çš„å¯¹è±¡å±‚</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="concrete.html#fundamental-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html#fundamental-objects">åŸºæœ¬å¯¹è±¡</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concrete.html#numeric-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html#numeric-objects">Numeric Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concrete.html#numeric-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html#numeric-objects">æ•°å€¼å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concrete.html#sequence-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html#sequence-objects">åºåˆ—å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concrete.html#container-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html#container-objects">å®¹å™¨å¯¹è±¡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concrete.html#function-objects" tppabs="https://docs.python.org/zh-cn/3/c-api/concrete.html#function-objects">å‡½æ•°å¯¹è±¡</a></li>
@@ -157,22 +165,36 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="init.html" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html">Initialization, Finalization, and Threads</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="init.html#before-python-initialization" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#before-python-initialization">Before Python Initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="init.html#global-configuration-variables" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#global-configuration-variables">Global configuration variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init.html#before-python-initialization" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#before-python-initialization">åœ¨Pythonåˆå§‹åŒ–ä¹‹å‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init.html#global-configuration-variables" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#global-configuration-variables">å…¨å±€é…ç½®å˜é‡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init.html#initializing-and-finalizing-the-interpreter" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#initializing-and-finalizing-the-interpreter">Initializing and finalizing the interpreter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init.html#process-wide-parameters" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#process-wide-parameters">Process-wide parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init.html#thread-state-and-the-global-interpreter-lock" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#thread-state-and-the-global-interpreter-lock">Thread State and the Global Interpreter Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init.html#sub-interpreter-support" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#sub-interpreter-support">Sub-interpreter support</a></li>
-<li class="toctree-l2"><a class="reference internal" href="init.html#asynchronous-notifications" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#asynchronous-notifications">Asynchronous Notifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="init.html#profiling-and-tracing" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#profiling-and-tracing">Profiling and Tracing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="init.html#advanced-debugger-support" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#advanced-debugger-support">Advanced Debugger Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init.html#asynchronous-notifications" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#asynchronous-notifications">å¼‚æ­¥é€šçŸ¥</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init.html#profiling-and-tracing" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#profiling-and-tracing">åˆ†æå’Œè·Ÿè¸ª</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init.html#advanced-debugger-support" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#advanced-debugger-support">é«˜çº§è°ƒè¯•å™¨æ”¯æŒ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init.html#thread-local-storage-support" tppabs="https://docs.python.org/zh-cn/3/c-api/init.html#thread-local-storage-support">Thread Local Storage Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="init_config.html" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html">Pythonåˆå§‹åŒ–é…ç½®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#pywidestringlist" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#pywidestringlist">PyWideStringList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#pystatus" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#pystatus">PyStatus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#pypreconfig" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#pypreconfig">PyPreConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#preinitialization-with-pypreconfig" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#preinitialization-with-pypreconfig">Preinitialization with PyPreConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#pyconfig" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#pyconfig">PyConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#initialization-with-pyconfig" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#initialization-with-pyconfig">Initialization with PyConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#isolated-configuration" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#isolated-configuration">Isolated Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#python-configuration" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#python-configuration">Python Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#path-configuration" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#path-configuration">è·¯å¾„é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#py-runmain" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#py-runmain">Py_RunMain()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#multi-phase-initialization-private-provisional-api" tppabs="https://docs.python.org/zh-cn/3/c-api/init_config.html#multi-phase-initialization-private-provisional-api">Multi-Phase Initialization Private Provisional API</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="memory.html" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html">å†…å­˜ç®¡ç†</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#overview" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#overview">æ¦‚è¿°</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#raw-memory-interface" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#raw-memory-interface">åŸå§‹å†…å­˜æ¥å£</a></li>
-<li class="toctree-l2"><a class="reference internal" href="memory.html#memory-interface" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#memory-interface">Memory Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory.html#memory-interface" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#memory-interface">å†…å­˜æ¥å£</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#object-allocators" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#object-allocators">å¯¹è±¡åˆ†é…å™¨</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#default-memory-allocators" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#default-memory-allocators">é»˜è®¤å†…å­˜åˆ†é…å™¨</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#customize-memory-allocators" tppabs="https://docs.python.org/zh-cn/3/c-api/memory.html#customize-memory-allocators">Customize Memory Allocators</a></li>
@@ -190,6 +212,8 @@
 <li class="toctree-l2"><a class="reference internal" href="typeobj.html#sequence-object-structures" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#sequence-object-structures">Sequence Object Structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typeobj.html#buffer-object-structures" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#buffer-object-structures">Buffer Object Structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typeobj.html#async-object-structures" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#async-object-structures">Async Object Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typeobj.html#slot-type-typedefs" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#slot-type-typedefs">Slot Type typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typeobj.html#examples" tppabs="https://docs.python.org/zh-cn/3/c-api/typeobj.html#examples">ä¾‹å­</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcsupport.html" tppabs="https://docs.python.org/zh-cn/3/c-api/gcsupport.html">ä½¿å¯¹è±¡ç±»å‹æ”¯æŒå¾ªç¯åƒåœ¾å›æ”¶</a></li>
 </ul>
 </li>
@@ -206,7 +230,7 @@
         <div class="sphinxsidebarwrapper">
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="embedding.html" tppabs="https://docs.python.org/zh-cn/3/extending/embedding.html"
-                        title="ä¸Šä¸€ç« ">1. Embedding Python in Another Application</a></p>
+                        title="ä¸Šä¸€ç« "><span class="section-number">1. </span>Embedding Python in Another Application</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="intro-1.html" tppabs="https://docs.python.org/zh-cn/3/c-api/intro.html"
                         title="ä¸‹ä¸€ç« ">æ¦‚è¿°</a></p>
@@ -215,7 +239,7 @@
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/c-api/index.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/c-api/index.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/c-api/index.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/c-api/index.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/c-api/index.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/c-api/index.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -240,14 +264,17 @@
         <li class="right" >
           <a href="embedding.html" tppabs="https://docs.python.org/zh-cn/3/extending/embedding.html" title="1. Embedding Python in Another Application"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
     <li class="right">
         
@@ -267,15 +294,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

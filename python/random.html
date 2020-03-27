@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>random --- 生成伪随机数 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>random --- 生成伪随机数 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="statistics --- Mathematical statistics functions" href="statistics.html" />
+    <link rel="next" title="statistics --- 数学统计函数" href="statistics.html" />
     <link rel="prev" title="fractions --- 分数" href="fractions.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/random.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="statistics.html" tppabs="https://docs.python.org/zh-cn/3/library/statistics.html" title="statistics --- Mathematical statistics functions"
+          <a href="statistics.html" tppabs="https://docs.python.org/zh-cn/3/library/statistics.html" title="statistics --- 数学统计函数"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="fractions.html" tppabs="https://docs.python.org/zh-cn/3/library/fractions.html" title="fractions --- 分数"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="numeric.html" tppabs="https://docs.python.org/zh-cn/3/library/numeric.html" accesskey="U">数字和数学模块</a> &#187;</li>
@@ -97,56 +105,56 @@
             
   <div class="section" id="module-random">
 <span id="random-generate-pseudo-random-numbers"></span><h1><a class="reference internal" href="#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a> --- 生成伪随机数<a class="headerlink" href="#module-random" title="永久链接至标题">¶</a></h1>
-<p><strong>源码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/random.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/random.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/random.py">Lib/random.py</a></p>
+<p><strong>源码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/PythonDecoratorLibrary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/PythonDecoratorLibrary'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/random.py">Lib/random.py</a></p>
 <hr class="docutils" />
 <p>该模块实现了各种分布的伪随机数生成器。</p>
 <p>对于整数，从范围中有统一的选择。 对于序列，存在随机元素的统一选择、用于生成列表的随机排列的函数、以及用于随机抽样而无需替换的函数。</p>
 <p>在实数轴上，有计算均匀、正态（高斯）、对数正态、负指数、伽马和贝塔分布的函数。 为了生成角度分布，可以使用 von Mises 分布。</p>
 <p>几乎所有模块函数都依赖于基本函数 <a class="reference internal" href="#random.random" title="random.random"><code class="xref py py-func docutils literal notranslate"><span class="pre">random()</span></code></a> ，它在半开放区间 [0.0,1.0) 内均匀生成随机浮点数。 Python 使用 Mersenne Twister 作为核心生成器。 它产生 53 位精度浮点数，周期为 2**19937-1 ，其在 C 中的底层实现既快又线程安全。 Mersenne Twister 是现存最广泛测试的随机数发生器之一。 但是，因为完全确定性，它不适用于所有目的，并且完全不适合加密目的。</p>
 <p>这个模块提供的函数实际上是 <a class="reference internal" href="#random.Random" title="random.Random"><code class="xref py py-class docutils literal notranslate"><span class="pre">random.Random</span></code></a> 类的隐藏实例的绑定方法。 你可以实例化自己的 <a class="reference internal" href="#random.Random" title="random.Random"><code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code></a> 类实例以获取不共享状态的生成器。</p>
-<p>如果你想使用自己设计的不同基础生成器，类 <a class="reference internal" href="#random.Random" title="random.Random"><code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code></a>&nbsp;也可以作为子类：在这种情况下，重载 <code class="xref py py-meth docutils literal notranslate"><span class="pre">random()</span></code> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">seed()</span></code> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code> 以及 <code class="xref py py-meth docutils literal notranslate"><span class="pre">setstate()</span></code>&nbsp;方法。可选地，新生成器可以提供 <code class="xref py py-meth docutils literal notranslate"><span class="pre">getrandbits()</span></code> 方法——这允许 <a class="reference internal" href="#random.randrange" title="random.randrange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">randrange()</span></code></a> 在任意大的范围内产生选择。</p>
+<p>如果你想使用自己设计的不同基础生成器，类 <a class="reference internal" href="#random.Random" title="random.Random"><code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code></a> 也可以作为子类：在这种情况下，重载 <code class="xref py py-meth docutils literal notranslate"><span class="pre">random()</span></code> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">seed()</span></code> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code> 以及 <code class="xref py py-meth docutils literal notranslate"><span class="pre">setstate()</span></code> 方法。可选地，新生成器可以提供 <code class="xref py py-meth docutils literal notranslate"><span class="pre">getrandbits()</span></code> 方法——这允许 <a class="reference internal" href="#random.randrange" title="random.randrange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">randrange()</span></code></a> 在任意大的范围内产生选择。</p>
 <p><a class="reference internal" href="#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a> 模块还提供 <a class="reference internal" href="#random.SystemRandom" title="random.SystemRandom"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemRandom</span></code></a> 类，它使用系统函数 <a class="reference internal" href="os.html#os.urandom" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.urandom" title="os.urandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.urandom()</span></code></a> 从操作系统提供的源生成随机数。</p>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">不应将此模块的伪随机生成器用于安全目的。 有关安全性或加密用途，请参阅 <a class="reference internal" href="secrets.html#module-secrets" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#module-secrets" title="secrets: Generate secure random numbers for managing secrets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">secrets</span></code></a> 模块。</p>
+<p class="admonition-title">警告</p>
+<p>不应将此模块的伪随机生成器用于安全目的。 有关安全性或加密用途，请参阅 <a class="reference internal" href="secrets.html#module-secrets" tppabs="https://docs.python.org/zh-cn/3/library/secrets.html#module-secrets" title="secrets: Generate secure random numbers for managing secrets."><code class="xref py py-mod docutils literal notranslate"><span class="pre">secrets</span></code></a> 模块。</p>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
+<p class="admonition-title">参见</p>
 <p>M. Matsumoto and T. Nishimura, &quot;Mersenne Twister: A 623-dimensionally
 equidistributed uniform pseudorandom number generator&quot;, ACM Transactions on
 Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/576707/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/576707/'" tppabs="https://code.activestate.com/recipes/576707/">Complementary-Multiply-with-Carry recipe</a> 用于兼容的替代随机数发生器，具有长周期和相对简单的更新操作。</p>
+<p><a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/576707/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/576707/'" tppabs="https://code.activestate.com/recipes/576707/">Complementary-Multiply-with-Carry recipe</a> 用于兼容的替代随机数发生器，具有长周期和相对简单的更新操作。</p>
 </div>
 <div class="section" id="bookkeeping-functions">
 <h2>簿记功能<a class="headerlink" href="#bookkeeping-functions" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="random.seed">
-<code class="descclassname">random.</code><code class="descname">seed</code><span class="sig-paren">(</span><em>a=None</em>, <em>version=2</em><span class="sig-paren">)</span><a class="headerlink" href="#random.seed" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">seed</code><span class="sig-paren">(</span><em class="sig-param">a=None</em>, <em class="sig-param">version=2</em><span class="sig-paren">)</span><a class="headerlink" href="#random.seed" title="永久链接至目标">¶</a></dt>
 <dd><p>初始化随机数生成器。</p>
 <p>如果 <em>a</em> 被省略或为 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，则使用当前系统时间。 如果操作系统提供随机源，则使用它们而不是系统时间（有关可用性的详细信息，请参阅 <a class="reference internal" href="os.html#os.urandom" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.urandom" title="os.urandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.urandom()</span></code></a> 函数）。</p>
 <p>如果 <em>a</em> 是 int 类型，则直接使用。</p>
 <p>对于版本2（默认的），<a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 、 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 或 <a class="reference internal" href="stdtypes.html#bytearray" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> 对象转换为 <a class="reference internal" href="functions.html#int" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> 并使用它的所有位。</p>
 <p>对于版本1（用于从旧版本的Python再现随机序列），用于 <a class="reference internal" href="stdtypes.html#str" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 和 <a class="reference internal" href="stdtypes.html#bytes" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 的算法生成更窄的种子范围。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span>已移至版本2方案，该方案使用字符串种子中的所有位。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>已移至版本2方案，该方案使用字符串种子中的所有位。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.getstate">
-<code class="descclassname">random.</code><code class="descname">getstate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#random.getstate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">getstate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#random.getstate" title="永久链接至目标">¶</a></dt>
 <dd><p>返回捕获生成器当前内部状态的对象。 这个对象可以传递给 <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">setstate()</span></code></a> 来恢复状态。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.setstate">
-<code class="descclassname">random.</code><code class="descname">setstate</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#random.setstate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">setstate</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#random.setstate" title="永久链接至目标">¶</a></dt>
 <dd><p><em>state</em> 应该是从之前调用 <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getstate()</span></code></a> 获得的，并且 <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">setstate()</span></code></a> 将生成器的内部状态恢复到 <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getstate()</span></code></a> 被调用时的状态。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.getrandbits">
-<code class="descclassname">random.</code><code class="descname">getrandbits</code><span class="sig-paren">(</span><em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#random.getrandbits" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">getrandbits</code><span class="sig-paren">(</span><em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#random.getrandbits" title="永久链接至目标">¶</a></dt>
 <dd><p>返回带有 <em>k</em> 位随机的Python整数。 此方法随 MersenneTwister 生成器一起提供，其他一些生成器也可以将其作为API的可选部分提供。 如果可用，<a class="reference internal" href="#random.getrandbits" title="random.getrandbits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getrandbits()</span></code></a> 启用 <a class="reference internal" href="#random.randrange" title="random.randrange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">randrange()</span></code></a> 来处理任意大范围。</p>
 </dd></dl>
 
@@ -155,19 +163,19 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 <h2>整数用函数<a class="headerlink" href="#functions-for-integers" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="random.randrange">
-<code class="descclassname">random.</code><code class="descname">randrange</code><span class="sig-paren">(</span><em>stop</em><span class="sig-paren">)</span><a class="headerlink" href="#random.randrange" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">randrange</code><span class="sig-paren">(</span><em class="sig-param">stop</em><span class="sig-paren">)</span><a class="headerlink" href="#random.randrange" title="永久链接至目标">¶</a></dt>
 <dt>
-<code class="descclassname">random.</code><code class="descname">randrange</code><span class="sig-paren">(</span><em>start</em>, <em>stop</em><span class="optional">[</span>, <em>step</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">randrange</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">stop</em><span class="optional">[</span>, <em class="sig-param">step</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
 <dd><p>从 <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> 返回一个随机选择的元素。 这相当于 <code class="docutils literal notranslate"><span class="pre">choice(range(start,</span> <span class="pre">stop,</span> <span class="pre">step))</span></code> ，但实际上并没有构建一个 range 对象。</p>
 <p>位置参数模式匹配 <a class="reference internal" href="stdtypes.html#range" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#range" title="range"><code class="xref py py-func docutils literal notranslate"><span class="pre">range()</span></code></a> 。不应使用关键字参数，因为该函数可能以意外的方式使用它们。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span><a class="reference internal" href="#random.randrange" title="random.randrange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">randrange()</span></code></a> 在生成均匀分布的值方面更为复杂。 以前它使用了像``int(random()*n)``这样的形式，它可以产生稍微不均匀的分布。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span><a class="reference internal" href="#random.randrange" title="random.randrange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">randrange()</span></code></a> 在生成均匀分布的值方面更为复杂。 以前它使用了像``int(random()*n)``这样的形式，它可以产生稍微不均匀的分布。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.randint">
-<code class="descclassname">random.</code><code class="descname">randint</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#random.randint" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">randint</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#random.randint" title="永久链接至目标">¶</a></dt>
 <dd><p>返回随机整数 <em>N</em> 满足 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">N</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code>。相当于 <code class="docutils literal notranslate"><span class="pre">randrange(a,</span> <span class="pre">b+1)</span></code>。</p>
 </dd></dl>
 
@@ -176,26 +184,26 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 <h2>序列用函数<a class="headerlink" href="#functions-for-sequences" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="random.choice">
-<code class="descclassname">random.</code><code class="descname">choice</code><span class="sig-paren">(</span><em>seq</em><span class="sig-paren">)</span><a class="headerlink" href="#random.choice" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">choice</code><span class="sig-paren">(</span><em class="sig-param">seq</em><span class="sig-paren">)</span><a class="headerlink" href="#random.choice" title="永久链接至目标">¶</a></dt>
 <dd><p>从非空序列 <em>seq</em> 返回一个随机元素。 如果 <em>seq</em> 为空，则引发 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.choices">
-<code class="descclassname">random.</code><code class="descname">choices</code><span class="sig-paren">(</span><em>population</em>, <em>weights=None</em>, <em>*</em>, <em>cum_weights=None</em>, <em>k=1</em><span class="sig-paren">)</span><a class="headerlink" href="#random.choices" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">choices</code><span class="sig-paren">(</span><em class="sig-param">population</em>, <em class="sig-param">weights=None</em>, <em class="sig-param">*</em>, <em class="sig-param">cum_weights=None</em>, <em class="sig-param">k=1</em><span class="sig-paren">)</span><a class="headerlink" href="#random.choices" title="永久链接至目标">¶</a></dt>
 <dd><p>从*population*中选择替换，返回大小为 <em>k</em> 的元素列表。 如果 <em>population</em> 为空，则引发 <a class="reference internal" href="exceptions.html#IndexError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>。</p>
 <p>如果指定了 <em>weight</em> 序列，则根据相对权重进行选择。 或者，如果给出 <em>cum_weights</em> 序列，则根据累积权重（可能使用 <a class="reference internal" href="itertools.html#itertools.accumulate" tppabs="https://docs.python.org/zh-cn/3/library/itertools.html#itertools.accumulate" title="itertools.accumulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.accumulate()</span></code></a> 计算）进行选择。 例如，相对权重``[10, 5, 30, 5]``相当于累积权重``[10, 15, 45, 50]``。 在内部，相对权重在进行选择之前会转换为累积权重，因此提供累积权重可以节省工作量。</p>
 <p>如果既未指定 <em>weight</em> 也未指定 <em>cum_weights</em> ，则以相等的概率进行选择。 如果提供了权重序列，则它必须与 <em>population</em> 序列的长度相同。 一个 <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> 指定了 <em>weights</em> 和*cum_weights*。</p>
-<p><em>weights</em> 或 <em>cum_weights</em> 可以使用任何与 <a class="reference internal" href="#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-func docutils literal notranslate"><span class="pre">random()</span></code></a> 返回的 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> 值互操作的数值类型（包括整数，浮点数和分数但不包括十进制小数）。</p>
+<p><em>weights</em> 或 <em>cum_weights</em> 可以使用任何与 <a class="reference internal" href="#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-func docutils literal notranslate"><span class="pre">random()</span></code></a> 所返回的 <a class="reference internal" href="functions.html#float" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> 值互操作的数值类型（包括整数、浮点数和分数但不包括十进制小数）。 权重假定为非负数。</p>
 <p>对于给定的种子，具有相等加权的 <a class="reference internal" href="#random.choices" title="random.choices"><code class="xref py py-func docutils literal notranslate"><span class="pre">choices()</span></code></a> 函数通常产生与重复调用 <a class="reference internal" href="#random.choice" title="random.choice"><code class="xref py py-func docutils literal notranslate"><span class="pre">choice()</span></code></a> 不同的序列。 <a class="reference internal" href="#random.choices" title="random.choices"><code class="xref py py-func docutils literal notranslate"><span class="pre">choices()</span></code></a> 使用的算法使用浮点运算来实现内部一致性和速度。 <a class="reference internal" href="#random.choice" title="random.choice"><code class="xref py py-func docutils literal notranslate"><span class="pre">choice()</span></code></a>  使用的算法默认为重复选择的整数运算，以避免因舍入误差引起的小偏差。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.6 新版功能.</span></p>
+<p><span class="versionmodified added">3.6 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.shuffle">
-<code class="descclassname">random.</code><code class="descname">shuffle</code><span class="sig-paren">(</span><em>x</em><span class="optional">[</span>, <em>random</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#random.shuffle" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">shuffle</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="optional">[</span>, <em class="sig-param">random</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#random.shuffle" title="永久链接至目标">¶</a></dt>
 <dd><p>将序列 <em>x</em> 随机打乱位置。</p>
 <p>可选参数 <em>random</em> 是一个0参数函数，在 [0.0, 1.0) 中返回随机浮点数；默认情况下，这是函数 <a class="reference internal" href="#random.random" title="random.random"><code class="xref py py-func docutils literal notranslate"><span class="pre">random()</span></code></a> 。</p>
 <p>要改变一个不可变的序列并返回一个新的打乱列表，请使用``sample(x, k=len(x))``。</p>
@@ -204,7 +212,7 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 
 <dl class="function">
 <dt id="random.sample">
-<code class="descclassname">random.</code><code class="descname">sample</code><span class="sig-paren">(</span><em>population</em>, <em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#random.sample" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">population</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#random.sample" title="永久链接至目标">¶</a></dt>
 <dd><p>返回从总体序列或集合中选择的唯一元素的 <em>k</em> 长度列表。 用于无重复的随机抽样。</p>
 <p>返回包含来自总体的元素的新列表，同时保持原始总体不变。 结果列表按选择顺序排列，因此所有子切片也将是有效的随机样本。 这允许抽奖获奖者（样本）被划分为大奖和第二名获胜者（子切片）。</p>
 <p>总体成员不必是 <a class="reference internal" href="glossary.html#term-hashable" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-hashable"><span class="xref std std-term">hashable</span></a> 或 unique 。 如果总体包含重复，则每次出现都是样本中可能的选择。</p>
@@ -218,38 +226,38 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 <p>以下函数生成特定的实值分布。如常用数学实践中所使用的那样, 函数参数以分布方程中的相应变量命名;大多数这些方程都可以在任何统计学教材中找到。</p>
 <dl class="function">
 <dt id="random.random">
-<code class="descclassname">random.</code><code class="descname">random</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#random.random" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">random</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#random.random" title="永久链接至目标">¶</a></dt>
 <dd><p>返回 [0.0, 1.0) 范围内的下一个随机浮点数。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.uniform">
-<code class="descclassname">random.</code><code class="descname">uniform</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#random.uniform" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">uniform</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#random.uniform" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个随机浮点数 <em>N</em> ，当 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code> 时 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">N</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code> ，当 <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">a</span></code> 时 <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">&lt;=</span> <span class="pre">N</span> <span class="pre">&lt;=</span> <span class="pre">a</span></code> 。</p>
 <p>取决于等式 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">(b-a)</span> <span class="pre">*</span> <span class="pre">random()</span></code> 中的浮点舍入，终点 <code class="docutils literal notranslate"><span class="pre">b</span></code> 可以包括或不包括在该范围内。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.triangular">
-<code class="descclassname">random.</code><code class="descname">triangular</code><span class="sig-paren">(</span><em>low</em>, <em>high</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#random.triangular" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">triangular</code><span class="sig-paren">(</span><em class="sig-param">low</em>, <em class="sig-param">high</em>, <em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#random.triangular" title="永久链接至目标">¶</a></dt>
 <dd><p>返回一个随机浮点数 <em>N</em> ，使得 <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">&lt;=</span> <span class="pre">N</span> <span class="pre">&lt;=</span> <span class="pre">high</span></code> 并在这些边界之间使用指定的 <em>mode</em> 。 <em>low</em> 和 <em>high</em> 边界默认为零和一。 <em>mode</em> 参数默认为边界之间的中点，给出对称分布。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.betavariate">
-<code class="descclassname">random.</code><code class="descname">betavariate</code><span class="sig-paren">(</span><em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#random.betavariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">betavariate</code><span class="sig-paren">(</span><em class="sig-param">alpha</em>, <em class="sig-param">beta</em><span class="sig-paren">)</span><a class="headerlink" href="#random.betavariate" title="永久链接至目标">¶</a></dt>
 <dd><p>Beta 分布。 参数的条件是 <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">beta</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>。 返回值的范围介于 0 和 1 之间。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.expovariate">
-<code class="descclassname">random.</code><code class="descname">expovariate</code><span class="sig-paren">(</span><em>lambd</em><span class="sig-paren">)</span><a class="headerlink" href="#random.expovariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">expovariate</code><span class="sig-paren">(</span><em class="sig-param">lambd</em><span class="sig-paren">)</span><a class="headerlink" href="#random.expovariate" title="永久链接至目标">¶</a></dt>
 <dd><p>指数分布。 <em>lambd</em> 是 1.0 除以所需的平均值，它应该是非零的。 （该参数本应命名为 “lambda” ，但这是 Python 中的保留字。）如果 <em>lambd</em> 为正，则返回值的范围为 0 到正无穷大；如果 <em>lambd</em> 为负，则返回值从负无穷大到 0。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.gammavariate">
-<code class="descclassname">random.</code><code class="descname">gammavariate</code><span class="sig-paren">(</span><em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#random.gammavariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">gammavariate</code><span class="sig-paren">(</span><em class="sig-param">alpha</em>, <em class="sig-param">beta</em><span class="sig-paren">)</span><a class="headerlink" href="#random.gammavariate" title="永久链接至目标">¶</a></dt>
 <dd><p>Gamma 分布。 （ <em>不是</em> gamma 函数！ ） 参数的条件是 <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">beta</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>。</p>
 <p>概率分布函数是:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>          <span class="n">x</span> <span class="o">**</span> <span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">/</span> <span class="n">beta</span><span class="p">)</span>
@@ -261,37 +269,37 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 
 <dl class="function">
 <dt id="random.gauss">
-<code class="descclassname">random.</code><code class="descname">gauss</code><span class="sig-paren">(</span><em>mu</em>, <em>sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#random.gauss" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">gauss</code><span class="sig-paren">(</span><em class="sig-param">mu</em>, <em class="sig-param">sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#random.gauss" title="永久链接至目标">¶</a></dt>
 <dd><p>高斯分布。 <em>mu</em> 是平均值，<em>sigma</em> 是标准差。 这比下面定义的 <a class="reference internal" href="#random.normalvariate" title="random.normalvariate"><code class="xref py py-func docutils literal notranslate"><span class="pre">normalvariate()</span></code></a> 函数略快。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.lognormvariate">
-<code class="descclassname">random.</code><code class="descname">lognormvariate</code><span class="sig-paren">(</span><em>mu</em>, <em>sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#random.lognormvariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">lognormvariate</code><span class="sig-paren">(</span><em class="sig-param">mu</em>, <em class="sig-param">sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#random.lognormvariate" title="永久链接至目标">¶</a></dt>
 <dd><p>对数正态分布。 如果你采用这个分布的自然对数，你将得到一个正态分布，平均值为 <em>mu</em> 和标准差为 <em>sigma</em> 。 <em>mu</em> 可以是任何值，<em>sigma</em> 必须大于零。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.normalvariate">
-<code class="descclassname">random.</code><code class="descname">normalvariate</code><span class="sig-paren">(</span><em>mu</em>, <em>sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#random.normalvariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">normalvariate</code><span class="sig-paren">(</span><em class="sig-param">mu</em>, <em class="sig-param">sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#random.normalvariate" title="永久链接至目标">¶</a></dt>
 <dd><p>正态分布。 <em>mu</em> 是平均值，<em>sigma</em> 是标准差。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.vonmisesvariate">
-<code class="descclassname">random.</code><code class="descname">vonmisesvariate</code><span class="sig-paren">(</span><em>mu</em>, <em>kappa</em><span class="sig-paren">)</span><a class="headerlink" href="#random.vonmisesvariate" title="永久链接至目标">¶</a></dt>
-<dd><p><em>mu</em> 是平均角度，以弧度表示，介于0和 2*<em>pi</em> 之间，<em>kappa</em> 是浓度参数，必须大于或等于零。 如果 <em>kappa</em> 等于零，则该分布在0到 2*<em>pi</em> 的范围内减小到均匀的随机角度。</p>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">vonmisesvariate</code><span class="sig-paren">(</span><em class="sig-param">mu</em>, <em class="sig-param">kappa</em><span class="sig-paren">)</span><a class="headerlink" href="#random.vonmisesvariate" title="永久链接至目标">¶</a></dt>
+<dd><p>冯·米塞斯（von Mises）分布。 <em>mu</em> 是平均角度，以弧度表示，介于0和 2*<em>pi</em> 之间，<em>kappa</em> 是浓度参数，必须大于或等于零。 如果 <em>kappa</em> 等于零，则该分布在 0 到 2*<em>pi</em> 的范围内减小到均匀的随机角度。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.paretovariate">
-<code class="descclassname">random.</code><code class="descname">paretovariate</code><span class="sig-paren">(</span><em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#random.paretovariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">paretovariate</code><span class="sig-paren">(</span><em class="sig-param">alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#random.paretovariate" title="永久链接至目标">¶</a></dt>
 <dd><p>帕累托分布。 <em>alpha</em> 是形状参数。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="random.weibullvariate">
-<code class="descclassname">random.</code><code class="descname">weibullvariate</code><span class="sig-paren">(</span><em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#random.weibullvariate" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">random.</code><code class="sig-name descname">weibullvariate</code><span class="sig-paren">(</span><em class="sig-param">alpha</em>, <em class="sig-param">beta</em><span class="sig-paren">)</span><a class="headerlink" href="#random.weibullvariate" title="永久链接至目标">¶</a></dt>
 <dd><p>威布尔分布。 <em>alpha</em> 是比例参数，<em>beta</em> 是形状参数。</p>
 </dd></dl>
 
@@ -300,14 +308,13 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 <h2>替代生成器<a class="headerlink" href="#alternative-generator" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="random.Random">
-<em class="property">class </em><code class="descclassname">random.</code><code class="descname">Random</code><span class="sig-paren">(</span><span class="optional">[</span><em>seed</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#random.Random" title="永久链接至目标">¶</a></dt>
-<dd><p>Class that implements the default pseudo-random number generator used by the
-<a class="reference internal" href="#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a> module.</p>
+<em class="property">class </em><code class="sig-prename descclassname">random.</code><code class="sig-name descname">Random</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">seed</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#random.Random" title="永久链接至目标">¶</a></dt>
+<dd><p>。该类实现了 <a class="reference internal" href="#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a> 模块所用的默认伪随机数生成器。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="random.SystemRandom">
-<em class="property">class </em><code class="descclassname">random.</code><code class="descname">SystemRandom</code><span class="sig-paren">(</span><span class="optional">[</span><em>seed</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#random.SystemRandom" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">random.</code><code class="sig-name descname">SystemRandom</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">seed</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#random.SystemRandom" title="永久链接至目标">¶</a></dt>
 <dd><p>使用 <a class="reference internal" href="os.html#os.urandom" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.urandom" title="os.urandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.urandom()</span></code></a> 函数的类，用从操作系统提供的源生成随机数。 这并非适用于所有系统。 也不依赖于软件状态，序列不可重现。 因此，<a class="reference internal" href="#random.seed" title="random.seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">seed()</span></code></a> 方法没有效果而被忽略。 <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a> 和 <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setstate()</span></code></a> 方法如果被调用则引发 <a class="reference internal" href="exceptions.html#NotImplementedError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#NotImplementedError" title="NotImplementedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a>。</p>
 </dd></dl>
 
@@ -317,8 +324,8 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 <p>有时能够重现伪随机数生成器给出的序列是有用的。 通过重新使用种子值，只要多个线程没有运行，相同的序列就可以在两次不同运行之间重现。</p>
 <p>大多数随机模块的算法和种子函数都会在 Python 版本中发生变化，但保证两个方面不会改变：</p>
 <ul class="simple">
-<li>如果添加了新的播种方法，则将提供向后兼容的播种机。</li>
-<li>当兼容的播种机被赋予相同的种子时，生成器的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">random()</span></code> 方法将继续产生相同的序列。</li>
+<li><p>如果添加了新的播种方法，则将提供向后兼容的播种机。</p></li>
+<li><p>当兼容的播种机被赋予相同的种子时，生成器的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">random()</span></code> 方法将继续产生相同的序列。</p></li>
 </ul>
 </div>
 <div class="section" id="examples-and-recipes">
@@ -380,21 +387,21 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 <span class="go">0.7958</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Bootstrapping_(statistics)  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Bootstrapping_(statistics)'" tppabs="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">statistical bootstrapping</a> 使用重采样和替换来估计大小为五的样本的均值的置信区间的示例:</p>
+<p><a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/pep-0322  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/pep-0322'" tppabs="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">statistical bootstrapping</a> 使用重采样和替换来估计大小为五的样本的均值的置信区间的示例:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># http://statistics.about.com/od/Applications/a/Example-Of-Bootstrapping.htm</span>
-<span class="kn">from</span> <span class="nn">statistics</span> <span class="k">import</span> <span class="n">mean</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choices</span>
+<span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">fmean</span> <span class="k">as</span> <span class="n">mean</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choices</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span>
 <span class="n">means</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">choices</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The sample mean of {mean(data):.1f} has a 90</span><span class="si">% c</span><span class="s1">onfidence &#39;</span>
-      <span class="n">f</span><span class="s1">&#39;interval from </span><span class="si">{means[1]:.1f}</span><span class="s1"> to </span><span class="si">{means[-2]:.1f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The sample mean of {mean(data):.1f} has a 90</span><span class="si">% c</span><span class="s1">onfidence &#39;</span>
+      <span class="sa">f</span><span class="s1">&#39;interval from </span><span class="si">{means[1]:.1f}</span><span class="s1"> to </span><span class="si">{means[-2]:.1f}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>使用 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/Resampling_(statistics)  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests'" tppabs="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests">重新采样排列测试</a> 来确定统计学显著性或者使用  <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/P-value  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/P-value'" tppabs="https://en.wikipedia.org/wiki/P-value">p-值</a> 来观察药物与安慰剂的作用之间差异的示例:</p>
+<p>使用 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/pep-0324  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/pep-0324#Permutation_tests'" tppabs="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests">重新采样排列测试</a> 来确定统计学显著性或者使用  <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/pep-0327  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/pep-0327'" tppabs="https://en.wikipedia.org/wiki/P-value">p-值</a> 来观察药物与安慰剂的作用之间差异的示例:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example from &quot;Statistics is Easy&quot; by Dennis Shasha and Manda Wilson</span>
-<span class="kn">from</span> <span class="nn">statistics</span> <span class="k">import</span> <span class="n">mean</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">shuffle</span>
+<span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">fmean</span> <span class="k">as</span> <span class="n">mean</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span>
 
 <span class="n">drug</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">65</span><span class="p">]</span>
 <span class="n">placebo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">46</span><span class="p">]</span>
@@ -408,15 +415,15 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
     <span class="n">new_diff</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">combined</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">drug</span><span class="p">)])</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">combined</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">drug</span><span class="p">):])</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="p">(</span><span class="n">new_diff</span> <span class="o">&gt;=</span> <span class="n">observed_diff</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{n}</span><span class="s1"> label reshufflings produced only </span><span class="si">{count}</span><span class="s1"> instances with a difference&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;at least as extreme as the observed difference of </span><span class="si">{observed_diff:.1f}</span><span class="s1">.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The one-sided p-value of {count / n:.4f} leads us to reject the null&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;hypothesis that there is no difference between the drug and the placebo.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{n}</span><span class="s1"> label reshufflings produced only </span><span class="si">{count}</span><span class="s1"> instances with a difference&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;at least as extreme as the observed difference of </span><span class="si">{observed_diff:.1f}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The one-sided p-value of {count / n:.4f} leads us to reject the null&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;hypothesis that there is no difference between the drug and the placebo.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>模拟单个服务器队列中的到达时间和服务交付:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">expovariate</span><span class="p">,</span> <span class="n">gauss</span>
-<span class="kn">from</span> <span class="nn">statistics</span> <span class="k">import</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span><span class="p">,</span> <span class="n">stdev</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">expovariate</span><span class="p">,</span> <span class="n">gauss</span>
+<span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span><span class="p">,</span> <span class="n">stdev</span>
 
 <span class="n">average_arrival_interval</span> <span class="o">=</span> <span class="mf">5.6</span>
 <span class="n">average_service_time</span> <span class="o">=</span> <span class="mf">5.0</span>
@@ -439,15 +446,15 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
         <span class="n">starts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">service_start</span><span class="p">)</span>
 
 <span class="n">waits</span> <span class="o">=</span> <span class="p">[</span><span class="n">start</span> <span class="o">-</span> <span class="n">arrival</span> <span class="k">for</span> <span class="n">arrival</span><span class="p">,</span> <span class="n">start</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">arrivals</span><span class="p">,</span> <span class="n">starts</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Mean wait: {mean(waits):.1f}.  Stdev wait: {stdev(waits):.1f}.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Median wait: {median(waits):.1f}.  Max wait: {max(waits):.1f}.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean wait: {mean(waits):.1f}.  Stdev wait: {stdev(waits):.1f}.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Median wait: {median(waits):.1f}.  Max wait: {max(waits):.1f}.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p><a class="reference external" href="javascript:if(confirm('https://www.youtube.com/watch?v=Iq9DzN6mvYA  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.youtube.com/watch?v=Iq9DzN6mvYA'" tppabs="https://www.youtube.com/watch?v=Iq9DzN6mvYA">Statistics for Hackers</a> <a class="reference external" href="javascript:if(confirm('https://us.pycon.org/2016/speaker/profile/295/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://us.pycon.org/2016/speaker/profile/295/'" tppabs="https://us.pycon.org/2016/speaker/profile/295/">Jake Vanderplas</a> 撰写的视频教程，使用一些基本概念进行统计分析，包括模拟、抽样、改组和交叉验证。</p>
-<p><a class="reference external" href="javascript:if(confirm('http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb'" tppabs="http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb">Economics Simulation</a> <a class="reference external" href="javascript:if(confirm('http://norvig.com/bio.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://norvig.com/bio.html'" tppabs="http://norvig.com/bio.html">Peter Norvig</a> 编写的市场模拟，显示了该模块提供的许多工具和分布的有效使用（高斯、均匀、样本、beta变量、选择、三角和随机范围等）。</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb'" tppabs="http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb">A Concrete Introduction to Probability (using Python)</a> <a class="reference external" href="javascript:if(confirm('http://norvig.com/bio.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://norvig.com/bio.html'" tppabs="http://norvig.com/bio.html">Peter Norvig</a> 撰写的教程，涵盖了概率论基础知识，如何编写模拟，以及如何使用 Python 进行数据分析。</p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://www.youtube.com/float.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.youtube.com/float.htm'" tppabs="https://www.youtube.com/watch?v=Iq9DzN6mvYA">Statistics for Hackers</a> <a class="reference external" href="javascript:if(confirm('https://us.pycon.org/2016/speaker/profile/295/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://us.pycon.org/2016/speaker/profile/295/'" tppabs="https://us.pycon.org/2016/speaker/profile/295/">Jake Vanderplas</a> 撰写的视频教程，使用一些基本概念进行统计分析，包括模拟、抽样、改组和交叉验证。</p>
+<p><a class="reference external" href="javascript:if(confirm('http://nbviewer.jupyter.org/url/norvig.com/ipython/pep-0331  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://nbviewer.jupyter.org/url/norvig.com/ipython/pep-0331'" tppabs="http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb">Economics Simulation</a> <a class="reference external" href="javascript:if(confirm('http://norvig.com/rfc3548.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://norvig.com/rfc3548.html'" tppabs="http://norvig.com/bio.html">Peter Norvig</a> 编写的市场模拟，显示了该模块提供的许多工具和分布的有效使用（高斯、均匀、样本、beta变量、选择、三角和随机范围等）。</p>
+<p><a class="reference external" href="javascript:if(confirm('http://nbviewer.jupyter.org/url/norvig.com/ipython/lib.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://nbviewer.jupyter.org/url/norvig.com/ipython/lib.html'" tppabs="http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb">A Concrete Introduction to Probability (using Python)</a> <a class="reference external" href="javascript:if(confirm('http://norvig.com/rfc3548.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://norvig.com/rfc3548.html'" tppabs="http://norvig.com/bio.html">Peter Norvig</a> 撰写的教程，涵盖了概率论基础知识，如何编写模拟，以及如何使用 Python 进行数据分析。</p>
 </div>
 </div>
 </div>
@@ -458,9 +465,9 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">random</span></code> --- 生成伪随机数</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> --- 生成伪随机数</a><ul>
 <li><a class="reference internal" href="#bookkeeping-functions">簿记功能</a></li>
 <li><a class="reference internal" href="#functions-for-integers">整数用函数</a></li>
 <li><a class="reference internal" href="#functions-for-sequences">序列用函数</a></li>
@@ -474,16 +481,16 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="fractions.html" tppabs="https://docs.python.org/zh-cn/3/library/fractions.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">fractions</span></code> --- 分数</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fractions</span></code> --- 分数</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="statistics.html" tppabs="https://docs.python.org/zh-cn/3/library/statistics.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">statistics</span></code> --- Mathematical statistics functions</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">statistics</span></code> --- 数学统计函数</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/random.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/random.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/random.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/random.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/random.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/random.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -503,19 +510,22 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="statistics.html" tppabs="https://docs.python.org/zh-cn/3/library/statistics.html" title="statistics --- Mathematical statistics functions"
+          <a href="statistics.html" tppabs="https://docs.python.org/zh-cn/3/library/statistics.html" title="statistics --- 数学统计函数"
              >下一页</a> |</li>
         <li class="right" >
           <a href="fractions.html" tppabs="https://docs.python.org/zh-cn/3/library/fractions.html" title="fractions --- 分数"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="numeric.html" tppabs="https://docs.python.org/zh-cn/3/library/numeric.html" >数字和数学模块</a> &#187;</li>
@@ -537,15 +547,19 @@ Modeling and Computer Simulation Vol. 8, No. 1, January pp.3--30 1998.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

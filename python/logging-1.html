@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>日志 HOWTO &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>日志 HOWTO &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="日志操作手册" href="logging-cookbook.html" />
     <link rel="prev" title="函数式编程指引" href="functional.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/howto/logging.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="functional.html" tppabs="https://docs.python.org/zh-cn/3/howto/functional.html" title="函数式编程指引"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" accesskey="U">Python 常用指引</a> &#187;</li>
     <li class="right">
@@ -96,76 +104,73 @@
             
   <div class="section" id="logging-howto">
 <h1>日志 HOWTO<a class="headerlink" href="#logging-howto" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">作者:</th><td class="field-body">Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</p>
+</dd>
+</dl>
 <div class="section" id="basic-logging-tutorial">
 <span id="logging-basic-tutorial"></span><h2>日志基础教程<a class="headerlink" href="#basic-logging-tutorial" title="永久链接至标题">¶</a></h2>
 <p>日志是对软件执行时所发生事件的一种追踪方式。软件开发人员对他们的代码添加日志调用，借此来指示某事件的发生。一个事件通过一些包含变量数据的描述信息来描述（比如：每个事件发生时的数据都是不同的）。开发者还会区分事件的重要性，重要性也被称为 <em>等级</em> 或 <em>严重性</em></p>
 <div class="section" id="when-to-use-logging">
 <h3>什么时候使用日志<a class="headerlink" href="#when-to-use-logging" title="永久链接至标题">¶</a></h3>
 <p>对于简单的日志使用来说日志功能提供了一系列便利的函数。它们是 <a class="reference internal" href="logging.html#logging.debug" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.debug" title="logging.debug"><code class="xref py py-func docutils literal notranslate"><span class="pre">debug()</span></code></a>，<a class="reference internal" href="logging.html#logging.info" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.info" title="logging.info"><code class="xref py py-func docutils literal notranslate"><span class="pre">info()</span></code></a>，<a class="reference internal" href="logging.html#logging.warning" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.warning" title="logging.warning"><code class="xref py py-func docutils literal notranslate"><span class="pre">warning()</span></code></a>，<a class="reference internal" href="logging.html#logging.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.error" title="logging.error"><code class="xref py py-func docutils literal notranslate"><span class="pre">error()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.critical" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.critical" title="logging.critical"><code class="xref py py-func docutils literal notranslate"><span class="pre">critical()</span></code></a>。想要决定何时使用日志，请看下表，其中显示了对于每个通用任务集合来说最好的工具。</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="49%" />
-<col width="51%" />
+<col style="width: 49%" />
+<col style="width: 51%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">你想要执行的任务</th>
-<th class="head">此任务的最好的工具</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>你想要执行的任务</p></th>
+<th class="head"><p>此任务的最好的工具</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>对于命令行或程序的应用，结果显示在控制台。</td>
-<td><a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a></td>
+<tbody>
+<tr class="row-even"><td><p>对于命令行或程序的应用，结果显示在控制台。</p></td>
+<td><p><a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a></p></td>
 </tr>
-<tr class="row-odd"><td>在对程序的普通操作发生时提交事件报告(比如：状态监控和错误调查)</td>
-<td><a class="reference internal" href="logging.html#logging.info" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.info" title="logging.info"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.info()</span></code></a> 函数(当有诊断目的需要详细输出信息时使用 <a class="reference internal" href="logging.html#logging.debug" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.debug" title="logging.debug"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.debug()</span></code></a> 函数)</td>
+<tr class="row-odd"><td><p>在对程序的普通操作发生时提交事件报告(比如：状态监控和错误调查)</p></td>
+<td><p><a class="reference internal" href="logging.html#logging.info" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.info" title="logging.info"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.info()</span></code></a> 函数(当有诊断目的需要详细输出信息时使用 <a class="reference internal" href="logging.html#logging.debug" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.debug" title="logging.debug"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.debug()</span></code></a> 函数)</p></td>
 </tr>
-<tr class="row-even"><td>提出一个警告信息基于一个特殊的运行时事件</td>
-<td><p class="first"><a class="reference internal" href="warnings.html#warnings.warn" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#warnings.warn" title="warnings.warn"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.warn()</span></code></a> 位于代码库中，该事件是可以避免的，需要修改客户端应用以消除告警</p>
-<p class="last"><a class="reference internal" href="logging.html#logging.warning" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.warning" title="logging.warning"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.warning()</span></code></a> 不需要修改客户端应用，但是该事件还是需要引起关注</p>
+<tr class="row-even"><td><p>提出一个警告信息基于一个特殊的运行时事件</p></td>
+<td><p><a class="reference internal" href="warnings.html#warnings.warn" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#warnings.warn" title="warnings.warn"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.warn()</span></code></a> 位于代码库中，该事件是可以避免的，需要修改客户端应用以消除告警</p>
+<p><a class="reference internal" href="logging.html#logging.warning" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.warning" title="logging.warning"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.warning()</span></code></a> 不需要修改客户端应用，但是该事件还是需要引起关注</p>
 </td>
 </tr>
-<tr class="row-odd"><td>对一个特殊的运行时事件报告错误</td>
-<td>引发异常</td>
+<tr class="row-odd"><td><p>对一个特殊的运行时事件报告错误</p></td>
+<td><p>引发异常</p></td>
 </tr>
-<tr class="row-even"><td>报告错误而不引发异常(如在长时间运行中的服务端进程的错误处理)</td>
-<td><a class="reference internal" href="logging.html#logging.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.error" title="logging.error"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.error()</span></code></a>, <a class="reference internal" href="logging.html#logging.exception" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.exception" title="logging.exception"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.exception()</span></code></a> 或 <a class="reference internal" href="logging.html#logging.critical" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.critical" title="logging.critical"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.critical()</span></code></a> 分别适用于特定的错误及应用领域</td>
+<tr class="row-even"><td><p>报告错误而不引发异常(如在长时间运行中的服务端进程的错误处理)</p></td>
+<td><p><a class="reference internal" href="logging.html#logging.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.error" title="logging.error"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.error()</span></code></a>, <a class="reference internal" href="logging.html#logging.exception" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.exception" title="logging.exception"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.exception()</span></code></a> 或 <a class="reference internal" href="logging.html#logging.critical" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.critical" title="logging.critical"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.critical()</span></code></a> 分别适用于特定的错误及应用领域</p></td>
 </tr>
 </tbody>
 </table>
 <p>日志功能应以所追踪事件级别或严重性而定。各级别适用性如下（以严重性递增）：</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col style="width: 24%" />
+<col style="width: 76%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">级别</th>
-<th class="head">何时使用</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>级别</p></th>
+<th class="head"><p>何时使用</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></td>
-<td>细节信息，仅当诊断问题时适用。</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></p></td>
+<td><p>细节信息，仅当诊断问题时适用。</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">INFO</span></code></td>
-<td>确认程序按预期运行</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">INFO</span></code></p></td>
+<td><p>确认程序按预期运行</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">WARNING</span></code></td>
-<td>表明有已经或即将发生的意外（例如：磁盘空间不足）。程序仍按预期进行</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WARNING</span></code></p></td>
+<td><p>表明有已经或即将发生的意外（例如：磁盘空间不足）。程序仍按预期进行</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ERROR</span></code></td>
-<td>由于严重的问题，程序的某些功能已经不能正常执行</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ERROR</span></code></p></td>
+<td><p>由于严重的问题，程序的某些功能已经不能正常执行</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></td>
-<td>严重的错误，表明程序已不能继续执行</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p></td>
+<td><p>严重的错误，表明程序已不能继续执行</p></td>
 </tr>
 </tbody>
 </table>
@@ -289,7 +294,7 @@ INFO:So should this
 WARNING:And this, too
 </pre></div>
 </div>
-<p>请注意，前面示例中出现的“root”已消失。 对于可以出现在格式字符串中的全部内容，你可以参考以下文档 <a class="reference internal" href="logging.html#logrecord-attributes" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logrecord-attributes"><span class="std std-ref">LogRecord attributes</span></a> ，但为了简单使用，你只需要 <em>levelname</em> （严重性）， <em>message</em> （事件描述，包括可变数据），也许在事件发生时显示。 这将在下一节中介绍。</p>
+<p>请注意，前面示例中出现的“root”已消失。 对于可以出现在格式字符串中的全部内容，你可以参考以下文档 <a class="reference internal" href="logging.html#logrecord-attributes" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logrecord-attributes"><span class="std std-ref">LogRecord 属性</span></a> ，但为了简单使用，你只需要 <em>levelname</em> （严重性）， <em>message</em> （事件描述，包括可变数据），也许在事件发生时显示。 这将在下一节中介绍。</p>
 </div>
 <div class="section" id="displaying-the-date-time-in-messages">
 <h3>在消息中显示日期/时间<a class="headerlink" href="#displaying-the-date-time-in-messages" title="永久链接至标题">¶</a></h3>
@@ -303,7 +308,7 @@ WARNING:And this, too
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2010-12-12 11:41:42,612 is when this event was logged.
 </pre></div>
 </div>
-<p>日期/时间显示的默认格式（如上所示）类似于 ISO8601 或 <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/issue26721  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/issue26721'" tppabs="https://tools.ietf.org/html/rfc3339.html"><strong>RFC 3339</strong></a> 。 如果你需要更多地控制日期/时间的格式，请为 <code class="docutils literal notranslate"><span class="pre">basicConfig</span></code> 提供 <em>datefmt</em> 参数，如下例所示:</p>
+<p>日期/时间显示的默认格式（如上所示）类似于 ISO8601 或 <span class="target" id="index-2"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/issue38405  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://tools.ietf.org/html/issue38405'" tppabs="https://tools.ietf.org/html/rfc3339.html"><strong>RFC 3339</strong></a> 。 如果你需要更多地控制日期/时间的格式，请为 <code class="docutils literal notranslate"><span class="pre">basicConfig</span></code> 提供 <em>datefmt</em> 参数，如下例所示:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;is when this event was logged.&#39;</span><span class="p">)</span>
@@ -326,10 +331,10 @@ WARNING:And this, too
 <span id="logging-advanced-tutorial"></span><h2>进阶日志教程<a class="headerlink" href="#advanced-logging-tutorial" title="永久链接至标题">¶</a></h2>
 <p>日志库采用模块化方法，并提供几类组件：记录器、处理程序、过滤器和格式化程序。</p>
 <ul class="simple">
-<li>记录器暴露了应用程序代码直接使用的接口。</li>
-<li>处理程序将日志记录（由记录器创建）发送到适当的目标。</li>
-<li>过滤器提供了更精细的附加功能，用于确定要输出的日志记录。</li>
-<li>格式化程序指定最终输出中日志记录的样式。</li>
+<li><p>记录器暴露了应用程序代码直接使用的接口。</p></li>
+<li><p>处理程序将日志记录（由记录器创建）发送到适当的目标。</p></li>
+<li><p>过滤器提供了更精细的附加功能，用于确定要输出的日志记录。</p></li>
+<li><p>格式化程序指定最终输出中日志记录的样式。</p></li>
 </ul>
 <p>日志事件信息在 <a class="reference internal" href="logging.html#logging.LogRecord" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> 实例中的记录器、处理程序、过滤器和格式化程序之间传递。</p>
 <p>通过调用 <a class="reference internal" href="logging.html#logging.Logger" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger" title="logging.Logger"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logger</span></code></a> 类（以下称为 <em class="dfn">loggers</em>  ， 记录器）的实例来执行日志记录。 每个实例都有一个名称，它们在概念上以点（句点）作为分隔符排列在命名空间的层次结构中。 例如，名为 'scan' 的记录器是记录器 'scan.text' ，'scan.html' 和 'scan.pdf' 的父级。 记录器名称可以是你想要的任何名称，并指示记录消息源自的应用程序区域。</p>
@@ -349,7 +354,7 @@ WARNING:And this, too
 <div class="section" id="logging-flow">
 <h3>记录流程<a class="headerlink" href="#logging-flow" title="永久链接至标题">¶</a></h3>
 <p>记录器和处理程序中的日志事件信息流程如下图所示。</p>
-<img alt="../_images/logging_flow.png" src="issue27850" tppabs="https://docs.python.org/zh-cn/3/_images/logging_flow.png" />
+<img alt="../_images/logging_flow.png" src="issue38332" tppabs="https://docs.python.org/zh-cn/3/_images/logging_flow.png" />
 </div>
 <div class="section" id="loggers">
 <h3>记录器<a class="headerlink" href="#loggers" title="永久链接至标题">¶</a></h3>
@@ -357,16 +362,16 @@ WARNING:And this, too
 <p>记录器对象上使用最广泛的方法分为两类：配置和消息发送。</p>
 <p>这些是最常见的配置方法：</p>
 <ul class="simple">
-<li><a class="reference internal" href="logging.html#logging.Logger.setLevel" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.setLevel" title="logging.Logger.setLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.setLevel()</span></code></a> 指定记录器将处理的最低严重性日志消息，其中 debug 是最低内置严重性级别， critical 是最高内置严重性级别。 例如，如果严重性级别为 INFO ，则记录器将仅处理 INFO 、 WARNING 、 ERROR 和 CRITICAL 消息，并将忽略 DEBUG 消息。</li>
-<li><a class="reference internal" href="logging.html#logging.Logger.addHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.addHandler" title="logging.Logger.addHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.addHandler()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Logger.removeHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.removeHandler" title="logging.Logger.removeHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.removeHandler()</span></code></a> 从记录器对象中添加和删除处理程序对象。处理程序在以下内容中有更详细的介绍 <a class="reference internal" href="#handler-basic"><span class="std std-ref">处理程序</span></a> 。</li>
-<li><a class="reference internal" href="logging.html#logging.Logger.addFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.addFilter" title="logging.Logger.addFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.addFilter()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Logger.removeFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.removeFilter" title="logging.Logger.removeFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.removeFilter()</span></code></a> 可以添加或移除记录器对象中的过滤器。 <a class="reference internal" href="logging.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#filter"><span class="std std-ref">Filter Objects</span></a> 包含更多的过滤器细节。</li>
+<li><p><a class="reference internal" href="logging.html#logging.Logger.setLevel" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.setLevel" title="logging.Logger.setLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.setLevel()</span></code></a> 指定记录器将处理的最低严重性日志消息，其中 debug 是最低内置严重性级别， critical 是最高内置严重性级别。 例如，如果严重性级别为 INFO ，则记录器将仅处理 INFO 、 WARNING 、 ERROR 和 CRITICAL 消息，并将忽略 DEBUG 消息。</p></li>
+<li><p><a class="reference internal" href="logging.html#logging.Logger.addHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.addHandler" title="logging.Logger.addHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.addHandler()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Logger.removeHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.removeHandler" title="logging.Logger.removeHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.removeHandler()</span></code></a> 从记录器对象中添加和删除处理程序对象。处理程序在以下内容中有更详细的介绍 <a class="reference internal" href="#handler-basic"><span class="std std-ref">处理程序</span></a> 。</p></li>
+<li><p><a class="reference internal" href="logging.html#logging.Logger.addFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.addFilter" title="logging.Logger.addFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.addFilter()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Logger.removeFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.removeFilter" title="logging.Logger.removeFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.removeFilter()</span></code></a> 可以添加或移除记录器对象中的过滤器。 <a class="reference internal" href="logging.html#filter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#filter"><span class="std std-ref">Filter Objects</span></a> 包含更多的过滤器细节。</p></li>
 </ul>
 <p>你不需要始终在你创建的每个记录器上调用这些方法。 请参阅本节的最后两段。</p>
 <p>配置记录器对象后，以下方法将创建日志消息：</p>
 <ul class="simple">
-<li><a class="reference internal" href="logging.html#logging.Logger.debug" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.debug" title="logging.Logger.debug"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.debug()</span></code></a> 、 <a class="reference internal" href="logging.html#logging.Logger.info" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.info" title="logging.Logger.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.info()</span></code></a> 、 <a class="reference internal" href="logging.html#logging.Logger.warning" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.warning" title="logging.Logger.warning"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.warning()</span></code></a> 、 <a class="reference internal" href="logging.html#logging.Logger.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.error" title="logging.Logger.error"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.error()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Logger.critical" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.critical" title="logging.Logger.critical"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.critical()</span></code></a> 都创建日志记录，包含消息和与其各自方法名称对应的级别。该消息实际上是一个格式化字符串，它可能包含标题字符串替换语法 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 、 <code class="docutils literal notranslate"><span class="pre">%d</span></code> 、 <code class="docutils literal notranslate"><span class="pre">%f</span></code> 等等。其余参数是与消息中的替换字段对应的对象列表。关于 <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> ，日志记录方法只关注 <code class="docutils literal notranslate"><span class="pre">exc_info</span></code> 的关键字，并用它来确定是否记录异常信息。</li>
-<li><a class="reference internal" href="logging.html#logging.Logger.exception" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.exception" title="logging.Logger.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.exception()</span></code></a> 创建与 <a class="reference internal" href="logging.html#logging.Logger.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.error" title="logging.Logger.error"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.error()</span></code></a> 相似的日志信息。 不同之处是， <a class="reference internal" href="logging.html#logging.Logger.exception" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.exception" title="logging.Logger.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.exception()</span></code></a> 同时还记录当前的堆栈追踪。仅从异常处理程序调用此方法。</li>
-<li><a class="reference internal" href="logging.html#logging.Logger.log" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.log" title="logging.Logger.log"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.log()</span></code></a> 将日志级别作为显式参数。对于记录消息而言，这比使用上面列出的日志级别方便方法更加冗长，但这是自定义日志级别的方法。</li>
+<li><p><a class="reference internal" href="logging.html#logging.Logger.debug" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.debug" title="logging.Logger.debug"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.debug()</span></code></a> 、 <a class="reference internal" href="logging.html#logging.Logger.info" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.info" title="logging.Logger.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.info()</span></code></a> 、 <a class="reference internal" href="logging.html#logging.Logger.warning" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.warning" title="logging.Logger.warning"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.warning()</span></code></a> 、 <a class="reference internal" href="logging.html#logging.Logger.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.error" title="logging.Logger.error"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.error()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Logger.critical" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.critical" title="logging.Logger.critical"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.critical()</span></code></a> 都创建日志记录，包含消息和与其各自方法名称对应的级别。该消息实际上是一个格式化字符串，它可能包含标题字符串替换语法 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 、 <code class="docutils literal notranslate"><span class="pre">%d</span></code> 、 <code class="docutils literal notranslate"><span class="pre">%f</span></code> 等等。其余参数是与消息中的替换字段对应的对象列表。关于 <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> ，日志记录方法只关注 <code class="docutils literal notranslate"><span class="pre">exc_info</span></code> 的关键字，并用它来确定是否记录异常信息。</p></li>
+<li><p><a class="reference internal" href="logging.html#logging.Logger.exception" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.exception" title="logging.Logger.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.exception()</span></code></a> 创建与 <a class="reference internal" href="logging.html#logging.Logger.error" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.error" title="logging.Logger.error"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.error()</span></code></a> 相似的日志信息。 不同之处是， <a class="reference internal" href="logging.html#logging.Logger.exception" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.exception" title="logging.Logger.exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.exception()</span></code></a> 同时还记录当前的堆栈追踪。仅从异常处理程序调用此方法。</p></li>
+<li><p><a class="reference internal" href="logging.html#logging.Logger.log" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.log" title="logging.Logger.log"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Logger.log()</span></code></a> 将日志级别作为显式参数。对于记录消息而言，这比使用上面列出的日志级别方便方法更加冗长，但这是自定义日志级别的方法。</p></li>
 </ul>
 <p><a class="reference internal" href="logging.html#logging.getLogger" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.getLogger" title="logging.getLogger"><code class="xref py py-func docutils literal notranslate"><span class="pre">getLogger()</span></code></a> 返回对具有指定名称的记录器实例的引用（如果已提供），或者如果没有则返回 <code class="docutils literal notranslate"><span class="pre">root</span></code> 。名称是以句点分隔的层次结构。多次调用 <a class="reference internal" href="logging.html#logging.getLogger" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.getLogger" title="logging.getLogger"><code class="xref py py-func docutils literal notranslate"><span class="pre">getLogger()</span></code></a> 具有相同的名称将返回对同一记录器对象的引用。在分层列表中较低的记录器是列表中较高的记录器的子项。例如，给定一个名为 <code class="docutils literal notranslate"><span class="pre">foo</span></code> 的记录器，名称为 <code class="docutils literal notranslate"><span class="pre">foo.bar</span></code> 、 <code class="docutils literal notranslate"><span class="pre">foo.bar.baz</span></code> 和 <code class="docutils literal notranslate"><span class="pre">foo.bam</span></code> 的记录器都是 <code class="docutils literal notranslate"><span class="pre">foo</span></code> 子项。</p>
 <p>记录器具有 <em>有效等级</em> 的概念。如果未在记录器上显式设置级别，则使用其父级别作为其有效级别。如果父级没有明确的级别设置，则检查 <em>其</em> 父级。依此类推，搜索所有上级元素，直到找到明确设置的级别。根记录器始终具有显式级别集（默认情况下为 <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> ）。在决定是否处理事件时，记录器的有效级别用于确定事件是否传递给记录器的处理程序。</p>
@@ -378,9 +383,9 @@ WARNING:And this, too
 <p>标准库包含很多处理程序类型（参见 <a class="reference internal" href="#useful-handlers"><span class="std std-ref">有用的处理程序</span></a> ）；教程主要使用 <a class="reference internal" href="logging.handlers.html#logging.StreamHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> 和 <a class="reference internal" href="logging.handlers.html#logging.FileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> 。</p>
 <p>处理程序中很少有方法可供应用程序开发人员使用。与使用内置处理程序对象（即不创建自定义处理程序）的应用程序开发人员相关的唯一处理程序方法是以下配置方法：</p>
 <ul class="simple">
-<li><code class="xref py py-meth docutils literal notranslate"><span class="pre">setLevel()</span></code> 方法，就像在记录器对象中一样，指定将被分派到适当目标的最低严重性。为什么有两个 <code class="xref py py-func docutils literal notranslate"><span class="pre">setLevel()</span></code> 方法？记录器中设置的级别确定将传递给其处理程序的消息的严重性。每个处理程序中设置的级别确定处理程序将发送哪些消息。</li>
-<li><a class="reference internal" href="logging.html#logging.Handler.setFormatter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler.setFormatter" title="logging.Handler.setFormatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setFormatter()</span></code></a> 选择一个该处理程序使用的 Formatter 对象。</li>
-<li><a class="reference internal" href="logging.html#logging.Handler.addFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler.addFilter" title="logging.Handler.addFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addFilter()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Handler.removeFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler.removeFilter" title="logging.Handler.removeFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">removeFilter()</span></code></a> 分别在处理程序上配置和取消配置过滤器对象。</li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">setLevel()</span></code> 方法，就像在记录器对象中一样，指定将被分派到适当目标的最低严重性。为什么有两个 <code class="xref py py-func docutils literal notranslate"><span class="pre">setLevel()</span></code> 方法？记录器中设置的级别确定将传递给其处理程序的消息的严重性。每个处理程序中设置的级别确定处理程序将发送哪些消息。</p></li>
+<li><p><a class="reference internal" href="logging.html#logging.Handler.setFormatter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler.setFormatter" title="logging.Handler.setFormatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setFormatter()</span></code></a> 选择一个该处理程序使用的 Formatter 对象。</p></li>
+<li><p><a class="reference internal" href="logging.html#logging.Handler.addFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler.addFilter" title="logging.Handler.addFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addFilter()</span></code></a> 和 <a class="reference internal" href="logging.html#logging.Handler.removeFilter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler.removeFilter" title="logging.Handler.removeFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">removeFilter()</span></code></a> 分别在处理程序上配置和取消配置过滤器对象。</p></li>
 </ul>
 <p>应用程序代码不应直接实例化并使用 <a class="reference internal" href="logging.html#logging.Handler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> 的实例。 相反， <a class="reference internal" href="logging.html#logging.Handler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> 类是一个基类，它定义了所有处理程序应该具有的接口，并建立了子类可以使用（或覆盖）的一些默认行为。</p>
 </div>
@@ -389,7 +394,7 @@ WARNING:And this, too
 <p>格式化程序对象配置日志消息的最终顺序、结构和内容。 与 <a class="reference internal" href="logging.html#logging.Handler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Handler</span></code></a> 类不同，应用程序代码可以实例化格式化程序类，但如果应用程序需要特殊行为，则可能会对格式化程序进行子类化。构造函数有三个可选参数 —— 消息格式字符串、日期格式字符串和样式指示符。</p>
 <dl class="method">
 <dt id="logging.logging.Formatter.__init__">
-<code class="descclassname">logging.Formatter.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>fmt=None</em>, <em>datefmt=None</em>, <em>style='%'</em><span class="sig-paren">)</span><a class="headerlink" href="#logging.logging.Formatter.__init__" title="永久链接至目标">¶</a></dt>
+<code class="sig-prename descclassname">logging.Formatter.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">fmt=None</em>, <em class="sig-param">datefmt=None</em>, <em class="sig-param">style='%'</em><span class="sig-paren">)</span><a class="headerlink" href="#logging.logging.Formatter.__init__" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>如果没有消息格式字符串，则默认使用原始消息。如果没有日期格式字符串，则默认日期格式为：</p>
@@ -397,9 +402,9 @@ WARNING:And this, too
 </pre></div>
 </div>
 <p>最后加上毫秒数。 <code class="docutils literal notranslate"><span class="pre">style</span></code> 是 <cite>％</cite>，'{ ' 或 '$' 之一。 如果未指定其中一个，则将使用 '％'。</p>
-<p>如果 <code class="docutils literal notranslate"><span class="pre">style</span></code> 是 '％'，则消息格式字符串使用 <code class="docutils literal notranslate"><span class="pre">%(&lt;dictionary</span> <span class="pre">key&gt;)s</span></code> 样式字符串替换；可能的键值在 <a class="reference internal" href="logging.html#logrecord-attributes" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logrecord-attributes"><span class="std std-ref">LogRecord attributes</span></a> 中。 如果样式为 '{'，则假定消息格式字符串与 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> （使用关键字参数）兼容，而如果样式为 '$' ，则消息格式字符串应符合 <a class="reference internal" href="string.html#string.Template.substitute" tppabs="https://docs.python.org/zh-cn/3/library/string.html#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">string.Template.substitute()</span></code></a> 。</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">style</span></code> 是 '％'，则消息格式字符串使用 <code class="docutils literal notranslate"><span class="pre">%(&lt;dictionary</span> <span class="pre">key&gt;)s</span></code> 样式字符串替换；可能的键值在 <a class="reference internal" href="logging.html#logrecord-attributes" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logrecord-attributes"><span class="std std-ref">LogRecord 属性</span></a> 中。 如果样式为 '{'，则假定消息格式字符串与 <a class="reference internal" href="stdtypes.html#str.format" tppabs="https://docs.python.org/zh-cn/3/library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> （使用关键字参数）兼容，而如果样式为 '$' ，则消息格式字符串应符合 <a class="reference internal" href="string.html#string.Template.substitute" tppabs="https://docs.python.org/zh-cn/3/library/string.html#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">string.Template.substitute()</span></code></a> 。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span>添加 <code class="docutils literal notranslate"><span class="pre">style</span></code> 形参。</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>添加 <code class="docutils literal notranslate"><span class="pre">style</span></code> 形参。</p>
 </div>
 <p>以下消息格式字符串将以人类可读的格式记录时间、消息的严重性以及消息的内容，按此顺序:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span>
@@ -411,9 +416,9 @@ WARNING:And this, too
 <h3>配置日志记录<a class="headerlink" href="#configuring-logging" title="永久链接至标题">¶</a></h3>
 <p>开发者可以通过三种方式配置日志记录：</p>
 <ol class="arabic simple">
-<li>使用调用上面列出的配置方法的 Python 代码显式创建记录器、处理程序和格式化程序。</li>
-<li>创建日志配置文件并使用 <a class="reference internal" href="logging.config.html#logging.config.fileConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.fileConfig" title="logging.config.fileConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">fileConfig()</span></code></a> 函数读取它。</li>
-<li>创建配置信息字典并将其传递给 <a class="reference internal" href="logging.config.html#logging.config.dictConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> 函数。</li>
+<li><p>使用调用上面列出的配置方法的 Python 代码显式创建记录器、处理程序和格式化程序。</p></li>
+<li><p>创建日志配置文件并使用 <a class="reference internal" href="logging.config.html#logging.config.fileConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.fileConfig" title="logging.config.fileConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">fileConfig()</span></code></a> 函数读取它。</p></li>
+<li><p>创建配置信息字典并将其传递给 <a class="reference internal" href="logging.config.html#logging.config.dictConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> 函数。</p></li>
 </ol>
 <p>有关最后两个选项的参考文档，请参阅 <a class="reference internal" href="logging.config.html#logging-config-api" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging-config-api"><span class="std std-ref">Configuration functions</span></a> 。 以下示例使用 Python 代码配置一个非常简单的记录器/一个控制台处理程序和一个简单的格式化程序:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
@@ -511,9 +516,9 @@ WARNING:And this, too
 </div>
 <p>你可以看到配置文件方法比 Python 代码方法有一些优势，主要是配置和代码的分离以及非开发者轻松修改日志记录属性的能力。</p>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
+<p class="admonition-title">警告</p>
 <p><a class="reference internal" href="logging.config.html#logging.config.fileConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.fileConfig" title="logging.config.fileConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">fileConfig()</span></code></a> 函数接受一个默认参数 <code class="docutils literal notranslate"><span class="pre">disable_existing_loggers</span></code> ，出于向后兼容的原因，默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。这可能是你想要的，也可能不是你想要的，因为除非在配置中明确命名它们（或一个上级节点中），否则它将导致在 <a class="reference internal" href="logging.config.html#logging.config.fileConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.fileConfig" title="logging.config.fileConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">fileConfig()</span></code></a> 调用之前存在的任何非 root 记录器被禁用。有关更多信息，请参阅参考文档，如果需要，请为此参数指定 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
-<p class="last">传递给 <a class="reference internal" href="logging.config.html#logging.config.dictConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> 的字典也可以用键 <code class="docutils literal notranslate"><span class="pre">disable_existing_loggers</span></code> 指定一个布尔值，如果没有在字典中明确指定，也默认被解释为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。这会导致上面描述的记录器禁用行为，这可能不是你想要的——在这种情况下，明确地为键提供 <code class="docutils literal notranslate"><span class="pre">False</span></code> 值。</p>
+<p>传递给 <a class="reference internal" href="logging.config.html#logging.config.dictConfig" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> 的字典也可以用键 <code class="docutils literal notranslate"><span class="pre">disable_existing_loggers</span></code> 指定一个布尔值，如果没有在字典中明确指定，也默认被解释为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。这会导致上面描述的记录器禁用行为，这可能不是你想要的——在这种情况下，明确地为键提供 <code class="docutils literal notranslate"><span class="pre">False</span></code> 值。</p>
 </div>
 <p>请注意，配置文件中引用的类名称需要相对于日志记录模块，或者可以使用常规导入机制解析的绝对值。因此，你可以使用 <a class="reference internal" href="logging.handlers.html#logging.handlers.WatchedFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.WatchedFileHandler" title="logging.handlers.WatchedFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchedFileHandler</span></code></a> （相对于日志记录模块）或 <code class="docutils literal notranslate"><span class="pre">mypackage.mymodule.MyHandler</span></code> （对于在 <code class="docutils literal notranslate"><span class="pre">mypackage</span></code> 包中定义的类和模块 <code class="docutils literal notranslate"><span class="pre">mymodule</span></code> ，其中 <code class="docutils literal notranslate"><span class="pre">mypackage</span></code> 在Python导入路径上可用）。</p>
 <p>在 Python 3.2 中，引入了一种新的配置日志记录的方法，使用字典来保存配置信息。 这提供了上述基于配置文件方法的功能的超集，并且是新应用程序和部署的推荐配置方法。 因为 Python 字典用于保存配置信息，并且由于你可以使用不同的方式填充该字典，因此你有更多的配置选项。 例如，你可以使用 JSON 格式的配置文件，或者如果你有权访问 YAML 处理功能，则可以使用 YAML 格式的文件来填充配置字典。当然，你可以在 Python 代码中构造字典，通过套接字以 pickle 形式接收它，或者使用对你的应用程序合理的任何方法。</p>
@@ -545,12 +550,12 @@ WARNING:And this, too
 <p>如果未提供日志记录配置，则可能出现需要输出日志记录事件但无法找到输出事件的处理程序的情况。 在这些情况下，日志包的行为取决于 Python 版本。</p>
 <p>对于3.2之前的Python版本，行为如下：</p>
 <ul class="simple">
-<li>如果 <em>logging.raiseExceptions</em> 为 <code class="docutils literal notranslate"><span class="pre">False</span></code> （生产模式），则会以静默方式丢弃该事件。</li>
-<li>如果 <em>logging.raiseExceptions</em> 为 <code class="docutils literal notranslate"><span class="pre">True</span></code> （开发模式），则会打印一条消息“无法找到记录器 X.Y.Z 的处理程序”。</li>
+<li><p>如果 <em>logging.raiseExceptions</em> 为 <code class="docutils literal notranslate"><span class="pre">False</span></code> （生产模式），则会以静默方式丢弃该事件。</p></li>
+<li><p>如果 <em>logging.raiseExceptions</em> 为 <code class="docutils literal notranslate"><span class="pre">True</span></code> （开发模式），则会打印一条消息“无法找到记录器 X.Y.Z 的处理程序”。</p></li>
 </ul>
 <p>在 Python 3.2 及更高版本中，行为如下：</p>
 <ul class="simple">
-<li>事件使用“最后的处理程序”输出，存储在 <code class="docutils literal notranslate"><span class="pre">logging.lastResort</span></code> 中。 这个内部处理程序与任何记录器都没有关联，它的作用类似于 <a class="reference internal" href="logging.handlers.html#logging.StreamHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> ，它将事件描述消息写入 <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> 的当前值（因此服从任何可能的重定向影响）。 没有对消息进行格式化——只打印裸事件描述消息。处理程序的级别设置为“警告”，因此将输出此级别和更高级别的所有事件。</li>
+<li><p>事件使用“最后的处理程序”输出，存储在 <code class="docutils literal notranslate"><span class="pre">logging.lastResort</span></code> 中。 这个内部处理程序与任何记录器都没有关联，它的作用类似于 <a class="reference internal" href="logging.handlers.html#logging.StreamHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> ，它将事件描述消息写入 <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> 的当前值（因此服从任何可能的重定向影响）。 没有对消息进行格式化——只打印裸事件描述消息。处理程序的级别设置为“警告”，因此将输出此级别和更高级别的所有事件。</p></li>
 </ul>
 <p>要获得 3.2 之前的行为， <code class="docutils literal notranslate"><span class="pre">logging.lastResort</span></code> 可以设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 </div>
@@ -565,42 +570,42 @@ WARNING:And this, too
 </div>
 <p>应该有预计的效果。如果一个组织生成了许多库，则指定的记录器名称可以是 “orgname.foo” 而不仅仅是 “foo” 。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">强烈建议你 <em>不要将</em> <a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> <em>以外的任何处理程序添加到库的记录器中</em> 。这是因为处理程序的配置是使用你的库的应用程序开发人员的权利。应用程序开发人员了解他们的目标受众以及哪些处理程序最适合他们的应用程序：如果你在“底层”添加处理程序，则可能会干扰他们执行单元测试和提供符合其要求的日志的能力。</p>
+<p class="admonition-title">注解</p>
+<p>强烈建议你 <em>不要将</em> <a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> <em>以外的任何处理程序添加到库的记录器中</em> 。这是因为处理程序的配置是使用你的库的应用程序开发人员的权利。应用程序开发人员了解他们的目标受众以及哪些处理程序最适合他们的应用程序：如果你在“底层”添加处理程序，则可能会干扰他们执行单元测试和提供符合其要求的日志的能力。</p>
 </div>
 </div>
 </div>
 <div class="section" id="logging-levels">
 <h2>日志级别<a class="headerlink" href="#logging-levels" title="永久链接至标题">¶</a></h2>
 <p>日志记录级别的数值在下表中给出。如果你想要定义自己的级别，并且需要它们具有相对于预定义级别的特定值，那么这些内容可能是你感兴趣的。如果你定义具有相同数值的级别，它将覆盖预定义的值; 预定义的名称丢失。</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="48%" />
-<col width="52%" />
+<col style="width: 48%" />
+<col style="width: 52%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">级别</th>
-<th class="head">数值</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>级别</p></th>
+<th class="head"><p>数值</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></td>
-<td>50</td>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p></td>
+<td><p>50</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ERROR</span></code></td>
-<td>40</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ERROR</span></code></p></td>
+<td><p>40</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">WARNING</span></code></td>
-<td>30</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WARNING</span></code></p></td>
+<td><p>30</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">INFO</span></code></td>
-<td>20</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">INFO</span></code></p></td>
+<td><p>20</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></td>
-<td>10</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></p></td>
+<td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">NOTSET</span></code></td>
-<td>0</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NOTSET</span></code></p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
@@ -617,27 +622,27 @@ WARNING:And this, too
 <span id="id2"></span><h2>有用的处理程序<a class="headerlink" href="#useful-handlers" title="永久链接至标题">¶</a></h2>
 <p>作为 <a class="reference internal" href="logging.html#logging.Handler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> 基类的补充，提供了很多有用的子类：</p>
 <ol class="arabic simple">
-<li><a class="reference internal" href="logging.handlers.html#logging.StreamHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> 实例发送消息到流（类似文件对象）。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.FileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> 实例将消息发送到硬盘文件。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.BaseRotatingHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.BaseRotatingHandler" title="logging.handlers.BaseRotatingHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseRotatingHandler</span></code></a> 是轮换日志文件的处理程序的基类。它并不应该直接实例化。而应该使用 <a class="reference internal" href="logging.handlers.html#logging.handlers.RotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> 或 <a class="reference internal" href="logging.handlers.html#logging.handlers.TimedRotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.TimedRotatingFileHandler" title="logging.handlers.TimedRotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimedRotatingFileHandler</span></code></a> 代替它。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.RotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> 实例将消息发送到硬盘文件，支持最大日志文件大小和日志文件轮换。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.TimedRotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.TimedRotatingFileHandler" title="logging.handlers.TimedRotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimedRotatingFileHandler</span></code></a> 实例将消息发送到硬盘文件，以特定的时间间隔轮换日志文件。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.SocketHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> 实例将消息发送到 TCP/IP 套接字。从 3.4 开始，也支持 Unix 域套接字。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.DatagramHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.DatagramHandler" title="logging.handlers.DatagramHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatagramHandler</span></code></a> 实例将消息发送到 UDP 套接字。从 3.4 开始，也支持 Unix 域套接字。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.SMTPHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.SMTPHandler" title="logging.handlers.SMTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTPHandler</span></code></a> 实例将消息发送到指定的电子邮件地址。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.SysLogHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.SysLogHandler" title="logging.handlers.SysLogHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SysLogHandler</span></code></a> 实例将消息发送到 Unix syslog 守护程序，可能在远程计算机上。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.NTEventLogHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.NTEventLogHandler" title="logging.handlers.NTEventLogHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NTEventLogHandler</span></code></a> 实例将消息发送到 Windows NT/2000/XP 事件日志。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.MemoryHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.MemoryHandler" title="logging.handlers.MemoryHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryHandler</span></code></a> 实例将消息发送到内存中的缓冲区，只要满足特定条件，缓冲区就会刷新。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.HTTPHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.HTTPHandler" title="logging.handlers.HTTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPHandler</span></code></a> 实例使用 <code class="docutils literal notranslate"><span class="pre">GET</span></code> 或 <code class="docutils literal notranslate"><span class="pre">POST</span></code> 方法将消息发送到 HTTP 服务器。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.WatchedFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.WatchedFileHandler" title="logging.handlers.WatchedFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchedFileHandler</span></code></a> 实例会监视他们要写入日志的文件。如果文件发生更改，则会关闭该文件并使用文件名重新打开。此处理程序仅在类 Unix 系统上有用； Windows 不支持依赖的基础机制。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.handlers.QueueHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a> 实例将消息发送到队列，例如在 <a class="reference internal" href="queue.html#module-queue" tppabs="https://docs.python.org/zh-cn/3/library/queue.html#module-queue" title="queue: A synchronized queue class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code></a> 或 <a class="reference internal" href="multiprocessing.html#module-multiprocessing" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> 模块中实现的队列。</li>
-<li><a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> 实例对错误消息不执行任何操作。它们由想要使用日志记录的库开发人员使用，但是想要避免如果库用户没有配置日志记录，则显示 &quot;无法找到记录器XXX的消息处理器&quot; 消息的情况。有关更多信息，请参阅 <a class="reference internal" href="#library-config"><span class="std std-ref">配置库的日志记录</span></a> 。</li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.StreamHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> 实例发送消息到流（类似文件对象）。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.FileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> 实例将消息发送到硬盘文件。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.BaseRotatingHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.BaseRotatingHandler" title="logging.handlers.BaseRotatingHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseRotatingHandler</span></code></a> 是轮换日志文件的处理程序的基类。它并不应该直接实例化。而应该使用 <a class="reference internal" href="logging.handlers.html#logging.handlers.RotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> 或 <a class="reference internal" href="logging.handlers.html#logging.handlers.TimedRotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.TimedRotatingFileHandler" title="logging.handlers.TimedRotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimedRotatingFileHandler</span></code></a> 代替它。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.RotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> 实例将消息发送到硬盘文件，支持最大日志文件大小和日志文件轮换。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.TimedRotatingFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.TimedRotatingFileHandler" title="logging.handlers.TimedRotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimedRotatingFileHandler</span></code></a> 实例将消息发送到硬盘文件，以特定的时间间隔轮换日志文件。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.SocketHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> 实例将消息发送到 TCP/IP 套接字。从 3.4 开始，也支持 Unix 域套接字。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.DatagramHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.DatagramHandler" title="logging.handlers.DatagramHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatagramHandler</span></code></a> 实例将消息发送到 UDP 套接字。从 3.4 开始，也支持 Unix 域套接字。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.SMTPHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.SMTPHandler" title="logging.handlers.SMTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTPHandler</span></code></a> 实例将消息发送到指定的电子邮件地址。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.SysLogHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.SysLogHandler" title="logging.handlers.SysLogHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SysLogHandler</span></code></a> 实例将消息发送到 Unix syslog 守护程序，可能在远程计算机上。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.NTEventLogHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.NTEventLogHandler" title="logging.handlers.NTEventLogHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NTEventLogHandler</span></code></a> 实例将消息发送到 Windows NT/2000/XP 事件日志。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.MemoryHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.MemoryHandler" title="logging.handlers.MemoryHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryHandler</span></code></a> 实例将消息发送到内存中的缓冲区，只要满足特定条件，缓冲区就会刷新。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.HTTPHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.HTTPHandler" title="logging.handlers.HTTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPHandler</span></code></a> 实例使用 <code class="docutils literal notranslate"><span class="pre">GET</span></code> 或 <code class="docutils literal notranslate"><span class="pre">POST</span></code> 方法将消息发送到 HTTP 服务器。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.WatchedFileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.WatchedFileHandler" title="logging.handlers.WatchedFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchedFileHandler</span></code></a> 实例会监视他们要写入日志的文件。如果文件发生更改，则会关闭该文件并使用文件名重新打开。此处理程序仅在类 Unix 系统上有用； Windows 不支持依赖的基础机制。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.handlers.QueueHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a> 实例将消息发送到队列，例如在 <a class="reference internal" href="queue.html#module-queue" tppabs="https://docs.python.org/zh-cn/3/library/queue.html#module-queue" title="queue: A synchronized queue class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code></a> 或 <a class="reference internal" href="multiprocessing.html#module-multiprocessing" tppabs="https://docs.python.org/zh-cn/3/library/multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> 模块中实现的队列。</p></li>
+<li><p><a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> 实例对错误消息不执行任何操作。它们由想要使用日志记录的库开发人员使用，但是想要避免如果库用户没有配置日志记录，则显示 &quot;无法找到记录器XXX的消息处理器&quot; 消息的情况。有关更多信息，请参阅 <a class="reference internal" href="#library-config"><span class="std std-ref">配置库的日志记录</span></a> 。</p></li>
 </ol>
 <div class="versionadded">
-<p><span class="versionmodified">3.1 新版功能: </span><a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> 类。</p>
+<p><span class="versionmodified added">3.1 新版功能: </span><a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> 类。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 新版功能: </span><a class="reference internal" href="logging.handlers.html#logging.handlers.QueueHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a> 类。</p>
+<p><span class="versionmodified added">3.2 新版功能: </span><a class="reference internal" href="logging.handlers.html#logging.handlers.QueueHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a> 类。</p>
 </div>
 <p>The <a class="reference internal" href="logging.handlers.html#logging.NullHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> 、 <a class="reference internal" href="logging.handlers.html#logging.StreamHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> 和 <a class="reference internal" href="logging.handlers.html#logging.FileHandler" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> 类在核心日志包中定义。其他处理程序定义在 <a class="reference internal" href="logging.handlers.html#module-logging.handlers" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> 中。（还有另一个子模块 <a class="reference internal" href="logging.config.html#module-logging.config" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a> ，用于配置功能）</p>
 <p>记录的消息被格式化为通过 <a class="reference internal" href="logging.html#logging.Formatter" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> 类的实例进行呈现。 它们使用适合与 ％ 运算符一起使用的格式字符串和字典进行初始化。</p>
@@ -651,8 +656,8 @@ WARNING:And this, too
 <p><a class="reference internal" href="exceptions.html#SystemExit" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemExit</span></code></a> 和 <a class="reference internal" href="exceptions.html#KeyboardInterrupt" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a> 异常永远不会被忽略。 在 <a class="reference internal" href="logging.html#logging.Handler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> 子类的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">emit()</span></code> 方法中发生的其他异常被传递给它的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">handleError()</span></code> 方法。</p>
 <p><a class="reference internal" href="logging.html#logging.Handler" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> 中默认实现的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">handleError()</span></code> 检查是否设置了模块级变量 <code class="xref py py-data docutils literal notranslate"><span class="pre">raiseExceptions</span></code> 。如果有设置，则会将跟踪打印到 <a class="reference internal" href="sys.html#sys.stderr" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a> 。如果未设置，则忽略异常。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last"><code class="xref py py-data docutils literal notranslate"><span class="pre">raiseExceptions</span></code> 默认值是 <code class="docutils literal notranslate"><span class="pre">True</span></code>。 这是因为在开发期间，你通常希望收到任何发生异常的通知。建议你将 <code class="xref py py-data docutils literal notranslate"><span class="pre">raiseExceptions</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 以供生产环境使用。</p>
+<p class="admonition-title">注解</p>
+<p><code class="xref py py-data docutils literal notranslate"><span class="pre">raiseExceptions</span></code> 默认值是 <code class="docutils literal notranslate"><span class="pre">True</span></code>。 这是因为在开发期间，你通常希望收到任何发生异常的通知。建议你将 <code class="xref py py-data docutils literal notranslate"><span class="pre">raiseExceptions</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 以供生产环境使用。</p>
 </div>
 </div>
 <div class="section" id="using-arbitrary-objects-as-messages">
@@ -669,44 +674,44 @@ WARNING:And this, too
 </div>
 <p>因此，如果记录器的阈值设置在“DEBUG”以上，则永远不会调用 <code class="xref py py-func docutils literal notranslate"><span class="pre">expensive_func1()</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">expensive_func2()</span></code> 。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">在某些情况下， <a class="reference internal" href="logging.html#logging.Logger.isEnabledFor" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.isEnabledFor" title="logging.Logger.isEnabledFor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isEnabledFor()</span></code></a> 本身可能比你想要的更消耗资源（例如，对于深度嵌套的记录器，其中显式级别仅在记录器层次结构中设置为高）。在这种情况下（或者如果你想避免在紧密循环中调用方法），你可以在本地或实例变量中将调用的结果缓存到 <a class="reference internal" href="logging.html#logging.Logger.isEnabledFor" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.isEnabledFor" title="logging.Logger.isEnabledFor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isEnabledFor()</span></code></a> ，并使用它而不是调用每次方法。只在日志记录配置在应用程序运行时动态更改（这不常见）时需重新计算这样的缓存值。</p>
+<p class="admonition-title">注解</p>
+<p>在某些情况下， <a class="reference internal" href="logging.html#logging.Logger.isEnabledFor" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.isEnabledFor" title="logging.Logger.isEnabledFor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isEnabledFor()</span></code></a> 本身可能比你想要的更消耗资源（例如，对于深度嵌套的记录器，其中显式级别仅在记录器层次结构中设置为高）。在这种情况下（或者如果你想避免在紧密循环中调用方法），你可以在本地或实例变量中将调用的结果缓存到 <a class="reference internal" href="logging.html#logging.Logger.isEnabledFor" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#logging.Logger.isEnabledFor" title="logging.Logger.isEnabledFor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isEnabledFor()</span></code></a> ，并使用它而不是调用每次方法。只在日志记录配置在应用程序运行时动态更改（这不常见）时需重新计算这样的缓存值。</p>
 </div>
 <p>对于需要对收集的日志信息进行更精确控制的特定应用程序，还可以进行其他优化。 以下是你可以执行的操作列表，以避免在你不需要的日志记录期间进行处理：</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="54%" />
-<col width="46%" />
+<col style="width: 54%" />
+<col style="width: 46%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">你不想收集的内容</th>
-<th class="head">如何避免收集它</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>你不想收集的内容</p></th>
+<th class="head"><p>如何避免收集它</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>有关调用来源的信息</td>
-<td>将 <code class="docutils literal notranslate"><span class="pre">logging._srcfile</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。这避免了调用 <a class="reference internal" href="sys.html#sys._getframe" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a> ，如果 PyPy 支持 Python 3.x ,这可能有助于加速 PyPy （无法加速使用 <a class="reference internal" href="sys.html#sys._getframe" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a> 的代码）等环境中的代码.</td>
+<tbody>
+<tr class="row-even"><td><p>有关调用来源的信息</p></td>
+<td><p>将 <code class="docutils literal notranslate"><span class="pre">logging._srcfile</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。这避免了调用 <a class="reference internal" href="sys.html#sys._getframe" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a> ，如果 PyPy 支持 Python 3.x ,这可能有助于加速 PyPy （无法加速使用 <a class="reference internal" href="sys.html#sys._getframe" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a> 的代码）等环境中的代码.</p></td>
 </tr>
-<tr class="row-odd"><td>线程信息</td>
-<td>将 <code class="docutils literal notranslate"><span class="pre">logging.logThreads</span></code> 置为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 。</td>
+<tr class="row-odd"><td><p>线程信息</p></td>
+<td><p>将 <code class="docutils literal notranslate"><span class="pre">logging.logThreads</span></code> 置为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 。</p></td>
 </tr>
-<tr class="row-even"><td>进程信息</td>
-<td>将 <code class="docutils literal notranslate"><span class="pre">logging.logProcesses</span></code> 置为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 。</td>
+<tr class="row-even"><td><p>进程信息</p></td>
+<td><p>将 <code class="docutils literal notranslate"><span class="pre">logging.logProcesses</span></code> 置为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 。</p></td>
 </tr>
 </tbody>
 </table>
 <p>另请注意，核心日志记录模块仅包含基本处理程序。如果你不导入 <a class="reference internal" href="logging.handlers.html#module-logging.handlers" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> 和 <a class="reference internal" href="logging.config.html#module-logging.config" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a> ，它们将不会占用任何内存。</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<dl class="docutils">
-<dt>模块 <a class="reference internal" href="logging.html#module-logging" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt>
-<dd>日志记录模块的 API 参考。</dd>
-<dt>模块 <a class="reference internal" href="logging.config.html#module-logging.config" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt>
-<dd>日志记录模块的配置 API 。</dd>
-<dt>模块 <a class="reference internal" href="logging.handlers.html#module-logging.handlers" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a></dt>
-<dd>日志记录模块附带的有用处理程序。</dd>
+<p class="admonition-title">参见</p>
+<dl class="simple">
+<dt>模块 <a class="reference internal" href="logging.html#module-logging" tppabs="https://docs.python.org/zh-cn/3/library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt><dd><p>日志记录模块的 API 参考。</p>
+</dd>
+<dt>模块 <a class="reference internal" href="logging.config.html#module-logging.config" tppabs="https://docs.python.org/zh-cn/3/library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt><dd><p>日志记录模块的配置 API 。</p>
+</dd>
+<dt>模块 <a class="reference internal" href="logging.handlers.html#module-logging.handlers" tppabs="https://docs.python.org/zh-cn/3/library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a></dt><dd><p>日志记录模块附带的有用处理程序。</p>
+</dd>
 </dl>
-<p class="last"><a class="reference internal" href="logging-cookbook.html#logging-cookbook" tppabs="https://docs.python.org/zh-cn/3/howto/logging-cookbook.html#logging-cookbook"><span class="std std-ref">A logging cookbook</span></a></p>
+<p><a class="reference internal" href="logging-cookbook.html#logging-cookbook" tppabs="https://docs.python.org/zh-cn/3/howto/logging-cookbook.html#logging-cookbook"><span class="std std-ref">日志操作手册</span></a></p>
 </div>
 </div>
 </div>
@@ -717,7 +722,7 @@ WARNING:And this, too
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">日志 HOWTO</a><ul>
 <li><a class="reference internal" href="#basic-logging-tutorial">日志基础教程</a><ul>
@@ -764,7 +769,7 @@ WARNING:And this, too
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/howto/logging.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/howto/logging.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/howto/logging.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/howto/logging.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/howto/logging.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/howto/logging.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -789,14 +794,17 @@ WARNING:And this, too
         <li class="right" >
           <a href="functional.html" tppabs="https://docs.python.org/zh-cn/3/howto/functional.html" title="函数式编程指引"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" >Python 常用指引</a> &#187;</li>
     <li class="right">
@@ -817,15 +825,19 @@ WARNING:And this, too
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

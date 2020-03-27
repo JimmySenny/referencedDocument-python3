@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ipaddressæ¨¡å—ä»‹ç» &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>ipaddressæ¨¡å—ä»‹ç» &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="Argument Clinic How-To" href="clinic.html" />
     <link rel="prev" title="Argparse æ•™ç¨‹" href="argparse.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/howto/ipaddress.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="argparse-1.html" tppabs="https://docs.python.org/zh-cn/3/howto/argparse.html" title="Argparse æ•™ç¨‹"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" accesskey="U">Python å¸¸ç”¨æŒ‡å¼•</a> &#187;</li>
     <li class="right">
@@ -96,16 +104,14 @@
             
   <div class="section" id="an-introduction-to-the-ipaddress-module">
 <span id="ipaddress-howto"></span><h1>ipaddressæ¨¡å—ä»‹ç»<a class="headerlink" href="#an-introduction-to-the-ipaddress-module" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">ä½œè€…:</th><td class="field-body">Peter Moody</td>
-</tr>
-<tr class="field-even field"><th class="field-name">ä½œè€…:</th><td class="field-body">Nick Coghlan</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">ä½œè€…</dt>
+<dd class="field-odd"><p>Peter Moody</p>
+</dd>
+<dt class="field-even">ä½œè€…</dt>
+<dd class="field-even"><p>Nick Coghlan</p>
+</dd>
+</dl>
 <div class="topic">
 <p class="topic-title first">æ¦‚è¿°</p>
 <p>æœ¬æ–‡æ¡£æ—¨åœ¨ç®€è¦ä»‹ç» <a class="reference internal" href="ipaddress.html#module-ipaddress" tppabs="https://docs.python.org/zh-cn/3/library/ipaddress.html#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> æ¨¡å—ã€‚ å®ƒä¸»è¦é’ˆå¯¹é‚£äº›ä¸ç†Ÿæ‚‰ IP ç½‘ç»œæœ¯è¯­çš„ç”¨æˆ·ï¼Œä½†ä¹Ÿå¯èƒ½å¯¹æƒ³è¦é€Ÿè§ˆ <a class="reference internal" href="ipaddress.html#module-ipaddress" tppabs="https://docs.python.org/zh-cn/3/library/ipaddress.html#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> å¦‚ä½•ä»£è¡¨IPç½‘ç»œå¯»å€æ¦‚å¿µçš„ç½‘ç»œå·¥ç¨‹å¸ˆæœ‰ç”¨ã€‚</p>
@@ -121,7 +127,7 @@
 <div class="section" id="ip-host-addresses">
 <h3>IPä¸»æœºåœ°å€<a class="headerlink" href="#ip-host-addresses" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <p>é€šå¸¸ç§°ä¸ºâ€œä¸»æœºåœ°å€â€çš„åœ°å€æ˜¯ä½¿ç”¨IPå¯»å€æ—¶æœ€åŸºæœ¬çš„å•å…ƒã€‚ åˆ›å»ºåœ°å€çš„æœ€ç®€å•æ–¹æ³•æ˜¯ä½¿ç”¨ <a class="reference internal" href="ipaddress.html#ipaddress.ip_address" tppabs="https://docs.python.org/zh-cn/3/library/ipaddress.html#ipaddress.ip_address" title="ipaddress.ip_address"><code class="xref py py-func docutils literal notranslate"><span class="pre">ipaddress.ip_address()</span></code></a> å·¥å‚å‡½æ•°ï¼Œè¯¥å‡½æ•°æ ¹æ®ä¼ å…¥çš„å€¼è‡ªåŠ¨ç¡®å®šæ˜¯åˆ›å»º IPv4 è¿˜æ˜¯ IPv6 åœ°å€ï¼š</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_address</span><span class="p">(</span><span class="s1">&#39;192.0.2.1&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_address</span><span class="p">(</span><span class="s1">&#39;192.0.2.1&#39;</span><span class="p">)</span>
 <span class="go">IPv4Address(&#39;192.0.2.1&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_address</span><span class="p">(</span><span class="s1">&#39;2001:DB8::1&#39;</span><span class="p">)</span>
 <span class="go">IPv6Address(&#39;2001:db8::1&#39;)</span>
@@ -176,7 +182,7 @@
 <div class="section" id="host-interfaces">
 <h3>ä¸»æœºæ¥å£<a class="headerlink" href="#host-interfaces" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
 <p>å¦‚ä¸Šæ‰€è¿°ï¼Œå¦‚æœæ‚¨éœ€è¦æè¿°ç‰¹å®šç½‘ç»œä¸Šçš„åœ°å€ï¼Œåˆ™åœ°å€å’Œç½‘ç»œç±»éƒ½ä¸å¤Ÿã€‚ åƒ <code class="docutils literal notranslate"><span class="pre">192.0.2.1/24</span></code> è¿™æ ·çš„è¡¨ç¤ºæ³•é€šå¸¸è¢«ç½‘ç»œå·¥ç¨‹å¸ˆå’Œä¸ºé˜²ç«å¢™å’Œè·¯ç”±å™¨ç¼–å†™å·¥å…·çš„äººç”¨ä½œâ€œ <code class="docutils literal notranslate"><span class="pre">192.0.2.0/24</span></code> ç½‘ç»œä¸Šçš„ä¸»æœº <code class="docutils literal notranslate"><span class="pre">192.0.2.1</span></code> â€çš„ç®€å†™ã€‚å› æ­¤ï¼Œ<a class="reference internal" href="ipaddress.html#module-ipaddress" tppabs="https://docs.python.org/zh-cn/3/library/ipaddress.html#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> æä¾›äº†ä¸€ç»„å°†åœ°å€ä¸ç‰¹å®šç½‘ç»œç›¸å…³è”çš„æ··åˆç±»ã€‚ç”¨äºåˆ›å»ºçš„æ¥å£ä¸ç”¨äºå®šä¹‰ç½‘ç»œå¯¹è±¡çš„æ¥å£ç›¸åŒï¼Œé™¤äº†åœ°å€éƒ¨åˆ†ä¸é™äºæ˜¯ç½‘ç»œåœ°å€ã€‚</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_interface</span><span class="p">(</span><span class="s1">&#39;192.0.2.1/24&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_interface</span><span class="p">(</span><span class="s1">&#39;192.0.2.1/24&#39;</span><span class="p">)</span>
 <span class="go">IPv4Interface(&#39;192.0.2.1/24&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_interface</span><span class="p">(</span><span class="s1">&#39;2001:db8::1/96&#39;</span><span class="p">)</span>
 <span class="go">IPv6Interface(&#39;2001:db8::1/96&#39;)</span>
@@ -230,7 +236,7 @@
 </pre></div>
 </div>
 <p>è·å–ç½‘ç»œæ©ç ï¼ˆå³å¯¹åº”äºç½‘ç»œå‰ç¼€çš„è®¾ç½®ä½ï¼‰æˆ–ä¸»æœºæ©ç ï¼ˆä¸å±äºç½‘ç»œæ©ç çš„ä»»ä½•ä½ï¼‰ï¼š</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">net4</span> <span class="o">=</span> <span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_network</span><span class="p">(</span><span class="s1">&#39;192.0.2.0/24&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">net4</span> <span class="o">=</span> <span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_network</span><span class="p">(</span><span class="s1">&#39;192.0.2.0/24&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">net4</span><span class="o">.</span><span class="n">netmask</span>
 <span class="go">IPv4Address(&#39;255.255.255.0&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">net4</span><span class="o">.</span><span class="n">hostmask</span>
@@ -342,7 +348,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
 <li><a class="reference internal" href="#">ipaddressæ¨¡å—ä»‹ç»</a><ul>
 <li><a class="reference internal" href="#creating-address-network-interface-objects">åˆ›å»º Address/Network/Interface å¯¹è±¡</a><ul>
@@ -372,7 +378,7 @@
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/howto/ipaddress.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/howto/ipaddress.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/howto/ipaddress.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/howto/ipaddress.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/howto/ipaddress.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/howto/ipaddress.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -397,14 +403,17 @@
         <li class="right" >
           <a href="argparse-1.html" tppabs="https://docs.python.org/zh-cn/3/howto/argparse.html" title="Argparse æ•™ç¨‹"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-5.html" tppabs="https://docs.python.org/zh-cn/3/howto/index.html" >Python å¸¸ç”¨æŒ‡å¼•</a> &#187;</li>
     <li class="right">
@@ -425,15 +434,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

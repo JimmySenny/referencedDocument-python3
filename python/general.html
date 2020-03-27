@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Python常见问题 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>Python常见问题 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="版权所有" href="../copyright.html" />
     <link rel="next" title="编程常见问题" href="programming.html" />
     <link rel="prev" title="Python 常见问题" href="index.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/faq/general.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="index-10.html" tppabs="https://docs.python.org/zh-cn/3/faq/index.html" title="Python 常见问题"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-10.html" tppabs="https://docs.python.org/zh-cn/3/faq/index.html" accesskey="U">Python 常见问题</a> &#187;</li>
     <li class="right">
@@ -99,34 +107,37 @@
 <div class="contents topic" id="id1">
 <p class="topic-title first">目录</p>
 <ul class="simple">
-<li><a class="reference internal" href="#general-python-faq" id="id3">Python常见问题</a><ul>
-<li><a class="reference internal" href="#general-information" id="id4">一般信息</a><ul>
-<li><a class="reference internal" href="#what-is-python" id="id5">什么是 Python？</a></li>
-<li><a class="reference internal" href="#what-is-the-python-software-foundation" id="id6">什么是 Python 软件基金会？</a></li>
-<li><a class="reference internal" href="#are-there-copyright-restrictions-on-the-use-of-python" id="id7">使用 Python 是否存在版权限制？</a></li>
-<li><a class="reference internal" href="#why-was-python-created-in-the-first-place" id="id8">创造 Python 的最初理由是什么？</a></li>
-<li><a class="reference internal" href="#what-is-python-good-for" id="id9">Python 适合做什么？</a></li>
-<li><a class="reference internal" href="#how-does-the-python-version-numbering-scheme-work" id="id10">Python 版本的编号形式是怎样的？</a></li>
-<li><a class="reference internal" href="#how-do-i-obtain-a-copy-of-the-python-source" id="id11">我应如何获取一份 Python 源代码的副本？</a></li>
-<li><a class="reference internal" href="#how-do-i-get-documentation-on-python" id="id12">我应如何获取 Python 的文档？</a></li>
-<li><a class="reference internal" href="#i-ve-never-programmed-before-is-there-a-python-tutorial" id="id13">我之前从未接触过编程。 哪里有 Python 的教程？</a></li>
-<li><a class="reference internal" href="#is-there-a-newsgroup-or-mailing-list-devoted-to-python" id="id14">是否有专门针对 Python 的新闻组或邮件列表？</a></li>
-<li><a class="reference internal" href="#how-do-i-get-a-beta-test-version-of-python" id="id15">我应如何获取 Python 的公开测试版本？</a></li>
-<li><a class="reference internal" href="#how-do-i-submit-bug-reports-and-patches-for-python" id="id16">我应如何为 Python 提交错误报告和补丁？</a></li>
-<li><a class="reference internal" href="#are-there-any-published-articles-about-python-that-i-can-reference" id="id17">是否有任何公开发表的 Python 相关文章可以供我参考引用？</a></li>
-<li><a class="reference internal" href="#are-there-any-books-on-python" id="id18">是否有任何 Python 相关的书籍？</a></li>
-<li><a class="reference internal" href="#where-in-the-world-is-www-python-org-located" id="id19">www.python.org 具体位于世界上的哪个地点？</a></li>
-<li><a class="reference internal" href="#why-is-it-called-python" id="id20">为何命名为 Python？</a></li>
-<li><a class="reference internal" href="#do-i-have-to-like-monty-python-s-flying-circus" id="id21">我必须喜欢 &quot;Monty Python 的飞行马戏团&quot; 吗？</a></li>
+<li><p><a class="reference internal" href="#general-python-faq" id="id3">Python常见问题</a></p>
+<ul>
+<li><p><a class="reference internal" href="#general-information" id="id4">一般信息</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-python" id="id5">什么是 Python？</a></p></li>
+<li><p><a class="reference internal" href="#what-is-the-python-software-foundation" id="id6">什么是 Python 软件基金会？</a></p></li>
+<li><p><a class="reference internal" href="#are-there-copyright-restrictions-on-the-use-of-python" id="id7">使用 Python 是否存在版权限制？</a></p></li>
+<li><p><a class="reference internal" href="#why-was-python-created-in-the-first-place" id="id8">创造 Python 的最初理由是什么？</a></p></li>
+<li><p><a class="reference internal" href="#what-is-python-good-for" id="id9">Python 适合做什么？</a></p></li>
+<li><p><a class="reference internal" href="#how-does-the-python-version-numbering-scheme-work" id="id10">Python 版本的编号形式是怎样的？</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-obtain-a-copy-of-the-python-source" id="id11">我应如何获取一份 Python 源代码的副本？</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-get-documentation-on-python" id="id12">我应如何获取 Python 的文档？</a></p></li>
+<li><p><a class="reference internal" href="#i-ve-never-programmed-before-is-there-a-python-tutorial" id="id13">我之前从未接触过编程。 哪里有 Python 的教程？</a></p></li>
+<li><p><a class="reference internal" href="#is-there-a-newsgroup-or-mailing-list-devoted-to-python" id="id14">是否有专门针对 Python 的新闻组或邮件列表？</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-get-a-beta-test-version-of-python" id="id15">我应如何获取 Python 的公开测试版本？</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-submit-bug-reports-and-patches-for-python" id="id16">我应如何为 Python 提交错误报告和补丁？</a></p></li>
+<li><p><a class="reference internal" href="#are-there-any-published-articles-about-python-that-i-can-reference" id="id17">是否有任何公开发表的 Python 相关文章可以供我参考引用？</a></p></li>
+<li><p><a class="reference internal" href="#are-there-any-books-on-python" id="id18">是否有任何 Python 相关的书籍？</a></p></li>
+<li><p><a class="reference internal" href="#where-in-the-world-is-www-python-org-located" id="id19">www.python.org 具体位于世界上的哪个地点？</a></p></li>
+<li><p><a class="reference internal" href="#why-is-it-called-python" id="id20">为何命名为 Python？</a></p></li>
+<li><p><a class="reference internal" href="#do-i-have-to-like-monty-python-s-flying-circus" id="id21">我必须喜欢 &quot;Monty Python 的飞行马戏团&quot; 吗？</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#python-in-the-real-world" id="id22">现实世界中的 Python</a><ul>
-<li><a class="reference internal" href="#how-stable-is-python" id="id23">Python 有多稳定？</a></li>
-<li><a class="reference internal" href="#how-many-people-are-using-python" id="id24">有多少人在使用 Python？</a></li>
-<li><a class="reference internal" href="#have-any-significant-projects-been-done-in-python" id="id25">有哪些重要的项目是用 Python 开发的？</a></li>
-<li><a class="reference internal" href="#what-new-developments-are-expected-for-python-in-the-future" id="id26">在未来可以期待 Python 将有什么新进展？</a></li>
-<li><a class="reference internal" href="#is-it-reasonable-to-propose-incompatible-changes-to-python" id="id27">提议对 Python 加入不兼容的更改是否合理？</a></li>
-<li><a class="reference internal" href="#is-python-a-good-language-for-beginning-programmers" id="id28">Python 是一种对编程初学者友好的语言吗？</a></li>
+<li><p><a class="reference internal" href="#python-in-the-real-world" id="id22">现实世界中的 Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-stable-is-python" id="id23">Python 有多稳定？</a></p></li>
+<li><p><a class="reference internal" href="#how-many-people-are-using-python" id="id24">有多少人在使用 Python？</a></p></li>
+<li><p><a class="reference internal" href="#have-any-significant-projects-been-done-in-python" id="id25">有哪些重要的项目是用 Python 开发的？</a></p></li>
+<li><p><a class="reference internal" href="#what-new-developments-are-expected-for-python-in-the-future" id="id26">在未来可以期待 Python 将有什么新进展？</a></p></li>
+<li><p><a class="reference internal" href="#is-it-reasonable-to-propose-incompatible-changes-to-python" id="id27">提议对 Python 加入不兼容的更改是否合理？</a></p></li>
+<li><p><a class="reference internal" href="#is-python-a-good-language-for-beginning-programmers" id="id28">Python 是一种对编程初学者友好的语言吗？</a></p></li>
 </ul>
 </li>
 </ul>
@@ -170,7 +181,7 @@
 </div>
 <div class="section" id="how-does-the-python-version-numbering-scheme-work">
 <h3><a class="toc-backref" href="#id10">Python 版本的编号形式是怎样的？</a><a class="headerlink" href="#how-does-the-python-version-numbering-scheme-work" title="永久链接至标题">¶</a></h3>
-<p>Python 版本的编号形式是 A.B.C 或 A.B。 A 称为大版本号 —— 它仅在对语言特性进行非常重大改变时才会递增。 B 称为小版本号，它会在语言特性发生较小改变时递增。 C 称为微版本号 —— 它会在每次发布问题修正时递增。 请参阅 <span class="target" id="index-4"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/issue6422  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/issue6422'" tppabs="https://www.python.org/dev/peps/pep-0006"><strong>PEP 6</strong></a> 了解有关问题修正发布版的详情。</p>
+<p>Python 版本的编号形式是 A.B.C 或 A.B。 A 称为大版本号 —— 它仅在对语言特性进行非常重大改变时才会递增。 B 称为小版本号，它会在语言特性发生较小改变时递增。 C 称为微版本号 —— 它会在每次发布问题修正时递增。 请参阅 <span class="target" id="index-4"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/issue38319  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/issue38319'" tppabs="https://www.python.org/dev/peps/pep-0006"><strong>PEP 6</strong></a> 了解有关问题修正发布版的详情。</p>
 <p>发布版本并非都是问题修正版本。 在新的主要发布版本开发过程中，还会发布一系列的开发版，它们以 alpha (a), beta (b) 或 release candidate (rc) 来标示。 其中 alpha 版是早期发布的测试版，它的接口并未最终确定；在两个 alpha 发布版本间出现接口的改变并不意外。 而 beta 版更为稳定，它会保留现有的接口，但也可能增加新的模块，release candidate 版则会保持冻结状态不会再进行改变，除非有重大问题需要修正。</p>
 <p>以上 alpha, beta 和 release candidate 版本会附加一个后缀。 用于 alpha 版本的后缀是带有一个小数字 N 的 “aN”，beta 版本的后缀是带有一个小数字 N 的“bN”，release candidate 版本的后缀是带有一个小数字 N 的“cN”。 换句话说，所有标记为 2.0aN 的版本都早于标记为 2.0bN 的版本，后者又都早于标记为 2.0cN 的版本，而 <em>这些版本</em> 全都早于 2.0。</p>
 <p>你还可能看到带有“+”后缀的版本号，例如“2.2+”。 这表示未发布版本，直接基于 CPython 开发代码仓库构建。 在实际操作中，当一个小版本最终发布后，未发布版本号会递增到下一个小版本号，成为“a0”版本，例如“2.4a0”。</p>
@@ -194,8 +205,8 @@
 </div>
 <div class="section" id="is-there-a-newsgroup-or-mailing-list-devoted-to-python">
 <h3><a class="toc-backref" href="#id14">是否有专门针对 Python 的新闻组或邮件列表？</a><a class="headerlink" href="#is-there-a-newsgroup-or-mailing-list-devoted-to-python" title="永久链接至标题">¶</a></h3>
-<p>有一个新闻组 <em class="newsgroup">comp.lang.python</em> 和一个邮件列表 <a class="reference external" href="javascript:if(confirm('https://mail.python.org/mailman/listinfo/issue23552  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mail.python.org/mailman/listinfo/issue23552'" tppabs="https://mail.python.org/mailman/listinfo/python-list">python-list</a>。 新闻组和邮件列表是彼此互通的 —— 如果你可以阅读新闻就不必再订阅邮件列表。 <em class="newsgroup">comp.lang.python</em> 的流量很大，每天会收到数以百计的发帖，Usenet 使用者通常更擅长处理这样大的流量。</p>
-<p>有关新软件发布和活动的公告可以在 comp.lang.python.announce 中找到，这是个严格管理的低流量列表，每天会收到五个左右的发帖。 可以在 <a class="reference external" href="javascript:if(confirm('https://mail.python.org/mailman/listinfo/issue22115  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mail.python.org/mailman/listinfo/issue22115'" tppabs="https://mail.python.org/mailman/listinfo/python-announce-list">Python 公告邮件列表</a> 页面进行订阅。</p>
+<p>有一个新闻组 <em class="newsgroup">comp.lang.python</em> 和一个邮件列表 <a class="reference external" href="javascript:if(confirm('https://mail.python.org/mailman/listinfo/issue38242  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mail.python.org/mailman/listinfo/issue38242'" tppabs="https://mail.python.org/mailman/listinfo/python-list">python-list</a>。 新闻组和邮件列表是彼此互通的 —— 如果你可以阅读新闻就不必再订阅邮件列表。 <em class="newsgroup">comp.lang.python</em> 的流量很大，每天会收到数以百计的发帖，Usenet 使用者通常更擅长处理这样大的流量。</p>
+<p>有关新软件发布和活动的公告可以在 comp.lang.python.announce 中找到，这是个严格管理的低流量列表，每天会收到五个左右的发帖。 可以在 <a class="reference external" href="javascript:if(confirm('https://mail.python.org/mailman/listinfo/issue38019  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mail.python.org/mailman/listinfo/issue38019'" tppabs="https://mail.python.org/mailman/listinfo/python-announce-list">Python 公告邮件列表</a> 页面进行订阅。</p>
 <p>有关其他邮件列表和新闻组的更多信息可以在 <a class="reference external" href="javascript:if(confirm('https://www.python.org/community/lists/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/community/lists/'" tppabs="https://www.python.org/community/lists/">https://www.python.org/community/lists/</a> 找到。</p>
 </div>
 <div class="section" id="how-do-i-get-a-beta-test-version-of-python">
@@ -206,7 +217,7 @@
 <div class="section" id="how-do-i-submit-bug-reports-and-patches-for-python">
 <h3><a class="toc-backref" href="#id16">我应如何为 Python 提交错误报告和补丁？</a><a class="headerlink" href="#how-do-i-submit-bug-reports-and-patches-for-python" title="永久链接至标题">¶</a></h3>
 <p>要报告错误或提交补丁，请使用安装于 <a class="reference external" href="javascript:if(confirm('https://bugs.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://bugs.python.org/'" tppabs="https://bugs.python.org/">https://bugs.python.org/</a> 上的 Roundup。</p>
-<p>你必须拥有一个 Roundup 账号才能报告错误；这样我们就可以在有后续问题时与你联系。 这也使得 Roundup 能在我们处理所报告的错误时向你发送更新消息。 如果你之前使用过 SourceForge 向 Python 报告错误，你可以通过 Roundup 的 <a class="reference external" href="javascript:if(confirm('https://bugs.python.org/issue26588  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://bugs.python.org/issue26588'" tppabs="https://bugs.python.org/user?@template=forgotten">密码重置操作</a> 来获取你的 Roundup 密码。</p>
+<p>你必须拥有一个 Roundup 账号才能报告错误；这样我们就可以在有后续问题时与你联系。 这也使得 Roundup 能在我们处理所报告的错误时向你发送更新消息。 如果你之前使用过 SourceForge 向 Python 报告错误，你可以通过 Roundup 的 <a class="reference external" href="javascript:if(confirm('https://bugs.python.org/issue38163  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://bugs.python.org/issue38163'" tppabs="https://bugs.python.org/user?@template=forgotten">密码重置操作</a> 来获取你的 Roundup 密码。</p>
 <p>有关 Python 开发流程的更多信息，请参阅 <a class="reference external" href="javascript:if(confirm('https://devguide.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://devguide.python.org/'" tppabs="https://devguide.python.org/">Python 开发者指南</a>。</p>
 </div>
 <div class="section" id="are-there-any-published-articles-about-python-that-i-can-reference">
@@ -214,7 +225,8 @@
 <p>可能作为参考文献的最好方式还是引用你喜欢的 Python 相关书籍。</p>
 <p>第一篇有关 Python 的文章写于 1991 年，现在其内容已经相当过时了。</p>
 <blockquote>
-<div>Guido van Rossum 与 Jelke de Boer, &quot;使用 Python 编程语言交互式地测试远程服务器&quot;, CWI 季刊, 第 4 卷, 第 4 期 (1991 年 12 月), 阿姆斯特丹, 第 283--303 页。</div></blockquote>
+<div><p>Guido van Rossum 与 Jelke de Boer, &quot;使用 Python 编程语言交互式地测试远程服务器&quot;, CWI 季刊, 第 4 卷, 第 4 期 (1991 年 12 月), 阿姆斯特丹, 第 283--303 页。</p>
+</div></blockquote>
 </div>
 <div class="section" id="are-there-any-books-on-python">
 <h3><a class="toc-backref" href="#id18">是否有任何 Python 相关的书籍？</a><a class="headerlink" href="#are-there-any-books-on-python" title="永久链接至标题">¶</a></h3>
@@ -227,7 +239,7 @@
 </div>
 <div class="section" id="why-is-it-called-python">
 <h3><a class="toc-backref" href="#id20">为何命名为 Python？</a><a class="headerlink" href="#why-is-it-called-python" title="永久链接至标题">¶</a></h3>
-<p>在着手编写 Python 实现的时候，Guido van Rossum 同时还阅读了刚出版的 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/195  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/195'" tppabs="https://en.wikipedia.org/wiki/Monty_Python">&quot;Monty Python 的飞行马戏团&quot;</a> 剧本，这是一部自 1970 年代开始播出的 BBC 系列喜剧。 Van Rossum 觉得他需要选择一个简短、独特而又略显神秘的名字，于是他决定将这个新语言命名为 Python。</p>
+<p>在着手编写 Python 实现的时候，Guido van Rossum 同时还阅读了刚出版的 <a class="reference external" href="javascript:if(confirm('https://en.wikipedia.org/wiki/issue38161  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://en.wikipedia.org/wiki/issue38161'" tppabs="https://en.wikipedia.org/wiki/Monty_Python">&quot;Monty Python 的飞行马戏团&quot;</a> 剧本，这是一部自 1970 年代开始播出的 BBC 系列喜剧。 Van Rossum 觉得他需要选择一个简短、独特而又略显神秘的名字，于是他决定将这个新语言命名为 Python。</p>
 </div>
 <div class="section" id="do-i-have-to-like-monty-python-s-flying-circus">
 <h3><a class="toc-backref" href="#id21">我必须喜欢 &quot;Monty Python 的飞行马戏团&quot; 吗？</a><a class="headerlink" href="#do-i-have-to-like-monty-python-s-flying-circus" title="永久链接至标题">¶</a></h3>
@@ -240,7 +252,7 @@
 <h3><a class="toc-backref" href="#id23">Python 有多稳定？</a><a class="headerlink" href="#how-stable-is-python" title="永久链接至标题">¶</a></h3>
 <p>非常稳定。 自 1991 年起大约每隔 6 到 18 个月就会推出新的稳定发布版，这种状态看来还将持续下去。 目前主要发布版本的间隔通常为 18 个月左右。</p>
 <p>开发者也会推出旧版本的“问题修正”发布版，因此现有发布版的稳定性还会逐步提升。 问题修正发布版会以版本号第三部分的数字来标示（例如 3.5.3, 3.6.2），用于稳定性的管理；只有对已知问题的修正会包含在问题修正发布版中，同一系列的问题修正发布版中的接口确定将会始终保持一致。</p>
-<p>最新的稳定版本总是可以在 <a class="reference external" href="javascript:if(confirm('https://www.python.org/downloads/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/downloads/'" tppabs="https://www.python.org/downloads/">Python下载页面</a> 上找到。有两个生产环境可用版本的 Python ： 2.x 和 3.x 。 推荐的版本是 3.x ，大多数广泛使用的库都支持它。虽然 2.x 仍然被广泛使用，但它将在2020年1月1日之后不再维护 &lt;<a class="reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0373/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0373/'" tppabs="https://www.python.org/dev/peps/pep-0373/">https://www.python.org/dev/peps/pep-0373/</a>&gt;`_ 。</p>
+<p>最新的稳定版本总是可以在 <a class="reference external" href="javascript:if(confirm('https://www.python.org/downloads/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/downloads/'" tppabs="https://www.python.org/downloads/">Python 下载页面</a> 上找到。有两个生产环境可用的 Python 版本： 2.x 和 3.x。 推荐的版本是 3.x，大多数广泛使用的库都支持它。 虽然 2.x 仍然被广泛使用，但它 <a class="reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0373/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/dev/peps/pep-0373/'" tppabs="https://www.python.org/dev/peps/pep-0373/">在 2020 年 1 月 1 日之后将不再维护</a>。</p>
 </div>
 <div class="section" id="how-many-people-are-using-python">
 <h3><a class="toc-backref" href="#id24">有多少人在使用 Python？</a><a class="headerlink" href="#how-many-people-are-using-python" title="永久链接至标题">¶</a></h3>
@@ -250,7 +262,7 @@
 </div>
 <div class="section" id="have-any-significant-projects-been-done-in-python">
 <h3><a class="toc-backref" href="#id25">有哪些重要的项目是用 Python 开发的？</a><a class="headerlink" href="#have-any-significant-projects-been-done-in-python" title="永久链接至标题">¶</a></h3>
-<p>请访问 <a class="reference external" href="javascript:if(confirm('https://www.python.org/about/280  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/about/280'" tppabs="https://www.python.org/about/success">https://www.python.org/about/success</a> 查看使用了 Python 的项目列表。 阅览 <a class="reference external" href="javascript:if(confirm('https://www.python.org/community/workshops/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/community/workshops/'" tppabs="https://www.python.org/community/workshops/">历次 Python 会议</a> 的日程纪要可以看到许多不同公司和组织所做的贡献。</p>
+<p>请访问 <a class="reference external" href="javascript:if(confirm('https://www.python.org/about/issue38216  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/about/issue38216'" tppabs="https://www.python.org/about/success">https://www.python.org/about/success</a> 查看使用了 Python 的项目列表。 阅览 <a class="reference external" href="javascript:if(confirm('https://www.python.org/community/workshops/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/community/workshops/'" tppabs="https://www.python.org/community/workshops/">历次 Python 会议</a> 的日程纪要可以看到许多不同公司和组织所做的贡献。</p>
 <p>高水准的 Python 项目包括 <a class="reference external" href="javascript:if(confirm('http://www.list.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.list.org/'" tppabs="http://www.list.org/">Mailman 邮件列表管理器</a> 和 <a class="reference external" href="javascript:if(confirm('http://www.zope.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.zope.org/'" tppabs="http://www.zope.org/">Zope 应用服务器</a>。 多个 Linux 发行版，其中最著名的有 <a class="reference external" href="javascript:if(confirm('https://www.redhat.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.redhat.com/'" tppabs="https://www.redhat.com/">Red Hat</a> 均已使用 Python 来编写部分或全部的安装程序和系统管理软件。 在内部使用 Python 的大公司包括了 Google, Yahoo 以及 Lucasfilm 等。</p>
 </div>
 <div class="section" id="what-new-developments-are-expected-for-python-in-the-future">
@@ -296,8 +308,8 @@
 </pre></div>
 </div>
 <p>通过使用解释器，学生编写程序时参考文档总是能伴随在他们身边。</p>
-<p>Python 还拥有很好的 IDE。 IDLE 是一个跨平台的 Python IDE，它基于 Tkinter 库，使用 Python 语言编写。  PythonWin 是一个 Windows 专属的 IDE。 Emacs 用户将高兴地了解到 Emacs 具有非常好的 Python 模式。  所有这些编程环境都提供语法高亮，自动缩进以及在编写代码时使用交互式解释器等功能。 请访问 <a class="reference external" href="javascript:if(confirm('https://wiki.python.org/moin/issue28003  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://wiki.python.org/moin/issue28003'" tppabs="https://wiki.python.org/moin/PythonEditors">Python wiki</a> 查看 Python 编程环境的完整列表。</p>
-<p>如果你想要讨论 Python 在教育中的使用，你可能会有兴趣加入 <a class="reference external" href="javascript:if(confirm('https://www.python.org/community/sigs/current/230  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/community/sigs/current/230'" tppabs="https://www.python.org/community/sigs/current/edu-sig">edu-sig 邮件列表</a>。</p>
+<p>Python 还拥有很好的 IDE。 IDLE 是一个跨平台的 Python IDE，它基于 Tkinter 库，使用 Python 语言编写。  PythonWin 是一个 Windows 专属的 IDE。 Emacs 用户将高兴地了解到 Emacs 具有非常好的 Python 模式。  所有这些编程环境都提供语法高亮，自动缩进以及在编写代码时使用交互式解释器等功能。 请访问 <a class="reference external" href="javascript:if(confirm('https://wiki.python.org/moin/issue38686  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://wiki.python.org/moin/issue38686'" tppabs="https://wiki.python.org/moin/PythonEditors">Python wiki</a> 查看 Python 编程环境的完整列表。</p>
+<p>如果你想要讨论 Python 在教育中的使用，你可能会有兴趣加入 <a class="reference external" href="javascript:if(confirm('https://www.python.org/community/sigs/current/issue30458  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/community/sigs/current/issue30458'" tppabs="https://www.python.org/community/sigs/current/edu-sig">edu-sig 邮件列表</a>。</p>
 </div>
 </div>
 </div>
@@ -308,7 +320,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Python常见问题</a><ul>
 <li><a class="reference internal" href="#general-information">一般信息</a></li>
@@ -328,7 +340,7 @@
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/faq/general.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/faq/general.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/faq/general.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/faq/general.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/faq/general.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/faq/general.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -353,14 +365,17 @@
         <li class="right" >
           <a href="index-10.html" tppabs="https://docs.python.org/zh-cn/3/faq/index.html" title="Python 常见问题"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-10.html" tppabs="https://docs.python.org/zh-cn/3/faq/index.html" >Python 常见问题</a> &#187;</li>
     <li class="right">
@@ -381,15 +396,19 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

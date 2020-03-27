@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>uuid --- UUID objects according to RFC 4122 &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>uuid --- UUID objects according to RFC 4122 &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="socketserver --- A framework for network servers" href="socketserver.html" />
     <link rel="prev" title="telnetlib --- Telnet client" href="telnetlib.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/uuid.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="telnetlib.html" tppabs="https://docs.python.org/zh-cn/3/library/telnetlib.html" title="telnetlib --- Telnet client"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="internet.html" tppabs="https://docs.python.org/zh-cn/3/library/internet.html" accesskey="U">äº’è”ç½‘åè®®å’Œæ”¯æŒ</a> &#187;</li>
@@ -97,7 +105,7 @@
             
   <div class="section" id="module-uuid">
 <span id="uuid-uuid-objects-according-to-rfc-4122"></span><h1><a class="reference internal" href="#module-uuid" title="uuid: UUID objects (universally unique identifiers) according to RFC 4122"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uuid</span></code></a> --- UUID objects according to <span class="target" id="index-0"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4122.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc4122.html'" tppabs="https://tools.ietf.org/html/rfc4122.html"><strong>RFC 4122</strong></a><a class="headerlink" href="#module-uuid" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/uuid.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/uuid.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/uuid.py">Lib/uuid.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue38883  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue38883'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/uuid.py">Lib/uuid.py</a></p>
 <hr class="docutils" />
 <p>This module provides immutable <a class="reference internal" href="#uuid.UUID" title="uuid.UUID"><code class="xref py py-class docutils literal notranslate"><span class="pre">UUID</span></code></a> objects (the <a class="reference internal" href="#uuid.UUID" title="uuid.UUID"><code class="xref py py-class docutils literal notranslate"><span class="pre">UUID</span></code></a> class)
 and the functions <a class="reference internal" href="#uuid.uuid1" title="uuid.uuid1"><code class="xref py py-func docutils literal notranslate"><span class="pre">uuid1()</span></code></a>, <a class="reference internal" href="#uuid.uuid3" title="uuid.uuid3"><code class="xref py py-func docutils literal notranslate"><span class="pre">uuid3()</span></code></a>, <a class="reference internal" href="#uuid.uuid4" title="uuid.uuid4"><code class="xref py py-func docutils literal notranslate"><span class="pre">uuid4()</span></code></a>, <a class="reference internal" href="#uuid.uuid5" title="uuid.uuid5"><code class="xref py py-func docutils literal notranslate"><span class="pre">uuid5()</span></code></a> for
@@ -113,25 +121,25 @@ UUID.  All instances of <a class="reference internal" href="#uuid.UUID" title="u
 which relays any information about the UUID's safety, using this enumeration:</p>
 <dl class="class">
 <dt id="uuid.SafeUUID">
-<em class="property">class </em><code class="descclassname">uuid.</code><code class="descname">SafeUUID</code><a class="headerlink" href="#uuid.SafeUUID" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">SafeUUID</code><a class="headerlink" href="#uuid.SafeUUID" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><div class="versionadded">
-<p><span class="versionmodified">3.7 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.7 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 <dl class="attribute">
 <dt id="uuid.SafeUUID.safe">
-<code class="descname">safe</code><a class="headerlink" href="#uuid.SafeUUID.safe" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">safe</code><a class="headerlink" href="#uuid.SafeUUID.safe" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID was generated by the platform in a multiprocessing-safe way.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.SafeUUID.unsafe">
-<code class="descname">unsafe</code><a class="headerlink" href="#uuid.SafeUUID.unsafe" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">unsafe</code><a class="headerlink" href="#uuid.SafeUUID.unsafe" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID was not generated in a multiprocessing-safe way.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.SafeUUID.unknown">
-<code class="descname">unknown</code><a class="headerlink" href="#uuid.SafeUUID.unknown" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-name descname">unknown</code><a class="headerlink" href="#uuid.SafeUUID.unknown" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The platform does not provide information on whether the UUID was
 generated safely or not.</p>
 </dd></dl>
@@ -140,7 +148,7 @@ generated safely or not.</p>
 
 <dl class="class">
 <dt id="uuid.UUID">
-<em class="property">class </em><code class="descclassname">uuid.</code><code class="descname">UUID</code><span class="sig-paren">(</span><em>hex=None</em>, <em>bytes=None</em>, <em>bytes_le=None</em>, <em>fields=None</em>, <em>int=None</em>, <em>version=None</em>, <em>*</em>, <em>is_safe=SafeUUID.unknown</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.UUID" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">UUID</code><span class="sig-paren">(</span><em class="sig-param">hex=None</em>, <em class="sig-param">bytes=None</em>, <em class="sig-param">bytes_le=None</em>, <em class="sig-param">fields=None</em>, <em class="sig-param">int=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">*</em>, <em class="sig-param">is_safe=SafeUUID.unknown</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.UUID" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Create a UUID from either a string of 32 hexadecimal digits, a string of 16
 bytes in big-endian order as the <em>bytes</em> argument, a string of 16 bytes in
 little-endian order as the <em>bytes_le</em> argument, a tuple of six integers
@@ -175,57 +183,56 @@ represent the UUID.</p>
 <p><a class="reference internal" href="#uuid.UUID" title="uuid.UUID"><code class="xref py py-class docutils literal notranslate"><span class="pre">UUID</span></code></a> instances have these read-only attributes:</p>
 <dl class="attribute">
 <dt id="uuid.UUID.bytes">
-<code class="descclassname">UUID.</code><code class="descname">bytes</code><a class="headerlink" href="#uuid.UUID.bytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">bytes</code><a class="headerlink" href="#uuid.UUID.bytes" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID as a 16-byte string (containing the six integer fields in big-endian
 byte order).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.UUID.bytes_le">
-<code class="descclassname">UUID.</code><code class="descname">bytes_le</code><a class="headerlink" href="#uuid.UUID.bytes_le" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">bytes_le</code><a class="headerlink" href="#uuid.UUID.bytes_le" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID as a 16-byte string (with <em>time_low</em>, <em>time_mid</em>, and <em>time_hi_version</em>
 in little-endian byte order).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.UUID.fields">
-<code class="descclassname">UUID.</code><code class="descname">fields</code><a class="headerlink" href="#uuid.UUID.fields" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
-<dd><p>A tuple of the six integer fields of the UUID, which are also available as six
-individual attributes and two derived attributes:</p>
-<table border="1" class="docutils">
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">fields</code><a class="headerlink" href="#uuid.UUID.fields" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<dd><p>ä»¥å…ƒç»„å½¢å¼å­˜æ”¾çš„UUIDçš„6ä¸ªæ•´æ•°åŸŸï¼Œæœ‰å…­ä¸ªå•ç‹¬çš„å±æ€§å’Œä¸¤ä¸ªæ´¾ç”Ÿå±æ€§ï¼š</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="49%" />
-<col width="51%" />
+<col style="width: 49%" />
+<col style="width: 51%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Field</th>
-<th class="head">æ„ä¹‰</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>åŸŸ</p></th>
+<th class="head"><p>æ„ä¹‰</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">time_low</span></code></td>
-<td>the first 32 bits of the UUID</td>
+<tbody>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">time_low</span></code></p></td>
+<td><p>UUIDçš„å‰32ä½</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">time_mid</span></code></td>
-<td>the next 16 bits of the UUID</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">time_mid</span></code></p></td>
+<td><p>æ¥å‰ä¸€åŸŸçš„16ä½</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">time_hi_version</span></code></td>
-<td>the next 16 bits of the UUID</td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">time_hi_version</span></code></p></td>
+<td><p>æ¥å‰ä¸€åŸŸçš„16ä½</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">clock_seq_hi_variant</span></code></td>
-<td>the next 8 bits of the UUID</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">clock_seq_hi_variant</span></code></p></td>
+<td><p>æ¥å‰ä¸€åŸŸçš„8ä½</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">clock_seq_low</span></code></td>
-<td>the next 8 bits of the UUID</td>
+<tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">clock_seq_low</span></code></p></td>
+<td><p>æ¥å‰ä¸€åŸŸçš„8ä½</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">node</span></code></td>
-<td>the last 48 bits of the UUID</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">node</span></code></p></td>
+<td><p>UUIDçš„æœ€å48ä½</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-attr docutils literal notranslate"><span class="pre">time</span></code></a></td>
-<td>the 60-bit timestamp</td>
+<tr class="row-even"><td><p><a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-attr docutils literal notranslate"><span class="pre">time</span></code></a></p></td>
+<td><p>UUIDçš„æ€»é•¿60ä½çš„æ—¶é—´æˆ³</p></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-attr docutils literal notranslate"><span class="pre">clock_seq</span></code></td>
-<td>the 14-bit sequence number</td>
+<tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">clock_seq</span></code></p></td>
+<td><p>14ä½çš„åºåˆ—å·</p></td>
 </tr>
 </tbody>
 </table>
@@ -233,25 +240,25 @@ individual attributes and two derived attributes:</p>
 
 <dl class="attribute">
 <dt id="uuid.UUID.hex">
-<code class="descclassname">UUID.</code><code class="descname">hex</code><a class="headerlink" href="#uuid.UUID.hex" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">hex</code><a class="headerlink" href="#uuid.UUID.hex" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID as a 32-character hexadecimal string.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.UUID.int">
-<code class="descclassname">UUID.</code><code class="descname">int</code><a class="headerlink" href="#uuid.UUID.int" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">int</code><a class="headerlink" href="#uuid.UUID.int" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID as a 128-bit integer.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.UUID.urn">
-<code class="descclassname">UUID.</code><code class="descname">urn</code><a class="headerlink" href="#uuid.UUID.urn" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">urn</code><a class="headerlink" href="#uuid.UUID.urn" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID as a URN as specified in <span class="target" id="index-3"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4122.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc4122.html'" tppabs="https://tools.ietf.org/html/rfc4122.html"><strong>RFC 4122</strong></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.UUID.variant">
-<code class="descclassname">UUID.</code><code class="descname">variant</code><a class="headerlink" href="#uuid.UUID.variant" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">variant</code><a class="headerlink" href="#uuid.UUID.variant" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID variant, which determines the internal layout of the UUID. This will be
 one of the constants <a class="reference internal" href="#uuid.RESERVED_NCS" title="uuid.RESERVED_NCS"><code class="xref py py-const docutils literal notranslate"><span class="pre">RESERVED_NCS</span></code></a>, <a class="reference internal" href="#uuid.RFC_4122" title="uuid.RFC_4122"><code class="xref py py-const docutils literal notranslate"><span class="pre">RFC_4122</span></code></a>,
 <a class="reference internal" href="#uuid.RESERVED_MICROSOFT" title="uuid.RESERVED_MICROSOFT"><code class="xref py py-const docutils literal notranslate"><span class="pre">RESERVED_MICROSOFT</span></code></a>, or <a class="reference internal" href="#uuid.RESERVED_FUTURE" title="uuid.RESERVED_FUTURE"><code class="xref py py-const docutils literal notranslate"><span class="pre">RESERVED_FUTURE</span></code></a>.</p>
@@ -259,25 +266,25 @@ one of the constants <a class="reference internal" href="#uuid.RESERVED_NCS" tit
 
 <dl class="attribute">
 <dt id="uuid.UUID.version">
-<code class="descclassname">UUID.</code><code class="descname">version</code><a class="headerlink" href="#uuid.UUID.version" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">version</code><a class="headerlink" href="#uuid.UUID.version" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>The UUID version number (1 through 5, meaningful only when the variant is
 <a class="reference internal" href="#uuid.RFC_4122" title="uuid.RFC_4122"><code class="xref py py-const docutils literal notranslate"><span class="pre">RFC_4122</span></code></a>).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="uuid.UUID.is_safe">
-<code class="descclassname">UUID.</code><code class="descname">is_safe</code><a class="headerlink" href="#uuid.UUID.is_safe" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">UUID.</code><code class="sig-name descname">is_safe</code><a class="headerlink" href="#uuid.UUID.is_safe" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>An enumeration of <a class="reference internal" href="#uuid.SafeUUID" title="uuid.SafeUUID"><code class="xref py py-class docutils literal notranslate"><span class="pre">SafeUUID</span></code></a> which indicates whether the platform
 generated the UUID in a multiprocessing-safe way.</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.7 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.7 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
 </dd></dl>
 
 <p>The <a class="reference internal" href="#module-uuid" title="uuid: UUID objects (universally unique identifiers) according to RFC 4122"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uuid</span></code></a> module defines the following functions:</p>
 <dl class="function">
 <dt id="uuid.getnode">
-<code class="descclassname">uuid.</code><code class="descname">getnode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uuid.getnode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">getnode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uuid.getnode" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Get the hardware address as a 48-bit positive integer.  The first time this
 runs, it may launch a separate program, which could be quite slow.  If all
 attempts to obtain the hardware address fail, we choose a random 48-bit
@@ -288,7 +295,7 @@ interfaces, universally administered MAC addresses (i.e. where the second
 least significant bit of the first octet is <em>unset</em>) will be preferred over
 locally administered MAC addresses, but with no other ordering guarantees.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">åœ¨ 3.7 ç‰ˆæ›´æ”¹: </span>Universally administered MAC addresses are preferred over locally
+<p><span class="versionmodified changed">åœ¨ 3.7 ç‰ˆæ›´æ”¹: </span>Universally administered MAC addresses are preferred over locally
 administered MAC addresses, since the former are guaranteed to be
 globally unique, while the latter are not.</p>
 </div>
@@ -296,7 +303,7 @@ globally unique, while the latter are not.</p>
 
 <span class="target" id="index-5"></span><dl class="function">
 <dt id="uuid.uuid1">
-<code class="descclassname">uuid.</code><code class="descname">uuid1</code><span class="sig-paren">(</span><em>node=None</em>, <em>clock_seq=None</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">uuid1</code><span class="sig-paren">(</span><em class="sig-param">node=None</em>, <em class="sig-param">clock_seq=None</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid1" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Generate a UUID from a host ID, sequence number, and the current time. If <em>node</em>
 is not given, <a class="reference internal" href="#uuid.getnode" title="uuid.getnode"><code class="xref py py-func docutils literal notranslate"><span class="pre">getnode()</span></code></a> is used to obtain the hardware address. If
 <em>clock_seq</em> is given, it is used as the sequence number; otherwise a random
@@ -305,20 +312,20 @@ is not given, <a class="reference internal" href="#uuid.getnode" title="uuid.get
 
 <span class="target" id="index-6"></span><dl class="function">
 <dt id="uuid.uuid3">
-<code class="descclassname">uuid.</code><code class="descname">uuid3</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid3" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">uuid3</code><span class="sig-paren">(</span><em class="sig-param">namespace</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid3" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Generate a UUID based on the MD5 hash of a namespace identifier (which is a
 UUID) and a name (which is a string).</p>
 </dd></dl>
 
 <span class="target" id="index-7"></span><dl class="function">
 <dt id="uuid.uuid4">
-<code class="descclassname">uuid.</code><code class="descname">uuid4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid4" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">uuid4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid4" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Generate a random UUID.</p>
 </dd></dl>
 
 <span class="target" id="index-8"></span><dl class="function">
 <dt id="uuid.uuid5">
-<code class="descclassname">uuid.</code><code class="descname">uuid5</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid5" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">uuid5</code><span class="sig-paren">(</span><em class="sig-param">namespace</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.uuid5" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Generate a UUID based on the SHA-1 hash of a namespace identifier (which is a
 UUID) and a name (which is a string).</p>
 </dd></dl>
@@ -327,26 +334,26 @@ UUID) and a name (which is a string).</p>
 <a class="reference internal" href="#uuid.uuid3" title="uuid.uuid3"><code class="xref py py-func docutils literal notranslate"><span class="pre">uuid3()</span></code></a> or <a class="reference internal" href="#uuid.uuid5" title="uuid.uuid5"><code class="xref py py-func docutils literal notranslate"><span class="pre">uuid5()</span></code></a>.</p>
 <dl class="data">
 <dt id="uuid.NAMESPACE_DNS">
-<code class="descclassname">uuid.</code><code class="descname">NAMESPACE_DNS</code><a class="headerlink" href="#uuid.NAMESPACE_DNS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">NAMESPACE_DNS</code><a class="headerlink" href="#uuid.NAMESPACE_DNS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>When this namespace is specified, the <em>name</em> string is a fully-qualified domain
 name.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="uuid.NAMESPACE_URL">
-<code class="descclassname">uuid.</code><code class="descname">NAMESPACE_URL</code><a class="headerlink" href="#uuid.NAMESPACE_URL" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">NAMESPACE_URL</code><a class="headerlink" href="#uuid.NAMESPACE_URL" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>When this namespace is specified, the <em>name</em> string is a URL.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="uuid.NAMESPACE_OID">
-<code class="descclassname">uuid.</code><code class="descname">NAMESPACE_OID</code><a class="headerlink" href="#uuid.NAMESPACE_OID" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">NAMESPACE_OID</code><a class="headerlink" href="#uuid.NAMESPACE_OID" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>When this namespace is specified, the <em>name</em> string is an ISO OID.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="uuid.NAMESPACE_X500">
-<code class="descclassname">uuid.</code><code class="descname">NAMESPACE_X500</code><a class="headerlink" href="#uuid.NAMESPACE_X500" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">NAMESPACE_X500</code><a class="headerlink" href="#uuid.NAMESPACE_X500" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>When this namespace is specified, the <em>name</em> string is an X.500 DN in DER or a
 text output format.</p>
 </dd></dl>
@@ -355,34 +362,34 @@ text output format.</p>
 of the <code class="xref py py-attr docutils literal notranslate"><span class="pre">variant</span></code> attribute:</p>
 <dl class="data">
 <dt id="uuid.RESERVED_NCS">
-<code class="descclassname">uuid.</code><code class="descname">RESERVED_NCS</code><a class="headerlink" href="#uuid.RESERVED_NCS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">RESERVED_NCS</code><a class="headerlink" href="#uuid.RESERVED_NCS" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Reserved for NCS compatibility.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="uuid.RFC_4122">
-<code class="descclassname">uuid.</code><code class="descname">RFC_4122</code><a class="headerlink" href="#uuid.RFC_4122" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">RFC_4122</code><a class="headerlink" href="#uuid.RFC_4122" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Specifies the UUID layout given in <span class="target" id="index-10"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4122.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc4122.html'" tppabs="https://tools.ietf.org/html/rfc4122.html"><strong>RFC 4122</strong></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="uuid.RESERVED_MICROSOFT">
-<code class="descclassname">uuid.</code><code class="descname">RESERVED_MICROSOFT</code><a class="headerlink" href="#uuid.RESERVED_MICROSOFT" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">RESERVED_MICROSOFT</code><a class="headerlink" href="#uuid.RESERVED_MICROSOFT" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Reserved for Microsoft compatibility.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="uuid.RESERVED_FUTURE">
-<code class="descclassname">uuid.</code><code class="descname">RESERVED_FUTURE</code><a class="headerlink" href="#uuid.RESERVED_FUTURE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">uuid.</code><code class="sig-name descname">RESERVED_FUTURE</code><a class="headerlink" href="#uuid.RESERVED_FUTURE" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Reserved for future definition.</p>
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">å‚è§</p>
-<dl class="last docutils">
-<dt><span class="target" id="index-11"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4122.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc4122.html'" tppabs="https://tools.ietf.org/html/rfc4122.html"><strong>RFC 4122</strong></a> - A Universally Unique IDentifier (UUID) URN Namespace</dt>
-<dd>This specification defines a Uniform Resource Name namespace for UUIDs, the
-internal format of UUIDs, and methods of generating UUIDs.</dd>
+<p class="admonition-title">å‚è§</p>
+<dl class="simple">
+<dt><span class="target" id="index-11"></span><a class="rfc reference external" href="javascript:if(confirm('https://tools.ietf.org/html/rfc4122.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://tools.ietf.org/html/rfc4122.html'" tppabs="https://tools.ietf.org/html/rfc4122.html"><strong>RFC 4122</strong></a> - A Universally Unique IDentifier (UUID) URN Namespace</dt><dd><p>This specification defines a Uniform Resource Name namespace for UUIDs, the
+internal format of UUIDs, and methods of generating UUIDs.</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="example">
@@ -431,9 +438,9 @@ internal format of UUIDs, and methods of generating UUIDs.</dd>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">uuid</span></code> --- UUID objects according to <strong>RFC 4122</strong></a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uuid</span></code> --- UUID objects according to <strong>RFC 4122</strong></a><ul>
 <li><a class="reference internal" href="#example">ç¤ºä¾‹</a></li>
 </ul>
 </li>
@@ -441,16 +448,16 @@ internal format of UUIDs, and methods of generating UUIDs.</dd>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="telnetlib.html" tppabs="https://docs.python.org/zh-cn/3/library/telnetlib.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">telnetlib</span></code> --- Telnet client</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">telnetlib</span></code> --- Telnet client</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="socketserver.html" tppabs="https://docs.python.org/zh-cn/3/library/socketserver.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">socketserver</span></code> --- A framework for network servers</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">socketserver</span></code> --- A framework for network servers</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/uuid.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/uuid.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/uuid.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/uuid.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/uuid.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/uuid.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -475,14 +482,17 @@ internal format of UUIDs, and methods of generating UUIDs.</dd>
         <li class="right" >
           <a href="telnetlib.html" tppabs="https://docs.python.org/zh-cn/3/library/telnetlib.html" title="telnetlib --- Telnet client"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="internet.html" tppabs="https://docs.python.org/zh-cn/3/library/internet.html" >äº’è”ç½‘åè®®å’Œæ”¯æŒ</a> &#187;</li>
@@ -504,15 +514,19 @@ internal format of UUIDs, and methods of generating UUIDs.</dd>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

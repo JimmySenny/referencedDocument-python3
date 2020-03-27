@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>sysconfig --- Provide access to Python&#39;s configuration information &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>sysconfig --- Provide access to Python&#39;s configuration information &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="builtins --- å†…å»ºå¯¹è±¡" href="builtins.html" />
     <link rel="prev" title="sys --- ç³»ç»Ÿç›¸å…³çš„å‚æ•°å’Œå‡½æ•°" href="sys.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/sysconfig.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -61,14 +66,17 @@
         <li class="right" >
           <a href="sys.html" tppabs="https://docs.python.org/zh-cn/3/library/sys.html" title="sys --- ç³»ç»Ÿç›¸å…³çš„å‚æ•°å’Œå‡½æ•°"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="python.html" tppabs="https://docs.python.org/zh-cn/3/library/python.html" accesskey="U">Pythonè¿è¡Œæ—¶æœåŠ¡</a> &#187;</li>
@@ -98,9 +106,9 @@
   <div class="section" id="module-sysconfig">
 <span id="sysconfig-provide-access-to-python-s-configuration-information"></span><h1><a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a> --- Provide access to Python's configuration information<a class="headerlink" href="#module-sysconfig" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
+<p><span class="versionmodified added">3.2 æ–°ç‰ˆåŠŸèƒ½.</span></p>
 </div>
-<p><strong>æºä»£ç ï¼š</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/sysconfig.py  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/sysconfig.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/sysconfig.py">Lib/sysconfig.py</a></p>
+<p><strong>æºä»£ç ï¼š</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue39764  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue39764'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/sysconfig.py">Lib/sysconfig.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The <a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a> module provides access to Python's configuration
 information like the list of installation paths and the configuration variables
@@ -115,7 +123,7 @@ can be accessed using <a class="reference internal" href="#sysconfig.get_config_
 <p>Notice that on Windows, it's a much smaller set.</p>
 <dl class="function">
 <dt id="sysconfig.get_config_vars">
-<code class="descclassname">sysconfig.</code><code class="descname">get_config_vars</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_config_vars" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_config_vars</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_config_vars" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>With no arguments, return a dictionary of all configuration variables
 relevant for the current platform.</p>
 <p>With arguments, return a list of values that result from looking up each
@@ -125,7 +133,7 @@ argument in the configuration variable dictionary.</p>
 
 <dl class="function">
 <dt id="sysconfig.get_config_var">
-<code class="descclassname">sysconfig.</code><code class="descname">get_config_var</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_config_var" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_config_var</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_config_var" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the value of a single variable <em>name</em>. Equivalent to
 <code class="docutils literal notranslate"><span class="pre">get_config_vars().get(name)</span></code>.</p>
 <p>If <em>name</em> is not found, return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
@@ -152,49 +160,49 @@ Distutils-based system will follow the same scheme to copy its file in the right
 places.</p>
 <p>Python currently supports seven schemes:</p>
 <ul class="simple">
-<li><em>posix_prefix</em>: scheme for Posix platforms like Linux or Mac OS X.  This is
-the default scheme used when Python or a component is installed.</li>
-<li><em>posix_home</em>: scheme for Posix platforms used when a <em>home</em> option is used
+<li><p><em>posix_prefix</em>: scheme for Posix platforms like Linux or Mac OS X.  This is
+the default scheme used when Python or a component is installed.</p></li>
+<li><p><em>posix_home</em>: scheme for Posix platforms used when a <em>home</em> option is used
 upon installation.  This scheme is used when a component is installed through
-Distutils with a specific home prefix.</li>
-<li><em>posix_user</em>: scheme for Posix platforms used when a component is installed
+Distutils with a specific home prefix.</p></li>
+<li><p><em>posix_user</em>: scheme for Posix platforms used when a component is installed
 through Distutils and the <em>user</em> option is used.  This scheme defines paths
-located under the user home directory.</li>
-<li><em>nt</em>: scheme for NT platforms like Windows.</li>
-<li><em>nt_user</em>: scheme for NT platforms, when the <em>user</em> option is used.</li>
+located under the user home directory.</p></li>
+<li><p><em>nt</em>: scheme for NT platforms like Windows.</p></li>
+<li><p><em>nt_user</em>: scheme for NT platforms, when the <em>user</em> option is used.</p></li>
 </ul>
 <p>Each scheme is itself composed of a series of paths and each path has a unique
 identifier.  Python currently uses eight paths:</p>
 <ul class="simple">
-<li><em>stdlib</em>: directory containing the standard Python library files that are not
-platform-specific.</li>
-<li><em>platstdlib</em>: directory containing the standard Python library files that are
-platform-specific.</li>
-<li><em>platlib</em>: directory for site-specific, platform-specific files.</li>
-<li><em>purelib</em>: directory for site-specific, non-platform-specific files.</li>
-<li><em>include</em>: directory for non-platform-specific header files.</li>
-<li><em>platinclude</em>: directory for platform-specific header files.</li>
-<li><em>scripts</em>: directory for script files.</li>
-<li><em>data</em>: directory for data files.</li>
+<li><p><em>stdlib</em>: directory containing the standard Python library files that are not
+platform-specific.</p></li>
+<li><p><em>platstdlib</em>: directory containing the standard Python library files that are
+platform-specific.</p></li>
+<li><p><em>platlib</em>: directory for site-specific, platform-specific files.</p></li>
+<li><p><em>purelib</em>: directory for site-specific, non-platform-specific files.</p></li>
+<li><p><em>include</em>: directory for non-platform-specific header files.</p></li>
+<li><p><em>platinclude</em>: directory for platform-specific header files.</p></li>
+<li><p><em>scripts</em>: directory for script files.</p></li>
+<li><p><em>data</em>: directory for data files.</p></li>
 </ul>
 <p><a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a> provides some functions to determine these paths.</p>
 <dl class="function">
 <dt id="sysconfig.get_scheme_names">
-<code class="descclassname">sysconfig.</code><code class="descname">get_scheme_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_scheme_names" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_scheme_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_scheme_names" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a tuple containing all schemes currently supported in
 <a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sysconfig.get_path_names">
-<code class="descclassname">sysconfig.</code><code class="descname">get_path_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_path_names" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_path_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_path_names" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a tuple containing all path names currently supported in
 <a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sysconfig.get_path">
-<code class="descclassname">sysconfig.</code><code class="descname">get_path</code><span class="sig-paren">(</span><em>name</em><span class="optional">[</span>, <em>scheme</em><span class="optional">[</span>, <em>vars</em><span class="optional">[</span>, <em>expand</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_path" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_path</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="optional">[</span>, <em class="sig-param">scheme</em><span class="optional">[</span>, <em class="sig-param">vars</em><span class="optional">[</span>, <em class="sig-param">expand</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_path" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return an installation path corresponding to the path <em>name</em>, from the
 install scheme named <em>scheme</em>.</p>
 <p><em>name</em> has to be a value from the list returned by <a class="reference internal" href="#sysconfig.get_path_names" title="sysconfig.get_path_names"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_path_names()</span></code></a>.</p>
@@ -216,7 +224,7 @@ variables.</p>
 
 <dl class="function">
 <dt id="sysconfig.get_paths">
-<code class="descclassname">sysconfig.</code><code class="descname">get_paths</code><span class="sig-paren">(</span><span class="optional">[</span><em>scheme</em><span class="optional">[</span>, <em>vars</em><span class="optional">[</span>, <em>expand</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_paths" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_paths</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">scheme</em><span class="optional">[</span>, <em class="sig-param">vars</em><span class="optional">[</span>, <em class="sig-param">expand</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_paths" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a dictionary containing all installation paths corresponding to an
 installation scheme. See <a class="reference internal" href="#sysconfig.get_path" title="sysconfig.get_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_path()</span></code></a> for more information.</p>
 <p>If <em>scheme</em> is not provided, will use the default scheme for the current
@@ -233,14 +241,14 @@ update the dictionary used to expand the paths.</p>
 <h2>å…¶ä»–åŠŸèƒ½<a class="headerlink" href="#other-functions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <dl class="function">
 <dt id="sysconfig.get_python_version">
-<code class="descclassname">sysconfig.</code><code class="descname">get_python_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_python_version" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_python_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_python_version" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return the <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> Python version number as a string.  Similar to
 <code class="docutils literal notranslate"><span class="pre">'%d.%d'</span> <span class="pre">%</span> <span class="pre">sys.version_info[:2]</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sysconfig.get_platform">
-<code class="descclassname">sysconfig.</code><code class="descname">get_platform</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_platform" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_platform</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_platform" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return a string that identifies the current platform.</p>
 <p>This is used mainly to distinguish platform-specific build directories and
 platform-specific built distributions.  Typically includes the OS name and
@@ -249,28 +257,28 @@ exact information included depends on the OS; e.g., on Linux, the kernel
 version isn't particularly important.</p>
 <p>è¿”å›å€¼çš„ç¤ºä¾‹ï¼š</p>
 <ul class="simple">
-<li>linux-i586</li>
-<li>linux-alpha (?)</li>
-<li>solaris-2.6-sun4u</li>
+<li><p>linux-i586</p></li>
+<li><p>linux-alpha (?)</p></li>
+<li><p>solaris-2.6-sun4u</p></li>
 </ul>
 <p>Windowså°†è¿”å›ä»¥ä¸‹ä¹‹ä¸€ï¼š</p>
 <ul class="simple">
-<li>win-amd64 (åœ¨ AMD64, aka x86_64, Intel64, å’Œ EM64Tä¸Šçš„64ä½ Windows )</li>
-<li>win32 (all others - specifically, sys.platform is returned)</li>
+<li><p>win-amd64 (åœ¨ AMD64, aka x86_64, Intel64, å’Œ EM64Tä¸Šçš„64ä½ Windows )</p></li>
+<li><p>win32 (all others - specifically, sys.platform is returned)</p></li>
 </ul>
 <p>Mac OS X è¿”å›ï¼š</p>
 <ul class="simple">
-<li>macosx-10.6-ppc</li>
-<li>macosx-10.4-ppc64</li>
-<li>macosx-10.3-i386</li>
-<li>macosx-10.4-fat</li>
+<li><p>macosx-10.6-ppc</p></li>
+<li><p>macosx-10.4-ppc64</p></li>
+<li><p>macosx-10.3-i386</p></li>
+<li><p>macosx-10.4-fat</p></li>
 </ul>
 <p>å¯¹äºå…¶ä»–é-POSIX å¹³å°ï¼Œ ç›®å‰åªæ˜¯è¿”å› <a class="reference internal" href="sys.html#sys.platform" tppabs="https://docs.python.org/zh-cn/3/library/sys.html#sys.platform" title="sys.platform"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.platform</span></code></a> ã€‚</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sysconfig.is_python_build">
-<code class="descclassname">sysconfig.</code><code class="descname">is_python_build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.is_python_build" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">is_python_build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.is_python_build" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the running Python interpreter was built from source and
 is being run from its built location, and not from a location resulting from
 e.g. running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> or installing via a binary installer.</p>
@@ -278,7 +286,7 @@ e.g. running <code class="docutils literal notranslate"><span class="pre">make</
 
 <dl class="function">
 <dt id="sysconfig.parse_config_h">
-<code class="descclassname">sysconfig.</code><code class="descname">parse_config_h</code><span class="sig-paren">(</span><em>fp</em><span class="optional">[</span>, <em>vars</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.parse_config_h" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">parse_config_h</code><span class="sig-paren">(</span><em class="sig-param">fp</em><span class="optional">[</span>, <em class="sig-param">vars</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.parse_config_h" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>Parse a <code class="file docutils literal notranslate"><span class="pre">config.h</span></code>-style file.</p>
 <p><em>fp</em> is a file-like object pointing to the <code class="file docutils literal notranslate"><span class="pre">config.h</span></code>-like file.</p>
 <p>A dictionary containing name/value pairs is returned.  If an optional
@@ -288,13 +296,13 @@ dictionary, and updated with the values read in the file.</p>
 
 <dl class="function">
 <dt id="sysconfig.get_config_h_filename">
-<code class="descclassname">sysconfig.</code><code class="descname">get_config_h_filename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_config_h_filename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_config_h_filename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_config_h_filename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>è¿”å›  <code class="file docutils literal notranslate"><span class="pre">pyconfig.h</span></code> çš„ç›®å½•</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sysconfig.get_makefile_filename">
-<code class="descclassname">sysconfig.</code><code class="descname">get_makefile_filename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_makefile_filename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<code class="sig-prename descclassname">sysconfig.</code><code class="sig-name descname">get_makefile_filename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_makefile_filename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd><p>è¿”å› <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code> çš„ç›®å½•</p>
 </dd></dl>
 
@@ -337,29 +345,29 @@ dictionary, and updated with the values read in the file.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">sysconfig</span></code> --- Provide access to Python's configuration information</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code> --- Provide access to Python's configuration information</a><ul>
 <li><a class="reference internal" href="#configuration-variables">é…ç½®å˜é‡</a></li>
 <li><a class="reference internal" href="#installation-paths">å®‰è£…è·¯å¾„</a></li>
 <li><a class="reference internal" href="#other-functions">å…¶ä»–åŠŸèƒ½</a></li>
-<li><a class="reference internal" href="#using-sysconfig-as-a-script">Using <code class="docutils literal notranslate"><span class="pre">sysconfig</span></code> as a script</a></li>
+<li><a class="reference internal" href="#using-sysconfig-as-a-script">Using <code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code> as a script</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="sys.html" tppabs="https://docs.python.org/zh-cn/3/library/sys.html"
-                        title="ä¸Šä¸€ç« "><code class="docutils literal notranslate"><span class="pre">sys</span></code> --- ç³»ç»Ÿç›¸å…³çš„å‚æ•°å’Œå‡½æ•°</a></p>
+                        title="ä¸Šä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code> --- ç³»ç»Ÿç›¸å…³çš„å‚æ•°å’Œå‡½æ•°</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="builtins.html" tppabs="https://docs.python.org/zh-cn/3/library/builtins.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">builtins</span></code> --- å†…å»ºå¯¹è±¡</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> --- å†…å»ºå¯¹è±¡</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/sysconfig.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/sysconfig.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/sysconfig.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/sysconfig.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/sysconfig.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/sysconfig.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -384,14 +392,17 @@ dictionary, and updated with the values read in the file.</p>
         <li class="right" >
           <a href="sys.html" tppabs="https://docs.python.org/zh-cn/3/library/sys.html" title="sys --- ç³»ç»Ÿç›¸å…³çš„å‚æ•°å’Œå‡½æ•°"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="python.html" tppabs="https://docs.python.org/zh-cn/3/library/python.html" >Pythonè¿è¡Œæ—¶æœåŠ¡</a> &#187;</li>
@@ -413,15 +424,19 @@ dictionary, and updated with the values read in the file.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>4. Building C and C++ Extensions &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>4. æ„å»ºC/C++æ‰©å±• &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
@@ -28,13 +26,13 @@
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="5. åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•" href="windows.html" />
     <link rel="prev" title="3. å®šä¹‰æ‰©å±•ç±»å‹ï¼šå·²åˆ†ç±»ä¸»é¢˜" href="newtypes.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/extending/building.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="windows-2.html" tppabs="https://docs.python.org/zh-cn/3/extending/windows.html" title="5. åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•"
+          <a href="windows-3.html" tppabs="https://docs.python.org/zh-cn/3/extending/windows.html" title="5. åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="newtypes.html" tppabs="https://docs.python.org/zh-cn/3/extending/newtypes.html" title="3. å®šä¹‰æ‰©å±•ç±»å‹ï¼šå·²åˆ†ç±»ä¸»é¢˜"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-8.html" tppabs="https://docs.python.org/zh-cn/3/extending/index.html" accesskey="U">æ‰©å±•å’ŒåµŒå…¥ Python è§£é‡Šå™¨</a> &#187;</li>
     <li class="right">
@@ -95,26 +103,17 @@
           <div class="body" role="main">
             
   <div class="section" id="building-c-and-c-extensions">
-<span id="building"></span><h1>4. Building C and C++ Extensions<a class="headerlink" href="#building-c-and-c-extensions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
-<p>A C extension for CPython is a shared library (e.g. a <code class="docutils literal notranslate"><span class="pre">.so</span></code> file on Linux,
-<code class="docutils literal notranslate"><span class="pre">.pyd</span></code> on Windows), which exports an <em>initialization function</em>.</p>
-<p>To be importable, the shared library must be available on <span class="target" id="index-0"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONPATH" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a>,
-and must be named after the module name, with an appropriate extension.
-When using distutils, the correct filename is generated automatically.</p>
-<p>The initialization function has the signature:</p>
+<span id="building"></span><h1><span class="section-number">4. </span>æ„å»ºC/C++æ‰©å±•<a class="headerlink" href="#building-c-and-c-extensions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>ä¸€ä¸ªCPythonçš„Cæ‰©å±•æ˜¯ä¸€ä¸ªå…±äº«åº“(ä¾‹å¦‚ä¸€ä¸ªLinuxä¸Šçš„ <code class="docutils literal notranslate"><span class="pre">.so</span></code> ï¼Œæˆ–è€…Windowsä¸Šçš„ <code class="docutils literal notranslate"><span class="pre">.pyd</span></code> )ï¼Œå…¶ä¼šå¯¼å‡ºä¸€ä¸ª <em>åˆå§‹åŒ–å‡½æ•°</em> ã€‚</p>
+<p>ä¸ºäº†å¯å¯¼å…¥ï¼Œå…±äº«åº“å¿…é¡»åœ¨ <span class="target" id="index-4"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONPATH" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> ä¸­æœ‰æ•ˆï¼Œä¸”å¿…é¡»å‘½åéµå¾ªæ¨¡å—åå­—ï¼Œé€šè¿‡é€‚å½“çš„æ‰©å±•ã€‚å½“ä½¿ç”¨distutilsæ—¶ï¼Œä¼šè‡ªåŠ¨ç”Ÿæˆæ­£ç¡®çš„æ–‡ä»¶åã€‚</p>
+<p>åˆå§‹åŒ–å‡½æ•°çš„å£°æ˜å¦‚ä¸‹ï¼š</p>
 <dl class="function">
 <dt id="c.PyInit_modulename">
-<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="descname">PyInit_modulename</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#c.PyInit_modulename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
+<a class="reference internal" href="structures.html#c.PyObject" tppabs="https://docs.python.org/zh-cn/3/c-api/structures.html#c.PyObject" title="PyObject">PyObject</a>* <code class="sig-name descname">PyInit_modulename</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#c.PyInit_modulename" title="æ°¸ä¹…é“¾æ¥è‡³ç›®æ ‡">Â¶</a></dt>
 <dd></dd></dl>
 
-<p>It returns either a fully-initialized module, or a <a class="reference internal" href="module.html#c.PyModuleDef" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#c.PyModuleDef" title="PyModuleDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyModuleDef</span></code></a>
-instance. See <a class="reference internal" href="module.html#initializing-modules" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#initializing-modules"><span class="std std-ref">Initializing C modules</span></a> for details.</p>
-<p>For modules with ASCII-only names, the function must be named
-<code class="docutils literal notranslate"><span class="pre">PyInit_&lt;modulename&gt;</span></code>, with <code class="docutils literal notranslate"><span class="pre">&lt;modulename&gt;</span></code> replaced by the name of the
-module. When using <a class="reference internal" href="module.html#multi-phase-initialization" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#multi-phase-initialization"><span class="std std-ref">Multi-phase initialization</span></a>, non-ASCII module names
-are allowed. In this case, the initialization function name is
-<code class="docutils literal notranslate"><span class="pre">PyInitU_&lt;modulename&gt;</span></code>, with <code class="docutils literal notranslate"><span class="pre">&lt;modulename&gt;</span></code> encoded using Python's
-<em>punycode</em> encoding with hyphens replaced by underscores. In Python:</p>
+<p>è¯¥å‡½æ•°è¿”å›å®Œæ•´åˆå§‹åŒ–è¿‡çš„æ¨¡å—ï¼Œæˆ–ä¸€ä¸ª <a class="reference internal" href="module.html#c.PyModuleDef" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#c.PyModuleDef" title="PyModuleDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyModuleDef</span></code></a> å®ä¾‹ã€‚æŸ¥çœ‹ <a class="reference internal" href="module.html#initializing-modules" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#initializing-modules"><span class="std std-ref">Initializing C modules</span></a> äº†è§£æ›´å¤šç»†èŠ‚ã€‚</p>
+<p>å¯¹äºä»…æœ‰ASCIIç¼–ç çš„æ¨¡å—åï¼Œå‡½æ•°å¿…é¡»æ˜¯ <code class="docutils literal notranslate"><span class="pre">PyInit_&lt;modulename&gt;</span></code> ï¼Œå°† <code class="docutils literal notranslate"><span class="pre">&lt;modulename&gt;</span></code> æ›¿æ¢ä¸ºæ¨¡å—çš„åå­—ã€‚å½“ä½¿ç”¨ <a class="reference internal" href="module.html#multi-phase-initialization" tppabs="https://docs.python.org/zh-cn/3/c-api/module.html#multi-phase-initialization"><span class="std std-ref">Multi-phase initialization</span></a> æ—¶ï¼Œå…è®¸ä½¿ç”¨éASCIIç¼–ç çš„æ¨¡å—åã€‚æ­¤æ—¶åˆå§‹åŒ–å‡½æ•°çš„åå­—æ˜¯ <code class="docutils literal notranslate"><span class="pre">PyInitU_&lt;modulename&gt;</span></code> ï¼Œè€Œ <code class="docutils literal notranslate"><span class="pre">&lt;modulename&gt;</span></code> éœ€è¦ç”¨Pythonçš„ <em>punycode</em> ç¼–ç ï¼Œè¿å­—å·éœ€æ›¿æ¢ä¸ºä¸‹åˆ’çº¿ã€‚åœ¨Pythoné‡Œ:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initfunc_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">suffix</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">name</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
@@ -123,19 +122,12 @@ are allowed. In this case, the initialization function name is
     <span class="k">return</span> <span class="sa">b</span><span class="s1">&#39;PyInit&#39;</span> <span class="o">+</span> <span class="n">suffix</span>
 </pre></div>
 </div>
-<p>It is possible to export multiple modules from a single shared library by
-defining multiple initialization functions. However, importing them requires
-using symbolic links or a custom importer, because by default only the
-function corresponding to the filename is found.
-See the <em>&quot;Multiple modules in one library&quot;</em> section in <span class="target" id="index-1"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0489  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0489'" tppabs="https://www.python.org/dev/peps/pep-0489"><strong>PEP 489</strong></a> for details.</p>
+<p>å¯ä»¥åœ¨ä¸€ä¸ªåŠ¨æ€åº“é‡Œå¯¼å‡ºå¤šä¸ªæ¨¡å—ï¼Œé€šè¿‡å®šä¹‰å¤šä¸ªåˆå§‹åŒ–å‡½æ•°ã€‚è€Œå¯¼å…¥ä»–ä»¬éœ€è¦ç¬¦å·é“¾æ¥æˆ–è‡ªå®šä¹‰å¯¼å…¥å™¨ï¼Œå› ä¸ºç¼ºçœæ—¶åªæœ‰å¯¹åº”äº†æ–‡ä»¶åçš„å‡½æ•°æ‰ä¼šè¢«å‘ç°ã€‚æŸ¥çœ‹ <em>&quot;ä¸€ä¸ªåº“é‡Œçš„å¤šæ¨¡å—&quot;</em> ç« èŠ‚ï¼Œåœ¨ <span class="target" id="index-5"></span><a class="pep reference external" href="javascript:if(confirm('https://www.python.org/dev/peps/pep-0489  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/dev/peps/pep-0489'" tppabs="https://www.python.org/dev/peps/pep-0489"><strong>PEP 489</strong></a> äº†è§£æ›´å¤šç»†èŠ‚ã€‚</p>
 <div class="section" id="building-c-and-c-extensions-with-distutils">
-<h2>4.1. Building C and C++ Extensions with distutils<a class="headerlink" href="#building-c-and-c-extensions-with-distutils" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>Extension modules can be built using distutils,  which is included in Python.
-Since distutils also supports creation of binary packages, users don't
-necessarily need a compiler and distutils to install the extension.</p>
-<p>A distutils package contains a driver script, <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code>. This is a plain
-Python file, which, in the most simple case, could look like this:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="k">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
+<h2><span class="section-number">4.1. </span>ä½¿ç”¨distutilsæ„å»ºCå’ŒC++æ‰©å±•<a class="headerlink" href="#building-c-and-c-extensions-with-distutils" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>æ‰©å±•æ¨¡å—å¯ä»¥ç”¨distutilsæ¥æ„å»ºï¼Œè¿™æ˜¯Pythonè‡ªå¸¦çš„ã€‚distutilsä¹Ÿæ”¯æŒåˆ›å»ºäºŒè¿›åˆ¶åŒ…ï¼Œç”¨æˆ·æ— éœ€ç¼–è¯‘å™¨è€Œdistutilså°±èƒ½å®‰è£…æ‰©å±•ã€‚</p>
+<p>ä¸€ä¸ªdistutilsåŒ…åŒ…å«äº†ä¸€ä¸ªé©±åŠ¨è„šæœ¬ <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> ã€‚è¿™æ˜¯ä¸ªçº¯Pythonæ–‡ä»¶ï¼Œå¤§å¤šæ•°æ—¶å€™ä¹Ÿå¾ˆç®€å•ï¼Œçœ‹èµ·æ¥å¦‚ä¸‹ï¼š</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
 
 <span class="n">module1</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span>
                     <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;demo.c&#39;</span><span class="p">])</span>
@@ -146,33 +138,15 @@ Python file, which, in the most simple case, could look like this:</p>
        <span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">module1</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>With this <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code>, and a file <code class="file docutils literal notranslate"><span class="pre">demo.c</span></code>, running</p>
+<p>é€šè¿‡æ–‡ä»¶ <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> ï¼Œå’Œæ–‡ä»¶ <code class="file docutils literal notranslate"><span class="pre">demo.c</span></code> ï¼Œè¿è¡Œå¦‚ä¸‹</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">build</span>
 </pre></div>
 </div>
-<p>will compile <code class="file docutils literal notranslate"><span class="pre">demo.c</span></code>, and produce an extension module named <code class="docutils literal notranslate"><span class="pre">demo</span></code> in
-the <code class="file docutils literal notranslate"><span class="pre">build</span></code> directory. Depending on the system, the module file will end
-up in a subdirectory <code class="file docutils literal notranslate"><span class="pre">build/lib.system</span></code>, and may have a name like
-<code class="file docutils literal notranslate"><span class="pre">demo.so</span></code> or <code class="file docutils literal notranslate"><span class="pre">demo.pyd</span></code>.</p>
-<p>In the <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code>, all execution is performed by calling the <code class="docutils literal notranslate"><span class="pre">setup</span></code>
-function. This takes a variable number of keyword arguments, of which the
-example above uses only a subset. Specifically, the example specifies
-meta-information to build packages, and it specifies the contents of the
-package.  Normally, a package will contain additional modules, like Python
-source modules, documentation, subpackages, etc. Please refer to the distutils
-documentation in <a class="reference internal" href="index-12.html#distutils-index" tppabs="https://docs.python.org/zh-cn/3/distutils/index.html#distutils-index"><span class="std std-ref">åˆ†å‘ Python æ¨¡å—ï¼ˆé—ç•™ç‰ˆæœ¬ï¼‰</span></a> to learn more about the features of
-distutils; this section explains building extension modules only.</p>
-<p>It is common to pre-compute arguments to <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code>, to better structure the
-driver script. In the example above, the <code class="docutils literal notranslate"><span class="pre">ext_modules</span></code> argument to
-<a class="reference internal" href="apiref.html#distutils.core.setup" tppabs="https://docs.python.org/zh-cn/3/distutils/apiref.html#distutils.core.setup" title="distutils.core.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a> is a list of extension modules, each of which is
-an instance of
-the <code class="xref py py-class docutils literal notranslate"><span class="pre">Extension</span></code>. In the example, the instance
-defines an extension named <code class="docutils literal notranslate"><span class="pre">demo</span></code> which is build by compiling a single source
-file, <code class="file docutils literal notranslate"><span class="pre">demo.c</span></code>.</p>
-<p>In many cases, building an extension is more complex, since additional
-preprocessor defines and libraries may be needed. This is demonstrated in the
-example below.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="k">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
+<p>è¿™ä¼šç¼–è¯‘ <code class="file docutils literal notranslate"><span class="pre">demo.c</span></code> ï¼Œç„¶åäº§ç”Ÿä¸€ä¸ªæ‰©å±•æ¨¡å—å«åš <code class="docutils literal notranslate"><span class="pre">demo</span></code> åœ¨ç›®å½• <code class="file docutils literal notranslate"><span class="pre">build</span></code> é‡Œã€‚ä¾èµ–äºç³»ç»Ÿï¼Œæ¨¡å—æ–‡ä»¶ä¼šæ”¾åœ¨æŸä¸ªå­ç›®å½•å½¢å¦‚ <code class="file docutils literal notranslate"><span class="pre">build/lib.system</span></code> ï¼Œåå­—å¯èƒ½æ˜¯ <code class="file docutils literal notranslate"><span class="pre">demo.so</span></code> æˆ– <code class="file docutils literal notranslate"><span class="pre">demo.pyd</span></code> ã€‚</p>
+<p>åœ¨æ–‡ä»¶ <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> é‡Œï¼Œæ‰€æœ‰åŠ¨ä½œçš„å…¥å£é€šè¿‡ <code class="docutils literal notranslate"><span class="pre">setup</span></code> å‡½æ•°ã€‚è¯¥å‡½æ•°å¯ä»¥æ¥å—å¯å˜æ•°é‡ä¸ªå…³é”®å­—å‚æ•°ï¼Œä¸Šé¢çš„ä¾‹å­åªä½¿ç”¨äº†ä¸€ä¸ªå­é›†ã€‚ç‰¹åˆ«éœ€è¦æ³¨æ„çš„ä¾‹å­æŒ‡å®šäº†æ„å»ºåŒ…çš„å…ƒä¿¡æ¯ï¼Œä»¥åŠæŒ‡å®šäº†åŒ…å†…å®¹ã€‚é€šå¸¸ä¸€ä¸ªåŒ…ä¼šåŒ…æ‹¬å¤šä¸ªæ¨¡å—ï¼Œå°±åƒPythonçš„æºç æ¨¡å—ã€æ–‡æ¡£ã€å­åŒ…ç­‰ã€‚è¯·å‚æ•°distutilsçš„æ–‡æ¡£ï¼Œåœ¨ <a class="reference internal" href="index-12.html#distutils-index" tppabs="https://docs.python.org/zh-cn/3/distutils/index.html#distutils-index"><span class="std std-ref">åˆ†å‘ Python æ¨¡å—ï¼ˆé—ç•™ç‰ˆæœ¬ï¼‰</span></a> æ¥äº†è§£æ›´å¤šdistutilsçš„ç‰¹æ€§ï¼›æœ¬ç« èŠ‚åªè§£é‡Šæ„å»ºæ‰©å±•æ¨¡å—çš„éƒ¨åˆ†ã€‚</p>
+<p>é€šå¸¸é¢„è®¡ç®—å‚æ•°ç»™ <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code> ï¼Œæƒ³è¦æ›´å¥½çš„ç»“æ„åŒ–é©±åŠ¨è„šæœ¬ã€‚æœ‰å¦‚å¦‚ä¸Šä¾‹å­å‡½æ•° <a class="reference internal" href="apiref.html#distutils.core.setup" tppabs="https://docs.python.org/zh-cn/3/distutils/apiref.html#distutils.core.setup" title="distutils.core.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a> çš„ <code class="docutils literal notranslate"><span class="pre">ext_modules</span></code> å‚æ•°æ˜¯ä¸€åˆ—æ‰©å±•æ¨¡å—ï¼Œæ¯ä¸ªæ˜¯ä¸€ä¸ª <code class="xref py py-class docutils literal notranslate"><span class="pre">Extension</span></code> ç±»çš„å®ä¾‹ã€‚ä¾‹å­ä¸­çš„å®ä¾‹å®šä¹‰äº†æ‰©å±•å‘½åä¸º <code class="docutils literal notranslate"><span class="pre">demo</span></code> ï¼Œä»å•ä¸€æºç æ–‡ä»¶æ„å»º <code class="file docutils literal notranslate"><span class="pre">demo.c</span></code> ã€‚</p>
+<p>æ›´å¤šæ—¶å€™ï¼Œæ„å»ºä¸€ä¸ªæ‰©å±•ä¼šå¤æ‚çš„å¤šï¼Œéœ€è¦é¢å¤–çš„é¢„å¤„ç†å™¨å®šä¹‰å’Œåº“ã€‚å¦‚ä¸‹ä¾‹å­å±•ç¤ºäº†è¿™äº›ã€‚</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
 
 <span class="n">module1</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span>
                     <span class="n">define_macros</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;MAJOR_VERSION&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">),</span>
@@ -194,37 +168,27 @@ example below.</p>
        <span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">module1</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>In this example, <a class="reference internal" href="apiref.html#distutils.core.setup" tppabs="https://docs.python.org/zh-cn/3/distutils/apiref.html#distutils.core.setup" title="distutils.core.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a> is called with additional
-meta-information, which
-is recommended when distribution packages have to be built. For the extension
-itself, it specifies preprocessor defines, include directories, library
-directories, and libraries. Depending on the compiler, distutils passes this
-information in different ways to the compiler. For example, on Unix, this may
-result in the compilation commands</p>
+<p>ä¾‹å­ä¸­å‡½æ•° <a class="reference internal" href="apiref.html#distutils.core.setup" tppabs="https://docs.python.org/zh-cn/3/distutils/apiref.html#distutils.core.setup" title="distutils.core.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a> åœ¨è°ƒç”¨æ—¶é¢å¤–ä¼ é€’äº†å…ƒä¿¡æ¯ï¼Œæ˜¯æ¨èå‘å¸ƒåŒ…æ„å»ºæ—¶çš„å†…å®¹ã€‚å¯¹äºè¿™ä¸ªæ‰©å±•ï¼Œå…¶æŒ‡å®šäº†é¢„å¤„ç†å™¨å®šä¹‰ï¼Œincludeç›®å½•ï¼Œåº“ç›®å½•ï¼Œåº“ã€‚ä¾èµ–äºç¼–è¯‘å™¨ï¼Œdistutilsè¿˜ä¼šç”¨å…¶ä»–æ–¹å¼ä¼ é€’ä¿¡æ¯ç»™ç¼–è¯‘å™¨ã€‚ä¾‹å¦‚åœ¨Unixä¸Šï¼Œç»“æœæ˜¯å¦‚ä¸‹ç¼–è¯‘å‘½ä»¤</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span> <span class="o">-</span><span class="n">DNDEBUG</span> <span class="o">-</span><span class="n">g</span> <span class="o">-</span><span class="n">O3</span> <span class="o">-</span><span class="n">Wall</span> <span class="o">-</span><span class="n">Wstrict</span><span class="o">-</span><span class="n">prototypes</span> <span class="o">-</span><span class="n">fPIC</span> <span class="o">-</span><span class="n">DMAJOR_VERSION</span><span class="o">=</span><span class="mi">1</span> <span class="o">-</span><span class="n">DMINOR_VERSION</span><span class="o">=</span><span class="mi">0</span> <span class="o">-</span><span class="n">I</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span> <span class="o">-</span><span class="n">I</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">python2</span><span class="mf">.2</span> <span class="o">-</span><span class="n">c</span> <span class="n">demo</span><span class="p">.</span><span class="n">c</span> <span class="o">-</span><span class="n">o</span> <span class="n">build</span><span class="o">/</span><span class="n">temp</span><span class="p">.</span><span class="n">linux</span><span class="o">-</span><span class="n">i686</span><span class="o">-</span><span class="mf">2.2</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">o</span>
 
 <span class="n">gcc</span> <span class="o">-</span><span class="n">shared</span> <span class="n">build</span><span class="o">/</span><span class="n">temp</span><span class="p">.</span><span class="n">linux</span><span class="o">-</span><span class="n">i686</span><span class="o">-</span><span class="mf">2.2</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">o</span> <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">ltcl83</span> <span class="o">-</span><span class="n">o</span> <span class="n">build</span><span class="o">/</span><span class="n">lib</span><span class="p">.</span><span class="n">linux</span><span class="o">-</span><span class="n">i686</span><span class="o">-</span><span class="mf">2.2</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">so</span>
 </pre></div>
 </div>
-<p>These lines are for demonstration purposes only; distutils users should trust
-that distutils gets the invocations right.</p>
+<p>è¿™äº›è¡Œä»£ç ä»…ç”¨äºå±•ç¤ºç›®çš„ï¼›distutilsç”¨æˆ·åº”è¯¥ç›¸ä¿¡distutilsèƒ½æ­£ç¡®è°ƒç”¨ã€‚</p>
 </div>
 <div class="section" id="distributing-your-extension-modules">
-<span id="distributing"></span><h2>4.2. Distributing your extension modules<a class="headerlink" href="#distributing-your-extension-modules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>When an extension has been successfully build, there are three ways to use it.</p>
-<p>End-users will typically want to install the module, they do so by running</p>
+<span id="distributing"></span><h2><span class="section-number">4.2. </span>å‘å¸ƒä½ çš„æ‰©å±•æ¨¡å—<a class="headerlink" href="#distributing-your-extension-modules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>å½“ä¸€ä¸ªæ‰©å±•å·²ç»æˆåŠŸåœ°è¢«æ„å»ºæ—¶ï¼Œæœ‰ä¸‰ç§æ–¹å¼æ¥ä½¿ç”¨å®ƒã€‚</p>
+<p>æœ€ç»ˆç”¨æˆ·é€šå¸¸æƒ³è¦å®‰è£…æ¨¡å—ï¼Œå¯ä»¥è¿™ä¹ˆè¿è¡Œ</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
-<p>Module maintainers should produce source packages; to do so, they run</p>
+<p>æ¨¡å—ç»´æŠ¤è€…åº”è¯¥åˆ¶ä½œæºç åŒ…ï¼›è¦å®ç°å¯ä»¥è¿è¡Œ</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">sdist</span>
 </pre></div>
 </div>
-<p>In some cases, additional files need to be included in a source distribution;
-this is done through a <code class="file docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> file; see <a class="reference internal" href="javascript:if(confirm('https://docs.python.org/zh-cn/3/distutils/issue11734  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ²»¿ÉÓÃ, »ò·ÅÆúÁËÏÂÔØ, »òÏîÄ¿¼´½«Í£Ö¹¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/zh-cn/3/distutils/issue11734#manifest'" tppabs="https://docs.python.org/zh-cn/3/distutils/sourcedist.html#manifest"><span class="std std-ref">Specifying the files to distribute</span></a> for details.</p>
-<p>If the source distribution has been build successfully, maintainers can also
-create binary distributions. Depending on the platform, one of the following
-commands can be used to do so.</p>
+<p>æœ‰äº›æƒ…å†µä¸‹ï¼Œéœ€è¦åœ¨æºç å‘å¸ƒåŒ…é‡ŒåŒ…å«é¢å¤–çš„æ–‡ä»¶ï¼›è¿™é€šè¿‡ <code class="file docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> æ–‡ä»¶å®ç°ï¼ŒæŸ¥çœ‹ <a class="reference internal" href="javascript:if(confirm('https://docs.python.org/zh-cn/3/distutils/issue38121  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ²»¿ÉÓÃ, »ò·ÅÆúÁËÏÂÔØ, »òÏîÄ¿¼´½«Í£Ö¹¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/zh-cn/3/distutils/issue38121#manifest'" tppabs="https://docs.python.org/zh-cn/3/distutils/sourcedist.html#manifest"><span class="std std-ref">Specifying the files to distribute</span></a> äº†è§£ç»†èŠ‚ã€‚</p>
+<p>å¦‚æœæºç å‘è¡ŒåŒ…è¢«æˆåŠŸåœ°æ„å»ºï¼Œç»´æŠ¤è€…è¿˜å¯ä»¥åˆ›å»ºäºŒè¿›åˆ¶å‘è¡ŒåŒ…ã€‚ å–å†³äºå…·ä½“å¹³å°ï¼Œä»¥ä¸‹å‘½ä»¤ä¸­çš„ä¸€ä¸ªå¯ä»¥ç”¨æ¥å®Œæˆæ­¤ä»»åŠ¡</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">bdist_wininst</span>
 <span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">bdist_rpm</span>
 <span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">bdist_dumb</span>
@@ -239,27 +203,27 @@ commands can be used to do so.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
-<li><a class="reference internal" href="#">4. Building C and C++ Extensions</a><ul>
-<li><a class="reference internal" href="#building-c-and-c-extensions-with-distutils">4.1. Building C and C++ Extensions with distutils</a></li>
-<li><a class="reference internal" href="#distributing-your-extension-modules">4.2. Distributing your extension modules</a></li>
+<li><a class="reference internal" href="#">4. æ„å»ºC/C++æ‰©å±•</a><ul>
+<li><a class="reference internal" href="#building-c-and-c-extensions-with-distutils">4.1. ä½¿ç”¨distutilsæ„å»ºCå’ŒC++æ‰©å±•</a></li>
+<li><a class="reference internal" href="#distributing-your-extension-modules">4.2. å‘å¸ƒä½ çš„æ‰©å±•æ¨¡å—</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="newtypes.html" tppabs="https://docs.python.org/zh-cn/3/extending/newtypes.html"
-                        title="ä¸Šä¸€ç« ">3. å®šä¹‰æ‰©å±•ç±»å‹ï¼šå·²åˆ†ç±»ä¸»é¢˜</a></p>
+                        title="ä¸Šä¸€ç« "><span class="section-number">3. </span>å®šä¹‰æ‰©å±•ç±»å‹ï¼šå·²åˆ†ç±»ä¸»é¢˜</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
-  <p class="topless"><a href="windows-2.html" tppabs="https://docs.python.org/zh-cn/3/extending/windows.html"
-                        title="ä¸‹ä¸€ç« ">5. åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•</a></p>
+  <p class="topless"><a href="windows-3.html" tppabs="https://docs.python.org/zh-cn/3/extending/windows.html"
+                        title="ä¸‹ä¸€ç« "><span class="section-number">5. </span>åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/extending/building.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/extending/building.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/extending/building.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/extending/building.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/extending/building.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/extending/building.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -279,19 +243,22 @@ commands can be used to do so.</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python æ¨¡å—ç´¢å¼•"
              >æ¨¡å—</a> |</li>
         <li class="right" >
-          <a href="windows-2.html" tppabs="https://docs.python.org/zh-cn/3/extending/windows.html" title="5. åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•"
+          <a href="windows-3.html" tppabs="https://docs.python.org/zh-cn/3/extending/windows.html" title="5. åœ¨Windowså¹³å°ç¼–è¯‘Cå’ŒC++æ‰©å±•"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
           <a href="newtypes.html" tppabs="https://docs.python.org/zh-cn/3/extending/newtypes.html" title="3. å®šä¹‰æ‰©å±•ç±»å‹ï¼šå·²åˆ†ç±»ä¸»é¢˜"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-8.html" tppabs="https://docs.python.org/zh-cn/3/extending/index.html" >æ‰©å±•å’ŒåµŒå…¥ Python è§£é‡Šå™¨</a> &#187;</li>
     <li class="right">
@@ -312,15 +279,19 @@ commands can be used to do so.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

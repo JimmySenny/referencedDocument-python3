@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>os.path --- 常见路径操作 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>os.path --- 常用路径操作 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="fileinput --- Iterate over lines from multiple input streams" href="fileinput.html" />
+    <link rel="next" title="fileinput --- 迭代来自多个输入流的行" href="fileinput.html" />
     <link rel="prev" title="pathlib --- 面向对象的文件系统路径" href="pathlib.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/os.path.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="fileinput.html" tppabs="https://docs.python.org/zh-cn/3/library/fileinput.html" title="fileinput --- Iterate over lines from multiple input streams"
+          <a href="fileinput.html" tppabs="https://docs.python.org/zh-cn/3/library/fileinput.html" title="fileinput --- 迭代来自多个输入流的行"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="pathlib.html" tppabs="https://docs.python.org/zh-cn/3/library/pathlib.html" title="pathlib --- 面向对象的文件系统路径"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="filesys.html" tppabs="https://docs.python.org/zh-cn/3/library/filesys.html" accesskey="U">文件和目录访问</a> &#187;</li>
@@ -96,101 +104,69 @@
           <div class="body" role="main">
             
   <div class="section" id="module-os.path">
-<span id="os-path-common-pathname-manipulations"></span><h1><a class="reference internal" href="#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a> --- 常见路径操作<a class="headerlink" href="#module-os.path" title="永久链接至标题">¶</a></h1>
-<p><strong>源代码:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/posixpath.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/posixpath.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/posixpath.py">Lib/posixpath.py</a> (适用 POSIX), <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/ntpath.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/ntpath.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/ntpath.py">Lib/ntpath.py</a> (适用 Windows NT), and <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/macpath.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/macpath.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/macpath.py">Lib/macpath.py</a> (适用 Macintosh)</p>
+<span id="os-path-common-pathname-manipulations"></span><h1><a class="reference internal" href="#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a> --- 常用路径操作<a class="headerlink" href="#module-os.path" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue1533909  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue1533909'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/posixpath.py">Lib/posixpath.py</a> （用于 POSIX）和 <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/issue2906  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/issue2906'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/ntpath.py">Lib/ntpath.py</a> （用于 Windows NT）</p>
 <hr class="docutils" id="index-0" />
-<p>This module implements some useful functions on pathnames. To read or
-write files see <a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>, and for accessing the filesystem see the
-<a class="reference internal" href="os.html#module-os" tppabs="https://docs.python.org/zh-cn/3/library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module. The path parameters can be passed as either strings,
-or bytes. Applications are encouraged to represent file names as
-(Unicode) character strings. Unfortunately, some file names may not be
-representable as strings on Unix, so applications that need to support
-arbitrary file names on Unix should use bytes objects to represent
-path names. Vice versa, using bytes objects cannot represent all file
-names on Windows (in the standard <code class="docutils literal notranslate"><span class="pre">mbcs</span></code> encoding), hence Windows
-applications should use string objects to access all files.</p>
-<p>Unlike a unix shell, Python does not do any <em>automatic</em> path expansions.
-Functions such as <a class="reference internal" href="#os.path.expanduser" title="os.path.expanduser"><code class="xref py py-func docutils literal notranslate"><span class="pre">expanduser()</span></code></a> and <a class="reference internal" href="#os.path.expandvars" title="os.path.expandvars"><code class="xref py py-func docutils literal notranslate"><span class="pre">expandvars()</span></code></a> can be invoked
-explicitly when an application desires shell-like path expansion.  (See also
-the <a class="reference internal" href="glob.html#module-glob" tppabs="https://docs.python.org/zh-cn/3/library/glob.html#module-glob" title="glob: Unix shell style pathname pattern expansion."><code class="xref py py-mod docutils literal notranslate"><span class="pre">glob</span></code></a> module.)</p>
+<p>该模块在路径名上实现了一些有用的功能：如需读取或写入文件，请参见 <a class="reference internal" href="functions.html#open" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> ；有关访问文件系统的信息，请参见 <a class="reference internal" href="os.html#module-os" tppabs="https://docs.python.org/zh-cn/3/library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> 模块。路径参数可以字符串或字节形式传递。我们鼓励应用程序将文件名表示为（Unicode）字符串。不幸的是，某些文件名在Unix上可能无法用字符串表示，因此在Unix上平台上需要支持任意文件名的应用程序，应使用字节对象来表示路径名。反之亦然，在Windows平台上仅使用字节对象，不能表示的所有文件名（以标准 <code class="docutils literal notranslate"><span class="pre">mbcs</span></code> 编码），因此Windows应用程序应使用字符串对象来访问所有文件。</p>
+<p>与unix shell不同，Python不执行任何 <em>自动</em> 路径扩展。当应用程序需要类似shell的路径扩展时，可以显式调用诸如 <a class="reference internal" href="#os.path.expanduser" title="os.path.expanduser"><code class="xref py py-func docutils literal notranslate"><span class="pre">expanduser()</span></code></a> 和 <a class="reference internal" href="#os.path.expandvars" title="os.path.expandvars"><code class="xref py py-func docutils literal notranslate"><span class="pre">expandvars()</span></code></a> 之类的函数。 （另请参见 <a class="reference internal" href="glob.html#module-glob" tppabs="https://docs.python.org/zh-cn/3/library/glob.html#module-glob" title="glob: Unix shell style pathname pattern expansion."><code class="xref py py-mod docutils literal notranslate"><span class="pre">glob</span></code></a> 模块。）</p>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last">The <a class="reference internal" href="pathlib.html#module-pathlib" tppabs="https://docs.python.org/zh-cn/3/library/pathlib.html#module-pathlib" title="pathlib: Object-oriented filesystem paths"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code></a> module offers high-level path objects.</p>
+<p class="admonition-title">参见</p>
+<p><a class="reference internal" href="pathlib.html#module-pathlib" tppabs="https://docs.python.org/zh-cn/3/library/pathlib.html#module-pathlib" title="pathlib: Object-oriented filesystem paths"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code></a> 模块提供高级路径对象。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">All of these functions accept either only bytes or only string objects as
-their parameters.  The result is an object of the same type, if a path or
-file name is returned.</p>
+<p class="admonition-title">注解</p>
+<p>所有这些函数都仅接受字节或字符串对象作为其参数。如果返回路径或文件名，则结果是相同类型的对象。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>Since different operating systems have different path name conventions, there
-are several versions of this module in the standard library.  The
-<a class="reference internal" href="#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a> module is always the path module suitable for the operating
-system Python is running on, and therefore usable for local paths.  However,
-you can also import and use the individual modules if you want to manipulate
-a path that is <em>always</em> in one of the different formats.  They all have the
-same interface:</p>
-<ul class="last simple">
-<li><code class="xref py py-mod docutils literal notranslate"><span class="pre">posixpath</span></code> for UNIX-style paths</li>
-<li><code class="xref py py-mod docutils literal notranslate"><span class="pre">ntpath</span></code> for Windows paths</li>
-<li><a class="reference internal" href="macpath.html#module-macpath" tppabs="https://docs.python.org/zh-cn/3/library/macpath.html#module-macpath" title="macpath: Mac OS 9 path manipulation functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">macpath</span></code></a> for old-style MacOS paths</li>
+<p class="admonition-title">注解</p>
+<p>由于不同的操作系统具有不同的路径名称约定，因此标准库中有此模块的几个版本。<a class="reference internal" href="#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a> 模块始终是适合 Python 运行的操作系统的路径模块，因此可用于本地路径。但是，如果操作的路径 <em>总是</em> 以一种不同的格式显示，那么也可以分别导入和使用各个模块。它们都具有相同的接口：</p>
+<ul class="simple">
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">posixpath</span></code> 用于Unix 样式的路径</p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">ntpath</span></code> 用于 Windows 路径</p></li>
 </ul>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span><a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">exists()</span></code></a>、<a class="reference internal" href="#os.path.lexists" title="os.path.lexists"><code class="xref py py-func docutils literal notranslate"><span class="pre">lexists()</span></code></a>、<a class="reference internal" href="#os.path.isdir" title="os.path.isdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">isdir()</span></code></a>、<a class="reference internal" href="#os.path.isfile" title="os.path.isfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfile()</span></code></a>、<a class="reference internal" href="#os.path.islink" title="os.path.islink"><code class="xref py py-func docutils literal notranslate"><span class="pre">islink()</span></code></a> 和 <a class="reference internal" href="#os.path.ismount" title="os.path.ismount"><code class="xref py py-func docutils literal notranslate"><span class="pre">ismount()</span></code></a> 现在遇到系统层面上不可表示的字符或字节的路径时，会返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>，而不是抛出异常。</p>
 </div>
 <dl class="function">
 <dt id="os.path.abspath">
-<code class="descclassname">os.path.</code><code class="descname">abspath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.abspath" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a normalized absolutized version of the pathname <em>path</em>. On most
-platforms, this is equivalent to calling the function <a class="reference internal" href="#os.path.normpath" title="os.path.normpath"><code class="xref py py-func docutils literal notranslate"><span class="pre">normpath()</span></code></a> as
-follows: <code class="docutils literal notranslate"><span class="pre">normpath(join(os.getcwd(),</span> <span class="pre">path))</span></code>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">abspath</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.abspath" title="永久链接至目标">¶</a></dt>
+<dd><p>返回路径 <em>path</em> 的绝对路径（标准化的）。在大多数平台上，这等同于用 <code class="docutils literal notranslate"><span class="pre">normpath(join(os.getcwd(),</span> <span class="pre">path))</span></code> 的方式调用 <a class="reference internal" href="#os.path.normpath" title="os.path.normpath"><code class="xref py py-func docutils literal notranslate"><span class="pre">normpath()</span></code></a> 函数。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.basename">
-<code class="descclassname">os.path.</code><code class="descname">basename</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.basename" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the base name of pathname <em>path</em>.  This is the second element of the
-pair returned by passing <em>path</em> to the function <a class="reference internal" href="#os.path.split" title="os.path.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">split()</span></code></a>.  Note that
-the result of this function is different
-from the Unix <strong class="program">basename</strong> program; where <strong class="program">basename</strong> for
-<code class="docutils literal notranslate"><span class="pre">'/foo/bar/'</span></code> returns <code class="docutils literal notranslate"><span class="pre">'bar'</span></code>, the <a class="reference internal" href="#os.path.basename" title="os.path.basename"><code class="xref py py-func docutils literal notranslate"><span class="pre">basename()</span></code></a> function returns an
-empty string (<code class="docutils literal notranslate"><span class="pre">''</span></code>).</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">basename</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.basename" title="永久链接至目标">¶</a></dt>
+<dd><p>返回路径 <em>path</em> 的基本名称。这是将 <em>path</em> 传入函数 <a class="reference internal" href="#os.path.split" title="os.path.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">split()</span></code></a> 之后，返回的一对值中的第二个元素。请注意，此函数的结果与Unix <strong class="program">basename</strong> 程序不同。<strong class="program">basename</strong> 在 <code class="docutils literal notranslate"><span class="pre">'/foo/bar/'</span></code> 上返回 <code class="docutils literal notranslate"><span class="pre">'bar'</span></code>，而 <a class="reference internal" href="#os.path.basename" title="os.path.basename"><code class="xref py py-func docutils literal notranslate"><span class="pre">basename()</span></code></a> 函数返回一个空字符串 (<code class="docutils literal notranslate"><span class="pre">''</span></code>)。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.commonpath">
-<code class="descclassname">os.path.</code><code class="descname">commonpath</code><span class="sig-paren">(</span><em>paths</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.commonpath" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the longest common sub-path of each pathname in the sequence
-<em>paths</em>.  Raise ValueError if <em>paths</em> contains both absolute and relative
-pathnames, or if <em>paths</em> is empty.  Unlike <a class="reference internal" href="#os.path.commonprefix" title="os.path.commonprefix"><code class="xref py py-func docutils literal notranslate"><span class="pre">commonprefix()</span></code></a>, this
-returns a valid path.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">commonpath</code><span class="sig-paren">(</span><em class="sig-param">paths</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.commonpath" title="永久链接至目标">¶</a></dt>
+<dd><p>接受包含多个路径的序列 <em>paths</em>，返回 <em>paths</em> 的最长公共子路径。如果 <em>paths</em> 同时包含绝对路径和相对路径，或 <em>paths</em> 在不同的驱动器上，或 <em>paths</em> 为空，则抛出 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 异常。与 <a class="reference internal" href="#os.path.commonprefix" title="os.path.commonprefix"><code class="xref py py-func docutils literal notranslate"><span class="pre">commonprefix()</span></code></a> 不同，本方法返回有效路径。</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">可用性</span></a>: Unix, Windows。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.5 新版功能.</span></p>
+<p><span class="versionmodified added">3.5 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>Accepts a sequence of <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like objects</span></a>.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a> 序列。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.commonprefix">
-<code class="descclassname">os.path.</code><code class="descname">commonprefix</code><span class="sig-paren">(</span><em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.commonprefix" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the longest path prefix (taken character-by-character) that is a
-prefix of all paths in  <em>list</em>.  If <em>list</em> is empty, return the empty string
-(<code class="docutils literal notranslate"><span class="pre">''</span></code>).</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">commonprefix</code><span class="sig-paren">(</span><em class="sig-param">list</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.commonprefix" title="永久链接至目标">¶</a></dt>
+<dd><p>接受包含多个路径的 <em>列表</em>，返回所有路径的最长公共前缀（逐字符比较）。如果 <em>列表</em> 为空，则返回空字符串 (<code class="docutils literal notranslate"><span class="pre">''</span></code>)。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>This function may return invalid paths because it works a
-character at a time.  To obtain a valid path, see
-<a class="reference internal" href="#os.path.commonpath" title="os.path.commonpath"><code class="xref py py-func docutils literal notranslate"><span class="pre">commonpath()</span></code></a>.</p>
-<div class="last highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">commonprefix</span><span class="p">([</span><span class="s1">&#39;/usr/lib&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/local/lib&#39;</span><span class="p">])</span>
+<p class="admonition-title">注解</p>
+<p>此函数是逐字符比较，因此可能返回无效路径。要获取有效路径，参见 <a class="reference internal" href="#os.path.commonpath" title="os.path.commonpath"><code class="xref py py-func docutils literal notranslate"><span class="pre">commonpath()</span></code></a>。</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">commonprefix</span><span class="p">([</span><span class="s1">&#39;/usr/lib&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/local/lib&#39;</span><span class="p">])</span>
 <span class="go">&#39;/usr/l&#39;</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">commonpath</span><span class="p">([</span><span class="s1">&#39;/usr/lib&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/local/lib&#39;</span><span class="p">])</span>
@@ -199,359 +175,277 @@ character at a time.  To obtain a valid path, see
 </div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.dirname">
-<code class="descclassname">os.path.</code><code class="descname">dirname</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.dirname" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the directory name of pathname <em>path</em>.  This is the first element of
-the pair returned by passing <em>path</em> to the function <a class="reference internal" href="#os.path.split" title="os.path.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">split()</span></code></a>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">dirname</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.dirname" title="永久链接至目标">¶</a></dt>
+<dd><p>返回路径 <em>path</em> 的目录名称。这是将 <em>path</em> 传入函数 <a class="reference internal" href="#os.path.split" title="os.path.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">split()</span></code></a> 之后，返回的一对值中的第一个元素。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.exists">
-<code class="descclassname">os.path.</code><code class="descname">exists</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.exists" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>path</em> refers to an existing path or an open
-file descriptor.  Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> for broken symbolic links.  On
-some platforms, this function may return <code class="docutils literal notranslate"><span class="pre">False</span></code> if permission is
-not granted to execute <a class="reference internal" href="os.html#os.stat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> on the requested file, even
-if the <em>path</em> physically exists.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">exists</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.exists" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>path</em> 指向一个已存在的路径或已打开的文件描述符，返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。对于失效的符号链接，返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。在某些平台上，如果使用 <a class="reference internal" href="os.html#os.stat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> 查询到目标文件没有执行权限，即使 <em>path</em> 确实存在，本函数也可能返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span><em>path</em> can now be an integer: <code class="docutils literal notranslate"><span class="pre">True</span></code> is returned if it is an
- open file descriptor, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<p><span class="versionmodified changed">在 3.3 版更改: </span><em>path</em> 现在可以是一个整数：如果该整数是一个已打开的文件描述符，返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>，否则返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.lexists">
-<code class="descclassname">os.path.</code><code class="descname">lexists</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.lexists" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>path</em> refers to an existing path. Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> for
-broken symbolic links.   Equivalent to <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">exists()</span></code></a> on platforms lacking
-<a class="reference internal" href="os.html#os.lstat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.lstat" title="os.lstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.lstat()</span></code></a>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">lexists</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.lexists" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>path</em> 指向一个已存在的路径，返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。对于失效的符号链接，也返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。在缺失 <a class="reference internal" href="os.html#os.lstat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.lstat" title="os.lstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.lstat()</span></code></a> 的平台上等同于 <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">exists()</span></code></a>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <span class="target" id="index-1"></span><dl class="function">
 <dt id="os.path.expanduser">
-<code class="descclassname">os.path.</code><code class="descname">expanduser</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.expanduser" title="永久链接至目标">¶</a></dt>
-<dd><p>On Unix and Windows, return the argument with an initial component of <code class="docutils literal notranslate"><span class="pre">~</span></code> or
-<code class="docutils literal notranslate"><span class="pre">~user</span></code> replaced by that <em>user</em>'s home directory.</p>
-<p id="index-2">On Unix, an initial <code class="docutils literal notranslate"><span class="pre">~</span></code> is replaced by the environment variable <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOME</span></code>
-if it is set; otherwise the current user's home directory is looked up in the
-password directory through the built-in module <a class="reference internal" href="pwd.html#module-pwd" tppabs="https://docs.python.org/zh-cn/3/library/pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a>. An initial <code class="docutils literal notranslate"><span class="pre">~user</span></code>
-is looked up directly in the password directory.</p>
-<p>On Windows, <span class="target" id="index-4"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOME</span></code> and <span class="target" id="index-5"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USERPROFILE</span></code> will be used if set,
-otherwise a combination of <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOMEPATH</span></code> and <span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOMEDRIVE</span></code> will be
-used.  An initial <code class="docutils literal notranslate"><span class="pre">~user</span></code> is handled by stripping the last directory component
-from the created user path derived above.</p>
-<p>If the expansion fails or if the path does not begin with a tilde, the path is
-returned unchanged.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">expanduser</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.expanduser" title="永久链接至目标">¶</a></dt>
+<dd><p>在 Unix 和 Windows 上，将参数中开头部分的 <code class="docutils literal notranslate"><span class="pre">~</span></code> 或 <code class="docutils literal notranslate"><span class="pre">~user</span></code> 替换为当前 <em>用户</em> 的家目录并返回。</p>
+<p id="index-2">在 Unix 上，开头的 <code class="docutils literal notranslate"><span class="pre">~</span></code> 会被环境变量 <span class="target" id="index-14"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOME</span></code> 代替，如果变量未设置，则通过内置模块 <a class="reference internal" href="pwd.html#module-pwd" tppabs="https://docs.python.org/zh-cn/3/library/pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a> 在 password 目录中查找当前用户的主目录。以 <code class="docutils literal notranslate"><span class="pre">~user</span></code> 开头则直接在 password 目录中查找。</p>
+<p>在 Windows 上，如果设置了 <span class="target" id="index-15"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USERPROFILE</span></code>，就使用这个变量，否则会将 <span class="target" id="index-16"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOMEPATH</span></code> 和 <span class="target" id="index-17"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOMEDRIVE</span></code> 结合在一起使用。以 <code class="docutils literal notranslate"><span class="pre">~user</span></code> 开头则将上述方法生成路径的最后一截目录替换成 user。</p>
+<p>如果展开路径失败，或者路径不是以波浪号开头，则路径将保持不变。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>Windows 不再使用 <span class="target" id="index-18"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOME</span></code>。</p>
 </div>
 </dd></dl>
 
 <span class="target" id="index-8"></span><dl class="function">
 <dt id="os.path.expandvars">
-<code class="descclassname">os.path.</code><code class="descname">expandvars</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.expandvars" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the argument with environment variables expanded.  Substrings of the form
-<code class="docutils literal notranslate"><span class="pre">$name</span></code> or <code class="docutils literal notranslate"><span class="pre">${name}</span></code> are replaced by the value of environment variable
-<em>name</em>.  Malformed variable names and references to non-existing variables are
-left unchanged.</p>
-<p>On Windows, <code class="docutils literal notranslate"><span class="pre">%name%</span></code> expansions are supported in addition to <code class="docutils literal notranslate"><span class="pre">$name</span></code> and
-<code class="docutils literal notranslate"><span class="pre">${name}</span></code>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">expandvars</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.expandvars" title="永久链接至目标">¶</a></dt>
+<dd><p>输入带有环境变量的路径作为参数，返回展开变量以后的路径。<code class="docutils literal notranslate"><span class="pre">$name</span></code> 或 <code class="docutils literal notranslate"><span class="pre">${name}</span></code> 形式的子字符串被环境变量 <em>name</em> 的值替换。格式错误的变量名称和对不存在变量的引用保持不变。</p>
+<p>在 Windows 上，除了 <code class="docutils literal notranslate"><span class="pre">$name</span></code> 和 <code class="docutils literal notranslate"><span class="pre">${name}</span></code> 外，还可以展开 <code class="docutils literal notranslate"><span class="pre">%name%</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.getatime">
-<code class="descclassname">os.path.</code><code class="descname">getatime</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getatime" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the time of last access of <em>path</em>.  The return value is a floating point number giving
-the number of seconds since the epoch (see the  <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module).  Raise
-<a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> if the file does not exist or is inaccessible.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">getatime</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getatime" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>path</em> 的最后访问时间。返回值是一个浮点数，为纪元秒数（参见 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模块）。如果该文件不存在或不可访问，则抛出 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 异常。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.getmtime">
-<code class="descclassname">os.path.</code><code class="descname">getmtime</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getmtime" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the time of last modification of <em>path</em>.  The return value is a floating point number
-giving the number of seconds since the epoch (see the  <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module).
-Raise <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> if the file does not exist or is inaccessible.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">getmtime</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getmtime" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>path</em> 的最后修改时间。返回值是一个浮点数，为纪元秒数（参见 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模块）。如果该文件不存在或不可访问，则抛出 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 异常。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.getctime">
-<code class="descclassname">os.path.</code><code class="descname">getctime</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getctime" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the system's ctime which, on some systems (like Unix) is the time of the
-last metadata change, and, on others (like Windows), is the creation time for <em>path</em>.
-The return value is a number giving the number of seconds since the epoch (see
-the  <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module).  Raise <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> if the file does not exist or
-is inaccessible.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">getctime</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getctime" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>path</em> 在系统中的 ctime，在有些系统（比如 Unix）上，它是元数据的最后修改时间，其他系统（比如 Windows）上，它是 <em>path</em> 的创建时间。返回值是一个数，为纪元秒数（参见 <a class="reference internal" href="time.html#module-time" tppabs="https://docs.python.org/zh-cn/3/library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模块）。如果该文件不存在或不可访问，则抛出 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 异常。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.getsize">
-<code class="descclassname">os.path.</code><code class="descname">getsize</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getsize" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the size, in bytes, of <em>path</em>.  Raise <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> if the file does
-not exist or is inaccessible.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">getsize</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.getsize" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>path</em> 的大小，以字节为单位。如果该文件不存在或不可访问，则抛出 <a class="reference internal" href="exceptions.html#OSError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> 异常。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.isabs">
-<code class="descclassname">os.path.</code><code class="descname">isabs</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.isabs" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>path</em> is an absolute pathname.  On Unix, that means it
-begins with a slash, on Windows that it begins with a (back)slash after chopping
-off a potential drive letter.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">isabs</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.isabs" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>path</em> 是一个绝对路径，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。在 Unix 上，它就是以斜杠开头，而在 Windows 上，它可以是去掉驱动器号后以斜杠（或反斜杠）开头。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.isfile">
-<code class="descclassname">os.path.</code><code class="descname">isfile</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.isfile" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>path</em> is an <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">existing</span></code></a> regular file.
-This follows symbolic links, so both <a class="reference internal" href="#os.path.islink" title="os.path.islink"><code class="xref py py-func docutils literal notranslate"><span class="pre">islink()</span></code></a> and <a class="reference internal" href="#os.path.isfile" title="os.path.isfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfile()</span></code></a> can
-be true for the same path.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">isfile</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.isfile" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>path</em> 是 <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">现有的</span></code></a> 常规文件，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。本方法会跟踪符号链接，因此，对于同一路径，<a class="reference internal" href="#os.path.islink" title="os.path.islink"><code class="xref py py-func docutils literal notranslate"><span class="pre">islink()</span></code></a> 和 <a class="reference internal" href="#os.path.isfile" title="os.path.isfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfile()</span></code></a> 都可能为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.isdir">
-<code class="descclassname">os.path.</code><code class="descname">isdir</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.isdir" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>path</em> is an <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">existing</span></code></a> directory.  This
-follows symbolic links, so both <a class="reference internal" href="#os.path.islink" title="os.path.islink"><code class="xref py py-func docutils literal notranslate"><span class="pre">islink()</span></code></a> and <a class="reference internal" href="#os.path.isdir" title="os.path.isdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">isdir()</span></code></a> can be true
-for the same path.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">isdir</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.isdir" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>path</em> 是 <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">现有的</span></code></a> 目录，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。本方法会跟踪符号链接，因此，对于同一路径，<a class="reference internal" href="#os.path.islink" title="os.path.islink"><code class="xref py py-func docutils literal notranslate"><span class="pre">islink()</span></code></a> 和 <a class="reference internal" href="#os.path.isdir" title="os.path.isdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">isdir()</span></code></a> 都可能为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.islink">
-<code class="descclassname">os.path.</code><code class="descname">islink</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.islink" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>path</em> refers to an <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">existing</span></code></a> directory
-entry that is a symbolic link.  Always <code class="docutils literal notranslate"><span class="pre">False</span></code> if symbolic links are not
-supported by the Python runtime.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">islink</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.islink" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 <em>path</em> 指向的 <a class="reference internal" href="#os.path.exists" title="os.path.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">现有</span></code></a> 目录条目是一个符号链接，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。如果 Python 运行时不支持符号链接，则总是返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.ismount">
-<code class="descclassname">os.path.</code><code class="descname">ismount</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.ismount" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if pathname <em>path</em> is a <em class="dfn">mount point</em>: a point in a
-file system where a different file system has been mounted.  On POSIX, the
-function checks whether <em>path</em>'s parent, <code class="file docutils literal notranslate"><em><span class="pre">path</span></em><span class="pre">/..</span></code>, is on a different
-device than <em>path</em>, or whether <code class="file docutils literal notranslate"><em><span class="pre">path</span></em><span class="pre">/..</span></code> and <em>path</em> point to the same
-i-node on the same device --- this should detect mount points for all Unix
-and POSIX variants.  It is not able to reliably detect bind mounts on the
-same filesystem.  On Windows, a drive letter root and a share UNC are
-always mount points, and for any other path <code class="docutils literal notranslate"><span class="pre">GetVolumePathName</span></code> is called
-to see if it is different from the input path.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">ismount</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.ismount" title="永久链接至目标">¶</a></dt>
+<dd><p>如果路径 <em>path</em> 是 <em class="dfn">挂载点</em> （文件系统中挂载其他文件系统的点），则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。在 POSIX 上，该函数检查 <em>path</em> 的父目录 <code class="file docutils literal notranslate"><em><span class="pre">path</span></em><span class="pre">/..</span></code> 是否在与 <em>path</em> 不同的设备上，或者 <code class="file docutils literal notranslate"><em><span class="pre">path</span></em><span class="pre">/..</span></code> 和 <em>path</em> 是否指向同一设备上的同一 inode（这一检测挂载点的方法适用于所有 Unix 和 POSIX 变体）。本方法不能可靠地检测同一文件系统上的绑定挂载 (bind mount)。在 Windows 上，盘符和共享 UNC 始终是挂载点，对于任何其他路径，将调用 <code class="docutils literal notranslate"><span class="pre">GetVolumePathName</span></code> 来查看它是否与输入的路径不同。</p>
 <div class="versionadded">
-<p><span class="versionmodified">3.4 新版功能: </span>Support for detecting non-root mount points on Windows.</p>
+<p><span class="versionmodified added">3.4 新版功能: </span>支持在 Windows 上检测非根挂载点。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.join">
-<code class="descclassname">os.path.</code><code class="descname">join</code><span class="sig-paren">(</span><em>path</em>, <em>*paths</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.join" title="永久链接至目标">¶</a></dt>
-<dd><p>Join one or more path components intelligently.  The return value is the
-concatenation of <em>path</em> and any members of <em>*paths</em> with exactly one
-directory separator (<code class="docutils literal notranslate"><span class="pre">os.sep</span></code>) following each non-empty part except the
-last, meaning that the result will only end in a separator if the last
-part is empty.  If a component is an absolute path, all previous
-components are thrown away and joining continues from the absolute path
-component.</p>
-<p>On Windows, the drive letter is not reset when an absolute path component
-(e.g., <code class="docutils literal notranslate"><span class="pre">r'\foo'</span></code>) is encountered.  If a component contains a drive
-letter, all previous components are thrown away and the drive letter is
-reset.  Note that since there is a current directory for each drive,
-<code class="docutils literal notranslate"><span class="pre">os.path.join(&quot;c:&quot;,</span> <span class="pre">&quot;foo&quot;)</span></code> represents a path relative to the current
-directory on drive <code class="file docutils literal notranslate"><span class="pre">C:</span></code> (<code class="file docutils literal notranslate"><span class="pre">c:foo</span></code>), not <code class="file docutils literal notranslate"><span class="pre">c:\foo</span></code>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">join</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">*paths</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.join" title="永久链接至目标">¶</a></dt>
+<dd><p>合理地拼接一个或多个路径部分。返回值是 <em>path</em> 和 <em>*paths</em> 所有值的连接，每个非空部分后面都紧跟一个目录分隔符 (<code class="docutils literal notranslate"><span class="pre">os.sep</span></code>)，除了最后一部分。这意味着如果最后一部分为空，则结果将以分隔符结尾。如果参数中某个部分是绝对路径，则绝对路径前的路径都将被丢弃，并从绝对路径部分开始连接。</p>
+<p>在 Windows 上，遇到绝对路径部分（例如 <code class="docutils literal notranslate"><span class="pre">r'\foo'</span></code>）时，不会重置盘符。如果某部分路径包含盘符，则会丢弃所有先前的部分，并重置盘符。请注意，由于每个驱动器都有一个“当前目录”，所以 <code class="docutils literal notranslate"><span class="pre">os.path.join(&quot;c:&quot;,</span> <span class="pre">&quot;foo&quot;)</span></code> 表示驱动器 <code class="file docutils literal notranslate"><span class="pre">C:</span></code> 上当前目录的相对路径 (<code class="file docutils literal notranslate"><span class="pre">c:foo</span></code>)，而不是 <code class="file docutils literal notranslate"><span class="pre">c:\foo</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>Accepts a <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>path</em> and <em>paths</em>.</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a> 用于 <em>path</em> 和 <em>paths</em> 。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.normcase">
-<code class="descclassname">os.path.</code><code class="descname">normcase</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.normcase" title="永久链接至目标">¶</a></dt>
-<dd><p>Normalize the case of a pathname.  On Unix and Mac OS X, this returns the
-path unchanged; on case-insensitive filesystems, it converts the path to
-lowercase.  On Windows, it also converts forward slashes to backward slashes.
-Raise a <a class="reference internal" href="exceptions.html#TypeError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> if the type of <em>path</em> is not <code class="docutils literal notranslate"><span class="pre">str</span></code> or <code class="docutils literal notranslate"><span class="pre">bytes</span></code> (directly
-or indirectly through the <a class="reference internal" href="os.html#os.PathLike" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.PathLike" title="os.PathLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">os.PathLike</span></code></a> interface).</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">normcase</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.normcase" title="永久链接至目标">¶</a></dt>
+<dd><p>规范路径的大小写。在 Windows 上，将路径中的所有字符都转换为小写，并将正斜杠转换为反斜杠。在其他操作系统上返回原路径。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.normpath">
-<code class="descclassname">os.path.</code><code class="descname">normpath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.normpath" title="永久链接至目标">¶</a></dt>
-<dd><p>Normalize a pathname by collapsing redundant separators and up-level
-references so that <code class="docutils literal notranslate"><span class="pre">A//B</span></code>, <code class="docutils literal notranslate"><span class="pre">A/B/</span></code>, <code class="docutils literal notranslate"><span class="pre">A/./B</span></code> and <code class="docutils literal notranslate"><span class="pre">A/foo/../B</span></code> all
-become <code class="docutils literal notranslate"><span class="pre">A/B</span></code>.  This string manipulation may change the meaning of a path
-that contains symbolic links.  On Windows, it converts forward slashes to
-backward slashes. To normalize case, use <a class="reference internal" href="#os.path.normcase" title="os.path.normcase"><code class="xref py py-func docutils literal notranslate"><span class="pre">normcase()</span></code></a>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">normpath</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.normpath" title="永久链接至目标">¶</a></dt>
+<dd><p>通过折叠多余的分隔符和对上级目录的引用来标准化路径名，所以 <code class="docutils literal notranslate"><span class="pre">A//B</span></code>、<code class="docutils literal notranslate"><span class="pre">A/B/</span></code>、<code class="docutils literal notranslate"><span class="pre">A/./B</span></code> 和 <code class="docutils literal notranslate"><span class="pre">A/foo/../B</span></code> 都会转换成 <code class="docutils literal notranslate"><span class="pre">A/B</span></code>。这个字符串操作可能会改变带有符号链接的路径的含义。在 Windows 上，本方法将正斜杠转换为反斜杠。要规范大小写，请使用 <a class="reference internal" href="#os.path.normcase" title="os.path.normcase"><code class="xref py py-func docutils literal notranslate"><span class="pre">normcase()</span></code></a>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.realpath">
-<code class="descclassname">os.path.</code><code class="descname">realpath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.realpath" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the canonical path of the specified filename, eliminating any symbolic
-links encountered in the path (if they are supported by the operating system).</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">realpath</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.realpath" title="永久链接至目标">¶</a></dt>
+<dd><p>返回指定文件的规范路径，消除路径中存在的任何符号链接（如果操作系统支持）。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>当发生符号链接循环时，返回的路径将是该循环的某个组成部分，但不能保证是哪个部分。</p>
+</div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>在 Windows 上现在可以正确解析符号链接和交接点 (junction point)。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.relpath">
-<code class="descclassname">os.path.</code><code class="descname">relpath</code><span class="sig-paren">(</span><em>path</em>, <em>start=os.curdir</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.relpath" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a relative filepath to <em>path</em> either from the current directory or
-from an optional <em>start</em> directory.  This is a path computation:  the
-filesystem is not accessed to confirm the existence or nature of <em>path</em> or
-<em>start</em>.</p>
-<p><em>start</em> defaults to <a class="reference internal" href="os.html#os.curdir" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.curdir" title="os.curdir"><code class="xref py py-attr docutils literal notranslate"><span class="pre">os.curdir</span></code></a>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">relpath</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">start=os.curdir</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.relpath" title="永久链接至目标">¶</a></dt>
+<dd><p>返回从当前目录或 <em>start</em> 目录（可选）到达 <em>path</em> 之间要经过的相对路径。这仅仅是对路径的计算，不会访问文件系统来确认 <em>path</em> 或 <em>start</em> 的存在性或属性。</p>
+<p><em>start</em> 默认为 <a class="reference internal" href="os.html#os.curdir" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.curdir" title="os.curdir"><code class="xref py py-attr docutils literal notranslate"><span class="pre">os.curdir</span></code></a>。</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">可用性</span></a>: Unix, Windows。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.samefile">
-<code class="descclassname">os.path.</code><code class="descname">samefile</code><span class="sig-paren">(</span><em>path1</em>, <em>path2</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.samefile" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if both pathname arguments refer to the same file or directory.
-This is determined by the device number and i-node number and raises an
-exception if an <a class="reference internal" href="os.html#os.stat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> call on either pathname fails.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">samefile</code><span class="sig-paren">(</span><em class="sig-param">path1</em>, <em class="sig-param">path2</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.samefile" title="永久链接至目标">¶</a></dt>
+<dd><p>如果两个路径都指向相同的文件或目录，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。这由设备号和 inode 号确定，在任一路径上调用 <a class="reference internal" href="os.html#os.stat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> 失败则抛出异常。</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">可用性</span></a>: Unix, Windows。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span>Added Windows support.</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>添加了 Windows 支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Windows now uses the same implementation as all other platforms.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>Windows现在使用与其他所有平台相同的实现。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.sameopenfile">
-<code class="descclassname">os.path.</code><code class="descname">sameopenfile</code><span class="sig-paren">(</span><em>fp1</em>, <em>fp2</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.sameopenfile" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the file descriptors <em>fp1</em> and <em>fp2</em> refer to the same file.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">sameopenfile</code><span class="sig-paren">(</span><em class="sig-param">fp1</em>, <em class="sig-param">fp2</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.sameopenfile" title="永久链接至目标">¶</a></dt>
+<dd><p>如果文件描述符 <em>fp1</em> 和 <em>fp2</em> 指向相同文件，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">可用性</span></a>: Unix, Windows。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span>Added Windows support.</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>添加了 Windows 支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.samestat">
-<code class="descclassname">os.path.</code><code class="descname">samestat</code><span class="sig-paren">(</span><em>stat1</em>, <em>stat2</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.samestat" title="永久链接至目标">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the stat tuples <em>stat1</em> and <em>stat2</em> refer to the same file.
-These structures may have been returned by <a class="reference internal" href="os.html#os.fstat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.fstat" title="os.fstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fstat()</span></code></a>,
-<a class="reference internal" href="os.html#os.lstat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.lstat" title="os.lstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.lstat()</span></code></a>, or <a class="reference internal" href="os.html#os.stat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a>.  This function implements the
-underlying comparison used by <a class="reference internal" href="#os.path.samefile" title="os.path.samefile"><code class="xref py py-func docutils literal notranslate"><span class="pre">samefile()</span></code></a> and <a class="reference internal" href="#os.path.sameopenfile" title="os.path.sameopenfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">sameopenfile()</span></code></a>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">samestat</code><span class="sig-paren">(</span><em class="sig-param">stat1</em>, <em class="sig-param">stat2</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.samestat" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 stat 元组 <em>stat1</em> 和 <em>stat2</em> 指向相同文件，则返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>。这些 stat 元组可能是由 <a class="reference internal" href="os.html#os.fstat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.fstat" title="os.fstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fstat()</span></code></a>、<a class="reference internal" href="os.html#os.lstat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.lstat" title="os.lstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.lstat()</span></code></a> 或 <a class="reference internal" href="os.html#os.stat" tppabs="https://docs.python.org/zh-cn/3/library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> 返回的。本函数实现了 <a class="reference internal" href="#os.path.samefile" title="os.path.samefile"><code class="xref py py-func docutils literal notranslate"><span class="pre">samefile()</span></code></a> 和 <a class="reference internal" href="#os.path.sameopenfile" title="os.path.sameopenfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">sameopenfile()</span></code></a> 底层所使用的比较过程。</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability" tppabs="https://docs.python.org/zh-cn/3/library/intro.html#availability"><span class="std std-ref">可用性</span></a>: Unix, Windows。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Added Windows support.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>添加了 Windows 支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.split">
-<code class="descclassname">os.path.</code><code class="descname">split</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.split" title="永久链接至目标">¶</a></dt>
-<dd><p>Split the pathname <em>path</em> into a pair, <code class="docutils literal notranslate"><span class="pre">(head,</span> <span class="pre">tail)</span></code> where <em>tail</em> is the
-last pathname component and <em>head</em> is everything leading up to that.  The
-<em>tail</em> part will never contain a slash; if <em>path</em> ends in a slash, <em>tail</em>
-will be empty.  If there is no slash in <em>path</em>, <em>head</em> will be empty.  If
-<em>path</em> is empty, both <em>head</em> and <em>tail</em> are empty.  Trailing slashes are
-stripped from <em>head</em> unless it is the root (one or more slashes only).  In
-all cases, <code class="docutils literal notranslate"><span class="pre">join(head,</span> <span class="pre">tail)</span></code> returns a path to the same location as <em>path</em>
-(but the strings may differ).  Also see the functions <a class="reference internal" href="#os.path.dirname" title="os.path.dirname"><code class="xref py py-func docutils literal notranslate"><span class="pre">dirname()</span></code></a> and
-<a class="reference internal" href="#os.path.basename" title="os.path.basename"><code class="xref py py-func docutils literal notranslate"><span class="pre">basename()</span></code></a>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">split</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.split" title="永久链接至目标">¶</a></dt>
+<dd><p>将路径 <em>path</em> 拆分为一对，即 <code class="docutils literal notranslate"><span class="pre">(head,</span> <span class="pre">tail)</span></code>，其中，<em>tail</em> 是路径的最后一部分，而 <em>head</em> 里是除最后部分外的所有内容。<em>tail</em> 部分不会包含斜杠，如果 <em>path</em> 以斜杠结尾，则 <em>tail</em> 将为空。如果 <em>path</em> 中没有斜杠，<em>head</em> 将为空。如果 <em>path</em> 为空，则 <em>head</em> 和 <em>tail</em> 均为空。<em>head</em> 末尾的斜杠会被去掉，除非它是根目录（即它仅包含一个或多个斜杠）。在所有情况下，<code class="docutils literal notranslate"><span class="pre">join(head,</span> <span class="pre">tail)</span></code> 指向的位置都与 <em>path</em> 相同（但字符串可能不同）。另请参见函数 <a class="reference internal" href="#os.path.dirname" title="os.path.dirname"><code class="xref py py-func docutils literal notranslate"><span class="pre">dirname()</span></code></a> 和 <a class="reference internal" href="#os.path.basename" title="os.path.basename"><code class="xref py py-func docutils literal notranslate"><span class="pre">basename()</span></code></a>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.splitdrive">
-<code class="descclassname">os.path.</code><code class="descname">splitdrive</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.splitdrive" title="永久链接至目标">¶</a></dt>
-<dd><p>Split the pathname <em>path</em> into a pair <code class="docutils literal notranslate"><span class="pre">(drive,</span> <span class="pre">tail)</span></code> where <em>drive</em> is either
-a mount point or the empty string.  On systems which do not use drive
-specifications, <em>drive</em> will always be the empty string.  In all cases, <code class="docutils literal notranslate"><span class="pre">drive</span>
-<span class="pre">+</span> <span class="pre">tail</span></code> will be the same as <em>path</em>.</p>
-<p>On Windows, splits a pathname into drive/UNC sharepoint and relative path.</p>
-<p>If the path contains a drive letter, drive will contain everything
-up to and including the colon.
-e.g. <code class="docutils literal notranslate"><span class="pre">splitdrive(&quot;c:/dir&quot;)</span></code> returns <code class="docutils literal notranslate"><span class="pre">(&quot;c:&quot;,</span> <span class="pre">&quot;/dir&quot;)</span></code></p>
-<p>If the path contains a UNC path, drive will contain the host name
-and share, up to but not including the fourth separator.
-e.g. <code class="docutils literal notranslate"><span class="pre">splitdrive(&quot;//host/computer/dir&quot;)</span></code> returns <code class="docutils literal notranslate"><span class="pre">(&quot;//host/computer&quot;,</span> <span class="pre">&quot;/dir&quot;)</span></code></p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">splitdrive</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.splitdrive" title="永久链接至目标">¶</a></dt>
+<dd><p>将路径 <em>path</em> 拆分为一对，即 <code class="docutils literal notranslate"><span class="pre">(drive,</span> <span class="pre">tail)</span></code>，其中 <em>drive</em> 是挂载点或空字符串。在没有驱动器概念的系统上，<em>drive</em> 将始终为空字符串。在所有情况下，<code class="docutils literal notranslate"><span class="pre">drive</span> <span class="pre">+</span> <span class="pre">tail</span></code> 都与 <em>path</em> 相同。</p>
+<p>在 Windows 上，本方法将路径拆分为驱动器/UNC 根节点和相对路径。</p>
+<p>如果路径 path 包含盘符，则 drive 将包含冒号及冒号前面的所有内容。例如 <code class="docutils literal notranslate"><span class="pre">splitdrive(&quot;c:/dir&quot;)</span></code> 返回 <code class="docutils literal notranslate"><span class="pre">(&quot;c:&quot;,</span> <span class="pre">&quot;/dir&quot;)</span></code>。</p>
+<p>如果 path 是一个 UNC 路径，则 drive 将包含主机名和共享点，但不包括第四个分隔符。例如 <code class="docutils literal notranslate"><span class="pre">splitdrive(&quot;//host/computer/dir&quot;)</span></code> 返回 <code class="docutils literal notranslate"><span class="pre">(&quot;//host/computer&quot;,</span> <span class="pre">&quot;/dir&quot;)</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="os.path.splitext">
-<code class="descclassname">os.path.</code><code class="descname">splitext</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.splitext" title="永久链接至目标">¶</a></dt>
-<dd><p>Split the pathname <em>path</em> into a pair <code class="docutils literal notranslate"><span class="pre">(root,</span> <span class="pre">ext)</span></code>  such that <code class="docutils literal notranslate"><span class="pre">root</span> <span class="pre">+</span> <span class="pre">ext</span> <span class="pre">==</span>
-<span class="pre">path</span></code>, and <em>ext</em> is empty or begins with a period and contains at most one
-period. Leading periods on the basename are  ignored; <code class="docutils literal notranslate"><span class="pre">splitext('.cshrc')</span></code>
-returns  <code class="docutils literal notranslate"><span class="pre">('.cshrc',</span> <span class="pre">'')</span></code>.</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">splitext</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#os.path.splitext" title="永久链接至目标">¶</a></dt>
+<dd><p>将路径 <em>path</em> 拆分为一对，即 <code class="docutils literal notranslate"><span class="pre">(root,</span> <span class="pre">ext)</span></code>，使 <code class="docutils literal notranslate"><span class="pre">root</span> <span class="pre">+</span> <span class="pre">ext</span> <span class="pre">==</span> <span class="pre">path</span></code>，其中 <em>ext</em> 为空或以英文句点开头，且最多包含一个句点。路径前的句点将被忽略，例如 <code class="docutils literal notranslate"><span class="pre">splitext('.cshrc')</span></code> 返回 <code class="docutils literal notranslate"><span class="pre">('.cshrc',</span> <span class="pre">'')</span></code>。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
+<p><span class="versionmodified changed">在 3.6 版更改: </span>接受一个 <a class="reference internal" href="glossary.html#term-path-like-object" tppabs="https://docs.python.org/zh-cn/3/glossary.html#term-path-like-object"><span class="xref std std-term">类路径对象</span></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="data">
 <dt id="os.path.supports_unicode_filenames">
-<code class="descclassname">os.path.</code><code class="descname">supports_unicode_filenames</code><a class="headerlink" href="#os.path.supports_unicode_filenames" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if arbitrary Unicode strings can be used as file names (within limitations
-imposed by the file system).</p>
+<code class="sig-prename descclassname">os.path.</code><code class="sig-name descname">supports_unicode_filenames</code><a class="headerlink" href="#os.path.supports_unicode_filenames" title="永久链接至目标">¶</a></dt>
+<dd><p>如果（在文件系统限制下）允许将任意 Unicode 字符串用作文件名，则为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 </div>
@@ -564,16 +458,16 @@ imposed by the file system).</p>
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="pathlib.html" tppabs="https://docs.python.org/zh-cn/3/library/pathlib.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> --- 面向对象的文件系统路径</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code> --- 面向对象的文件系统路径</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="fileinput.html" tppabs="https://docs.python.org/zh-cn/3/library/fileinput.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">fileinput</span></code> --- Iterate over lines from multiple input streams</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fileinput</span></code> --- 迭代来自多个输入流的行</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/os.path.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/os.path.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/os.path.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/os.path.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/os.path.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/os.path.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -593,19 +487,22 @@ imposed by the file system).</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="fileinput.html" tppabs="https://docs.python.org/zh-cn/3/library/fileinput.html" title="fileinput --- Iterate over lines from multiple input streams"
+          <a href="fileinput.html" tppabs="https://docs.python.org/zh-cn/3/library/fileinput.html" title="fileinput --- 迭代来自多个输入流的行"
              >下一页</a> |</li>
         <li class="right" >
           <a href="pathlib.html" tppabs="https://docs.python.org/zh-cn/3/library/pathlib.html" title="pathlib --- 面向对象的文件系统路径"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="filesys.html" tppabs="https://docs.python.org/zh-cn/3/library/filesys.html" >文件和目录访问</a> &#187;</li>
@@ -627,15 +524,19 @@ imposed by the file system).</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

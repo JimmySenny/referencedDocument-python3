@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>shelve --- Python object persistence &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>shelve --- Python 对象持久化 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="marshal --- Internal Python object serialization" href="marshal.html" />
-    <link rel="prev" title="copyreg --- Register pickle support functions" href="copyreg.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="next" title="marshal --- 内部 Python 对象序列化" href="marshal.html" />
+    <link rel="prev" title="copyreg --- 注册配合 pickle 模块使用的函数" href="copyreg.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/shelve.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="marshal.html" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html" title="marshal --- Internal Python object serialization"
+          <a href="marshal.html" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html" title="marshal --- 内部 Python 对象序列化"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="copyreg.html" tppabs="https://docs.python.org/zh-cn/3/library/copyreg.html" title="copyreg --- Register pickle support functions"
+          <a href="copyreg.html" tppabs="https://docs.python.org/zh-cn/3/library/copyreg.html" title="copyreg --- 注册配合 pickle 模块使用的函数"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="persistence.html" tppabs="https://docs.python.org/zh-cn/3/library/persistence.html" accesskey="U">数据持久化</a> &#187;</li>
@@ -96,41 +104,20 @@
           <div class="body" role="main">
             
   <div class="section" id="module-shelve">
-<span id="shelve-python-object-persistence"></span><h1><a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> --- Python object persistence<a class="headerlink" href="#module-shelve" title="永久链接至标题">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/shelve.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/shelve.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/shelve.py">Lib/shelve.py</a></p>
+<span id="shelve-python-object-persistence"></span><h1><a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> --- Python 对象持久化<a class="headerlink" href="#module-shelve" title="永久链接至标题">¶</a></h1>
+<p><strong>源代码:</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/xml-howto.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/xml-howto.html'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/shelve.py">Lib/shelve.py</a></p>
 <hr class="docutils" id="index-0" />
-<p>A &quot;shelf&quot; is a persistent, dictionary-like object.  The difference with &quot;dbm&quot;
-databases is that the values (not the keys!) in a shelf can be essentially
-arbitrary Python objects --- anything that the <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module can handle.
-This includes most class instances, recursive data types, and objects containing
-lots of shared  sub-objects.  The keys are ordinary strings.</p>
+<p>&quot;Shelf&quot; 是一种持久化的类似字典的对象。 与 &quot;dbm&quot; 数据库的区别在于 Shelf 中的值（不是键！）实际上可以为任意 Python 对象 --- 即 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 模块能够处理的任何东西。 这包括大部分类实例、递归数据类型，以及包含大量共享子对象的对象。 键则为普通的字符串。</p>
 <dl class="function">
 <dt id="shelve.open">
-<code class="descclassname">shelve.</code><code class="descname">open</code><span class="sig-paren">(</span><em>filename</em>, <em>flag='c'</em>, <em>protocol=None</em>, <em>writeback=False</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.open" title="永久链接至目标">¶</a></dt>
-<dd><p>Open a persistent dictionary.  The filename specified is the base filename for
-the underlying database.  As a side-effect, an extension may be added to the
-filename and more than one file may be created.  By default, the underlying
-database file is opened for reading and writing.  The optional <em>flag</em> parameter
-has the same interpretation as the <em>flag</em> parameter of <a class="reference internal" href="dbm.html#dbm.open" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#dbm.open" title="dbm.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">dbm.open()</span></code></a>.</p>
-<p>By default, version 3 pickles are used to serialize values.  The version of the
-pickle protocol can be specified with the <em>protocol</em> parameter.</p>
-<p>Because of Python semantics, a shelf cannot know when a mutable
-persistent-dictionary entry is modified.  By default modified objects are
-written <em>only</em> when assigned to the shelf (see <a class="reference internal" href="#shelve-example"><span class="std std-ref">示例</span></a>).  If the
-optional <em>writeback</em> parameter is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, all entries accessed are also
-cached in memory, and written back on <a class="reference internal" href="#shelve.Shelf.sync" title="shelve.Shelf.sync"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sync()</span></code></a> and
-<a class="reference internal" href="#shelve.Shelf.close" title="shelve.Shelf.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a>; this can make it handier to mutate mutable entries in
-the persistent dictionary, but, if many entries are accessed, it can consume
-vast amounts of memory for the cache, and it can make the close operation
-very slow since all accessed entries are written back (there is no way to
-determine which accessed entries are mutable, nor which ones were actually
-mutated).</p>
+<code class="sig-prename descclassname">shelve.</code><code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">flag='c'</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">writeback=False</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.open" title="永久链接至目标">¶</a></dt>
+<dd><p>打开一个持久化字典。 filename 指定下层数据库的基准文件名。 作为附带效果，会为 filename 添加一个扩展名并且可能创建更多的文件。 默认情况下，下层数据库会以读写模式打开。 可选的 <em>flag</em> 形参具有与 <a class="reference internal" href="dbm.html#dbm.open" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#dbm.open" title="dbm.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">dbm.open()</span></code></a> <em>flag</em> 形参相同的含义。</p>
+<p>默认会使用第 3 版 pickle 协议来序列化值。  pickle 协议版本可通过 <em>protocol</em> 形参来指定。</p>
+<p>由于 Python 语义的限制，Shelf 对象无法确定一个可变的持久化字典条目在何时被修改。 默认情况下 <em>只有</em> 在被修改对象再赋值给 shelf 时才会写入该对象 (参见 <a class="reference internal" href="#shelve-example"><span class="std std-ref">示例</span></a>)。 如果可选的 <em>writeback</em> 形参设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则所有被访问的条目都将在内存中被缓存，并会在 <a class="reference internal" href="#shelve.Shelf.sync" title="shelve.Shelf.sync"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sync()</span></code></a> 和 <a class="reference internal" href="#shelve.Shelf.close" title="shelve.Shelf.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> 时被写入；这可以使得对持久化字典中可变条目的修改更方便，但是如果访问的条目很多，这会消耗大量内存作为缓存，并会使得关闭操作变得非常缓慢，因为所有被访问的条目都需要写回到字典（无法确定被访问的条目中哪个是可变的，也无法确定哪个被实际修改了）。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p>Do not rely on the shelf being closed automatically; always call
-<a class="reference internal" href="#shelve.Shelf.close" title="shelve.Shelf.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> explicitly when you don't need it any more, or
-use <a class="reference internal" href="#shelve.open" title="shelve.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">shelve.open()</span></code></a> as a context manager:</p>
-<div class="last highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">shelve</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
+<p class="admonition-title">注解</p>
+<p>请不要依赖于 Shelf 的自动关闭功能；当你不再需要时应当总是显式地调用 <a class="reference internal" href="#shelve.Shelf.close" title="shelve.Shelf.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a>，或者使用 <a class="reference internal" href="#shelve.open" title="shelve.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">shelve.open()</span></code></a> 作为上下文管理器:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">shelve</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
     <span class="n">db</span><span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span>
 </pre></div>
 </div>
@@ -138,109 +125,67 @@ use <a class="reference internal" href="#shelve.open" title="shelve.open"><code 
 </dd></dl>
 
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">Because the <a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> module is backed by <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a>, it is insecure
-to load a shelf from an untrusted source.  Like with pickle, loading a shelf
-can execute arbitrary code.</p>
+<p class="admonition-title">警告</p>
+<p>由于 <a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> 模块需要 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 的支持，因此从不可靠的来源载入 shelf 是不安全的。 与 pickle 一样，载入 Shelf 时可以执行任意代码。</p>
 </div>
-<p>Shelf objects support all methods supported by dictionaries.  This eases the
-transition from dictionary based scripts to those requiring persistent storage.</p>
-<p>Two additional methods are supported:</p>
+<p>字典所支持的所有方法都被 Shelf 对象所支持。 因此很容易将基于字典的代码转换为需要持久化存储的代码。</p>
+<p>额外支持的两个方法：</p>
 <dl class="method">
 <dt id="shelve.Shelf.sync">
-<code class="descclassname">Shelf.</code><code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shelve.Shelf.sync" title="永久链接至目标">¶</a></dt>
-<dd><p>Write back all entries in the cache if the shelf was opened with <em>writeback</em>
-set to <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>.  Also empty the cache and synchronize the persistent
-dictionary on disk, if feasible.  This is called automatically when the shelf
-is closed with <a class="reference internal" href="#shelve.Shelf.close" title="shelve.Shelf.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a>.</p>
+<code class="sig-prename descclassname">Shelf.</code><code class="sig-name descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shelve.Shelf.sync" title="永久链接至目标">¶</a></dt>
+<dd><p>如果 Shelf 打开时将 <em>writeback</em> 设为 <a class="reference internal" href="constants.html#True" tppabs="https://docs.python.org/zh-cn/3/library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> 则写回缓存中的所有条目。 如果可行还会清空缓存并将持久化字典同步到磁盘。 此方法会在使用 <a class="reference internal" href="#shelve.Shelf.close" title="shelve.Shelf.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> 关闭 Shelf 时自动被调用。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="shelve.Shelf.close">
-<code class="descclassname">Shelf.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shelve.Shelf.close" title="永久链接至目标">¶</a></dt>
-<dd><p>Synchronize and close the persistent <em>dict</em> object.  Operations on a closed
-shelf will fail with a <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
+<code class="sig-prename descclassname">Shelf.</code><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shelve.Shelf.close" title="永久链接至目标">¶</a></dt>
+<dd><p>同步并关闭持久化 <em>dict</em> 对象。 对已关闭 Shelf 的操作将失败并引发 <a class="reference internal" href="exceptions.html#ValueError" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
 </dd></dl>
 
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<p class="last"><a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/576642/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/576642/'" tppabs="https://code.activestate.com/recipes/576642/">Persistent dictionary recipe</a>
-with widely supported storage formats and having the speed of native
-dictionaries.</p>
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="javascript:if(confirm('https://code.activestate.com/recipes/576642/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.activestate.com/recipes/576642/'" tppabs="https://code.activestate.com/recipes/576642/">持久化字典方案</a>，使用了广泛支持的存储格式并具有原生字典的速度。</p>
 </div>
 <div class="section" id="restrictions">
-<h2>Restrictions<a class="headerlink" href="#restrictions" title="永久链接至标题">¶</a></h2>
+<h2>限制<a class="headerlink" href="#restrictions" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div></div></blockquote>
 <ul class="simple" id="index-1">
-<li>The choice of which database package will be used (such as <a class="reference internal" href="dbm.html#module-dbm.ndbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm.ndbm" title="dbm.ndbm: The standard &quot;database&quot; interface, based on ndbm. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm.ndbm</span></code></a> or
-<a class="reference internal" href="dbm.html#module-dbm.gnu" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm.gnu" title="dbm.gnu: GNU's reinterpretation of dbm. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm.gnu</span></code></a>) depends on which interface is available.  Therefore it is not
-safe to open the database directly using <a class="reference internal" href="dbm.html#module-dbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm" title="dbm: Interfaces to various Unix &quot;database&quot; formats."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code></a>.  The database is also
-(unfortunately) subject to the limitations of <a class="reference internal" href="dbm.html#module-dbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm" title="dbm: Interfaces to various Unix &quot;database&quot; formats."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code></a>, if it is used ---
-this means that (the pickled representation of) the objects stored in the
-database should be fairly small, and in rare cases key collisions may cause
-the database to refuse updates.</li>
-<li>The <a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> module does not support <em>concurrent</em> read/write access to
-shelved objects.  (Multiple simultaneous read accesses are safe.)  When a
-program has a shelf open for writing, no other program should have it open for
-reading or writing.  Unix file locking can be used to solve this, but this
-differs across Unix versions and requires knowledge about the database
-implementation used.</li>
+<li><p>可选择使用哪种数据库包 (例如 <a class="reference internal" href="dbm.html#module-dbm.ndbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm.ndbm" title="dbm.ndbm: The standard &quot;database&quot; interface, based on ndbm. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm.ndbm</span></code></a> 或 <a class="reference internal" href="dbm.html#module-dbm.gnu" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm.gnu" title="dbm.gnu: GNU's reinterpretation of dbm. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm.gnu</span></code></a>) 取决于支持哪种接口。 因此使用 <a class="reference internal" href="dbm.html#module-dbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm" title="dbm: Interfaces to various Unix &quot;database&quot; formats."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code></a> 直接打开数据库是不安全的。 如果使用了 <a class="reference internal" href="dbm.html#module-dbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm" title="dbm: Interfaces to various Unix &quot;database&quot; formats."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code></a>，数据库同样会（不幸地）受限于它 --- 这意味着存储在数据库中的（封存形式的）对象尺寸应当较小，并且在少数情况下键冲突有可能导致数据库拒绝更新。</p></li>
+<li><p><a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> 模块不支持对 Shelf 对象的 <em>并发</em> 读/写访问。 （多个同时读取访问则是安全的。） 当一个程序打开一个 shelve 对象来写入时，不应再有其他程序同时打开它来读取或写入。 Unix 文件锁定可被用来解决此问题，但这在不同 Unix 版本上会存在差异，并且需要有关所用数据库实现的细节知识。</p></li>
 </ul>
 <dl class="class">
 <dt id="shelve.Shelf">
-<em class="property">class </em><code class="descclassname">shelve.</code><code class="descname">Shelf</code><span class="sig-paren">(</span><em>dict</em>, <em>protocol=None</em>, <em>writeback=False</em>, <em>keyencoding='utf-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.Shelf" title="永久链接至目标">¶</a></dt>
-<dd><p>A subclass of <a class="reference internal" href="collections.abc.html#collections.abc.MutableMapping" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#collections.abc.MutableMapping" title="collections.abc.MutableMapping"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableMapping</span></code></a> which stores pickled
-values in the <em>dict</em> object.</p>
-<p>By default, version 3 pickles are used to serialize values.  The version of the
-pickle protocol can be specified with the <em>protocol</em> parameter. See the
-<a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> documentation for a discussion of the pickle protocols.</p>
-<p>If the <em>writeback</em> parameter is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the object will hold a cache of all
-entries accessed and write them back to the <em>dict</em> at sync and close times.
-This allows natural operations on mutable entries, but can consume much more
-memory and make sync and close take a long time.</p>
-<p>The <em>keyencoding</em> parameter is the encoding used to encode keys before they
-are used with the underlying dict.</p>
-<p>A <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> object can also be used as a context manager, in which
-case it will be automatically closed when the <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> block ends.</p>
+<em class="property">class </em><code class="sig-prename descclassname">shelve.</code><code class="sig-name descname">Shelf</code><span class="sig-paren">(</span><em class="sig-param">dict</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">writeback=False</em>, <em class="sig-param">keyencoding='utf-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.Shelf" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="collections.abc.html#collections.abc.MutableMapping" tppabs="https://docs.python.org/zh-cn/3/library/collections.abc.html#collections.abc.MutableMapping" title="collections.abc.MutableMapping"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableMapping</span></code></a> 的一个子类，它会将封存的值保存在 <em>dict</em> 对象中。</p>
+<p>默认会使用第 3 版 pickle 协议来序列化值。 pickle 协议版本可通过 <em>protocol</em> 形参来指定。 请参阅 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 文档来查看 pickle 协议的相关讨论。</p>
+<p>如果 <em>writeback</em> 形参为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，对象将为所有访问过的条目保留缓存并在同步和关闭时将它们写回到 <em>dict</em>。 这允许对可变的条目执行自然操作，但是会消耗更多内存并让同步和关闭花费更长时间。</p>
+<p><em>keyencoding</em> 形参是在下层字典被使用之前用于编码键的编码格式。</p>
+<p><a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> 对象还可以被用作上下文管理器，在这种情况下它将在 <a class="reference internal" href="compound_stmts.html#with" tppabs="https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 语句块结束时自动被关闭。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.2 版更改: </span>Added the <em>keyencoding</em> parameter; previously, keys were always encoded in
-UTF-8.</p>
+<p><span class="versionmodified changed">在 3.2 版更改: </span>添加了 <em>keyencoding</em> 形参；之前，键总是使用 UTF-8 编码。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>添加了上下文管理器支持</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>添加了上下文管理器支持</p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="shelve.BsdDbShelf">
-<em class="property">class </em><code class="descclassname">shelve.</code><code class="descname">BsdDbShelf</code><span class="sig-paren">(</span><em>dict</em>, <em>protocol=None</em>, <em>writeback=False</em>, <em>keyencoding='utf-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.BsdDbShelf" title="永久链接至目标">¶</a></dt>
-<dd><p>A subclass of <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> which exposes <code class="xref py py-meth docutils literal notranslate"><span class="pre">first()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">next()</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">previous()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">last()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_location()</span></code> which are available
-in the third-party <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb</span></code> module from <a class="reference external" href="javascript:if(confirm('https://www.jcea.es/programacion/pybsddb.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.jcea.es/programacion/pybsddb.htm'" tppabs="https://www.jcea.es/programacion/pybsddb.htm">pybsddb</a> but not in other database
-modules.  The <em>dict</em> object passed to the constructor must support those
-methods.  This is generally accomplished by calling one of
-<code class="xref py py-func docutils literal notranslate"><span class="pre">bsddb.hashopen()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">bsddb.btopen()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">bsddb.rnopen()</span></code>.  The
-optional <em>protocol</em>, <em>writeback</em>, and <em>keyencoding</em> parameters have the same
-interpretation as for the <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> class.</p>
+<em class="property">class </em><code class="sig-prename descclassname">shelve.</code><code class="sig-name descname">BsdDbShelf</code><span class="sig-paren">(</span><em class="sig-param">dict</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">writeback=False</em>, <em class="sig-param">keyencoding='utf-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.BsdDbShelf" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> 的一个子类，将 <code class="xref py py-meth docutils literal notranslate"><span class="pre">first()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">next()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">previous()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">last()</span></code> 和 <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_location()</span></code> 对外公开，在来自 <a class="reference external" href="javascript:if(confirm('https://www.jcea.es/programacion/pybsddb.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.jcea.es/programacion/pybsddb.htm'" tppabs="https://www.jcea.es/programacion/pybsddb.htm">pybsddb</a> 的第三方 <code class="xref py py-mod docutils literal notranslate"><span class="pre">bsddb</span></code> 模块中可用，但在其他数据库模块中不可用。 传给构造器的 <em>dict</em> 对象必须支持这些方法。 这通常是通过调用 <code class="xref py py-func docutils literal notranslate"><span class="pre">bsddb.hashopen()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">bsddb.btopen()</span></code> 或 <code class="xref py py-func docutils literal notranslate"><span class="pre">bsddb.rnopen()</span></code> 之一来完成的。  可选的 <em>protocol</em>, <em>writeback</em> 和 <em>keyencoding</em> 形参具有与 <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> 类相同的含义。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="shelve.DbfilenameShelf">
-<em class="property">class </em><code class="descclassname">shelve.</code><code class="descname">DbfilenameShelf</code><span class="sig-paren">(</span><em>filename</em>, <em>flag='c'</em>, <em>protocol=None</em>, <em>writeback=False</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.DbfilenameShelf" title="永久链接至目标">¶</a></dt>
-<dd><p>A subclass of <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> which accepts a <em>filename</em> instead of a dict-like
-object.  The underlying file will be opened using <a class="reference internal" href="dbm.html#dbm.open" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#dbm.open" title="dbm.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">dbm.open()</span></code></a>.  By
-default, the file will be created and opened for both read and write.  The
-optional <em>flag</em> parameter has the same interpretation as for the <a class="reference internal" href="#shelve.open" title="shelve.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>
-function.  The optional <em>protocol</em> and <em>writeback</em> parameters have the same
-interpretation as for the <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> class.</p>
+<em class="property">class </em><code class="sig-prename descclassname">shelve.</code><code class="sig-name descname">DbfilenameShelf</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">flag='c'</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">writeback=False</em><span class="sig-paren">)</span><a class="headerlink" href="#shelve.DbfilenameShelf" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> 的一个子类，它接受一个 <em>filename</em> 而非字典类对象。 下层文件将使用 <a class="reference internal" href="dbm.html#dbm.open" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#dbm.open" title="dbm.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">dbm.open()</span></code></a> 来打开。 默认情况下，文件将以读写模式打开。 可选的 <em>flag</em> 形参具有与 <a class="reference internal" href="#shelve.open" title="shelve.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 函数相同的含义。 可选的 <em>protocol</em> 和 <em>writeback</em> 形参具有与 <a class="reference internal" href="#shelve.Shelf" title="shelve.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shelf</span></code></a> 类相同的含义。</p>
 </dd></dl>
 
 </div>
 <div class="section" id="example">
 <span id="shelve-example"></span><h2>示例<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
-<p>To summarize the interface (<code class="docutils literal notranslate"><span class="pre">key</span></code> is a string, <code class="docutils literal notranslate"><span class="pre">data</span></code> is an arbitrary
-object):</p>
+<p>对接口的总结如下 (<code class="docutils literal notranslate"><span class="pre">key</span></code> 为字符串，<code class="docutils literal notranslate"><span class="pre">data</span></code> 为任意对象):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shelve</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="n">shelve</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>  <span class="c1"># open -- file may get suffix added by low-level</span>
@@ -273,12 +218,12 @@ object):</p>
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<dl class="last docutils">
-<dt>Module <a class="reference internal" href="dbm.html#module-dbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm" title="dbm: Interfaces to various Unix &quot;database&quot; formats."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code></a></dt>
-<dd>Generic interface to <code class="docutils literal notranslate"><span class="pre">dbm</span></code>-style databases.</dd>
-<dt>模块 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a></dt>
-<dd>Object serialization used by <a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a>.</dd>
+<p class="admonition-title">参见</p>
+<dl class="simple">
+<dt>模块 <a class="reference internal" href="dbm.html#module-dbm" tppabs="https://docs.python.org/zh-cn/3/library/dbm.html#module-dbm" title="dbm: Interfaces to various Unix &quot;database&quot; formats."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dbm</span></code> 风格数据库的泛型接口。</p>
+</dd>
+<dt>模块 <a class="reference internal" href="pickle.html#module-pickle" tppabs="https://docs.python.org/zh-cn/3/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a></dt><dd><p><a class="reference internal" href="#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> 所使用的对象序列化。</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -290,10 +235,10 @@ object):</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">shelve</span></code> --- Python object persistence</a><ul>
-<li><a class="reference internal" href="#restrictions">Restrictions</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code> --- Python 对象持久化</a><ul>
+<li><a class="reference internal" href="#restrictions">限制</a></li>
 <li><a class="reference internal" href="#example">示例</a></li>
 </ul>
 </li>
@@ -301,16 +246,16 @@ object):</p>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="copyreg.html" tppabs="https://docs.python.org/zh-cn/3/library/copyreg.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">copyreg</span></code> --- Register <code class="docutils literal notranslate"><span class="pre">pickle</span></code> support functions</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code> --- 注册配合 <code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code> 模块使用的函数</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="marshal.html" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">marshal</span></code> --- Internal Python object serialization</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code> --- 内部 Python 对象序列化</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/shelve.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/shelve.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/shelve.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/shelve.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/shelve.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/shelve.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -330,19 +275,22 @@ object):</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="marshal.html" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html" title="marshal --- Internal Python object serialization"
+          <a href="marshal.html" tppabs="https://docs.python.org/zh-cn/3/library/marshal.html" title="marshal --- 内部 Python 对象序列化"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="copyreg.html" tppabs="https://docs.python.org/zh-cn/3/library/copyreg.html" title="copyreg --- Register pickle support functions"
+          <a href="copyreg.html" tppabs="https://docs.python.org/zh-cn/3/library/copyreg.html" title="copyreg --- 注册配合 pickle 模块使用的函数"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="persistence.html" tppabs="https://docs.python.org/zh-cn/3/library/persistence.html" >数据持久化</a> &#187;</li>
@@ -364,15 +312,19 @@ object):</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>6. Distutils 示例 &#8212; Python 3.8.2 文档</title>
+    <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="documentation_options.js" tppabs="https://docs.python.org/zh-cn/3/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="jquery.js" tppabs="https://docs.python.org/zh-cn/3/_static/jquery.js"></script>
+    <script type="text/javascript" src="underscore.js" tppabs="https://docs.python.org/zh-cn/3/_static/underscore.js"></script>
+    <script type="text/javascript" src="doctools.js" tppabs="https://docs.python.org/zh-cn/3/_static/doctools.js"></script>
+    <script type="text/javascript" src="language_data.js" tppabs="https://docs.python.org/zh-cn/3/_static/language_data.js"></script>
+    <script type="text/javascript" src="translations.js" tppabs="https://docs.python.org/zh-cn/3/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.8.2 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="7. 扩展 Distutils" href="extending.html" />
+    <link rel="prev" title="5. Creating Built Distributions" href="builtdist.html" />
+    <link rel="canonical" href="https://docs.python.org/3/distutils/examples.html" />
+    
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="extending-2.html" tppabs="https://docs.python.org/zh-cn/3/distutils/extending.html" title="7. 扩展 Distutils"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="builtdist.html" tppabs="https://docs.python.org/zh-cn/3/distutils/builtdist.html" title="5. Creating Built Distributions"
+             accesskey="P">上一页</a> |</li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
+
+          <li class="nav-item nav-item-1"><a href="index-12.html" tppabs="https://docs.python.org/zh-cn/3/distutils/index.html" accesskey="U">分发 Python 模块（遗留版本）</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="distutils-examples">
+<span id="id1"></span><h1><span class="section-number">6. </span>Distutils 示例<a class="headerlink" href="#distutils-examples" title="永久链接至标题">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>这篇文档只有在 <a class="reference external" href="javascript:if(confirm('https://setuptools.readthedocs.io/en/latest/issue8777  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://setuptools.readthedocs.io/en/latest/issue8777'" tppabs="https://setuptools.readthedocs.io/en/latest/setuptools.html">https://setuptools.readthedocs.io/en/latest/setuptools.html</a> 上的 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 文档独立涵盖此处包含的所有相关信息之前，才会单独保留。</p>
+</div>
+<p>本章节提供几个基础示例，来帮助用户入门 distutils。关于使用 distutils 的额外信息可以参考 Distutils Cookbook。</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<dl class="simple">
+<dt><a class="reference external" href="javascript:if(confirm('https://wiki.python.org/moin/Distutils/issue37206  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://wiki.python.org/moin/Distutils/issue37206'" tppabs="https://wiki.python.org/moin/Distutils/Cookbook">Distutils Cookbook</a></dt><dd><p>一套展示如何更好地控制和使用 distutils 的方法。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="pure-python-distribution-by-module">
+<span id="pure-mod"></span><h2><span class="section-number">6.1. </span>纯 Python 分发（通过 module）<a class="headerlink" href="#pure-python-distribution-by-module" title="永久链接至标题">¶</a></h2>
+<p>如果你要分发一组模块，特别是它们不在特定的包中，你可以在配置脚本中使用 <code class="docutils literal notranslate"><span class="pre">py_modules</span></code> 选项单独指定它们。</p>
+<p>最简单的情况下，你只用关心两个文件：一个配置脚本，和单个你要分发的模块，这个示例中的 <code class="file docutils literal notranslate"><span class="pre">foo.py</span></code>: ：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>（在本章节的所有图中，<em>&lt;root&gt;</em> 表示分发根目录。）这种情况下的一个最小配置脚本是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>注意分发的包名用 <code class="docutils literal notranslate"><span class="pre">name</span></code> 选项单独指定，没有规定它必须和包中单独的模块同名（虽然这也是个可以遵循的好习惯）。然而，分发名用来生成文件名，所以你应该坚持用字母、数字、下划线和连词号。</p>
+<p>因为 <code class="docutils literal notranslate"><span class="pre">py_modules</span></code> 是个列表，你当然可以指定多个模块，比如，如果你要分发模块 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foo</span></code> 和 <code class="xref py py-mod docutils literal notranslate"><span class="pre">bar</span></code>，你的配置可能是这样：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>并且配置脚本是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>你可以把模块源文件放进另一个目录，但是如果你有足够的模块，也许用包指定模块更简单，而不是单独列出它们。</p>
+</div>
+<div class="section" id="pure-python-distribution-by-package">
+<span id="pure-pkg"></span><h2><span class="section-number">6.2. </span>纯 Python 分发（通过 包）<a class="headerlink" href="#pure-python-distribution-by-package" title="永久链接至标题">¶</a></h2>
+<p>如果你有超过一组模块要分发，特别是它们在不同的包中，也许指定整个包更简单，而不是指定单独的模块。这样即使你的模块不在一个包中也有效；你可以直接令 Distutils 来从根包来处理模块，并且这样对任何其他包也有效（除非你不需要 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> 文件）。</p>
+<p>上一个示例的配置脚本也可以写成：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>（空字符串表示根包。）</p>
+<p>如果两个文件移动到子目录，但是依然在根包中，如：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">src</span><span class="o">/</span>      <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+                  <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>那么你依然需要指定根包，但是你还需要告诉 Distutils 根包中的源文件在哪：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">package_dir</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="s1">&#39;src&#39;</span><span class="p">},</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>更一般地，你要分发多个在同一个包（或者子包）中的模块。举个例子，假设 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foo</span></code> 和 <code class="xref py py-mod docutils literal notranslate"><span class="pre">bar</span></code> 模块属于 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foobar</span></code> 包，排布源文件树的一种方式是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">foobar</span><span class="o">/</span>
+                 <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>这其实是 Distutils 默认的排布，也是你的配置脚本中需要的工作量最小的。</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foobar&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>如果你要把模块放到没有按照它们的包名命名的目录里，那你需要再次使用 <code class="docutils literal notranslate"><span class="pre">package_dir</span></code> 选项。比如，如果 <code class="file docutils literal notranslate"><span class="pre">src</span></code> 目录包含包 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foobar</span></code> 中的模块：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">src</span><span class="o">/</span>
+                 <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>一个合适的配置脚本可以是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">package_dir</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;foobar&#39;</span><span class="p">:</span> <span class="s1">&#39;src&#39;</span><span class="p">},</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foobar&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>或者，你可以把主包中的模块直接放到分发根目录：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>这样你的配置文件是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">package_dir</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;foobar&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foobar&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>（空字符串同样表示当前目录。）</p>
+<p>如果你有子包，则它们必须显式列在 <code class="docutils literal notranslate"><span class="pre">packages</span></code> 中，但是 <code class="docutils literal notranslate"><span class="pre">package_dir</span></code> 中的任何条目会自动扩展到子包。（也就是说，Distutils <em>不会</em> 扫描你的源码树，而是尝试通过查找 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> 文件，来弄清哪些目录与 Python 包关联。）这样，如果默认排布产生一个子包：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">foobar</span><span class="o">/</span>
+                 <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
+                 <span class="n">subfoo</span><span class="o">/</span>
+                           <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+                           <span class="n">blah</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>则相应的配置脚本是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="s1">&#39;foobar.subfoo&#39;</span><span class="p">],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="single-extension-module">
+<span id="single-ext"></span><h2><span class="section-number">6.3. </span>单个扩展模块<a class="headerlink" href="#single-extension-module" title="永久链接至标题">¶</a></h2>
+<p>扩展模块用 <code class="docutils literal notranslate"><span class="pre">ext_modules</span></code> 选项指定。<code class="docutils literal notranslate"><span class="pre">package_dir</span></code> 对在哪寻找扩展源文件无效；它只对纯 Python 模块的源文件有效。最简单的，一个用单个C源文件写的单扩展模块是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">root</span><span class="o">&gt;/</span>
+        <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">foo</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>如果 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foo</span></code> 扩展属于根包，则配置脚本可以是：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">distutils.extension</span> <span class="kn">import</span> <span class="n">Extension</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">ext_modules</span><span class="o">=</span><span class="p">[</span><span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo.c&#39;</span><span class="p">])],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+<p>如果扩展在包中，比如 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foopkg</span></code>，那么</p>
+<p>使用完全相同的源文件树排布，通过改变扩展的名字，这个扩展很容易放入 <code class="xref py py-mod docutils literal notranslate"><span class="pre">foopkg</span></code> 包中：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">distutils.extension</span> <span class="kn">import</span> <span class="n">Extension</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">ext_modules</span><span class="o">=</span><span class="p">[</span><span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;foopkg.foo&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo.c&#39;</span><span class="p">])],</span>
+      <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="checking-a-package">
+<h2><span class="section-number">6.4. </span>检查一个包<a class="headerlink" href="#checking-a-package" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">check</span></code> 命令允许你校验你的包的元数据是否满足生成分发的最低要求。</p>
+<p>直接使用你的 <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> 脚本来运行它。如果缺了一些东西，<code class="docutils literal notranslate"><span class="pre">check</span></code> 会显示警告。</p>
+<p>我们来用单个脚本举例：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>运行 <code class="docutils literal notranslate"><span class="pre">check</span></code> 命令会显示一些警告：</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python setup.py check
+<span class="go">running check</span>
+<span class="go">warning: check: missing required meta-data: version, url</span>
+<span class="go">warning: check: missing meta-data: either (author and author_email) or</span>
+<span class="go">         (maintainer and maintainer_email) must be supplied</span>
+</pre></div>
+</div>
+<p>如果你在 <code class="docutils literal notranslate"><span class="pre">long_description</span></code> 域中使用 reStructuredText 语法，并且安装了 <a class="reference external" href="javascript:if(confirm('http://docutils.sourceforge.net/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://docutils.sourceforge.net/'" tppabs="http://docutils.sourceforge.net/">docutils</a> ，你可以用 <code class="docutils literal notranslate"><span class="pre">check</span></code> 命令，和 <code class="docutils literal notranslate"><span class="pre">restructuredtext</span></code> 选项检查语法是否正确。</p>
+<p>比如，如果 <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> 脚本改成：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">My description</span>
+<span class="s2">==============</span>
+
+<span class="s2">This is the description of the ``foobar`` package.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s1">&#39;tarek&#39;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;tarek@ziade.org&#39;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="n">long_description</span><span class="o">=</span><span class="n">desc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>长描述中有问题的地方，通过使用 <code class="xref py py-mod docutils literal notranslate"><span class="pre">docutils</span></code> 解析器，<code class="docutils literal notranslate"><span class="pre">check</span></code> 能进行删除：</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python setup.py check --restructuredtext
+<span class="go">running check</span>
+<span class="go">warning: check: Title underline too short. (line 2)</span>
+<span class="go">warning: check: Could not finish the parsing.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reading-the-metadata">
+<h2><span class="section-number">6.5. </span>读取元数据<a class="headerlink" href="#reading-the-metadata" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="apiref.html#distutils.core.setup" tppabs="https://docs.python.org/zh-cn/3/distutils/apiref.html#distutils.core.setup" title="distutils.core.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">distutils.core.setup()</span></code></a> 函数提供一个通过项目的 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>  脚本，来查询项目的元数据的域的命令行接口：</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python setup.py --name
+<span class="go">distribute</span>
+</pre></div>
+</div>
+<p>这个调用通过运行 <a class="reference internal" href="apiref.html#distutils.core.setup" tppabs="https://docs.python.org/zh-cn/3/distutils/apiref.html#distutils.core.setup" title="distutils.core.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">distutils.core.setup()</span></code></a> 函数读取 <code class="docutils literal notranslate"><span class="pre">name</span></code> 元数据。然而，当源文件或者二进制分发用 Distutils 创建时，元数据域写入一个名为 <code class="file docutils literal notranslate"><span class="pre">PKG-INFO</span></code> 的静态文件。当一个基于Distutils的项目安装在 Python 中时，<code class="file docutils literal notranslate"><span class="pre">PKG-INFO</span></code> 文件随着分发的模块和包一起复制到 <code class="file docutils literal notranslate"><span class="pre">NAME-VERSION-pyX.X.egg-info</span></code> 中，其中 <code class="docutils literal notranslate"><span class="pre">NAME</span></code> 是项目的名字，<code class="docutils literal notranslate"><span class="pre">VERSION</span></code> 是元数据中定义的版本， <code class="docutils literal notranslate"><span class="pre">pyX.X</span></code> 则是 Python 的大版本和小版本，如 <code class="docutils literal notranslate"><span class="pre">2.7</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">3.2</span></code>。</p>
+<p>你可以读回静态文件，使用 <code class="xref py py-class docutils literal notranslate"><span class="pre">distutils.dist.DistributionMetadata</span></code> 类和它的 <code class="xref py py-func docutils literal notranslate"><span class="pre">read_pkg_file()</span></code> 方法：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">distutils.dist</span> <span class="kn">import</span> <span class="n">DistributionMetadata</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metadata</span> <span class="o">=</span> <span class="n">DistributionMetadata</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metadata</span><span class="o">.</span><span class="n">read_pkg_file</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;distribute-0.6.8-py2.7.egg-info&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metadata</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;distribute&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metadata</span><span class="o">.</span><span class="n">version</span>
+<span class="go">&#39;0.6.8&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metadata</span><span class="o">.</span><span class="n">description</span>
+<span class="go">&#39;Easily download, build, install, upgrade, and uninstall Python packages&#39;</span>
+</pre></div>
+</div>
+<p>注意类也可以用元数据文件载入值来实例化：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pkg_info_path</span> <span class="o">=</span> <span class="s1">&#39;distribute-0.6.8-py2.7.egg-info&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DistributionMetadata</span><span class="p">(</span><span class="n">pkg_info_path</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;distribute&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">6. Distutils 示例</a><ul>
+<li><a class="reference internal" href="#pure-python-distribution-by-module">6.1. 纯 Python 分发（通过 module）</a></li>
+<li><a class="reference internal" href="#pure-python-distribution-by-package">6.2. 纯 Python 分发（通过 包）</a></li>
+<li><a class="reference internal" href="#single-extension-module">6.3. 单个扩展模块</a></li>
+<li><a class="reference internal" href="#checking-a-package">6.4. 检查一个包</a></li>
+<li><a class="reference internal" href="#reading-the-metadata">6.5. 读取元数据</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="builtdist.html" tppabs="https://docs.python.org/zh-cn/3/distutils/builtdist.html"
+                        title="上一章"><span class="section-number">5. </span>Creating Built Distributions</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="extending-2.html" tppabs="https://docs.python.org/zh-cn/3/distutils/extending.html"
+                        title="下一章"><span class="section-number">7. </span>扩展 Distutils</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/distutils/examples.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/distutils/examples.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/distutils/examples.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" tppabs="https://docs.python.org/zh-cn/3/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="extending-2.html" tppabs="https://docs.python.org/zh-cn/3/distutils/extending.html" title="7. 扩展 Distutils"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="builtdist.html" tppabs="https://docs.python.org/zh-cn/3/distutils/builtdist.html" title="5. Creating Built Distributions"
+             >上一页</a> |</li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
+
+          <li class="nav-item nav-item-1"><a href="index-12.html" tppabs="https://docs.python.org/zh-cn/3/distutils/index.html" >分发 Python 模块（遗留版本）</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
+    <br />
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+
+  </body>
+</html>

@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ç”¨ asyncio å¼€å‘ &#8212; Python 3.7.3 æ–‡æ¡£</title>
+    <meta charset="utf-8" />
+    <title>ç”¨ asyncio å¼€å‘ &#8212; Python 3.8.2 æ–‡æ¡£</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="åœ¨ Python 3.7.3 æ–‡æ¡£ ä¸­æœç´¢"
+          title="åœ¨ Python 3.8.2 æ–‡æ¡£ ä¸­æœç´¢"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="å…³äºè¿™äº›æ–‡æ¡£" href="../about.html" />
     <link rel="index" title="ç´¢å¼•" href="../genindex.html" />
     <link rel="search" title="æœç´¢" href="../search.html" />
     <link rel="copyright" title="ç‰ˆæƒæ‰€æœ‰" href="../copyright.html" />
     <link rel="next" title="socket --- åº•å±‚ç½‘ç»œæ¥å£" href="socket.html" />
-    <link rel="prev" title="Low-level API Index" href="asyncio-llapi-index.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="prev" title="åº•å±‚APIç›®å½•" href="asyncio-llapi-index.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/asyncio-dev.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>å¯¼èˆª</h3>
       <ul>
@@ -59,20 +64,23 @@
           <a href="socket.html" tppabs="https://docs.python.org/zh-cn/3/library/socket.html" title="socket --- åº•å±‚ç½‘ç»œæ¥å£"
              accesskey="N">ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html" title="Low-level API Index"
+          <a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html" title="åº•å±‚APIç›®å½•"
              accesskey="P">ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >ç½‘ç»œå’Œè¿›ç¨‹é—´é€šä¿¡</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
     <li class="right">
         
 
@@ -102,32 +110,29 @@
 <p>æœ¬é¡µåˆ—å‡ºå¸¸è§çš„é”™è¯¯å’Œé™·é˜±ï¼Œå¹¶è§£é‡Šå¦‚ä½•é¿å…å®ƒä»¬ã€‚</p>
 <div class="section" id="debug-mode">
 <span id="asyncio-debug-mode"></span><h2>Debug æ¨¡å¼<a class="headerlink" href="#debug-mode" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>é»˜è®¤æƒ…å†µä¸‹ï¼Œasyncioä»¥ç”Ÿäº§æ¨¡å¼è¿è¡Œã€‚ä¸ºäº†ç®€åŒ–å¼€å‘ï¼Œasyncioæœ‰ä¸€ä¸ª*debug æ¨¡å¼* ã€‚</p>
+<p>é»˜è®¤æƒ…å†µä¸‹ï¼Œasyncioä»¥ç”Ÿäº§æ¨¡å¼è¿è¡Œã€‚ä¸ºäº†ç®€åŒ–å¼€å‘ï¼Œasyncioè¿˜æœ‰ä¸€ç§*debug æ¨¡å¼* ã€‚</p>
 <p>æœ‰å‡ ç§æ–¹æ³•å¯ä»¥å¯ç”¨å¼‚æ­¥è°ƒè¯•æ¨¡å¼:</p>
 <ul class="simple">
-<li>å°† <span class="target" id="index-2"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONASYNCIODEBUG" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONASYNCIODEBUG"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONASYNCIODEBUG</span></code></a> ç¯å¢ƒå˜é‡è®¾ç½®ä¸º <code class="docutils literal notranslate"><span class="pre">1</span></code> ã€‚</li>
-<li>ä½¿ç”¨ <a class="reference internal" href="cmdline.html#id5" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#id5"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span></code></a> <code class="docutils literal notranslate"><span class="pre">dev</span></code> Python å‘½ä»¤è¡Œé€‰é¡¹ã€‚</li>
-<li>å°† <code class="docutils literal notranslate"><span class="pre">debug=True</span></code> ä¼ é€’ç»™ <a class="reference internal" href="asyncio-task.html#asyncio.run" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.run" title="asyncio.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.run()</span></code></a> ã€‚</li>
-<li>è°ƒç”¨ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.set_debug" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.set_debug" title="asyncio.loop.set_debug"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.set_debug()</span></code></a> ã€‚</li>
+<li><p>å°† <span class="target" id="index-2"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONASYNCIODEBUG" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#envvar-PYTHONASYNCIODEBUG"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONASYNCIODEBUG</span></code></a> ç¯å¢ƒå˜é‡è®¾ç½®ä¸º <code class="docutils literal notranslate"><span class="pre">1</span></code> ã€‚</p></li>
+<li><p>ä½¿ç”¨ <a class="reference internal" href="cmdline.html#id5" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#id5"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span></code></a> <code class="docutils literal notranslate"><span class="pre">dev</span></code> Python å‘½ä»¤è¡Œé€‰é¡¹ã€‚</p></li>
+<li><p>å°† <code class="docutils literal notranslate"><span class="pre">debug=True</span></code> ä¼ é€’ç»™ <a class="reference internal" href="asyncio-task.html#asyncio.run" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.run" title="asyncio.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.run()</span></code></a> ã€‚</p></li>
+<li><p>è°ƒç”¨ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.set_debug" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.set_debug" title="asyncio.loop.set_debug"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.set_debug()</span></code></a> ã€‚</p></li>
 </ul>
 <p>é™¤äº†å¯ç”¨è°ƒè¯•æ¨¡å¼å¤–ï¼Œè¿˜è¦è€ƒè™‘:</p>
 <ul>
-<li><p class="first">å°† <a class="reference internal" href="#asyncio-logger"><span class="std std-ref">asyncio logger</span></a> çš„æ—¥å¿—çº§åˆ«è®¾ç½®ä¸º <code class="xref py py-data docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>ï¼Œä¾‹å¦‚ï¼Œä¸‹é¢çš„ä»£ç ç‰‡æ®µå¯ä»¥åœ¨åº”ç”¨ç¨‹åºå¯åŠ¨æ—¶è¿è¡Œ:</p>
+<li><p>å°† <a class="reference internal" href="#asyncio-logger"><span class="std std-ref">asyncio logger</span></a> çš„æ—¥å¿—çº§åˆ«è®¾ç½®ä¸º <code class="xref py py-data docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>ï¼Œä¾‹å¦‚ï¼Œä¸‹é¢çš„ä»£ç ç‰‡æ®µå¯ä»¥åœ¨åº”ç”¨ç¨‹åºå¯åŠ¨æ—¶è¿è¡Œ:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">é…ç½® <a class="reference internal" href="warnings.html#module-warnings" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#module-warnings" title="warnings: Issue warning messages and control their disposition."><code class="xref py py-mod docutils literal notranslate"><span class="pre">warnings</span></code></a> æ¨¡å—ä»¥æ˜¾ç¤º <a class="reference internal" href="exceptions.html#ResourceWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> è­¦å‘Šã€‚ä¸€ç§æ–¹æ³•æ˜¯ä½¿ç”¨ <a class="reference internal" href="cmdline.html#cmdoption-w" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-w"><code class="xref std std-option docutils literal notranslate"><span class="pre">-W</span></code></a> <code class="docutils literal notranslate"><span class="pre">default</span></code> å‘½ä»¤è¡Œé€‰é¡¹ã€‚</p>
-</li>
+<li><p>é…ç½® <a class="reference internal" href="warnings.html#module-warnings" tppabs="https://docs.python.org/zh-cn/3/library/warnings.html#module-warnings" title="warnings: Issue warning messages and control their disposition."><code class="xref py py-mod docutils literal notranslate"><span class="pre">warnings</span></code></a> æ¨¡å—ä»¥æ˜¾ç¤º <a class="reference internal" href="exceptions.html#ResourceWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> è­¦å‘Šã€‚ä¸€ç§æ–¹æ³•æ˜¯ä½¿ç”¨ <a class="reference internal" href="cmdline.html#cmdoption-w" tppabs="https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-w"><code class="xref std std-option docutils literal notranslate"><span class="pre">-W</span></code></a> <code class="docutils literal notranslate"><span class="pre">default</span></code> å‘½ä»¤è¡Œé€‰é¡¹ã€‚</p></li>
 </ul>
 <p>å¯ç”¨è°ƒè¯•æ¨¡å¼æ—¶:</p>
 <ul class="simple">
-<li>asyncio æ£€æŸ¥ <a class="reference internal" href="#asyncio-coroutine-not-scheduled"><span class="std std-ref">æœªè¢«ç­‰å¾…çš„åç¨‹</span></a> å¹¶è®°å½•ä»–ä»¬ï¼›è¿™å°†æ¶ˆé™¤â€œè¢«é—å¿˜çš„ç­‰å¾…â€é—®é¢˜ã€‚</li>
-<li>è®¸å¤šéçº¿ç¨‹å®‰å…¨çš„å¼‚æ­¥ APIs (ä¾‹å¦‚ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_at" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_at" title="asyncio.loop.call_at"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_at()</span></code></a> æ–¹æ³•)ï¼Œå¦‚æœä»é”™è¯¯çš„çº¿ç¨‹è°ƒç”¨ï¼Œåˆ™ä¼šå¼•å‘å¼‚å¸¸ã€‚</li>
-<li>å¦‚æœæ‰§è¡ŒI/Oæ“ä½œèŠ±è´¹çš„æ—¶é—´å¤ªé•¿ï¼Œåˆ™è®°å½•I/Oé€‰æ‹©å™¨çš„æ‰§è¡Œæ—¶é—´ã€‚</li>
-<li>Callbacks taking longer than 100ms are logged.  The
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">loop.slow_callback_duration</span></code> attribute can be used to set the
-minimum execution duration in seconds that is considered &quot;slow&quot;.</li>
+<li><p>asyncio æ£€æŸ¥ <a class="reference internal" href="#asyncio-coroutine-not-scheduled"><span class="std std-ref">æœªè¢«ç­‰å¾…çš„åç¨‹</span></a> å¹¶è®°å½•ä»–ä»¬ï¼›è¿™å°†æ¶ˆé™¤â€œè¢«é—å¿˜çš„ç­‰å¾…â€é—®é¢˜ã€‚</p></li>
+<li><p>è®¸å¤šéçº¿ç¨‹å®‰å…¨çš„å¼‚æ­¥ APIs (ä¾‹å¦‚ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_soon" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_soon" title="asyncio.loop.call_soon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_soon()</span></code></a> å’Œ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.call_at" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.call_at" title="asyncio.loop.call_at"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.call_at()</span></code></a> æ–¹æ³•)ï¼Œå¦‚æœä»é”™è¯¯çš„çº¿ç¨‹è°ƒç”¨ï¼Œåˆ™ä¼šå¼•å‘å¼‚å¸¸ã€‚</p></li>
+<li><p>å¦‚æœæ‰§è¡ŒI/Oæ“ä½œèŠ±è´¹çš„æ—¶é—´å¤ªé•¿ï¼Œåˆ™è®°å½•I/Oé€‰æ‹©å™¨çš„æ‰§è¡Œæ—¶é—´ã€‚</p></li>
+<li><p>æ‰§è¡Œæ—¶é—´è¶…è¿‡100æ¯«ç§’çš„å›è°ƒå°†ä¼šè½½å…¥æ—¥å¿—ã€‚ å±æ€§ <code class="xref py py-attr docutils literal notranslate"><span class="pre">loop.slow_callback_duration</span></code> å¯ç”¨äºè®¾ç½®ä»¥ç§’ä¸ºå•ä½çš„æœ€å°æ‰§è¡ŒæŒç»­æ—¶é—´ï¼Œè¿™è¢«è§†ä¸ºâ€œç¼“æ…¢â€ã€‚</p></li>
 </ul>
 </div>
 <div class="section" id="concurrency-and-multithreading">
@@ -153,15 +158,12 @@ minimum execution duration in seconds that is considered &quot;slow&quot;.</li>
 </pre></div>
 </div>
 <p>ä¸ºäº†èƒ½å¤Ÿå¤„ç†ä¿¡å·å’Œæ‰§è¡Œå­è¿›ç¨‹ï¼Œäº‹ä»¶å¾ªç¯å¿…é¡»è¿è¡Œäºä¸»çº¿ç¨‹ä¸­ã€‚</p>
-<p>The <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a> method can be used with a
-<a class="reference internal" href="concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" title="concurrent.futures.ThreadPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.ThreadPoolExecutor</span></code></a> to execute
-blocking code in a different OS thread without blocking the OS thread
-that the event loop runs in.</p>
+<p>æ–¹æ³• <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a>Â å¯ä»¥å’Œ <a class="reference internal" href="concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" tppabs="https://docs.python.org/zh-cn/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" title="concurrent.futures.ThreadPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.ThreadPoolExecutor</span></code></a> ä¸€èµ·ä½¿ç”¨ï¼Œç”¨äºåœ¨ä¸€ä¸ªä¸åŒçš„æ“ä½œç³»ç»Ÿçº¿ç¨‹ä¸­æ‰§è¡Œé˜»å¡ä»£ç ï¼Œå¹¶é¿å…é˜»å¡è¿è¡Œäº‹ä»¶å¾ªç¯çš„é‚£ä¸ªæ“ä½œç³»ç»Ÿçº¿ç¨‹ã€‚</p>
 </div>
 <div class="section" id="running-blocking-code">
 <span id="asyncio-handle-blocking"></span><h2>è¿è¡Œé˜»å¡çš„ä»£ç <a class="headerlink" href="#running-blocking-code" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
 <p>ä¸åº”è¯¥ç›´æ¥è°ƒç”¨é˜»å¡( CPU ç»‘å®š)ä»£ç ã€‚ä¾‹å¦‚ï¼Œå¦‚æœä¸€ä¸ªå‡½æ•°æ‰§è¡Œ1ç§’çš„ CPU å¯†é›†å‹è®¡ç®—ï¼Œé‚£ä¹ˆæ‰€æœ‰å¹¶å‘å¼‚æ­¥ä»»åŠ¡å’Œ IO æ“ä½œéƒ½å°†å»¶è¿Ÿ1ç§’ã€‚</p>
-<p>å¯ä»¥ä½¿ç”¨æ‰§è¡Œå™¨åœ¨ä¸åŒçš„çº¿ç¨‹ç”šè‡³ä¸åŒçš„è¿›ç¨‹ä¸­è¿è¡Œä»»åŠ¡ï¼Œä»¥é¿å…ä½¿ç”¨äº‹ä»¶å¾ªç¯é˜»å¡OSçº¿ç¨‹ã€‚æœ‰å…³è¯¦ç»†ä¿¡æ¯ï¼Œè¯·å‚è§ <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a>  æ–¹æ³•ã€‚</p>
+<p>å¯ä»¥ç”¨æ‰§è¡Œå™¨åœ¨ä¸åŒçš„çº¿ç¨‹ç”šè‡³ä¸åŒçš„è¿›ç¨‹ä¸­è¿è¡Œä»»åŠ¡ï¼Œä»¥é¿å…ä½¿ç”¨äº‹ä»¶å¾ªç¯é˜»å¡ OS çº¿ç¨‹ã€‚ è¯·å‚é˜… <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a> æ–¹æ³•äº†è§£è¯¦æƒ…ã€‚</p>
 </div>
 <div class="section" id="logging">
 <span id="asyncio-logger"></span><h2>æ—¥å¿—<a class="headerlink" href="#logging" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
@@ -173,10 +175,7 @@ that the event loop runs in.</p>
 </div>
 <div class="section" id="detect-never-awaited-coroutines">
 <span id="asyncio-coroutine-not-scheduled"></span><h2>æ£€æµ‹ never-awaited ååŒç¨‹åº<a class="headerlink" href="#detect-never-awaited-coroutines" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
-<p>When a coroutine function is called, but not awaited
-(e.g. <code class="docutils literal notranslate"><span class="pre">coro()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">coro()</span></code>)
-or the coroutine is not scheduled with <a class="reference internal" href="asyncio-task.html#asyncio.create_task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code></a>, asyncio
-will emit a <a class="reference internal" href="exceptions.html#RuntimeWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeWarning" title="RuntimeWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></a>:</p>
+<p>å½“åç¨‹å‡½æ•°è¢«è°ƒç”¨è€Œä¸æ˜¯è¢«ç­‰å¾…æ—¶ (å³æ‰§è¡Œ <code class="docutils literal notranslate"><span class="pre">coro()</span></code> è€Œä¸æ˜¯ <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">coro()</span></code>) æˆ–è€…åç¨‹æ²¡æœ‰é€šè¿‡ <a class="reference internal" href="asyncio-task.html#asyncio.create_task" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code></a> è¢«æ’å…¥è®¡åˆ’æ—¥ç¨‹ï¼Œasyncio å°†ä¼šå‘å‡ºä¸€æ¡ <a class="reference internal" href="exceptions.html#RuntimeWarning" tppabs="https://docs.python.org/zh-cn/3/library/exceptions.html#RuntimeWarning" title="RuntimeWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
@@ -238,8 +237,7 @@ will emit a <a class="reference internal" href="exceptions.html#RuntimeWarning" 
 <span class="ne">Exception</span><span class="p">:</span> <span class="ow">not</span> <span class="n">consumed</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="#asyncio-debug-mode"><span class="std std-ref">Enable the debug mode</span></a> to get the
-traceback where the task was created:</p>
+<p><a class="reference internal" href="#asyncio-debug-mode"><span class="std std-ref">æ¿€æ´»è°ƒè¯•æ¨¡å¼</span></a> ä»¥è·å–ä»»åŠ¡åˆ›å»ºå¤„çš„è·Ÿè¸ªä¿¡æ¯:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">(),</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -269,7 +267,7 @@ traceback where the task was created:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">ç›®å½•</a></h3>
   <ul>
 <li><a class="reference internal" href="#">ç”¨ asyncio å¼€å‘</a><ul>
 <li><a class="reference internal" href="#debug-mode">Debug æ¨¡å¼</a></li>
@@ -284,16 +282,16 @@ traceback where the task was created:</p>
 
   <h4>ä¸Šä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html"
-                        title="ä¸Šä¸€ç« ">Low-level API Index</a></p>
+                        title="ä¸Šä¸€ç« ">åº•å±‚APIç›®å½•</a></p>
   <h4>ä¸‹ä¸€ä¸ªä¸»é¢˜</h4>
   <p class="topless"><a href="socket.html" tppabs="https://docs.python.org/zh-cn/3/library/socket.html"
-                        title="ä¸‹ä¸€ç« "><code class="docutils literal notranslate"><span class="pre">socket</span></code> --- åº•å±‚ç½‘ç»œæ¥å£</a></p>
+                        title="ä¸‹ä¸€ç« "><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code> --- åº•å±‚ç½‘ç»œæ¥å£</a></p>
   <div role="note" aria-label="source link">
     <h3>æœ¬é¡µ</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">æäº¤ Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-dev.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-dev.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/asyncio-dev.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-dev.rst  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-dev.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/asyncio-dev.rst"
             rel="nofollow">æ˜¾ç¤ºæºä»£ç 
         </a>
       </li>
@@ -316,20 +314,23 @@ traceback where the task was created:</p>
           <a href="socket.html" tppabs="https://docs.python.org/zh-cn/3/library/socket.html" title="socket --- åº•å±‚ç½‘ç»œæ¥å£"
              >ä¸‹ä¸€é¡µ</a> |</li>
         <li class="right" >
-          <a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html" title="Low-level API Index"
+          <a href="asyncio-llapi-index.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio-llapi-index.html" title="åº•å±‚APIç›®å½•"
              >ä¸Šä¸€é¡µ</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">æ–‡æ¡£</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python æ ‡å‡†åº“</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" tppabs="https://docs.python.org/zh-cn/3/library/ipc.html" >ç½‘ç»œå’Œè¿›ç¨‹é—´é€šä¿¡</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" tppabs="https://docs.python.org/zh-cn/3/library/asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- å¼‚æ­¥ I/O</a> &#187;</li>
     <li class="right">
         
 
@@ -348,15 +349,19 @@ traceback where the task was created:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">ç‰ˆæƒæ‰€æœ‰</a> 2001-2020, Python Software Foundation.
     <br />
-    Python è½¯ä»¶åŸºé‡‘ä¼šæ˜¯ä¸€ä¸ªéç›ˆåˆ©ç»„ç»‡ã€‚
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">è¯·æåŠ©ã€‚</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    æœ€åæ›´æ–°äº 4æœˆ 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">å‘ç°äº†é—®é¢˜</a>ï¼Ÿ
+
+    æœ€åæ›´æ–°äº 3æœˆ 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    ä½¿ç”¨<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 åˆ›å»ºã€‚
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>

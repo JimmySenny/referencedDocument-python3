@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>pprint --- 数据美化输出 &#8212; Python 3.7.3 文档</title>
+    <meta charset="utf-8" />
+    <title>pprint --- 数据美化输出 &#8212; Python 3.8.2 文档</title>
     <link rel="stylesheet" href="pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3/_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" tppabs="https://docs.python.org/zh-cn/3/_static/pygments.css" type="text/css" />
     
@@ -20,21 +18,21 @@
     <script type="text/javascript" src="sidebar.js" tppabs="https://docs.python.org/zh-cn/3/_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.7.3 文档 中搜索"
+          title="在 Python 3.8.2 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="copyright" title="版权所有" href="../copyright.html" />
-    <link rel="next" title="reprlib --- Alternate repr() implementation" href="reprlib.html" />
+    <link rel="next" title="reprlib --- 另一种 repr() 实现" href="reprlib.html" />
     <link rel="prev" title="copy --- 浅层 (shallow) 和深层 (deep) 复制操作" href="copy.html" />
-    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/library/pprint.html" />
     
-    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
-    <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
+      <script type="text/javascript" src="switchers.js" tppabs="https://docs.python.org/zh-cn/3/_static/switchers.js"></script>
+      
     
-    
+
     
     <style>
       @media only screen {
@@ -43,9 +41,16 @@
         }
       }
     </style>
- 
 
-  </head><body>  
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="copybutton.js" tppabs="https://docs.python.org/zh-cn/3/_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
       <ul>
@@ -56,19 +61,22 @@
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="reprlib.html" tppabs="https://docs.python.org/zh-cn/3/library/reprlib.html" title="reprlib --- Alternate repr() implementation"
+          <a href="reprlib.html" tppabs="https://docs.python.org/zh-cn/3/library/reprlib.html" title="reprlib --- 另一种 repr() 实现"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="copy.html" tppabs="https://docs.python.org/zh-cn/3/library/copy.html" title="copy --- 浅层 (shallow) 和深层 (deep) 复制操作"
              accesskey="P">上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" accesskey="U">数据类型</a> &#187;</li>
@@ -97,42 +105,22 @@
             
   <div class="section" id="module-pprint">
 <span id="pprint-data-pretty-printer"></span><h1><a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> --- 数据美化输出<a class="headerlink" href="#module-pprint" title="永久链接至标题">¶</a></h1>
-<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.7/Lib/pprint.py  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.7/Lib/pprint.py'" tppabs="https://github.com/python/cpython/tree/3.7/Lib/pprint.py">Lib/pprint.py</a></p>
+<p><strong>源代码：</strong> <a class="reference external" href="javascript:if(confirm('https://github.com/python/cpython/tree/3.8/Lib/pep-0307  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/tree/3.8/Lib/pep-0307'" tppabs="https://github.com/python/cpython/tree/3.8/Lib/pprint.py">Lib/pprint.py</a></p>
 <hr class="docutils" />
-<p>The <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> module provides a capability to &quot;pretty-print&quot; arbitrary
-Python data structures in a form which can be used as input to the interpreter.
-If the formatted structures include objects which are not fundamental Python
-types, the representation may not be loadable.  This may be the case if objects
-such as files, sockets or classes are included, as well as many other
-objects which are not representable as Python literals.</p>
-<p>The formatted representation keeps objects on a single line if it can, and
-breaks them onto multiple lines if they don't fit within the allowed width.
-Construct <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> objects explicitly if you need to adjust the
-width constraint.</p>
-<p>Dictionaries are sorted by key before the display is computed.</p>
-<p>The <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> module defines one class:</p>
+<p><a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> 模块提供了“美化打印”任意 Python 数据结构的功能，这种美化形式可用作对解释器的输入。 如果经格式化的结构包含非基本 Python 类型的对象，则其美化形式可能无法被加载。 包含文件、套接字或类对象，以及许多其他不能用 Python 字面值来表示的对象都有可能导致这样的结果。</p>
+<p>格式化后的形式会在可能的情况下以单行来表示对象，并在无法在允许宽度内容纳对象的情况下将其分为多行。 如果你需要调整宽度限制则应显式地构造 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 对象。</p>
+<p>字典在计算其显示形式前会先根据键来排序。</p>
+<p><a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> 模块定义了一个类：</p>
 <span class="target" id="index-0"></span><dl class="class">
 <dt id="pprint.PrettyPrinter">
-<em class="property">class </em><code class="descclassname">pprint.</code><code class="descname">PrettyPrinter</code><span class="sig-paren">(</span><em>indent=1</em>, <em>width=80</em>, <em>depth=None</em>, <em>stream=None</em>, <em>*</em>, <em>compact=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter" title="永久链接至目标">¶</a></dt>
-<dd><p>Construct a <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> instance.  This constructor understands
-several keyword parameters.  An output stream may be set using the <em>stream</em>
-keyword; the only method used on the stream object is the file protocol's
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> method.  If not specified, the <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> adopts
-<code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>.  The
-amount of indentation added for each recursive level is specified by <em>indent</em>;
-the default is one.  Other values can cause output to look a little odd, but can
-make nesting easier to spot.  The number of levels which may be printed is
-controlled by <em>depth</em>; if the data structure being printed is too deep, the next
-contained level is replaced by <code class="docutils literal notranslate"><span class="pre">...</span></code>.  By default, there is no constraint on
-the depth of the objects being formatted.  The desired output width is
-constrained using the <em>width</em> parameter; the default is 80 characters.  If a
-structure cannot be formatted within the constrained width, a best effort will
-be made.  If <em>compact</em> is false (the default) each item of a long sequence
-will be formatted on a separate line.  If <em>compact</em> is true, as many items
-as will fit within the <em>width</em> will be formatted on each output line.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">PrettyPrinter</code><span class="sig-paren">(</span><em class="sig-param">indent=1</em>, <em class="sig-param">width=80</em>, <em class="sig-param">depth=None</em>, <em class="sig-param">stream=None</em>, <em class="sig-param">*</em>, <em class="sig-param">compact=False</em>, <em class="sig-param">sort_dicts=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter" title="永久链接至目标">¶</a></dt>
+<dd><p>构造一个 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 实例。 此构造器接受几个关键字形参。 使用 <em>stream</em> 关键字可设置输出流；流对象使用的唯一方法是文件协议的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> 方法。 如果未指定此关键字，则 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 会选择 <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>。 每个递归层次的缩进量由 <em>indent</em> 指定；默认值为一。 其他值可导致输出看起来有些怪异，，但可使得嵌套结构更易区分。 可被打印的层级数量由 <em>depth</em> 控制；如果数据结构的层级被打印得过深，其所包含的下一层级会被替换为 <code class="docutils literal notranslate"><span class="pre">...</span></code>。 在默认情况下，对被格式化对象的层级深度没有限制。 希望的输出宽度可使用 <em>width</em> 形参来限制；默认值为 80 个字符。 如果一个结构无法在限定宽度内被格式化，则将做到尽可能接近。 如果 <em>compact</em> 为假值（默认）则长序列的每一项将被格式化为单独的行。 如果 <em>compact</em> 为真值，则将在 <em>width</em> 可容纳的的情况下把尽可能多的项放入每个输出行。 如果 <em>sort_dicts</em> 为真值（默认），字典将被格式化为按键排序，否则将按插入顺序显示。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Added the <em>compact</em> parameter.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>增加了 <em>compact</em> 形参。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>增加了 <em>sort_dicts</em> 形参。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;lumberjack&#39;</span><span class="p">,</span> <span class="s1">&#39;knights&#39;</span><span class="p">,</span> <span class="s1">&#39;ni&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stuff</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">stuff</span><span class="p">[:])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="o">.</span><span class="n">PrettyPrinter</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -159,30 +147,38 @@ as will fit within the <em>width</em> will be formatted on each output line.</p>
 </div>
 </dd></dl>
 
-<p>The <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> module also provides several shortcut functions:</p>
+<p><a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code></a> 模块还提供了一些快捷函数：</p>
 <dl class="function">
 <dt id="pprint.pformat">
-<code class="descclassname">pprint.</code><code class="descname">pformat</code><span class="sig-paren">(</span><em>object</em>, <em>indent=1</em>, <em>width=80</em>, <em>depth=None</em>, <em>*</em>, <em>compact=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.pformat" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the formatted representation of <em>object</em> as a string.  <em>indent</em>,
-<em>width</em>, <em>depth</em> and <em>compact</em> will be passed to the <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a>
-constructor as formatting parameters.</p>
+<code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">pformat</code><span class="sig-paren">(</span><em class="sig-param">object</em>, <em class="sig-param">indent=1</em>, <em class="sig-param">width=80</em>, <em class="sig-param">depth=None</em>, <em class="sig-param">*</em>, <em class="sig-param">compact=False</em>, <em class="sig-param">sort_dicts=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.pformat" title="永久链接至目标">¶</a></dt>
+<dd><p><em>object</em> 的格式化表示作为字符串返回。 <em>indent</em>, <em>width</em>, <em>depth</em>, <em>compact</em> 和 <em>sort_dicts</em> 将作为格式化形参被传入 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 构造器。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Added the <em>compact</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>增加了 <em>compact</em> 形参。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>增加了 <em>sort_dicts</em> 形参。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pprint.pp">
+<code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">pp</code><span class="sig-paren">(</span><em class="sig-param">object</em>, <em class="sig-param">*args</em>, <em class="sig-param">sort_dicts=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.pp" title="永久链接至目标">¶</a></dt>
+<dd><p>打印 <em>object</em> 的格式化表示并附带一个换行符。 如果 <em>sort_dicts</em> 为假值（默认），字典将按键的插入顺序显示，否则将按字典键排序。 <em>args</em> 和 <em>kwargs</em> 将作为格式化形参被传给 <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-func docutils literal notranslate"><span class="pre">pprint()</span></code></a>。</p>
+<div class="versionadded">
+<p><span class="versionmodified added">3.8 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="pprint.pprint">
-<code class="descclassname">pprint.</code><code class="descname">pprint</code><span class="sig-paren">(</span><em>object</em>, <em>stream=None</em>, <em>indent=1</em>, <em>width=80</em>, <em>depth=None</em>, <em>*</em>, <em>compact=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.pprint" title="永久链接至目标">¶</a></dt>
-<dd><p>Prints the formatted representation of <em>object</em> on <em>stream</em>, followed by a
-newline.  If <em>stream</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code> is used.  This may be used
-in the interactive interpreter instead of the <a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> function for
-inspecting values (you can even reassign <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">=</span> <span class="pre">pprint.pprint</span></code> for use
-within a scope).  <em>indent</em>, <em>width</em>, <em>depth</em> and <em>compact</em> will be passed
-to the <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> constructor as formatting parameters.</p>
+<code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">pprint</code><span class="sig-paren">(</span><em class="sig-param">object</em>, <em class="sig-param">stream=None</em>, <em class="sig-param">indent=1</em>, <em class="sig-param">width=80</em>, <em class="sig-param">depth=None</em>, <em class="sig-param">*</em>, <em class="sig-param">compact=False</em>, <em class="sig-param">sort_dicts=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.pprint" title="永久链接至目标">¶</a></dt>
+<dd><p>在 <em>stream</em> 上打打印 <em>object</em> 的格式化表示，并附带一个换行符。 如果 <em>stream</em> 为 <code class="docutils literal notranslate"><span class="pre">None</span></code>，则使用 <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>。 这可以替代 <a class="reference internal" href="functions.html#print" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> 函数在交互式解释器中使用以查看值（你甚至可以执行重新赋值 <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">=</span> <span class="pre">pprint.pprint</span></code> 以在特定作用域中使用）。 <em>indent</em>, <em>width</em>, <em>depth</em>, <em>compact</em> 和 <em>sort_dicts</em> 将作为格式化形参被传给 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 构造器。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.4 版更改: </span>Added the <em>compact</em> parameter.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
+<p><span class="versionmodified changed">在 3.4 版更改: </span>增加了 <em>compact</em> 形参。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版更改: </span>增加了 <em>sort_dicts</em> 形参。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;lumberjack&#39;</span><span class="p">,</span> <span class="s1">&#39;knights&#39;</span><span class="p">,</span> <span class="s1">&#39;ni&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stuff</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">stuff</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
@@ -199,11 +195,9 @@ to the <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.
 
 <dl class="function">
 <dt id="pprint.isreadable">
-<code class="descclassname">pprint.</code><code class="descname">isreadable</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.isreadable" title="永久链接至目标">¶</a></dt>
-<dd><p id="index-1">Determine if the formatted representation of <em>object</em> is &quot;readable,&quot; or can be
-used to reconstruct the value using <a class="reference internal" href="functions.html#eval" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#eval" title="eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a>.  This always returns <code class="docutils literal notranslate"><span class="pre">False</span></code>
-for recursive objects.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">isreadable</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
+<code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">isreadable</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.isreadable" title="永久链接至目标">¶</a></dt>
+<dd><p id="index-1">确定 <em>object</em> 的格式化表示是否“可读”，或是否可被用来通过 <a class="reference internal" href="functions.html#eval" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#eval" title="eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a> 重新构建对象的值。 此函数对于递归对象总是返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">isreadable</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
 <span class="go">False</span>
 </pre></div>
 </div>
@@ -211,95 +205,68 @@ for recursive objects.</p>
 
 <dl class="function">
 <dt id="pprint.isrecursive">
-<code class="descclassname">pprint.</code><code class="descname">isrecursive</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.isrecursive" title="永久链接至目标">¶</a></dt>
-<dd><p>Determine if <em>object</em> requires a recursive representation.</p>
+<code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">isrecursive</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.isrecursive" title="永久链接至目标">¶</a></dt>
+<dd><p>确定 <em>object</em> 是否需要递归表示。</p>
 </dd></dl>
 
-<p>One more support function is also defined:</p>
+<p>此外还定义了一个支持函数：</p>
 <dl class="function">
 <dt id="pprint.saferepr">
-<code class="descclassname">pprint.</code><code class="descname">saferepr</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.saferepr" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a string representation of <em>object</em>, protected against recursive data
-structures.  If the representation of <em>object</em> exposes a recursive entry, the
-recursive reference will be represented as <code class="docutils literal notranslate"><span class="pre">&lt;Recursion</span> <span class="pre">on</span> <span class="pre">typename</span> <span class="pre">with</span>
-<span class="pre">id=number&gt;</span></code>.  The representation is not otherwise formatted.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">saferepr</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
+<code class="sig-prename descclassname">pprint.</code><code class="sig-name descname">saferepr</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.saferepr" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>object</em> 的字符串表示，并为递归数据结构提供保护。 如果 <em>object</em> 的表示形式公开了一个递归条目，该递归引用会被表示为 <code class="docutils literal notranslate"><span class="pre">&lt;Recursion</span> <span class="pre">on</span> <span class="pre">typename</span> <span class="pre">with</span> <span class="pre">id=number&gt;</span></code>。 该表示因而不会进行其它格式化。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">saferepr</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
 <span class="go">&quot;[&lt;Recursion on list with id=...&gt;, &#39;spam&#39;, &#39;eggs&#39;, &#39;lumberjack&#39;, &#39;knights&#39;, &#39;ni&#39;]&quot;</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <div class="section" id="prettyprinter-objects">
-<span id="id1"></span><h2>PrettyPrinter Objects<a class="headerlink" href="#prettyprinter-objects" title="永久链接至标题">¶</a></h2>
-<p><a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> instances have the following methods:</p>
+<span id="id1"></span><h2>PrettyPrinter 对象<a class="headerlink" href="#prettyprinter-objects" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 的实例具有下列方法：</p>
 <dl class="method">
 <dt id="pprint.PrettyPrinter.pformat">
-<code class="descclassname">PrettyPrinter.</code><code class="descname">pformat</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.pformat" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the formatted representation of <em>object</em>.  This takes into account the
-options passed to the <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> constructor.</p>
+<code class="sig-prename descclassname">PrettyPrinter.</code><code class="sig-name descname">pformat</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.pformat" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <em>object</em> 格式化表示。 这会将传给 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 构造器的选项纳入考虑。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pprint.PrettyPrinter.pprint">
-<code class="descclassname">PrettyPrinter.</code><code class="descname">pprint</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.pprint" title="永久链接至目标">¶</a></dt>
-<dd><p>Print the formatted representation of <em>object</em> on the configured stream,
-followed by a newline.</p>
+<code class="sig-prename descclassname">PrettyPrinter.</code><code class="sig-name descname">pprint</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.pprint" title="永久链接至目标">¶</a></dt>
+<dd><p>在所配置的流上打印 <em>object</em> 的格式化表示，并附加一个换行符。</p>
 </dd></dl>
 
-<p>The following methods provide the implementations for the corresponding
-functions of the same names.  Using these methods on an instance is slightly
-more efficient since new <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> objects don't need to be
-created.</p>
+<p>下列方法提供了与同名函数相对应的实现。 在实例上使用这些方法效率会更高一些，因为不需要创建新的 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 对象。</p>
 <dl class="method">
 <dt id="pprint.PrettyPrinter.isreadable">
-<code class="descclassname">PrettyPrinter.</code><code class="descname">isreadable</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.isreadable" title="永久链接至目标">¶</a></dt>
-<dd><p id="index-2">Determine if the formatted representation of the object is &quot;readable,&quot; or can be
-used to reconstruct the value using <a class="reference internal" href="functions.html#eval" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#eval" title="eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a>.  Note that this returns
-<code class="docutils literal notranslate"><span class="pre">False</span></code> for recursive objects.  If the <em>depth</em> parameter of the
-<a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> is set and the object is deeper than allowed, this
-returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<code class="sig-prename descclassname">PrettyPrinter.</code><code class="sig-name descname">isreadable</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.isreadable" title="永久链接至目标">¶</a></dt>
+<dd><p id="index-2">确定对象的格式化表示是否“可读”，或者是否可使用 <a class="reference internal" href="functions.html#eval" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#eval" title="eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a> 重建对象值。 请注意此方法对于递归对象将返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。 如果设置了 <a class="reference internal" href="#pprint.PrettyPrinter" title="pprint.PrettyPrinter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyPrinter</span></code></a> 的 <em>depth</em> 形参并且对象深度超出允许范围，此方法将返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pprint.PrettyPrinter.isrecursive">
-<code class="descclassname">PrettyPrinter.</code><code class="descname">isrecursive</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.isrecursive" title="永久链接至目标">¶</a></dt>
-<dd><p>Determine if the object requires a recursive representation.</p>
+<code class="sig-prename descclassname">PrettyPrinter.</code><code class="sig-name descname">isrecursive</code><span class="sig-paren">(</span><em class="sig-param">object</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.isrecursive" title="永久链接至目标">¶</a></dt>
+<dd><p>确定对象是否需要递归表示。</p>
 </dd></dl>
 
-<p>This method is provided as a hook to allow subclasses to modify the way objects
-are converted to strings.  The default implementation uses the internals of the
-<a class="reference internal" href="#pprint.saferepr" title="pprint.saferepr"><code class="xref py py-func docutils literal notranslate"><span class="pre">saferepr()</span></code></a> implementation.</p>
+<p>此方法作为一个钩子提供，允许子类修改将对象转换为字符串的方式。 默认实现使用 <a class="reference internal" href="#pprint.saferepr" title="pprint.saferepr"><code class="xref py py-func docutils literal notranslate"><span class="pre">saferepr()</span></code></a> 实现的内部方式。</p>
 <dl class="method">
 <dt id="pprint.PrettyPrinter.format">
-<code class="descclassname">PrettyPrinter.</code><code class="descname">format</code><span class="sig-paren">(</span><em>object</em>, <em>context</em>, <em>maxlevels</em>, <em>level</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.format" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns three values: the formatted version of <em>object</em> as a string, a flag
-indicating whether the result is readable, and a flag indicating whether
-recursion was detected.  The first argument is the object to be presented.  The
-second is a dictionary which contains the <a class="reference internal" href="functions.html#id" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#id" title="id"><code class="xref py py-func docutils literal notranslate"><span class="pre">id()</span></code></a> of objects that are part of
-the current presentation context (direct and indirect containers for <em>object</em>
-that are affecting the presentation) as the keys; if an object needs to be
-presented which is already represented in <em>context</em>, the third return value
-should be <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Recursive calls to the <a class="reference internal" href="#pprint.PrettyPrinter.format" title="pprint.PrettyPrinter.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> method should add
-additional entries for containers to this dictionary.  The third argument,
-<em>maxlevels</em>, gives the requested limit to recursion; this will be <code class="docutils literal notranslate"><span class="pre">0</span></code> if there
-is no requested limit.  This argument should be passed unmodified to recursive
-calls. The fourth argument, <em>level</em>, gives the current level; recursive calls
-should be passed a value less than that of the current call.</p>
+<code class="sig-prename descclassname">PrettyPrinter.</code><code class="sig-name descname">format</code><span class="sig-paren">(</span><em class="sig-param">object</em>, <em class="sig-param">context</em>, <em class="sig-param">maxlevels</em>, <em class="sig-param">level</em><span class="sig-paren">)</span><a class="headerlink" href="#pprint.PrettyPrinter.format" title="永久链接至目标">¶</a></dt>
+<dd><p>返回三个值：字符串形式的 <em>object</em> 已格式化版本，指明结果是否可读的旗标，以及指明是否检测到递归的旗标。 第一个参数是要表示的对象。 第二个是以对象 <a class="reference internal" href="functions.html#id" tppabs="https://docs.python.org/zh-cn/3/library/functions.html#id" title="id"><code class="xref py py-func docutils literal notranslate"><span class="pre">id()</span></code></a> 为键的字典，这些对象是当前表示上下文的一部分（影响 <em>object</em> 表示的直接和间接容器）；如果需要呈现一个已经在 <em>context</em> 中表示的对象，则第三个返回值应当为 <code class="docutils literal notranslate"><span class="pre">True</span></code>。 对 <a class="reference internal" href="#pprint.PrettyPrinter.format" title="pprint.PrettyPrinter.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> 方法的递归调用应当将容器的附加条目添加到此字典中。 第三个参数 <em>maxlevels</em> 给出了对递归的请求限制；如果没有请求限制则其值将为 <code class="docutils literal notranslate"><span class="pre">0</span></code>。 此参数应当不加修改地传给递归调用。 第四个参数 <em>level</em> 给出于当前层级；传给递归调用的参数值应当小于当前调用的值。</p>
 </dd></dl>
 
 </div>
 <div class="section" id="example">
 <span id="pprint-example"></span><h2>示例<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
-<p>To demonstrate several uses of the <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-func docutils literal notranslate"><span class="pre">pprint()</span></code></a> function and its parameters,
-let's fetch information about a project from <a class="reference external" href="javascript:if(confirm('https://pypi.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://pypi.org/'" tppabs="https://pypi.org/">PyPI</a>:</p>
+<p>为了演示 <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-func docutils literal notranslate"><span class="pre">pprint()</span></code></a> 函数及其形参的几种用法，让我们从 <a class="reference external" href="javascript:if(confirm('https://pypi.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://pypi.org/'" tppabs="https://pypi.org/">PyPI</a> 获取关于某个项目的信息:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">json</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="k">import</span> <span class="n">urlopen</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;https://pypi.org/pypi/sampleproject/json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">project_info</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">resp</span><span class="p">)[</span><span class="s1">&#39;info&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>In its basic form, <a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-func docutils literal notranslate"><span class="pre">pprint()</span></code></a> shows the whole object:</p>
+<p><a class="reference internal" href="#module-pprint" title="pprint: Data pretty printer."><code class="xref py py-func docutils literal notranslate"><span class="pre">pprint()</span></code></a> 以其基本形式显示了整个对象:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">project_info</span><span class="p">)</span>
 <span class="go">{&#39;author&#39;: &#39;The Python Packaging Authority&#39;,</span>
 <span class="go"> &#39;author_email&#39;: &#39;pypa-dev@googlegroups.com&#39;,</span>
@@ -355,8 +322,7 @@ let's fetch information about a project from <a class="reference external" href=
 <span class="go"> &#39;version&#39;: &#39;1.2.0&#39;}</span>
 </pre></div>
 </div>
-<p>The result can be limited to a certain <em>depth</em> (ellipsis is used for deeper
-contents):</p>
+<p>结果可以被限制到特定的 <em>depth</em> (更深层的内容将使用省略号):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">project_info</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="go">{&#39;author&#39;: &#39;The Python Packaging Authority&#39;,</span>
 <span class="go"> &#39;author_email&#39;: &#39;pypa-dev@googlegroups.com&#39;,</span>
@@ -401,8 +367,7 @@ contents):</p>
 <span class="go"> &#39;version&#39;: &#39;1.2.0&#39;}</span>
 </pre></div>
 </div>
-<p>Additionally, maximum character <em>width</em> can be suggested. If a long object
-cannot be split, the specified width will be exceeded:</p>
+<p>此外，还可以设置建议的最大字符 <em>width</em>。 如果一个对象无法被拆分，则将超出指定宽度:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">project_info</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 <span class="go">{&#39;author&#39;: &#39;The Python Packaging Authority&#39;,</span>
 <span class="go"> &#39;author_email&#39;: &#39;pypa-dev@googlegroups.com&#39;,</span>
@@ -459,10 +424,10 @@ cannot be split, the specified width will be exceeded:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">Table of Contents</a></h3>
+  <h3><a href="contents.html" tppabs="https://docs.python.org/zh-cn/3/contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">pprint</span></code> --- 数据美化输出</a><ul>
-<li><a class="reference internal" href="#prettyprinter-objects">PrettyPrinter Objects</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code> --- 数据美化输出</a><ul>
+<li><a class="reference internal" href="#prettyprinter-objects">PrettyPrinter 对象</a></li>
 <li><a class="reference internal" href="#example">示例</a></li>
 </ul>
 </li>
@@ -470,16 +435,16 @@ cannot be split, the specified width will be exceeded:</p>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="copy.html" tppabs="https://docs.python.org/zh-cn/3/library/copy.html"
-                        title="上一章"><code class="docutils literal notranslate"><span class="pre">copy</span></code> --- 浅层 (shallow) 和深层 (deep) 复制操作</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code> --- 浅层 (shallow) 和深层 (deep) 复制操作</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="reprlib.html" tppabs="https://docs.python.org/zh-cn/3/library/reprlib.html"
-                        title="下一章"><code class="docutils literal notranslate"><span class="pre">reprlib</span></code> --- Alternate <code class="docutils literal notranslate"><span class="pre">repr()</span></code> implementation</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">reprlib</span></code> --- 另一种 <code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code> 实现</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">提交 Bug</a></li>
       <li>
-        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.7/Doc/library/pprint.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.7/Doc/library/pprint.rst'" tppabs="https://github.com/python/cpython/blob/3.7/Doc/library/pprint.rst"
+        <a href="javascript:if(confirm('https://github.com/python/cpython/blob/3.8/Doc/library/pprint.rst  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/python/cpython/blob/3.8/Doc/library/pprint.rst'" tppabs="https://github.com/python/cpython/blob/3.8/Doc/library/pprint.rst"
             rel="nofollow">显示源代码
         </a>
       </li>
@@ -499,19 +464,22 @@ cannot be split, the specified width will be exceeded:</p>
           <a href="py-modindex.html" tppabs="https://docs.python.org/zh-cn/3/py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="reprlib.html" tppabs="https://docs.python.org/zh-cn/3/library/reprlib.html" title="reprlib --- Alternate repr() implementation"
+          <a href="reprlib.html" tppabs="https://docs.python.org/zh-cn/3/library/reprlib.html" title="reprlib --- 另一种 repr() 实现"
              >下一页</a> |</li>
         <li class="right" >
           <a href="copy.html" tppabs="https://docs.python.org/zh-cn/3/library/copy.html" title="copy --- 浅层 (shallow) 和深层 (deep) 复制操作"
              >上一页</a> |</li>
-        <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
-                 style="vertical-align: middle; margin-top: -1px"/></li>
-        <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
-        <li>
-          <span class="language_switcher_placeholder">zh_CN</span>
-          <span class="version_switcher_placeholder">3.7.3</span>
-          <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
-        </li>
+
+    <li><img src="py.png" tppabs="https://docs.python.org/zh-cn/3/_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="javascript:if(confirm('https://www.python.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/'" tppabs="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li>
+      <span class="language_switcher_placeholder">zh_CN</span>
+      <span class="version_switcher_placeholder">3.8.2</span>
+      <a href="index-11.html" tppabs="https://docs.python.org/zh-cn/3/index.html">文档</a> &#187;
+    </li>
 
           <li class="nav-item nav-item-1"><a href="index-2.html" tppabs="https://docs.python.org/zh-cn/3/library/index.html" >Python 标准库</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="datatypes.html" tppabs="https://docs.python.org/zh-cn/3/library/datatypes.html" >数据类型</a> &#187;</li>
@@ -533,15 +501,19 @@ cannot be split, the specified width will be exceeded:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    &copy; <a href="copyright.html" tppabs="https://docs.python.org/zh-cn/3/copyright.html">版权所有</a> 2001-2020, Python Software Foundation.
     <br />
-    Python 软件基金会是一个非盈利组织。
-    <a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="javascript:if(confirm('https://www.python.org/psf/donations/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.python.org/psf/donations/'" tppabs="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
     <br />
-    最后更新于 4月 22, 2019.
-    <a href="bugs.html" tppabs="https://docs.python.org/zh-cn/3/bugs.html">发现了问题</a>？
+
+    最后更新于 3月 26, 2020.
+    <a href="javascript:if(confirm('https://docs.python.org/3/bugs.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://docs.python.org/3/bugs.html'" tppabs="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
-    使用<a href="javascript:if(confirm('http://sphinx.pocoo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx.pocoo.org/'" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+
+    Created using <a href="javascript:if(confirm('https://www.sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sphinx-doc.org/'" tppabs="https://www.sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
 
   </body>
